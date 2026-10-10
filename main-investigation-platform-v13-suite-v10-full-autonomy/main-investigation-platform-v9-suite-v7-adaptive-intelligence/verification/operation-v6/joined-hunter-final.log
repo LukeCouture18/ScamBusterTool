@@ -1,0 +1,15 @@
+
+=== joined:hunter (1 step) ===
+--- joined:hunter 1/1: node --experimental-sqlite --disable-warning=ExperimentalWarning --import tsx tests/joined-finder-main-hunter.mjs
+  PASS  Site Finder -> previous installation (12 migrations): 4/4 accepted, 0 parked in Site Finder's outbox
+  PASS  upgrade 0000-0011 -> 0012 in place: every row preserved, schema gate passes, Site Finder -> Main delivers all 4 candidates
+  PASS  Main -> Hunter: campaign formed from Site Finder evidence, reconstruction proposed, charged and dispatched as HUNT_OPERATION
+  PASS  Hunter -> Main: 9 members (all true), reconstruction linked to the campaign
+  PASS  Hunter discoveries -> Main work/inbox: 4 new candidates, wallet work, temporal facets
+  PASS  duplicate protection: repeated Hunter sync, re-delivered Site Finder batch and re-claim create nothing
+  PASS  restart/recovery: Main and Hunter restarted on their databases; the job reconciled as useful, not repeated
+  PASS  Main feedback -> Hunter (membership verdict) and -> Site Finder (decision ledger)
+  PASS  Main scheduler/budgets -> Hunter: one module slot, operator requests queue behind it, auto_reconstruct switch respected
+
+All 9 joined Site Finder -> Main -> Operation Hunter checks passed.
+PASS joined:hunter

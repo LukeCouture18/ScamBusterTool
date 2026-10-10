@@ -1,0 +1,12 @@
+✔ item enqueued while a delivery is in flight is delivered in the same drain and never lost (56.049038ms)
+✔ many concurrent enqueues: every item delivered exactly once, queue empty (367.545419ms)
+✔ identical replays dedupe; permanent rejections do not block the queue; offline backs off (131.42341ms)
+✔ wallet.observation envelope and payload follow contract §1 (26.46005ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 4
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 709.206234

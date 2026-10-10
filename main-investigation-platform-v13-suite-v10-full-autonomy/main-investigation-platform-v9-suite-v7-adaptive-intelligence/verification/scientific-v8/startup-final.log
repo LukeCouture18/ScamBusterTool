@@ -1,0 +1,11 @@
+
+=== startup:modules (4 steps) ===
+--- startup:modules 1/4: python tests/site-finder-startup-local.py
+{"ok": true, "real_module_entry": true, "outbox_sent": "sf-observation-7145094f0c1fed98bc850e493f8ff2e4", "feedback_route": true, "synthetic": true}
+--- startup:modules 2/4: python tests/site-investigator-startup-local.py
+{"ok": true, "real_module_entry": true, "claimed_and_reported": "synthetic-site-startup-job", "synthetic": true}
+--- startup:modules 3/4: node --experimental-sqlite tests/wallet-startup-local.mjs
+{"ok":true,"real_module_entry":true,"synthetic_provider":true,"restarted_job":"COMPLETED"}
+--- startup:modules 4/4: node tests/form-startup-local.mjs
+{"ok":true,"real_module_entry":true,"configured_submission":true,"synthetic_receiver":true,"submissions":1,"completed":1}
+PASS startup:modules

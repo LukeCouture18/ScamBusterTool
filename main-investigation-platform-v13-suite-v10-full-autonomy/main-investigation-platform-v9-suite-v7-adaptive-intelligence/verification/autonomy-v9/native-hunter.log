@@ -1,0 +1,5 @@
+[Operation Hunter v2.0.0] http://127.0.0.1:54703
+  data: /tmp/v9-native-vj9uwf8z/hunter/hunter.db (schema v2), network mode: live
+  Main Platform: not connected (standalone)
+  recovered: 0 interrupted pivot(s), 2 running pursuit(s) resumed
+[Operation Hunter] SIGTERM received, shutting down cleanly…

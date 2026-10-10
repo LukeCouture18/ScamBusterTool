@@ -1,0 +1,47 @@
+✔ populated v4 migration and rollback retain candidates, observations, evidence and approval hashes (45.903225ms)
+✔ domain resolution deduplicates equivalent sites (1.458353ms)
+✔ wallet and token identity is network scoped (0.269481ms)
+✔ job keys prevent active duplicate work (0.185592ms)
+✔ job transition policy rejects processing loops (0.718991ms)
+✔ retry backoff is exponential and capped (0.285516ms)
+✔ schema major versions are checked (0.202669ms)
+✔ a wallet key that already names its network is not prefixed twice (0.39565ms)
+✔ coordination migration is additive and includes operational tables (16.223808ms)
+✔ orchestrator migration preserves data and adds durable workflow state (4.696069ms)
+✔ v4 migration adds a durable event backbone without replacing v3 data (12.28991ms)
+✔ module credentials are isolated (2.45859ms)
+✔ authentication fails closed and legacy fallback is opt-in (0.743336ms)
+✔ with real sql.js installed the fallback registers nothing and the Wallet worker keeps PlatformWorker and startPlatformWorker (523.246443ms)
+﹣ without sql.js the fallback still serves the node:sqlite stand-in and the worker still loads (0.732099ms) # the real sql.js is installed in this repository, so the stand-in path is not used here
+✔ each tool UI is in sync with the canonical tokens (12.673185ms)
+✔ the generated blocks only restyle: every tool keeps its own markup and variables (2.743791ms)
+✔ v5 migration adds triage, durable subscriptions and metrics without dropping v4 data (7.755476ms)
+✔ routing requires explicit promotion and does not infer wallet validity from confidence (1.840394ms)
+✔ both SDKs expose event delivery and metrics (12.223887ms)
+✔ migration 0012 is additive and required by the schema gate (39.50362ms)
+✔ migration 0014 (Site Finder hunts) is additive and required by the schema gate (38.546686ms)
+✔ migration 0015 (v4 wallet pipeline) is additive and required by the schema gate (51.646524ms)
+✔ contracts: module, job type and work kind (13.337581ms)
+✔ a Hunter snapshot is stored idempotently and its proposals become Main's own work (93.190168ms)
+✔ demo operations are mirrored for display but never create work (53.280224ms)
+✔ reconstruction: proposed only while Hunter is registered, routed as a HUNT_OPERATION job, judged by what it found (48.04407ms)
+✔ operator and module requests go through work items (42.226394ms)
+✔ v6 schema gate rejects an incomplete operation alias migration (22.926914ms)
+✔ v4 database upgrades to v5: every v4 record preserved, schema gate passes, v5 defaults seeded (57.067735ms)
+✔ an interrupted v5 upgrade rolls back and the platform refuses to start until it is applied (35.193597ms)
+✔ rollback to v4: v5 tables are additive, so v4 code reads a v5 database unchanged; dropping them restores the exact v4 schema (30.792269ms)
+✔ the server, SDK and machine readable event catalog agree (42.248111ms)
+✔ v6 contract includes all orchestration and evidence endpoints (0.528674ms)
+✔ v5 database upgrades to v6 without losing investigations and evidence (155.960228ms)
+✔ wallet database: clean start, restart with data, interrupted save and a damaged file (4321.736242ms)
+ℹ database size after interrupted saves: 6135808 bytes
+✔ the Wallet verification suite never touches integrations/wallet-investigator/data (740.984747ms)
+✔ 0013 renames doubled wallet keys only when no correctly keyed twin exists (78.725399ms)
+ℹ tests 38
+ℹ suites 0
+ℹ pass 37
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 1
+ℹ todo 0
+ℹ duration_ms 5395.659763

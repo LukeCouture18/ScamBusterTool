@@ -1,0 +1,14 @@
+{
+  "ok": true,
+  "checks": [
+    "100 refs per edge in original deterministic order",
+    "one batched read per page",
+    "no repeated unchanged member/edge writes",
+    "no duplicate history",
+    "new confidence reflected",
+    "canonical 130 references and evidence preserved",
+    "analyst membership retained",
+    "no shared-infrastructure graph traversal"
+  ],
+  "scope": "Production projection against local SQLite D1 fixture."
+}

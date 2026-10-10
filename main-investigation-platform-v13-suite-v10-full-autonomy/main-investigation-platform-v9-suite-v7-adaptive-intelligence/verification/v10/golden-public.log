@@ -1,0 +1,26 @@
+[Database] Initialized new database at /tmp/autonomy-v10-33P7h4/wallet/data/wallet_investigator.sqlite
+[Migrations] Applying migration v1: 001_initial_schema...
+[Migrations] Applying migration v2: 002_indexes_and_views...
+[Migrations] Migration status: 2 applied. Current schema version: v2
+[MainPlatformV6] Initialized integration module 'wallet_investigator' with capabilities: [
+  'blockchain-analysis',
+  'wallet-validation',
+  'counterparty-discovery',
+  'fund-flow-analysis',
+  'controlled-wallet-expansion'
+]
+AssertionError [ERR_ASSERTION]: public: {"investigation_id":"c70929e9-6cfb-4dd2-9394-4056b3c693eb","site_url":"https://v10-public.example/","state":"Building report","doing":"Check evidence provenance and report completeness.","next_action":"Browse normally. Main will validate relevant observations and prepare the report automatically.","stop_reason":null,"next_at":null,"revision":3,"created_at":"2026-10-04 05:10:12","updated_at":"2026-10-04 05:10:13","title":"Candidate site: v10-public.example","wallets":[{"id":"5f48cb23-b706-40bf-8599-55cf9e701824","address":"0x21282F363d444b525960676E757c838a91989fa6","network":"ethereum","validation_status":"valid","context":"deposit","activity":"completed"}],"evidence":[{"id":"10f48d3b-f52c-459f-aa11-cdc9ba455d6d","title":"Connected Wallet Discovery: 0xbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb","source_module":"wallet_investigator","uri":null,"captured_at":"2026-10-04T05:10:13.299Z"},{"id":"7ce86590-3257-4f68-bf4e-39a2e8f1c189","title":"Counterparty Connection: 0xbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb","source_module":"wallet_investigator","uri":null,"captured_at":"2026-10-04T05:10:13.293Z"},{"id":"61533d4c-c6b9-4e2a-a7fe-7dfb1e36fd7c","title":"On-chain transfer ETH (1)","source_module":"wallet_investigator","uri":null,"captured_at":"2026-10-04T05:10:13.288Z"},{"id":"4ebf942c-d5c6-4c5d-8ae9-2c70ec7c4fc4","title":"Deposit wallet shown on v10-public.example","source_module":"crypto_wallet_logger","uri":"https://v10-public.example/deposit","captured_at":"2026-10-04T05:10:12.918Z"},{"id":"97b4baed-9a11-4efe-87a3-c24ec1d9431c","title":"Site Investigator: fingerprints","source_module":"site_investigator","uri":"https://v10-public.example","captured_at":"2026-10-04T05:10:12.317646+00:00"},{"id":"e110fd90-7ec4-4131-b23a-70f6230912ce","title":"Site Investigator: analytics_ids","source_module":"site_investigator","uri":"https://v10-public.example","captured_at":"2026-10-04T05:10:12.317213+00:00"},{"id":"f1d71958-1d71-40a3-8648-ddc0eb437e7f","title":"Site Investigator: socials","source_module":"site_investigator","uri":"https://v10-public.example","captured_at":"2026-10-04T05:10:12.316676+00:00"},{"id":"225a6731-925e-4b29-8180-7795fdefab28","title":"Site Investigator: phones","source_module":"site_investigator","uri":"https://v10-public.example","captured_at":"2026-10-04T05:10:12.316323+00:00"}],"needs_you":[],"related_sites":[],"report":{"id":"6c0c0e23-d959-4f0f-91be-c347a794f182","status":"needs_review","content_sha256":"0532c22595265ec1a9bddd3177128abcd6412979e27a8120d8b19e176e09eef5","verification_status":"unknown","ready":1,"summary":{"site":{"entity_id":"f9bce69c-5eec-4916-b8f2-24d5789dece1","domain":"v10-public.example","url":"https://v10-public.example"},"wallets":[{"identity":"evm:0x21282f363d444b525960676e757c838a91989fa6","address":"0x21282F363d444b525960676E757c838a91989fa6","network":"ethereum","token":"USDT","validation_status":"valid","checksum":"eip55_valid","deposit_evidence":[{"evidence_id":"4ebf942c-d5c6-4c5d-8ae9-2c70ec7c4fc4","sha256":"6879e779ddc6d811c6d1278e9760790c9ea5c8597dbaaccc6bc35eabedd32b9a","observation_id":"890ce3c8f48ea48d500a1a891738620574177b1ad88308d13a9c9c3e6a70ccca","page_url":"https://v10-public.example/deposit","frame_url":null,"observed_at":"2026-10-04T05:10:12.918Z","method":"input","section":"","cues":["deposit (label)","deposit address label (label)","send only X to this address (label)","copy button next to address","read-only address field"],"snippet":""}],"observations":1,"analysis_status":"completed","blockchain_evidence":[{"evidence_id":"61533d4c-c6b9-4e2a-a7fe-7dfb1e36fd7c","sha256":null,"title":"On-chain transfer ETH (1)"},{"evidence_id":"7ce86590-3257-4f68-bf4e-39a2e8f1c189","sha256":null,"title":"Counterparty Connection: 0xbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"},{"evidence_id":"10f48d3b-f52c-459f-aa11-cdc9ba455d6d","sha256":null,"title":"Connected Wallet Discovery: 0xbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"}],"also_seen_on":[]}],"destination":{"kind":"google_form","form_id":"V9Autonomy","form_url":"https://docs.google.com/forms/d/e/V9Autonomy/viewform","version_hash":"v10-fixture","title":"V9 synthetic destination","sha256":"ccf7e71cb8c7ba6c6141bd1230f44f8c4f8425fdd0b88165d7bafe25fd80eaf4"},"warnings":[]},"warnings":[]}}
++ actual - expected
+
++ 'Building report'
+- 'Ready for approval'
+
+    at <anonymous> (/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/v10-golden.mjs:101:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: 'Building report',
+  expected: 'Ready for approval',
+  operator: 'strictEqual',
+  diff: 'simple'
+}

@@ -1,0 +1,133 @@
+{
+  "ok": true,
+  "crashes": 18,
+  "passed": [
+    {
+      "phase": "operation snapshot",
+      "edge": "before",
+      "actual_process_signal": "SIGKILL",
+      "logical_hunts": 1,
+      "preserved_evidence": 1
+    },
+    {
+      "phase": "operation snapshot",
+      "edge": "after",
+      "actual_process_signal": "SIGKILL",
+      "logical_hunts": 1,
+      "preserved_evidence": 1
+    },
+    {
+      "phase": "hypothesis",
+      "edge": "before",
+      "actual_process_signal": "SIGKILL",
+      "logical_hunts": 1,
+      "preserved_evidence": 1
+    },
+    {
+      "phase": "hypothesis",
+      "edge": "after",
+      "actual_process_signal": "SIGKILL",
+      "logical_hunts": 1,
+      "preserved_evidence": 1
+    },
+    {
+      "phase": "contradiction",
+      "edge": "before",
+      "actual_process_signal": "SIGKILL",
+      "logical_hunts": 1,
+      "preserved_evidence": 1
+    },
+    {
+      "phase": "contradiction",
+      "edge": "after",
+      "actual_process_signal": "SIGKILL",
+      "logical_hunts": 1,
+      "preserved_evidence": 1
+    },
+    {
+      "phase": "temporal facet",
+      "edge": "before",
+      "actual_process_signal": "SIGKILL",
+      "logical_hunts": 1,
+      "preserved_evidence": 1
+    },
+    {
+      "phase": "temporal facet",
+      "edge": "after",
+      "actual_process_signal": "SIGKILL",
+      "logical_hunts": 1,
+      "preserved_evidence": 1
+    },
+    {
+      "phase": "evidence graph",
+      "edge": "before",
+      "actual_process_signal": "SIGKILL",
+      "logical_hunts": 1,
+      "preserved_evidence": 1
+    },
+    {
+      "phase": "evidence graph",
+      "edge": "after",
+      "actual_process_signal": "SIGKILL",
+      "logical_hunts": 1,
+      "preserved_evidence": 1
+    },
+    {
+      "phase": "hunt reservation",
+      "edge": "before",
+      "actual_process_signal": "SIGKILL",
+      "logical_hunts": 1,
+      "preserved_evidence": 1
+    },
+    {
+      "phase": "hunt reservation",
+      "edge": "after",
+      "actual_process_signal": "SIGKILL",
+      "logical_hunts": 1,
+      "preserved_evidence": 1
+    },
+    {
+      "phase": "module-work handoff",
+      "edge": "before",
+      "actual_process_signal": "SIGKILL",
+      "logical_hunts": 1,
+      "preserved_evidence": 1
+    },
+    {
+      "phase": "module-work handoff",
+      "edge": "after",
+      "actual_process_signal": "SIGKILL",
+      "logical_hunts": 1,
+      "preserved_evidence": 1
+    },
+    {
+      "phase": "operation split",
+      "edge": "before",
+      "actual_process_signal": "SIGKILL",
+      "logical_hunts": 1,
+      "preserved_evidence": 1
+    },
+    {
+      "phase": "operation split",
+      "edge": "after",
+      "actual_process_signal": "SIGKILL",
+      "logical_hunts": 1,
+      "preserved_evidence": 1
+    },
+    {
+      "phase": "event-driven wakeup",
+      "edge": "before",
+      "actual_process_signal": "SIGKILL",
+      "logical_hunts": 1,
+      "preserved_evidence": 1
+    },
+    {
+      "phase": "event-driven wakeup",
+      "edge": "after",
+      "actual_process_signal": "SIGKILL",
+      "logical_hunts": 1,
+      "preserved_evidence": 1
+    }
+  ],
+  "scope": "Actual child-process SIGKILL around SQL statements and atomic D1-double batches, restarting used SQLite state. External provider and Finder/Hunter outbox crash phases are covered by existing module tests, not all certified here."
+}

@@ -1,0 +1,59 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> operation-hunter@2.0.0 test
+> node --disable-warning=ExperimentalWarning --import tsx --test tests/*.test.ts
+
+✔ API: legacy v0.x endpoints keep working on the v1.0 engine (2094.184843ms)
+✔ API: v1 endpoints — brief, graph, entity, report, export, findings actions, settings (1019.371656ms)
+✔ API: server-sent events stream changes (217.615443ms)
+✔ crt.sh rows: one observation per certificate, SAN co-certified domains linked (12.930437ms)
+✔ chain helpers: units, TRON address encoding, BTC flows, label kinds (11.049776ms)
+✔ HTML fingerprinting: structure survives text changes, variants stay similar (8.427327ms)
+✔ HTTP client caches, retries transient errors and reports hard failures (1212.288885ms)
+✔ live collectors parse real API formats (DNS, crt.sh, RDAP, RIPEstat, HackerTarget, urlscan, Blockscout) (75.877325ms)
+✔ failed sources are recorded, retried later, and never fabricate data (3614.392471ms)
+✔ offline mode: network collectors unavailable, leads report why (12.812833ms)
+✔ canonicalisation resolves the same indicator written different ways (15.907048ms)
+✔ type detection and wallet families (4.181025ms)
+✔ indicator extraction pulls wallets, trackers and handles out of page source (1.267188ms)
+✔ commodity infrastructure is recognised statically and from result volume (0.447383ms)
+✔ utility math (0.235474ms)
+✔ store: migrations, transactions roll back, backups, reopen keeps data (23.183472ms)
+✔ operations: create, seeds, auto type detection, codes are unique (12.724006ms)
+✔ ingest: one evidence per observation, dedupe, noisy-OR confidence, multi-source SUPPORTED (22.837021ms)
+✔ invalidation cascade and reinstatement recompute dependent relationships (11.080261ms)
+✔ planner: ranks leads, suppresses commodity infrastructure, explains itself (9.789899ms)
+✔ pursuit: durable best-first run respects budget, never repeats a pivot, logs plain-language hops (234.283016ms)
+✔ recovery: interrupted pivots are retried and running pursuits resume after restart (318.689125ms)
+✔ strategy learning: outcomes and analyst feedback move expected gain (5.106849ms)
+✔ integration: registers, heartbeats, syncs operations and survives Main outages (1415.217075ms)
+✔ integration: HUNT_OPERATION jobs create or attach operations and start a pursuit (93.458493ms)
+✔ integration: Main events trigger reappearance checks; inbox candidates and decisions close the loop (129.598952ms)
+✔ integration: bad credentials are reported with a hint and never crash the worker (12.523709ms)
+✔ real operation: autonomous pursuit through live collectors reconstructs the operation (391.698346ms)
+✔ joined: Main asks, Hunter reconstructs, Main acts on Hunter's proposals, both learn (5088.153158ms)
+✔ v0.4 JSON store migrates into SQLite: user data kept, simulated evidence quarantined, demo regenerated (48.825937ms)
+✔ a corrupt legacy file does not block startup (6.550952ms)
+✔ one seed grows into a reconstruction of the operation (1343.479713ms)
+✔ long-running watch: monitors catch the next deployment as a reappearance (1234.432078ms)
+✔ reappearance check scores candidates against the fingerprint (legacy features accepted) (837.507995ms)
+✔ dossier and classic bundle are complete and carry the boundaries (852.137804ms)
+✔ analyst actions: dismissing and acting on findings, manual hypotheses, evidence invalidation (844.889398ms)
+    perf: ingest 51 ms, full analysis 105 ms for 440 entities
+✔ restart mid-pursuit: the run resumes and the intelligence layer (branches, learner, model history, hunts) persists (1526.91321ms)
+✔ performance: a large operation (400 sites, ~3000 links) is analysed quickly and incrementally (164.641189ms)
+✔ living model: lifecycles, rotation status, wave forecast, competing explanations (1191.860451ms)
+✔ model history: versions with readable diffs; contradictions persisted and retired (928.952893ms)
+✔ forecast: rhythm, windows and reserve domains (0.399942ms)
+✔ analyst verdicts correct membership immediately and calibrate factor weights (826.170364ms)
+✔ API: model, history, membership, facets, branches, next steps, hunts, contradictions, learner, governor (924.764797ms)
+✔ migration: a v1.0 database opens in v2.0 with every operation intact and a living model (39.55682ms)
+✔ ground truth: adversarial world reconstructed without absorbing planted or look-alike sites (1608.274391ms)
+ℹ tests 45
+ℹ suites 0
+ℹ pass 45
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 8546.165564

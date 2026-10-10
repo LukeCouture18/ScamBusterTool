@@ -1,0 +1,1561 @@
+[
+ {
+  "seed": 101,
+  "split": "eval",
+  "v2": {
+   "pipeline": "v2",
+   "rounds": [
+    {
+     "round": 0,
+     "surfaced": 3,
+     "useful": 3,
+     "precision": 1.0,
+     "noise_breakdown": {}
+    },
+    {
+     "round": 1,
+     "surfaced": 5,
+     "useful": 5,
+     "precision": 1.0,
+     "noise_breakdown": {}
+    },
+    {
+     "round": 2,
+     "surfaced": 6,
+     "useful": 6,
+     "precision": 1.0,
+     "noise_breakdown": {}
+    },
+    {
+     "round": 3,
+     "surfaced": 5,
+     "useful": 5,
+     "precision": 1.0,
+     "noise_breakdown": {}
+    },
+    {
+     "round": 4,
+     "surfaced": 12,
+     "useful": 12,
+     "precision": 1.0,
+     "noise_breakdown": {}
+    },
+    {
+     "round": 5,
+     "surfaced": 2,
+     "useful": 2,
+     "precision": 1.0,
+     "noise_breakdown": {}
+    }
+   ],
+   "total": {
+    "surfaced": 33,
+    "useful": 33,
+    "precision": 1.0,
+    "noise_breakdown": {}
+   },
+   "requests": {
+    "crtsh": 6,
+    "dns": 1432,
+    "feed": 6,
+    "http": 288,
+    "rdap": 36
+   },
+   "strategies": [
+    {
+     "round": 0,
+     "allocation": {
+      "feeds": 1.0
+     },
+     "delivered": [
+      {
+       "domain": "bbyit.com",
+       "p": 0.8022,
+       "headline": "Wallet phishing \u00b7 asks for a wallet recovery phrase \u00b7 registered 5 days ago"
+      },
+      {
+       "domain": "ledgerlogin.net",
+       "p": 0.7503,
+       "headline": "Wallet phishing \u00b7 asks for a wallet recovery phrase \u00b7 registered 18 days ago"
+      },
+      {
+       "domain": "rrustwallet.com",
+       "p": 0.7474,
+       "headline": "Brand impersonation \u00b7 Trustwallet login page on a look-alike domain \u00b7 registered 18 days ago"
+      }
+     ]
+    },
+    {
+     "round": 1,
+     "allocation": {
+      "ct_terms": 0.4183,
+      "brand_typos": 0.2946,
+      "feeds": 0.2871
+     },
+     "delivered": [
+      {
+       "domain": "ultrafx.cfd",
+       "p": 0.9728,
+       "headline": "Fund-recovery scam \u00b7 sells 'recovery' of stolen crypto \u00b7 deposit address shown (TRON)"
+      },
+      {
+       "domain": "coinexchangefx.vip",
+       "p": 0.938,
+       "headline": "Fake exchange / withdrawal trap \u00b7 must pay before withdrawing \u00b7 promises big per-trade profits"
+      },
+      {
+       "domain": "exchange-pro-vip.top",
+       "p": 0.8957,
+       "headline": "Fake exchange / withdrawal trap \u00b7 must pay before withdrawing \u00b7 registered 13 days ago \u00b7 1 related site"
+      },
+      {
+       "domain": "trrezor.com",
+       "p": 0.7998,
+       "headline": "Brand impersonation \u00b7 Trezor login page on a look-alike domain \u00b7 registered 11 days ago"
+      },
+      {
+       "domain": "sigmatrading.net",
+       "p": 0.702,
+       "headline": "Investment scheme \u00b7 promises 3% daily \u00b7 referral commissions"
+      }
+     ]
+    },
+    {
+     "round": 2,
+     "allocation": {
+      "ct_terms": 0.3844,
+      "feeds": 0.6156
+     },
+     "delivered": [
+      {
+       "domain": "cryptocom-verify.live",
+       "p": 0.9917,
+       "headline": "Wallet phishing \u00b7 asks for a wallet recovery phrase \u00b7 Cryptocom login page on a look-alike domain"
+      },
+      {
+       "domain": "kraken-wallet.club",
+       "p": 0.9897,
+       "headline": "Wallet phishing \u00b7 asks for a wallet recovery phrase \u00b7 Kraken login page on a look-alike domain"
+      },
+      {
+       "domain": "deltabitx.io",
+       "p": 0.8375,
+       "headline": "Trading-app scam \u00b7 login-gated trading app kit \u00b7 registered 11 days ago"
+      },
+      {
+       "domain": "cryptoocm.top",
+       "p": 0.8066,
+       "headline": "Brand impersonation \u00b7 Cryptocom login page on a look-alike domain \u00b7 registered 14 days ago"
+      },
+      {
+       "domain": "cryptoco.com",
+       "p": 0.7868,
+       "headline": "Brand impersonation \u00b7 Cryptocom login page on a look-alike domain \u00b7 registered 18 days ago"
+      },
+      {
+       "domain": "omniara.app",
+       "p": 0.7431,
+       "headline": "Trading-app scam \u00b7 login-gated trading app kit \u00b7 registered 10 days ago"
+      }
+     ]
+    },
+    {
+     "round": 3,
+     "allocation": {
+      "brand_typos": 0.1338,
+      "feeds": 0.5629,
+      "mentions": 0.1118,
+      "recheck": 0.1915
+     },
+     "delivered": [
+      {
+       "domain": "krqken.top",
+       "p": 0.9897,
+       "headline": "Wallet phishing \u00b7 asks for a wallet recovery phrase \u00b7 Kraken login page on a look-alike domain"
+      },
+      {
+       "domain": "trezor-login.live",
+       "p": 0.9897,
+       "headline": "Wallet phishing \u00b7 asks for a wallet recovery phrase \u00b7 Trezor login page on a look-alike domain"
+      },
+      {
+       "domain": "bitexchangefx.com",
+       "p": 0.9637,
+       "headline": "Investment scheme \u00b7 deposit address shown (TRON) \u00b7 fixed payout schedule"
+      },
+      {
+       "domain": "bitgetapp.cc",
+       "p": 0.8186,
+       "headline": "Brand impersonation \u00b7 Bitget login page on a look-alike domain \u00b7 registered 27 days ago"
+      },
+      {
+       "domain": "kucoinofficial.top",
+       "p": 0.7698,
+       "headline": "Brand impersonation \u00b7 Kucoin login page on a look-alike domain \u00b7 registered 19 days ago"
+      }
+     ]
+    },
+    {
+     "round": 4,
+     "allocation": {
+      "ct_terms": 0.2807,
+      "brand_typos": 0.0742,
+      "feeds": 0.4257,
+      "recheck": 0.2194
+     },
+     "delivered": [
+      {
+       "domain": "coinbase-rewards.app",
+       "p": 0.9923,
+       "headline": "Wallet phishing \u00b7 asks for a wallet recovery phrase \u00b7 Coinbase login page on a look-alike domain"
+      },
+      {
+       "domain": "ketamask.com",
+       "p": 0.9883,
+       "headline": "Wallet phishing \u00b7 asks for a wallet recovery phrase \u00b7 Metamask login page on a look-alike domain"
+      },
+      {
+       "domain": "deltaexchange.io",
+       "p": 0.9881,
+       "headline": "Fake exchange / withdrawal trap \u00b7 must pay before withdrawing \u00b7 deposit address shown (TRON)"
+      },
+      {
+       "domain": "coinexchangecoinx.com",
+       "p": 0.9476,
+       "headline": "Fake exchange / withdrawal trap \u00b7 must pay before withdrawing \u00b7 promises big per-trade profits"
+      },
+      {
+       "domain": "bitexchangebank.pro",
+       "p": 0.9456,
+       "headline": "Investment scheme \u00b7 promises 1.6% daily \u00b7 registered 9 days ago"
+      },
+      {
+       "domain": "ultracoinexchange.icu",
+       "p": 0.938,
+       "headline": "Fake exchange / withdrawal trap \u00b7 must pay before withdrawing \u00b7 promises big per-trade profits"
+      },
+      {
+       "domain": "tronswapexchange.org",
+       "p": 0.9112,
+       "headline": "Fake exchange / withdrawal trap \u00b7 must pay before withdrawing \u00b7 registered 4 days ago"
+      },
+      {
+       "domain": "troncoinexchange.org",
+       "p": 0.9112,
+       "headline": "Fake exchange / withdrawal trap \u00b7 must pay before withdrawing \u00b7 registered 7 days ago"
+      },
+      {
+       "domain": "heliopay.xyz",
+       "p": 0.8957,
+       "headline": "Fake exchange / withdrawal trap \u00b7 must pay before withdrawing \u00b7 tiered deposit plans \u00b7 1 related site"
+      },
+      {
+       "domain": "deltalyte2.vip",
+       "p": 0.8535,
+       "headline": "Trading-app scam \u00b7 login-gated trading app kit \u00b7 registered 7 days ago"
+      },
+      {
+       "domain": "bitexchangequant.com",
+       "p": 0.7608,
+       "headline": "Investment scheme \u00b7 promises 3% daily \u00b7 referral commissions"
+      },
+      {
+       "domain": "swapexchange-hub.vip",
+       "p": 0.7215,
+       "headline": "Investment scheme \u00b7 fixed payout schedule \u00b7 tiered deposit plans"
+      }
+     ]
+    },
+    {
+     "round": 5,
+     "allocation": {
+      "pattern_siblings": 0.4088,
+      "ct_terms": 0.1407,
+      "brand_typos": 0.081,
+      "feeds": 0.3187,
+      "recheck": 0.0508
+     },
+     "delivered": [
+      {
+       "domain": "helioquant-h5.pro",
+       "p": 0.7431,
+       "headline": "Trading-app scam \u00b7 login-gated trading app kit \u00b7 registered 8 days ago"
+      },
+      {
+       "domain": "solnet.org",
+       "p": 0.6964,
+       "headline": "Investment scheme \u00b7 fixed payout schedule \u00b7 tiered deposit plans"
+      }
+     ]
+    }
+   ]
+  },
+  "seconds": 24.6
+ },
+ {
+  "seed": 202,
+  "split": "eval",
+  "v2": {
+   "pipeline": "v2",
+   "rounds": [
+    {
+     "round": 0,
+     "surfaced": 3,
+     "useful": 3,
+     "precision": 1.0,
+     "noise_breakdown": {}
+    },
+    {
+     "round": 1,
+     "surfaced": 9,
+     "useful": 9,
+     "precision": 1.0,
+     "noise_breakdown": {}
+    },
+    {
+     "round": 2,
+     "surfaced": 3,
+     "useful": 3,
+     "precision": 1.0,
+     "noise_breakdown": {}
+    },
+    {
+     "round": 3,
+     "surfaced": 2,
+     "useful": 2,
+     "precision": 1.0,
+     "noise_breakdown": {}
+    },
+    {
+     "round": 4,
+     "surfaced": 2,
+     "useful": 2,
+     "precision": 1.0,
+     "noise_breakdown": {}
+    },
+    {
+     "round": 5,
+     "surfaced": 20,
+     "useful": 20,
+     "precision": 1.0,
+     "noise_breakdown": {}
+    }
+   ],
+   "total": {
+    "surfaced": 39,
+    "useful": 39,
+    "precision": 1.0,
+    "noise_breakdown": {}
+   },
+   "requests": {
+    "crtsh": 6,
+    "dns": 1481,
+    "feed": 6,
+    "http": 308,
+    "rdap": 49
+   },
+   "strategies": [
+    {
+     "round": 0,
+     "allocation": {
+      "brand_typos": 0.1146,
+      "feeds": 0.8854
+     },
+     "delivered": [
+      {
+       "domain": "bknance.top",
+       "p": 0.9897,
+       "headline": "Wallet phishing \u00b7 asks for a wallet recovery phrase \u00b7 Binance login page on a look-alike domain"
+      },
+      {
+       "domain": "butget.live",
+       "p": 0.7698,
+       "headline": "Brand impersonation \u00b7 Bitget login page on a look-alike domain \u00b7 registered 15 days ago"
+      },
+      {
+       "domain": "okx-help.com",
+       "p": 0.7474,
+       "headline": "Brand impersonation \u00b7 Okx login page on a look-alike domain \u00b7 registered 17 days ago"
+      }
+     ]
+    },
+    {
+     "round": 1,
+     "allocation": {
+      "ct_terms": 0.4355,
+      "brand_typos": 0.2664,
+      "feeds": 0.2981
+     },
+     "delivered": [
+      {
+       "domain": "sigmaara.org",
+       "p": 0.9893,
+       "headline": "Investment scheme \u00b7 promises 2.1% daily \u00b7 deposit address shown (TRON) \u00b7 1 related site"
+      },
+      {
+       "domain": "omnifx.pro",
+       "p": 0.9872,
+       "headline": "Investment scheme \u00b7 promises 1.8% daily \u00b7 deposit address shown (TRON) \u00b7 1 related site"
+      },
+      {
+       "domain": "ultraquantfx.club",
+       "p": 0.9677,
+       "headline": "Investment scheme \u00b7 deposit address shown (TRON) \u00b7 fixed payout schedule \u00b7 1 related site"
+      },
+      {
+       "domain": "fusionpay.icu",
+       "p": 0.9677,
+       "headline": "Investment scheme \u00b7 deposit address shown (BTC) \u00b7 fixed payout schedule \u00b7 1 related site"
+      },
+      {
+       "domain": "fusionfx.live",
+       "p": 0.938,
+       "headline": "Fake exchange / withdrawal trap \u00b7 must pay before withdrawing \u00b7 promises big per-trade profits \u00b7 1 related site"
+      },
+      {
+       "domain": "goldfx.icu",
+       "p": 0.9181,
+       "headline": "Fake exchange / withdrawal trap \u00b7 must pay before withdrawing \u00b7 promises big per-trade profits"
+      },
+      {
+       "domain": "pulsefx.live",
+       "p": 0.7823,
+       "headline": "Investment scheme \u00b7 promises 3% daily \u00b7 registered 9 days ago"
+      },
+      {
+       "domain": "okxx.xyz",
+       "p": 0.7698,
+       "headline": "Brand impersonation \u00b7 Okx login page on a look-alike domain \u00b7 registered 15 days ago"
+      },
+      {
+       "domain": "kucion.net",
+       "p": 0.7503,
+       "headline": "Wallet phishing \u00b7 asks for a wallet recovery phrase \u00b7 registered 20 days ago"
+      }
+     ]
+    },
+    {
+     "round": 2,
+     "allocation": {
+      "brand_typos": 0.0975,
+      "feeds": 0.9025
+     },
+     "delivered": [
+      {
+       "domain": "terrawallet-validate.com",
+       "p": 0.8837,
+       "headline": "Fake exchange / withdrawal trap \u00b7 must pay before withdrawing \u00b7 tiered deposit plans"
+      },
+      {
+       "domain": "trustwallet-auth.club",
+       "p": 0.8186,
+       "headline": "Brand impersonation \u00b7 Trustwallet login page on a look-alike domain \u00b7 registered 25 days ago"
+      },
+      {
+       "domain": "kaironet-global.top",
+       "p": 0.8118,
+       "headline": "Trading-app scam \u00b7 login-gated trading app kit \u00b7 asks for an invitation code"
+      }
+     ]
+    },
+    {
+     "round": 3,
+     "allocation": {
+      "pattern_siblings": 0.4208,
+      "brand_typos": 0.0664,
+      "feeds": 0.5128
+     },
+     "delivered": [
+      {
+       "domain": "deltaara-app.pro",
+       "p": 0.6972,
+       "headline": "Trading-app scam \u00b7 login-gated trading app kit \u00b7 tells you where to deposit"
+      },
+      {
+       "domain": "fusionlabs.com",
+       "p": 0.6709,
+       "headline": "Trading-app scam \u00b7 login-gated trading app kit \u00b7 tells you where to deposit"
+      }
+     ]
+    },
+    {
+     "round": 4,
+     "allocation": {
+      "pattern_siblings": 0.2621,
+      "ct_terms": 0.2022,
+      "brand_typos": 0.0913,
+      "feeds": 0.3876,
+      "recheck": 0.0568
+     },
+     "delivered": [
+      {
+       "domain": "terraquant.cc",
+       "p": 0.704,
+       "headline": "Trading-app scam \u00b7 login-gated trading app kit \u00b7 tells you where to deposit"
+      },
+      {
+       "domain": "omnibank.cc",
+       "p": 0.704,
+       "headline": "Trading-app scam \u00b7 login-gated trading app kit \u00b7 tells you where to deposit"
+      }
+     ]
+    },
+    {
+     "round": 5,
+     "allocation": {
+      "pattern_siblings": 0.3558,
+      "ct_terms": 0.1837,
+      "feeds": 0.2748,
+      "brand_typos": 0.1107,
+      "recheck": 0.075
+     },
+     "delivered": [
+      {
+       "domain": "heliobitexchange.shop",
+       "p": 0.9929,
+       "headline": "Investment scheme \u00b7 promises 1.8% daily \u00b7 deposit address shown (BTC)"
+      },
+      {
+       "domain": "vaultswapexchange.shop",
+       "p": 0.9894,
+       "headline": "Fake exchange / withdrawal trap \u00b7 must pay before withdrawing \u00b7 deposit address shown (TRON)"
+      },
+      {
+       "domain": "fusioncoinexchange.io",
+       "p": 0.9893,
+       "headline": "Investment scheme \u00b7 promises 1.8% daily \u00b7 deposit address shown (USDT)"
+      },
+      {
+       "domain": "exchange-procoinx.app",
+       "p": 0.9858,
+       "headline": "Fake exchange / withdrawal trap \u00b7 must pay before withdrawing \u00b7 deposit address shown (TRON)"
+      },
+      {
+       "domain": "exchangetrade.cc",
+       "p": 0.9533,
+       "headline": "Fake exchange / withdrawal trap \u00b7 must pay before withdrawing \u00b7 promises big per-trade profits"
+      },
+      {
+       "domain": "exchange-pro-vip.com",
+       "p": 0.9476,
+       "headline": "Fake exchange / withdrawal trap \u00b7 must pay before withdrawing \u00b7 promises big per-trade profits"
+      },
+      {
+       "domain": "exchange-protrade.xyz",
+       "p": 0.938,
+       "headline": "Fake exchange / withdrawal trap \u00b7 must pay before withdrawing \u00b7 promises big per-trade profits \u00b7 1 related site"
+      },
+      {
+       "domain": "exchange-pro-hub.top",
+       "p": 0.938,
+       "headline": "Fake exchange / withdrawal trap \u00b7 must pay before withdrawing \u00b7 promises big per-trade profits"
+      },
+      {
+       "domain": "tronexchange-pro.icu",
+       "p": 0.938,
+       "headline": "Fake exchange / withdrawal trap \u00b7 must pay before withdrawing \u00b7 promises big per-trade profits"
+      },
+      {
+       "domain": "heliocoinexchange.pro",
+       "p": 0.938,
+       "headline": "Fake exchange / withdrawal trap \u00b7 must pay before withdrawing \u00b7 promises big per-trade profits"
+      },
+      {
+       "domain": "exchange-pro-vip.shop",
+       "p": 0.938,
+       "headline": "Fake exchange / withdrawal trap \u00b7 must pay before withdrawing \u00b7 promises big per-trade profits"
+      },
+      {
+       "domain": "metapay.cc",
+       "p": 0.9206,
+       "headline": "Fake exchange / withdrawal trap \u00b7 must pay before withdrawing \u00b7 registered 8 days ago \u00b7 1 related site"
+      },
+      {
+       "domain": "deltaexchange-pro.co",
+       "p": 0.9112,
+       "headline": "Fake exchange / withdrawal trap \u00b7 must pay before withdrawing \u00b7 registered 2 days ago \u00b7 1 related site"
+      },
+      {
+       "domain": "bitexchange-vip.top",
+       "p": 0.8957,
+       "headline": "Fake exchange / withdrawal trap \u00b7 must pay before withdrawing \u00b7 tiered deposit plans"
+      },
+      {
+       "domain": "ultrabitexchange.com",
+       "p": 0.8837,
+       "headline": "Fake exchange / withdrawal trap \u00b7 must pay before withdrawing \u00b7 tiered deposit plans"
+      },
+      {
+       "domain": "deltabitx-global.xyz",
+       "p": 0.873,
+       "headline": "Fake exchange / withdrawal trap \u00b7 must pay before withdrawing \u00b7 tiered deposit plans"
+      },
+      {
+       "domain": "swapexchange-online.com",
+       "p": 0.8375,
+       "headline": "Trading-app scam \u00b7 login-gated trading app kit \u00b7 registered 10 days ago"
+      },
+      {
+       "domain": "omnicoinexchange.cfd",
+       "p": 0.8046,
+       "headline": "Trading-app scam \u00b7 login-gated trading app kit \u00b7 registered 13 days ago"
+      },
+      {
+       "domain": "swapexchange-pro.com",
+       "p": 0.7925,
+       "headline": "Trading-app scam \u00b7 login-gated trading app kit \u00b7 asks for an invitation code"
+      },
+      {
+       "domain": "coinexchangelyte.net",
+       "p": 0.7925,
+       "headline": "Trading-app scam \u00b7 login-gated trading app kit \u00b7 asks for an invitation code"
+      }
+     ]
+    }
+   ]
+  },
+  "seconds": 30.9
+ },
+ {
+  "seed": 303,
+  "split": "eval",
+  "v2": {
+   "pipeline": "v2",
+   "rounds": [
+    {
+     "round": 0,
+     "surfaced": 3,
+     "useful": 3,
+     "precision": 1.0,
+     "noise_breakdown": {}
+    },
+    {
+     "round": 1,
+     "surfaced": 5,
+     "useful": 5,
+     "precision": 1.0,
+     "noise_breakdown": {}
+    },
+    {
+     "round": 2,
+     "surfaced": 4,
+     "useful": 4,
+     "precision": 1.0,
+     "noise_breakdown": {}
+    },
+    {
+     "round": 3,
+     "surfaced": 7,
+     "useful": 7,
+     "precision": 1.0,
+     "noise_breakdown": {}
+    },
+    {
+     "round": 4,
+     "surfaced": 5,
+     "useful": 5,
+     "precision": 1.0,
+     "noise_breakdown": {}
+    },
+    {
+     "round": 5,
+     "surfaced": 3,
+     "useful": 3,
+     "precision": 1.0,
+     "noise_breakdown": {}
+    }
+   ],
+   "total": {
+    "surfaced": 27,
+    "useful": 27,
+    "precision": 1.0,
+    "noise_breakdown": {}
+   },
+   "requests": {
+    "crtsh": 6,
+    "dns": 1191,
+    "feed": 6,
+    "http": 164,
+    "rdap": 33
+   },
+   "strategies": [
+    {
+     "round": 0,
+     "allocation": {
+      "brand_typos": 0.1146,
+      "feeds": 0.8854
+     },
+     "delivered": [
+      {
+       "domain": "coinnbase.xyz",
+       "p": 0.9861,
+       "headline": "Wallet phishing \u00b7 asks for a wallet recovery phrase \u00b7 Coinbase login page on a look-alike domain"
+      },
+      {
+       "domain": "binance-claim.com",
+       "p": 0.9843,
+       "headline": "Wallet phishing \u00b7 asks for a wallet recovery phrase \u00b7 Binance login page on a look-alike domain"
+      },
+      {
+       "domain": "ledgersecure.org",
+       "p": 0.7503,
+       "headline": "Wallet phishing \u00b7 asks for a wallet recovery phrase \u00b7 registered 24 days ago"
+      }
+     ]
+    },
+    {
+     "round": 1,
+     "allocation": {
+      "ct_terms": 0.7618,
+      "feeds": 0.2382
+     },
+     "delivered": [
+      {
+       "domain": "kairofx.cc",
+       "p": 0.9872,
+       "headline": "Investment scheme \u00b7 promises 1.6% daily \u00b7 deposit address shown (BTC)"
+      },
+      {
+       "domain": "fusionlyte.vip",
+       "p": 0.938,
+       "headline": "Fake exchange / withdrawal trap \u00b7 must pay before withdrawing \u00b7 promises big per-trade profits \u00b7 2 related sites"
+      },
+      {
+       "domain": "kairomint-global.shop",
+       "p": 0.938,
+       "headline": "Fake exchange / withdrawal trap \u00b7 must pay before withdrawing \u00b7 promises big per-trade profits"
+      },
+      {
+       "domain": "pulsetrade.xyz",
+       "p": 0.8641,
+       "headline": "Fake exchange / withdrawal trap \u00b7 must pay before withdrawing \u00b7 tiered deposit plans"
+      },
+      {
+       "domain": "astrafx.cfd",
+       "p": 0.8118,
+       "headline": "Trading-app scam \u00b7 login-gated trading app kit \u00b7 registered 11 days ago \u00b7 1 related site"
+      }
+     ]
+    },
+    {
+     "round": 2,
+     "allocation": {
+      "pattern_siblings": 0.1077,
+      "ct_terms": 0.1737,
+      "brand_typos": 0.3084,
+      "feeds": 0.4102
+     },
+     "delivered": [
+      {
+       "domain": "cryptocom-unlock.vip",
+       "p": 0.9917,
+       "headline": "Wallet phishing \u00b7 asks for a wallet recovery phrase \u00b7 Cryptocom login page on a look-alike domain"
+      },
+      {
+       "domain": "cryptocom-rewards.org",
+       "p": 0.9906,
+       "headline": "Wallet phishing \u00b7 asks for a wallet recovery phrase \u00b7 Cryptocom login page on a look-alike domain"
+      },
+      {
+       "domain": "tronsphere.live",
+       "p": 0.9811,
+       "headline": "Investment scheme \u00b7 promises 3% daily \u00b7 deposit address shown (TRON)"
+      },
+      {
+       "domain": "trdzor.top",
+       "p": 0.8152,
+       "headline": "Brand impersonation \u00b7 Trezor login page on a look-alike domain \u00b7 registered 18 days ago"
+      }
+     ]
+    },
+    {
+     "round": 3,
+     "allocation": {
+      "brand_typos": 0.0745,
+      "feeds": 0.4039,
+      "mentions": 0.0938,
+      "recheck": 0.4279
+     },
+     "delivered": [
+      {
+       "domain": "fusionverse3.pro",
+       "p": 0.9279,
+       "headline": "Investment scheme \u00b7 promises 2.1% daily \u00b7 registered 3 days ago \u00b7 1 related site"
+      },
+      {
+       "domain": "swapexchangepay.shop",
+       "p": 0.8957,
+       "headline": "Fake exchange / withdrawal trap \u00b7 must pay before withdrawing \u00b7 tiered deposit plans"
+      },
+      {
+       "domain": "invest-pro-pro.net",
+       "p": 0.8837,
+       "headline": "Fake exchange / withdrawal trap \u00b7 must pay before withdrawing \u00b7 tiered deposit plans"
+      },
+      {
+       "domain": "pulsebitx.com",
+       "p": 0.7925,
+       "headline": "Trading-app scam \u00b7 login-gated trading app kit \u00b7 asks for an invitation code"
+      },
+      {
+       "domain": "coinbaes.org",
+       "p": 0.7503,
+       "headline": "Wallet phishing \u00b7 asks for a wallet recovery phrase \u00b7 registered 26 days ago"
+      },
+      {
+       "domain": "trade-ai-plus.icu",
+       "p": 0.6575,
+       "headline": "Investment scheme \u00b7 fixed payout schedule \u00b7 tiered deposit plans"
+      },
+      {
+       "domain": "vaultix.cc",
+       "p": 0.6415,
+       "headline": "Fund-recovery scam \u00b7 sells 'recovery' of stolen crypto \u00b7 registered 15 days ago"
+      }
+     ]
+    },
+    {
+     "round": 4,
+     "allocation": {
+      "pattern_siblings": 0.3939,
+      "ct_terms": 0.1942,
+      "brand_typos": 0.0751,
+      "feeds": 0.2796,
+      "recheck": 0.0572
+     },
+     "delivered": [
+      {
+       "domain": "fusionfx.top",
+       "p": 0.9971,
+       "headline": "Investment scheme \u00b7 promises 1.6% daily \u00b7 deposit address shown (TRON) \u00b7 1 related site"
+      },
+      {
+       "domain": "metamint-fx.com",
+       "p": 0.9476,
+       "headline": "Fake exchange / withdrawal trap \u00b7 must pay before withdrawing \u00b7 promises big per-trade profits"
+      },
+      {
+       "domain": "omnibitexchange.cc",
+       "p": 0.914,
+       "headline": "Fake exchange / withdrawal trap \u00b7 must pay before withdrawing \u00b7 promises big per-trade profits"
+      },
+      {
+       "domain": "cloudminingfx.co",
+       "p": 0.8111,
+       "headline": "Investment scheme \u00b7 promises 3% daily \u00b7 registered 10 days ago"
+      },
+      {
+       "domain": "fxtrading-hub.pro",
+       "p": 0.7215,
+       "headline": "Investment scheme \u00b7 fixed payout schedule \u00b7 tiered deposit plans"
+      }
+     ]
+    },
+    {
+     "round": 5,
+     "allocation": {
+      "ct_terms": 0.4204,
+      "brand_typos": 0.1671,
+      "feeds": 0.3451,
+      "recheck": 0.0675
+     },
+     "delivered": [
+      {
+       "domain": "bitexchange-vip.live",
+       "p": 0.986,
+       "headline": "Investment scheme \u00b7 promises 2.1% daily \u00b7 deposit address shown (TRON)"
+      },
+      {
+       "domain": "trusrwallet.org",
+       "p": 0.7844,
+       "headline": "Brand impersonation \u00b7 Trustwallet login page on a look-alike domain \u00b7 registered 7 days ago"
+      },
+      {
+       "domain": "heliocloudmine.com",
+       "p": 0.6762,
+       "headline": "Investment scheme \u00b7 fixed payout schedule \u00b7 tiered deposit plans"
+      }
+     ]
+    }
+   ]
+  },
+  "seconds": 20.7
+ },
+ {
+  "seed": 404,
+  "split": "eval",
+  "v2": {
+   "pipeline": "v2",
+   "rounds": [
+    {
+     "round": 0,
+     "surfaced": 3,
+     "useful": 3,
+     "precision": 1.0,
+     "noise_breakdown": {}
+    },
+    {
+     "round": 1,
+     "surfaced": 5,
+     "useful": 5,
+     "precision": 1.0,
+     "noise_breakdown": {}
+    },
+    {
+     "round": 2,
+     "surfaced": 1,
+     "useful": 1,
+     "precision": 1.0,
+     "noise_breakdown": {}
+    },
+    {
+     "round": 3,
+     "surfaced": 13,
+     "useful": 13,
+     "precision": 1.0,
+     "noise_breakdown": {}
+    },
+    {
+     "round": 4,
+     "surfaced": 4,
+     "useful": 4,
+     "precision": 1.0,
+     "noise_breakdown": {}
+    },
+    {
+     "round": 5,
+     "surfaced": 18,
+     "useful": 18,
+     "precision": 1.0,
+     "noise_breakdown": {}
+    }
+   ],
+   "total": {
+    "surfaced": 44,
+    "useful": 44,
+    "precision": 1.0,
+    "noise_breakdown": {}
+   },
+   "requests": {
+    "crtsh": 6,
+    "dns": 1506,
+    "feed": 6,
+    "http": 326,
+    "rdap": 50
+   },
+   "strategies": [
+    {
+     "round": 0,
+     "allocation": {
+      "brand_typos": 0.1146,
+      "feeds": 0.8854
+     },
+     "delivered": [
+      {
+       "domain": "binancelogin.xyz",
+       "p": 0.9861,
+       "headline": "Wallet phishing \u00b7 asks for a wallet recovery phrase \u00b7 Binance login page on a look-alike domain"
+      },
+      {
+       "domain": "coingase.xyz",
+       "p": 0.9861,
+       "headline": "Wallet phishing \u00b7 asks for a wallet recovery phrase \u00b7 Coinbase login page on a look-alike domain"
+      },
+      {
+       "domain": "ledge.xyz",
+       "p": 0.8186,
+       "headline": "Brand impersonation \u00b7 Ledger login page on a look-alike domain \u00b7 registered 10 days ago"
+      }
+     ]
+    },
+    {
+     "round": 1,
+     "allocation": {
+      "ct_terms": 0.4355,
+      "brand_typos": 0.2664,
+      "feeds": 0.2981
+     },
+     "delivered": [
+      {
+       "domain": "omnifx.vip",
+       "p": 0.9728,
+       "headline": "Fund-recovery scam \u00b7 sells 'recovery' of stolen crypto \u00b7 deposit address shown (TRON)"
+      },
+      {
+       "domain": "omnifx3.top",
+       "p": 0.8957,
+       "headline": "Fake exchange / withdrawal trap \u00b7 must pay before withdrawing \u00b7 registered 3 days ago \u00b7 1 related site"
+      },
+      {
+       "domain": "swapexchange-global.cc",
+       "p": 0.8957,
+       "headline": "Fake exchange / withdrawal trap \u00b7 must pay before withdrawing \u00b7 registered 6 days ago"
+      },
+      {
+       "domain": "binahce.org",
+       "p": 0.7474,
+       "headline": "Brand impersonation \u00b7 Binance login page on a look-alike domain \u00b7 registered 16 days ago"
+      },
+      {
+       "domain": "luxefx.co",
+       "p": 0.6964,
+       "headline": "Investment scheme \u00b7 fixed payout schedule \u00b7 tiered deposit plans \u00b7 1 related site"
+      }
+     ]
+    },
+    {
+     "round": 2,
+     "allocation": {
+      "pattern_siblings": 0.1255,
+      "ct_terms": 0.2047,
+      "brand_typos": 0.3699,
+      "feeds": 0.2999
+     },
+     "delivered": [
+      {
+       "domain": "rrezor.com",
+       "p": 0.9883,
+       "headline": "Wallet phishing \u00b7 asks for a wallet recovery phrase \u00b7 Trezor login page on a look-alike domain"
+      }
+     ]
+    },
+    {
+     "round": 3,
+     "allocation": {
+      "ct_terms": 0.1733,
+      "brand_typos": 0.1202,
+      "feeds": 0.3318,
+      "mentions": 0.3081,
+      "recheck": 0.0665
+     },
+     "delivered": [
+      {
+       "domain": "exchangeverse.icu",
+       "p": 0.9953,
+       "headline": "Fake exchange / withdrawal trap \u00b7 must pay before withdrawing \u00b7 deposit address shown (TRON) \u00b7 1 related site"
+      },
+      {
+       "domain": "kairoexchange.cfd",
+       "p": 0.9897,
+       "headline": "Investment scheme \u00b7 promises 1.6% daily \u00b7 deposit address shown (TRON)"
+      },
+      {
+       "domain": "bitexchange-global.app",
+       "p": 0.9897,
+       "headline": "Investment scheme \u00b7 promises 1.6% daily \u00b7 deposit address shown (TRON)"
+      },
+      {
+       "domain": "bitger.live",
+       "p": 0.9861,
+       "headline": "Wallet phishing \u00b7 asks for a wallet recovery phrase \u00b7 Bitget login page on a look-alike domain"
+      },
+      {
+       "domain": "exchange-pro-pro.app",
+       "p": 0.9851,
+       "headline": "Investment scheme \u00b7 promises 3% daily \u00b7 deposit address shown (TRON)"
+      },
+      {
+       "domain": "sigmalabs-plus.net",
+       "p": 0.9827,
+       "headline": "Fake exchange / withdrawal trap \u00b7 must pay before withdrawing \u00b7 deposit address shown (TRON)"
+      },
+      {
+       "domain": "omniexchange.io",
+       "p": 0.9775,
+       "headline": "Investment scheme \u00b7 promises 3% daily \u00b7 deposit address shown (TRON)"
+      },
+      {
+       "domain": "bitexchangebank.top",
+       "p": 0.9332,
+       "headline": "Fake exchange / withdrawal trap \u00b7 must pay before withdrawing \u00b7 promises big per-trade profits"
+      },
+      {
+       "domain": "trade-ailyte.club",
+       "p": 0.8957,
+       "headline": "Fake exchange / withdrawal trap \u00b7 must pay before withdrawing \u00b7 tiered deposit plans"
+      },
+      {
+       "domain": "vaultchain.shop",
+       "p": 0.8046,
+       "headline": "Trading-app scam \u00b7 login-gated trading app kit \u00b7 registered 9 days ago"
+      },
+      {
+       "domain": "coinexchange-global.cfd",
+       "p": 0.7992,
+       "headline": "Trading-app scam \u00b7 login-gated trading app kit \u00b7 asks for an invitation code"
+      },
+      {
+       "domain": "orbiexchange.shop",
+       "p": 0.7633,
+       "headline": "Investment scheme \u00b7 fixed payout schedule \u00b7 tiered deposit plans"
+      },
+      {
+       "domain": "ultrabtcmining.org",
+       "p": 0.7558,
+       "headline": "Investment scheme \u00b7 fixed payout schedule \u00b7 tiered deposit plans"
+      }
+     ]
+    },
+    {
+     "round": 4,
+     "allocation": {
+      "pattern_siblings": 0.2726,
+      "brand_typos": 0.052,
+      "feeds": 0.6007,
+      "recheck": 0.0747
+     },
+     "delivered": [
+      {
+       "domain": "hashminingfx.shop",
+       "p": 0.9809,
+       "headline": "Fake exchange / withdrawal trap \u00b7 must pay before withdrawing \u00b7 deposit address shown (TRON)"
+      },
+      {
+       "domain": "ultrabank.icu",
+       "p": 0.7531,
+       "headline": "Trading-app scam \u00b7 login-gated trading app kit \u00b7 tells you where to deposit"
+      },
+      {
+       "domain": "tronsphere3.app",
+       "p": 0.7531,
+       "headline": "Trading-app scam \u00b7 login-gated trading app kit \u00b7 tells you where to deposit"
+      },
+      {
+       "domain": "invest-profx.net",
+       "p": 0.702,
+       "headline": "Investment scheme \u00b7 promises 3% daily \u00b7 referral commissions"
+      }
+     ]
+    },
+    {
+     "round": 5,
+     "allocation": {
+      "pattern_siblings": 0.3321,
+      "ct_terms": 0.1469,
+      "brand_typos": 0.0639,
+      "feeds": 0.3982,
+      "recheck": 0.059
+     },
+     "delivered": [
+      {
+       "domain": "deltacoinx.cfd",
+       "p": 0.9968,
+       "headline": "Fake exchange / withdrawal trap \u00b7 must pay before withdrawing \u00b7 deposit address shown (TRON) \u00b7 2 related sites"
+      },
+      {
+       "domain": "heliocoinx.club",
+       "p": 0.9929,
+       "headline": "Investment scheme \u00b7 promises 2.1% daily \u00b7 deposit address shown (TRON)"
+      },
+      {
+       "domain": "investcoinix.app",
+       "p": 0.9929,
+       "headline": "Investment scheme \u00b7 promises 1.8% daily \u00b7 deposit address shown (TRON)"
+      },
+      {
+       "domain": "theluxeix.top",
+       "p": 0.9929,
+       "headline": "Investment scheme \u00b7 promises 2.1% daily \u00b7 deposit address shown (TRON)"
+      },
+      {
+       "domain": "coinbase-official.top",
+       "p": 0.9923,
+       "headline": "Wallet phishing \u00b7 asks for a wallet recovery phrase \u00b7 Coinbase login page on a look-alike domain"
+      },
+      {
+       "domain": "coinbase-unlock.io",
+       "p": 0.9913,
+       "headline": "Wallet phishing \u00b7 asks for a wallet recovery phrase \u00b7 Coinbase login page on a look-alike domain"
+      },
+      {
+       "domain": "astrainvestcoin.cfd",
+       "p": 0.9905,
+       "headline": "Investment scheme \u00b7 promises 1.8% daily \u00b7 deposit address shown (TRON)"
+      },
+      {
+       "domain": "terracoinx.pro",
+       "p": 0.9905,
+       "headline": "Investment scheme \u00b7 promises 1.8% daily \u00b7 deposit address shown (BTC)"
+      },
+      {
+       "domain": "investcoinport.cc",
+       "p": 0.9905,
+       "headline": "Investment scheme \u00b7 promises 1.8% daily \u00b7 deposit address shown (TRON)"
+      },
+      {
+       "domain": "coinbase-rewards.icu",
+       "p": 0.9897,
+       "headline": "Wallet phishing \u00b7 asks for a wallet recovery phrase \u00b7 Coinbase login page on a look-alike domain"
+      },
+      {
+       "domain": "coinexchangeport.cc",
+       "p": 0.9894,
+       "headline": "Fake exchange / withdrawal trap \u00b7 must pay before withdrawing \u00b7 deposit address shown (TRON)"
+      },
+      {
+       "domain": "astrainvestcoin.io",
+       "p": 0.9305,
+       "headline": "Fake exchange / withdrawal trap \u00b7 must pay before withdrawing \u00b7 promises big per-trade profits"
+      },
+      {
+       "domain": "sigmacoinx.net",
+       "p": 0.9305,
+       "headline": "Fake exchange / withdrawal trap \u00b7 must pay before withdrawing \u00b7 promises big per-trade profits"
+      },
+      {
+       "domain": "investcoinsphere.shop",
+       "p": 0.8957,
+       "headline": "Fake exchange / withdrawal trap \u00b7 must pay before withdrawing \u00b7 tiered deposit plans"
+      },
+      {
+       "domain": "coinbaase.org",
+       "p": 0.7998,
+       "headline": "Brand impersonation \u00b7 Coinbase login page on a look-alike domain \u00b7 registered 24 days ago"
+      },
+      {
+       "domain": "deltabitx.net",
+       "p": 0.7847,
+       "headline": "Trading-app scam \u00b7 login-gated trading app kit \u00b7 registered 13 days ago"
+      },
+      {
+       "domain": "ultracoinx-h5.vip",
+       "p": 0.7531,
+       "headline": "Trading-app scam \u00b7 login-gated trading app kit \u00b7 tells you where to deposit"
+      },
+      {
+       "domain": "investcoin-center.co",
+       "p": 0.7191,
+       "headline": "Trading-app scam \u00b7 login-gated trading app kit \u00b7 registered 10 days ago"
+      }
+     ]
+    }
+   ]
+  },
+  "seconds": 30.2
+ },
+ {
+  "seed": 505,
+  "split": "eval",
+  "v2": {
+   "pipeline": "v2",
+   "rounds": [
+    {
+     "round": 0,
+     "surfaced": 4,
+     "useful": 4,
+     "precision": 1.0,
+     "noise_breakdown": {}
+    },
+    {
+     "round": 1,
+     "surfaced": 9,
+     "useful": 9,
+     "precision": 1.0,
+     "noise_breakdown": {}
+    },
+    {
+     "round": 2,
+     "surfaced": 6,
+     "useful": 6,
+     "precision": 1.0,
+     "noise_breakdown": {}
+    },
+    {
+     "round": 3,
+     "surfaced": 12,
+     "useful": 12,
+     "precision": 1.0,
+     "noise_breakdown": {}
+    },
+    {
+     "round": 4,
+     "surfaced": 5,
+     "useful": 5,
+     "precision": 1.0,
+     "noise_breakdown": {}
+    },
+    {
+     "round": 5,
+     "surfaced": 3,
+     "useful": 3,
+     "precision": 1.0,
+     "noise_breakdown": {}
+    }
+   ],
+   "total": {
+    "surfaced": 39,
+    "useful": 39,
+    "precision": 1.0,
+    "noise_breakdown": {}
+   },
+   "requests": {
+    "crtsh": 6,
+    "dns": 1443,
+    "feed": 6,
+    "http": 285,
+    "rdap": 51
+   },
+   "strategies": [
+    {
+     "round": 0,
+     "allocation": {
+      "brand_typos": 0.1146,
+      "feeds": 0.8854
+     },
+     "delivered": [
+      {
+       "domain": "doinbase.top",
+       "p": 0.9897,
+       "headline": "Wallet phishing \u00b7 asks for a wallet recovery phrase \u00b7 Coinbase login page on a look-alike domain"
+      },
+      {
+       "domain": "cooinbase.live",
+       "p": 0.9897,
+       "headline": "Wallet phishing \u00b7 asks for a wallet recovery phrase \u00b7 Coinbase login page on a look-alike domain"
+      },
+      {
+       "domain": "binance-kyc.xyz",
+       "p": 0.8186,
+       "headline": "Brand impersonation \u00b7 Binance login page on a look-alike domain \u00b7 registered 7 days ago"
+      },
+      {
+       "domain": "binancr.com",
+       "p": 0.7474,
+       "headline": "Brand impersonation \u00b7 Binance login page on a look-alike domain \u00b7 registered 16 days ago"
+      }
+     ]
+    },
+    {
+     "round": 1,
+     "allocation": {
+      "ct_terms": 0.6868,
+      "feeds": 0.3132
+     },
+     "delivered": [
+      {
+       "domain": "goldfxex.icu",
+       "p": 0.9809,
+       "headline": "Fake exchange / withdrawal trap \u00b7 must pay before withdrawing \u00b7 deposit address shown (TRON) \u00b7 2 related sites"
+      },
+      {
+       "domain": "goldfx-h5.vip",
+       "p": 0.9809,
+       "headline": "Fake exchange / withdrawal trap \u00b7 must pay before withdrawing \u00b7 deposit address shown (TRON) \u00b7 2 related sites"
+      },
+      {
+       "domain": "bitgrt.live",
+       "p": 0.8186,
+       "headline": "Brand impersonation \u00b7 Bitget login page on a look-alike domain \u00b7 registered 10 days ago"
+      },
+      {
+       "domain": "pulsefx.icu",
+       "p": 0.8118,
+       "headline": "Trading-app scam \u00b7 login-gated trading app kit \u00b7 registered 6 days ago"
+      },
+      {
+       "domain": "metafx.app",
+       "p": 0.7617,
+       "headline": "Trading-app scam \u00b7 login-gated trading app kit \u00b7 asks for an invitation code"
+      },
+      {
+       "domain": "luxenet.com",
+       "p": 0.7389,
+       "headline": "Trading-app scam \u00b7 login-gated trading app kit \u00b7 asks for an invitation code"
+      },
+      {
+       "domain": "deltapay.xyz",
+       "p": 0.7072,
+       "headline": "Fund-recovery scam \u00b7 sells 'recovery' of stolen crypto \u00b7 registered 3 days ago"
+      },
+      {
+       "domain": "theterrafx.net",
+       "p": 0.6964,
+       "headline": "Investment scheme \u00b7 fixed payout schedule \u00b7 tiered deposit plans"
+      },
+      {
+       "domain": "pulsefx.co",
+       "p": 0.6666,
+       "headline": "Trading-app scam \u00b7 login-gated trading app kit \u00b7 tells you where to deposit"
+      }
+     ]
+    },
+    {
+     "round": 2,
+     "allocation": {
+      "pattern_siblings": 0.5255,
+      "ct_terms": 0.1344,
+      "feeds": 0.2129,
+      "brand_typos": 0.1272
+     },
+     "delivered": [
+      {
+       "domain": "bitgey.top",
+       "p": 0.9902,
+       "headline": "Wallet phishing \u00b7 asks for a wallet recovery phrase \u00b7 Bitget login page on a look-alike domain"
+      },
+      {
+       "domain": "okx-unlock.vip",
+       "p": 0.9897,
+       "headline": "Wallet phishing \u00b7 asks for a wallet recovery phrase \u00b7 Okx login page on a look-alike domain"
+      },
+      {
+       "domain": "astrabitx.live",
+       "p": 0.9533,
+       "headline": "Fake exchange / withdrawal trap \u00b7 must pay before withdrawing \u00b7 promises big per-trade profits"
+      },
+      {
+       "domain": "veribitx.app",
+       "p": 0.9411,
+       "headline": "Fake exchange / withdrawal trap \u00b7 must pay before withdrawing \u00b7 promises big per-trade profits \u00b7 1 related site"
+      },
+      {
+       "domain": "pulsefx.org",
+       "p": 0.7389,
+       "headline": "Trading-app scam \u00b7 login-gated trading app kit \u00b7 asks for an invitation code"
+      },
+      {
+       "domain": "bitexchangemark.pro",
+       "p": 0.6933,
+       "headline": "Trading-app scam \u00b7 login-gated trading app kit \u00b7 registered 4 days ago"
+      }
+     ]
+    },
+    {
+     "round": 3,
+     "allocation": {
+      "ct_terms": 0.2459,
+      "brand_typos": 0.0847,
+      "feeds": 0.423,
+      "mentions": 0.2463
+     },
+     "delivered": [
+      {
+       "domain": "omninet-plus.cc",
+       "p": 0.9916,
+       "headline": "Fund-recovery scam \u00b7 sells 'recovery' of stolen crypto \u00b7 deposit address shown (USDT) \u00b7 1 related site"
+      },
+      {
+       "domain": "troncoinxx.icu",
+       "p": 0.9886,
+       "headline": "Investment scheme \u00b7 promises 1.8% daily \u00b7 deposit address shown (TRON) \u00b7 2 related sites"
+      },
+      {
+       "domain": "kucoin-support.cc",
+       "p": 0.9876,
+       "headline": "Wallet phishing \u00b7 asks for a wallet recovery phrase \u00b7 Kucoin login page on a look-alike domain"
+      },
+      {
+       "domain": "kuccoin.cc",
+       "p": 0.9876,
+       "headline": "Wallet phishing \u00b7 asks for a wallet recovery phrase \u00b7 Kucoin login page on a look-alike domain"
+      },
+      {
+       "domain": "binaance.cc",
+       "p": 0.9861,
+       "headline": "Wallet phishing \u00b7 asks for a wallet recovery phrase \u00b7 Binance login page on a look-alike domain"
+      },
+      {
+       "domain": "coinexchange-club.net",
+       "p": 0.9568,
+       "headline": "Investment scheme \u00b7 deposit address shown (TRON) \u00b7 fixed payout schedule"
+      },
+      {
+       "domain": "investcoin-global.com",
+       "p": 0.9379,
+       "headline": "Fake exchange / withdrawal trap \u00b7 must pay before withdrawing \u00b7 promises big per-trade profits"
+      },
+      {
+       "domain": "tradingport.net",
+       "p": 0.9305,
+       "headline": "Fake exchange / withdrawal trap \u00b7 must pay before withdrawing \u00b7 promises big per-trade profits"
+      },
+      {
+       "domain": "ultracoinxx.vip",
+       "p": 0.7827,
+       "headline": "Trading-app scam \u00b7 login-gated trading app kit \u00b7 asks for an invitation code"
+      },
+      {
+       "domain": "sigmacoinx.io",
+       "p": 0.6926,
+       "headline": "Trading-app scam \u00b7 login-gated trading app kit \u00b7 tells you where to deposit"
+      },
+      {
+       "domain": "terrainvestcoin.app",
+       "p": 0.6838,
+       "headline": "Investment scheme \u00b7 fixed payout schedule \u00b7 tiered deposit plans"
+      },
+      {
+       "domain": "hashminingcoinx.cfd",
+       "p": 0.6838,
+       "headline": "Investment scheme \u00b7 fixed payout schedule \u00b7 tiered deposit plans"
+      }
+     ]
+    },
+    {
+     "round": 4,
+     "allocation": {
+      "pattern_siblings": 0.3039,
+      "ct_terms": 0.1996,
+      "brand_typos": 0.1697,
+      "feeds": 0.1829,
+      "recheck": 0.144
+     },
+     "delivered": [
+      {
+       "domain": "okx-official.com",
+       "p": 0.9913,
+       "headline": "Wallet phishing \u00b7 asks for a wallet recovery phrase \u00b7 Okx login page on a look-alike domain"
+      },
+      {
+       "domain": "cryptocm.xyz",
+       "p": 0.9897,
+       "headline": "Wallet phishing \u00b7 asks for a wallet recovery phrase \u00b7 Cryptocom login page on a look-alike domain"
+      },
+      {
+       "domain": "swapexchangepay.live",
+       "p": 0.9491,
+       "headline": "Fake exchange / withdrawal trap \u00b7 must pay before withdrawing \u00b7 promises big per-trade profits"
+      },
+      {
+       "domain": "terratrade.net",
+       "p": 0.9035,
+       "headline": "Fake exchange / withdrawal trap \u00b7 must pay before withdrawing \u00b7 registered 5 days ago \u00b7 2 related sites"
+      },
+      {
+       "domain": "heliobitexchange.com",
+       "p": 0.8837,
+       "headline": "Fake exchange / withdrawal trap \u00b7 must pay before withdrawing \u00b7 registered 4 days ago"
+      }
+     ]
+    },
+    {
+     "round": 5,
+     "allocation": {
+      "pattern_siblings": 0.5711,
+      "brand_typos": 0.0792,
+      "feeds": 0.2517,
+      "recheck": 0.098
+     },
+     "delivered": [
+      {
+       "domain": "walletsyncfx.top",
+       "p": 0.9815,
+       "headline": "Investment scheme \u00b7 promises 3% daily \u00b7 deposit address shown (TRON)"
+      },
+      {
+       "domain": "krakeh.com",
+       "p": 0.7998,
+       "headline": "Brand impersonation \u00b7 Kraken login page on a look-alike domain \u00b7 registered 20 days ago"
+      },
+      {
+       "domain": "investmentsphere.vip",
+       "p": 0.7531,
+       "headline": "Trading-app scam \u00b7 login-gated trading app kit \u00b7 tells you where to deposit"
+      }
+     ]
+    }
+   ]
+  },
+  "seconds": 25.3
+ }
+]

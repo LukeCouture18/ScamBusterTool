@@ -1,0 +1,2 @@
+import { apiError,getD1 } from "@/lib/platform";
+export async function PATCH(_:Request,context:{params:Promise<{id:string}>}){try{const {id}=await context.params;const result=await getD1().prepare("UPDATE notifications SET is_read=1,read_at=CURRENT_TIMESTAMP WHERE id=? AND is_read=0").bind(id).run();if((result.meta?.changes??0)!==1)return apiError(404,"NOTIFICATION_NOT_FOUND","Unread notification not found.");return Response.json({ok:true});}catch(error){return apiError(500,"NOTIFICATION_UPDATE_ERROR",error instanceof Error?error.message:"Unable to update notification");}}

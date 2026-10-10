@@ -1,0 +1,89 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+[MainPlatformV6] Initialized integration module 'wallet_investigator' with capabilities: [
+  'blockchain-analysis',
+  'wallet-validation',
+  'counterparty-discovery',
+  'fund-flow-analysis',
+  'controlled-wallet-expansion'
+]
+[Database] Initialized new database at /tmp/mip-suite-H8fO0j/wallet-runtime/data/wallet_investigator.sqlite
+[Migrations] Applying migration v1: 001_initial_schema...
+[Migrations] Applying migration v2: 002_indexes_and_views...
+[Migrations] Migration status: 2 applied. Current schema version: v2
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+/workspace/scratch/0dbe5278a453/v10-active/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/ui-click-all.py:62: SyntaxWarning: invalid escape sequence '\s'
+  !!el.getAttribute('aria-current') || /(^|\s)(active|on|selected)(\s|$)/.test(el.className || '') ||
+SWEEP /advanced: 20 controls
+SWEEP /campaigns/00da0f10-1854-4dcb-a8fd-34b64832e443: 21 controls
+SWEEP /campaigns: 10 controls
+SWEEP /discovery: 13 controls
+SWEEP /finder: 28 controls
+SWEEP /hunter: 15 controls
+SWEEP /inbox: 10 controls
+SWEEP /integration: 9 controls
+SWEEP /integration/status: 9 controls
+SWEEP /intelligence: 46 controls
+SWEEP /investigations/6e08dc26-881f-485a-8611-64d9af088600: 26 controls
+SWEEP /investigations: 17 controls
+SWEEP /logger: 14 controls
+SWEEP /operations/hunter%3Aop%3Asuite-1: 56 controls
+SWEEP /operations: 22 controls
+SWEEP /orchestration: 63 controls
+SWEEP /overview: 16 controls
+SWEEP /: 32 controls
+SWEEP /reports: 12 controls
+SWEEP /tasks: 13 controls
+SWEEP /wallets: 14 controls
+/workspace/scratch/0dbe5278a453/v10-active/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/ui-click-all.py:62: SyntaxWarning: invalid escape sequence '\s'
+  !!el.getAttribute('aria-current') || /(^|\s)(active|on|selected)(\s|$)/.test(el.className || '') ||
+SWEEP /advanced: 20 controls
+SWEEP /campaigns/00da0f10-1854-4dcb-a8fd-34b64832e443: 19 controls
+SWEEP /campaigns: 10 controls
+SWEEP /discovery: 12 controls
+SWEEP /finder: 13 controls
+SWEEP /hunter: 15 controls
+SWEEP /inbox: 10 controls
+SWEEP /integration: 9 controls
+SWEEP /integration/status: 9 controls
+SWEEP /intelligence: 46 controls
+SWEEP /investigations/6e08dc26-881f-485a-8611-64d9af088600: 26 controls
+SWEEP /investigations: 17 controls
+SWEEP /logger: 14 controls
+SWEEP /operations/hunter%3Aop%3Asuite-1: 57 controls
+SWEEP /operations: 21 controls
+SWEEP /orchestration: 51 controls
+SWEEP /overview: 16 controls
+SWEEP /: 32 controls
+SWEEP /reports: 12 controls
+SWEEP /tasks: 13 controls
+SWEEP /wallets: 14 controls
+POST /api/v1/suite/actions 400 {"error":{"code":"VALIDATION_ERROR","message":"Invalid action.","details":[{"received":"made_up","code":"invalid_enum_value","options":["dead_or_parked","not_a_scam","duplicate","not_crypto","not_useful"],"path":["reason"],"message":"Invalid enum value. Expected 'dead_or_parked' | 'not_a_scam' | 'duplicate' | 'not_crypto' | 'not_useful', received 'made_up'"}]},"request_id":"1f359be9-edad-41e4-b576-f8c58dc11588"}
+GET /api/v1/autonomy/search/7c33601c-bf92-4d96-b22a-4b313bf7caec 404 {"error":{"code":"NOT_FOUND","message":"Search not found."},"request_id":"5f508f49-fb3b-4241-8726-61ae5f9aa1cd"}
+GET /api/v1/autonomy/search/7c33601c-bf92-4d96-b22a-4b313bf7caec 404 {"error":{"code":"NOT_FOUND","message":"Search not found."},"request_id":"bfe0ea49-6292-47af-97c2-2e45972d6ece"}
+GET /api/v1/autonomy/search/7c33601c-bf92-4d96-b22a-4b313bf7caec 404 {"error":{"code":"NOT_FOUND","message":"Search not found."},"request_id":"3a60e57a-6dcb-4645-a92c-eeb77c21d7a0"}
+GET /api/v1/autonomy/search/7c33601c-bf92-4d96-b22a-4b313bf7caec 404 {"error":{"code":"NOT_FOUND","message":"Search not found."},"request_id":"6e457c7c-c51c-4d48-96d9-9e9a68865f71"}
+GET /api/v1/autonomy/search/7c33601c-bf92-4d96-b22a-4b313bf7caec 404 {"error":{"code":"NOT_FOUND","message":"Search not found."},"request_id":"4761c075-79fb-4974-a515-58dbc4d01c18"}
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: interaction sweep (after restart) found problems:
+  /reports :: a 'Main Investigation Platform home': console error: Failed to load resource: the server responded with a status of 404 (Not Found)
+  /reports :: a 'Main Investigation Platform home': bad response: GET /api/v1/autonomy/search/7c33601c-bf92-4d96-b22a-4b313bf7caec -> 404
+  /tasks :: a 'Main Investigation Platform home': console error: Failed to load resource: the server responded with a status of 404 (Not Found)
+  /tasks :: a 'Main Investigation Platform home': bad response: GET /api/v1/autonomy/search/7c33601c-bf92-4d96-b22a-4b313bf7caec -> 404
+  /wallets :: a 'Main Investigation Platform home': console error: Failed to load resource: the server responded with a status of 404 (Not Found)
+  /wallets :: a 'Main Investigation Platform home': bad response: GET /api/v1/autonomy/search/7c33601c-bf92-4d96-b22a-4b313bf7caec -> 404
+    at sweep (/workspace/scratch/0dbe5278a453/v10-active/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/suite-workflow.mjs:275:16)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async <anonymous> (/workspace/scratch/0dbe5278a453/v10-active/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/suite-workflow.mjs:283:39) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.19.0

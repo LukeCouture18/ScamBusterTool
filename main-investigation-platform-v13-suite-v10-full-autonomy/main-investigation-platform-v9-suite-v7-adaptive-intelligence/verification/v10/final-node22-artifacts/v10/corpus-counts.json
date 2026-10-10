@@ -1,0 +1,13 @@
+{
+  "ok": true,
+  "compared_edges": 2000,
+  "canonical_relationships": 2423,
+  "checks": [
+    "exact old-query equivalence",
+    "distinct source counts include out-of-operation sources",
+    "duplicate source edges do not inflate corpus",
+    "empty proof excluded and 2000 page bound/order retained",
+    "actual scientific projection uses matching counts",
+    "canonical relationship provenance retained"
+  ]
+}

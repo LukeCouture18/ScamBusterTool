@@ -1,0 +1,1 @@
+{"ok": true, "checks": ["malformed stored context", "URL context precedence", "stale response rejected", "slow polling completes without starvation", "empty URL clears previous data and stops requests", "context set/clear updates links"], "requests": {"a": 1, "b": 15, "slow": 3}, "errors": []}

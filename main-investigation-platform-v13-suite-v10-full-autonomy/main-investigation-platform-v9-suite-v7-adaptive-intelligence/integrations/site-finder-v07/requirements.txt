@@ -1,0 +1,7 @@
+flask>=3.0
+playwright>=1.44
+requests>=2.31
+anthropic>=0.34
+python-whois>=0.9.4
+pytest>=8.0
+# optional: dnspython>=2.4  (lets Site Finder v2 recognise parking services by nameserver; v2 works without it)

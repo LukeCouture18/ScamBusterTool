@@ -1,0 +1,167 @@
+{
+  "ok": true,
+  "crashes": 20,
+  "passed": [
+    {
+      "phase": "hypothesis prediction creation",
+      "edge": "before",
+      "signal": "SIGKILL",
+      "revision": "REJECTED",
+      "split_proposals": 1,
+      "approved_boundary_mutations": 0
+    },
+    {
+      "phase": "hypothesis prediction creation",
+      "edge": "after",
+      "signal": "SIGKILL",
+      "revision": "REJECTED",
+      "split_proposals": 1,
+      "approved_boundary_mutations": 0
+    },
+    {
+      "phase": "test outcome plan",
+      "edge": "before",
+      "signal": "SIGKILL",
+      "revision": "REJECTED",
+      "split_proposals": 1,
+      "approved_boundary_mutations": 0
+    },
+    {
+      "phase": "test outcome plan",
+      "edge": "after",
+      "signal": "SIGKILL",
+      "revision": "REJECTED",
+      "split_proposals": 1,
+      "approved_boundary_mutations": 0
+    },
+    {
+      "phase": "contradiction creation",
+      "edge": "before",
+      "signal": "SIGKILL",
+      "revision": "REJECTED",
+      "split_proposals": 1,
+      "approved_boundary_mutations": 0
+    },
+    {
+      "phase": "contradiction creation",
+      "edge": "after",
+      "signal": "SIGKILL",
+      "revision": "REJECTED",
+      "split_proposals": 1,
+      "approved_boundary_mutations": 0
+    },
+    {
+      "phase": "contradiction resolution",
+      "edge": "before",
+      "signal": "SIGKILL",
+      "revision": "REJECTED",
+      "split_proposals": 1,
+      "approved_boundary_mutations": 0
+    },
+    {
+      "phase": "contradiction resolution",
+      "edge": "after",
+      "signal": "SIGKILL",
+      "revision": "REJECTED",
+      "split_proposals": 1,
+      "approved_boundary_mutations": 0
+    },
+    {
+      "phase": "hypothesis revision",
+      "edge": "before",
+      "signal": "SIGKILL",
+      "revision": "REJECTED",
+      "split_proposals": 1,
+      "approved_boundary_mutations": 0
+    },
+    {
+      "phase": "hypothesis revision",
+      "edge": "after",
+      "signal": "SIGKILL",
+      "revision": "REJECTED",
+      "split_proposals": 1,
+      "approved_boundary_mutations": 0
+    },
+    {
+      "phase": "falsification reservation",
+      "edge": "before",
+      "signal": "SIGKILL",
+      "revision": "REJECTED",
+      "split_proposals": 1,
+      "approved_boundary_mutations": 0
+    },
+    {
+      "phase": "falsification reservation",
+      "edge": "after",
+      "signal": "SIGKILL",
+      "revision": "REJECTED",
+      "split_proposals": 1,
+      "approved_boundary_mutations": 0
+    },
+    {
+      "phase": "operation split proposal",
+      "edge": "before",
+      "signal": "SIGKILL",
+      "revision": "REJECTED",
+      "split_proposals": 1,
+      "approved_boundary_mutations": 0
+    },
+    {
+      "phase": "operation split proposal",
+      "edge": "after",
+      "signal": "SIGKILL",
+      "revision": "REJECTED",
+      "split_proposals": 1,
+      "approved_boundary_mutations": 0
+    },
+    {
+      "phase": "alternative explanation update",
+      "edge": "before",
+      "signal": "SIGKILL",
+      "revision": "REJECTED",
+      "split_proposals": 1,
+      "approved_boundary_mutations": 0
+    },
+    {
+      "phase": "alternative explanation update",
+      "edge": "after",
+      "signal": "SIGKILL",
+      "revision": "REJECTED",
+      "split_proposals": 1,
+      "approved_boundary_mutations": 0
+    },
+    {
+      "phase": "commonality update",
+      "edge": "before",
+      "signal": "SIGKILL",
+      "revision": "REJECTED",
+      "split_proposals": 1,
+      "approved_boundary_mutations": 0
+    },
+    {
+      "phase": "commonality update",
+      "edge": "after",
+      "signal": "SIGKILL",
+      "revision": "REJECTED",
+      "split_proposals": 1,
+      "approved_boundary_mutations": 0
+    },
+    {
+      "phase": "scientific briefing projection",
+      "edge": "before",
+      "signal": "SIGKILL",
+      "revision": "REJECTED",
+      "split_proposals": 1,
+      "approved_boundary_mutations": 0
+    },
+    {
+      "phase": "scientific briefing projection",
+      "edge": "after",
+      "signal": "SIGKILL",
+      "revision": "REJECTED",
+      "split_proposals": 1,
+      "approved_boundary_mutations": 0
+    }
+  ],
+  "scope": "Real child-process SIGKILL with local SQLite transaction boundaries. Remote D1/network in-flight behavior is not certified."
+}

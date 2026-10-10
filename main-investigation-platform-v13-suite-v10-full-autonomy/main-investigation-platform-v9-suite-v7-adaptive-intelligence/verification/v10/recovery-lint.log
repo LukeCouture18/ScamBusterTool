@@ -1,0 +1,15 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/joined-finder-main-hunter.mjs
+  33:47  warning  'readFileSync' is defined but never used  @typescript-eslint/no-unused-vars
+  33:69  warning  'statSync' is defined but never used      @typescript-eslint/no-unused-vars
+  34:9   warning  'createServer' is defined but never used  @typescript-eslint/no-unused-vars
+  36:9   warning  'dirname' is defined but never used       @typescript-eslint/no-unused-vars
+  36:24  warning  'relative' is defined but never used      @typescript-eslint/no-unused-vars
+  36:43  warning  'sep' is defined but never used           @typescript-eslint/no-unused-vars
+  37:9   warning  'DatabaseSync' is defined but never used  @typescript-eslint/no-unused-vars
+  38:9   warning  'build' is defined but never used         @typescript-eslint/no-unused-vars
+  79:69  warning  'e' is defined but never used             @typescript-eslint/no-unused-vars
+
+✖ 9 problems (0 errors, 9 warnings)
+

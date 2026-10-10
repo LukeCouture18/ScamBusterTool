@@ -1,0 +1,15 @@
+{
+  "ok": true,
+  "checks": [
+    "malformed Finder input",
+    "forged validated flag rejected",
+    "actual WI worker validation",
+    "two independent site deposit observations",
+    "matching network required",
+    "completed same-investigation WI job required",
+    "withdrawal excluded",
+    "expired discovery owner fenced",
+    "concurrent supply exactly one job"
+  ],
+  "scope": "Production routes and WI worker; synthetic chain provider, local SQLite D1 transport."
+}

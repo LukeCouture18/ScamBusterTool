@@ -1,0 +1,20 @@
+{
+  "ok": true,
+  "results": [
+    {
+      "edge": "before",
+      "signal": "SIGKILL",
+      "discovery_jobs": 4,
+      "generation": 4,
+      "state": "Parked"
+    },
+    {
+      "edge": "after",
+      "signal": "SIGKILL",
+      "discovery_jobs": 4,
+      "generation": 4,
+      "state": "Parked"
+    }
+  ],
+  "scope": "Actual SIGKILL before/after local SQLite D1 batch. Finder completion before recovery and lease expiry are fixtures; no remote D1 process certification."
+}

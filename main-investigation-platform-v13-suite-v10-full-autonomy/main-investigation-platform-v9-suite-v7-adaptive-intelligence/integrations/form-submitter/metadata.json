@@ -1,0 +1,6 @@
+{
+  "name": "Crypto Scam Report Form Submitter",
+  "description": "Defensive cryptocurrency scam investigation and authorized Google Form reporting submitter v1.1 with real Google Form inspection, multi-page workflows, strict Auto Submit validation gate, durable storage, and platform integration.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

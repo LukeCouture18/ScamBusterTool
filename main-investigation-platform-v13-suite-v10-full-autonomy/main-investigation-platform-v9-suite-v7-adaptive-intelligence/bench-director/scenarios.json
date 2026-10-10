@@ -1,0 +1,14 @@
+[
+ {"id":"public_obvious","wallets":1,"browse":1},
+ {"id":"dynamic_wallet","wallets":1,"browse":2},
+ {"id":"login_gated","wallets":1,"browse":3,"gate":true},
+ {"id":"multiple_wallets","wallets":3,"browse":1},
+ {"id":"provider_recovery","wallets":1,"browse":1,"outage":true},
+ {"id":"hundreds_decoys","wallets":1,"decoys":250,"browse":1},
+ {"id":"duplicate_site","wallets":1,"browse":1,"replays":200},
+ {"id":"related_operation","wallets":1,"browse":1,"shared_wallet":true},
+ {"id":"misleading_shared_infrastructure","wallets":0,"browse":0,"shared_cdn":true},
+ {"id":"four_pivot_lead","wallets":1,"browse":1,"finder_pivots":4},
+ {"id":"dead_end","wallets":0,"browse":0},
+ {"id":"restart_mid_investigation","wallets":1,"browse":1,"restart":true}
+]

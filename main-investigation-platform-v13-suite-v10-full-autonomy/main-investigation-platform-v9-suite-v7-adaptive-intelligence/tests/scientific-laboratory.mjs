@@ -1,0 +1,35 @@
+/** Independent hidden hypothesis laboratory. Fixture truth never enters production modules. */
+import assert from 'node:assert/strict';import {mkdirSync,writeFileSync} from 'node:fs';
+import {revise,independent,outcomeBranches,classifyDisagreement} from '../lib/scientific/model.ts';
+const observed=(id,facet,value,unit=id,extra={})=>({id,subject:'scope',facet,value,unit,upstream:unit,source:'fixture_specialist',reliability:facet==='validated_deposit'?'deterministic_validation':'direct_observation',captured:'2026-10-01T00:00:00Z',job:'job',detail:{network:'ethereum',...extra}});
+const wallet=i=>observed(`validation-${i}`,'validated_deposit',`address-${i}`,`wallet-${i}`);
+const linkage=[{key:'h1',role:'operation',statement:'Shared operation association'},{key:'h2',role:'kit',statement:'Shared generic kit'},{key:'h3',role:'infrastructure',statement:'Shared generic providers'},{key:'h4',role:'unknown',statement:'Insufficient evidence'}];
+const fixed=[{key:'h1',role:'single_wallet',statement:'Unchanged single wallet on every site'},{key:'h2',role:'rotation',statement:'Routine rotation'},{key:'h3',role:'network_change',statement:'Network change'},{key:'h4',role:'unknown',statement:'Insufficient evidence'}];
+const cases=[
+ {name:'same kit / different operation',h:linkage,obs:[observed('kit','generic_overlap','kit')],expect:'uncertain'},
+ {name:'same wallet / different template',h:linkage,obs:[observed('w','distinctive_reuse','wallet','validated_wallet'),observed('kit','generic_overlap','kit')],expect:'uncertain'},
+ {name:'same CDN / unrelated',h:linkage,obs:[observed('cdn','generic_overlap','shared CDN')],expect:'uncertain'},
+ {name:'rare contact and independent configuration reuse',h:linkage,obs:[observed('contact','distinctive_reuse','rare contact','contact-unit'),observed('config','distinctive_reuse','distinct config','config-unit')],expect:'supported'},
+ {name:'wallet rotation',h:fixed,obs:[wallet(1),wallet(2)],expect:'rejected'},
+ {name:'replacement deployment continuity',h:linkage,obs:[observed('contact','distinctive_reuse','continuity','contact-unit'),observed('wallet','distinctive_reuse','validated wallet','wallet-unit'),observed('time','chronology','appeared after disappearance')],expect:'supported'},
+ {name:'shared common exchange counterparty',h:linkage,obs:[observed('exchange','generic_overlap','common exchange')],expect:'uncertain'},
+ {name:'late contradictory evidence',h:fixed,initial:[wallet(1)],obs:[wallet(2)],expect:'rejected'},
+ {name:'provider disagreement',h:linkage,obs:[observed('pa','network_context','ethereum','provider-a',{metadata:{provider:'Provider A'}}),observed('pb','network_context','bsc','provider-b',{metadata:{provider:'Provider B'}})],expect:'unresolved'},
+ {name:'initially merged / should review split',h:fixed,obs:[wallet(1),wallet(2),observed('contact-a','contact','a'),observed('contact-b','contact','b')],expect:'rejected'},
+ {name:'two genuinely unresolved hypotheses',h:linkage,obs:[observed('template','generic_overlap','copied artifact')],expect:'uncertain'},
+ {name:'missing evidence cannot safely be obtained',h:linkage,obs:[],expect:'uncertain'},
+ {name:'provider extraction error resolved by deterministic correction',h:linkage,obs:[observed('pa','network_context','ethereum'),observed('pb','network_context','bsc'),{...observed('corr','address_validation','ethereum'),reliability:'deterministic_validation',detail:{metadata:{corrects_evidence_ids:['pb']}}}],expect:'error'},
+ {name:'five copies from one upstream vendor',h:linkage,obs:Array.from({length:5},(_,i)=>observed(`copy${i}`,'distinctive_reuse','copied setting','vendor-origin')),expect:'uncertain'},
+];
+const results=[];
+for(const split of ['design','held_out'])for(const seed of split==='design'?[1,2,3]:[101,107,119,137,149])for(const fixture of cases){
+ // Held-out variants rename every evidence unit, add benign noise and reverse arrival order. No policy tuning below.
+ const suffix=split==='held_out'?`-${seed}`:'',rename=o=>({...o,id:o.id+suffix,unit:o.unit+suffix,upstream:o.upstream+suffix,detail:o.detail.metadata?.corrects_evidence_ids?{...o.detail,metadata:{...o.detail.metadata,corrects_evidence_ids:o.detail.metadata.corrects_evidence_ids.map(id=>id+suffix)}}:o.detail});
+ const arrivals=fixture.obs.map(rename);if(split==='held_out')arrivals.reverse();const before=(fixture.initial??[]).map(rename),plan=outcomeBranches(fixture.h,'PUBLIC_SITE_INSPECTION');
+ const hypotheses=fixture.h.map(h=>revise(h,[...before,...arrivals])),h1=hypotheses[0],network=[...before,...arrivals].filter(o=>o.facet==='network_context'),conflict=network.length>1?classifyDisagreement(network,[...before,...arrivals]):null;
+ const correct=fixture.expect==='rejected'?h1.status==='REJECTED':fixture.expect==='supported'?h1.status==='BEST_SUPPORTED_BUT_UNPROVEN':fixture.expect==='unresolved'?conflict?.status==='UNRESOLVED':fixture.expect==='error'?conflict?.status==='EVIDENCE_ERROR':h1.status==='OPEN';
+ assert.ok(correct,`${fixture.name} seed=${seed} ${h1.status}`);assert.equal(hypotheses.at(-1).role,'unknown');assert.equal(hypotheses.at(-1).status,'VIABLE');
+ results.push({split,seed,scenario:fixture.name,correct,hypothesis_statuses:hypotheses.map(h=>h.status),expected:fixture.expect,uncertainty_preserved:hypotheses.at(-1).status==='VIABLE',contradiction_resolved:h1.status==='REJECTED'||conflict?.status==='EVIDENCE_ERROR',unresolved_preserved:conflict?.status==='UNRESOLVED',generic_rejected:arrivals.some(o=>o.facet==='generic_overlap')&&h1.status!=='BEST_SUPPORTED_BUT_UNPROVEN',independence_units:independent(arrivals).length,test_count:arrivals.length?1:0,request_count:0,precommitted_outcomes:plan.length});
+}
+const summary={};for(const split of ['design','held_out']){const rows=results.filter(r=>r.split===split),resolved=rows.filter(r=>r.contradiction_resolved).length;summary[split]={cases:rows.length,correct_hypothesis_discrimination:rows.filter(r=>r.correct).length,incorrect_discrimination:rows.filter(r=>!r.correct).length,uncertainty_preserved:rows.filter(r=>r.uncertainty_preserved).length,contradictions_resolved:resolved,unresolved_preserved:rows.filter(r=>r.unresolved_preserved).length,contradictions_incorrectly_dismissed:rows.filter(r=>r.expected==='unresolved'&&!r.unresolved_preserved).length,generic_correlations_rejected:rows.filter(r=>r.generic_rejected).length,tests_per_resolved_contradiction:rows.filter(r=>r.contradiction_resolved).reduce((a,r)=>a+r.test_count,0)/resolved,requests_per_resolved_contradiction:0};}
+const out={ok:true,summary,results,limitations:['Local reasoning/observation benchmark; zero network requests.','This laboratory isolates hypothesis assimilation rather than comparing full specialist discovery policies.','Operation split execution is separately exercised by the SIGKILL/analyst-boundary tests.','Supported association never establishes ownership or guarantees ground truth.']};mkdirSync('verification/scientific-v8',{recursive:true});writeFileSync('verification/scientific-v8/laboratory.json',JSON.stringify(out,null,2));console.log(JSON.stringify({ok:true,summary}));

@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ScamHunter</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<div class="app-shell">
+
+  <!-- ============ SIDEBAR ============ -->
+  <nav class="sidebar">
+    <div class="brand">
+      <span class="brand-mark">◎</span>
+      <span class="brand-name">ScamHunter</span>
+    </div>
+
+    <div class="nav-group">
+      <button class="nav-item active" data-view="overview">
+        <span class="nav-icon">▤</span> Overview
+      </button>
+      <button class="nav-item nav-item-primary" data-view="results">
+        <span class="nav-icon">★</span> Results <span class="nav-count" id="nav-count-results"></span>
+      </button>
+      <button class="nav-item nav-item-primary" data-view="clusters">
+        <span class="nav-icon">◈</span> Families <span class="nav-count" id="nav-count-clusters"></span>
+      </button>
+      <button class="nav-item nav-item-primary" data-view="performance">
+        <span class="nav-icon">◎</span> Performance <span class="nav-count" id="nav-count-performance"></span>
+      </button>
+      <button class="nav-item nav-item-primary" data-view="platform">
+        <span class="nav-icon">⇄</span> Platform <span class="nav-count" id="nav-count-platform"></span>
+      </button>
+      <button class="nav-item nav-item-primary" data-view="campaigns">
+        <span class="nav-icon">⚑</span> Campaigns <span class="nav-count" id="nav-count-campaigns"></span>
+      </button>
+      <button class="nav-item nav-item-primary" data-view="pivot">
+        <span class="nav-icon">⟲</span> Pivot Engine <span class="nav-count" id="nav-count-pivot"></span>
+      </button>
+      <button class="nav-item" data-view="workspace">
+        <span class="nav-icon">⌸</span> Workspace
+      </button>
+      <button class="nav-item" data-view="discovery">
+        <span class="nav-icon">🧭</span> Discovery <span class="nav-count" id="nav-count-discovery-running"></span>
+      </button>
+      <button class="nav-item" data-view="sites">
+        <span class="nav-icon">🌐</span> Sites <span class="nav-count" id="nav-count-sites"></span>
+      </button>
+      <button class="nav-item" data-view="investigations">
+        <span class="nav-icon">🔍</span> Investigations <span class="nav-count" id="nav-count-active-investigations"></span>
+      </button>
+      <button class="nav-item" data-view="highrisk">
+        <span class="nav-icon">⚠</span> High Risk <span class="nav-count" id="nav-count-highrisk"></span>
+      </button>
+      <button class="nav-item" data-view="wallets">
+        <span class="nav-icon">◈</span> Wallets <span class="nav-count" id="nav-count-wallets"></span>
+      </button>
+      <button class="nav-item" data-view="review">
+        <span class="nav-icon">✓</span> Review Queue <span class="nav-count" id="nav-count-review"></span>
+      </button>
+      <button class="nav-item" data-view="settings">
+        <span class="nav-icon">⚙</span> Settings
+      </button>
+    </div>
+
+    <div class="sidebar-footer">
+      <div class="conn-indicator" id="conn-indicator">
+        <span class="dot"></span> <span id="conn-label">Connecting…</span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============ MAIN ============ -->
+  <main class="main">
+
+    <!-- Top control bar: always visible -->
+    <header class="topbar">
+      <div class="scan-controls">
+        <button id="btn-start" class="btn btn-primary">▶ Start Scan</button>
+        <button id="btn-pause" class="btn btn-warn" disabled>⏸ Pause</button>
+        <button id="btn-resume" class="btn btn-primary" disabled style="display:none;">▶ Resume</button>
+        <button id="btn-stop" class="btn btn-danger" disabled>■ Stop</button>
+        <span class="scan-state" id="scan-state-badge">Idle</span>
+      </div>
+
+      <div class="current-site-box" id="current-site-box" style="display:none;">
+        <div class="current-site-label">Investigating now</div>
+        <div class="current-site-url" id="current-site-url">—</div>
+        <div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div>
+        <div class="current-site-meta" id="current-site-meta"></div>
+      </div>
+
+      <div class="topbar-search">
+        <input type="text" id="global-search" placeholder="Search everything — domains, wallets, Telegram, analytics IDs…">
+      </div>
+    </header>
+
+    <!-- Error banner -->
+    <div id="error-banner" class="error-banner" style="display:none;">
+      <span id="error-banner-text"></span>
+      <button id="error-banner-close">✕</button>
+    </div>
+
+    <div class="content-scroll">
+
+      <!-- ===================== OVERVIEW / MAIN SCREEN (v0.7) ===================== -->
+      <section class="view" id="view-overview">
+        <div class="ops-grid">
+          <div class="panel">
+            <div class="panel-header"><h3>Active Campaigns</h3>
+              <button class="btn-mini" id="ops-refresh-btn">Refresh</button></div>
+            <div class="panel-body" id="ops-campaigns">
+              <div class="empty-state">No campaigns running.</div>
+            </div>
+          </div>
+
+          <div class="panel">
+            <div class="panel-header"><h3>High-Priority Candidates</h3></div>
+            <div class="panel-body" id="ops-high-priority">
+              <div class="empty-state">Nothing handed over yet.</div>
+            </div>
+          </div>
+
+          <div class="panel">
+            <div class="panel-header"><h3>New Discoveries</h3>
+              <span class="panel-sub">most novel first</span></div>
+            <div class="panel-body" id="ops-new">
+              <div class="empty-state">No new candidates.</div>
+            </div>
+          </div>
+
+          <div class="panel">
+            <div class="panel-header"><h3>Needs Review</h3></div>
+            <div class="panel-body" id="ops-review">
+              <div class="empty-state">Nothing waiting.</div>
+            </div>
+          </div>
+
+          <div class="panel">
+            <div class="panel-header"><h3>Recent Handoffs</h3></div>
+            <div class="panel-body" id="ops-handoffs">
+              <div class="empty-state">Nothing sent yet.</div>
+            </div>
+          </div>
+
+          <div class="panel">
+            <div class="panel-header"><h3>Discovery Performance</h3>
+              <span class="panel-sub">funnel</span></div>
+            <div class="panel-body" id="ops-performance">
+              <div class="empty-state">Loading…</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel" style="margin-top:14px;">
+          <div class="panel-header">
+            <h3>Live Activity</h3>
+            <button class="btn-mini" id="clear-log-btn">Clear</button>
+          </div>
+          <div class="panel-body log-panel" id="log-panel"></div>
+        </div>
+      </section>
+
+      <!-- ===================== RESULTS VIEW (primary deliverable) ===================== -->
+      <section class="view" id="view-results" style="display:none;">
+        <div class="view-toolbar">
+          <h2>High-Confidence Results</h2>
+          <div class="toolbar-controls">
+            <label class="min-score-label">
+              Min confidence:
+              <input type="number" id="results-min-confidence" value="0.70" min="0" max="1" step="0.05" style="width:70px;">
+            </label>
+            <button class="btn btn-secondary btn-small" id="refresh-results-btn">Refresh</button>
+          </div>
+        </div>
+
+        <div class="funnel-bar" id="funnel-bar">
+          <div class="funnel-stage"><div class="funnel-num" id="funnel-discovered">0</div><div class="funnel-label">Discovered</div></div>
+          <div class="funnel-arrow">&rarr;</div>
+          <div class="funnel-stage"><div class="funnel-num" id="funnel-triaged">0</div><div class="funnel-label">Triaged</div></div>
+          <div class="funnel-arrow">&rarr;</div>
+          <div class="funnel-stage"><div class="funnel-num" id="funnel-passed">0</div><div class="funnel-label">Passed Gate</div></div>
+          <div class="funnel-arrow">&rarr;</div>
+          <div class="funnel-stage"><div class="funnel-num" id="funnel-deep">0</div><div class="funnel-label">Deep Analyzed</div></div>
+          <div class="funnel-arrow">&rarr;</div>
+          <div class="funnel-stage funnel-stage-final"><div class="funnel-num" id="funnel-results">0</div><div class="funnel-label">Results</div></div>
+        </div>
+        <p class="funnel-caption" id="funnel-caption"></p>
+
+        <div class="pipeline-controls">
+          <button class="btn btn-primary btn-small" id="run-triage-btn">Run Fast Triage</button>
+          <button class="btn btn-primary btn-small" id="run-deep-btn">Deep-Analyze Strongest</button>
+          <span class="settings-hint" style="margin-left:10px;">
+            Triage is cheap and runs wide; deep analysis is expensive and runs only on
+            candidates that cleared the quality gate.
+          </span>
+        </div>
+
+        <div id="results-list">
+          <div class="empty-state">No high-confidence results yet. Run discovery, then triage, then deep analysis.</div>
+        </div>
+      </section>
+
+      <!-- ===================== FAMILIES (CLUSTERS) VIEW ===================== -->
+      <section class="view" id="view-clusters" style="display:none;">
+        <div class="view-toolbar">
+          <h2>Website Families</h2>
+          <div class="toolbar-controls">
+            <button class="btn btn-primary btn-small" id="run-correlate-btn">Re-run Correlation</button>
+            <button class="btn btn-secondary btn-small" id="find-related-btn">Find Related Sites</button>
+          </div>
+        </div>
+
+        <div class="stat-grid" style="grid-template-columns: repeat(4, 1fr); margin-bottom:16px;">
+          <div class="stat-card"><div class="stat-value" id="intel-clusters">0</div>
+               <div class="stat-label">Families</div></div>
+          <div class="stat-card"><div class="stat-value" id="intel-shared">0</div>
+               <div class="stat-label">Shared Indicators</div></div>
+          <div class="stat-card"><div class="stat-value" id="intel-rels">0</div>
+               <div class="stat-label">Derived Links</div></div>
+          <div class="stat-card"><div class="stat-value" id="intel-indicators">0</div>
+               <div class="stat-label">Total Indicators</div></div>
+        </div>
+
+        <div class="notice-box" style="margin-bottom:16px;">
+          Families are <strong>derived</strong>: software grouped these sites by comparing
+          observed indicators. Priority is driven by how many <em>independent strong</em>
+          indicator types tie a family together — not by how many sites it contains.
+        </div>
+
+        <div id="clusters-list">
+          <div class="empty-state">No families yet. Run deep analysis on some sites, then
+          click "Re-run Correlation".</div>
+        </div>
+
+        <div class="panel" style="margin-top:18px;">
+          <div class="panel-header"><h3>Wallet Reuse Across Sites</h3></div>
+          <div class="panel-body" id="wallet-reuse-list">
+            <div class="empty-state">No wallets seen on more than one site yet.</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== INVESTIGATION WORKSPACE ===================== -->
+      <section class="view" id="view-workspace" style="display:none;">
+        <div class="view-toolbar">
+          <h2>Investigation Workspace</h2>
+          <div class="toolbar-controls">
+            <select id="workspace-site-picker" style="min-width:260px;"></select>
+            <button class="btn btn-secondary btn-small" id="workspace-export-btn">Export Evidence</button>
+          </div>
+        </div>
+        <div id="workspace-body">
+          <div class="empty-state">Pick a site above, or open one from Families or Results.</div>
+        </div>
+      </section>
+
+      <!-- ===================== PIVOT ENGINE VIEW ===================== -->
+      <!-- ===================== DISCOVERY PERFORMANCE (v0.6) ===================== -->
+      <section class="view" id="view-performance" style="display:none;">
+        <div class="view-toolbar">
+          <h2>Discovery Performance</h2>
+          <div class="toolbar-controls">
+            <button class="btn btn-small" id="perf-poll-btn">Poll Outcomes</button>
+            <button class="btn btn-small" id="perf-snapshot-btn">Record Today</button>
+            <button class="btn btn-primary btn-small" id="perf-refresh-btn">Refresh</button>
+          </div>
+        </div>
+
+        <div class="notice-box" style="margin-bottom:16px;">
+          The funnel end to end: what each source and pivot produced, how much survived
+          triage, how much reached the Main Platform, and what an investigator found
+          afterwards. Outcome signals are <strong>neutral observations about the lead</strong>
+          — "useful" means the candidate contained something worth examining, never that a
+          site is malicious. Legitimate services have deposit pages and wallets too.
+        </div>
+
+        <div class="funnel-bar" id="perf-funnel">
+          <div class="empty-state">Loading…</div>
+        </div>
+
+        <div class="split-panels" style="margin-top:16px;">
+          <div class="panel">
+            <h3 class="panel-title">Sources <span class="panel-sub">(candidates → triage → sent → useful)</span></h3>
+            <div id="perf-sources"><div class="empty-state">No sources measured yet.</div></div>
+          </div>
+          <div class="panel">
+            <h3 class="panel-title">Pivots <span class="panel-sub">(and the budget they earned)</span></h3>
+            <div id="perf-pivots"><div class="empty-state">No pivots measured yet.</div></div>
+          </div>
+        </div>
+
+        <h3 class="panel-title" style="margin-top:18px;">Downstream Outcomes
+          <span class="panel-sub">(what investigators actually found)</span></h3>
+        <div id="perf-feedback"><div class="empty-state">No outcomes reported yet.</div></div>
+
+        <div class="split-panels" style="margin-top:18px;">
+          <div class="panel">
+            <h3 class="panel-title">Budget Allocation</h3>
+            <div id="perf-allocation"><div class="empty-state">Nothing allocated yet.</div></div>
+          </div>
+          <div class="panel">
+            <h3 class="panel-title">API Budgets &amp; Rate Limits</h3>
+            <div id="perf-limits"><div class="empty-state">No external services used yet.</div></div>
+          </div>
+        </div>
+
+        <h3 class="panel-title" style="margin-top:18px;">History
+          <span class="panel-sub">(is this installation getting better?)</span></h3>
+        <div id="perf-history"><div class="empty-state">No history recorded yet.</div></div>
+      </section>
+
+      <!-- ===================== PLATFORM VIEW (v0.5) ===================== -->
+      <section class="view" id="view-platform" style="display:none;">
+        <div class="view-toolbar">
+          <h2>Main Platform Integration</h2>
+          <div class="toolbar-controls">
+            <button class="btn btn-small" id="platform-connect-btn">Connect</button>
+            <button class="btn btn-primary btn-small" id="platform-sync-btn">Sync Now</button>
+            <button class="btn btn-small" id="platform-retry-btn">Retry Deferred</button>
+          </div>
+        </div>
+
+        <div id="platform-banner"></div>
+
+        <div class="stat-grid" style="grid-template-columns: repeat(5, 1fr); margin: 14px 0;">
+          <div class="stat-card"><div class="stat-value" id="plat-queued">0</div><div class="stat-label">Queued</div></div>
+          <div class="stat-card"><div class="stat-value" id="plat-sent">0</div><div class="stat-label">Sent</div></div>
+          <div class="stat-card"><div class="stat-value" id="plat-failed">0</div><div class="stat-label">Deferred</div></div>
+          <div class="stat-card"><div class="stat-value" id="plat-investigations">0</div><div class="stat-label">Investigations</div></div>
+          <div class="stat-card"><div class="stat-value" id="plat-jobs">0</div><div class="stat-label">Investigator Jobs</div></div>
+        </div>
+
+        <div class="notice-box" style="margin-bottom:16px;">
+          Site Finder's job here is <strong>Discover → Triage → Correlate → Prioritize →
+          Send</strong>. It performs lightweight public triage only; deep website
+          investigation is Site Investigator's, requested through the platform. Events are
+          queued locally first, so <strong>an unreachable platform never stops discovery and
+          never loses a finding</strong>. Nothing sent asserts common ownership or
+          maliciousness — every derived event carries the reasoning behind it.
+        </div>
+
+        <div class="split-panels">
+          <div class="panel">
+            <h3 class="panel-title">Connection</h3>
+            <div id="platform-connection"><div class="empty-state">Loading…</div></div>
+          </div>
+          <div class="panel">
+            <h3 class="panel-title">Handoff <span class="panel-sub">(who investigates what)</span></h3>
+            <div id="platform-handoff"><div class="empty-state">Loading…</div></div>
+          </div>
+        </div>
+
+        <h3 class="panel-title" style="margin-top:18px;">Deferred &amp; Failed Events</h3>
+        <div id="platform-failures"><div class="empty-state">Nothing deferred.</div></div>
+
+        <h3 class="panel-title" style="margin-top:18px;">Recently Sent</h3>
+        <div id="platform-sent"><div class="empty-state">Nothing sent yet.</div></div>
+
+        <div class="view-toolbar" style="margin-top:22px;">
+          <h2>What Is Actually Producing</h2>
+          <div class="toolbar-controls">
+            <button class="btn btn-small" id="sweep-indicators-btn">Sweep Noisy Indicators</button>
+          </div>
+        </div>
+
+        <div class="split-panels">
+          <div class="panel">
+            <h3 class="panel-title">Discovery Sources</h3>
+            <div id="stats-sources"><div class="empty-state">No sources measured yet.</div></div>
+          </div>
+          <div class="panel">
+            <h3 class="panel-title">Pivot Techniques</h3>
+            <div id="stats-pivots"><div class="empty-state">No pivots measured yet.</div></div>
+          </div>
+        </div>
+
+        <h3 class="panel-title" style="margin-top:18px;">Retired Indicators
+          <span class="panel-sub">(no longer generating leads — reversible)</span></h3>
+        <div id="stats-indicators"><div class="empty-state">Nothing retired.</div></div>
+      </section>
+
+      <!-- ===================== CAMPAIGNS VIEW (v0.4) ===================== -->
+      <section class="view" id="view-campaigns" style="display:none;">
+        <div class="view-toolbar">
+          <h2>Autonomous Discovery Campaigns</h2>
+          <div class="toolbar-controls">
+            <select id="campaign-seed-kind" class="select-input">
+              <option value="domain">Domain</option>
+              <option value="wallet">Wallet</option>
+              <option value="template">Template hash</option>
+              <option value="infrastructure">Infrastructure (IP)</option>
+              <option value="keyword">Keyword theme</option>
+            </select>
+            <input type="text" id="campaign-seed-value" placeholder="Seed value" style="width:220px;">
+            <label class="min-score-label">Waves
+              <input type="number" id="campaign-waves" value="3" min="1" max="6" style="width:52px;"></label>
+            <button class="btn btn-primary btn-small" id="start-campaign-btn">Start Campaign</button>
+            <button class="btn btn-small" id="watch-families-btn">Check Families</button>
+          </div>
+        </div>
+
+        <div class="notice-box" style="margin-bottom:16px;">
+          A campaign follows <strong>Seed → Pivot → Candidate → Validate → Expand</strong>,
+          stopping at whichever budget runs out first. Everything it produces is a
+          <strong>lead with a recorded reason</strong>. Shared infrastructure, a shared
+          certificate, a reused wallet or an on-chain interaction are observations about
+          public indicators — they do not establish common ownership, control, or that a
+          site is malicious. Every candidate still earns its own confidence through triage
+          and deep analysis.
+        </div>
+
+        <div class="stat-grid" style="grid-template-columns: repeat(6, 1fr); margin-bottom:14px;">
+          <div class="stat-card"><div class="stat-value" id="camp-active">0</div><div class="stat-label">Active Pivots</div></div>
+          <div class="stat-card"><div class="stat-value" id="camp-branches">0</div><div class="stat-label">Branches</div></div>
+          <div class="stat-card"><div class="stat-value" id="camp-candidates">0</div><div class="stat-label">Candidates Found</div></div>
+          <div class="stat-card"><div class="stat-value" id="camp-rejected">0</div><div class="stat-label">Rejected Noise</div></div>
+          <div class="stat-card"><div class="stat-value" id="camp-clusters">0</div><div class="stat-label">Families</div></div>
+          <div class="stat-card"><div class="stat-value" id="camp-highconf">0</div><div class="stat-label">High Confidence</div></div>
+        </div>
+
+        <div class="split-panels">
+          <div class="panel">
+            <h3 class="panel-title">Live Discovery Branches</h3>
+            <div id="campaign-live-feed" class="live-feed">
+              <div class="empty-state">Nothing running. Start a campaign to watch it branch.</div>
+            </div>
+          </div>
+          <div class="panel">
+            <h3 class="panel-title">Technique Yield <span class="panel-sub">(learned from this installation's own results)</span></h3>
+            <div id="technique-list">
+              <div class="empty-state">No techniques have run yet.</div>
+            </div>
+          </div>
+        </div>
+
+        <h3 class="panel-title" style="margin-top:18px;">Campaigns</h3>
+        <div id="campaign-list">
+          <div class="empty-state">No campaigns yet.</div>
+        </div>
+
+        <h3 class="panel-title" style="margin-top:18px;">Newly Appearing Domains Matching a Known Family</h3>
+        <div id="family-matches">
+          <div class="empty-state">No family matches recorded. Click "Check Families" after correlation has run.</div>
+        </div>
+      </section>
+
+      <section class="view" id="view-pivot" style="display:none;">
+        <div class="view-toolbar">
+          <h2>Discovery Pivot Engine</h2>
+          <div class="toolbar-controls">
+            <label class="min-score-label">Depth
+              <input type="number" id="pivot-depth" value="2" min="0" max="4" style="width:56px;"></label>
+            <label class="min-score-label">Max new
+              <input type="number" id="pivot-max-new" value="50" min="1" max="500" style="width:70px;"></label>
+            <button class="btn btn-primary btn-small" id="run-pivot-btn">Expand from Strong Sites</button>
+          </div>
+        </div>
+
+        <div class="stat-grid" style="grid-template-columns: repeat(5, 1fr); margin-bottom:14px;">
+          <div class="stat-card"><div class="stat-value" id="pivot-runs">0</div><div class="stat-label">Runs</div></div>
+          <div class="stat-card"><div class="stat-value" id="pivot-executed">0</div><div class="stat-label">Pivots Run</div></div>
+          <div class="stat-card"><div class="stat-value" id="pivot-reached">0</div><div class="stat-label">Sites Reached</div></div>
+          <div class="stat-card"><div class="stat-value" id="pivot-converged">0</div><div class="stat-label">Multi-Path</div></div>
+          <div class="stat-card"><div class="stat-value" id="pivot-maxdepth">0</div><div class="stat-label">Max Depth</div></div>
+        </div>
+
+        <div class="notice-box" style="margin-bottom:16px;">
+          These are <strong>leads, not verdicts</strong>. A shared certificate, IP, template or
+          wallet is an observed fact about indicators — it does not establish that sites have
+          the same owner, that anyone controls both, or that a newly-found site is malicious.
+          Shared hosting, copied templates, recycled certificates and compromised sites all
+          produce the same signals. Every site below still has to earn its own confidence
+          through triage and deep analysis.
+        </div>
+
+        <div id="pivot-leads-list">
+          <div class="empty-state">No pivot runs yet. Get at least one site to high confidence,
+          then click "Expand from Strong Sites".</div>
+        </div>
+      </section>
+
+      <!-- ===================== DISCOVERY VIEW ===================== -->
+      <section class="view" id="view-discovery" style="display:none;">
+        <div class="view-toolbar">
+          <h2>Discovery</h2>
+          <div class="toolbar-controls">
+            <button class="btn btn-primary btn-small" id="run-discovery-btn">🧭 Run Discovery Now</button>
+          </div>
+        </div>
+
+        <div class="stat-grid" style="grid-template-columns: repeat(4, 1fr); margin-bottom: 18px;">
+          <div class="stat-card">
+            <div class="stat-value" id="stat-discovery-total">0</div>
+            <div class="stat-label">Candidates Surfaced</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value" id="stat-discovery-new-sites">0</div>
+            <div class="stat-label">Became New Sites</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value" id="stat-discovery-pivoted">0</div>
+            <div class="stat-label">Found via Pivoting</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value" id="stat-discovery-duplicates">0</div>
+            <div class="stat-label">Duplicates Skipped</div>
+          </div>
+        </div>
+
+        <div class="two-col">
+          <div class="panel">
+            <div class="panel-header"><h3>By Source</h3></div>
+            <div class="panel-body" id="discovery-by-source-list">
+              <div class="empty-state">No discovery runs yet. Click "Run Discovery Now" or enable
+              discovery in Settings so it runs automatically with each scan.</div>
+            </div>
+          </div>
+          <div class="panel">
+            <div class="panel-header"><h3>By Category</h3></div>
+            <div class="panel-body" id="discovery-by-category-list">
+              <div class="empty-state">No categorized discoveries yet.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel" style="margin-top: 18px;">
+          <div class="panel-header">
+            <h3>Discovery Log</h3>
+            <span style="font-size:12px;color:var(--text-faint);">Every candidate any source has surfaced, newest first</span>
+          </div>
+          <div class="panel-body" id="discovery-events-list" style="max-height: 480px;">
+            <div class="empty-state">No discovery activity recorded yet.</div>
+          </div>
+        </div>
+
+        <div class="panel" style="margin-top: 18px;">
+          <div class="panel-header"><h3>Recent Discovery Runs</h3></div>
+          <div class="panel-body" id="discovery-runs-list" style="max-height: 320px;">
+            <div class="empty-state">No discovery runs yet.</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== SITES VIEW ===================== -->
+      <section class="view" id="view-sites" style="display:none;">
+        <div class="view-toolbar">
+          <h2>All Sites</h2>
+          <div class="toolbar-controls">
+            <input type="text" id="add-url-input" placeholder="Add a URL manually…">
+            <button class="btn btn-primary btn-small" id="add-url-btn">Add</button>
+          </div>
+        </div>
+
+        <div class="filter-bar">
+          <input type="text" id="sites-search" placeholder="Search URL or domain…">
+          <select id="sites-status-filter">
+            <option value="">All statuses</option>
+            <option value="new">New</option>
+            <option value="queued">Queued</option>
+            <option value="scanning">Scanning</option>
+            <option value="scanned">Scanned</option>
+            <option value="error">Error</option>
+          </select>
+          <select id="sites-sort">
+            <option value="score_desc">Highest score first</option>
+            <option value="score_asc">Lowest score first</option>
+            <option value="newest">Newest first</option>
+            <option value="oldest">Oldest first</option>
+            <option value="url">URL (A-Z)</option>
+          </select>
+          <label class="min-score-label">
+            Min score: <input type="number" id="sites-min-score" min="0" max="20" step="0.5" style="width:60px;">
+          </label>
+        </div>
+
+        <div class="table-wrap">
+          <table class="data-table" id="sites-table">
+            <thead>
+              <tr><th>URL</th><th>Status</th><th>Score</th><th>Source</th><th>Pages</th></tr>
+            </thead>
+            <tbody id="sites-tbody"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- ===================== INVESTIGATIONS VIEW ===================== -->
+      <section class="view" id="view-investigations" style="display:none;">
+        <div class="view-toolbar">
+          <h2>Investigations</h2>
+        </div>
+
+        <div class="panel" style="margin-bottom: 18px;">
+          <div class="panel-header"><h3>Active Now</h3></div>
+          <div class="panel-body" id="active-investigations-list">
+            <div class="empty-state">No investigations currently running.</div>
+          </div>
+        </div>
+
+        <div class="two-col">
+          <div class="panel">
+            <div class="panel-header"><h3>Recent Investigations</h3></div>
+            <div class="panel-body" id="recent-investigations-list" style="max-height: 500px;">
+              <div class="empty-state">No investigations yet.</div>
+            </div>
+          </div>
+          <div class="panel">
+            <div class="panel-header"><h3>Decision Log</h3></div>
+            <div class="panel-body log-panel" id="investigation-decisions-panel" style="max-height: 500px;">
+              <div class="empty-state">Select an investigation from the list to see why it made
+              each navigation decision.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== HIGH RISK VIEW ===================== -->
+      <section class="view" id="view-highrisk" style="display:none;">
+        <div class="view-toolbar">
+          <h2>High-Risk Sites</h2>
+          <label class="min-score-label">
+            Threshold: <input type="number" id="highrisk-threshold" value="5" min="0" max="20" step="0.5" style="width:60px;">
+          </label>
+        </div>
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead><tr><th>URL</th><th>Score</th><th>Risk Reasons</th><th>Status</th></tr></thead>
+            <tbody id="highrisk-tbody"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- ===================== WALLETS VIEW ===================== -->
+      <section class="view" id="view-wallets" style="display:none;">
+        <div class="view-toolbar">
+          <h2>Wallets Found</h2>
+          <input type="text" id="wallets-search" placeholder="Search address or network…">
+        </div>
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead><tr><th>Network</th><th>Address</th><th>Confidence</th><th>Sites Seen On</th></tr></thead>
+            <tbody id="wallets-tbody"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- ===================== REVIEW QUEUE VIEW ===================== -->
+      <section class="view" id="view-review" style="display:none;">
+        <div class="view-toolbar">
+          <h2>Review Queue</h2>
+          <div class="tab-group">
+            <button class="tab-btn active" data-status="pending">Pending</button>
+            <button class="tab-btn" data-status="approved">Approved</button>
+            <button class="tab-btn" data-status="rejected">Rejected</button>
+            <button class="tab-btn" data-status="all">All</button>
+          </div>
+        </div>
+        <div class="review-layout">
+          <div class="review-list" id="review-list"></div>
+          <div class="review-detail" id="review-detail">
+            <div class="empty-state">Select a finding from the list to review its evidence.</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== SETTINGS VIEW ===================== -->
+      <section class="view" id="view-settings" style="display:none;">
+        <div class="view-toolbar"><h2>Scanner Settings</h2></div>
+        <div class="panel settings-panel">
+          <div class="settings-row">
+            <div>
+              <label for="setting-batch-size">Sites per batch</label>
+              <div class="settings-hint">How many sites to investigate per Start click before stopping automatically.</div>
+            </div>
+            <input type="number" id="setting-batch-size" min="0" step="1">
+          </div>
+          <div class="settings-row">
+            <div>
+              <label for="setting-headless">Run browser headless</label>
+              <div class="settings-hint">Uncheck to watch the automation browse sites live (slower, useful for debugging).</div>
+            </div>
+            <input type="checkbox" id="setting-headless">
+          </div>
+          <div class="settings-row">
+            <div>
+              <label for="setting-run-collection">Run collectors on Start</label>
+              <div class="settings-hint">Pull in new candidate sites from configured feeds before investigating.</div>
+            </div>
+            <input type="checkbox" id="setting-run-collection">
+          </div>
+          <div class="settings-row">
+            <div>
+              <label for="setting-run-discovery">Run discovery on Start</label>
+              <div class="settings-hint">Automatically search public sources (certificate transparency, typosquat/permutation
+              domains, shared infrastructure, template and contact-info reuse) for new candidate scam sites before each scan,
+              instead of relying only on manually-added URLs.</div>
+            </div>
+            <input type="checkbox" id="setting-run-discovery">
+          </div>
+          <div class="settings-row">
+            <div>
+              <label for="setting-run-ranking">Run ranking on Start</label>
+              <div class="settings-hint">Score newly-added sites so the highest-risk ones are investigated first.</div>
+            </div>
+            <input type="checkbox" id="setting-run-ranking">
+          </div>
+          <div class="settings-row">
+            <div>
+              <label for="setting-rank-limit">Max sites to rank per run</label>
+              <div class="settings-hint">Caps how many "new" sites get scored in one ranking pass.</div>
+            </div>
+            <input type="number" id="setting-rank-limit" min="1" step="10">
+          </div>
+          <div class="settings-row">
+            <div>
+              <label for="setting-risk-threshold">High-risk score threshold</label>
+              <div class="settings-hint">Sites scoring at or above this appear in the High Risk view,
+              and are the only sites automatically investigated after ranking — lower-scored sites
+              are left queued rather than wasting browser time on them.</div>
+            </div>
+            <input type="number" id="setting-risk-threshold" min="0" step="0.5">
+          </div>
+          <div class="settings-row">
+            <div>
+              <label for="setting-allow-signup">Allow research account signup</label>
+              <div class="settings-hint">When an investigation recognizes a genuine signup page, attempt
+              a normal account registration using a research email — never bypassing CAPTCHA, phone
+              verification, or any other access control. Off by default.</div>
+            </div>
+            <input type="checkbox" id="setting-allow-signup">
+          </div>
+          <div class="settings-row">
+            <div>
+              <label for="setting-deep-wallet-hunt">Deep wallet hunt mode</label>
+              <div class="settings-hint">Spend the investigation's whole budget trying to find every
+              wallet address it can: larger page/link limits, prioritizes deposit-type pages, and clicks
+              through currency/network tabs (BTC / ETH / USDT-TRC20, etc.) to reveal addresses hidden
+              behind a tab switch. If account signup is also allowed above and it succeeds without
+              hitting any CAPTCHA or verification wall, the investigator continues into the account area
+              looking for member-only deposit pages. Still stops immediately at any access control —
+              this only makes the wallet search more thorough, it never bypasses anything.</div>
+            </div>
+            <input type="checkbox" id="setting-deep-wallet-hunt">
+          </div>
+          <div class="settings-actions">
+            <button class="btn btn-primary" id="save-settings-btn">Save Settings</button>
+            <span id="settings-saved-msg" class="settings-saved-msg"></span>
+          </div>
+        </div>
+
+        <!-- ---------- Google Form submission settings ---------- -->
+        <div class="view-toolbar" style="margin-top:28px;"><h2>Report Submission</h2></div>
+        <div class="panel settings-panel">
+          <p class="settings-hint" style="margin:14px 0 4px 0;">
+            Enter your details once — they're saved locally in this tool's own database
+            and reused automatically for every future submission.
+          </p>
+
+          <div class="settings-row">
+            <div>
+              <label for="setting-sub-username">Username</label>
+              <div class="settings-hint">Your reporting-project username.</div>
+            </div>
+            <input type="text" id="setting-sub-username" placeholder="your_username" style="width:220px;">
+          </div>
+
+          <div class="settings-row">
+            <div>
+              <label for="setting-sub-teamcode">Team Invite Code</label>
+              <div class="settings-hint">
+                Your team invite code. Stored locally; shown masked once saved.
+              </div>
+            </div>
+            <input type="text" id="setting-sub-teamcode" placeholder="TEAM-XXXX" style="width:220px;">
+          </div>
+
+          <div class="settings-row">
+            <div>
+              <label for="setting-sub-mode">Submission mode</label>
+              <div class="settings-hint" id="sub-mode-hint">
+                How much the tool does for you before you submit.
+              </div>
+            </div>
+            <select id="setting-sub-mode" style="width:220px;">
+              <option value="manual">Manual</option>
+              <option value="review_before_submit">Review Before Submit</option>
+              <option value="automatic">Automatic</option>
+            </select>
+          </div>
+
+          <div class="settings-actions">
+            <button class="btn btn-primary" id="save-submission-settings-btn">Save Submission Settings</button>
+            <span id="submission-settings-msg" class="settings-saved-msg"></span>
+          </div>
+
+          <div class="notice-box">
+            <strong>Every mode ends with your click.</strong>
+            The tool validates the site, wallet, network, required fields and duplicates,
+            opens the form and fills everything it can — then stops. It never clicks Submit
+            itself, because filing a report is a real action against a real project and
+            should always have a person behind it. "Automatic" means the preparation and
+            validation are automatic, so confirming takes one click.
+          </div>
+        </div>
+      </section>
+
+      <!-- Why-surfaced drawer -->
+      <div id="why-drawer" class="why-drawer" style="display:none;">
+        <div class="why-panel">
+          <div class="why-head">
+            <h3 id="why-title">Why this site was surfaced</h3>
+            <button class="btn btn-small" id="why-close">Close</button>
+          </div>
+          <div id="why-body"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+
+<!-- Screenshot lightbox -->
+<div id="lightbox" class="lightbox" style="display:none;">
+  <div class="lightbox-backdrop"></div>
+  <div class="lightbox-content">
+    <button class="lightbox-close" id="lightbox-close">✕</button>
+    <img id="lightbox-img" src="" alt="Evidence screenshot">
+  </div>
+</div>
+
+<script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>

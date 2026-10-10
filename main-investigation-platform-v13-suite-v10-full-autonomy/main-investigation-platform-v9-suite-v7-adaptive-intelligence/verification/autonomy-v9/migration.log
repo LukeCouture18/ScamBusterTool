@@ -1,0 +1,13 @@
+AssertionError [ERR_ASSERTION]: {"investigation_id":"old","site_url":"https://old-v8.example/","workspace_url":"/investigations/old","state":"Parked"}
+
+202 !== 200
+
+    at file:///workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/autonomy-migration.mjs:22:125
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: 202,
+  expected: 200,
+  operator: 'strictEqual',
+  diff: 'simple'
+}

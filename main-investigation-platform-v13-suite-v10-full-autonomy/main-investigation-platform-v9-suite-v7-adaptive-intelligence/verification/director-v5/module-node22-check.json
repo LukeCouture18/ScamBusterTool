@@ -1,0 +1,10 @@
+[
+  {
+    "module": "wallet-investigator",
+    "health": 200
+  },
+  {
+    "module": "form-submitter",
+    "health": 200
+  }
+]

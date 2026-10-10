@@ -1,0 +1,36 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+npm error code ERESOLVE
+npm error ERESOLVE could not resolve
+npm error
+npm error While resolving: vite@8.3.0
+npm error Found: esbuild@0.25.12
+npm error node_modules/esbuild
+npm error   dev esbuild@"^0.25.0" from the root project
+npm error
+npm error Could not resolve dependency:
+npm error peerOptional esbuild@"^0.27.0 || ^0.28.0" from vite@8.3.0
+npm error node_modules/vite
+npm error   vite@"^8.3.0" from the root project
+npm error   peer vite@"^5.2.0 || ^6 || ^7 || ^8" from @tailwindcss/vite@4.3.3
+npm error   node_modules/@tailwindcss/vite
+npm error     @tailwindcss/vite@"^4.3.3" from the root project
+npm error   1 more (@vitejs/plugin-react)
+npm error
+npm error Conflicting peer dependency: esbuild@0.28.2
+npm error node_modules/esbuild
+npm error   peerOptional esbuild@"^0.27.0 || ^0.28.0" from vite@8.3.0
+npm error   node_modules/vite
+npm error     vite@"^8.3.0" from the root project
+npm error     peer vite@"^5.2.0 || ^6 || ^7 || ^8" from @tailwindcss/vite@4.3.3
+npm error     node_modules/@tailwindcss/vite
+npm error       @tailwindcss/vite@"^4.3.3" from the root project
+npm error     1 more (@vitejs/plugin-react)
+npm error
+npm error Fix the upstream dependency conflict, or retry
+npm error this command with --force or --legacy-peer-deps
+npm error to accept an incorrect (and potentially broken) dependency resolution.
+npm error
+npm error
+npm error For a full report see:
+npm error /root/.npm/_logs/2026-10-02T21_45_44_174Z-eresolve-report.txt
+npm error A complete log of this run can be found in: /root/.npm/_logs/2026-10-02T21_45_44_174Z-debug-0.log

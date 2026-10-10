@@ -1,0 +1,37 @@
+{
+  "name": "operation-hunter",
+  "private": true,
+  "version": "2.0.0",
+  "description": "Operation Hunter v2.0 \u2014 autonomously reconstructs, pursues and keeps a living model of crypto-scam operations; the reconstruction and pursuit engine of the Main Investigation Platform.",
+  "type": "module",
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "scripts": {
+    "dev": "node --disable-warning=ExperimentalWarning --import tsx server.ts",
+    "build": "vite build",
+    "start": "node --disable-warning=ExperimentalWarning --import tsx server.ts --production",
+    "test": "node --disable-warning=ExperimentalWarning --import tsx --test tests/*.test.ts",
+    "lint": "tsc -p tsconfig.server.json --noEmit && tsc --noEmit",
+    "clean": "node -e \"require('fs').rmSync('dist',{recursive:true,force:true})\""
+  },
+  "dependencies": {
+    "tsx": "^4.21.0"
+  },
+  "optionalDependencies": {
+    "@google/genai": "^2.4.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.3",
+    "@types/node": "^22.14.0",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.1",
+    "lucide-react": "^0.546.0",
+    "react": "^19.0.1",
+    "react-dom": "^19.0.1",
+    "tailwindcss": "^4.3.3",
+    "typescript": "^5.9.3",
+    "vite": "^8.3.0"
+  }
+}

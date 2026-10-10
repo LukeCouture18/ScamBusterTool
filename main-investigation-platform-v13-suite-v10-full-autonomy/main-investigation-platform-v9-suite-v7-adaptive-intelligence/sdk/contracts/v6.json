@@ -1,0 +1,159 @@
+{
+  "contract_version": "3.0",
+  "compatible_event_versions": [
+    "1.0",
+    "2.0",
+    "3.0"
+  ],
+  "compatible_ingestion_versions": [
+    "1.0",
+    "1.1",
+    "3.0"
+  ],
+  "authentication": {
+    "header": "X-API-Key",
+    "alternate": "Authorization: Bearer <module-key>",
+    "sites_header": "OAI-Sites-Authorization: Bearer <deployment-token>"
+  },
+  "modules": [
+    "site_finder",
+    "site_investigator",
+    "crypto_wallet_logger",
+    "wallet_investigator",
+    "form_submitter",
+    "operation_hunter"
+  ],
+  "internal_source": "platform",
+  "event_types": [
+    "site.discovered",
+    "site.triaged",
+    "site.investigated",
+    "investigation.updated",
+    "investigation.completed",
+    "wallet.observed",
+    "wallet.validated",
+    "wallet.analyzed",
+    "evidence.added",
+    "relationship.discovered",
+    "report.received",
+    "report.validating",
+    "report.needs_review",
+    "report.blocked",
+    "report.ready",
+    "report.prefilling",
+    "report.submitting",
+    "report.verifying",
+    "report.completed",
+    "report.failed"
+  ],
+  "event_required": [
+    "event_id",
+    "event_type"
+  ],
+  "event_ids": [
+    "event_id",
+    "correlation_id",
+    "causation_event_id",
+    "investigation_id",
+    "entity_id"
+  ],
+  "triage_outcomes": [
+    "observed",
+    "triaged",
+    "promoted",
+    "dismissed",
+    "inconclusive"
+  ],
+  "site_finder_schema_3_triage": {
+    "record": "sites[].triage",
+    "fields": [
+      "outcome",
+      "request_downstream",
+      "confidence",
+      "indicator_categories",
+      "evidence_ids",
+      "method"
+    ],
+    "promotion": "Evidence IDs resolve to persisted public_triage records before a site.triaged event may route a job",
+    "non_routing": "A site observation without investigation_id is persisted without creating a job"
+  },
+  "investigation_states": [
+    "NEW",
+    "TRIAGING",
+    "INVESTIGATING",
+    "EXPANDING",
+    "NEEDS_REVIEW",
+    "READY_FOR_REPORT",
+    "MONITORING",
+    "COMPLETED",
+    "ARCHIVED"
+  ],
+  "jobs": [
+    "DISCOVER_SITES",
+    "INVESTIGATE_SITE",
+    "FIND_RELATED_SITES",
+    "RECHECK_SITE",
+    "OBSERVE_SITE",
+    "LOG_WALLET_ACTIVITY",
+    "ANALYZE_WALLET",
+    "REFRESH_WALLET",
+    "REVIEW_EVIDENCE",
+    "PREPARE_REPORT"
+  ],
+  "api": {
+    "events": "/api/v1/events",
+    "register": "/api/v1/modules/{module}/register",
+    "heartbeat": "/api/v1/modules/{module}/heartbeat",
+    "subscribe": "/api/v1/modules/{module}/events",
+    "metrics": "/api/v1/modules/{module}/metrics",
+    "jobs": "/api/v1/modules/{module}/jobs/claim",
+    "context": "/api/v1/investigations/{id}/context",
+    "plan": "/api/v1/investigations/{id}/plan",
+    "graph": "/api/v1/investigations/{id}/graph",
+    "resolved": "/api/v1/investigations/{id}/resolve",
+    "monitoring": "/api/v1/investigations/{id}/monitoring",
+    "reports": "/api/v1/investigations/{id}/report",
+    "feedback_dispatch": "/api/v1/feedback/dispatch",
+    "health": "/api/v1/health",
+    "legacy_logger_adapter": "/api/v1/compat/logger",
+    "inbox_decisions": "/api/v1/inbox/decisions",
+    "inbox_next": "/api/v1/inbox/next",
+    "inbox_decision": "/api/v1/inbox/{id}/decision",
+    "inbox_supply": "/api/v1/inbox/supply"
+  },
+  "feedback_push": {
+    "registration_metadata": "feedback_webhook_url",
+    "allowlist_env": "FEEDBACK_WEBHOOK_ALLOWLIST",
+    "signature_header": "X-Platform-Signature: sha256=<HMAC-SHA256(body)>",
+    "delivery_id_header": "X-Platform-Delivery-Id",
+    "acknowledgement": "POST /api/v1/modules/{module}/events/{delivery_id}"
+  },
+  "compatibility_adapters": {
+    "site_finder_legacy_1x": "Only schema 1.x sites[].triage.passed and evidence_categories use the checked legacy adapter; schema 3.0 uses canonical sites[].triage with evidence_ids",
+    "site_investigator_v01": "site_investigator_bridge.py translates original local SQLite rows and claims platform jobs",
+    "crypto_wallet_logger_v08": "POST native events to /api/v1/compat/logger; wallet observations remain passive"
+  },
+  "site_finder_v2_inbox": {
+    "record": "sites[].inbox (passthrough on a schema 3.0 site record whose triage.outcome is 'promoted')",
+    "fields": [
+      "version",
+      "candidate_id",
+      "worth_checking",
+      "headline",
+      "category",
+      "cluster_key",
+      "related_domains",
+      "wallets",
+      "strategies",
+      "signals",
+      "score",
+      "fetch",
+      "registered_days",
+      "cost",
+      "note"
+    ],
+    "routing": "request_downstream=false by default; the platform publishes a platform-originated site.triaged (promoted, request_downstream=true) when the analyst marks the candidate USEFUL, and a non-routing dismissed site.triaged on SKIP",
+    "feedback": "GET /api/v1/inbox/decisions?module=site_finder&after=<cursor> returns decisions in order with next_cursor",
+    "supply": "When fewer than target_depth candidates wait, the platform queues DISCOVER_SITES {requested, budget:{http}} for site_finder"
+  }
+}

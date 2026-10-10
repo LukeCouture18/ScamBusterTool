@@ -1,0 +1,6 @@
+  PASS  test_operation_v6.py::test_changed_public_build_and_structure_is_a_new_lead_not_ownership
+  PASS  test_operation_v6.py::test_lead_generation_window_reserves_probe_capacity
+
+============================================================
+Results: 2 passed, 0 failed
+============================================================

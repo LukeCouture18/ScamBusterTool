@@ -1,0 +1,611 @@
+
+=== wallet-pipeline (6 steps) ===
+--- wallet-pipeline 1/6: [integrations/crypto-wallet-logger-v08] node --test tests/wallet-core.test.mjs tests/sync-queue.test.mjs tests/context-precision.test.mjs
+TAP version 13
+# Subtest: deposit card: address with its own label, copy button and QR
+ok 1 - deposit card: address with its own label, copy button and QR
+  ---
+  duration_ms: 15.852182
+  type: 'test'
+  ...
+# Subtest: deposit wording only in a heading, or only in the address's own sentence, is still deposit
+ok 2 - deposit wording only in a heading, or only in the address's own sentence, is still deposit
+  ---
+  duration_ms: 2.942193
+  type: 'test'
+  ...
+# Subtest: a lone address in a deposit section (no other address there) keeps the section's deposit wording
+ok 3 - a lone address in a deposit section (no other address there) keeps the section's deposit wording
+  ---
+  duration_ms: 0.89516
+  type: 'test'
+  ...
+# Subtest: deposit next to a contract mention stays deposit (contract evidence is not about this address)
+ok 4 - deposit next to a contract mention stays deposit (contract evidence is not about this address)
+  ---
+  duration_ms: 1.322728
+  type: 'test'
+  ...
+# Subtest: network responses and script config keep their key-path evidence
+ok 5 - network responses and script config keep their key-path evidence
+  ---
+  duration_ms: 5.612409
+  type: 'test'
+  ...
+# Subtest: token contract inside the deposit card: its own label beats the card's deposit cues
+ok 6 - token contract inside the deposit card: its own label beats the card's deposit cues
+  ---
+  duration_ms: 2.468548
+  type: 'test'
+  ...
+# Subtest: transaction history rows (table or div list) inside a deposit page
+ok 7 - transaction history rows (table or div list) inside a deposit page
+  ---
+  duration_ms: 4.051681
+  type: 'test'
+  ...
+# Subtest: example / documentation addresses
+ok 8 - example / documentation addresses
+  ---
+  duration_ms: 1.346145
+  type: 'test'
+  ...
+# Subtest: withdrawal inputs and the visitor's own addresses
+ok 9 - withdrawal inputs and the visitor's own addresses
+  ---
+  duration_ms: 1.827225
+  type: 'test'
+  ...
+# Subtest: unrelated addresses: partners, team wallets, referrers, reported scam addresses
+ok 10 - unrelated addresses: partners, team wallets, referrers, reported scam addresses
+  ---
+  duration_ms: 1.650213
+  type: 'test'
+  ...
+# Subtest: deposit cues that only describe the surrounding section give unknown, not deposit
+ok 11 - deposit cues that only describe the surrounding section give unknown, not deposit
+  ---
+  duration_ms: 0.63311
+  type: 'test'
+  ...
+# Subtest: malformed addresses (failing checksum) are never called deposit
+ok 12 - malformed addresses (failing checksum) are never called deposit
+  ---
+  duration_ms: 1.440721
+  type: 'test'
+  ...
+# Subtest: near zone is derived from `local` when the caller passes none
+ok 13 - near zone is derived from `local` when the caller passes none
+  ---
+  duration_ms: 4.34691
+  type: 'test'
+  ...
+# Subtest: a weakly supported deposit call gets a lower confidence than a well-supported one
+ok 14 - a weakly supported deposit call gets a lower confidence than a well-supported one
+  ---
+  duration_ms: 0.801396
+  type: 'test'
+  ...
+# Subtest: item enqueued while a delivery is in flight is delivered in the same drain and never lost
+ok 15 - item enqueued while a delivery is in flight is delivered in the same drain and never lost
+  ---
+  duration_ms: 65.921325
+  type: 'test'
+  ...
+# Subtest: many concurrent enqueues: every item delivered exactly once, queue empty
+ok 16 - many concurrent enqueues: every item delivered exactly once, queue empty
+  ---
+  duration_ms: 383.930335
+  type: 'test'
+  ...
+# Subtest: identical replays dedupe; permanent rejections do not block the queue; offline backs off
+not ok 17 - identical replays dedupe; permanent rejections do not block the queue; offline backs off
+  ---
+  duration_ms: 3034.050206
+  type: 'test'
+  location: '/workspace/scratch/0dbe5278a453/verification-runs/node22/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/crypto-wallet-logger-v08/tests/sync-queue.test.mjs:79:1'
+  failureType: 'testCodeFailure'
+  error: 'timed out'
+  code: 'ERR_TEST_FAILURE'
+  stack: |-
+    waitFor (file:///workspace/scratch/0dbe5278a453/verification-runs/node22/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/crypto-wallet-logger-v08/tests/sync-queue.test.mjs:36:47)
+    async TestContext.<anonymous> (file:///workspace/scratch/0dbe5278a453/verification-runs/node22/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/crypto-wallet-logger-v08/tests/sync-queue.test.mjs:95:3)
+    async Test.run (node:internal/test_runner/test:1054:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:744:7)
+  ...
+# Subtest: wallet.observation envelope and payload follow contract §1
+ok 18 - wallet.observation envelope and payload follow contract §1
+  ---
+  duration_ms: 23.460515
+  type: 'test'
+  ...
+# Subtest: sha256 matches node:crypto
+ok 19 - sha256 matches node:crypto
+  ---
+  duration_ms: 8.900676
+  type: 'test'
+  ...
+# Subtest: keccak-256 (Ethereum padding) known vectors
+ok 20 - keccak-256 (Ethereum padding) known vectors
+  ---
+  duration_ms: 3.95732
+  type: 'test'
+  ...
+# Subtest: EIP-55 specification vectors
+ok 21 - EIP-55 specification vectors
+  ---
+  duration_ms: 5.178833
+  type: 'test'
+  ...
+# Subtest: built-in token contract list is internally valid
+ok 22 - built-in token contract list is internally valid
+  ---
+  duration_ms: 6.768603
+  type: 'test'
+  ...
+# Subtest: bitcoin base58check and bech32/bech32m with witness rules
+ok 23 - bitcoin base58check and bech32/bech32m with witness rules
+  ---
+  duration_ms: 2.068813
+  type: 'test'
+  ...
+# Subtest: litecoin and dogecoin (generated with reference encoders)
+ok 24 - litecoin and dogecoin (generated with reference encoders)
+  ---
+  duration_ms: 2.99638
+  type: 'test'
+  ...
+# Subtest: tron, xrp, solana
+ok 25 - tron, xrp, solana
+  ---
+  duration_ms: 0.789864
+  type: 'test'
+  ...
+# Subtest: extraction rejects tx hashes and hex substrings, keeps case
+ok 26 - extraction rejects tx hashes and hex substrings, keeps case
+  ---
+  duration_ms: 0.682073
+  type: 'test'
+  ...
+# Subtest: extraction across families with boundaries and zero-width characters
+ok 27 - extraction across families with boundaries and zero-width characters
+  ---
+  duration_ms: 1.6393
+  type: 'test'
+  ...
+# Subtest: solana-length base58 needs wallet context and is rejected after signature/hash labels
+ok 28 - solana-length base58 needs wallet context and is rejected after signature/hash labels
+  ---
+  duration_ms: 0.995613
+  type: 'test'
+  ...
+# Subtest: EIP-681 URIs: chain id, value and ERC-20 transfer recipient
+ok 29 - EIP-681 URIs: chain id, value and ERC-20 transfer recipient
+  ---
+  duration_ms: 1.32324
+  type: 'test'
+  ...
+# Subtest: bitcoin/litecoin/dogecoin/tron/solana/xrp URIs
+ok 30 - bitcoin/litecoin/dogecoin/tron/solana/xrp URIs
+  ---
+  duration_ms: 1.386557
+  type: 'test'
+  ...
+# Subtest: extractAll: token contract inside a transfer URI is not the payment target
+ok 31 - extractAll: token contract inside a transfer URI is not the payment target
+  ---
+  duration_ms: 1.038937
+  type: 'test'
+  ...
+# Subtest: network hints: canonical mapping and priority
+ok 32 - network hints: canonical mapping and priority
+  ---
+  duration_ms: 3.900065
+  type: 'test'
+  ...
+# Subtest: deposit: words + structure
+ok 33 - deposit: words + structure
+  ---
+  duration_ms: 10.069932
+  type: 'test'
+  ...
+# Subtest: recharge / top up / fund your account / payment instruction
+ok 34 - recharge / top up / fund your account / payment instruction
+  ---
+  duration_ms: 1.264312
+  type: 'test'
+  ...
+# Subtest: withdrawal never counts as deposit
+ok 35 - withdrawal never counts as deposit
+  ---
+  duration_ms: 1.673952
+  type: 'test'
+  ...
+# Subtest: examples: placeholder, e.g., docs code blocks, well-known addresses
+ok 36 - examples: placeholder, e.g., docs code blocks, well-known addresses
+  ---
+  duration_ms: 0.844553
+  type: 'test'
+  ...
+# Subtest: transaction history and contract/token
+ok 37 - transaction history and contract/token
+  ---
+  duration_ms: 2.76048
+  type: 'test'
+  ...
+# Subtest: unrelated and unknown
+ok 38 - unrelated and unknown
+  ---
+  duration_ms: 0.626698
+  type: 'test'
+  ...
+# Subtest: hidden-panel cue lowers confidence
+ok 39 - hidden-panel cue lowers confidence
+  ---
+  duration_ms: 0.691261
+  type: 'test'
+  ...
+# Subtest: key paths from script config / network responses
+ok 40 - key paths from script config / network responses
+  ---
+  duration_ms: 4.115589
+  type: 'test'
+  ...
+# Subtest: scanJson records key paths, sibling hints and never invokes getters
+ok 41 - scanJson records key paths, sibling hints and never invokes getters
+  ---
+  duration_ms: 1.546383
+  type: 'test'
+  ...
+# Subtest: scanScriptText: JS config with approximate key paths
+ok 42 - scanScriptText: JS config with approximate key paths
+  ---
+  duration_ms: 1.313852
+  type: 'test'
+  ...
+# Subtest: canonical identity and observationId
+ok 43 - canonical identity and observationId
+  ---
+  duration_ms: 0.299177
+  type: 'test'
+  ...
+# Subtest: legacy network labels keep v0.8 UI/verifier semantics
+ok 44 - legacy network labels keep v0.8 UI/verifier semantics
+  ---
+  duration_ms: 0.171089
+  type: 'test'
+  ...
+# Subtest: main-world/wallet-core.js is a byte-identical copy of wallet-core.js
+ok 45 - main-world/wallet-core.js is a byte-identical copy of wallet-core.js
+  ---
+  duration_ms: 0.856061
+  type: 'test'
+  ...
+1..45
+# tests 45
+# suites 0
+# pass 44
+# fail 1
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 3618.168892
+FAIL wallet-pipeline: step 1/6 exited with 1: [integrations/crypto-wallet-logger-v08] node --test tests/wallet-core.test.mjs tests/sync-queue.test.mjs tests/context-precision.test.mjs
+--- wallet-pipeline 2/6: [integrations/crypto-wallet-logger-v08] python tests/browser_extension_test.py
+Traceback (most recent call last):
+  File "/workspace/scratch/0dbe5278a453/verification-runs/node22/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/crypto-wallet-logger-v08/tests/browser_extension_test.py", line 939, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/workspace/scratch/0dbe5278a453/verification-runs/node22/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/crypto-wallet-logger-v08/tests/browser_extension_test.py", line 626, in main
+    context = playwright.chromium.launch_persistent_context(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/0dbe5278a453/pydeps/playwright/sync_api/_generated.py", line 14804, in launch_persistent_context
+    self._sync(
+  File "/workspace/scratch/0dbe5278a453/pydeps/playwright/_impl/_sync_base.py", line 115, in _sync
+    return task.result()
+           ^^^^^^^^^^^^^
+  File "/workspace/scratch/0dbe5278a453/pydeps/playwright/_impl/_browser_type.py", line 166, in launch_persistent_context
+    result = await self._channel.send_return_as_dict(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/0dbe5278a453/pydeps/playwright/_impl/_connection.py", line 83, in send_return_as_dict
+    return await self._connection.wrap_api_call(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/0dbe5278a453/pydeps/playwright/_impl/_connection.py", line 558, in wrap_api_call
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TargetClosedError: BrowserType.launch_persistent_context: Target page, context or browser has been closed
+Browser logs:
+
+<launching> /workspace/scratch/0dbe5278a453/browser-cache/chromium-1187/chrome-linux/chrome --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=AcceptCHFrame,AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,Translate,AutoDeElevate --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --enable-automation --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --disable-extensions-except=/workspace/scratch/0dbe5278a453/verification-runs/node22/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/crypto-wallet-logger-v08 --load-extension=/workspace/scratch/0dbe5278a453/verification-runs/node22/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/crypto-wallet-logger-v08 --host-resolver-rules=MAP *.test 127.0.0.1 --unsafely-treat-insecure-origin-as-secure=http://site.test:41857 --user-data-dir=/tmp/cwl-browser-9mnlkpgd/profile --remote-debugging-pipe about:blank
+<launched> pid=6689
+Call log:
+  - <launching> /workspace/scratch/0dbe5278a453/browser-cache/chromium-1187/chrome-linux/chrome --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=AcceptCHFrame,AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,Translate,AutoDeElevate --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --enable-automation --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --disable-extensions-except=/workspace/scratch/0dbe5278a453/verification-runs/node22/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/crypto-wallet-logger-v08 --load-extension=/workspace/scratch/0dbe5278a453/verification-runs/node22/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/crypto-wallet-logger-v08 --host-resolver-rules=MAP *.test 127.0.0.1 --unsafely-treat-insecure-origin-as-secure=http://site.test:41857 --user-data-dir=/tmp/cwl-browser-9mnlkpgd/profile --remote-debugging-pipe about:blank
+  - <launched> pid=6689
+  - [pid=6689] <gracefully close start>
+  - [pid=6689] <kill>
+  - [pid=6689] <will force kill>
+  - [pid=6689] exception while trying to kill process: Error: kill ESRCH
+  - [pid=6689] <process did exit: exitCode=null, signal=SIGSEGV>
+  - [pid=6689] starting temporary directories cleanup
+  - [pid=6689] finished temporary directories cleanup
+  - [pid=6689] <gracefully close end>
+
+FAIL wallet-pipeline: step 2/6 exited with 1: [integrations/crypto-wallet-logger-v08] python tests/browser_extension_test.py
+--- wallet-pipeline 3/6: [integrations/wallet-investigator] node --import tsx --test tests/validation-v4.test.ts
+TAP version 13
+# Subtest: keccak-256 known digests
+ok 1 - keccak-256 known digests
+  ---
+  duration_ms: 9.009585
+  type: 'test'
+  ...
+# Subtest: base58 / base58check encoders round-trip published addresses
+ok 2 - base58 / base58check encoders round-trip published addresses
+  ---
+  duration_ms: 1.565585
+  type: 'test'
+  ...
+# Subtest: segwit encoder reproduces BIP-173 / BIP-350 published addresses
+ok 3 - segwit encoder reproduces BIP-173 / BIP-350 published addresses
+  ---
+  duration_ms: 0.977931
+  type: 'test'
+  ...
+# Subtest: EVM: EIP-55 published vectors are valid with checksum eip55_valid
+ok 4 - EVM: EIP-55 published vectors are valid with checksum eip55_valid
+  ---
+  duration_ms: 7.078738
+  type: 'test'
+  ...
+# Subtest: EVM: wrong case of one letter fails EIP-55 → invalid
+ok 5 - EVM: wrong case of one letter fails EIP-55 → invalid
+  ---
+  duration_ms: 3.474284
+  type: 'test'
+  ...
+# Subtest: EVM: all-lower and all-upper are format-valid with checksum absent
+ok 6 - EVM: all-lower and all-upper are format-valid with checksum absent
+  ---
+  duration_ms: 0.448934
+  type: 'test'
+  ...
+# Subtest: EVM: wrong length and non-hex are invalid
+ok 7 - EVM: wrong length and non-hex are invalid
+  ---
+  duration_ms: 0.443681
+  type: 'test'
+  ...
+# Subtest: EVM: no usable hint and several candidates → network_ambiguous (never guessed)
+ok 8 - EVM: no usable hint and several candidates → network_ambiguous (never guessed)
+  ---
+  duration_ms: 3.793673
+  type: 'test'
+  ...
+# Subtest: EVM: single candidate or a usable hint resolves the network
+ok 9 - EVM: single candidate or a usable hint resolves the network
+  ---
+  duration_ms: 6.66639
+  type: 'test'
+  ...
+# Subtest: EVM: hint contradicting the family → network_ambiguous with a reason
+ok 10 - EVM: hint contradicting the family → network_ambiguous with a reason
+  ---
+  duration_ms: 1.39266
+  type: 'test'
+  ...
+# Subtest: Bitcoin: published base58 addresses are valid and case-preserved
+ok 11 - Bitcoin: published base58 addresses are valid and case-preserved
+  ---
+  duration_ms: 1.697198
+  type: 'test'
+  ...
+# Subtest: Bitcoin: one changed character breaks base58check
+ok 12 - Bitcoin: one changed character breaks base58check
+  ---
+  duration_ms: 3.928598
+  type: 'test'
+  ...
+# Subtest: Bitcoin: bech32 / bech32m (BIP-173 / BIP-350)
+ok 13 - Bitcoin: bech32 / bech32m (BIP-173 / BIP-350)
+  ---
+  duration_ms: 1.12347
+  type: 'test'
+  ...
+# Subtest: Bitcoin: bech32 vs bech32m mix-ups, broken checksums, bad lengths and mixed case are invalid
+ok 14 - Bitcoin: bech32 vs bech32m mix-ups, broken checksums, bad lengths and mixed case are invalid
+  ---
+  duration_ms: 0.701076
+  type: 'test'
+  ...
+# Subtest: Litecoin: base58 0x30 / 0x32 / 0x05 and bech32 ltc
+ok 15 - Litecoin: base58 0x30 / 0x32 / 0x05 and bech32 ltc
+  ---
+  duration_ms: 1.069024
+  type: 'test'
+  ...
+# Subtest: Dogecoin: base58 0x1e / 0x16
+ok 16 - Dogecoin: base58 0x1e / 0x16
+  ---
+  duration_ms: 0.762223
+  type: 'test'
+  ...
+# Subtest: TRON: base58check 0x41, case preserved; broken checksum and wrong length invalid
+ok 17 - TRON: base58check 0x41, case preserved; broken checksum and wrong length invalid
+  ---
+  duration_ms: 1.324458
+  type: 'test'
+  ...
+# Subtest: TRON address with hint bsc → network_ambiguous, address kept
+ok 18 - TRON address with hint bsc → network_ambiguous, address kept
+  ---
+  duration_ms: 0.664127
+  type: 'test'
+  ...
+# Subtest: XRP: ripple-alphabet base58check
+ok 19 - XRP: ripple-alphabet base58check
+  ---
+  duration_ms: 0.770782
+  type: 'test'
+  ...
+# Subtest: Solana: base58 decoding to exactly 32 bytes
+ok 20 - Solana: base58 decoding to exactly 32 bytes
+  ---
+  duration_ms: 1.238189
+  type: 'test'
+  ...
+# Subtest: Recognisable but unsupported chains → unsupported
+ok 21 - Recognisable but unsupported chains → unsupported
+  ---
+  duration_ms: 0.359126
+  type: 'test'
+  ...
+# Subtest: Garbage input is invalid; internal failure → unable_to_validate
+ok 22 - Garbage input is invalid; internal failure → unable_to_validate
+  ---
+  duration_ms: 0.887919
+  type: 'test'
+  ...
+# Subtest: Normalisation: EVM lower, bech32 lower, base58 case-preserved; whitespace trimmed
+ok 23 - Normalisation: EVM lower, bech32 lower, base58 case-preserved; whitespace trimmed
+  ---
+  duration_ms: 1.029757
+  type: 'test'
+  ...
+# Subtest: Network labels map to canonical names
+ok 24 - Network labels map to canonical names
+  ---
+  duration_ms: 0.273486
+  type: 'test'
+  ...
+# Subtest: Legacy adapter keeps the old result shape and status names
+ok 25 - Legacy adapter keeps the old result shape and status names
+  ---
+  duration_ms: 2.031969
+  type: 'test'
+  ...
+# Subtest: conflicting observed networks require review even when the strongest hint names one
+ok 26 - conflicting observed networks require review even when the strongest hint names one
+  ---
+  duration_ms: 0.394082
+  type: 'test'
+  ...
+1..26
+# tests 26
+# suites 0
+# pass 26
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 436.923969
+--- wallet-pipeline 4/6: [integrations/wallet-investigator] WALLET_INVESTIGATOR_SYNTHETIC_FIXTURES=1 node --import tsx --import file:///workspace/scratch/0dbe5278a453/verification-runs/node22/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/lib/sqljs-fallback.mjs tests/platform-worker-v4.ts
+[MainPlatformV6] Initialized integration module 'wallet_investigator' with capabilities: [
+  'blockchain-analysis',
+  'wallet-validation',
+  'counterparty-discovery',
+  'fund-flow-analysis',
+  'controlled-wallet-expansion'
+]
+[Database] Initialized new database at /tmp/wallet-platform-v4-2ipq17/data/wallet_investigator.sqlite
+[Migrations] Applying migration v1: 001_initial_schema...
+[Migrations] Applying migration v2: 002_indexes_and_views...
+[Migrations] Migration status: 2 applied. Current schema version: v2
+[ProviderManager] Provider DeterministicFixturesProvider failed: No synthetic fixture for TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t. Attempting failover...
+[ProviderManager] Provider PrimaryPublicExplorerProvider failed: No synthetic fixture for TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t. Attempting failover...
+[ProviderManager] Provider SecondaryFailoverProvider failed: No synthetic fixture for TR7NHqjeKQxGTCi8q8ZY4pL8otSzgjLj6t. Attempting failover...
+{"ok":true,"tron":{"classification":"valid","analysis":"PARTIAL","patch":"needs-review"},"invalid_evm":{"classification":"invalid","patch":"complete"},"ambiguous_evm":{"classification":"network_ambiguous","network":"unknown"},"validate_only":{"classification":"valid","network":"bsc"},"full_evm":{"transactions":4,"evidence":10,"analysis":"COMPLETED"}}
+--- wallet-pipeline 5/6: node --experimental-sqlite --disable-warning=ExperimentalWarning --import tsx --import file:///workspace/scratch/0dbe5278a453/verification-runs/node22/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/lib/sqljs-fallback.mjs tests/wallet-pipeline-e2e.mjs
+[MainPlatformV6] Initialized integration module 'wallet_investigator' with capabilities: [
+  'blockchain-analysis',
+  'wallet-validation',
+  'counterparty-discovery',
+  'fund-flow-analysis',
+  'controlled-wallet-expansion'
+]
+[Database] Initialized new database at /tmp/mip-wallet-e2e-QoaBjV/wallet-runtime/data/wallet_investigator.sqlite
+[Migrations] Applying migration v1: 001_initial_schema...
+[Migrations] Applying migration v2: 002_indexes_and_views...
+[Migrations] Migration status: 2 applied. Current schema version: v2
+[ProviderManager] Provider DeterministicFixturesProvider failed: No synthetic fixture for TENMgua1QHLuKTsYGyfuiy8bZtmv2GJBmM. Attempting failover...
+[ProviderManager] Provider PrimaryPublicExplorerProvider failed: No synthetic fixture for TENMgua1QHLuKTsYGyfuiy8bZtmv2GJBmM. Attempting failover...
+[ProviderManager] Provider SecondaryFailoverProvider failed: No synthetic fixture for TENMgua1QHLuKTsYGyfuiy8bZtmv2GJBmM. Attempting failover...
+[ProviderManager] Provider DeterministicFixturesProvider failed: No synthetic fixture for 0x1A21282f363d444b525960676E757C838A91989F. Attempting failover...
+[ProviderManager] Provider PrimaryPublicExplorerProvider failed: No synthetic fixture for 0x1A21282f363d444b525960676E757C838A91989F. Attempting failover...
+[ProviderManager] Provider DeterministicFixturesProvider failed: No synthetic fixture for 0x1A21282f363d444b525960676E757C838A91989F. Attempting failover...
+[ProviderManager] Provider PrimaryPublicExplorerProvider failed: No synthetic fixture for 0x1A21282f363d444b525960676E757C838A91989F. Attempting failover...
+[ProviderManager] Provider DeterministicFixturesProvider failed: No synthetic fixture for TENMgua1QHLuKTsYGyfuiy8bZtmv2GJBmM. Attempting failover...
+[ProviderManager] Provider PrimaryPublicExplorerProvider failed: No synthetic fixture for TENMgua1QHLuKTsYGyfuiy8bZtmv2GJBmM. Attempting failover...
+[ProviderManager] Provider SecondaryFailoverProvider failed: No synthetic fixture for TENMgua1QHLuKTsYGyfuiy8bZtmv2GJBmM. Attempting failover...
+[ProviderManager] Provider DeterministicFixturesProvider failed: No synthetic fixture for 0x1A21282f363d444b525960676E757C838A91989F. Attempting failover...
+[ProviderManager] Provider PrimaryPublicExplorerProvider failed: No synthetic fixture for 0x1A21282f363d444b525960676E757C838A91989F. Attempting failover...
+[ProviderManager] Provider DeterministicFixturesProvider failed: No synthetic fixture for TENMgua1QHLuKTsYGyfuiy8bZtmv2GJBmM. Attempting failover...
+[ProviderManager] Provider PrimaryPublicExplorerProvider failed: No synthetic fixture for TENMgua1QHLuKTsYGyfuiy8bZtmv2GJBmM. Attempting failover...
+[ProviderManager] Provider SecondaryFailoverProvider failed: No synthetic fixture for TENMgua1QHLuKTsYGyfuiy8bZtmv2GJBmM. Attempting failover...
+[ProviderManager] Provider DeterministicFixturesProvider failed: No synthetic fixture for 0x1A21282f363d444b525960676E757C838A91989F. Attempting failover...
+[ProviderManager] Provider PrimaryPublicExplorerProvider failed: No synthetic fixture for 0x1A21282f363d444b525960676E757C838A91989F. Attempting failover...
+[ProviderManager] Provider DeterministicFixturesProvider failed: No synthetic fixture for TENMgua1QHLuKTsYGyfuiy8bZtmv2GJBmM. Attempting failover...
+[ProviderManager] Provider PrimaryPublicExplorerProvider failed: No synthetic fixture for TENMgua1QHLuKTsYGyfuiy8bZtmv2GJBmM. Attempting failover...
+[ProviderManager] Provider SecondaryFailoverProvider failed: No synthetic fixture for TENMgua1QHLuKTsYGyfuiy8bZtmv2GJBmM. Attempting failover...
+[ProviderManager] Provider DeterministicFixturesProvider failed: No synthetic fixture for TXPfs2AemMXMY7C3Ms8mM2CTbMFqve7knJ. Attempting failover...
+[ProviderManager] Provider PrimaryPublicExplorerProvider failed: No synthetic fixture for TXPfs2AemMXMY7C3Ms8mM2CTbMFqve7knJ. Attempting failover...
+[ProviderManager] Provider SecondaryFailoverProvider failed: No synthetic fixture for TXPfs2AemMXMY7C3Ms8mM2CTbMFqve7knJ. Attempting failover...
+[ProviderManager] Provider DeterministicFixturesProvider failed: No synthetic fixture for TXPfs2AemMXMY7C3Ms8mM2CTbMFqve7knJ. Attempting failover...
+[ProviderManager] Provider PrimaryPublicExplorerProvider failed: No synthetic fixture for TXPfs2AemMXMY7C3Ms8mM2CTbMFqve7knJ. Attempting failover...
+[ProviderManager] Provider SecondaryFailoverProvider failed: No synthetic fixture for TXPfs2AemMXMY7C3Ms8mM2CTbMFqve7knJ. Attempting failover...
+[ProviderManager] Provider DeterministicFixturesProvider failed: No synthetic fixture for TXPfs2AemMXMY7C3Ms8mM2CTbMFqve7knJ. Attempting failover...
+[ProviderManager] Provider PrimaryPublicExplorerProvider failed: No synthetic fixture for TXPfs2AemMXMY7C3Ms8mM2CTbMFqve7knJ. Attempting failover...
+[ProviderManager] Provider SecondaryFailoverProvider failed: No synthetic fixture for TXPfs2AemMXMY7C3Ms8mM2CTbMFqve7knJ. Attempting failover...
+[ProviderManager] Provider DeterministicFixturesProvider failed: No synthetic fixture for TXPfs2AemMXMY7C3Ms8mM2CTbMFqve7knJ. Attempting failover...
+[ProviderManager] Provider PrimaryPublicExplorerProvider failed: No synthetic fixture for TXPfs2AemMXMY7C3Ms8mM2CTbMFqve7knJ. Attempting failover...
+[ProviderManager] Provider SecondaryFailoverProvider failed: No synthetic fixture for TXPfs2AemMXMY7C3Ms8mM2CTbMFqve7knJ. Attempting failover...
+Platform wallet worker: TypeError: fetch failed
+    at node:internal/deps/undici/undici:13510:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async PlatformWorker.request (/workspace/scratch/0dbe5278a453/verification-runs/node22/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/wallet-investigator/server/integration/platform_worker.ts:21:71)
+    at async PlatformWorker.tick (/workspace/scratch/0dbe5278a453/verification-runs/node22/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/wallet-investigator/server/integration/platform_worker.ts:23:15) {
+  [cause]: Error: connect ECONNREFUSED 127.0.0.1:45115
+      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1637:16) {
+    errno: -111,
+    code: 'ECONNREFUSED',
+    syscall: 'connect',
+    address: '127.0.0.1',
+    port: 45115
+  }
+}
+[ProviderManager] Provider DeterministicFixturesProvider failed: No synthetic fixture for TKK17xx6Jg2iFBLEbeEsLm3deSYvK7RzDL. Attempting failover...
+[ProviderManager] Provider PrimaryPublicExplorerProvider failed: No synthetic fixture for TKK17xx6Jg2iFBLEbeEsLm3deSYvK7RzDL. Attempting failover...
+[ProviderManager] Provider SecondaryFailoverProvider failed: No synthetic fixture for TKK17xx6Jg2iFBLEbeEsLm3deSYvK7RzDL. Attempting failover...
+[ProviderManager] Provider DeterministicFixturesProvider failed: No synthetic fixture for TKK17xx6Jg2iFBLEbeEsLm3deSYvK7RzDL. Attempting failover...
+[ProviderManager] Provider PrimaryPublicExplorerProvider failed: No synthetic fixture for TKK17xx6Jg2iFBLEbeEsLm3deSYvK7RzDL. Attempting failover...
+[ProviderManager] Provider SecondaryFailoverProvider failed: No synthetic fixture for TKK17xx6Jg2iFBLEbeEsLm3deSYvK7RzDL. Attempting failover...
+[ProviderManager] Provider DeterministicFixturesProvider failed: No synthetic fixture for TKK17xx6Jg2iFBLEbeEsLm3deSYvK7RzDL. Attempting failover...
+[ProviderManager] Provider PrimaryPublicExplorerProvider failed: No synthetic fixture for TKK17xx6Jg2iFBLEbeEsLm3deSYvK7RzDL. Attempting failover...
+[ProviderManager] Provider SecondaryFailoverProvider failed: No synthetic fixture for TKK17xx6Jg2iFBLEbeEsLm3deSYvK7RzDL. Attempting failover...
+[ProviderManager] Provider DeterministicFixturesProvider failed: No synthetic fixture for TKK17xx6Jg2iFBLEbeEsLm3deSYvK7RzDL. Attempting failover...
+[ProviderManager] Provider PrimaryPublicExplorerProvider failed: No synthetic fixture for TKK17xx6Jg2iFBLEbeEsLm3deSYvK7RzDL. Attempting failover...
+[ProviderManager] Provider SecondaryFailoverProvider failed: No synthetic fixture for TKK17xx6Jg2iFBLEbeEsLm3deSYvK7RzDL. Attempting failover...
+[ProviderManager] Provider DeterministicFixturesProvider failed: No synthetic fixture for TQFeZ2LBCt4FkLX5HGsrTRvroGzLzg9GKT. Attempting failover...
+[ProviderManager] Provider PrimaryPublicExplorerProvider failed: No synthetic fixture for TQFeZ2LBCt4FkLX5HGsrTRvroGzLzg9GKT. Attempting failover...
+[ProviderManager] Provider SecondaryFailoverProvider failed: No synthetic fixture for TQFeZ2LBCt4FkLX5HGsrTRvroGzLzg9GKT. Attempting failover...
+[ProviderManager] Provider DeterministicFixturesProvider failed: No synthetic fixture for TQFeZ2LBCt4FkLX5HGsrTRvroGzLzg9GKT. Attempting failover...
+[ProviderManager] Provider PrimaryPublicExplorerProvider failed: No synthetic fixture for TQFeZ2LBCt4FkLX5HGsrTRvroGzLzg9GKT. Attempting failover...
+[ProviderManager] Provider SecondaryFailoverProvider failed: No synthetic fixture for TQFeZ2LBCt4FkLX5HGsrTRvroGzLzg9GKT. Attempting failover...
+[ProviderManager] Provider DeterministicFixturesProvider failed: No synthetic fixture for TQFeZ2LBCt4FkLX5HGsrTRvroGzLzg9GKT. Attempting failover...
+[ProviderManager] Provider PrimaryPublicExplorerProvider failed: No synthetic fixture for TQFeZ2LBCt4FkLX5HGsrTRvroGzLzg9GKT. Attempting failover...
+[ProviderManager] Provider SecondaryFailoverProvider failed: No synthetic fixture for TQFeZ2LBCt4FkLX5HGsrTRvroGzLzg9GKT. Attempting failover...
+[ProviderManager] Provider DeterministicFixturesProvider failed: No synthetic fixture for TQFeZ2LBCt4FkLX5HGsrTRvroGzLzg9GKT. Attempting failover...
+[ProviderManager] Provider PrimaryPublicExplorerProvider failed: No synthetic fixture for TQFeZ2LBCt4FkLX5HGsrTRvroGzLzg9GKT. Attempting failover...
+[ProviderManager] Provider SecondaryFailoverProvider failed: No synthetic fixture for TQFeZ2LBCt4FkLX5HGsrTRvroGzLzg9GKT. Attempting failover...
+[ProviderManager] Provider DeterministicFixturesProvider failed: No synthetic fixture for TVCHyoueu5STFFWUVGXbWyD5iSHPuMU3Qp. Attempting failover...
+[ProviderManager] Provider PrimaryPublicExplorerProvider failed: No synthetic fixture for TVCHyoueu5STFFWUVGXbWyD5iSHPuMU3Qp. Attempting failover...
+[ProviderManager] Provider SecondaryFailoverProvider failed: No synthetic fixture for TVCHyoueu5STFFWUVGXbWyD5iSHPuMU3Qp. Attempting failover...
+[ProviderManager] Provider DeterministicFixturesProvider failed: No synthetic fixture for TVCHyoueu5STFFWUVGXbWyD5iSHPuMU3Qp. Attempting failover...
+[ProviderManager] Provider PrimaryPublicExplorerProvider failed: No synthetic fixture for TVCHyoueu5STFFWUVGXbWyD5iSHPuMU3Qp. Attempting failover...
+[ProviderManager] Provider SecondaryFailoverProvider failed: No synthetic fixture for TVCHyoueu5STFFWUVGXbWyD5iSHPuMU3Qp. Attempting failover...
+[ProviderManager] Provider DeterministicFixturesProvider failed: No synthetic fixture for TVCHyoueu5STFFWUVGXbWyD5iSHPuMU3Qp. Attempting failover...
+[ProviderManager] Provider PrimaryPublicExplorerProvider failed: No synthetic fixture for TVCHyoueu5STFFWUVGXbWyD5iSHPuMU3Qp. Attempting failover...
+[ProviderManager] Provider SecondaryFailoverProvider failed: No synthetic fixture for TVCHyoueu5STFFWUVGXbWyD5iSHPuMU3Qp. Attempting failover...
+[ProviderManager] Provider DeterministicFixturesProvider failed: No synthetic fixture for TVCHyoueu5STFFWUVGXbWyD5iSHPuMU3Qp. Attempting failover...
+[ProviderManager] Provider PrimaryPublicExplorerProvider failed: No synthetic fixture for TVCHyoueu5STFFWUVGXbWyD5iSHPuMU3Qp. Attempting failover...
+[ProviderManager] Provider SecondaryFailoverProvider failed: No synthetic fixture for TVCHyoueu5STFFWUVGXbWyD5iSHPuMU3Qp. Attempting failover...
+{"ok":true,"validation":{"W1":"valid/partial","W2":"valid/partial","W3":"invalid/skipped","W4":"network_ambiguous/skipped","D1":"network_ambiguous/none","D2":"network_ambiguous/none"},"site1":{"submissions":1,"wallets_reported":3},"site2":{"stale_on_destination_change":true,"worker_refused_unapproved_destination":true},"site4":{"stopped_for_human_verification":true,"message":"Stopped for you: Google Form presented CAPTCHA or anti-bot verification. Automated submission stopped. Nothing was bypassed; submit it yourself or retry after signing in."},"lost_confirmation":{"accepted_posts":1,"automatic_resubmissions":0,"needs_review":true}}
+--- wallet-pipeline 6/6: node --experimental-sqlite --disable-warning=ExperimentalWarning --import tsx --import file:///workspace/scratch/0dbe5278a453/verification-runs/node22/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/lib/sqljs-fallback.mjs tests/wallet-browser-e2e.mjs

@@ -1,0 +1,13 @@
+✔ bounded explicit-chain native and ERC-20 records, cursor, no global completeness or key leakage (4.97065ms)
+✔ unavailable endpoint is failure, partial endpoint failure preserves observed records (1.297362ms)
+✔ copied pages deduplicate; malformed, unrelated and NFT rows cannot become deposits (0.908236ms)
+✔ confirmed Bitcoin facts preserve UTXOs and scope, fixed GET-only endpoint (4.45203ms)
+✔ finite pages and copies deduplicate, malformed sums and HTTP failure cannot become history (1.894431ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 989.364179

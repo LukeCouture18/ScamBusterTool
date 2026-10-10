@@ -1,0 +1,925 @@
+{
+  "generated_at": "2026-09-23T18:54:30.505Z",
+  "seeds": 5,
+  "investigation_budget": 10,
+  "summary": {
+    "investigations": {
+      "v3": 10,
+      "v4": 9.4
+    },
+    "useful_unique_investigations": {
+      "v3": 7.2,
+      "v4": 8.4
+    },
+    "unique_wallets_revealed": {
+      "v3": 7.2,
+      "v4": 8.4
+    },
+    "useful_evidence_items": {
+      "v3": 7.4,
+      "v4": 8.6
+    },
+    "useful_evidence_per_module_job": {
+      "v3": 0.273,
+      "v4": 0.331
+    },
+    "duplicate_investigations": {
+      "v3": 1.2,
+      "v4": 0.4
+    },
+    "dead_or_non_scam_investigations": {
+      "v3": 1.6,
+      "v4": 0.6
+    },
+    "module_jobs": {
+      "v3": 27,
+      "v4": 26
+    },
+    "actions_per_useful_investigation": {
+      "v3": 3.848,
+      "v4": 3.104
+    },
+    "wasted_module_jobs": {
+      "v3": 2.8,
+      "v4": 1.4
+    },
+    "human_interventions": {
+      "v3": 10.2,
+      "v4": 0.2
+    },
+    "inbox_decisions": {
+      "v3": 10,
+      "v4": 0
+    },
+    "checkpoints_resolved": {
+      "v3": 0.2,
+      "v4": 0.2
+    },
+    "discovery_requests": {
+      "v3": 10,
+      "v4": 8
+    },
+    "discovery_new_scam_sites": {
+      "v3": 7.8,
+      "v4": 8
+    },
+    "discovery_zero_yield": {
+      "v3": 3.6,
+      "v4": 4.2
+    },
+    "target_operator_coverage": {
+      "v3": 0.46,
+      "v4": 0.492
+    },
+    "hypotheses_supported": {
+      "v3": 0,
+      "v4": 3.6
+    },
+    "hypotheses_disproved": {
+      "v3": 0,
+      "v4": 4.4
+    },
+    "model_calls": {
+      "v3": 0,
+      "v4": 0
+    },
+    "platform_ticks": {
+      "v3": 18.6,
+      "v4": 29.4
+    },
+    "wall_ms": {
+      "v3": 7181.8,
+      "v4": 7750.8
+    }
+  },
+  "per_seed": {
+    "v3": [
+      {
+        "investigations": 10,
+        "useful_unique_investigations": 9,
+        "unique_wallets_revealed": 9,
+        "useful_evidence_items": 9,
+        "useful_evidence_per_module_job": 0.31,
+        "duplicate_investigations": 1,
+        "dead_or_non_scam_investigations": 0,
+        "module_jobs": 29,
+        "actions_per_useful_investigation": 3.22,
+        "wasted_module_jobs": 1,
+        "human_interventions": 10,
+        "inbox_decisions": 10,
+        "checkpoints_resolved": 0,
+        "discovery_requests": 10,
+        "discovery_new_scam_sites": 9,
+        "discovery_zero_yield": 3,
+        "target_operator_coverage": 0.385,
+        "hypotheses_supported": 0,
+        "hypotheses_disproved": 0,
+        "model_calls": 0,
+        "platform_ticks": 19,
+        "wall_ms": 7199,
+        "diagnostic": {
+          "inbox": [
+            {
+              "status": "ready",
+              "n": 31
+            },
+            {
+              "status": "suppressed",
+              "n": 15
+            },
+            {
+              "status": "useful",
+              "n": 10
+            }
+          ],
+          "runs": [
+            {
+              "status": "COMPLETE",
+              "headline": "Investigation complete",
+              "used_actions": 3,
+              "n": 10
+            }
+          ],
+          "jobs": [
+            {
+              "job_type": "ANALYZE_WALLET",
+              "status": "completed",
+              "n": 9
+            },
+            {
+              "job_type": "FIND_RELATED_SITES",
+              "status": "completed",
+              "n": 10
+            },
+            {
+              "job_type": "INVESTIGATE_SITE",
+              "status": "completed",
+              "n": 10
+            }
+          ],
+          "steps": [
+            {
+              "capability": "investigation.conclude",
+              "validation": "accepted",
+              "outcome": "concluded",
+              "n": 10
+            },
+            {
+              "capability": "site.investigate",
+              "validation": "accepted",
+              "outcome": "queued",
+              "n": 10
+            },
+            {
+              "capability": "wallet.analyze",
+              "validation": "accepted",
+              "outcome": "queued",
+              "n": 9
+            }
+          ],
+          "decisions": [
+            {
+              "decision": "useful",
+              "n": 10
+            }
+          ]
+        }
+      },
+      {
+        "investigations": 10,
+        "useful_unique_investigations": 7,
+        "unique_wallets_revealed": 7,
+        "useful_evidence_items": 7,
+        "useful_evidence_per_module_job": 0.259,
+        "duplicate_investigations": 2,
+        "dead_or_non_scam_investigations": 1,
+        "module_jobs": 27,
+        "actions_per_useful_investigation": 3.86,
+        "wasted_module_jobs": 3,
+        "human_interventions": 10,
+        "inbox_decisions": 10,
+        "checkpoints_resolved": 0,
+        "discovery_requests": 10,
+        "discovery_new_scam_sites": 5,
+        "discovery_zero_yield": 4,
+        "target_operator_coverage": 0.333,
+        "hypotheses_supported": 0,
+        "hypotheses_disproved": 0,
+        "model_calls": 0,
+        "platform_ticks": 18,
+        "wall_ms": 7018,
+        "diagnostic": {
+          "inbox": [
+            {
+              "status": "ready",
+              "n": 30
+            },
+            {
+              "status": "suppressed",
+              "n": 13
+            },
+            {
+              "status": "useful",
+              "n": 10
+            }
+          ],
+          "runs": [
+            {
+              "status": "COMPLETE",
+              "headline": "Investigation complete",
+              "used_actions": 4,
+              "n": 9
+            },
+            {
+              "status": "INSUFFICIENT_EVIDENCE",
+              "headline": "Not enough evidence to continue",
+              "used_actions": 2,
+              "n": 1
+            }
+          ],
+          "jobs": [
+            {
+              "job_type": "ANALYZE_WALLET",
+              "status": "completed",
+              "n": 7
+            },
+            {
+              "job_type": "FIND_RELATED_SITES",
+              "status": "completed",
+              "n": 10
+            },
+            {
+              "job_type": "INVESTIGATE_SITE",
+              "status": "completed",
+              "n": 9
+            },
+            {
+              "job_type": "INVESTIGATE_SITE",
+              "status": "failed",
+              "n": 1
+            }
+          ],
+          "steps": [
+            {
+              "capability": "investigation.conclude",
+              "validation": "accepted",
+              "outcome": "concluded",
+              "n": 10
+            },
+            {
+              "capability": "site.investigate",
+              "validation": "accepted",
+              "outcome": "deferred",
+              "n": 1
+            },
+            {
+              "capability": "site.investigate",
+              "validation": "accepted",
+              "outcome": "queued",
+              "n": 10
+            },
+            {
+              "capability": "wallet.analyze",
+              "validation": "accepted",
+              "outcome": "queued",
+              "n": 7
+            }
+          ],
+          "decisions": [
+            {
+              "decision": "useful",
+              "n": 10
+            }
+          ]
+        }
+      },
+      {
+        "investigations": 10,
+        "useful_unique_investigations": 8,
+        "unique_wallets_revealed": 8,
+        "useful_evidence_items": 8,
+        "useful_evidence_per_module_job": 0.286,
+        "duplicate_investigations": 1,
+        "dead_or_non_scam_investigations": 1,
+        "module_jobs": 28,
+        "actions_per_useful_investigation": 3.5,
+        "wasted_module_jobs": 2,
+        "human_interventions": 10,
+        "inbox_decisions": 10,
+        "checkpoints_resolved": 0,
+        "discovery_requests": 10,
+        "discovery_new_scam_sites": 7,
+        "discovery_zero_yield": 3,
+        "target_operator_coverage": 0.625,
+        "hypotheses_supported": 0,
+        "hypotheses_disproved": 0,
+        "model_calls": 0,
+        "platform_ticks": 19,
+        "wall_ms": 7372,
+        "diagnostic": {
+          "inbox": [
+            {
+              "status": "ready",
+              "n": 33
+            },
+            {
+              "status": "suppressed",
+              "n": 15
+            },
+            {
+              "status": "useful",
+              "n": 10
+            }
+          ],
+          "runs": [
+            {
+              "status": "COMPLETE",
+              "headline": "Investigation complete",
+              "used_actions": 4,
+              "n": 9
+            },
+            {
+              "status": "INSUFFICIENT_EVIDENCE",
+              "headline": "Not enough evidence to continue",
+              "used_actions": 2,
+              "n": 1
+            }
+          ],
+          "jobs": [
+            {
+              "job_type": "ANALYZE_WALLET",
+              "status": "completed",
+              "n": 8
+            },
+            {
+              "job_type": "FIND_RELATED_SITES",
+              "status": "completed",
+              "n": 10
+            },
+            {
+              "job_type": "INVESTIGATE_SITE",
+              "status": "completed",
+              "n": 9
+            },
+            {
+              "job_type": "INVESTIGATE_SITE",
+              "status": "failed",
+              "n": 1
+            }
+          ],
+          "steps": [
+            {
+              "capability": "investigation.conclude",
+              "validation": "accepted",
+              "outcome": "concluded",
+              "n": 10
+            },
+            {
+              "capability": "site.investigate",
+              "validation": "accepted",
+              "outcome": "deferred",
+              "n": 1
+            },
+            {
+              "capability": "site.investigate",
+              "validation": "accepted",
+              "outcome": "queued",
+              "n": 10
+            },
+            {
+              "capability": "wallet.analyze",
+              "validation": "accepted",
+              "outcome": "queued",
+              "n": 8
+            }
+          ],
+          "decisions": [
+            {
+              "decision": "useful",
+              "n": 10
+            }
+          ]
+        }
+      },
+      {
+        "investigations": 10,
+        "useful_unique_investigations": 7,
+        "unique_wallets_revealed": 7,
+        "useful_evidence_items": 7,
+        "useful_evidence_per_module_job": 0.259,
+        "duplicate_investigations": 1,
+        "dead_or_non_scam_investigations": 2,
+        "module_jobs": 27,
+        "actions_per_useful_investigation": 3.86,
+        "wasted_module_jobs": 3,
+        "human_interventions": 10,
+        "inbox_decisions": 10,
+        "checkpoints_resolved": 0,
+        "discovery_requests": 10,
+        "discovery_new_scam_sites": 9,
+        "discovery_zero_yield": 4,
+        "target_operator_coverage": 0.625,
+        "hypotheses_supported": 0,
+        "hypotheses_disproved": 0,
+        "model_calls": 0,
+        "platform_ticks": 18,
+        "wall_ms": 6962,
+        "diagnostic": {
+          "inbox": [
+            {
+              "status": "ready",
+              "n": 19
+            },
+            {
+              "status": "suppressed",
+              "n": 23
+            },
+            {
+              "status": "useful",
+              "n": 10
+            }
+          ],
+          "runs": [
+            {
+              "status": "COMPLETE",
+              "headline": "Investigation complete",
+              "used_actions": 3,
+              "n": 8
+            },
+            {
+              "status": "INSUFFICIENT_EVIDENCE",
+              "headline": "Not enough evidence to continue",
+              "used_actions": 2,
+              "n": 2
+            }
+          ],
+          "jobs": [
+            {
+              "job_type": "ANALYZE_WALLET",
+              "status": "completed",
+              "n": 7
+            },
+            {
+              "job_type": "FIND_RELATED_SITES",
+              "status": "completed",
+              "n": 10
+            },
+            {
+              "job_type": "INVESTIGATE_SITE",
+              "status": "completed",
+              "n": 9
+            },
+            {
+              "job_type": "INVESTIGATE_SITE",
+              "status": "failed",
+              "n": 1
+            }
+          ],
+          "steps": [
+            {
+              "capability": "investigation.conclude",
+              "validation": "accepted",
+              "outcome": "concluded",
+              "n": 10
+            },
+            {
+              "capability": "site.investigate",
+              "validation": "accepted",
+              "outcome": "deferred",
+              "n": 1
+            },
+            {
+              "capability": "site.investigate",
+              "validation": "accepted",
+              "outcome": "queued",
+              "n": 9
+            },
+            {
+              "capability": "wallet.analyze",
+              "validation": "accepted",
+              "outcome": "queued",
+              "n": 7
+            }
+          ],
+          "decisions": [
+            {
+              "decision": "useful",
+              "n": 10
+            }
+          ]
+        }
+      },
+      {
+        "investigations": 10,
+        "useful_unique_investigations": 5,
+        "unique_wallets_revealed": 5,
+        "useful_evidence_items": 6,
+        "useful_evidence_per_module_job": 0.25,
+        "duplicate_investigations": 1,
+        "dead_or_non_scam_investigations": 4,
+        "module_jobs": 24,
+        "actions_per_useful_investigation": 4.8,
+        "wasted_module_jobs": 5,
+        "human_interventions": 11,
+        "inbox_decisions": 10,
+        "checkpoints_resolved": 1,
+        "discovery_requests": 10,
+        "discovery_new_scam_sites": 9,
+        "discovery_zero_yield": 4,
+        "target_operator_coverage": 0.333,
+        "hypotheses_supported": 0,
+        "hypotheses_disproved": 0,
+        "model_calls": 0,
+        "platform_ticks": 19,
+        "wall_ms": 7358,
+        "diagnostic": {
+          "inbox": [
+            {
+              "status": "ready",
+              "n": 34
+            },
+            {
+              "status": "suppressed",
+              "n": 11
+            },
+            {
+              "status": "useful",
+              "n": 10
+            }
+          ],
+          "runs": [
+            {
+              "status": "COMPLETE",
+              "headline": "Investigation complete",
+              "used_actions": 3,
+              "n": 5
+            },
+            {
+              "status": "INSUFFICIENT_EVIDENCE",
+              "headline": "Not enough evidence to continue",
+              "used_actions": 2,
+              "n": 5
+            }
+          ],
+          "jobs": [
+            {
+              "job_type": "ANALYZE_WALLET",
+              "status": "completed",
+              "n": 4
+            },
+            {
+              "job_type": "FIND_RELATED_SITES",
+              "status": "completed",
+              "n": 10
+            },
+            {
+              "job_type": "INVESTIGATE_SITE",
+              "status": "completed",
+              "n": 6
+            },
+            {
+              "job_type": "INVESTIGATE_SITE",
+              "status": "failed",
+              "n": 4
+            }
+          ],
+          "steps": [
+            {
+              "capability": null,
+              "validation": "system",
+              "outcome": "waiting",
+              "n": 1
+            },
+            {
+              "capability": "investigation.conclude",
+              "validation": "accepted",
+              "outcome": "concluded",
+              "n": 10
+            },
+            {
+              "capability": "site.investigate",
+              "validation": "accepted",
+              "outcome": "deferred",
+              "n": 4
+            },
+            {
+              "capability": "site.investigate",
+              "validation": "accepted",
+              "outcome": "queued",
+              "n": 10
+            },
+            {
+              "capability": "wallet.analyze",
+              "validation": "accepted",
+              "outcome": "queued",
+              "n": 4
+            }
+          ],
+          "decisions": [
+            {
+              "decision": "useful",
+              "n": 10
+            }
+          ]
+        }
+      }
+    ],
+    "v4": [
+      {
+        "investigations": 8,
+        "useful_unique_investigations": 8,
+        "unique_wallets_revealed": 8,
+        "useful_evidence_items": 8,
+        "useful_evidence_per_module_job": 0.333,
+        "duplicate_investigations": 0,
+        "dead_or_non_scam_investigations": 0,
+        "module_jobs": 24,
+        "actions_per_useful_investigation": 3,
+        "wasted_module_jobs": 0,
+        "human_interventions": 0,
+        "inbox_decisions": 0,
+        "checkpoints_resolved": 0,
+        "discovery_requests": 8,
+        "discovery_new_scam_sites": 7,
+        "discovery_zero_yield": 5,
+        "target_operator_coverage": 0.308,
+        "hypotheses_supported": 3,
+        "hypotheses_disproved": 5,
+        "model_calls": 0,
+        "platform_ticks": 26,
+        "wall_ms": 7526,
+        "diagnostic": {
+          "status": {
+            "status": "BUDGET_EXHAUSTED",
+            "stop_reason": "Campaign budget reached."
+          },
+          "ops": [
+            {
+              "kind": "investigate_candidate",
+              "status": "done",
+              "n": 8
+            },
+            {
+              "kind": "investigate_candidate",
+              "status": "suppressed",
+              "n": 10
+            },
+            {
+              "kind": "test_hypothesis",
+              "status": "done",
+              "n": 8
+            },
+            {
+              "kind": "test_hypothesis",
+              "status": "open",
+              "n": 8
+            },
+            {
+              "kind": "test_hypothesis",
+              "status": "saturated",
+              "n": 2
+            }
+          ],
+          "rejected": [],
+          "members": 21
+        }
+      },
+      {
+        "investigations": 10,
+        "useful_unique_investigations": 8,
+        "unique_wallets_revealed": 8,
+        "useful_evidence_items": 9,
+        "useful_evidence_per_module_job": 0.346,
+        "duplicate_investigations": 1,
+        "dead_or_non_scam_investigations": 1,
+        "module_jobs": 26,
+        "actions_per_useful_investigation": 3.25,
+        "wasted_module_jobs": 3,
+        "human_interventions": 1,
+        "inbox_decisions": 0,
+        "checkpoints_resolved": 1,
+        "discovery_requests": 8,
+        "discovery_new_scam_sites": 10,
+        "discovery_zero_yield": 3,
+        "target_operator_coverage": 0.333,
+        "hypotheses_supported": 4,
+        "hypotheses_disproved": 4,
+        "model_calls": 0,
+        "platform_ticks": 29,
+        "wall_ms": 7481,
+        "diagnostic": {
+          "status": {
+            "status": "BUDGET_EXHAUSTED",
+            "stop_reason": "Campaign budget reached."
+          },
+          "ops": [
+            {
+              "kind": "investigate_candidate",
+              "status": "done",
+              "n": 10
+            },
+            {
+              "kind": "investigate_candidate",
+              "status": "suppressed",
+              "n": 11
+            },
+            {
+              "kind": "test_hypothesis",
+              "status": "done",
+              "n": 8
+            },
+            {
+              "kind": "test_hypothesis",
+              "status": "open",
+              "n": 12
+            },
+            {
+              "kind": "test_hypothesis",
+              "status": "saturated",
+              "n": 3
+            }
+          ],
+          "rejected": [],
+          "members": 24
+        }
+      },
+      {
+        "investigations": 10,
+        "useful_unique_investigations": 9,
+        "unique_wallets_revealed": 9,
+        "useful_evidence_items": 9,
+        "useful_evidence_per_module_job": 0.333,
+        "duplicate_investigations": 0,
+        "dead_or_non_scam_investigations": 1,
+        "module_jobs": 27,
+        "actions_per_useful_investigation": 3,
+        "wasted_module_jobs": 1,
+        "human_interventions": 0,
+        "inbox_decisions": 0,
+        "checkpoints_resolved": 0,
+        "discovery_requests": 8,
+        "discovery_new_scam_sites": 7,
+        "discovery_zero_yield": 4,
+        "target_operator_coverage": 0.625,
+        "hypotheses_supported": 4,
+        "hypotheses_disproved": 4,
+        "model_calls": 0,
+        "platform_ticks": 33,
+        "wall_ms": 8075,
+        "diagnostic": {
+          "status": {
+            "status": "BUDGET_EXHAUSTED",
+            "stop_reason": "Campaign budget reached."
+          },
+          "ops": [
+            {
+              "kind": "investigate_candidate",
+              "status": "done",
+              "n": 10
+            },
+            {
+              "kind": "investigate_candidate",
+              "status": "suppressed",
+              "n": 12
+            },
+            {
+              "kind": "test_hypothesis",
+              "status": "done",
+              "n": 8
+            },
+            {
+              "kind": "test_hypothesis",
+              "status": "open",
+              "n": 10
+            },
+            {
+              "kind": "test_hypothesis",
+              "status": "saturated",
+              "n": 3
+            }
+          ],
+          "rejected": [],
+          "members": 25
+        }
+      },
+      {
+        "investigations": 9,
+        "useful_unique_investigations": 9,
+        "unique_wallets_revealed": 9,
+        "useful_evidence_items": 9,
+        "useful_evidence_per_module_job": 0.346,
+        "duplicate_investigations": 0,
+        "dead_or_non_scam_investigations": 0,
+        "module_jobs": 26,
+        "actions_per_useful_investigation": 2.89,
+        "wasted_module_jobs": 0,
+        "human_interventions": 0,
+        "inbox_decisions": 0,
+        "checkpoints_resolved": 0,
+        "discovery_requests": 8,
+        "discovery_new_scam_sites": 10,
+        "discovery_zero_yield": 4,
+        "target_operator_coverage": 0.75,
+        "hypotheses_supported": 4,
+        "hypotheses_disproved": 4,
+        "model_calls": 0,
+        "platform_ticks": 28,
+        "wall_ms": 7598,
+        "diagnostic": {
+          "status": {
+            "status": "BUDGET_EXHAUSTED",
+            "stop_reason": "Campaign budget reached."
+          },
+          "ops": [
+            {
+              "kind": "investigate_candidate",
+              "status": "done",
+              "n": 9
+            },
+            {
+              "kind": "investigate_candidate",
+              "status": "suppressed",
+              "n": 10
+            },
+            {
+              "kind": "test_hypothesis",
+              "status": "done",
+              "n": 8
+            },
+            {
+              "kind": "test_hypothesis",
+              "status": "open",
+              "n": 11
+            },
+            {
+              "kind": "test_hypothesis",
+              "status": "saturated",
+              "n": 3
+            }
+          ],
+          "rejected": [],
+          "members": 24
+        }
+      },
+      {
+        "investigations": 10,
+        "useful_unique_investigations": 8,
+        "unique_wallets_revealed": 8,
+        "useful_evidence_items": 8,
+        "useful_evidence_per_module_job": 0.296,
+        "duplicate_investigations": 1,
+        "dead_or_non_scam_investigations": 1,
+        "module_jobs": 27,
+        "actions_per_useful_investigation": 3.38,
+        "wasted_module_jobs": 3,
+        "human_interventions": 0,
+        "inbox_decisions": 0,
+        "checkpoints_resolved": 0,
+        "discovery_requests": 8,
+        "discovery_new_scam_sites": 6,
+        "discovery_zero_yield": 5,
+        "target_operator_coverage": 0.444,
+        "hypotheses_supported": 3,
+        "hypotheses_disproved": 5,
+        "model_calls": 0,
+        "platform_ticks": 31,
+        "wall_ms": 8074,
+        "diagnostic": {
+          "status": {
+            "status": "BUDGET_EXHAUSTED",
+            "stop_reason": "Campaign budget reached."
+          },
+          "ops": [
+            {
+              "kind": "investigate_candidate",
+              "status": "done",
+              "n": 10
+            },
+            {
+              "kind": "investigate_candidate",
+              "status": "suppressed",
+              "n": 6
+            },
+            {
+              "kind": "test_hypothesis",
+              "status": "done",
+              "n": 8
+            },
+            {
+              "kind": "test_hypothesis",
+              "status": "open",
+              "n": 7
+            },
+            {
+              "kind": "test_hypothesis",
+              "status": "saturated",
+              "n": 3
+            }
+          ],
+          "rejected": [],
+          "members": 19
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,24 @@
+PASS ontology: every requested gap family and test family is defined with its required fields
+PASS typed gaps persist type, subject, knowledge, missing knowledge, why, evidence, uncertainty, tests, dependencies, status, exhaustion and revisit
+PASS decision explains question, why it matters, why selected and deferred alternatives; components persisted individually
+PASS local correlation reviews run inline, make no network request and record measured zero cost
+PASS discriminating wallet evidence outranks generic template similarity on the competing-explanation question
+PASS marginal value: 110 copies of a known template unit add no independent value
+PASS external test handed to Site Finder as a structured, bounded objective (observations only)
+PASS actual-cost ledger keeps reserved and consumed separate; unmeasured dimensions stay null
+PASS causal attribution: discovering test credited once; shared claims split; replay never double-credits; no lineage earns nothing
+PASS outcome-specific learning is prioritization metadata and never evidence or report content
+PASS dynamic budgets: earned allowance is bounded, reasoned, exactly once per test, never above the ceiling
+PASS parking: low marginal value parks with explicit wake conditions; unchanged evaluations are skipped; new evidence wakes it
+PASS portfolio: utility first, starvation boost, and no operation may monopolize while others are eligible
+PASS saturation recorded at test, gap, branch, operation and portfolio level
+PASS wallet intelligence: a report-blocking provider retry outranks a free low-value correlation
+PASS event storm: 50 events plus replay coalesce; evaluations stay bounded and deduplicated by observable state
+PASS provider outage and flapping: chain-evidence gaps wait for the provider and v7 never starts its own retry storm
+PASS pause creates no adaptive tests or handoffs
+PASS ten concurrent evaluations start at most one external test per operation
+PASS safety: every v7 test is public/passive, read-only chain, local or analytical, through existing work kinds only
+PASS benchmark truth is never imported by production code
+PASS API: decision explanation and efficiency views
+PASS 0018 is additive and replayable on a populated v6 database; rollback leaves prior data intact
+{"ok":true,"checks":23,"passed":["ontology: every requested gap family and test family is defined with its required fields","typed gaps persist type, subject, knowledge, missing knowledge, why, evidence, uncertainty, tests, dependencies, status, exhaustion and revisit","decision explains question, why it matters, why selected and deferred alternatives; components persisted individually","local correlation reviews run inline, make no network request and record measured zero cost","discriminating wallet evidence outranks generic template similarity on the competing-explanation question","marginal value: 110 copies of a known template unit add no independent value","external test handed to Site Finder as a structured, bounded objective (observations only)","actual-cost ledger keeps reserved and consumed separate; unmeasured dimensions stay null","causal attribution: discovering test credited once; shared claims split; replay never double-credits; no lineage earns nothing","outcome-specific learning is prioritization metadata and never evidence or report content","dynamic budgets: earned allowance is bounded, reasoned, exactly once per test, never above the ceiling","parking: low marginal value parks with explicit wake conditions; unchanged evaluations are skipped; new evidence wakes it","portfolio: utility first, starvation boost, and no operation may monopolize while others are eligible","saturation recorded at test, gap, branch, operation and portfolio level","wallet intelligence: a report-blocking provider retry outranks a free low-value correlation","event storm: 50 events plus replay coalesce; evaluations stay bounded and deduplicated by observable state","provider outage and flapping: chain-evidence gaps wait for the provider and v7 never starts its own retry storm","pause creates no adaptive tests or handoffs","ten concurrent evaluations start at most one external test per operation","safety: every v7 test is public/passive, read-only chain, local or analytical, through existing work kinds only","benchmark truth is never imported by production code","API: decision explanation and efficiency views","0018 is additive and replayable on a populated v6 database; rollback leaves prior data intact"]}

@@ -1,0 +1,20 @@
+body { min-width:760px; }
+.detail-header { display:flex; align-items:center; justify-content:space-between; gap:18px; padding:22px 28px; border-bottom:1px solid var(--border); }
+.detail-header > div { display:flex; align-items:center; gap:14px; }
+.detail-header h1 { margin:0; font-size:23px; }
+.header-actions { flex-wrap:wrap; justify-content:flex-end; }
+main { max-width:1100px; margin:0 auto; padding:24px 28px 40px; }
+.hero { padding:18px; border:1px solid var(--border); border-radius:13px; background:var(--panel); }
+.hero-top { display:flex; justify-content:space-between; gap:18px; align-items:flex-start; }
+.hero .wallet-address { margin-top:12px; font-size:15px; }
+.score { min-width:88px; text-align:center; padding:12px; border-radius:12px; background:#12203b; }
+.score strong { display:block; font-size:28px; color:#91b7ff; }.score span { color:var(--muted); font-size:11px; }
+.detail-grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:16px; }
+.panel { padding:17px; border:1px solid var(--border); border-radius:12px; background:var(--panel); }
+.panel.wide { grid-column:1/-1; }.panel h2 { margin:0 0 13px; font-size:17px; }
+.facts { display:grid; grid-template-columns:160px 1fr; gap:8px 12px; margin:0; }.facts dt { color:var(--muted); }.facts dd { margin:0; overflow-wrap:anywhere; }
+.context { padding:10px; border-left:2px solid var(--accent); background:#0d1426; white-space:pre-line; max-height:220px; overflow:auto; }
+.reason-list,.page-list,.note-list { margin:8px 0 0; padding-left:20px; }.reason-list li,.page-list li,.note-list li { margin:5px 0; }.points { color:#86efac; font-weight:700; }
+.activity { display:inline-block; padding:4px 8px; border-radius:999px; font-weight:800; font-size:11px; letter-spacing:.03em; background:#263552; }.activity.active { background:#14532d; color:#bbf7d0; }.activity.none { background:#3b2f13; color:#fde68a; }.activity.failed { background:#4c1d1d; color:#fecaca; }
+.privacy-note { margin:12px 0 0; padding:10px; border-radius:8px; background:#101a2e; color:var(--muted); font-size:12px; }
+@media(max-width:850px){.detail-grid{grid-template-columns:1fr}.panel.wide{grid-column:auto}.detail-header{align-items:flex-start;flex-direction:column}.facts{grid-template-columns:130px 1fr}}

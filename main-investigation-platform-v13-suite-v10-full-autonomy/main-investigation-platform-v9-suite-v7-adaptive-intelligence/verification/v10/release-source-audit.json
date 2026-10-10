@@ -1,0 +1,20 @@
+{
+  "source_identity": "9e3253c2a56137092c801b8288a8fd21b0c4851c0dc281dce2338db7651b6f5f",
+  "freeze_matches": true,
+  "private_configured_key_hits": 0,
+  "screened_files": 1830,
+  "baseline_sha256": "ab79b6936f24fb4d34fc1c6a3f0d4db6def51b924974f50867c453c335c684c0",
+  "runtime_databases_dependencies_private_env_excluded": true,
+  "private_configured_value_hits": 0,
+  "historical_gates_identity": "fd4a22501e5e0c758fb35bde01a166132772f7988852a0668d1deba76391fe88",
+  "changed_since_historical_freeze": [
+    "main-investigation-platform-v9-suite-v7-adaptive-intelligence/README.md",
+    "main-investigation-platform-v9-suite-v7-adaptive-intelligence/V10_RELEASE_GUIDE.md",
+    "main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/crypto-wallet-logger-v08/tests/sync-queue.test.mjs",
+    "main-investigation-platform-v9-suite-v7-adaptive-intelligence/scripts/start-production.mjs",
+    "main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/production-readiness.test.mjs"
+  ],
+  "changes_are_tested_startup_and_test_only_plus_documentation": true,
+  "both_clean_runtime_source_matches": true,
+  "original_migrations_0000_0020_byte_identical": true
+}

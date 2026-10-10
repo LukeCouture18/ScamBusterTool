@@ -1,0 +1,2142 @@
+
+=== unit (1 step) ===
+--- unit 1/1: node --test tests/director-migration.test.mjs tests/domain.test.mjs tests/migration.test.mjs tests/security.test.mjs tests/sqljs-fallback.test.mjs tests/ui-tokens.test.mjs tests/v5-contract.test.mjs tests/v5-hunter.test.mjs tests/v5-migration.test.mjs tests/v6-contract.test.mjs tests/v6-migration.test.mjs tests/wallet-db-lifecycle.test.mjs tests/wallet-key-migration.test.mjs
+TAP version 13
+# (node:19) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: populated v4 migration and rollback retain candidates, observations, evidence and approval hashes
+ok 1 - populated v4 migration and rollback retain candidates, observations, evidence and approval hashes
+  ---
+  duration_ms: 44.24934
+  type: 'test'
+  ...
+# Subtest: domain resolution deduplicates equivalent sites
+ok 2 - domain resolution deduplicates equivalent sites
+  ---
+  duration_ms: 1.178054
+  type: 'test'
+  ...
+# Subtest: wallet and token identity is network scoped
+ok 3 - wallet and token identity is network scoped
+  ---
+  duration_ms: 0.271709
+  type: 'test'
+  ...
+# Subtest: job keys prevent active duplicate work
+ok 4 - job keys prevent active duplicate work
+  ---
+  duration_ms: 1.283552
+  type: 'test'
+  ...
+# Subtest: job transition policy rejects processing loops
+ok 5 - job transition policy rejects processing loops
+  ---
+  duration_ms: 0.23254
+  type: 'test'
+  ...
+# Subtest: retry backoff is exponential and capped
+ok 6 - retry backoff is exponential and capped
+  ---
+  duration_ms: 0.241894
+  type: 'test'
+  ...
+# Subtest: schema major versions are checked
+ok 7 - schema major versions are checked
+  ---
+  duration_ms: 0.222896
+  type: 'test'
+  ...
+# Subtest: a wallet key that already names its network is not prefixed twice
+ok 8 - a wallet key that already names its network is not prefixed twice
+  ---
+  duration_ms: 0.215424
+  type: 'test'
+  ...
+# Subtest: coordination migration is additive and includes operational tables
+ok 9 - coordination migration is additive and includes operational tables
+  ---
+  duration_ms: 9.729207
+  type: 'test'
+  ...
+# Subtest: orchestrator migration preserves data and adds durable workflow state
+ok 10 - orchestrator migration preserves data and adds durable workflow state
+  ---
+  duration_ms: 2.218089
+  type: 'test'
+  ...
+# Subtest: v4 migration adds a durable event backbone without replacing v3 data
+ok 11 - v4 migration adds a durable event backbone without replacing v3 data
+  ---
+  duration_ms: 1.41452
+  type: 'test'
+  ...
+# Subtest: module credentials are isolated
+ok 12 - module credentials are isolated
+  ---
+  duration_ms: 0.970722
+  type: 'test'
+  ...
+# Subtest: authentication fails closed and legacy fallback is opt-in
+ok 13 - authentication fails closed and legacy fallback is opt-in
+  ---
+  duration_ms: 0.504149
+  type: 'test'
+  ...
+# Subtest: with real sql.js installed the fallback registers nothing and the Wallet worker keeps PlatformWorker and startPlatformWorker
+ok 14 - with real sql.js installed the fallback registers nothing and the Wallet worker keeps PlatformWorker and startPlatformWorker
+  ---
+  duration_ms: 574.412514
+  type: 'test'
+  ...
+# Subtest: without sql.js the fallback still serves the node:sqlite stand-in and the worker still loads
+ok 15 - without sql.js the fallback still serves the node:sqlite stand-in and the worker still loads # SKIP the real sql.js is installed in this repository, so the stand-in path is not used here
+  ---
+  duration_ms: 0.407163
+  type: 'test'
+  ...
+# Subtest: each tool UI is in sync with the canonical tokens
+ok 16 - each tool UI is in sync with the canonical tokens
+  ---
+  duration_ms: 10.924368
+  type: 'test'
+  ...
+# Subtest: the generated blocks only restyle: every tool keeps its own markup and variables
+ok 17 - the generated blocks only restyle: every tool keeps its own markup and variables
+  ---
+  duration_ms: 2.293152
+  type: 'test'
+  ...
+# Subtest: v5 migration adds triage, durable subscriptions and metrics without dropping v4 data
+ok 18 - v5 migration adds triage, durable subscriptions and metrics without dropping v4 data
+  ---
+  duration_ms: 7.468454
+  type: 'test'
+  ...
+# Subtest: routing requires explicit promotion and does not infer wallet validity from confidence
+ok 19 - routing requires explicit promotion and does not infer wallet validity from confidence
+  ---
+  duration_ms: 1.20233
+  type: 'test'
+  ...
+# Subtest: both SDKs expose event delivery and metrics
+ok 20 - both SDKs expose event delivery and metrics
+  ---
+  duration_ms: 2.90964
+  type: 'test'
+  ...
+# (node:82) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: migration 0012 is additive and required by the schema gate
+ok 21 - migration 0012 is additive and required by the schema gate
+  ---
+  duration_ms: 23.803168
+  type: 'test'
+  ...
+# Subtest: migration 0014 (Site Finder hunts) is additive and required by the schema gate
+ok 22 - migration 0014 (Site Finder hunts) is additive and required by the schema gate
+  ---
+  duration_ms: 27.142665
+  type: 'test'
+  ...
+# Subtest: migration 0015 (v4 wallet pipeline) is additive and required by the schema gate
+ok 23 - migration 0015 (v4 wallet pipeline) is additive and required by the schema gate
+  ---
+  duration_ms: 51.790745
+  type: 'test'
+  ...
+# Subtest: contracts: module, job type and work kind
+ok 24 - contracts: module, job type and work kind
+  ---
+  duration_ms: 12.981175
+  type: 'test'
+  ...
+# Subtest: a Hunter snapshot is stored idempotently and its proposals become Main's own work
+ok 25 - a Hunter snapshot is stored idempotently and its proposals become Main's own work
+  ---
+  duration_ms: 86.572642
+  type: 'test'
+  ...
+# Subtest: demo operations are mirrored for display but never create work
+ok 26 - demo operations are mirrored for display but never create work
+  ---
+  duration_ms: 24.251522
+  type: 'test'
+  ...
+# Subtest: reconstruction: proposed only while Hunter is registered, routed as a HUNT_OPERATION job, judged by what it found
+ok 27 - reconstruction: proposed only while Hunter is registered, routed as a HUNT_OPERATION job, judged by what it found
+  ---
+  duration_ms: 32.158286
+  type: 'test'
+  ...
+# Subtest: operator and module requests go through work items
+ok 28 - operator and module requests go through work items
+  ---
+  duration_ms: 30.405318
+  type: 'test'
+  ...
+# Subtest: v6 schema gate rejects an incomplete operation alias migration
+ok 29 - v6 schema gate rejects an incomplete operation alias migration
+  ---
+  duration_ms: 19.753981
+  type: 'test'
+  ...
+# (node:83) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: v4 database upgrades to v5: every v4 record preserved, schema gate passes, v5 defaults seeded
+ok 30 - v4 database upgrades to v5: every v4 record preserved, schema gate passes, v5 defaults seeded
+  ---
+  duration_ms: 53.591265
+  type: 'test'
+  ...
+# Subtest: an interrupted v5 upgrade rolls back and the platform refuses to start until it is applied
+ok 31 - an interrupted v5 upgrade rolls back and the platform refuses to start until it is applied
+  ---
+  duration_ms: 33.219474
+  type: 'test'
+  ...
+# Subtest: rollback to v4: v5 tables are additive, so v4 code reads a v5 database unchanged; dropping them restores the exact v4 schema
+ok 32 - rollback to v4: v5 tables are additive, so v4 code reads a v5 database unchanged; dropping them restores the exact v4 schema
+  ---
+  duration_ms: 22.965847
+  type: 'test'
+  ...
+# Subtest: the server, SDK and machine readable event catalog agree
+ok 33 - the server, SDK and machine readable event catalog agree
+  ---
+  duration_ms: 28.160137
+  type: 'test'
+  ...
+# Subtest: v6 contract includes all orchestration and evidence endpoints
+ok 34 - v6 contract includes all orchestration and evidence endpoints
+  ---
+  duration_ms: 0.401915
+  type: 'test'
+  ...
+# (node:100) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: v5 database upgrades to v6 without losing investigations and evidence
+ok 35 - v5 database upgrades to v6 without losing investigations and evidence
+  ---
+  duration_ms: 78.841782
+  type: 'test'
+  ...
+# Subtest: wallet database: clean start, restart with data, interrupted save and a damaged file
+ok 36 - wallet database: clean start, restart with data, interrupted save and a damaged file
+  ---
+  duration_ms: 4202.803698
+  type: 'test'
+  ...
+# database size after interrupted saves: 6729728 bytes
+# Subtest: the Wallet verification suite never touches integrations/wallet-investigator/data
+ok 37 - the Wallet verification suite never touches integrations/wallet-investigator/data
+  ---
+  duration_ms: 745.982125
+  type: 'test'
+  ...
+# (node:116) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: 0013 renames doubled wallet keys only when no correctly keyed twin exists
+ok 38 - 0013 renames doubled wallet keys only when no correctly keyed twin exists
+  ---
+  duration_ms: 62.829074
+  type: 'test'
+  ...
+1..38
+# tests 38
+# suites 0
+# pass 37
+# fail 0
+# cancelled 0
+# skipped 1
+# todo 0
+# duration_ms 5110.230988
+PASS unit: 1/1 steps passed
+
+=== migration-matrix (1 step) ===
+--- migration-matrix 1/1: node --experimental-sqlite --test tests/v61-migration-matrix.mjs
+TAP version 13
+# (node:371) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: fresh upgrade preserves evidence and passes startup schema gate
+ok 1 - fresh upgrade preserves evidence and passes startup schema gate
+  ---
+  duration_ms: 26.635401
+  type: 'test'
+  ...
+# Subtest: v5 upgrade preserves evidence and passes startup schema gate
+ok 2 - v5 upgrade preserves evidence and passes startup schema gate
+  ---
+  duration_ms: 20.592774
+  type: 'test'
+  ...
+# Subtest: v6 upgrade preserves evidence and passes startup schema gate
+ok 3 - v6 upgrade preserves evidence and passes startup schema gate
+  ---
+  duration_ms: 19.864026
+  type: 'test'
+  ...
+# Subtest: v6.1 checkpoint upgrade preserves evidence and passes startup schema gate
+ok 4 - v6.1 checkpoint upgrade preserves evidence and passes startup schema gate
+  ---
+  duration_ms: 20.137438
+  type: 'test'
+  ...
+# Subtest: before migration: rollback or refuse startup
+ok 5 - before migration: rollback or refuse startup
+  ---
+  duration_ms: 7.859713
+  type: 'test'
+  ...
+# Subtest: between migrations: rollback or refuse startup
+ok 6 - between migrations: rollback or refuse startup
+  ---
+  duration_ms: 7.378158
+  type: 'test'
+  ...
+# Subtest: during schema modification: rollback or refuse startup
+ok 7 - during schema modification: rollback or refuse startup
+  ---
+  duration_ms: 8.449782
+  type: 'test'
+  ...
+# Subtest: after schema before bookkeeping: rollback or refuse startup
+ok 8 - after schema before bookkeeping: rollback or refuse startup
+  ---
+  duration_ms: 7.864621
+  type: 'test'
+  ...
+# Subtest: during data migration: rollback or refuse startup
+ok 9 - during data migration: rollback or refuse startup
+  ---
+  duration_ms: 7.525471
+  type: 'test'
+  ...
+# Subtest: restart after partial migration: rollback or refuse startup
+ok 10 - restart after partial migration: rollback or refuse startup
+  ---
+  duration_ms: 10.680971
+  type: 'test'
+  ...
+1..10
+# tests 10
+# suites 0
+# pass 10
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 223.814289
+PASS migration-matrix: 1/1 steps passed
+
+=== suite (1 step) ===
+--- suite 1/1: node --experimental-sqlite --disable-warning=ExperimentalWarning --import tsx --import file:///workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/lib/sqljs-fallback.mjs tests/suite-workflow.mjs
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+[MainPlatformV6] Initialized integration module 'wallet_investigator' with capabilities: [
+  'blockchain-analysis',
+  'wallet-validation',
+  'counterparty-discovery',
+  'fund-flow-analysis',
+  'controlled-wallet-expansion'
+]
+[Database] Initialized new database at /tmp/mip-suite-IFSFY5/wallet-runtime/data/wallet_investigator.sqlite
+[Migrations] Applying migration v1: 001_initial_schema...
+[Migrations] Applying migration v2: 002_indexes_and_views...
+[Migrations] Migration status: 2 applied. Current schema version: v2
+{"ok":true,"ui_decisions":4,"discovery":{"delivered":6,"target":"chaininvestcoin.cc","reached_by":"page_asset"},"wallet":{"transactions":4,"counterparties":3},"report":{"status":"verified","submissions":1},"ui":{"checks":40,"passed":["v9 start action is primary and diagnostics are collapsed","sidebar lists exactly the five tools","Needs you and Advanced sit below the tools","home shows each tool's state","home lists what happened","finder queue has sites waiting","each site says why it is worth a look","scores are hidden until you ask why","why reveals the score and its meaning","pursuit leads say why they were found","the discovery chain is shown step by step","the reviewed site is listed under Investigate with its stage","hunts are listed in plain words","hunt internals stay behind Details","Site Finder shows exactly three views","picking a site sets the context","evidence is labelled as seen on the site","no raw JSON or module-internal titles by default","site evidence comes first","shared-infrastructure caution is shown","module jobs stay behind Details","site context survives the move to Wallet Investigator","money flow explained in words","context survives a reload","logger capture visible in Main","report status in plain words","operation joins the context","hunter briefing leads with the headline","membership is labelled as analysis","member site opens in Site Finder with the new site in context","context can be cleared","advanced links to Main's views","no sideways scroll at phone width on /","no sideways scroll at phone width on /finder","no sideways scroll at phone width on /finder","no sideways scroll at phone width on /wallets","no sideways scroll at phone width on /logger","no sideways scroll at phone width on /reports","no sideways scroll at phone width on /hunter","no browser errors"]}}
+Platform report worker: TypeError: fetch failed
+    at node:internal/deps/undici/undici:13510:13
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async ReportWorker.request (/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/form-submitter/server/integration/platform_worker.ts:22:71)
+    at async ReportWorker.tick (/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/form-submitter/server/integration/platform_worker.ts:28:103) {
+  [cause]: Error: connect ECONNREFUSED 127.0.0.1:42199
+      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1637:16) {
+    errno: -111,
+    code: 'ECONNREFUSED',
+    syscall: 'connect',
+    address: '127.0.0.1',
+    port: 42199
+  }
+}
+PASS suite: 1/1 steps passed
+
+=== loops (1 step) ===
+--- loops 1/1: node --experimental-sqlite --disable-warning=ExperimentalWarning --import tsx tests/joined-pursuit-loops.mjs
+  ok  Hunter -> Main: evidence gap with the operation's identifiers becomes one budgeted FIND_RELATED_SITES job
+  ok  Finder -> Main: campaign hunt "Looking for new deployments related to Operation OP-L Loop test operation" ran; 4 new site(s) delivered; the hunt is visible in Main
+  ok  loop A is bounded: repeated Hunter requests and scheduler passes create no new job or hunt
+  ok  Investigation Mode -> Finder: the investigation's public artifacts opened an investigation hunt
+  ok  loop B is bounded: re-investigating the site creates no new request, job or hunt
+{"ok":true,"steps":5,"delivered":4,"hunts":12}
+PASS loops: 1/1 steps passed
+
+=== integration:v6 (10 steps) ===
+--- integration:v6 1/10: node --experimental-sqlite tests/v6-integration.mjs
+(node:902) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+{"ok":true,"events":14,"jobs":6,"decisions":11}
+--- integration:v6 2/10: node --experimental-sqlite tests/v6-three-modules.mjs
+(node:925) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+{"ok":true,"modules":["site_finder","site_investigator","crypto_wallet_logger"],"triage":1,"claimed_job":"d7e38133-9dd1-42b4-8c05-5805202f5dea","relationship_evidence":1,"wallet_sources":2,"logger_replay":true}
+--- integration:v6 3/10: node --experimental-sqlite tests/v6-feedback-local.mjs
+(node:951) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+{"ok":true,"receiver":"127.0.0.1","synthetic":true,"attempts":8,"signature":true,"retry":true,"idempotent":true,"ack":true,"exhaustion_review":true}
+--- integration:v6 4/10: node tests/logger-queue-local.mjs
+{"ok":true,"synthetic":true,"stable_id":true,"no_silent_drop":true}
+--- integration:v6 5/10: python tests/site-bridge-synthetic.py
+{"ok": true, "synthetic": true, "record_types": {"sites": 1, "pages": 1, "wallets": 1, "deposit_options": 0, "evidence": 1, "relationships": 1}}
+--- integration:v6 6/10: python tests/site-bridge-worker.py
+{"ok": true, "synthetic": true, "registered": true, "claimed": true, "ingested": true, "completed": true, "provider_failure_retried": true}
+--- integration:v6 7/10: python tests/finder-feedback-synthetic.py
+{"ok": true, "downstream_wallets": 1, "self_report_excluded": true}
+--- integration:v6 8/10: python tests/finder-push-synthetic.py
+{"ok": true, "synthetic": true, "authenticated": true, "idempotent": true, "ack": true}
+--- integration:v6 9/10: python tests/scheduler-local.py
+{"ok": true, "synthetic": true, "receiver": "127.0.0.1", "feedback": true, "monitoring": true, "inbox_supply": true}
+--- integration:v6 10/10: node --experimental-sqlite tests/scheduler-fallback-local.mjs
+(node:997) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+{"ok":true,"synthetic":true,"fallback":"local_scheduler","tick":["/api/v1/feedback/dispatch","/api/v1/monitoring/tick"],"loopback_feedback":true,"signed":true,"inbox_supply":true,"supply_isolated":true}
+PASS integration:v6: 10/10 steps passed
+
+=== v2 (2 steps) ===
+--- v2 1/2: node --experimental-sqlite tests/v2-inbox.mjs
+(node:1025) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+{"ok":true,"synthetic":true,"delivered":12,"probed":191,"gated":162,"mirror_suppressed":true,"useful_routes":["INVESTIGATE_SITE","FIND_RELATED_SITES"],"decision_feed":true,"logger_joined":true,"supply":true}
+--- v2 2/2: [integrations/site-finder-v07] python run_tests_standalone.py test_v2_precision.py
+  PASS  test_v2_precision.py::test_a_noisy_strategy_gets_less_of_the_probe_budget
+  PASS  test_v2_precision.py::test_a_round_delivers_few_high_precision_candidates
+  PASS  test_v2_precision.py::test_a_signal_you_keep_rejecting_loses_weight
+  PASS  test_v2_precision.py::test_brand_matching_is_token_aware_and_catches_typos
+  PASS  test_v2_precision.py::test_dead_and_http_errors_are_gated_with_recheck
+  PASS  test_v2_precision.py::test_decisions_feed_strategy_and_signal_ledgers
+  PASS  test_v2_precision.py::test_discover_sites_job_runs_a_round_and_completes
+  PASS  test_v2_precision.py::test_headline_is_short_and_human
+  PASS  test_v2_precision.py::test_hyip_page_has_core_evidence_and_clears_the_bar
+  PASS  test_v2_precision.py::test_inbox_batch_is_a_valid_schema_3_promotion
+  PASS  test_v2_precision.py::test_learning_can_demote_but_barely_promote
+  PASS  test_v2_precision.py::test_legit_exchange_vocabulary_is_not_core_evidence
+  PASS  test_v2_precision.py::test_login_gated_trading_app_is_recognised_from_its_bundle
+  PASS  test_v2_precision.py::test_non_crypto_business_is_gated
+  PASS  test_v2_precision.py::test_one_stray_skip_does_not_demote_a_class_of_real_scams
+  PASS  test_v2_precision.py::test_parked_page_with_crypto_ad_links_is_gated
+  PASS  test_v2_precision.py::test_parking_nameservers_gate_even_a_script_only_lander
+  PASS  test_v2_precision.py::test_platform_decisions_are_pulled_and_applied_once
+  PASS  test_v2_precision.py::test_redirect_to_official_brand_is_gated_not_scored_as_impersonation
+  PASS  test_v2_precision.py::test_registrable_collapses_hostnames_but_not_hosting_platform_customers
+  PASS  test_v2_precision.py::test_regulated_site_with_statutory_warnings_is_gated_legit
+  PASS  test_v2_precision.py::test_scam_review_article_is_informational_and_yields_leads
+  PASS  test_v2_precision.py::test_seed_phrase_request_is_core_but_security_advice_is_not
+  PASS  test_v2_precision.py::test_server_default_suspended_and_coming_soon_pages_are_gated
+  PASS  test_v2_precision.py::test_skip_reasons_change_what_is_learned
+  PASS  test_v2_precision.py::test_skipping_a_cluster_member_suppresses_its_waiting_siblings
+  PASS  test_v2_precision.py::test_v1_triage_scores_are_mapped_into_the_platform_confidence_range
+  PASS  test_v2_precision.py::test_wallet_in_donation_or_contract_context_is_not_a_deposit_address
+  PASS  test_v2_precision.py::test_withdrawal_fee_trap_is_core
+
+============================================================
+Results: 29 passed, 0 failed
+============================================================
+PASS v2: 2/2 steps passed
+
+=== v3 (1 step) ===
+--- v3 1/1: node --experimental-sqlite tests/v3-agent.mjs
+(node:1051) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+  PASS  golden path: rules-driven plans → typed jobs → evidence changes plan → COMPLETE, no loops, provenance intact
+  PASS  human checkpoint: login wall pauses, then resumes automatically from new evidence
+  PASS  policy: unknown capability, smuggled evidence, hallucinated citations, bad args and links are all rejected; only a valid action runs
+  PASS  budgets: with a 1-action budget the investigator stops at BUDGET_EXHAUSTED even though a wallet remained to analyse
+  PASS  restart recovery: an expired lease is reclaimed and re-ticking never duplicates a step's job
+  PASS  finder feedback: downstream outcomes are fed back with observed/human basis, never AI inference; feed is authenticated
+
+all v3 agent scenarios passed
+{"ok":true,"scenarios":7,"providerless_and_scripted":true,"synthetic":true}
+PASS v3: 1/1 steps passed
+
+=== v4 (2 steps) ===
+--- v4 1/2: node --experimental-sqlite tests/v4-campaign.mjs
+(node:1079) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+  PASS  A coordination: linked sites found, hub outranks 20 mirrors (20 suppressed), module evidence reprioritized late-riser 0.532 -> 0.775 (done), 4 real investigations each run once, provenance intact
+  PASS  B hypotheses: ip supported by a verified site, san disproved (unverifiable claim ignored), person's skip weakens the supported one
+  PASS  C reviewer: already-attempted work rejected with all six checks, no run or job created; model critique can only add rejections
+  PASS  D budgets: expansion stops at 2 investigations (BUDGET_EXHAUSTED), invalid budget refused, raise to 3 resumes exactly one more
+  PASS  E saturation: 2 unproductive ip pivot(s) ran, the rest were stopped as saturated
+  PASS  F checkpoint: login wall pauses one site, two others complete meanwhile, person's evidence resumes it
+  PASS  G restart: expired lease taken over, half-started investigation adopted without duplication, campaign completes
+  PASS  H providers: timeouts/garbage/truncated replies fall back safely and are costed; a model-free campaign completes
+  PASS  I adversarial: fake refs, contradicting target, bad capability, links, smuggled fields, forged edges/experience, non-offered and repeated choices and budget overruns all rejected
+  PASS  J learning: ai_self ignored (0.5), observed outcomes move the prior to 0.150 and stop at the floor
+
+All v4 campaign scenarios passed.
+--- v4 2/2: [integrations/site-finder-v07] python run_tests_standalone.py test_v4_context.py
+  PASS  test_v4_context.py::test_campaign_specific_learning_overrides_context_but_is_shrunk
+  PASS  test_v4_context.py::test_contextual_learning_changes_allocation
+  PASS  test_v4_context.py::test_diminishing_returns_reduce_effort_then_saturate
+  PASS  test_v4_context.py::test_downstream_credit_only_for_contextual_candidates
+  PASS  test_v4_context.py::test_exploration_is_bounded_but_active
+  PASS  test_v4_context.py::test_invalid_pivot_is_refused
+  PASS  test_v4_context.py::test_pivot_round_in_simulated_world
+  PASS  test_v4_context.py::test_saturated_pivot_returns_without_network
+
+============================================================
+Results: 8 passed, 0 failed
+============================================================
+PASS v4: 2/2 steps passed
+
+=== v5 (2 steps) ===
+--- v5 1/2: node --experimental-sqlite tests/v5-operations.mjs
+(node:1106) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+  PASS  A continuous operation: candidates become typed work, real investigations run once, outcomes are learned from observed results — 2 observed outcomes, 8 module jobs
+  PASS  B no duplicate scheduled work: concurrent ticks share one lease, fingerprints collapse re-proposals, one job per work item
+  PASS  C crash recovery: an interrupted tick is adopted without duplication; continuous discovery survives a restart
+  PASS  D prioritization changes with evidence: a sibling proving the same wallets raises duplicate probability; learned outcomes move priors — dup 0->0.7, prior 0.48->0.15
+  PASS  E temporal: unchanged observations create nothing; real changes create the right opportunities; disappearance cancels work — unchanged x10 -> 0 records
+  PASS  F evidence gaps drive actions; resolving a gap stops its work
+  PASS  G contradictions trigger review: disagreeing sources become a human task; resolution is recorded
+  PASS  H formation requires graph support; AI groupings must cite real edges; merge and split keep provenance and lineage — formed 9f7f1399, merged 9f7f1399 into 0185a102
+  PASS  H2 split: a campaign whose sites form two unconnected groups splits; members, edges and lineage keep their provenance — split bdb6a8df -> 6cd39d80 (sy-1.test, sy-2.test)
+  PASS  I concurrent campaigns run through the scheduler without state leakage — A: BUDGET_EXHAUSTED, B: BUDGET_EXHAUSTED
+  PASS  J model routing: tiers per task, provider fallback, telemetry, budget refusal, and deterministic fallback without any model
+  PASS  K invalid AI actions and hallucinated evidence stay blocked
+  PASS  L budgets are enforced; over-budget work waits (deferred with a reason) and is never dropped
+  PASS  M human checkpoints: a login wall waits for a person, notifies once, and resumes automatically
+  PASS  N pause and resume: nothing new starts while paused; running work is still reconciled; resume continues
+  PASS  O experiments stay bounded: registered strategies only, ±20% ordering, population and budget caps
+  PASS  P replay and simulation cannot execute anything — fixture: 4 starts, stop at tick 3 (every remaining item is waiting for budget)
+  PASS  Q commands compile into typed intents and cannot bypass policy
+  PASS  R notifications are deduplicated, routine work is silent, failed work is kept and surfaced — 2 notifications over the scenario
+  PASS  S operator routes and read models: operations, queue, tasks, graph with filters, node detail, workspace, budgets, advanced
+
+All 20 v5 operations scenarios passed.
+--- v5 2/2: [integrations/site-finder-v07] python run_tests_standalone.py test_v5_continuous.py
+  PASS  test_v5_continuous.py::test_aging_and_rediscovery
+  PASS  test_v5_continuous.py::test_cycles_survive_restart_and_never_redeliver
+  PASS  test_v5_continuous.py::test_daily_budget_stops_cycles_without_network
+  PASS  test_v5_continuous.py::test_ecosystem_veto_only_for_unproven_saturated_clusters
+  PASS  test_v5_continuous.py::test_inbox_block_carries_watch_state_and_new_batch_id
+  PASS  test_v5_continuous.py::test_learning_changes_allocation
+  PASS  test_v5_continuous.py::test_rotation_forces_every_source_back_and_cooldown_excludes
+  PASS  test_v5_continuous.py::test_watch_records_real_changes_only_and_pushes_them
+
+============================================================
+Results: 8 passed, 0 failed
+============================================================
+PASS v5: 2/2 steps passed
+
+=== joined:hunter (1 step) ===
+--- joined:hunter 1/1: node --experimental-sqlite --disable-warning=ExperimentalWarning --import tsx tests/joined-finder-main-hunter.mjs
+  PASS  Site Finder -> previous installation (12 migrations): 4/4 accepted, 0 parked in Site Finder's outbox
+  PASS  upgrade 0000-0011 -> 0012 in place: every row preserved, schema gate passes, Site Finder -> Main delivers all 4 candidates
+  PASS  Main -> Hunter: campaign formed from Site Finder evidence, reconstruction proposed, charged and dispatched as HUNT_OPERATION
+  PASS  Hunter -> Main: 9 members (all true), reconstruction linked to the campaign
+  PASS  Hunter discoveries -> Main work/inbox: 4 new candidates, wallet work, temporal facets
+  PASS  duplicate protection: repeated Hunter sync, re-delivered Site Finder batch and re-claim create nothing
+  PASS  restart/recovery: Main and Hunter restarted on their databases; the job reconciled as useful, not repeated
+  PASS  Main feedback -> Hunter (membership verdict) and -> Site Finder (decision ledger)
+  PASS  Main scheduler/budgets -> Hunter: one module slot, operator requests queue behind it, auto_reconstruct switch respected
+
+All 9 joined Site Finder -> Main -> Operation Hunter checks passed.
+PASS joined:hunter: 1/1 steps passed
+
+=== joined:v61 (2 steps) ===
+--- joined:v61 1/2: node --experimental-sqlite --import tsx --import file:///workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/lib/sqljs-fallback.mjs tests/v61-joined-five-modules.mjs
+(node:1189) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+[MainPlatformV6] Initialized integration module 'wallet_investigator' with capabilities: [
+  'blockchain-analysis',
+  'wallet-validation',
+  'counterparty-discovery',
+  'fund-flow-analysis',
+  'controlled-wallet-expansion'
+]
+[Database] Initialized new database at /tmp/mip-three-modules-YjiXPj/wallet-runtime/data/wallet_investigator.sqlite
+[Migrations] Applying migration v1: 001_initial_schema...
+[Migrations] Applying migration v2: 002_indexes_and_views...
+[Migrations] Migration status: 2 applied. Current schema version: v2
+Report destination: Error: Platform POST /api/v1/modules/form_submitter/destination: 500
+    at ReportWorker.request (/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/form-submitter/server/integration/platform_worker.ts:22:303)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async ReportWorker.reportDestination (/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/form-submitter/server/integration/platform_worker.ts:27:152)
+    at async startPlatformReportWorker (/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/form-submitter/server/integration/platform_worker.ts:64:220)
+    at async <anonymous> (/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/v61-joined-five-modules.mjs:102:3)
+Report destination: Error: Platform POST /api/v1/modules/form_submitter/destination: 500
+    at ReportWorker.request (/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/form-submitter/server/integration/platform_worker.ts:22:303)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async ReportWorker.reportDestination (/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/form-submitter/server/integration/platform_worker.ts:27:152)
+    at async ReportWorker.tick (/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/form-submitter/server/integration/platform_worker.ts:28:15)
+{"ok":true,"path":"golden","modules":["site_finder","site_investigator","crypto_wallet_logger","wallet_investigator","form_submitter"],"synthetic_provider":true,"synthetic_form":true,"platform_restart":false,"verification":"verified","investigation_id":"2f0487a5-548f-43a4-910a-96ce5c7f1be0","wallet_job":"7948a8a5-f57a-4ed8-b1bc-5faf3c117554","report_id":"6eab427b-a90a-4f21-835d-48cfb90b9aaa","submissions":1}
+--- joined:v61 2/2: V61_FAILURE_PATH=1 node --experimental-sqlite --import tsx --import file:///workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/lib/sqljs-fallback.mjs tests/v61-joined-five-modules.mjs
+(node:1232) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+[MainPlatformV6] Initialized integration module 'wallet_investigator' with capabilities: [
+  'blockchain-analysis',
+  'wallet-validation',
+  'counterparty-discovery',
+  'fund-flow-analysis',
+  'controlled-wallet-expansion'
+]
+[Database] Initialized new database at /tmp/mip-three-modules-GErh0I/wallet-runtime/data/wallet_investigator.sqlite
+[Migrations] Applying migration v1: 001_initial_schema...
+[Migrations] Applying migration v2: 002_indexes_and_views...
+[Migrations] Migration status: 2 applied. Current schema version: v2
+{"ok":true,"path":"failure-recovery","modules":["site_finder","site_investigator","crypto_wallet_logger","wallet_investigator","form_submitter"],"synthetic_provider":true,"synthetic_form":true,"platform_restart":true,"verification":"unknown","investigation_id":"1e5c8bf9-09b3-47ca-910b-733876aaa4c3","wallet_job":"c482496c-1456-4dad-8cce-b5f513b8ec82","report_id":"a4aea685-5777-467e-81e5-cd15b2af4ca1","submissions":1}
+PASS joined:v61: 2/2 steps passed
+
+=== five-modules (4 steps) ===
+--- five-modules 1/4: node tests/form-source-local.mjs
+{"ok":true,"real_module":true,"localhost_receiver":true,"verified":true,"unknown":true,"duplicate_blocked":true,"external_requests":0}
+--- five-modules 2/4: node tests/form-configured-local.mjs
+{"ok":true,"real_form_source":true,"configured_adapter":true,"synthetic_receiver":true,"submissions":1,"duplicate_blocked":true}
+--- five-modules 3/4: [integrations/wallet-investigator] WALLET_INVESTIGATOR_SYNTHETIC_FIXTURES=1 node --import tsx --import file:///workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/lib/sqljs-fallback.mjs tests/run-all-tests.ts
+[MainPlatformV6] Initialized integration module 'wallet_investigator' with capabilities: [
+  'blockchain-analysis',
+  'wallet-validation',
+  'counterparty-discovery',
+  'fund-flow-analysis',
+  'controlled-wallet-expansion'
+]
+=== STARTING INVESTIGATION PLATFORM VERIFICATION TEST SUITE ===
+
+--- Suite 1: Address Validation & Network Resolution ---
+✅ PASS: EVM address is valid
+✅ PASS: Reported network honored for EVM
+✅ PASS: Explicit reported network resolves EVM ambiguity
+✅ PASS: EVM without reported network is format-valid
+✅ PASS: Detected network is evm_uncertain
+✅ PASS: EVM address triggers network ambiguity flag (cross-EVM)
+✅ PASS: BTC Bech32 address is valid
+✅ PASS: Detected network is bitcoin
+✅ PASS: BTC Bech32 has no network ambiguity
+✅ PASS: BTC Bech32 has valid checksum
+✅ PASS: TRON TRC20 address is valid
+✅ PASS: Detected network is tron
+✅ PASS: TRON address has valid base58 checksum
+✅ PASS: Solana base58 address is valid
+✅ PASS: Detected network is solana
+✅ PASS: Random string rejected as invalid
+✅ PASS: Random string flagged as invalid_format
+
+--- Suite 2: Base Unit Financial Math & Precision ---
+✅ PASS: 1.00000001 BTC is 100000001 satoshis
+✅ PASS: Displays exact decimal representation without float drift
+✅ PASS: 5 wei computed accurately
+✅ PASS: USDT 6 decimals base units accurate
+
+--- Suite 3: Database & Migration Schema ---
+[Database] Initialized new database at /tmp/wallet-verification-aIiLlO/data/wallet_investigator.sqlite
+[Migrations] Applying migration v1: 001_initial_schema...
+[Migrations] Applying migration v2: 002_indexes_and_views...
+[Migrations] Migration status: 2 applied. Current schema version: v2
+✅ PASS: Database schema initialized and wallets table exists
+✅ PASS: wallet_observations table exists for multi-site evidence
+
+--- Suite 4: Blockchain Provider Layer & Fallback ---
+✅ PASS: Provider retrieves Bitcoin wallet activity
+✅ PASS: Completeness caveat recorded
+✅ PASS: Transactions array returned
+✅ PASS: All configured blockchain provider tiers are registered
+
+--- Suite 5: Non-Pejorative Findings Engine ---
+✅ PASS: Findings generator returns structured finding array
+
+--- Suite 6: Main Platform v6 Canonical Protocol ---
+✅ PASS: Correct canonical module_id
+✅ PASS: Unregistered module is not falsely online
+✅ PASS: Main Platform advertises blockchain-analysis capability
+
+=== TEST VERIFICATION COMPLETE: 31 PASSED, 0 FAILED ===
+
+--- five-modules 4/4: [integrations/wallet-investigator] WALLET_INVESTIGATOR_SYNTHETIC_FIXTURES=1 node --import tsx --import file:///workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/lib/sqljs-fallback.mjs tests/platform-worker-local.ts
+[MainPlatformV6] Initialized integration module 'wallet_investigator' with capabilities: [
+  'blockchain-analysis',
+  'wallet-validation',
+  'counterparty-discovery',
+  'fund-flow-analysis',
+  'controlled-wallet-expansion'
+]
+[Database] Initialized new database at /tmp/wallet-platform-fixture-dIiqH3/data/wallet_investigator.sqlite
+[Migrations] Applying migration v1: 001_initial_schema...
+[Migrations] Applying migration v2: 002_indexes_and_views...
+[Migrations] Migration status: 2 applied. Current schema version: v2
+{"ok":true,"real_engine":true,"synthetic_provider":true,"transactions":4,"evidence":10,"counterparties":3}
+PASS five-modules: 4/4 steps passed
+
+=== startup:modules (4 steps) ===
+--- startup:modules 1/4: python tests/site-finder-startup-local.py
+{"ok": true, "real_module_entry": true, "outbox_sent": "sf-observation-7145094f0c1fed98bc850e493f8ff2e4", "feedback_route": true, "synthetic": true}
+--- startup:modules 2/4: python tests/site-investigator-startup-local.py
+{"ok": true, "real_module_entry": true, "claimed_and_reported": "synthetic-site-startup-job", "synthetic": true}
+--- startup:modules 3/4: node --experimental-sqlite tests/wallet-startup-local.mjs
+(node:1390) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+{"ok":true,"real_module_entry":true,"synthetic_provider":true,"restarted_job":"COMPLETED"}
+--- startup:modules 4/4: node tests/form-startup-local.mjs
+{"ok":true,"real_module_entry":true,"configured_submission":true,"synthetic_receiver":true,"submissions":1,"completed":1}
+PASS startup:modules: 4/4 steps passed
+
+=== site-finder (1 step) ===
+--- site-finder 1/1: [integrations/site-finder-v07] python run_tests_standalone.py
+2026-10-03 21:21:38,207 INFO scamhunter.review: No Main Platform configured; running standalone and queueing everything locally.
+2026-10-03 21:21:38,573 INFO werkzeug: 127.0.0.1 - - [03/Oct/2026 21:21:38] "GET / HTTP/1.1" 200 -
+2026-10-03 21:21:38,604 INFO werkzeug: 127.0.0.1 - - [03/Oct/2026 21:21:38] "GET /api/v2/campaigns HTTP/1.1" 200 -
+2026-10-03 21:21:38,618 INFO werkzeug: 127.0.0.1 - - [03/Oct/2026 21:21:38] "GET /api/v2/stats HTTP/1.1" 200 -
+2026-10-03 21:21:38,619 INFO werkzeug: 127.0.0.1 - - [03/Oct/2026 21:21:38] "GET /api/v2/investigation/frontier HTTP/1.1" 200 -
+2026-10-03 21:21:38,621 INFO werkzeug: 127.0.0.1 - - [03/Oct/2026 21:21:38] "GET /api/v2/candidates HTTP/1.1" 200 -
+2026-10-03 21:21:38,627 INFO werkzeug: 127.0.0.1 - - [03/Oct/2026 21:21:38] "GET /api/v2/operations/status HTTP/1.1" 200 -
+2026-10-03 21:21:38,644 INFO werkzeug: 127.0.0.1 - - [03/Oct/2026 21:21:38] "POST /api/v2/presented HTTP/1.1" 200 -
+2026-10-03 21:21:38,651 INFO werkzeug: 127.0.0.1 - - [03/Oct/2026 21:21:38] "GET /api/v2/details/browser-frontier.test HTTP/1.1" 200 -
+2026-10-03 21:21:38,751 INFO werkzeug: 127.0.0.1 - - [03/Oct/2026 21:21:38] "POST /api/v2/investigation/investigate HTTP/1.1" 200 -
+2026-10-03 21:21:38,761 INFO werkzeug: 127.0.0.1 - - [03/Oct/2026 21:21:38] "GET /api/v2/investigation/frontier HTTP/1.1" 200 -
+2026-10-03 21:21:38,789 INFO werkzeug: 127.0.0.1 - - [03/Oct/2026 21:21:38] "GET / HTTP/1.1" 200 -
+2026-10-03 21:21:38,804 INFO werkzeug: 127.0.0.1 - - [03/Oct/2026 21:21:38] "GET /api/v2/campaigns HTTP/1.1" 200 -
+2026-10-03 21:21:38,811 INFO werkzeug: 127.0.0.1 - - [03/Oct/2026 21:21:38] "GET /api/v2/operations/status HTTP/1.1" 200 -
+2026-10-03 21:21:38,812 INFO werkzeug: 127.0.0.1 - - [03/Oct/2026 21:21:38] "GET /api/v2/investigation/frontier HTTP/1.1" 200 -
+2026-10-03 21:21:38,815 INFO werkzeug: 127.0.0.1 - - [03/Oct/2026 21:21:38] "GET /api/v2/stats HTTP/1.1" 200 -
+2026-10-03 21:21:38,818 INFO werkzeug: 127.0.0.1 - - [03/Oct/2026 21:21:38] "GET /api/v2/candidates HTTP/1.1" 200 -
+2026-10-03 21:21:38,838 INFO werkzeug: 127.0.0.1 - - [03/Oct/2026 21:21:38] "POST /api/v2/presented HTTP/1.1" 200 -
+2026-10-03 21:21:38,853 INFO werkzeug: 127.0.0.1 - - [03/Oct/2026 21:21:38] "GET /api/v2/details/browser-frontier.test HTTP/1.1" 200 -
+2026-10-03 21:21:38,928 INFO werkzeug: 127.0.0.1 - - [03/Oct/2026 21:21:38] "GET /api/v2/investigation/paths/1 HTTP/1.1" 200 -
+2026-10-03 21:21:39,010 INFO werkzeug: 127.0.0.1 - - [03/Oct/2026 21:21:39] "POST /api/v2/investigation/paths/1/control HTTP/1.1" 200 -
+2026-10-03 21:21:39,016 INFO werkzeug: 127.0.0.1 - - [03/Oct/2026 21:21:39] "GET /api/v2/investigation/paths/1 HTTP/1.1" 200 -
+2026-10-03 21:21:39,024 INFO werkzeug: 127.0.0.1 - - [03/Oct/2026 21:21:39] "GET /api/v2/investigation/frontier HTTP/1.1" 200 -
+2026-10-03 21:21:39,530 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:21:39,531 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:21:39,532 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:21:39,532 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:21:39,533 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:21:39,533 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:21:39,534 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:21:39,551 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:21:39,551 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:21:39,552 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:21:39,553 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:21:39,553 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:21:39,554 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:21:39,554 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:21:39,592 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:21:39,593 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:21:39,593 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:21:39,594 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:21:39,594 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:21:39,595 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:21:39,595 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:21:39,641 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:21:39,641 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:21:39,642 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:21:39,642 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:21:39,643 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:21:39,643 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:21:39,644 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:21:39,684 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:21:39,684 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:21:39,685 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:21:39,686 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:21:39,686 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:21:39,687 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:21:39,687 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:21:39,733 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:21:39,734 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:21:39,735 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:21:39,735 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:21:39,736 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:21:39,736 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:21:39,737 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:21:39,779 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:21:39,780 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:21:39,780 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:21:39,781 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:21:39,781 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:21:39,782 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:21:39,782 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:21:39,845 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:21:39,846 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:21:39,846 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:21:39,847 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:21:39,847 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:21:39,848 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:21:39,848 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:21:39,895 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:21:39,895 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:21:39,896 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:21:39,896 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:21:39,897 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:21:39,897 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:21:39,898 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:21:39,927 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:21:39,928 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:21:39,928 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:21:39,929 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:21:39,930 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:21:39,930 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:21:39,931 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:21:39,954 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:21:39,955 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:21:39,955 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:21:39,956 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:21:39,956 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:21:39,957 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:21:39,957 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:21:39,978 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:21:39,979 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:21:39,979 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:21:39,980 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:21:39,980 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:21:39,981 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:21:39,982 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:21:40,015 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:21:40,016 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:21:40,016 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:21:40,017 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:21:40,017 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:21:40,018 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:21:40,019 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:21:40,078 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:21:40,079 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:21:40,080 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:21:40,080 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:21:40,081 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:21:40,081 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:21:40,082 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:21:40,407 INFO werkzeug: 127.0.0.1 - - [03/Oct/2026 21:21:40] "GET / HTTP/1.1" 200 -
+2026-10-03 21:21:40,444 INFO werkzeug: 127.0.0.1 - - [03/Oct/2026 21:21:40] "GET /api/v2/campaigns HTTP/1.1" 200 -
+2026-10-03 21:21:40,445 INFO werkzeug: 127.0.0.1 - - [03/Oct/2026 21:21:40] "GET /api/v2/investigation/frontier HTTP/1.1" 200 -
+2026-10-03 21:21:40,449 INFO werkzeug: 127.0.0.1 - - [03/Oct/2026 21:21:40] "GET /api/v2/operations/status HTTP/1.1" 200 -
+2026-10-03 21:21:40,452 INFO werkzeug: 127.0.0.1 - - [03/Oct/2026 21:21:40] "GET /api/v2/stats HTTP/1.1" 200 -
+2026-10-03 21:21:40,461 INFO werkzeug: 127.0.0.1 - - [03/Oct/2026 21:21:40] "GET /api/v2/candidates HTTP/1.1" 200 -
+2026-10-03 21:21:40,510 INFO werkzeug: 127.0.0.1 - - [03/Oct/2026 21:21:40] "POST /api/v2/presented HTTP/1.1" 200 -
+2026-10-03 21:21:40,516 INFO werkzeug: 127.0.0.1 - - [03/Oct/2026 21:21:40] "GET /api/v2/details/browser-b.test HTTP/1.1" 200 -
+2026-10-03 21:21:40,631 INFO werkzeug: 127.0.0.1 - - [03/Oct/2026 21:21:40] "GET /api/v2/campaigns/campaign:dc73f05850d8 HTTP/1.1" 200 -
+2026-10-03 21:21:40,649 INFO werkzeug: 127.0.0.1 - - [03/Oct/2026 21:21:40] "GET /api/v2/campaigns/campaign:dc73f05850d8 HTTP/1.1" 200 -
+2026-10-03 21:21:40,650 INFO werkzeug: 127.0.0.1 - - [03/Oct/2026 21:21:40] "GET /api/v2/graph/browser-a.test?confidence=0 HTTP/1.1" 200 -
+2026-10-03 21:21:40,655 INFO werkzeug: 127.0.0.1 - - [03/Oct/2026 21:21:40] "GET /api/v2/graph/browser-a.test HTTP/1.1" 200 -
+2026-10-03 21:21:40,829 INFO werkzeug: 127.0.0.1 - - [03/Oct/2026 21:21:40] "POST /api/v2/campaigns/campaign:dc73f05850d8/review HTTP/1.1" 200 -
+2026-10-03 21:21:40,859 INFO werkzeug: 127.0.0.1 - - [03/Oct/2026 21:21:40] "GET / HTTP/1.1" 200 -
+2026-10-03 21:21:40,877 INFO werkzeug: 127.0.0.1 - - [03/Oct/2026 21:21:40] "GET /api/v2/campaigns HTTP/1.1" 200 -
+2026-10-03 21:21:40,882 INFO werkzeug: 127.0.0.1 - - [03/Oct/2026 21:21:40] "GET /api/v2/operations/status HTTP/1.1" 200 -
+2026-10-03 21:21:40,884 INFO werkzeug: 127.0.0.1 - - [03/Oct/2026 21:21:40] "GET /api/v2/investigation/frontier HTTP/1.1" 200 -
+2026-10-03 21:21:40,888 INFO werkzeug: 127.0.0.1 - - [03/Oct/2026 21:21:40] "GET /api/v2/candidates HTTP/1.1" 200 -
+2026-10-03 21:21:40,891 INFO werkzeug: 127.0.0.1 - - [03/Oct/2026 21:21:40] "GET /api/v2/stats HTTP/1.1" 200 -
+2026-10-03 21:21:40,902 INFO werkzeug: 127.0.0.1 - - [03/Oct/2026 21:21:40] "POST /api/v2/presented HTTP/1.1" 200 -
+2026-10-03 21:21:40,907 INFO werkzeug: 127.0.0.1 - - [03/Oct/2026 21:21:40] "GET /api/v2/details/browser-b.test HTTP/1.1" 200 -
+2026-10-03 21:21:40,976 INFO werkzeug: 127.0.0.1 - - [03/Oct/2026 21:21:40] "GET /api/v2/campaigns/campaign:dc73f05850d8 HTTP/1.1" 200 -
+2026-10-03 21:21:40,992 INFO werkzeug: 127.0.0.1 - - [03/Oct/2026 21:21:40] "GET /api/v2/campaigns/campaign:dc73f05850d8 HTTP/1.1" 200 -
+2026-10-03 21:21:40,992 INFO werkzeug: 127.0.0.1 - - [03/Oct/2026 21:21:40] "GET /api/v2/graph/browser-a.test?confidence=0 HTTP/1.1" 200 -
+2026-10-03 21:21:40,996 INFO werkzeug: 127.0.0.1 - - [03/Oct/2026 21:21:40] "GET /api/v2/graph/browser-a.test HTTP/1.1" 200 -
+2026-10-03 21:21:41,113 INFO werkzeug: 127.0.0.1 - - [03/Oct/2026 21:21:41] "POST /api/v2/graph/reject HTTP/1.1" 200 -
+2026-10-03 21:21:41,125 INFO werkzeug: 127.0.0.1 - - [03/Oct/2026 21:21:41] "GET /api/v2/campaigns HTTP/1.1" 200 -
+2026-10-03 21:21:41,132 INFO werkzeug: 127.0.0.1 - - [03/Oct/2026 21:21:41] "GET /api/v2/graph/browser-a.test?confidence=0 HTTP/1.1" 200 -
+2026-10-03 21:21:41,139 INFO werkzeug: 127.0.0.1 - - [03/Oct/2026 21:21:41] "GET /api/v2/graph/browser-a.test HTTP/1.1" 200 -
+2026-10-03 21:21:41,645 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:21:41,646 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:21:41,646 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:21:41,647 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:21:41,647 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:21:41,648 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:21:41,649 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:21:46,518 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:21:46,519 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:21:46,520 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:21:46,520 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:21:46,521 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:21:46,522 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:21:46,523 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:21:51,382 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:21:51,383 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:21:51,383 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:21:51,384 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:21:51,384 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:21:51,385 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:21:51,386 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:21:51,398 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:21:51,399 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:21:51,400 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:21:51,400 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:21:51,401 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:21:51,402 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:21:51,402 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:21:53,083 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:21:53,084 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:21:53,084 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:21:53,085 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:21:53,085 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:21:53,086 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:21:53,087 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:21:57,972 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:21:57,973 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:21:57,973 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:21:57,974 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:21:57,974 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:21:57,975 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:21:57,975 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:22:02,832 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:22:02,832 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:22:02,833 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:22:02,833 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:22:02,834 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:22:02,835 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:22:02,835 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:22:06,121 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:22:06,122 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:22:06,123 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:22:06,123 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:22:06,124 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:22:06,126 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:22:06,127 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:22:14,856 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:22:14,857 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:22:14,857 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:22:14,858 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:22:14,858 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:22:14,859 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:22:14,859 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:22:16,563 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:22:16,563 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:22:16,564 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:22:16,565 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:22:16,565 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:22:16,566 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:22:16,566 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:22:18,315 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:22:18,316 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:22:18,317 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:22:18,317 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:22:18,318 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:22:18,318 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:22:18,319 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:22:23,171 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:22:23,172 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:22:23,173 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:22:23,173 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:22:23,174 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:22:23,174 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:22:23,177 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:22:26,505 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:22:26,506 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:22:26,507 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:22:26,507 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:22:26,508 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:22:26,509 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:22:26,510 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:22:26,656 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:22:26,657 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:22:26,658 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:22:26,658 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:22:26,659 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:22:26,659 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:22:26,660 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:22:31,516 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:22:31,516 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:22:31,517 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:22:31,518 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:22:31,518 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:22:31,519 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:22:31,520 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:22:31,546 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:22:31,546 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:22:31,547 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:22:31,547 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:22:31,548 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:22:31,548 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:22:31,549 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:22:31,598 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:22:31,599 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:22:31,599 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:22:31,600 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:22:31,600 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:22:31,601 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:22:31,602 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:22:31,607 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:22:31,608 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:22:31,608 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:22:31,609 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:22:31,610 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:22:31,610 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:22:31,611 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:22:33,242 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:22:33,243 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:22:33,243 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:22:33,244 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:22:33,244 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:22:33,245 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:22:33,245 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:22:33,259 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:22:33,259 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:22:33,260 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:22:33,260 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:22:33,261 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:22:33,261 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:22:33,262 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:22:33,276 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:22:33,277 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:22:33,277 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:22:33,278 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:22:33,278 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:22:33,279 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:22:33,279 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:22:33,299 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:22:33,300 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:22:33,301 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:22:33,301 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:22:33,302 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:22:33,302 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:22:33,303 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:22:33,324 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:22:33,325 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:22:33,325 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:22:33,326 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:22:33,326 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:22:33,327 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:22:33,327 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:22:33,340 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:22:33,341 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:22:33,341 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:22:33,342 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:22:33,342 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:22:33,343 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:22:33,343 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:22:33,364 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:22:33,364 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:22:33,365 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:22:33,365 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:22:33,366 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:22:33,366 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:22:33,367 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:22:33,383 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:22:33,384 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:22:33,384 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:22:33,385 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:22:33,385 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:22:33,386 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:22:33,387 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:22:33,401 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:22:33,401 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:22:33,402 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:22:33,402 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:22:33,403 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:22:33,403 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:22:33,404 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:22:33,421 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:22:33,422 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:22:33,422 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:22:33,423 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:22:33,423 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:22:33,424 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:22:33,424 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:22:33,430 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:22:33,430 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:22:33,431 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:22:33,431 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:22:33,432 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:22:33,432 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:22:33,433 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:22:33,456 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:22:33,457 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:22:33,457 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:22:33,458 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:22:33,458 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:22:33,459 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:22:33,459 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:22:33,475 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:22:33,476 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:22:33,476 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:22:33,477 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:22:33,477 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:22:33,478 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:22:33,478 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:22:33,529 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:22:33,530 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:22:33,530 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:22:33,531 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:22:33,531 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:22:33,532 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:22:33,532 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:22:33,542 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:22:33,543 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:22:33,543 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:22:33,544 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:22:33,544 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:22:33,545 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:22:33,545 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:22:33,592 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:22:33,593 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:22:33,594 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:22:33,594 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:22:33,595 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:22:33,595 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:22:33,596 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:22:33,792 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:22:33,792 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:22:33,793 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:22:33,793 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:22:33,794 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:22:33,794 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:22:33,795 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:22:33,845 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:22:33,846 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:22:33,846 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:22:33,847 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:22:33,847 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:22:33,848 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:22:33,848 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:22:33,900 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:22:33,901 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:22:33,901 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:22:33,902 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:22:33,902 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:22:33,903 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:22:33,904 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:22:33,954 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:22:33,954 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:22:33,955 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:22:33,955 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:22:33,956 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:22:33,956 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:22:33,957 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:22:34,006 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:22:34,007 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:22:34,007 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:22:34,008 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:22:34,008 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:22:34,009 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:22:34,010 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:22:34,058 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:22:34,059 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:22:34,059 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:22:34,060 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:22:34,060 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:22:34,061 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:22:34,061 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:22:34,115 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:22:34,115 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:22:34,116 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:22:34,116 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:22:34,117 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:22:34,117 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:22:34,118 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:22:34,185 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:22:34,185 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:22:34,186 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:22:34,186 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:22:34,187 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:22:34,187 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:22:34,188 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:22:34,249 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:22:34,249 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:22:34,250 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:22:34,250 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:22:34,251 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:22:34,251 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:22:34,252 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:22:34,311 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:22:34,311 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:22:34,312 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:22:34,312 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:22:34,313 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:22:34,313 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:22:34,314 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:22:34,320 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:22:34,320 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:22:34,321 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:22:34,321 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:22:34,322 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:22:34,322 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:22:34,323 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:22:34,336 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:22:34,336 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:22:34,337 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:22:34,338 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:22:34,338 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:22:34,339 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:22:34,339 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:22:34,359 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:22:34,360 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:22:34,360 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:22:34,361 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:22:34,361 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:22:34,362 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:22:34,363 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:22:34,369 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:22:34,369 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:22:34,370 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:22:34,371 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:22:34,371 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:22:34,372 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:22:34,372 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:22:34,379 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:22:34,380 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:22:34,380 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:22:34,381 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:22:34,381 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:22:34,382 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:22:34,382 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:22:34,392 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:22:34,392 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:22:34,393 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:22:34,393 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:22:34,394 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:22:34,395 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:22:34,395 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:22:34,405 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:22:34,405 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:22:34,406 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:22:34,406 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:22:34,407 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:22:34,407 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:22:34,408 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:22:34,418 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:22:34,419 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:22:34,419 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:22:34,420 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:22:34,420 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:22:34,421 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:22:34,421 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:22:34,430 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:22:34,430 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:22:34,431 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:22:34,431 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:22:34,432 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:22:34,432 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:22:34,433 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:22:34,443 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:22:34,444 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:22:34,444 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:22:34,445 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:22:34,446 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:22:34,446 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:22:34,447 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:22:34,455 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:22:34,456 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:22:34,456 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:22:34,457 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:22:34,457 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:22:34,458 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:22:34,458 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:22:34,467 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:22:34,467 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:22:34,468 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:22:34,469 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:22:34,469 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:22:34,470 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:22:34,470 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:22:34,531 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:22:34,531 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:22:34,532 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:22:34,532 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:22:34,533 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:22:34,534 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:22:34,534 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+  PASS  test_active_frontier_browser.py::test_manual_frontier_request_survives_browser_reload
+  PASS  test_active_investigation.py::test_ambient_discovery_source_failure_diagnostics_persist
+  PASS  test_active_investigation.py::test_availability_change_marks_campaign_dirty_without_new_graph_fact
+  PASS  test_active_investigation.py::test_campaign_expansion_and_correlated_migration_use_recorded_changes
+  PASS  test_active_investigation.py::test_campaign_pause_keeps_frontier_history
+  PASS  test_active_investigation.py::test_degraded_certificate_source_yields_to_local_pivot
+  PASS  test_active_investigation.py::test_frontier_migration_restart_dedupe_and_budget
+  PASS  test_active_investigation.py::test_generic_infrastructure_is_discovery_only_and_bounded
+  PASS  test_active_investigation.py::test_negative_evidence_weakens_not_invents_campaigns
+  PASS  test_active_investigation.py::test_path_depth_and_manual_api_validation
+  PASS  test_active_investigation.py::test_recheck_accepts_legacy_snapshot_with_unknown_list_values
+  PASS  test_active_investigation.py::test_repeated_observation_does_not_recompute_campaign_members
+  PASS  test_active_investigation.py::test_source_failure_report_and_remaining_budget
+  PASS  test_active_investigation.py::test_two_step_ct_path_preserves_provenance_and_human_feedback
+  PASS  test_campaign_graph_browser.py::test_campaign_graph_review_and_edge_evidence_survive_reload
+  PASS  test_campaigns.py::test_a_completed_campaign_reports_rather_than_restarting
+  PASS  test_campaigns.py::test_a_promotion_records_why_it_was_prioritised
+  PASS  test_campaigns.py::test_a_refused_spend_does_not_consume_budget
+  PASS  test_campaigns.py::test_a_scarce_deep_analysis_budget_goes_to_the_best_evidenced_candidate
+  PASS  test_campaigns.py::test_campaign_language_never_claims_shared_ownership
+  PASS  test_campaigns.py::test_campaign_reaches_a_site_that_shares_an_indicator_with_the_seed
+  PASS  test_campaigns.py::test_campaign_walks_all_five_stages
+  PASS  test_campaigns.py::test_candidate_budget_caps_how_many_new_sites_are_added
+  PASS  test_campaigns.py::test_completed_leads_are_not_run_twice_across_resumes
+  PASS  test_campaigns.py::test_deep_analysis_budget_caps_promotions
+  PASS  test_campaigns.py::test_every_candidate_carries_an_explainable_discovery_path
+  PASS  test_campaigns.py::test_interrupted_campaign_resumes_without_repeating_completed_stages
+  PASS  test_campaigns.py::test_lead_budget_caps_how_many_leads_a_campaign_runs
+  PASS  test_campaigns.py::test_report_separates_derived_correlation_from_observed_fact
+  PASS  test_campaigns.py::test_seed_kinds_all_resolve_without_inventing_sites
+  PASS  test_campaigns.py::test_time_limit_stops_a_campaign
+  PASS  test_campaigns.py::test_unsupported_seed_kind_is_refused_at_creation
+  PASS  test_campaigns.py::test_weakly_connected_candidates_are_set_aside_with_a_stated_reason
+  PASS  test_candidate_priority.py::test_a_candidate_with_nothing_observed_scores_zero
+  PASS  test_candidate_priority.py::test_a_found_deposit_route_raises_a_candidate
+  PASS  test_candidate_priority.py::test_a_known_new_domain_scores_and_an_old_one_does_not
+  PASS  test_candidate_priority.py::test_an_observed_wallet_raises_a_candidate
+  PASS  test_candidate_priority.py::test_an_unknown_registration_date_scores_nothing
+  PASS  test_candidate_priority.py::test_an_unreachable_site_gets_no_activity_credit
+  PASS  test_candidate_priority.py::test_every_factor_carries_its_own_evidence_and_class
+  PASS  test_candidate_priority.py::test_priority_is_not_presented_as_a_judgement_about_the_site
+  PASS  test_candidate_priority.py::test_priority_never_exceeds_one
+  PASS  test_candidate_priority.py::test_ranking_an_unknown_site_does_not_crash
+  PASS  test_candidate_priority.py::test_ranking_puts_the_best_evidenced_candidate_first
+  PASS  test_candidate_priority.py::test_the_explanation_separates_observed_from_derived
+  PASS  test_candidate_selection.py::test_diversity_breaks_close_cluster_ties_but_not_large_quality_gap
+  PASS  test_candidate_selection.py::test_repeated_sightings_from_noisy_source_are_not_independent
+  PASS  test_candidate_selection.py::test_repetition_cannot_beat_independent_evidence
+  PASS  test_candidate_selection.py::test_selection_explanation_and_existing_queue
+  PASS  test_cluster_watch.py::test_a_new_domain_sharing_a_wallet_matches_the_family
+  PASS  test_cluster_watch.py::test_a_single_site_cluster_has_no_signature
+  PASS  test_cluster_watch.py::test_a_site_is_not_matched_against_its_own_family
+  PASS  test_cluster_watch.py::test_an_indicator_on_hundreds_of_sites_is_left_out_of_the_signature
+  PASS  test_cluster_watch.py::test_every_match_names_an_innocent_explanation
+  PASS  test_cluster_watch.py::test_match_language_never_claims_shared_ownership
+  PASS  test_cluster_watch.py::test_sharing_only_a_nameserver_does_not_match
+  PASS  test_cluster_watch.py::test_signature_explains_itself
+  PASS  test_cluster_watch.py::test_signature_is_built_from_what_members_actually_share
+  PASS  test_cluster_watch.py::test_two_independent_weak_categories_are_enough
+  PASS  test_cluster_watch.py::test_watch_does_not_record_the_same_domain_twice
+  PASS  test_cluster_watch.py::test_watch_records_a_newly_appearing_related_domain
+  PASS  test_cluster_watch.py::test_watch_report_is_readable
+  PASS  test_cluster_watch.py::test_watch_reports_clearly_when_there_is_nothing_to_watch
+  PASS  test_ct_frontier.py::test_new_candidate_opens_one_persistent_frontier_query
+  PASS  test_ct_query_rotation.py::test_ct_queries_rotate_and_survive_restart
+  PASS  test_db.py::test_add_site_allows_distinct_domains
+  PASS  test_db.py::test_add_site_dedupes_by_domain
+  PASS  test_db.py::test_findings_lifecycle
+  PASS  test_db.py::test_list_findings_filters_by_status
+  PASS  test_db.py::test_next_sites_to_scan_respects_min_score_threshold
+  PASS  test_db.py::test_site_status_transitions
+  PASS  test_db.py::test_update_site_score_and_ordering
+  PASS  test_db.py::test_wallet_dedup_across_sightings
+  PASS  test_db.py::test_wallet_evidence_attached_to_sighting
+  PASS  test_db.py::test_wallet_sighting_dedup_same_page
+ * Serving Flask app 'fake_scam_site'
+ * Debug mode: off
+2026-10-03 21:22:34,551 INFO werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:8765
+2026-10-03 21:22:34,551 INFO werkzeug: [33mPress CTRL+C to quit[0m
+2026-10-03 21:22:34,846 INFO werkzeug: 127.0.0.1 - - [03/Oct/2026 21:22:34] "GET / HTTP/1.1" 200 -
+2026-10-03 21:22:35,145 INFO werkzeug: 127.0.0.1 - - [03/Oct/2026 21:22:35] "GET /deposit-tabs HTTP/1.1" 200 -
+2026-10-03 21:22:36,729 INFO werkzeug: 127.0.0.1 - - [03/Oct/2026 21:22:36] "GET /deposit-tabs/address/btc HTTP/1.1" 200 -
+2026-10-03 21:22:37,355 INFO werkzeug: 127.0.0.1 - - [03/Oct/2026 21:22:37] "GET /deposit-tabs/address/eth HTTP/1.1" 200 -
+2026-10-03 21:22:38,722 INFO werkzeug: 127.0.0.1 - - [03/Oct/2026 21:22:38] "GET /deposit-tabs/address/usdt-trc20 HTTP/1.1" 200 -
+2026-10-03 21:22:39,724 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:22:39,725 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:22:39,725 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:22:39,726 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:22:39,727 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:22:39,727 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:22:39,728 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:22:39,736 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:22:39,737 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:22:39,738 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:22:39,738 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:22:39,739 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:22:39,739 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:22:39,740 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:22:40,048 INFO werkzeug: 127.0.0.1 - - [03/Oct/2026 21:22:40] "GET /signup HTTP/1.1" 200 -
+2026-10-03 21:22:41,557 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:22:41,557 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:22:41,558 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:22:41,559 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:22:41,559 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:22:41,560 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:22:41,561 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:22:41,869 INFO werkzeug: 127.0.0.1 - - [03/Oct/2026 21:22:41] "GET /signup-clean HTTP/1.1" 200 -
+2026-10-03 21:22:44,920 INFO werkzeug: 127.0.0.1 - - [03/Oct/2026 21:22:44] "GET /account-dashboard?email=research_zxc0sxtt@research-test.invalid&username=research_zxc0sxtt HTTP/1.1" 200 -
+2026-10-03 21:22:46,947 INFO werkzeug: 127.0.0.1 - - [03/Oct/2026 21:22:46] "GET /account-dashboard?email=research_zxc0sxtt@research-test.invalid&username=research_zxc0sxtt HTTP/1.1" 200 -
+2026-10-03 21:22:49,830 INFO werkzeug: 127.0.0.1 - - [03/Oct/2026 21:22:49] "GET /member-deposit HTTP/1.1" 200 -
+2026-10-03 21:22:52,053 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:22:52,054 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:22:52,054 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:22:52,055 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:22:52,055 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:22:52,056 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:22:52,057 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:22:52,349 INFO werkzeug: 127.0.0.1 - - [03/Oct/2026 21:22:52] "GET /signup-clean HTTP/1.1" 200 -
+2026-10-03 21:22:54,771 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:22:54,772 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:22:54,772 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:22:54,773 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:22:54,774 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:22:54,774 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:22:54,775 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:22:55,086 INFO werkzeug: 127.0.0.1 - - [03/Oct/2026 21:22:55] "GET /deposit-tabs HTTP/1.1" 200 -
+2026-10-03 21:22:57,645 INFO werkzeug: 127.0.0.1 - - [03/Oct/2026 21:22:57] "GET /deposit-tabs/address/btc HTTP/1.1" 200 -
+2026-10-03 21:22:58,274 INFO werkzeug: 127.0.0.1 - - [03/Oct/2026 21:22:58] "GET /deposit-tabs/address/eth HTTP/1.1" 200 -
+2026-10-03 21:22:59,639 INFO werkzeug: 127.0.0.1 - - [03/Oct/2026 21:22:59] "GET /deposit-tabs/address/usdt-trc20 HTTP/1.1" 200 -
+2026-10-03 21:23:00,656 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:23:00,657 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:23:00,658 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:23:00,661 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:23:00,662 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:23:00,663 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:23:00,663 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:23:00,974 INFO werkzeug: 127.0.0.1 - - [03/Oct/2026 21:23:00] "GET /deposit-tabs HTTP/1.1" 200 -
+2026-10-03 21:23:04,189 INFO werkzeug: 127.0.0.1 - - [03/Oct/2026 21:23:04] "GET /deposit-tabs/address/btc HTTP/1.1" 200 -
+2026-10-03 21:23:04,821 INFO werkzeug: 127.0.0.1 - - [03/Oct/2026 21:23:04] "GET /deposit-tabs/address/eth HTTP/1.1" 200 -
+2026-10-03 21:23:06,189 INFO werkzeug: 127.0.0.1 - - [03/Oct/2026 21:23:06] "GET /deposit-tabs/address/usdt-trc20 HTTP/1.1" 200 -
+2026-10-03 21:23:07,196 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:23:07,197 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:23:07,197 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:23:07,198 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:23:07,198 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:23:07,199 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:23:07,200 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:23:09,215 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:23:09,215 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:23:09,216 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:23:09,216 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:23:09,217 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:23:09,217 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:23:09,218 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:23:09,219 ERROR scamhunter.discovery.engine: Discovery source broken_source failed
+Traceback (most recent call last):
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/app/discovery/engine.py", line 119, in _run_cold_source
+    candidates = discoverer.discover()
+                 ^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/tests/test_discovery_engine.py", line 109, in discover
+    raise RuntimeError("simulated API failure")
+RuntimeError: simulated API failure
+2026-10-03 21:23:10,228 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:23:10,229 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:23:10,230 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:23:10,230 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:23:10,231 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:23:10,231 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:23:10,232 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:23:11,244 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:23:11,244 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:23:11,245 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:23:11,246 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:23:11,246 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:23:11,247 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:23:11,248 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:23:13,264 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:23:13,265 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:23:13,266 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:23:13,266 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:23:13,267 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:23:13,268 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:23:13,268 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:23:13,274 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:23:13,275 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:23:13,275 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:23:13,276 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:23:13,276 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:23:13,277 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:23:13,277 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:23:14,288 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:23:14,289 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:23:14,289 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:23:14,290 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:23:14,290 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:23:14,291 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:23:14,292 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:23:15,306 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:23:15,306 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:23:15,307 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:23:15,307 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:23:15,308 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:23:15,308 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:23:15,309 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:23:15,326 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:23:15,327 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:23:15,327 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:23:15,328 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:23:15,329 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:23:15,329 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:23:15,330 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:23:15,370 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:23:15,371 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:23:15,371 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:23:15,372 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:23:15,373 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:23:15,373 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:23:15,374 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:23:15,441 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:23:15,442 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:23:15,442 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:23:15,443 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:23:15,443 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:23:15,444 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:23:15,444 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:23:15,529 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:23:15,530 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:23:15,530 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:23:15,531 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:23:15,532 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:23:15,532 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:23:15,533 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:23:15,590 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:23:15,591 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:23:15,592 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:23:15,593 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:23:15,594 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:23:15,594 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:23:15,595 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:23:15,663 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:23:15,664 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:23:15,664 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:23:15,665 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:23:15,666 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:23:15,667 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:23:15,668 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:23:15,707 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:23:15,708 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:23:15,709 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:23:15,711 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:23:15,712 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:23:15,713 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:23:15,713 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:23:15,860 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:23:15,861 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:23:15,861 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:23:15,862 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:23:15,862 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:23:15,863 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:23:15,863 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:23:15,902 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:23:15,903 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:23:15,903 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:23:15,904 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:23:15,904 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:23:15,905 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:23:15,905 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:23:15,941 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:23:15,942 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:23:15,942 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:23:15,943 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:23:15,943 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:23:15,944 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:23:15,945 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:23:15,976 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:23:15,976 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:23:15,977 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:23:15,977 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:23:15,978 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:23:15,978 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:23:15,979 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:23:16,023 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:23:16,023 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:23:16,024 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:23:16,024 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:23:16,025 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:23:16,025 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:23:16,026 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:23:16,092 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:23:16,093 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:23:16,093 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:23:16,094 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:23:16,094 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:23:16,095 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:23:16,096 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:23:16,123 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:23:16,124 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:23:16,124 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:23:16,125 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:23:16,126 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:23:16,126 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:23:16,127 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:23:16,413 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:23:16,414 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:23:16,414 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:23:16,415 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:23:16,415 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:23:16,416 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:23:16,416 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:23:16,466 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:23:16,467 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:23:16,468 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:23:16,468 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:23:16,469 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:23:16,469 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:23:16,470 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:23:16,518 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:23:16,519 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:23:16,519 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:23:16,520 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:23:16,520 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:23:16,521 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:23:16,521 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:23:16,569 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:23:16,570 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:23:16,570 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:23:16,571 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:23:16,572 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:23:16,572 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:23:16,573 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:23:16,587 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:23:16,587 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:23:16,588 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:23:16,588 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:23:16,589 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:23:16,589 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:23:16,590 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:23:16,638 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:23:16,639 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:23:16,639 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:23:16,640 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:23:16,640 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:23:16,641 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:23:16,642 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:23:16,690 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:23:16,690 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:23:16,691 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:23:16,691 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:23:16,692 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:23:16,692 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:23:16,693 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:23:16,740 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:23:16,741 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:23:16,741 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:23:16,742 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:23:16,742 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:23:16,743 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:23:16,744 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:23:16,791 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:23:16,792 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:23:16,792 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:23:16,793 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:23:16,793 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:23:16,794 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:23:16,794 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:23:16,837 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:23:16,837 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:23:16,838 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:23:16,838 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:23:16,839 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:23:16,839 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:23:16,840 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:23:16,845 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:23:16,846 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:23:16,847 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:23:16,847 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:23:16,847 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:23:16,848 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:23:16,849 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:23:16,900 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:23:16,900 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:23:16,901 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:23:16,901 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:23:16,902 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:23:16,902 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:23:16,903 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:23:16,947 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:23:16,948 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:23:16,948 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:23:16,949 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:23:16,949 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:23:16,950 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:23:16,950 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:23:16,998 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:23:16,999 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:23:16,999 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:23:17,000 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:23:17,000 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:23:17,001 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:23:17,002 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:23:17,050 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:23:17,050 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:23:17,051 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:23:17,051 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:23:17,052 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:23:17,052 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:23:17,053 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:23:17,357 INFO werkzeug: 127.0.0.1 - - [03/Oct/2026 21:23:17] "GET /loop-a HTTP/1.1" 200 -
+2026-10-03 21:23:20,110 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:23:20,110 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:23:20,111 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:23:20,111 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:23:20,112 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:23:20,112 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:23:20,113 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:23:20,415 INFO werkzeug: 127.0.0.1 - - [03/Oct/2026 21:23:20] "GET / HTTP/1.1" 200 -
+2026-10-03 21:23:22,830 INFO werkzeug: 127.0.0.1 - - [03/Oct/2026 21:23:22] "GET /investment HTTP/1.1" 200 -
+2026-10-03 21:23:25,296 INFO werkzeug: 127.0.0.1 - - [03/Oct/2026 21:23:25] "GET /deposit HTTP/1.1" 200 -
+2026-10-03 21:23:28,203 INFO werkzeug: 127.0.0.1 - - [03/Oct/2026 21:23:28] "GET /wallet HTTP/1.1" 200 -
+2026-10-03 21:23:30,014 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:23:30,014 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:23:30,015 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:23:30,015 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:23:30,016 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:23:30,016 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:23:30,017 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:23:30,325 INFO werkzeug: 127.0.0.1 - - [03/Oct/2026 21:23:30] "GET / HTTP/1.1" 200 -
+2026-10-03 21:23:32,896 INFO werkzeug: 127.0.0.1 - - [03/Oct/2026 21:23:32] "GET /investment HTTP/1.1" 200 -
+2026-10-03 21:23:34,194 INFO werkzeug: 127.0.0.1 - - [03/Oct/2026 21:23:34] "GET /deposit HTTP/1.1" 200 -
+2026-10-03 21:23:37,261 INFO werkzeug: 127.0.0.1 - - [03/Oct/2026 21:23:37] "GET /wallet HTTP/1.1" 200 -
+2026-10-03 21:23:39,536 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:23:39,537 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:23:39,537 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:23:39,538 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:23:39,538 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:23:39,539 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:23:39,540 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:23:39,930 INFO werkzeug: 127.0.0.1 - - [03/Oct/2026 21:23:39] "GET / HTTP/1.1" 200 -
+2026-10-03 21:23:41,549 INFO werkzeug: 127.0.0.1 - - [03/Oct/2026 21:23:41] "GET /investment HTTP/1.1" 200 -
+2026-10-03 21:23:43,438 INFO werkzeug: 127.0.0.1 - - [03/Oct/2026 21:23:43] "GET /deposit HTTP/1.1" 200 -
+2026-10-03 21:23:46,238 INFO werkzeug: 127.0.0.1 - - [03/Oct/2026 21:23:46] "GET /wallet HTTP/1.1" 200 -
+2026-10-03 21:23:49,120 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:23:49,121 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:23:49,121 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:23:49,122 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:23:49,123 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:23:49,124 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:23:49,124 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:23:49,462 INFO werkzeug: 127.0.0.1 - - [03/Oct/2026 21:23:49] "GET /has-dead-link HTTP/1.1" 200 -
+2026-10-03 21:23:50,910 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:23:50,911 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:23:50,912 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:23:50,912 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:23:50,913 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:23:50,913 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:23:50,914 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:23:51,242 INFO werkzeug: 127.0.0.1 - - [03/Oct/2026 21:23:51] "[32mGET /old-deposit HTTP/1.1[0m" 301 -
+2026-10-03 21:23:51,244 INFO werkzeug: 127.0.0.1 - - [03/Oct/2026 21:23:51] "GET /deposit HTTP/1.1" 200 -
+2026-10-03 21:23:54,406 INFO werkzeug: 127.0.0.1 - - [03/Oct/2026 21:23:54] "GET /investment HTTP/1.1" 200 -
+2026-10-03 21:23:57,469 INFO werkzeug: 127.0.0.1 - - [03/Oct/2026 21:23:57] "GET /deposit HTTP/1.1" 200 -
+2026-10-03 21:23:59,714 INFO werkzeug: 127.0.0.1 - - [03/Oct/2026 21:23:59] "GET /wallet HTTP/1.1" 200 -
+2026-10-03 21:24:02,742 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:24:02,742 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:24:02,743 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:24:02,743 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:24:02,744 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:24:02,744 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:24:02,745 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:24:03,121 INFO werkzeug: 127.0.0.1 - - [03/Oct/2026 21:24:03] "GET / HTTP/1.1" 200 -
+2026-10-03 21:24:05,901 INFO werkzeug: 127.0.0.1 - - [03/Oct/2026 21:24:05] "GET /investment HTTP/1.1" 200 -
+2026-10-03 21:24:07,228 INFO werkzeug: 127.0.0.1 - - [03/Oct/2026 21:24:07] "GET /deposit HTTP/1.1" 200 -
+2026-10-03 21:24:10,401 INFO werkzeug: 127.0.0.1 - - [03/Oct/2026 21:24:10] "GET /wallet HTTP/1.1" 200 -
+  PASS  test_deep_wallet_hunt.py::test_deep_wallet_hunt_clicks_through_currency_tabs
+  PASS  test_deep_wallet_hunt.py::test_deep_wallet_hunt_mode_allows_more_pages_than_default
+  PASS  test_deep_wallet_hunt.py::test_post_signup_hunt_does_not_run_when_signup_hits_verification_wall
+  PASS  test_deep_wallet_hunt.py::test_post_signup_wallet_hunt_finds_member_only_deposit_page
+  PASS  test_deep_wallet_hunt.py::test_signup_never_attempted_when_allow_signup_false_even_in_deep_hunt_mode
+  PASS  test_deep_wallet_hunt.py::test_wallet_count_is_not_inflated_by_re_scanning_after_tab_clicks
+  PASS  test_deep_wallet_hunt.py::test_wallet_tab_clicks_are_logged_as_decisions
+  PASS  test_discovery_contact_reuse.py::test_extracts_distinctive_domain_email
+  PASS  test_discovery_contact_reuse.py::test_extracts_telegram_from_tme_link
+  PASS  test_discovery_contact_reuse.py::test_extracts_telegram_handle
+  PASS  test_discovery_contact_reuse.py::test_extracts_whatsapp_number
+  PASS  test_discovery_contact_reuse.py::test_filters_generic_placeholder_email
+  PASS  test_discovery_contact_reuse.py::test_find_shared_contacts_matches_across_sites
+  PASS  test_discovery_contact_reuse.py::test_find_shared_contacts_returns_empty_when_nothing_matches
+  PASS  test_discovery_contact_reuse.py::test_has_any_contacts
+  PASS  test_discovery_contact_reuse.py::test_keeps_generic_local_part_on_distinctive_domain
+  PASS  test_discovery_contact_reuse.py::test_phone_numbers_are_deduped_when_one_is_a_suffix_of_another
+  PASS  test_discovery_contact_reuse.py::test_telegram_regex_does_not_false_positive_on_email_domain
+  PASS  test_discovery_contact_reuse.py::test_telegram_regex_does_not_false_positive_on_generic_email
+  PASS  test_discovery_engine.py::test_engine_dedupes_across_repeated_runs
+  PASS  test_discovery_engine.py::test_engine_handles_source_exception_without_crashing_the_run
+  PASS  test_discovery_engine.py::test_engine_ingests_new_candidates_and_writes_discovery_fields
+  PASS  test_discovery_engine.py::test_engine_logs_discovery_event_even_for_duplicates
+  (skipping: no DNS resolution available in this environment)
+  PASS  test_discovery_engine.py::test_engine_pivots_off_existing_sites_with_real_dns
+  PASS  test_discovery_engine.py::test_engine_progress_callbacks_fire_for_discovered_sites
+  PASS  test_discovery_engine.py::test_engine_records_run_stats_and_per_source_breakdown
+  PASS  test_discovery_repeat_metrics.py::test_duplicate_events_survive_restart_and_reduce_source_priority
+  PASS  test_discovery_shared_infrastructure.py::test_build_fingerprint_cache_covers_all_requested_domains
+  PASS  test_discovery_shared_infrastructure.py::test_does_not_match_against_itself
+  PASS  test_discovery_shared_infrastructure.py::test_matches_on_shared_ip
+  PASS  test_discovery_shared_infrastructure.py::test_matches_on_shared_nameservers_when_ip_differs
+  PASS  test_discovery_shared_infrastructure.py::test_no_match_on_different_ip
+  PASS  test_discovery_shared_infrastructure.py::test_no_match_when_candidate_has_no_resolvable_ip
+  PASS  test_discovery_similar_domains.py::test_discover_from_brands_tags_brand_impersonation_category
+  PASS  test_discovery_similar_domains.py::test_discover_from_site_only_returns_resolving_variants
+  PASS  test_discovery_similar_domains.py::test_discover_from_site_returns_nothing_when_no_variants_resolve
+  PASS  test_discovery_similar_domains.py::test_discover_from_site_skips_short_roots
+  PASS  test_discovery_similar_domains.py::test_discover_respects_max_dns_checks_budget
+  PASS  test_discovery_similar_domains.py::test_domain_root_strips_scheme_and_www
+  PASS  test_discovery_similar_domains.py::test_generate_variants_excludes_seed_itself
+  PASS  test_discovery_similar_domains.py::test_generate_variants_handles_short_root_without_crashing
+  PASS  test_discovery_similar_domains.py::test_generate_variants_includes_affix_patterns
+  PASS  test_discovery_similar_domains.py::test_generate_variants_includes_omission_and_doubling
+  PASS  test_discovery_similar_domains.py::test_generate_variants_respects_max_limit
+  PASS  test_discovery_template_similarity.py::test_empty_html_produces_empty_fingerprint
+  PASS  test_discovery_template_similarity.py::test_extract_tag_sequence
+  PASS  test_discovery_template_similarity.py::test_extract_tag_sequence_ignores_attributes
+  PASS  test_discovery_template_similarity.py::test_find_matches_returns_only_above_threshold_sorted_desc
+  PASS  test_discovery_template_similarity.py::test_fingerprint_html_file_handles_missing_file_gracefully
+  PASS  test_discovery_template_similarity.py::test_fingerprint_html_file_reads_real_file
+  PASS  test_discovery_template_similarity.py::test_identical_html_scores_perfect_similarity
+  PASS  test_discovery_template_similarity.py::test_same_template_different_content_scores_high_similarity
+  PASS  test_discovery_template_similarity.py::test_similarity_with_empty_fingerprint_is_zero
+  PASS  test_discovery_template_similarity.py::test_unrelated_sites_score_low_similarity
+  PASS  test_investigation_intelligence.py::test_actions_are_bounded_and_campaign_review_does_not_cast_domain_votes
+  PASS  test_investigation_intelligence.py::test_campaign_api_compatible_with_existing_queue
+  PASS  test_investigation_intelligence.py::test_campaign_feedback_requires_five_distinct_campaigns
+  PASS  test_investigation_intelligence.py::test_campaign_merge_split_and_provenance_survive_restart
+  PASS  test_investigation_intelligence.py::test_explicit_merge_and_split_preserve_analyst_evidence
+  PASS  test_investigation_intelligence.py::test_graph_schema_rollback_preserves_release_candidate_tables
+  PASS  test_investigation_intelligence.py::test_high_degree_wallet_does_not_explode_pivots_or_campaigns
+  PASS  test_investigation_intelligence.py::test_independent_evidence_stronger_than_repeated_certificate
+  PASS  test_investigation_intelligence.py::test_migration_backfills_existing_v2_without_mutating_candidates
+  PASS  test_investigation_intelligence.py::test_migration_preserves_v1_observations_and_source_urls
+  PASS  test_investigation_intelligence.py::test_one_shared_support_service_alone_is_not_a_relationship
+  PASS  test_investigation_intelligence.py::test_shortlist_defers_same_campaign_member_with_recorded_reason
+  PASS  test_investigation_intelligence.py::test_temporal_wallet_and_reactivation_recorded_once
+  PASS  test_investigation_intelligence.py::test_weak_shared_host_and_generic_template_never_form_campaign
+  PASS  test_knowledge_graph.py::test_an_observed_edge_says_where_the_fact_came_from
+  PASS  test_knowledge_graph.py::test_every_derived_edge_states_a_reason
+  PASS  test_knowledge_graph.py::test_every_node_and_edge_declares_its_evidence_class
+  PASS  test_knowledge_graph.py::test_every_site_records_where_it_was_discovered
+  PASS  test_knowledge_graph.py::test_export_node_and_edge_types_are_all_declared
+  PASS  test_knowledge_graph.py::test_families_appear_as_cluster_nodes
+  PASS  test_knowledge_graph.py::test_graph_contains_sites_indicators_wallets_and_infrastructure
+  PASS  test_knowledge_graph.py::test_graph_language_never_claims_shared_ownership
+  PASS  test_knowledge_graph.py::test_graph_stats_are_cheap_and_complete
+  PASS  test_knowledge_graph.py::test_neighbourhood_of_an_unknown_site_says_so
+  PASS  test_knowledge_graph.py::test_neighbourhood_returns_the_graph_around_one_site
+  PASS  test_knowledge_graph.py::test_observed_only_view_strips_every_software_conclusion
+  PASS  test_knowledge_graph.py::test_platform_export_is_typed_and_carries_its_evidence_policy
+  PASS  test_knowledge_graph.py::test_wallets_and_infrastructure_are_separate_node_types
+  PASS  test_navigator_integration.py::test_avoids_infinite_loop_between_two_pages
+  PASS  test_navigator_integration.py::test_decision_log_records_navigation_reasoning
+  PASS  test_navigator_integration.py::test_does_not_follow_external_domain_links
+  PASS  test_navigator_integration.py::test_full_investigation_finds_wallets_and_follows_relevant_links
+  PASS  test_navigator_integration.py::test_handles_dead_link_without_crashing
+  PASS  test_navigator_integration.py::test_handles_redirect_and_continues_on_final_url
+  PASS  test_navigator_integration.py::test_investigation_record_wallets_found_count_matches_actual_wallets2026-10-03 21:24:12,288 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:24:12,288 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:24:12,289 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:24:12,289 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:24:12,290 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:24:12,290 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:24:12,291 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:24:12,624 INFO werkzeug: 127.0.0.1 - - [03/Oct/2026 21:24:12] "GET /login HTTP/1.1" 200 -
+2026-10-03 21:24:14,603 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:24:14,604 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:24:14,604 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:24:14,605 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:24:14,605 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:24:14,606 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:24:14,607 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:24:14,922 INFO werkzeug: 127.0.0.1 - - [03/Oct/2026 21:24:14] "GET /signup HTTP/1.1" 200 -
+2026-10-03 21:24:16,620 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:24:16,621 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:24:16,621 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:24:16,622 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:24:16,623 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:24:16,623 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:24:16,624 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:24:16,947 INFO werkzeug: 127.0.0.1 - - [03/Oct/2026 21:24:16] "GET /verify HTTP/1.1" 200 -
+2026-10-03 21:24:18,464 INFO scamhunter.navigator: Access control stop on http://127.0.0.1:8765/verify: Encountered a payment required wall (matched signal: 'unlock withdrawal'). Stopping this investigation rather than attempting to bypass it.
+2026-10-03 21:24:18,543 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:24:18,544 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:24:18,545 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:24:18,546 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:24:18,546 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:24:18,547 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:24:18,548 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:24:18,841 INFO werkzeug: 127.0.0.1 - - [03/Oct/2026 21:24:18] "GET /deposit HTTP/1.1" 200 -
+2026-10-03 21:24:22,447 INFO werkzeug: 127.0.0.1 - - [03/Oct/2026 21:24:22] "GET /investment HTTP/1.1" 200 -
+2026-10-03 21:24:24,062 INFO werkzeug: 127.0.0.1 - - [03/Oct/2026 21:24:24] "GET /wallet HTTP/1.1" 200 -
+2026-10-03 21:24:27,460 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:24:27,461 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:24:27,461 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:24:27,462 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:24:27,462 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:24:27,463 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:24:27,464 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:24:27,519 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:24:27,519 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:24:27,520 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:24:27,520 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:24:27,521 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:24:27,521 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:24:27,522 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:24:27,568 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:24:27,569 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:24:27,569 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:24:27,570 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:24:27,570 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:24:27,571 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:24:27,571 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:24:27,650 INFO scamhunter.collectors.public_feeds: No feeds configured in /workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/data/feeds.txt — skipping public feed collection.
+2026-10-03 21:24:27,904 INFO scamhunter.collectors.public_feeds: No feeds configured in /workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/data/feeds.txt — skipping public feed collection.
+2026-10-03 21:24:28,137 INFO scamhunter.collectors.public_feeds: No feeds configured in /workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/data/feeds.txt — skipping public feed collection.
+2026-10-03 21:24:28,986 INFO scamhunter.collectors.public_feeds: No feeds configured in /workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/data/feeds.txt — skipping public feed collection.
+2026-10-03 21:24:29,343 INFO scamhunter.collectors.public_feeds: No feeds configured in /workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/data/feeds.txt — skipping public feed collection.
+2026-10-03 21:24:30,280 INFO scamhunter.collectors.public_feeds: No feeds configured in /workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/data/feeds.txt — skipping public feed collection.
+2026-10-03 21:24:30,722 INFO scamhunter.collectors.public_feeds: No feeds configured in /workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/data/feeds.txt — skipping public feed collection.
+2026-10-03 21:24:31,326 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:24:31,327 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:24:31,327 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:24:31,328 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:24:31,328 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:24:31,329 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:24:31,330 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:24:31,359 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:24:31,360 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:24:31,360 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:24:31,361 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:24:31,361 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:24:31,362 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:24:31,362 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:24:31,415 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:24:31,415 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:24:31,416 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:24:31,416 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:24:31,417 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:24:31,417 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:24:31,418 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:24:31,437 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:24:31,438 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:24:31,438 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:24:31,439 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:24:31,439 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:24:31,440 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:24:31,441 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:24:31,527 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:24:31,527 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:24:31,528 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:24:31,528 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:24:31,529 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:24:31,529 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:24:31,530 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:24:31,546 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:24:31,547 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:24:31,547 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:24:31,548 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:24:31,548 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:24:31,549 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:24:31,550 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:24:31,580 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:24:31,581 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:24:31,582 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:24:31,582 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:24:31,583 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:24:31,583 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:24:31,584 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:24:31,610 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:24:31,610 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:24:31,611 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:24:31,611 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:24:31,612 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:24:31,612 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:24:31,613 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:24:31,632 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:24:31,633 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:24:31,633 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:24:31,634 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:24:31,634 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:24:31,635 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:24:31,636 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:24:31,650 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:24:31,650 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:24:31,651 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:24:31,652 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:24:31,652 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:24:31,653 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:24:31,653 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:24:31,684 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:24:31,685 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:24:31,685 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:24:31,686 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:24:31,686 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:24:31,687 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:24:31,688 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:24:31,719 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:24:31,719 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:24:31,720 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:24:31,720 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:24:31,721 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:24:31,722 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:24:31,722 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:24:31,753 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:24:31,754 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:24:31,754 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:24:31,755 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:24:31,755 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:24:31,756 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:24:31,756 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:24:31,790 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:24:31,791 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:24:31,792 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:24:31,792 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:24:31,793 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:24:31,793 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:24:31,794 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:24:31,833 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:24:31,833 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:24:31,834 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:24:31,834 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:24:31,835 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:24:31,835 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:24:31,836 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:24:31,855 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:24:31,856 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:24:31,856 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:24:31,857 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:24:31,858 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:24:31,858 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:24:31,859 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:24:31,890 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:24:31,890 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:24:31,891 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:24:31,891 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:24:31,892 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:24:31,892 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:24:31,893 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:24:34,998 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:24:34,999 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:24:34,999 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:24:35,000 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:24:35,001 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:24:35,002 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:24:35,003 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:24:35,010 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:24:35,010 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:24:35,011 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:24:35,012 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:24:35,012 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:24:35,013 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:24:35,013 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:24:36,582 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:24:36,583 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:24:36,584 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:24:36,584 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:24:36,585 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:24:36,585 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:24:36,586 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:24:41,247 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:24:41,248 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:24:41,248 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:24:41,249 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:24:41,249 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:24:41,250 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:24:41,251 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:24:42,813 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:24:42,814 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:24:42,815 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:24:42,815 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:24:42,816 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:24:42,816 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:24:42,817 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:24:44,379 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:24:44,380 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:24:44,380 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:24:44,381 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:24:44,382 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:24:44,382 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:24:44,386 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:24:45,939 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:24:45,940 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:24:45,940 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:24:45,941 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:24:45,941 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:24:45,942 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:24:45,943 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:24:47,499 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:24:47,500 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:24:47,501 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:24:47,501 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:24:47,502 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:24:47,503 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:24:47,503 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:24:47,664 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:24:47,664 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:24:47,665 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:24:47,666 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:24:47,666 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:24:47,667 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:24:47,668 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:24:49,228 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:24:49,229 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:24:49,230 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:24:49,231 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:24:49,231 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:24:49,232 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:24:49,233 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:24:49,375 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:24:49,375 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:24:49,376 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:24:49,376 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:24:49,377 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:24:49,377 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:24:49,378 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:24:49,387 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:24:49,387 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:24:49,388 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:24:49,388 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:24:49,389 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:24:49,389 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:24:49,390 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:24:49,406 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:24:49,407 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:24:49,408 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:24:49,408 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:24:49,408 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:24:49,409 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:24:49,410 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:24:49,430 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:24:49,431 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:24:49,431 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:24:49,432 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:24:49,432 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:24:49,433 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:24:49,434 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:24:49,470 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:24:49,470 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:24:49,471 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:24:49,471 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:24:49,472 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:24:49,472 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:24:49,473 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:24:50,143 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:24:50,144 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:24:50,145 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:24:50,146 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:24:50,147 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:24:50,147 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:24:50,148 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:24:50,936 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:24:50,936 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:24:50,937 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:24:50,937 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:24:50,938 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:24:50,938 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:24:50,939 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:24:50,985 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:24:50,985 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:24:50,986 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:24:50,986 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:24:50,987 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:24:50,987 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:24:50,988 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:24:51,017 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:24:51,018 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:24:51,019 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:24:51,019 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:24:51,020 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:24:51,020 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:24:51,021 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:24:51,681 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:24:51,682 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:24:51,682 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:24:51,683 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:24:51,684 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:24:51,684 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:24:51,685 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:24:51,708 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:24:51,708 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:24:51,709 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:24:51,710 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:24:51,710 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:24:51,711 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:24:51,712 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:24:51,773 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:24:51,774 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:24:51,775 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:24:51,775 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:24:51,776 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:24:51,777 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:24:51,778 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:24:51,843 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-03 21:24:51,844 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-03 21:24:51,844 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-03 21:24:51,845 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-03 21:24:51,845 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-03 21:24:51,846 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-03 21:24:51,847 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-03 21:24:51,936 INFO scamhunter.collectors.public_feeds: No feeds configured in /workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/data/feeds.txt — skipping public feed collection.
+2026-10-03 21:24:52,192 INFO scamhunter.collectors.public_feeds: No feeds configured in /workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/data/feeds.txt — skipping public feed collection.
+2026-10-03 21:24:52,565 INFO scamhunter.collectors.public_feeds: No feeds configured in /workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/data/feeds.txt — skipping public feed collection.
+2026-10-03 21:24:52,908 INFO scamhunter.collectors.public_feeds: No feeds configured in /workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/data/feeds.txt — skipping public feed collection.
+2026-10-03 21:24:53,251 INFO scamhunter.collectors.public_feeds: No feeds configured in /workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/data/feeds.txt — skipping public feed collection.

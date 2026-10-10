@@ -1,0 +1,61 @@
+pursuit bench: 8 runs, trees=['suite-v4', 'suite-v5'], seeds=[1, 2], scenarios=['cdn_maze'], rounds=10, difficulty=hard, jobs=2
+  [suite-v4] seed 1 cdn_maze      hash=0 useful=16 prec=0.94 req= 4010     6s
+  [suite-v5] seed 1 cdn_maze      hash=0 useful=16 prec=0.94 req= 4010     6s
+  [suite-v4] seed 2 cdn_maze      hash=0 useful=15 prec=1.00 req= 3374     4s
+  [suite-v5] seed 2 cdn_maze      hash=0 useful=15 prec=1.00 req= 3374     4s
+  [suite-v4] seed 1 cdn_maze      hash=1 useful=16 prec=0.94 req= 4010     5s
+  [suite-v4] seed 1 cdn_maze      hash=2 useful=16 prec=0.94 req= 4010     5s
+  [suite-v5] seed 1 cdn_maze      hash=2 useful=16 prec=0.94 req= 4010     5s
+  [suite-v5] seed 1 cdn_maze      hash=1 useful=16 prec=0.94 req= 4010    11s
+
+================ WORLD (ground truth; identical for every tree) ================
+scenario        units  reach      pivots dist (0/1/2/3/4/5+/unreach)  unkfam  return  mirrors  known0
+cdn_maze          126    114                      3/59/18/10/9/15/12      10       8      300      18
+
+================ TREE suite-v4: means per run ================
+
+                  useful    found%      pool      prec  multihop    medpiv       ops    unkfam    return     value  requests   req/use     q/use     deadQ   repeatQ mirrorReq   junkGET  falseRel      1stR    1stReq
+cdn_maze            15.5       28%      15.5      0.97       3.5       1.0       8.0       0.5       0.5      48.6      3692       238      13.1       173        34       212       240       0.0       0.0       295
+ALL (mean)          15.5       28%      15.5      0.97       3.5       1.0       8.0       0.5       0.5      48.6      3692       238      13.1       173        34       212       240       0.0       0.0       295
+totals: useful=31 of 114 reachable units (27%), value=97.2, requests=7384, engine errors=0, mean run time=5s
+
+================ TREE suite-v5: means per run ================
+
+                  useful    found%      pool      prec  multihop    medpiv       ops    unkfam    return     value  requests   req/use     q/use     deadQ   repeatQ mirrorReq   junkGET  falseRel      1stR    1stReq
+cdn_maze            15.5       28%      15.5      0.97       3.5       1.0       8.0       0.5       0.5      48.6      3692       238      13.1       173        34       212       240       0.0       0.0       295
+ALL (mean)          15.5       28%      15.5      0.97       3.5       1.0       8.0       0.5       0.5      48.6      3692       238      13.1       173        34       212       240       0.0       0.0       295
+totals: useful=31 of 114 reachable units (27%), value=97.2, requests=7384, engine errors=0, mean run time=5s
+
+================ UNIQUE DISCOVERIES (same seed & scenario) ================
+reviewed-useful only found by suite-v4: 0   only by suite-v5: 0
+eligible-pool useful only in suite-v4: 0   only in suite-v5: 0
+  cdn_maze       reviewed suite-v4:0 suite-v5:0   pool suite-v4:0 suite-v5:0
+
+================ WINS / LOSSES (per scenario, beyond noise floor) ================
+cdn_maze       suite-v4 better: -
+               suite-v5 better: -
+
+================ NOISE FLOOR (same tree, same seed, different PYTHONHASHSEED) ================
+  new_useful               values=[[16, 16, 16], [16, 16, 16]]  max |diff|=0
+  found_share              values=[[0.308, 0.308, 0.308], [0.308, 0.308, 0.308]]  max |diff|=0.0
+  pool_useful              values=[[16, 16, 16], [16, 16, 16]]  max |diff|=0
+  precision                values=[[0.941, 0.941, 0.941], [0.941, 0.941, 0.941]]  max |diff|=0.0
+  multi_hop                values=[[2, 2, 2], [2, 2, 2]]  max |diff|=0
+  median_pivots            values=[[1, 1, 1], [1, 1, 1]]  max |diff|=0
+  operations               values=[[9, 9, 9], [9, 9, 9]]  max |diff|=0
+  unknown_family           values=[[1, 1, 1], [1, 1, 1]]  max |diff|=0
+  reappearances            values=[[1, 1, 1], [1, 1, 1]]  max |diff|=0
+  value                    values=[[54.6, 54.6, 54.6], [54.6, 54.6, 54.6]]  max |diff|=0.0
+  requests_total           values=[[4010, 4010, 4010], [4010, 4010, 4010]]  max |diff|=0
+  requests_per_useful      values=[[250.6, 250.6, 250.6], [250.6, 250.6, 250.6]]  max |diff|=0.0
+  queries_per_useful       values=[[14.4, 14.4, 14.4], [14.4, 14.4, 14.4]]  max |diff|=0.0
+  dead_end_queries         values=[[202, 202, 202], [202, 202, 202]]  max |diff|=0
+  repeated_queries         values=[[34, 34, 34], [34, 34, 34]]  max |diff|=0
+  mirror_requests          values=[[370, 370, 370], [370, 370, 370]]  max |diff|=0
+  junk_fetches             values=[[231, 231, 231], [231, 231, 231]]  max |diff|=0
+  rel_false_cross_op       values=[[0, 0, 0], [0, 0, 0]]  max |diff|=0
+  first_useful_round       values=[[0, 0, 0], [0, 0, 0]]  max |diff|=0
+  first_useful_requests    values=[[293, 293, 293], [293, 293, 293]]  max |diff|=0
+
+wall time 28s
+wrote /workspace/scratch/b4f855937e46/pursuit-v4-v5.json

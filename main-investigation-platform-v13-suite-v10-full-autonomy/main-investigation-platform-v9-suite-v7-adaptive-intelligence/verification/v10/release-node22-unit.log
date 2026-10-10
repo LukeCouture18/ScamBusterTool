@@ -1,0 +1,289 @@
+
+=== unit (1 step) ===
+--- unit 1/1: node --test tests/director-migration.test.mjs tests/domain.test.mjs tests/migration.test.mjs tests/production-readiness.test.mjs tests/security.test.mjs tests/sqljs-fallback.test.mjs tests/ui-tokens.test.mjs tests/v5-contract.test.mjs tests/v5-hunter.test.mjs tests/v5-migration.test.mjs tests/v6-contract.test.mjs tests/v6-migration.test.mjs tests/wallet-db-lifecycle.test.mjs tests/wallet-key-migration.test.mjs
+TAP version 13
+# (node:49) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: populated v4 migration and rollback retain candidates, observations, evidence and approval hashes
+ok 1 - populated v4 migration and rollback retain candidates, observations, evidence and approval hashes
+  ---
+  duration_ms: 83.537557
+  type: 'test'
+  ...
+# Subtest: domain resolution deduplicates equivalent sites
+ok 2 - domain resolution deduplicates equivalent sites
+  ---
+  duration_ms: 1.389727
+  type: 'test'
+  ...
+# Subtest: wallet and token identity is network scoped
+ok 3 - wallet and token identity is network scoped
+  ---
+  duration_ms: 0.229118
+  type: 'test'
+  ...
+# Subtest: job keys prevent active duplicate work
+ok 4 - job keys prevent active duplicate work
+  ---
+  duration_ms: 16.542011
+  type: 'test'
+  ...
+# Subtest: job transition policy rejects processing loops
+ok 5 - job transition policy rejects processing loops
+  ---
+  duration_ms: 0.273752
+  type: 'test'
+  ...
+# Subtest: retry backoff is exponential and capped
+ok 6 - retry backoff is exponential and capped
+  ---
+  duration_ms: 0.384604
+  type: 'test'
+  ...
+# Subtest: schema major versions are checked
+ok 7 - schema major versions are checked
+  ---
+  duration_ms: 0.199082
+  type: 'test'
+  ...
+# Subtest: a wallet key that already names its network is not prefixed twice
+ok 8 - a wallet key that already names its network is not prefixed twice
+  ---
+  duration_ms: 0.211231
+  type: 'test'
+  ...
+# Subtest: coordination migration is additive and includes operational tables
+ok 9 - coordination migration is additive and includes operational tables
+  ---
+  duration_ms: 38.895097
+  type: 'test'
+  ...
+# Subtest: orchestrator migration preserves data and adds durable workflow state
+ok 10 - orchestrator migration preserves data and adds durable workflow state
+  ---
+  duration_ms: 10.372746
+  type: 'test'
+  ...
+# Subtest: v4 migration adds a durable event backbone without replacing v3 data
+ok 11 - v4 migration adds a durable event backbone without replacing v3 data
+  ---
+  duration_ms: 8.178582
+  type: 'test'
+  ...
+# Subtest: production schema readiness: ready
+ok 12 - production schema readiness: ready
+  ---
+  duration_ms: 523.845501
+  type: 'test'
+  ...
+# Subtest: production schema readiness: pending-once
+ok 13 - production schema readiness: pending-once
+  ---
+  duration_ms: 696.496936
+  type: 'test'
+  ...
+# Subtest: production schema readiness: permanently-pending
+ok 14 - production schema readiness: permanently-pending
+  ---
+  duration_ms: 418.72643
+  type: 'test'
+  ...
+# Subtest: production schema readiness: missing-table
+ok 15 - production schema readiness: missing-table
+  ---
+  duration_ms: 504.026875
+  type: 'test'
+  ...
+# Subtest: production schema readiness: migration-error
+ok 16 - production schema readiness: migration-error
+  ---
+  duration_ms: 136.157589
+  type: 'test'
+  ...
+# Subtest: production schema readiness: invalid-response
+ok 17 - production schema readiness: invalid-response
+  ---
+  duration_ms: 177.233038
+  type: 'test'
+  ...
+# Subtest: module credentials are isolated
+ok 18 - module credentials are isolated
+  ---
+  duration_ms: 4.626726
+  type: 'test'
+  ...
+# Subtest: authentication fails closed and legacy fallback is opt-in
+ok 19 - authentication fails closed and legacy fallback is opt-in
+  ---
+  duration_ms: 0.773902
+  type: 'test'
+  ...
+# Subtest: with real sql.js installed the fallback registers nothing and the Wallet worker keeps PlatformWorker and startPlatformWorker
+ok 20 - with real sql.js installed the fallback registers nothing and the Wallet worker keeps PlatformWorker and startPlatformWorker
+  ---
+  duration_ms: 1865.762924
+  type: 'test'
+  ...
+# Subtest: without sql.js the fallback still serves the node:sqlite stand-in and the worker still loads
+ok 21 - without sql.js the fallback still serves the node:sqlite stand-in and the worker still loads # SKIP the real sql.js is installed in this repository, so the stand-in path is not used here
+  ---
+  duration_ms: 1.160927
+  type: 'test'
+  ...
+# Subtest: each tool UI is in sync with the canonical tokens
+ok 22 - each tool UI is in sync with the canonical tokens
+  ---
+  duration_ms: 14.931768
+  type: 'test'
+  ...
+# Subtest: the generated blocks only restyle: every tool keeps its own markup and variables
+ok 23 - the generated blocks only restyle: every tool keeps its own markup and variables
+  ---
+  duration_ms: 7.565938
+  type: 'test'
+  ...
+# Subtest: v5 migration adds triage, durable subscriptions and metrics without dropping v4 data
+ok 24 - v5 migration adds triage, durable subscriptions and metrics without dropping v4 data
+  ---
+  duration_ms: 23.54135
+  type: 'test'
+  ...
+# Subtest: routing requires explicit promotion and does not infer wallet validity from confidence
+ok 25 - routing requires explicit promotion and does not infer wallet validity from confidence
+  ---
+  duration_ms: 6.997346
+  type: 'test'
+  ...
+# Subtest: both SDKs expose event delivery and metrics
+ok 26 - both SDKs expose event delivery and metrics
+  ---
+  duration_ms: 7.902457
+  type: 'test'
+  ...
+# (node:160) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: migration 0012 is additive and required by the schema gate
+ok 27 - migration 0012 is additive and required by the schema gate
+  ---
+  duration_ms: 166.247734
+  type: 'test'
+  ...
+# Subtest: migration 0014 (Site Finder hunts) is additive and required by the schema gate
+ok 28 - migration 0014 (Site Finder hunts) is additive and required by the schema gate
+  ---
+  duration_ms: 100.98233
+  type: 'test'
+  ...
+# Subtest: migration 0015 (v4 wallet pipeline) is additive and required by the schema gate
+ok 29 - migration 0015 (v4 wallet pipeline) is additive and required by the schema gate
+  ---
+  duration_ms: 304.273976
+  type: 'test'
+  ...
+# Subtest: contracts: module, job type and work kind
+ok 30 - contracts: module, job type and work kind
+  ---
+  duration_ms: 37.055808
+  type: 'test'
+  ...
+# Subtest: a Hunter snapshot is stored idempotently and its proposals become Main's own work
+ok 31 - a Hunter snapshot is stored idempotently and its proposals become Main's own work
+  ---
+  duration_ms: 239.706349
+  type: 'test'
+  ...
+# Subtest: demo operations are mirrored for display but never create work
+ok 32 - demo operations are mirrored for display but never create work
+  ---
+  duration_ms: 45.639203
+  type: 'test'
+  ...
+# Subtest: reconstruction: proposed only while Hunter is registered, routed as a HUNT_OPERATION job, judged by what it found
+ok 33 - reconstruction: proposed only while Hunter is registered, routed as a HUNT_OPERATION job, judged by what it found
+  ---
+  duration_ms: 110.721986
+  type: 'test'
+  ...
+# Subtest: operator and module requests go through work items
+ok 34 - operator and module requests go through work items
+  ---
+  duration_ms: 235.002205
+  type: 'test'
+  ...
+# Subtest: v6 schema gate rejects an incomplete operation alias migration
+ok 35 - v6 schema gate rejects an incomplete operation alias migration
+  ---
+  duration_ms: 60.763847
+  type: 'test'
+  ...
+# (node:164) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: v4 database upgrades to v5: every v4 record preserved, schema gate passes, v5 defaults seeded
+ok 36 - v4 database upgrades to v5: every v4 record preserved, schema gate passes, v5 defaults seeded
+  ---
+  duration_ms: 143.403737
+  type: 'test'
+  ...
+# Subtest: an interrupted v5 upgrade rolls back and the platform refuses to start until it is applied
+ok 37 - an interrupted v5 upgrade rolls back and the platform refuses to start until it is applied
+  ---
+  duration_ms: 117.757265
+  type: 'test'
+  ...
+# Subtest: rollback to v4: v5 tables are additive, so v4 code reads a v5 database unchanged; dropping them restores the exact v4 schema
+ok 38 - rollback to v4: v5 tables are additive, so v4 code reads a v5 database unchanged; dropping them restores the exact v4 schema
+  ---
+  duration_ms: 88.138725
+  type: 'test'
+  ...
+# Subtest: the server, SDK and machine readable event catalog agree
+ok 39 - the server, SDK and machine readable event catalog agree
+  ---
+  duration_ms: 109.611051
+  type: 'test'
+  ...
+# Subtest: v6 contract includes all orchestration and evidence endpoints
+ok 40 - v6 contract includes all orchestration and evidence endpoints
+  ---
+  duration_ms: 0.635583
+  type: 'test'
+  ...
+# (node:188) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: v5 database upgrades to v6 without losing investigations and evidence
+ok 41 - v5 database upgrades to v6 without losing investigations and evidence
+  ---
+  duration_ms: 389.792654
+  type: 'test'
+  ...
+# Subtest: wallet database: clean start, restart with data, interrupted save and a damaged file
+ok 42 - wallet database: clean start, restart with data, interrupted save and a damaged file
+  ---
+  duration_ms: 6952.263986
+  type: 'test'
+  ...
+# database size after interrupted saves: 4866048 bytes
+# Subtest: the Wallet verification suite never touches integrations/wallet-investigator/data
+ok 43 - the Wallet verification suite never touches integrations/wallet-investigator/data
+  ---
+  duration_ms: 968.30322
+  type: 'test'
+  ...
+# (node:346) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: 0013 renames doubled wallet keys only when no correctly keyed twin exists
+ok 44 - 0013 renames doubled wallet keys only when no correctly keyed twin exists
+  ---
+  duration_ms: 123.407013
+  type: 'test'
+  ...
+1..44
+# tests 44
+# suites 0
+# pass 43
+# fail 0
+# cancelled 0
+# skipped 1
+# todo 0
+# duration_ms 8630.7827
+PASS unit: 1/1 steps passed

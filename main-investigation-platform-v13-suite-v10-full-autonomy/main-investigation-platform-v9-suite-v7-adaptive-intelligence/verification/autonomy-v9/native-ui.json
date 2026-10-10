@@ -1,0 +1,412 @@
+{
+  "ok": true,
+  "views": [
+    {
+      "tool": "wallet-investigator",
+      "view": "Dashboard",
+      "width": 1280,
+      "overflow": 0,
+      "controls": 18
+    },
+    {
+      "tool": "wallet-investigator",
+      "view": "Dashboard",
+      "width": 1024,
+      "overflow": 0,
+      "controls": 18
+    },
+    {
+      "tool": "wallet-investigator",
+      "view": "Dashboard",
+      "width": 375,
+      "overflow": 0,
+      "controls": 18
+    },
+    {
+      "tool": "wallet-investigator",
+      "view": "Wallets",
+      "width": 1280,
+      "overflow": 0,
+      "controls": 19
+    },
+    {
+      "tool": "wallet-investigator",
+      "view": "Wallets",
+      "width": 1024,
+      "overflow": 0,
+      "controls": 19
+    },
+    {
+      "tool": "wallet-investigator",
+      "view": "Wallets",
+      "width": 375,
+      "overflow": 0,
+      "controls": 19
+    },
+    {
+      "tool": "wallet-investigator",
+      "view": "Transactions",
+      "width": 1280,
+      "overflow": 0,
+      "controls": 19
+    },
+    {
+      "tool": "wallet-investigator",
+      "view": "Transactions",
+      "width": 1024,
+      "overflow": 0,
+      "controls": 19
+    },
+    {
+      "tool": "wallet-investigator",
+      "view": "Transactions",
+      "width": 375,
+      "overflow": 0,
+      "controls": 19
+    },
+    {
+      "tool": "wallet-investigator",
+      "view": "Connections",
+      "width": 1280,
+      "overflow": 0,
+      "controls": 15
+    },
+    {
+      "tool": "wallet-investigator",
+      "view": "Connections",
+      "width": 1024,
+      "overflow": 0,
+      "controls": 15
+    },
+    {
+      "tool": "wallet-investigator",
+      "view": "Connections",
+      "width": 375,
+      "overflow": 0,
+      "controls": 15
+    },
+    {
+      "tool": "wallet-investigator",
+      "view": "Graph",
+      "width": 1280,
+      "overflow": 0,
+      "controls": 18
+    },
+    {
+      "tool": "wallet-investigator",
+      "view": "Graph",
+      "width": 1024,
+      "overflow": 0,
+      "controls": 18
+    },
+    {
+      "tool": "wallet-investigator",
+      "view": "Graph",
+      "width": 375,
+      "overflow": 0,
+      "controls": 18
+    },
+    {
+      "tool": "wallet-investigator",
+      "view": "Timeline",
+      "width": 1280,
+      "overflow": 0,
+      "controls": 13
+    },
+    {
+      "tool": "wallet-investigator",
+      "view": "Timeline",
+      "width": 1024,
+      "overflow": 0,
+      "controls": 13
+    },
+    {
+      "tool": "wallet-investigator",
+      "view": "Timeline",
+      "width": 375,
+      "overflow": 0,
+      "controls": 13
+    },
+    {
+      "tool": "wallet-investigator",
+      "view": "Review",
+      "width": 1280,
+      "overflow": 0,
+      "controls": 19
+    },
+    {
+      "tool": "wallet-investigator",
+      "view": "Review",
+      "width": 1024,
+      "overflow": 0,
+      "controls": 19
+    },
+    {
+      "tool": "wallet-investigator",
+      "view": "Review",
+      "width": 375,
+      "overflow": 0,
+      "controls": 19
+    },
+    {
+      "tool": "wallet-investigator",
+      "view": "Settings",
+      "width": 1280,
+      "overflow": 0,
+      "controls": 16
+    },
+    {
+      "tool": "wallet-investigator",
+      "view": "Settings",
+      "width": 1024,
+      "overflow": 0,
+      "controls": 16
+    },
+    {
+      "tool": "wallet-investigator",
+      "view": "Settings",
+      "width": 375,
+      "overflow": 0,
+      "controls": 16
+    },
+    {
+      "tool": "wallet-investigator",
+      "view": "default",
+      "width": 1280,
+      "overflow": 0
+    },
+    {
+      "tool": "wallet-investigator",
+      "view": "default",
+      "width": 1024,
+      "overflow": 0
+    },
+    {
+      "tool": "wallet-investigator",
+      "view": "default",
+      "width": 375,
+      "overflow": 0
+    },
+    {
+      "tool": "form-submitter",
+      "view": "Reports 1",
+      "width": 1280,
+      "overflow": 0,
+      "controls": 29
+    },
+    {
+      "tool": "form-submitter",
+      "view": "Reports 1",
+      "width": 1024,
+      "overflow": 0,
+      "controls": 29
+    },
+    {
+      "tool": "form-submitter",
+      "view": "Reports 1",
+      "width": 375,
+      "overflow": 0,
+      "controls": 29
+    },
+    {
+      "tool": "form-submitter",
+      "view": "New Finding",
+      "width": 1280,
+      "overflow": 0,
+      "controls": 17
+    },
+    {
+      "tool": "form-submitter",
+      "view": "New Finding",
+      "width": 1024,
+      "overflow": 0,
+      "controls": 17
+    },
+    {
+      "tool": "form-submitter",
+      "view": "New Finding",
+      "width": 375,
+      "overflow": 0,
+      "controls": 17
+    },
+    {
+      "tool": "form-submitter",
+      "view": "Form Mappings",
+      "width": 1280,
+      "overflow": 0,
+      "controls": 51
+    },
+    {
+      "tool": "form-submitter",
+      "view": "Form Mappings",
+      "width": 1024,
+      "overflow": 0,
+      "controls": 51
+    },
+    {
+      "tool": "form-submitter",
+      "view": "Form Mappings",
+      "width": 375,
+      "overflow": 0,
+      "controls": 51
+    },
+    {
+      "tool": "form-submitter",
+      "view": "Platform Integration",
+      "width": 1280,
+      "overflow": 0,
+      "controls": 14
+    },
+    {
+      "tool": "form-submitter",
+      "view": "Platform Integration",
+      "width": 1024,
+      "overflow": 0,
+      "controls": 14
+    },
+    {
+      "tool": "form-submitter",
+      "view": "Platform Integration",
+      "width": 375,
+      "overflow": 0,
+      "controls": 14
+    },
+    {
+      "tool": "form-submitter",
+      "view": "Audit History",
+      "width": 1280,
+      "overflow": 0,
+      "controls": 13
+    },
+    {
+      "tool": "form-submitter",
+      "view": "Audit History",
+      "width": 1024,
+      "overflow": 0,
+      "controls": 13
+    },
+    {
+      "tool": "form-submitter",
+      "view": "Audit History",
+      "width": 375,
+      "overflow": 0,
+      "controls": 13
+    },
+    {
+      "tool": "form-submitter",
+      "view": "default",
+      "width": 1280,
+      "overflow": 0
+    },
+    {
+      "tool": "form-submitter",
+      "view": "default",
+      "width": 1024,
+      "overflow": 0
+    },
+    {
+      "tool": "form-submitter",
+      "view": "default",
+      "width": 375,
+      "overflow": 0
+    },
+    {
+      "tool": "hunter",
+      "view": "default",
+      "width": 1280,
+      "overflow": 0
+    },
+    {
+      "tool": "hunter",
+      "view": "default",
+      "width": 1024,
+      "overflow": 0
+    },
+    {
+      "tool": "hunter",
+      "view": "default",
+      "width": 375,
+      "overflow": 0
+    },
+    {
+      "tool": "finder",
+      "view": "default",
+      "width": 1280,
+      "overflow": 0
+    },
+    {
+      "tool": "finder",
+      "view": "default",
+      "width": 1024,
+      "overflow": 0
+    },
+    {
+      "tool": "finder",
+      "view": "default",
+      "width": 375,
+      "overflow": 0
+    },
+    {
+      "tool": "site-investigator",
+      "view": "Search",
+      "width": 1280,
+      "overflow": 0,
+      "controls": 7
+    },
+    {
+      "tool": "site-investigator",
+      "view": "Search",
+      "width": 1024,
+      "overflow": 0,
+      "controls": 7
+    },
+    {
+      "tool": "site-investigator",
+      "view": "Search",
+      "width": 375,
+      "overflow": 0,
+      "controls": 7
+    },
+    {
+      "tool": "site-investigator",
+      "view": "Create case",
+      "width": 1280,
+      "overflow": 0,
+      "controls": 7
+    },
+    {
+      "tool": "site-investigator",
+      "view": "Create case",
+      "width": 1024,
+      "overflow": 0,
+      "controls": 7
+    },
+    {
+      "tool": "site-investigator",
+      "view": "Create case",
+      "width": 375,
+      "overflow": 0,
+      "controls": 7
+    },
+    {
+      "tool": "site-investigator",
+      "view": "default",
+      "width": 1280,
+      "overflow": 0
+    },
+    {
+      "tool": "site-investigator",
+      "view": "default",
+      "width": 1024,
+      "overflow": 0
+    },
+    {
+      "tool": "site-investigator",
+      "view": "default",
+      "width": 375,
+      "overflow": 0
+    }
+  ],
+  "errors": [],
+  "scope": "Real native empty-state production/static UIs, navigation activation and 1280/1024/375 layouts. Data-dependent detail/dialog controls are not a full native control certification. Logger integration is checked by the separate rendered-browser acceptance; this native smoke does not cover an installed extension."
+}

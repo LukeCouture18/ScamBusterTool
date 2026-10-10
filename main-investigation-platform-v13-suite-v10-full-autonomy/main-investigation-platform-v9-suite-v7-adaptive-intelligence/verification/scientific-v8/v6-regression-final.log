@@ -1,0 +1,122 @@
+
+=== operation-intelligence (7 steps) ===
+--- operation-intelligence 1/7: node --experimental-sqlite --import tsx tests/operation-intelligence.mjs
+PASS canonical evidence graph, competing hypotheses and complete source lineage
+PASS hypothesis source clickthrough is scoped and malformed pagination is rejected
+PASS 100 weak correlations never become independent evidence or ownership
+PASS Hunter replay keeps one logical hypothesis and contradiction history
+PASS omitted contradictions and challenging evidence survive later snapshots
+PASS disappearance and reappearance are explicit temporal facts; old observations cannot undo them
+PASS pause projects evidence but does not create hunts
+PASS 50 real events and their replay coalesce to a dirty operation without hunt storms
+PASS event storms and concurrent evaluation create one bounded discriminating hunt
+PASS used-state Main restart preserves hypotheses, challenges, budgets and action identity
+PASS unfinished durable handoff recovers the exact work fingerprint
+PASS split is proposed without boundary mutation and stale review hashes are rejected
+PASS analyst-approved split is atomic, replay-safe and retains original provenance
+PASS Hunter replay cannot undo analyst boundaries
+PASS consolidation requires a reviewed decision, preserves aliases and rejects stale revisions
+PASS two competing reviewed boundary decisions cannot both mutate one revision
+PASS bounded hunt exhaustion parks without repeat work
+PASS duplicate evidence overlap suggests review without consolidating boundaries
+PASS populated v5 additive migration is replayable and rollback leaves prior data intact
+{"ok":true,"checks":19,"passed":["canonical evidence graph, competing hypotheses and complete source lineage","hypothesis source clickthrough is scoped and malformed pagination is rejected","100 weak correlations never become independent evidence or ownership","Hunter replay keeps one logical hypothesis and contradiction history","omitted contradictions and challenging evidence survive later snapshots","disappearance and reappearance are explicit temporal facts; old observations cannot undo them","pause projects evidence but does not create hunts","50 real events and their replay coalesce to a dirty operation without hunt storms","event storms and concurrent evaluation create one bounded discriminating hunt","used-state Main restart preserves hypotheses, challenges, budgets and action identity","unfinished durable handoff recovers the exact work fingerprint","split is proposed without boundary mutation and stale review hashes are rejected","analyst-approved split is atomic, replay-safe and retains original provenance","Hunter replay cannot undo analyst boundaries","consolidation requires a reviewed decision, preserves aliases and rejects stale revisions","two competing reviewed boundary decisions cannot both mutate one revision","bounded hunt exhaustion parks without repeat work","duplicate evidence overlap suggests review without consolidating boundaries","populated v5 additive migration is replayable and rollback leaves prior data intact"]}
+--- operation-intelligence 2/7: node --experimental-sqlite --import tsx tests/operation-crash.mjs
+PASS crash before operation snapshot
+PASS crash after operation snapshot
+PASS crash before hypothesis
+PASS crash after hypothesis
+PASS crash before contradiction
+PASS crash after contradiction
+PASS crash before temporal facet
+PASS crash after temporal facet
+PASS crash before evidence graph
+PASS crash after evidence graph
+PASS crash before hunt reservation
+PASS crash after hunt reservation
+PASS crash before module-work handoff
+PASS crash after module-work handoff
+PASS crash before operation split
+PASS crash after operation split
+PASS crash before event-driven wakeup
+PASS crash after event-driven wakeup
+{"ok":true,"crashes":18,"passed":[{"phase":"operation snapshot","edge":"before","actual_process_signal":"SIGKILL","logical_hunts":1,"preserved_evidence":1},{"phase":"operation snapshot","edge":"after","actual_process_signal":"SIGKILL","logical_hunts":1,"preserved_evidence":1},{"phase":"hypothesis","edge":"before","actual_process_signal":"SIGKILL","logical_hunts":1,"preserved_evidence":1},{"phase":"hypothesis","edge":"after","actual_process_signal":"SIGKILL","logical_hunts":1,"preserved_evidence":1},{"phase":"contradiction","edge":"before","actual_process_signal":"SIGKILL","logical_hunts":1,"preserved_evidence":1},{"phase":"contradiction","edge":"after","actual_process_signal":"SIGKILL","logical_hunts":1,"preserved_evidence":1},{"phase":"temporal facet","edge":"before","actual_process_signal":"SIGKILL","logical_hunts":1,"preserved_evidence":1},{"phase":"temporal facet","edge":"after","actual_process_signal":"SIGKILL","logical_hunts":1,"preserved_evidence":1},{"phase":"evidence graph","edge":"before","actual_process_signal":"SIGKILL","logical_hunts":1,"preserved_evidence":1},{"phase":"evidence graph","edge":"after","actual_process_signal":"SIGKILL","logical_hunts":1,"preserved_evidence":1},{"phase":"hunt reservation","edge":"before","actual_process_signal":"SIGKILL","logical_hunts":1,"preserved_evidence":1},{"phase":"hunt reservation","edge":"after","actual_process_signal":"SIGKILL","logical_hunts":1,"preserved_evidence":1},{"phase":"module-work handoff","edge":"before","actual_process_signal":"SIGKILL","logical_hunts":1,"preserved_evidence":1},{"phase":"module-work handoff","edge":"after","actual_process_signal":"SIGKILL","logical_hunts":1,"preserved_evidence":1},{"phase":"operation split","edge":"before","actual_process_signal":"SIGKILL","logical_hunts":1,"preserved_evidence":1},{"phase":"operation split","edge":"after","actual_process_signal":"SIGKILL","logical_hunts":1,"preserved_evidence":1},{"phase":"event-driven wakeup","edge":"before","actual_process_signal":"SIGKILL","logical_hunts":1,"preserved_evidence":1},{"phase":"event-driven wakeup","edge":"after","actual_process_signal":"SIGKILL","logical_hunts":1,"preserved_evidence":1}],"scope":"Actual child-process SIGKILL around SQL statements and atomic D1-double batches, restarting used SQLite state. External provider and Finder/Hunter outbox crash phases are covered by existing module tests, not all certified here."}
+--- operation-intelligence 3/7: node --experimental-sqlite --import tsx tests/operation-benchmark.mjs
+{"ok":true,"corpus_operations":3,"authoritative_fixture_relationships":122,"true_evidence_relationships_recovered":122,"false_factual_relationships":0,"unsupported_ownership_claims":0,"hypotheses":6,"challenged_hypotheses":1,"hypotheses_rejected_by_contradiction":0,"split_correctness":true,"reappearance_detection":true,"human_actions":2,"time_to_model_ms":3045.190838,"passed":["three labeled operation records and misleading shared kit/CDN","late challenge, replacement domain, wallet change, wave and reappearance retained","accidental association split survives Hunter replay without provenance loss","110 redundant overlaps retain one independent unit; common counterparty is not ownership","used-state restart and identical snapshot replay preserve memory"],"limitations":["Fixture graph and Hunter snapshots are supplied inputs, not an end-to-end discovery run.","Challenged means unlikely in supplied Hunter verdict; no definitive rejection is invented.","This corpus does not measure autonomous multi-operation inference accuracy or provider outages."]}
+--- operation-intelligence 4/7: node --experimental-sqlite --import tsx tests/operation-stress.mjs
+{"ok":true,"rows":{"entities":10000,"relationships":50100,"evidence":5000,"investigations":300,"operations":25,"projected_edges":50100},"timings":[{"name":"load_10000_entities_50100_relationships","ms":571.81},{"name":"director_projection_tick","ms":2224.34},{"name":"director_projection_tick","ms":1972.07},{"name":"director_projection_tick","ms":1917.57},{"name":"director_projection_tick","ms":1813.71},{"name":"director_projection_tick","ms":1914.25},{"name":"director_projection_tick","ms":1843.01},{"name":"director_projection_tick","ms":2018.74},{"name":"director_projection_tick","ms":2021.02},{"name":"director_projection_tick","ms":1581.1},{"name":"director_projection_tick","ms":1854.37},{"name":"director_projection_tick","ms":1761.75},{"name":"director_projection_tick","ms":1989.15},{"name":"director_projection_tick","ms":2388.79},{"name":"briefing_and_graph_first_page","ms":13.31},{"name":"paginated_graph_query","ms":15.86},{"name":"wallet_view","ms":14.65},{"name":"edge_explanation","ms":2.85},{"name":"event_processing_10_wakeups","ms":264.11},{"name":"idle_portfolio_tick","ms":1578.33}],"memory":{"rss_before_bytes":157093888,"rss_after_bytes":413622272,"peak_rss_kb":403928},"database":{"before_bytes":2101248,"after_bytes":99262464,"growth_bytes":97161216},"limits":{"graph_page":100,"entity_page":200,"timeline_page":100}}
+--- operation-intelligence 5/7: node --experimental-sqlite --import tsx --import file:///workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/lib/sqljs-fallback.mjs tests/operation-hidden.mjs
+[Database] Initialized new database at /tmp/operation-hidden-jFmnxd/wallet/data/wallet_investigator.sqlite
+[Migrations] Applying migration v1: 001_initial_schema...
+[Migrations] Applying migration v2: 002_indexes_and_views...
+[Migrations] Migration status: 2 applied. Current schema version: v2
+[MainPlatformV6] Initialized integration module 'wallet_investigator' with capabilities: [
+  'blockchain-analysis',
+  'wallet-validation',
+  'counterparty-discovery',
+  'fund-flow-analysis',
+  'controlled-wallet-expansion'
+]
+hunter-register {"registered":true,"events":0,"jobs":0,"outbox":0,"decisions":0,"errors":[]}
+SI collected public pages
+hunter-cycle {"registered":false,"events":40,"jobs":0,"outbox":0,"decisions":0,"errors":[]}
+Finder public discovery cycle complete
+{"round":0,"sites":["q1c6ceabc708.top"],"investigated":["q1c6ceabc708.top"],"validated_deposit_wallets":1,"finder_claimed":true,"operation_present":false}
+SI collected public pages
+hunter-cycle {"registered":false,"events":6,"jobs":1,"outbox":1,"decisions":0,"errors":[]}
+Finder public discovery cycle complete
+{"round":1,"sites":["q1c6ceabc708.top"],"investigated":["q1c6ceabc708.top"],"validated_deposit_wallets":1,"finder_claimed":false,"operation_present":true}
+SI collected public pages
+hunter-cycle {"registered":false,"events":50,"jobs":0,"outbox":1,"decisions":0,"errors":[]}
+Finder public discovery cycle complete
+{"round":2,"sites":["q1c6ceabc708.top","q9b97701443a.top"],"investigated":["q1c6ceabc708.top"],"validated_deposit_wallets":1,"finder_claimed":true,"operation_present":true}
+SI collected public pages
+hunter-cycle {"registered":false,"events":50,"jobs":0,"outbox":1,"decisions":0,"errors":[]}
+Finder public discovery cycle complete
+{"round":3,"sites":["q1c6ceabc708.top","q9b97701443a.top"],"investigated":["q1c6ceabc708.top","q9b97701443a.top"],"validated_deposit_wallets":1,"finder_claimed":true,"operation_present":true}
+SI collected public pages
+hunter-cycle {"registered":false,"events":0,"jobs":0,"outbox":0,"decisions":0,"errors":[]}
+Finder public discovery cycle complete
+{"round":4,"sites":["q1c6ceabc708.top","q9b97701443a.top","qfaaae17e6eb.top"],"investigated":["q1c6ceabc708.top","q9b97701443a.top"],"validated_deposit_wallets":1,"finder_claimed":true,"operation_present":true}
+SI collected public pages
+hunter-cycle {"registered":false,"events":50,"jobs":0,"outbox":0,"decisions":0,"errors":[]}
+Finder public discovery cycle complete
+{"round":5,"sites":["q1c6ceabc708.top","q9b97701443a.top","q9e99c254b43.top","qf8a0603ea19.top","qfaaae17e6eb.top"],"investigated":["q1c6ceabc708.top","q9b97701443a.top","qfaaae17e6eb.top"],"validated_deposit_wallets":2,"finder_claimed":true,"operation_present":true}
+SI collected public pages
+hunter-cycle {"registered":false,"events":50,"jobs":1,"outbox":1,"decisions":0,"errors":[]}
+Finder public discovery cycle complete
+{"round":6,"sites":["q1c6ceabc708.top","q9b97701443a.top","q9e99c254b43.top","qf8a0603ea19.top","qfaaae17e6eb.top"],"investigated":["q1c6ceabc708.top","q9b97701443a.top","qfaaae17e6eb.top","q9e99c254b43.top"],"validated_deposit_wallets":3,"finder_claimed":true,"operation_present":true}
+SI collected public pages
+hunter-cycle {"registered":false,"events":50,"jobs":1,"outbox":1,"decisions":0,"errors":[]}
+Finder public discovery cycle complete
+{"round":7,"sites":["q1c6ceabc708.top","q9b97701443a.top","q9e99c254b43.top","qf8a0603ea19.top","qfaaae17e6eb.top"],"investigated":["q1c6ceabc708.top","q9b97701443a.top","qfaaae17e6eb.top","q9e99c254b43.top","qf8a0603ea19.top"],"validated_deposit_wallets":3,"finder_claimed":true,"operation_present":true}
+{"ok":true,"seed_sites":1,"initial_wallets":0,"hidden_sites_injected":0,"hidden_sites_discovered":3,"target_sites_investigated":4,"validated_target_wallets":2,"unsupported_ownership_claims":0,"duplicate_active_jobs":0,"human_actions":0,"jobs":25,"jobs_per_useful_discovery":8.333333333333334,"transport_requests":353,"requests_by_kind":{"http":172,"dns":175,"tls":6},"requests_per_useful_discovery":117.66666666666667,"provider_calls":3,"time_to_final_operation_update_ms":23841.01796,"restart":true,"source_proof":[{"domain":"q9b97701443a.top","finder_site_records":1,"first_discovery_round":2},{"domain":"qfaaae17e6eb.top","finder_site_records":1,"first_discovery_round":4},{"domain":"qf8a0603ea19.top","finder_site_records":1,"first_discovery_round":5}],"multi_hop_useful_discoveries":2,"operation_next_bounded_hunts":4,"validated_wallet_reuse_site_candidates":2,"limitations":["Public/blockchain transports are synthetic.","Unchanged Logger classifier ran on real rendered DOM; installed extension lifecycle remains a separate environment-limited check.","This corpus does not certify all operation benchmark scenarios."]}
+--- operation-intelligence 6/7: node --experimental-sqlite --import tsx tests/operation-ui.mjs
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+Error: 
+Traceback (most recent call last):
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/operation-ui.py", line 11, in <module>
+    expect(page.get_by_role('heading',name='What this operation contains')).to_be_visible();expect(page.get_by_text('1 site · proposed')).to_be_visible()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/0dbe5278a453/pydeps/playwright/sync_api/_generated.py", line 20424, in to_be_visible
+    self._sync(self._impl_obj.to_be_visible(visible=visible, timeout=timeout))
+  File "/workspace/scratch/0dbe5278a453/pydeps/playwright/_impl/_sync_base.py", line 115, in _sync
+    return task.result()
+           ^^^^^^^^^^^^^
+  File "/workspace/scratch/0dbe5278a453/pydeps/playwright/_impl/_assertions.py", line 763, in to_be_visible
+    await self._expect_impl(
+  File "/workspace/scratch/0dbe5278a453/pydeps/playwright/_impl/_assertions.py", line 83, in _expect_impl
+    raise AssertionError(
+AssertionError: Locator expected to be visible
+Actual value: <element(s) not found> 
+Call log:
+  - Expect "to_be_visible" with timeout 5000ms
+  - waiting for get_by_role("heading", name="What this operation contains")
+
+
+    at ChildProcess.<anonymous> (file:///workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/operation-ui.mjs:10:366)
+    at ChildProcess.emit (node:events:509:28)
+    at maybeClose (node:internal/child_process:1141:16)
+    at ChildProcess._handle.onexit (node:internal/child_process:306:5)
+FAIL operation-intelligence: step 6/7 exited with 1: node --experimental-sqlite --import tsx tests/operation-ui.mjs

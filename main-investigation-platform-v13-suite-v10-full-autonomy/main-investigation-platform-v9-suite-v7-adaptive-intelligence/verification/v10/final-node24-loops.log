@@ -1,0 +1,10 @@
+
+=== loops (1 step) ===
+--- loops 1/1: node --experimental-sqlite --disable-warning=ExperimentalWarning --import tsx tests/joined-pursuit-loops.mjs
+  ok  Hunter -> Main: evidence gap with the operation's identifiers becomes one budgeted FIND_RELATED_SITES job
+  ok  Finder -> Main: campaign hunt "Looking for new deployments related to Operation OP-L Loop test operation" ran; 4 new site(s) delivered; the hunt is visible in Main
+  ok  loop A is bounded: repeated Hunter requests and scheduler passes create no new job or hunt
+  ok  Investigation Mode -> Finder: the investigation's public artifacts opened an investigation hunt
+  ok  loop B is bounded: re-investigating the site creates no new request, job or hunt
+{"ok":true,"steps":5,"delivered":4,"hunts":12}
+PASS loops: 1/1 steps passed

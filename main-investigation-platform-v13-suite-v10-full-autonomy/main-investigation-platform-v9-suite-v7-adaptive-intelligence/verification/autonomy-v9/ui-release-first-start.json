@@ -1,0 +1,152 @@
+{
+ "ok": true,
+ "pages": 21,
+ "controls": 466,
+ "clicked": 430,
+ "external_links": 2,
+ "hydrated": 21,
+ "already_active": 14,
+ "failures": [],
+ "warnings": [
+  {
+   "where": "/finder :: summary 'Why?'",
+   "note": "control not present after a fresh load (content changed by an earlier click)"
+  },
+  {
+   "where": "/finder :: button 'Investigate'",
+   "note": "control not present after a fresh load (content changed by an earlier click)"
+  },
+  {
+   "where": "/finder :: button 'Useful'",
+   "note": "control not present after a fresh load (content changed by an earlier click)"
+  },
+  {
+   "where": "/finder :: select 'Skip reason'",
+   "note": "control not present after a fresh load (content changed by an earlier click)"
+  },
+  {
+   "where": "/finder :: button 'Skip'",
+   "note": "control not present after a fresh load (content changed by an earlier click)"
+  },
+  {
+   "where": "/finder :: summary 'How was it found?'",
+   "note": "control not present after a fresh load (content changed by an earlier click)"
+  },
+  {
+   "where": "/finder :: summary 'Why?' #2",
+   "note": "control not present after a fresh load (content changed by an earlier click)"
+  },
+  {
+   "where": "/finder :: button 'Investigate' #2",
+   "note": "control not present after a fresh load (content changed by an earlier click)"
+  },
+  {
+   "where": "/finder :: button 'Useful' #2",
+   "note": "control not present after a fresh load (content changed by an earlier click)"
+  },
+  {
+   "where": "/finder :: select 'Skip reason' #2",
+   "note": "control not present after a fresh load (content changed by an earlier click)"
+  },
+  {
+   "where": "/finder :: button 'Skip' #2",
+   "note": "control not present after a fresh load (content changed by an earlier click)"
+  },
+  {
+   "where": "/logger :: a 'Follow'",
+   "note": "control not present after a fresh load (content changed by an earlier click)"
+  },
+  {
+   "where": "/operations/hunter%3Aop%3Asuite-1 :: summary 'Advanced: investigation efficiency'",
+   "note": "page updates on its own (1 changes idle vs 1 after the click); effect not isolated"
+  },
+  {
+   "where": "/orchestration :: button 'Cancel' #3",
+   "note": "control not present after a fresh load (content changed by an earlier click)"
+  },
+  {
+   "where": "/orchestration :: button 'Pause' #4",
+   "note": "control not present after a fresh load (content changed by an earlier click)"
+  },
+  {
+   "where": "/orchestration :: button 'Pause' #5",
+   "note": "control not present after a fresh load (content changed by an earlier click)"
+  },
+  {
+   "where": "/orchestration :: button 'Pause' #6",
+   "note": "control not present after a fresh load (content changed by an earlier click)"
+  },
+  {
+   "where": "/orchestration :: button 'Pause' #7",
+   "note": "control not present after a fresh load (content changed by an earlier click)"
+  },
+  {
+   "where": "/orchestration :: button 'Pause' #8",
+   "note": "control not present after a fresh load (content changed by an earlier click)"
+  },
+  {
+   "where": "/orchestration :: button 'Pause' #9",
+   "note": "control not present after a fresh load (content changed by an earlier click)"
+  },
+  {
+   "where": "/orchestration :: button 'Pause' #10",
+   "note": "control not present after a fresh load (content changed by an earlier click)"
+  },
+  {
+   "where": "/orchestration :: button 'Dismiss' #5",
+   "note": "control not present after a fresh load (content changed by an earlier click)"
+  },
+  {
+   "where": "/orchestration :: button 'Resolve' #6",
+   "note": "control not present after a fresh load (content changed by an earlier click)"
+  },
+  {
+   "where": "/orchestration :: button 'Dismiss' #6",
+   "note": "control not present after a fresh load (content changed by an earlier click)"
+  },
+  {
+   "where": "/orchestration :: button 'Resolve' #7",
+   "note": "control not present after a fresh load (content changed by an earlier click)"
+  },
+  {
+   "where": "/orchestration :: button 'Dismiss' #7",
+   "note": "control not present after a fresh load (content changed by an earlier click)"
+  },
+  {
+   "where": "/orchestration :: button 'Resolve' #8",
+   "note": "control not present after a fresh load (content changed by an earlier click)"
+  },
+  {
+   "where": "/orchestration :: button 'Dismiss' #8",
+   "note": "control not present after a fresh load (content changed by an earlier click)"
+  },
+  {
+   "where": "/orchestration :: button 'Important new evidenceConfirmed report receipt12m'",
+   "note": "control not present after a fresh load (content changed by an earlier click)"
+  },
+  {
+   "where": "/orchestration :: button 'Important new evidenceConfirmed report receipt was added by form_submitter.12m'",
+   "note": "control not present after a fresh load (content changed by an earlier click)"
+  },
+  {
+   "where": "/orchestration :: button 'Important new evidenceOn-chain transfer ETH (2)12m'",
+   "note": "control not present after a fresh load (content changed by an earlier click)"
+  },
+  {
+   "where": "/orchestration :: button 'Important new evidenceOn-chain transfer ETH (1.65)12m'",
+   "note": "control not present after a fresh load (content changed by an earlier click)"
+  },
+  {
+   "where": "/orchestration :: button 'Important new evidenceOn-chain transfer USDT (5000)12m'",
+   "note": "control not present after a fresh load (content changed by an earlier click)"
+  },
+  {
+   "where": "/orchestration :: button 'On' #3",
+   "note": "control not present after a fresh load (content changed by an earlier click)"
+  },
+  {
+   "where": "/orchestration :: button 'On' #4",
+   "note": "control not present after a fresh load (content changed by an earlier click)"
+  }
+ ]
+}

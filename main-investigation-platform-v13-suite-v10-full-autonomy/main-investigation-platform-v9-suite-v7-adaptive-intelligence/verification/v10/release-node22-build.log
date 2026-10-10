@@ -1,0 +1,184 @@
+
+  vinext build  (Vite 8.0.13)
+
+[33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1mProxy environment variables detected. We'll use your proxy for fetch requests.[0m
+
+
+[1/5] analyze client references...
+[2Ktransforming...✓ 482 modules transformed.
+rendering chunks...
+[33m[PLUGIN_TIMINGS] [0mYour build spent significant time in plugins. Here is a breakdown:
+  - rsc:virtual-client-package (29%)
+  - alias (22%)
+  - vinext:og-inline-fetch-assets (12%)
+  - vinext:middleware-server-only (11%)
+  - vinext:css-data-url (9%)
+See https://rolldown.rs/options/checks#plugintimings for more details.
+
+✓ built in 3.56s
+[2/5] analyze server references...
+[2Ktransforming...✓ 212 modules transformed.
+rendering chunks...
+✓ built in 1.12s
+[3/5] build rsc environment...
+[2Ktransforming...✓ 479 modules transformed.
+rendering chunks...
+computing gzip size...
+[33m[PLUGIN_TIMINGS] [0mYour build spent significant time in plugins. Here is a breakdown:
+  - rsc:virtual-client-package (24%)
+  - alias (23%)
+  - vinext:middleware-server-only (12%)
+  - vinext:og-inline-fetch-assets (10%)
+  - vinext:css-data-url (8%)
+See https://rolldown.rs/options/checks#plugintimings for more details.
+
+✓ built in 4.27s
+[4/5] build client environment...
+[2Ktransforming...✓ 1941 modules transformed.
+rendering chunks...
+computing gzip size...
+✓ built in 2.17s
+[5/5] build ssr environment...
+[2Ktransforming...✓ 214 modules transformed.
+rendering chunks...
+computing gzip size...
+✓ built in 871ms
+[0m
+  Route (app)
+  ┌ ? /                                                     
+  ├ ? /advanced                                             
+  ├ λ /api/v1/adaptive/efficiency                           
+  ├ λ /api/v1/agent/settings                                
+  ├ λ /api/v1/autonomy                                      
+  ├ λ /api/v1/autonomy/queue                                
+  ├ λ /api/v1/autonomy/search/:id                           
+  ├ λ /api/v1/campaigns                                     
+  ├ λ /api/v1/campaigns/:id                                 
+  ├ λ /api/v1/campaigns/:id/advanced                        
+  ├ λ /api/v1/campaigns/:id/budget                          
+  ├ λ /api/v1/campaigns/:id/control                         
+  ├ λ /api/v1/campaigns/:id/graph                           
+  ├ λ /api/v1/campaigns/:id/tasks                           
+  ├ λ /api/v1/compat/logger                                 
+  ├ λ /api/v1/dashboard                                     
+  ├ λ /api/v1/events                                        
+  ├ λ /api/v1/events/:id/replay                             
+  ├ λ /api/v1/evidence/upload                               
+  ├ λ /api/v1/feedback/dispatch                             
+  ├ λ /api/v1/finder/context                                
+  ├ λ /api/v1/finder/hunts                                  
+  ├ λ /api/v1/finder/outcomes                               
+  ├ λ /api/v1/health                                        
+  ├ λ /api/v1/inbox                                         
+  ├ λ /api/v1/inbox/:id                                     
+  ├ λ /api/v1/inbox/:id/decision                            
+  ├ λ /api/v1/inbox/:id/opened                              
+  ├ λ /api/v1/inbox/decisions                               
+  ├ λ /api/v1/inbox/next                                    
+  ├ λ /api/v1/inbox/settings                                
+  ├ λ /api/v1/inbox/supply                                  
+  ├ λ /api/v1/ingest/:module                                
+  ├ λ /api/v1/integration/status                            
+  ├ λ /api/v1/investigation-links                           
+  ├ λ /api/v1/investigations/:id/adaptive                   
+  ├ λ /api/v1/investigations/:id/agent                      
+  ├ λ /api/v1/investigations/:id/agent/advanced             
+  ├ λ /api/v1/investigations/:id/agent/conclusion           
+  ├ λ /api/v1/investigations/:id/agent/start                
+  ├ λ /api/v1/investigations/:id/agent/stop                 
+  ├ λ /api/v1/investigations/:id/autonomy                   
+  ├ λ /api/v1/investigations/:id/checkpoints/:cid           
+  ├ λ /api/v1/investigations/:id/context                    
+  ├ λ /api/v1/investigations/:id/director                   
+  ├ λ /api/v1/investigations/:id/expansion                  
+  ├ λ /api/v1/investigations/:id/graph                      
+  ├ λ /api/v1/investigations/:id/mission                    
+  ├ λ /api/v1/investigations/:id/monitoring                 
+  ├ λ /api/v1/investigations/:id/plan                       
+  ├ λ /api/v1/investigations/:id/report                     
+  ├ λ /api/v1/investigations/:id/resolve                    
+  ├ λ /api/v1/investigations/:id/timeline                   
+  ├ λ /api/v1/jobs                                          
+  ├ λ /api/v1/modules/:module/destination                   
+  ├ λ /api/v1/modules/:module/events                        
+  ├ λ /api/v1/modules/:module/events/:id                    
+  ├ λ /api/v1/modules/:module/heartbeat                     
+  ├ λ /api/v1/modules/:module/jobs/:id                      
+  ├ λ /api/v1/modules/:module/jobs/claim                    
+  ├ λ /api/v1/modules/:module/metrics                       
+  ├ λ /api/v1/modules/:module/register                      
+  ├ λ /api/v1/monitoring/tick                               
+  ├ λ /api/v1/operations                                    
+  ├ λ /api/v1/operations/:id                                
+  ├ λ /api/v1/operations/:id/adaptive                       
+  ├ λ /api/v1/operations/:id/decisions                      
+  ├ λ /api/v1/operations/:id/intelligence                   
+  ├ λ /api/v1/operations/:id/intelligence/connections/:edge 
+  ├ λ /api/v1/operations/:id/intelligence/evidence/:evidence
+  ├ λ /api/v1/operations/:id/requests                       
+  ├ λ /api/v1/operations/:id/scientific                     
+  ├ λ /api/v1/operations/reconstruct                        
+  ├ λ /api/v1/operations/sync                               
+  ├ λ /api/v1/ops/advanced                                  
+  ├ λ /api/v1/ops/budgets                                   
+  ├ λ /api/v1/ops/campaigns/:id                             
+  ├ λ /api/v1/ops/commands                                  
+  ├ λ /api/v1/ops/contradictions/:id                        
+  ├ λ /api/v1/ops/control                                   
+  ├ λ /api/v1/ops/decisions/:id                             
+  ├ λ /api/v1/ops/decisions/:id/replay                      
+  ├ λ /api/v1/ops/discovery                                 
+  ├ λ /api/v1/ops/experiments                               
+  ├ λ /api/v1/ops/experiments/:id                           
+  ├ λ /api/v1/ops/gaps                                      
+  ├ λ /api/v1/ops/history                                   
+  ├ λ /api/v1/ops/intel/graph                               
+  ├ λ /api/v1/ops/intel/node/:id                            
+  ├ λ /api/v1/ops/intel/wallets                             
+  ├ λ /api/v1/ops/investigations                            
+  ├ λ /api/v1/ops/maintenance                               
+  ├ λ /api/v1/ops/notifications                             
+  ├ λ /api/v1/ops/overview                                  
+  ├ λ /api/v1/ops/queue                                     
+  ├ λ /api/v1/ops/simulations                               
+  ├ λ /api/v1/ops/tasks                                     
+  ├ λ /api/v1/ops/tick                                      
+  ├ λ /api/v1/ops/work/:id                                  
+  ├ λ /api/v1/orchestration                                 
+  ├ λ /api/v1/orchestration/config                          
+  ├ λ /api/v1/orchestration/jobs/:id                        
+  ├ λ /api/v1/orchestration/notifications/:id               
+  ├ λ /api/v1/orchestration/pipelines/:id                   
+  ├ λ /api/v1/orchestration/reviews/:id                     
+  ├ λ /api/v1/search                                        
+  ├ λ /api/v1/suite/:view                                   
+  ├ λ /api/v1/suite/actions                                 
+  ├ λ /api/v1/triage                                        
+  ├ ? /campaigns                                            
+  ├ ƒ /campaigns/:id                                        
+  ├ ? /discovery                                            
+  ├ ? /finder                                               
+  ├ ? /hunter                                               
+  ├ ? /inbox                                                
+  ├ ? /integration                                          
+  ├ ? /integration/status                                   
+  ├ ? /intelligence                                         
+  ├ ? /investigations                                       
+  ├ ƒ /investigations/:id                                   
+  ├ ? /logger                                               
+  ├ ? /operations                                           
+  ├ ƒ /operations/:id                                       
+  ├ ? /orchestration                                        
+  ├ ? /overview                                             
+  ├ ? /reports                                              
+  ├ ? /tasks                                                
+  └ ? /wallets                                              
+
+  λ API  ƒ Dynamic  ? Unknown
+
+  ? Some routes could not be classified. vinext currently uses static analysis
+    and cannot detect dynamic API usage (headers(), cookies(), etc.) at build time.
+    Automatic classification will be improved in a future release.
+
+  Build complete. Run `vinext start` to start the production server.
+

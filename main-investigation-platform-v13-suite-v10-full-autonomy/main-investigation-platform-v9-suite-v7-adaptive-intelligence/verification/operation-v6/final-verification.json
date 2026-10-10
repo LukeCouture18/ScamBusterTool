@@ -1,0 +1,247 @@
+{
+  "generated_at": "2026-10-03T02:19:08.069848+00:00",
+  "release_assessment": "IMPLEMENTED BUT PARTIALLY VERIFIED",
+  "checks": {
+    "acceptance": {
+      "status": "VERIFIED",
+      "evidence": "acceptance.json"
+    },
+    "crash": {
+      "status": "VERIFIED",
+      "evidence": "crash.json"
+    },
+    "benchmark": {
+      "status": "VERIFIED",
+      "evidence": "benchmark.json"
+    },
+    "stress": {
+      "status": "VERIFIED",
+      "evidence": "stress.json"
+    },
+    "ui": {
+      "status": "VERIFIED",
+      "evidence": "ui.json"
+    },
+    "production": {
+      "status": "VERIFIED",
+      "evidence": "production.json"
+    },
+    "hidden-discovery": {
+      "status": "VERIFIED",
+      "evidence": "hidden-discovery.json"
+    },
+    "migration-matrix": {
+      "status": "VERIFIED",
+      "evidence": "final-regression.log"
+    },
+    "loops": {
+      "status": "VERIFIED",
+      "evidence": "final-regression.log"
+    },
+    "integration:v6": {
+      "status": "VERIFIED",
+      "evidence": "final-regression.log"
+    },
+    "v2": {
+      "status": "VERIFIED",
+      "evidence": "final-regression.log"
+    },
+    "v3": {
+      "status": "VERIFIED",
+      "evidence": "final-regression.log"
+    },
+    "v4": {
+      "status": "VERIFIED",
+      "evidence": "final-regression.log"
+    },
+    "v5": {
+      "status": "VERIFIED",
+      "evidence": "final-regression.log"
+    },
+    "joined:hunter": {
+      "status": "VERIFIED",
+      "evidence": "final-regression.log"
+    },
+    "joined:v61": {
+      "status": "VERIFIED",
+      "evidence": "final-regression.log"
+    },
+    "five-modules": {
+      "status": "VERIFIED",
+      "evidence": "final-regression.log"
+    },
+    "startup:modules": {
+      "status": "VERIFIED",
+      "evidence": "final-regression.log"
+    },
+    "site-finder": {
+      "status": "VERIFIED",
+      "evidence": "final-regression.log"
+    },
+    "director": {
+      "status": "VERIFIED",
+      "evidence": "final-regression.log"
+    },
+    "operation-intelligence": {
+      "status": "VERIFIED",
+      "evidence": "final-regression.log"
+    },
+    "unit": {
+      "status": "VERIFIED",
+      "passed": 37,
+      "skipped": 1,
+      "failed": 0,
+      "evidence": "unit-final.log"
+    },
+    "suite": {
+      "status": "VERIFIED",
+      "results": {
+        "ok": true,
+        "ui_decisions": 4,
+        "discovery": {
+          "delivered": 6,
+          "target": "chaininvestcoin.cc",
+          "reached_by": "page_asset"
+        },
+        "wallet": {
+          "transactions": 4,
+          "counterparties": 3
+        },
+        "report": {
+          "status": "verified",
+          "submissions": 1
+        },
+        "ui": {
+          "checks": 39,
+          "passed": [
+            "sidebar lists exactly the five tools",
+            "Needs you and Advanced sit below the tools",
+            "home shows each tool's state",
+            "home lists what happened",
+            "finder queue has sites waiting",
+            "each site says why it is worth a look",
+            "scores are hidden until you ask why",
+            "why reveals the score and its meaning",
+            "pursuit leads say why they were found",
+            "the discovery chain is shown step by step",
+            "the reviewed site is listed under Investigate with its stage",
+            "hunts are listed in plain words",
+            "hunt internals stay behind Details",
+            "Site Finder shows exactly three views",
+            "picking a site sets the context",
+            "evidence is labelled as seen on the site",
+            "no raw JSON or module-internal titles by default",
+            "site evidence comes first",
+            "shared-infrastructure caution is shown",
+            "module jobs stay behind Details",
+            "site context survives the move to Wallet Investigator",
+            "money flow explained in words",
+            "context survives a reload",
+            "logger capture visible in Main",
+            "report status in plain words",
+            "operation joins the context",
+            "hunter briefing leads with the headline",
+            "membership is labelled as analysis",
+            "member site opens in Site Finder with the new site in context",
+            "context can be cleared",
+            "advanced links to Main's views",
+            "no sideways scroll at phone width on /",
+            "no sideways scroll at phone width on /finder",
+            "no sideways scroll at phone width on /finder",
+            "no sideways scroll at phone width on /wallets",
+            "no sideways scroll at phone width on /logger",
+            "no sideways scroll at phone width on /reports",
+            "no sideways scroll at phone width on /hunter",
+            "no browser errors"
+          ]
+        },
+        "sweep": {
+          "pages": 21,
+          "hydrated": 21,
+          "controls": 423,
+          "clicked": 387,
+          "already_active": 15,
+          "external_links": 2,
+          "warnings": 34
+        },
+        "sweep_after_restart": {
+          "pages": 21,
+          "hydrated": 21,
+          "controls": 244,
+          "clicked": 244,
+          "already_active": 13,
+          "external_links": 0,
+          "warnings": 0
+        }
+      },
+      "evidence": "suite-final.log"
+    },
+    "build": {
+      "status": "VERIFIED",
+      "evidence": "build.log"
+    },
+    "typecheck": {
+      "status": "VERIFIED",
+      "evidence": "typecheck-final.log"
+    },
+    "node22-operation-acceptance": {
+      "status": "VERIFIED",
+      "evidence": "node22.log"
+    },
+    "hunter-unit": {
+      "status": "VERIFIED",
+      "passed": 44,
+      "skipped": 1,
+      "evidence": "hunter-tests.log"
+    },
+    "wallet-validation": {
+      "status": "VERIFIED",
+      "passed": 26,
+      "evidence": "wallet-validation.log"
+    },
+    "wallet-worker": {
+      "status": "VERIFIED",
+      "evidence": "wallet-worker.log"
+    },
+    "wallet-report-pipeline-in-process": {
+      "status": "VERIFIED",
+      "evidence": "wallet-pipeline-final.log"
+    },
+    "installed-native-extension": {
+      "status": "ENVIRONMENT-BLOCKED",
+      "reason": "Native browser IPC socket denied by host policy",
+      "evidence": "final-regression.log"
+    },
+    "windows-native-execution": {
+      "status": "ENVIRONMENT-BLOCKED",
+      "reason": "No Windows host is available"
+    }
+  },
+  "corrected_diagnostic_failures": [
+    {
+      "group": "unit",
+      "superseded_by": "unit-final.log"
+    },
+    {
+      "group": "suite",
+      "superseded_by": "suite-final.log"
+    }
+  ],
+  "interrupted_run": "The workspace outage interrupted the prior browser sweep; the final suite was rerun after recovery.",
+  "aggregate_wallet_pipeline_status": "ENVIRONMENT-BLOCKED: native extension step; remaining WI and report checks verified separately",
+  "not_implemented": [
+    "Complete typed evidence-gap and test ontology",
+    "Calibrated marginal information-gain optimization",
+    "Causal outcome learning targeting validated sites/wallets, contradiction resolution and report readiness",
+    "Complete global actual-cost ledger for every downstream module",
+    "Automatic destructive down-migration"
+  ],
+  "partially_verified": [
+    "Full independent autonomous multi-operation inference accuracy",
+    "Every requested adversarial provider and rotation combination",
+    "Every internal wallet correlation and live external handoff crash phase",
+    "Production-scale remote D1 stress and sustained heap/browser profiling",
+    "Complete module reconnection during the browser harness random-port restart; existing workers retain the original URL and log connection refusals"
+  ],
+  "unresolved_executed_product_failures": []
+}

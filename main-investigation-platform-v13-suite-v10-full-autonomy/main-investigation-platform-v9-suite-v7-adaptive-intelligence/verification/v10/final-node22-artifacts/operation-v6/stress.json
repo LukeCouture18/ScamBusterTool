@@ -1,0 +1,108 @@
+{
+  "ok": true,
+  "rows": {
+    "entities": 10000,
+    "relationships": 50100,
+    "evidence": 5000,
+    "investigations": 300,
+    "operations": 25,
+    "projected_edges": 50100
+  },
+  "timings": [
+    {
+      "name": "load_10000_entities_50100_relationships",
+      "ms": 852.05
+    },
+    {
+      "name": "director_projection_tick",
+      "ms": 3298.5
+    },
+    {
+      "name": "director_projection_tick",
+      "ms": 2019.01
+    },
+    {
+      "name": "director_projection_tick",
+      "ms": 2767.66
+    },
+    {
+      "name": "director_projection_tick",
+      "ms": 3256.52
+    },
+    {
+      "name": "director_projection_tick",
+      "ms": 5120.68
+    },
+    {
+      "name": "director_projection_tick",
+      "ms": 3839.4
+    },
+    {
+      "name": "director_projection_tick",
+      "ms": 5946.57
+    },
+    {
+      "name": "director_projection_tick",
+      "ms": 3806.23
+    },
+    {
+      "name": "director_projection_tick",
+      "ms": 2997.5
+    },
+    {
+      "name": "director_projection_tick",
+      "ms": 2513.4
+    },
+    {
+      "name": "director_projection_tick",
+      "ms": 2323.33
+    },
+    {
+      "name": "director_projection_tick",
+      "ms": 3535.36
+    },
+    {
+      "name": "director_projection_tick",
+      "ms": 5644.82
+    },
+    {
+      "name": "briefing_and_graph_first_page",
+      "ms": 26.33
+    },
+    {
+      "name": "paginated_graph_query",
+      "ms": 21.22
+    },
+    {
+      "name": "wallet_view",
+      "ms": 19.39
+    },
+    {
+      "name": "edge_explanation",
+      "ms": 3.78
+    },
+    {
+      "name": "event_processing_10_wakeups",
+      "ms": 407.06
+    },
+    {
+      "name": "idle_portfolio_tick",
+      "ms": 2038.2
+    }
+  ],
+  "memory": {
+    "rss_before_bytes": 168472576,
+    "rss_after_bytes": 234336256,
+    "peak_rss_kb": 229912
+  },
+  "database": {
+    "before_bytes": 2297856,
+    "after_bytes": 99262464,
+    "growth_bytes": 96964608
+  },
+  "limits": {
+    "graph_page": 100,
+    "entity_page": 200,
+    "timeline_page": 100
+  }
+}

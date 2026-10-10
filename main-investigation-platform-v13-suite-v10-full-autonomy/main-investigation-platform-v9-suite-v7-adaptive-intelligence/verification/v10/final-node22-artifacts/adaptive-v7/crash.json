@@ -1,0 +1,117 @@
+{
+  "ok": true,
+  "crashes": 22,
+  "passed": [
+    {
+      "phase": "gap creation",
+      "edge": "before",
+      "actual_process_signal": "SIGKILL"
+    },
+    {
+      "phase": "gap creation",
+      "edge": "after",
+      "actual_process_signal": "SIGKILL"
+    },
+    {
+      "phase": "test planning (candidate components)",
+      "edge": "before",
+      "actual_process_signal": "SIGKILL"
+    },
+    {
+      "phase": "test planning (candidate components)",
+      "edge": "after",
+      "actual_process_signal": "SIGKILL"
+    },
+    {
+      "phase": "decision selection",
+      "edge": "before",
+      "actual_process_signal": "SIGKILL"
+    },
+    {
+      "phase": "decision selection",
+      "edge": "after",
+      "actual_process_signal": "SIGKILL"
+    },
+    {
+      "phase": "resource reservation",
+      "edge": "before",
+      "actual_process_signal": "SIGKILL"
+    },
+    {
+      "phase": "resource reservation",
+      "edge": "after",
+      "actual_process_signal": "SIGKILL"
+    },
+    {
+      "phase": "specialist handoff",
+      "edge": "before",
+      "actual_process_signal": "SIGKILL"
+    },
+    {
+      "phase": "specialist handoff",
+      "edge": "after",
+      "actual_process_signal": "SIGKILL"
+    },
+    {
+      "phase": "cost accounting",
+      "edge": "before",
+      "actual_process_signal": "SIGKILL"
+    },
+    {
+      "phase": "cost accounting",
+      "edge": "after",
+      "actual_process_signal": "SIGKILL"
+    },
+    {
+      "phase": "outcome attribution",
+      "edge": "before",
+      "actual_process_signal": "SIGKILL"
+    },
+    {
+      "phase": "outcome attribution",
+      "edge": "after",
+      "actual_process_signal": "SIGKILL"
+    },
+    {
+      "phase": "learning update",
+      "edge": "before",
+      "actual_process_signal": "SIGKILL"
+    },
+    {
+      "phase": "learning update",
+      "edge": "after",
+      "actual_process_signal": "SIGKILL"
+    },
+    {
+      "phase": "budget adjustment",
+      "edge": "before",
+      "actual_process_signal": "SIGKILL"
+    },
+    {
+      "phase": "budget adjustment",
+      "edge": "after",
+      "actual_process_signal": "SIGKILL"
+    },
+    {
+      "phase": "parking",
+      "edge": "before",
+      "actual_process_signal": "SIGKILL"
+    },
+    {
+      "phase": "parking",
+      "edge": "after",
+      "actual_process_signal": "SIGKILL"
+    },
+    {
+      "phase": "reawakening",
+      "edge": "before",
+      "actual_process_signal": "SIGKILL"
+    },
+    {
+      "phase": "reawakening",
+      "edge": "after",
+      "actual_process_signal": "SIGKILL"
+    }
+  ],
+  "scope": "Actual child-process SIGKILL before/after the SQL statement or atomic D1-double batch of each v7 transition (gap creation, candidate planning, decision selection, reservation, specialist handoff, cost accounting, attribution, learning update, budget adjustment, parking, reawakening), restart on the used SQLite file and replay."
+}

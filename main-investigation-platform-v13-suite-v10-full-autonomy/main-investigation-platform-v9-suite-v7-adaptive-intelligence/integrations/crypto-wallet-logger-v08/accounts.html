@@ -1,0 +1,18 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Wallet Logger · Private accounts</title><link rel="stylesheet" href="ui.css"><link rel="stylesheet" href="accounts.css"></head><body>
+<main><header><div><p class="muted">Wallet Logger · Private operator workspace</p><h1>Accounts</h1></div><button id="lock">Lock vault</button></header>
+<p>Use accounts you own or new accounts you are legitimately creating. Main receives no account secrets. You submit signup, login and verification yourself.</p>
+<form id="unlockForm"><label>Master password (12+ characters)<input id="master" type="password" minlength="12" maxlength="1024" required autocomplete="current-password"></label><button class="primary">Initialize / Unlock</button></form>
+<p id="status" role="status" aria-live="polite"></p>
+<section id="workspace" hidden>
+<h2>Prepare an account</h2><form id="prepareForm"><label>Purpose<select id="intent"><option value="">Choose explicitly…</option><option value="legitimate_new_account">New account I am legitimately creating</option><option value="owned_account_import">Import an account I already own</option></select></label>
+<label>Exact site login URL<input id="loginUrl" type="url" required placeholder="https://example.com/login"></label><label>Signup URL (optional)<input id="signupUrl" type="url" placeholder="https://example.com/register"></label>
+<div id="owned" hidden><label>Owned username / email<input id="ownedUsername" autocomplete="off"></label><label>Owned password<input id="ownedPassword" type="password" autocomplete="off"></label></div>
+<label>Private notes<textarea id="notes" maxlength="5000"></textarea></label><button class="primary">Prepare / Recover account</button></form>
+<h2>Saved accounts</h2><label>Account<select id="saved"><option value="">Select an account…</option></select></label><p id="accountStatus" class="muted"></p>
+<div class="row"><button id="openSite">Open site</button><button id="refreshTabs">Refresh matching tabs</button></div><label>Exact-domain target tab<select id="targetTab"><option value="">Select a matching open site tab…</option></select></label>
+<div class="row"><button id="fillSignup">Fill Signup</button><button id="fillLogin">Fill Login</button><button id="loginCompleted">I successfully logged in</button></div>
+<p>Fill never clicks or submits. Complete CAPTCHA, MFA and email verification yourself. Passive observations resume automatically while the vault is unlocked.</p>
+<details><summary>Reveal / copy selected credentials</summary><button id="reveal">Reveal selected account</button><label>Username / email<input id="privateUsername" readonly></label><label>Password<input id="privatePassword" type="password" readonly></label><div class="row"><button id="copyUsername">Copy username</button><button id="copyPassword">Copy password</button></div></details>
+<h2>Optional temporary inbox</h2><p>Available for legitimate new accounts. Recovery uses the saved mailbox identity; provider uncertainty is shown explicitly.</p><div class="row"><button id="createMail">Create / Recover Mail.tm inbox</button><button id="pollMail">Check messages</button></div>
+<label>Verification code<input id="code" readonly></label><div class="row"><button id="copyCode">Copy Code</button><button id="fillCode">Fill Code</button></div><div id="messages"></div><div id="verificationLinks"></div>
+</section></main><script src="accounts.js"></script></body></html>

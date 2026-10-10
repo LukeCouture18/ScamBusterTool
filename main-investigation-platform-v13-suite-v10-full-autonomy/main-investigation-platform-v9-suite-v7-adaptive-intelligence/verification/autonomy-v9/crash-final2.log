@@ -1,0 +1,34 @@
+PASS before site investigation
+PASS after site investigation
+PASS before wallet observation ingestion
+PASS after wallet observation ingestion
+PASS before candidate deduplication
+PASS after candidate deduplication
+PASS before validation scheduling
+PASS after validation scheduling
+PASS before Wallet Investigator completion
+PASS after Wallet Investigator completion
+PASS before provider retry
+PASS after provider retry
+PASS before operation update
+PASS after operation update
+PASS before report rebuild
+PASS after report rebuild
+PASS before exact approval
+PASS after exact approval
+AssertionError [ERR_ASSERTION]: submission handoff before injection must be reached  done
++ actual - expected
+
++ 'SIGTERM'
+- 'SIGKILL'
+      ^
+
+    at file:///workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/autonomy-crash.mjs:68:385
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: 'SIGTERM',
+  expected: 'SIGKILL',
+  operator: 'strictEqual',
+  diff: 'simple'
+}

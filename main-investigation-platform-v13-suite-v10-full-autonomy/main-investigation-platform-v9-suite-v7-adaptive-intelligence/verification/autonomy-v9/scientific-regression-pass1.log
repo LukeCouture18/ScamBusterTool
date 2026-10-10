@@ -1,0 +1,849 @@
+
+=== scientific-intelligence (10 steps) ===
+--- scientific-intelligence 1/10: node --experimental-sqlite --import tsx tests/scientific-intelligence.mjs
+PASS fresh install and populated v7 migration/replay preserve existing data
+PASS explicit competing sets include operation, kit, provider and unknown
+PASS plans and outcome interpretations commit before specialist handoff
+PASS new deterministic evidence rejects a false bounded prediction and resolves a real contradiction
+PASS provider disagreement preserves both sources and remains unresolved
+PASS deterministic scoped correction resolves evidence error without discarding the conflict
+PASS absence discipline requires a finite covered scope and keeps unavailable results inconclusive
+PASS five copied artifacts count as one upstream unit; independent categories remain separate
+PASS replay is exactly once and analytical projection creates no evidence or ownership relationships
+PASS default briefing contains analyst questions; raw IDs and ledgers require Advanced
+PASS bounded falsification reservations cannot exceed or extend total operation budgets
+{"ok":true,"checks":12,"passed":["fresh install and populated v7 migration/replay preserve existing data","explicit competing sets include operation, kit, provider and unknown","plans and outcome interpretations commit before specialist handoff","new deterministic evidence rejects a false bounded prediction and resolves a real contradiction","provider disagreement preserves both sources and remains unresolved","deterministic scoped correction resolves evidence error without discarding the conflict","absence discipline requires a finite covered scope and keeps unavailable results inconclusive","five copied artifacts count as one upstream unit; independent categories remain separate","replay is exactly once and analytical projection creates no evidence or ownership relationships","default briefing contains analyst questions; raw IDs and ledgers require Advanced","bounded falsification reservations cannot exceed or extend total operation budgets","used-state restart retains full revision and contradiction history"]}
+--- scientific-intelligence 2/10: node --experimental-sqlite --import tsx tests/scientific-crash.mjs
+PASS before hypothesis prediction creation
+PASS after hypothesis prediction creation
+PASS before test outcome plan
+PASS after test outcome plan
+PASS before contradiction creation
+PASS after contradiction creation
+PASS before contradiction resolution
+PASS after contradiction resolution
+PASS before hypothesis revision
+PASS after hypothesis revision
+PASS before falsification reservation
+PASS after falsification reservation
+PASS before operation split proposal
+PASS after operation split proposal
+PASS before alternative explanation update
+PASS after alternative explanation update
+PASS before commonality update
+PASS after commonality update
+PASS before scientific briefing projection
+PASS after scientific briefing projection
+{"ok":true,"crashes":20,"passed":[{"phase":"hypothesis prediction creation","edge":"before","signal":"SIGKILL","revision":"REJECTED","split_proposals":1,"approved_boundary_mutations":0},{"phase":"hypothesis prediction creation","edge":"after","signal":"SIGKILL","revision":"REJECTED","split_proposals":1,"approved_boundary_mutations":0},{"phase":"test outcome plan","edge":"before","signal":"SIGKILL","revision":"REJECTED","split_proposals":1,"approved_boundary_mutations":0},{"phase":"test outcome plan","edge":"after","signal":"SIGKILL","revision":"REJECTED","split_proposals":1,"approved_boundary_mutations":0},{"phase":"contradiction creation","edge":"before","signal":"SIGKILL","revision":"REJECTED","split_proposals":1,"approved_boundary_mutations":0},{"phase":"contradiction creation","edge":"after","signal":"SIGKILL","revision":"REJECTED","split_proposals":1,"approved_boundary_mutations":0},{"phase":"contradiction resolution","edge":"before","signal":"SIGKILL","revision":"REJECTED","split_proposals":1,"approved_boundary_mutations":0},{"phase":"contradiction resolution","edge":"after","signal":"SIGKILL","revision":"REJECTED","split_proposals":1,"approved_boundary_mutations":0},{"phase":"hypothesis revision","edge":"before","signal":"SIGKILL","revision":"REJECTED","split_proposals":1,"approved_boundary_mutations":0},{"phase":"hypothesis revision","edge":"after","signal":"SIGKILL","revision":"REJECTED","split_proposals":1,"approved_boundary_mutations":0},{"phase":"falsification reservation","edge":"before","signal":"SIGKILL","revision":"REJECTED","split_proposals":1,"approved_boundary_mutations":0},{"phase":"falsification reservation","edge":"after","signal":"SIGKILL","revision":"REJECTED","split_proposals":1,"approved_boundary_mutations":0},{"phase":"operation split proposal","edge":"before","signal":"SIGKILL","revision":"REJECTED","split_proposals":1,"approved_boundary_mutations":0},{"phase":"operation split proposal","edge":"after","signal":"SIGKILL","revision":"REJECTED","split_proposals":1,"approved_boundary_mutations":0},{"phase":"alternative explanation update","edge":"before","signal":"SIGKILL","revision":"REJECTED","split_proposals":1,"approved_boundary_mutations":0},{"phase":"alternative explanation update","edge":"after","signal":"SIGKILL","revision":"REJECTED","split_proposals":1,"approved_boundary_mutations":0},{"phase":"commonality update","edge":"before","signal":"SIGKILL","revision":"REJECTED","split_proposals":1,"approved_boundary_mutations":0},{"phase":"commonality update","edge":"after","signal":"SIGKILL","revision":"REJECTED","split_proposals":1,"approved_boundary_mutations":0},{"phase":"scientific briefing projection","edge":"before","signal":"SIGKILL","revision":"REJECTED","split_proposals":1,"approved_boundary_mutations":0},{"phase":"scientific briefing projection","edge":"after","signal":"SIGKILL","revision":"REJECTED","split_proposals":1,"approved_boundary_mutations":0}],"scope":"Real child-process SIGKILL with local SQLite transaction boundaries. Remote D1/network in-flight behavior is not certified."}
+--- scientific-intelligence 3/10: node --experimental-sqlite --import tsx tests/scientific-queue.mjs
+{"ok":true,"checked":4,"resolved":1,"retained_uncertain":3,"deleted":0,"replay_duplicate_events":0}
+--- scientific-intelligence 4/10: node --experimental-sqlite --import tsx tests/scientific-laboratory.mjs
+{"ok":true,"summary":{"design":{"cases":42,"correct_hypothesis_discrimination":42,"incorrect_discrimination":0,"uncertainty_preserved":42,"contradictions_resolved":12,"unresolved_preserved":3,"contradictions_incorrectly_dismissed":0,"generic_correlations_rejected":15,"tests_per_resolved_contradiction":1,"requests_per_resolved_contradiction":0},"held_out":{"cases":70,"correct_hypothesis_discrimination":70,"incorrect_discrimination":0,"uncertainty_preserved":70,"contradictions_resolved":20,"unresolved_preserved":5,"contradictions_incorrectly_dismissed":0,"generic_correlations_rejected":25,"tests_per_resolved_contradiction":1,"requests_per_resolved_contradiction":0}}}
+--- scientific-intelligence 5/10: node --experimental-sqlite --import tsx tests/scientific-stress.mjs
+{"ok":true,"rows":{"entities":10000,"relationships":50100,"evidence":5000,"investigations":300,"operations":25,"projected_edges":50100,"v7_history":{"decisions":10000,"components":144000,"tests":10000,"costs":100000,"outcomes":30000,"lineage":20000,"gaps":5000,"gap_history":20000},"scientific_hypotheses":5100,"scientific_predictions":5100,"scientific_contradictions":5000,"scientific_history":30100,"new_v7_decisions_during_run":24,"new_v7_tests_during_run":4},"timings":[{"name":"load_10000_entities_50100_relationships_5000_evidence","ms":496.52},{"name":"load_v7_history","ms":881.41},{"name":"load_scientific_history","ms":140.91},{"name":"director_projection_tick","ms":1903.94},{"name":"director_projection_tick","ms":1464.55},{"name":"director_projection_tick","ms":1455.47},{"name":"director_projection_tick","ms":1403.6},{"name":"director_projection_tick","ms":1450.91},{"name":"director_projection_tick","ms":1364.13},{"name":"director_projection_tick","ms":1408.52},{"name":"director_projection_tick","ms":1388.2},{"name":"director_projection_tick","ms":1289.3},{"name":"director_projection_tick","ms":1474.32},{"name":"director_projection_tick","ms":1480.94},{"name":"director_projection_tick","ms":1875.69},{"name":"director_projection_tick","ms":1889.75},{"name":"director_projection_tick","ms":1563.11},{"name":"adaptive_portfolio_decision_tick_8_operations","ms":1545.88},{"name":"adaptive_portfolio_decision_tick_8_operations","ms":1475.96},{"name":"adaptive_portfolio_decision_tick_8_operations","ms":1424.72},{"name":"adaptive_portfolio_decision_tick_8_operations","ms":1349.11},{"name":"adaptive_unchanged_parked_tick","ms":1374.11},{"name":"v6_policy_tick_8_operations_same_state","ms":996.32},{"name":"v6_policy_tick_8_operations_same_state","ms":1263.33},{"name":"adaptive_operation_view","ms":11.4},{"name":"adaptive_operation_view_with_efficiency","ms":59.47},{"name":"adaptive_portfolio_efficiency","ms":524.22},{"name":"briefing_and_graph_first_page","ms":13.9},{"name":"scientific_cached_default_briefing","ms":2.87},{"name":"scientific_advanced_bounded_view","ms":3.49}],"decision_latency_ms":[1545.88,1475.96,1424.72,1349.11],"v6_policy_tick_ms":[996.32,1263.33],"memory":{"rss_before_bytes":177541120,"rss_after_bytes":344612864,"peak_rss_kb":336536},"database":{"before_bytes":2183168,"before_scientific_history_bytes":88846336,"after_fixture_and_history_bytes":99942400,"after_bytes":175517696,"growth_bytes":173334528,"growth_during_run_bytes":75575296},"scope":"Local file-backed SQLite through the D1 double and the real Main API routes; not a remote D1 service-level measurement."}
+--- scientific-intelligence 6/10: node --experimental-sqlite --import tsx tests/scientific-ui.mjs
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+{"ok":true,"checks":["Default briefing answers analyst questions without score internals","Provenance-backed explanation and alternatives","Falsification prediction and bounded test","Evidence source clickthrough","Existing v7 diagnostics retained under Advanced","375px responsive page"],"errors":[],"scope":"Real components and APIs in the SSR/hydration harness; production worker is checked separately."}
+--- scientific-intelligence 7/10: node --import tsx tests/scientific-policy-rollout.mjs
+[
+ {
+  "partition": "design",
+  "request_ceiling": 600,
+  "policy": "v6 operation policy",
+  "runs": 5,
+  "hidden_sites_discovered": 13.4,
+  "validated_true_wallets": 8,
+  "linkage_discriminated": 0,
+  "contradictions_resolved": 0,
+  "replacements_found": 0,
+  "false_relationships": 0,
+  "requests": 629.2,
+  "jobs": 27.4,
+  "requests_per_hidden_site": 46.98,
+  "useful_rate": 0.957,
+  "wasted_actions": 0.6,
+  "runaway_max_repeat": 1
+ },
+ {
+  "partition": "design",
+  "request_ceiling": 600,
+  "policy": "v7 adaptive",
+  "runs": 5,
+  "hidden_sites_discovered": 16.6,
+  "validated_true_wallets": 9,
+  "linkage_discriminated": 0,
+  "contradictions_resolved": 0,
+  "replacements_found": 0.6,
+  "false_relationships": 1.2,
+  "requests": 751.2,
+  "jobs": 33.8,
+  "requests_per_hidden_site": 45.92,
+  "useful_rate": 0.6,
+  "wasted_actions": 6.4,
+  "runaway_max_repeat": 1
+ },
+ {
+  "partition": "design",
+  "request_ceiling": 600,
+  "policy": "v8 scientific",
+  "runs": 5,
+  "hidden_sites_discovered": 17.8,
+  "validated_true_wallets": 8.6,
+  "linkage_discriminated": 0,
+  "contradictions_resolved": 0,
+  "replacements_found": 0.4,
+  "false_relationships": 1.6,
+  "requests": 777.8,
+  "jobs": 35.4,
+  "requests_per_hidden_site": 44.04,
+  "useful_rate": 0.65,
+  "wasted_actions": 5.6,
+  "runaway_max_repeat": 1
+ },
+ {
+  "partition": "design",
+  "request_ceiling": 600,
+  "policy": "random eligible test",
+  "runs": 5,
+  "hidden_sites_discovered": 9.2,
+  "validated_true_wallets": 5,
+  "linkage_discriminated": 1.8,
+  "contradictions_resolved": 0,
+  "replacements_found": 0.4,
+  "false_relationships": 1.6,
+  "requests": 632.6,
+  "jobs": 26.8,
+  "requests_per_hidden_site": 70.78,
+  "useful_rate": 0.618,
+  "wasted_actions": 6.2,
+  "runaway_max_repeat": 1
+ },
+ {
+  "partition": "design",
+  "request_ceiling": 600,
+  "policy": "cheapest safe",
+  "runs": 5,
+  "hidden_sites_discovered": 16.8,
+  "validated_true_wallets": 9,
+  "linkage_discriminated": 0,
+  "contradictions_resolved": 0,
+  "replacements_found": 0.2,
+  "false_relationships": 0,
+  "requests": 718.6,
+  "jobs": 32.8,
+  "requests_per_hidden_site": 43.14,
+  "useful_rate": 0.613,
+  "wasted_actions": 6.2,
+  "runaway_max_repeat": 1
+ },
+ {
+  "partition": "design",
+  "request_ceiling": 600,
+  "policy": "confirmation biased",
+  "runs": 5,
+  "hidden_sites_discovered": 17.4,
+  "validated_true_wallets": 8.4,
+  "linkage_discriminated": 0.2,
+  "contradictions_resolved": 0,
+  "replacements_found": 0.4,
+  "false_relationships": 0,
+  "requests": 707.6,
+  "jobs": 31.4,
+  "requests_per_hidden_site": 40.88,
+  "useful_rate": 0.815,
+  "wasted_actions": 2.6,
+  "runaway_max_repeat": 1
+ },
+ {
+  "partition": "design",
+  "request_ceiling": 900,
+  "policy": "v6 operation policy",
+  "runs": 5,
+  "hidden_sites_discovered": 15.4,
+  "validated_true_wallets": 8,
+  "linkage_discriminated": 0,
+  "contradictions_resolved": 0,
+  "replacements_found": 0,
+  "false_relationships": 0,
+  "requests": 804,
+  "jobs": 34.8,
+  "requests_per_hidden_site": 52.32,
+  "useful_rate": 0.793,
+  "wasted_actions": 4,
+  "runaway_max_repeat": 1.4
+ },
+ {
+  "partition": "design",
+  "request_ceiling": 900,
+  "policy": "v7 adaptive",
+  "runs": 5,
+  "hidden_sites_discovered": 19.2,
+  "validated_true_wallets": 9.4,
+  "linkage_discriminated": 1.2,
+  "contradictions_resolved": 0,
+  "replacements_found": 0.8,
+  "false_relationships": 2.6,
+  "requests": 983.8,
+  "jobs": 43.8,
+  "requests_per_hidden_site": 51.58,
+  "useful_rate": 0.618,
+  "wasted_actions": 8.4,
+  "runaway_max_repeat": 1
+ },
+ {
+  "partition": "design",
+  "request_ceiling": 900,
+  "policy": "v8 scientific",
+  "runs": 5,
+  "hidden_sites_discovered": 19.4,
+  "validated_true_wallets": 9.8,
+  "linkage_discriminated": 1.4,
+  "contradictions_resolved": 0,
+  "replacements_found": 1.2,
+  "false_relationships": 2.6,
+  "requests": 1005.8,
+  "jobs": 44.8,
+  "requests_per_hidden_site": 52.2,
+  "useful_rate": 0.598,
+  "wasted_actions": 9.2,
+  "runaway_max_repeat": 1
+ },
+ {
+  "partition": "design",
+  "request_ceiling": 900,
+  "policy": "random eligible test",
+  "runs": 5,
+  "hidden_sites_discovered": 17.4,
+  "validated_true_wallets": 9.2,
+  "linkage_discriminated": 2.6,
+  "contradictions_resolved": 0,
+  "replacements_found": 1,
+  "false_relationships": 2,
+  "requests": 1012.8,
+  "jobs": 43.4,
+  "requests_per_hidden_site": 58.86,
+  "useful_rate": 0.626,
+  "wasted_actions": 9,
+  "runaway_max_repeat": 1
+ },
+ {
+  "partition": "design",
+  "request_ceiling": 900,
+  "policy": "cheapest safe",
+  "runs": 5,
+  "hidden_sites_discovered": 20.4,
+  "validated_true_wallets": 9.6,
+  "linkage_discriminated": 2.6,
+  "contradictions_resolved": 0,
+  "replacements_found": 1.2,
+  "false_relationships": 0,
+  "requests": 978.6,
+  "jobs": 43.2,
+  "requests_per_hidden_site": 48.22,
+  "useful_rate": 0.65,
+  "wasted_actions": 8,
+  "runaway_max_repeat": 1
+ },
+ {
+  "partition": "design",
+  "request_ceiling": 900,
+  "policy": "confirmation biased",
+  "runs": 5,
+  "hidden_sites_discovered": 19.6,
+  "validated_true_wallets": 8.8,
+  "linkage_discriminated": 1.8,
+  "contradictions_resolved": 0,
+  "replacements_found": 0.8,
+  "false_relationships": 0,
+  "requests": 936.4,
+  "jobs": 40.4,
+  "requests_per_hidden_site": 48.04,
+  "useful_rate": 0.712,
+  "wasted_actions": 6,
+  "runaway_max_repeat": 1
+ },
+ {
+  "partition": "held_out",
+  "request_ceiling": 600,
+  "policy": "v6 operation policy",
+  "runs": 8,
+  "hidden_sites_discovered": 12.875,
+  "validated_true_wallets": 8,
+  "linkage_discriminated": 0,
+  "contradictions_resolved": 0,
+  "replacements_found": 0,
+  "false_relationships": 0,
+  "requests": 616.25,
+  "jobs": 26.875,
+  "requests_per_hidden_site": 47.888,
+  "useful_rate": 0.92,
+  "wasted_actions": 1.125,
+  "runaway_max_repeat": 1
+ },
+ {
+  "partition": "held_out",
+  "request_ceiling": 600,
+  "policy": "v7 adaptive",
+  "runs": 8,
+  "hidden_sites_discovered": 16.75,
+  "validated_true_wallets": 9,
+  "linkage_discriminated": 0.375,
+  "contradictions_resolved": 0,
+  "replacements_found": 0.625,
+  "false_relationships": 2,
+  "requests": 770.125,
+  "jobs": 34.75,
+  "requests_per_hidden_site": 46.587,
+  "useful_rate": 0.602,
+  "wasted_actions": 6.375,
+  "runaway_max_repeat": 1
+ },
+ {
+  "partition": "held_out",
+  "request_ceiling": 600,
+  "policy": "v8 scientific",
+  "runs": 8,
+  "hidden_sites_discovered": 17.625,
+  "validated_true_wallets": 9,
+  "linkage_discriminated": 0,
+  "contradictions_resolved": 0,
+  "replacements_found": 0.625,
+  "false_relationships": 1.125,
+  "requests": 763.5,
+  "jobs": 34.75,
+  "requests_per_hidden_site": 43.5,
+  "useful_rate": 0.61,
+  "wasted_actions": 6.25,
+  "runaway_max_repeat": 1
+ },
+ {
+  "partition": "held_out",
+  "request_ceiling": 600,
+  "policy": "random eligible test",
+  "runs": 8,
+  "hidden_sites_discovered": 9.375,
+  "validated_true_wallets": 5.125,
+  "linkage_discriminated": 1.875,
+  "contradictions_resolved": 0,
+  "replacements_found": 0.5,
+  "false_relationships": 2,
+  "requests": 651.625,
+  "jobs": 27.375,
+  "requests_per_hidden_site": 70.838,
+  "useful_rate": 0.651,
+  "wasted_actions": 5.625,
+  "runaway_max_repeat": 1
+ },
+ {
+  "partition": "held_out",
+  "request_ceiling": 600,
+  "policy": "cheapest safe",
+  "runs": 8,
+  "hidden_sites_discovered": 16.25,
+  "validated_true_wallets": 8.625,
+  "linkage_discriminated": 0.25,
+  "contradictions_resolved": 0,
+  "replacements_found": 0,
+  "false_relationships": 0,
+  "requests": 710.5,
+  "jobs": 32.25,
+  "requests_per_hidden_site": 43.862,
+  "useful_rate": 0.602,
+  "wasted_actions": 6.375,
+  "runaway_max_repeat": 1
+ },
+ {
+  "partition": "held_out",
+  "request_ceiling": 600,
+  "policy": "confirmation biased",
+  "runs": 8,
+  "hidden_sites_discovered": 16.625,
+  "validated_true_wallets": 8.375,
+  "linkage_discriminated": 0.125,
+  "contradictions_resolved": 0,
+  "replacements_found": 0.375,
+  "false_relationships": 0,
+  "requests": 687.625,
+  "jobs": 30.625,
+  "requests_per_hidden_site": 41.463,
+  "useful_rate": 0.768,
+  "wasted_actions": 3.25,
+  "runaway_max_repeat": 1
+ },
+ {
+  "partition": "held_out",
+  "request_ceiling": 900,
+  "policy": "v6 operation policy",
+  "runs": 8,
+  "hidden_sites_discovered": 14.875,
+  "validated_true_wallets": 8,
+  "linkage_discriminated": 0,
+  "contradictions_resolved": 0,
+  "replacements_found": 0,
+  "false_relationships": 0,
+  "requests": 776,
+  "jobs": 33.75,
+  "requests_per_hidden_site": 52.325,
+  "useful_rate": 0.786,
+  "wasted_actions": 4,
+  "runaway_max_repeat": 1.625
+ },
+ {
+  "partition": "held_out",
+  "request_ceiling": 900,
+  "policy": "v7 adaptive",
+  "runs": 8,
+  "hidden_sites_discovered": 19.5,
+  "validated_true_wallets": 9.625,
+  "linkage_discriminated": 1.875,
+  "contradictions_resolved": 0,
+  "replacements_found": 1.25,
+  "false_relationships": 2.625,
+  "requests": 999,
+  "jobs": 44.125,
+  "requests_per_hidden_site": 51.688,
+  "useful_rate": 0.608,
+  "wasted_actions": 8.625,
+  "runaway_max_repeat": 1
+ },
+ {
+  "partition": "held_out",
+  "request_ceiling": 900,
+  "policy": "v8 scientific",
+  "runs": 8,
+  "hidden_sites_discovered": 20.375,
+  "validated_true_wallets": 10,
+  "linkage_discriminated": 1.875,
+  "contradictions_resolved": 0,
+  "replacements_found": 2,
+  "false_relationships": 1.375,
+  "requests": 989.375,
+  "jobs": 44,
+  "requests_per_hidden_site": 48.75,
+  "useful_rate": 0.618,
+  "wasted_actions": 8.5,
+  "runaway_max_repeat": 1
+ },
+ {
+  "partition": "held_out",
+  "request_ceiling": 900,
+  "policy": "random eligible test",
+  "runs": 8,
+  "hidden_sites_discovered": 17,
+  "validated_true_wallets": 9.75,
+  "linkage_discriminated": 2.5,
+  "contradictions_resolved": 0,
+  "replacements_found": 1.375,
+  "false_relationships": 2.75,
+  "requests": 1000.625,
+  "jobs": 42.75,
+  "requests_per_hidden_site": 59.5,
+  "useful_rate": 0.686,
+  "wasted_actions": 7.25,
+  "runaway_max_repeat": 1
+ },
+ {
+  "partition": "held_out",
+  "request_ceiling": 900,
+  "policy": "cheapest safe",
+  "runs": 8,
+  "hidden_sites_discovered": 19.375,
+  "validated_true_wallets": 9.5,
+  "linkage_discriminated": 3,
+  "contradictions_resolved": 0,
+  "replacements_found": 1.125,
+  "false_relationships": 0,
+  "requests": 964.875,
+  "jobs": 42.375,
+  "requests_per_hidden_site": 50.112,
+  "useful_rate": 0.641,
+  "wasted_actions": 8.25,
+  "runaway_max_repeat": 1
+ },
+ {
+  "partition": "held_out",
+  "request_ceiling": 900,
+  "policy": "confirmation biased",
+  "runs": 8,
+  "hidden_sites_discovered": 19.25,
+  "validated_true_wallets": 8.875,
+  "linkage_discriminated": 1.75,
+  "contradictions_resolved": 0,
+  "replacements_found": 0.875,
+  "false_relationships": 0,
+  "requests": 927.75,
+  "jobs": 40.25,
+  "requests_per_hidden_site": 48.375,
+  "useful_rate": 0.715,
+  "wasted_actions": 6,
+  "runaway_max_repeat": 1
+ }
+]
+--- scientific-intelligence 8/10: node --import tsx tests/scientific-decision-benchmark.mjs
+{
+ "states": 42,
+ "summary": {
+  "v7-exploit": {
+   "states": 42,
+   "optimal_choice_rate": 0.524,
+   "near_optimal_rate": 0.548,
+   "mean_regret": 0.425,
+   "total_regret": 17.851
+  },
+  "v7": {
+   "states": 42,
+   "optimal_choice_rate": 0.548,
+   "near_optimal_rate": 0.571,
+   "mean_regret": 0.432,
+   "total_regret": 18.133
+  },
+  "v6": {
+   "states": 42,
+   "optimal_choice_rate": 0.048,
+   "near_optimal_rate": 0.048,
+   "mean_regret": 2.077,
+   "total_regret": 87.235
+  },
+  "v8": {
+   "states": 42,
+   "optimal_choice_rate": 0.738,
+   "near_optimal_rate": 0.762,
+   "mean_regret": 0.195,
+   "total_regret": 8.172
+  },
+  "cheapest": {
+   "states": 42,
+   "optimal_choice_rate": 0.381,
+   "near_optimal_rate": 0.405,
+   "mean_regret": 0.939,
+   "total_regret": 39.422
+  },
+  "random": {
+   "states": 42,
+   "optimal_choice_rate": 0.262,
+   "near_optimal_rate": 0.262,
+   "mean_regret": 0.981,
+   "total_regret": 41.182
+  },
+  "confirmation": {
+   "states": 42,
+   "optimal_choice_rate": 0.452,
+   "near_optimal_rate": 0.452,
+   "mean_regret": 0.434,
+   "total_regret": 18.247
+  }
+ },
+ "by_type": {
+  "useful_vs_saturated_finder_branch": {
+   "v7-exploit": "0/5 regret 5.898",
+   "v7": "0/5 regret 5.898",
+   "v6": "0/5 regret 18.409",
+   "v8": "5/5 regret 0",
+   "cheapest": "0/5 regret 5.898",
+   "random": "1/5 regret 7.493",
+   "confirmation": "5/5 regret 0"
+  },
+  "generic_template_vs_discriminating_wallet": {
+   "v7-exploit": "3/5 regret 1.859",
+   "v7": "3/5 regret 1.859",
+   "v6": "1/5 regret 4.921",
+   "v8": "3/5 regret 1.859",
+   "cheapest": "3/5 regret 1.859",
+   "random": "2/5 regret 3.714",
+   "confirmation": "3/5 regret 3.01"
+  },
+  "new_contradiction_vs_confirmation": {
+   "v7-exploit": "3/5 regret 0.112",
+   "v7": "4/5 regret 0.012",
+   "v6": "0/5 regret 2.493",
+   "v8": "3/5 regret 0.112",
+   "cheapest": "3/5 regret 0.112",
+   "random": "1/5 regret 0.992",
+   "confirmation": "0/5 regret 1.468"
+  },
+  "replacement_hunt_vs_exhausted_artifact": {
+   "v7-exploit": "0/5 regret 6.446",
+   "v7": "0/5 regret 6.446",
+   "v6": "0/5 regret 13.76",
+   "v8": "3/5 regret 1.191",
+   "cheapest": "0/5 regret 6.446",
+   "random": "1/5 regret 9.649",
+   "confirmation": "1/5 regret 3.938"
+  },
+  "novel_exploration_opportunity": {
+   "v7-exploit": "5/5 regret 0",
+   "v7": "5/5 regret 0",
+   "v6": "0/5 regret 2.726",
+   "v8": "5/5 regret 0",
+   "cheapest": "5/5 regret 0",
+   "random": "2/5 regret 1.95",
+   "confirmation": "0/5 regret 2.746"
+  },
+  "two_competing_operations": {
+   "v7-exploit": "3/5 regret 1.83",
+   "v7": "3/5 regret 2.212",
+   "v6": "0/5 regret 14.536",
+   "v8": "3/5 regret 1.83",
+   "cheapest": "2/5 regret 3.788",
+   "random": "0/5 regret 6.752",
+   "confirmation": "3/5 regret 1.83"
+  },
+  "time_sensitive_disappearing_site": {
+   "v7-exploit": "2/5 regret 0.787",
+   "v7": "2/5 regret 0.787",
+   "v6": "0/5 regret 7.264",
+   "v8": "3/5 regret 2.261",
+   "cheapest": "2/5 regret 0.787",
+   "random": "0/5 regret 5.23",
+   "confirmation": "2/5 regret 3.36"
+  },
+  "expensive_high_value_vs_cheap_low_value": {
+   "v7-exploit": "4/5 regret 0.919",
+   "v7": "4/5 regret 0.919",
+   "v6": "0/5 regret 22.15",
+   "v8": "4/5 regret 0.919",
+   "cheapest": "0/5 regret 19.556",
+   "random": "2/5 regret 5.402",
+   "confirmation": "4/5 regret 0.919"
+  },
+  "provider_retry_vs_unrelated_expansion": {
+   "v7-exploit": "1/1 regret 0",
+   "v7": "1/1 regret 0",
+   "v6": "1/1 regret 0",
+   "v8": "1/1 regret 0",
+   "cheapest": "1/1 regret 0",
+   "random": "1/1 regret 0",
+   "confirmation": "1/1 regret 0"
+  },
+  "report_blocker_vs_low_value_correlation": {
+   "v7-exploit": "1/1 regret 0",
+   "v7": "1/1 regret 0",
+   "v6": "0/1 regret 0.976",
+   "v8": "1/1 regret 0",
+   "cheapest": "0/1 regret 0.976",
+   "random": "1/1 regret 0",
+   "confirmation": "0/1 regret 0.976"
+  }
+ }
+}
+--- scientific-intelligence 9/10: SCIENTIFIC_HELD_OUT=1 ADAPTIVE_SEEDS=101,203,307,409,503,607,709,811 node --import tsx tests/scientific-decision-benchmark.mjs
+{
+ "states": 64,
+ "summary": {
+  "v7-exploit": {
+   "states": 64,
+   "optimal_choice_rate": 0.625,
+   "near_optimal_rate": 0.672,
+   "mean_regret": 0.244,
+   "total_regret": 15.617
+  },
+  "v7": {
+   "states": 64,
+   "optimal_choice_rate": 0.625,
+   "near_optimal_rate": 0.672,
+   "mean_regret": 0.271,
+   "total_regret": 17.325
+  },
+  "v6": {
+   "states": 64,
+   "optimal_choice_rate": 0.031,
+   "near_optimal_rate": 0.031,
+   "mean_regret": 2.16,
+   "total_regret": 138.241
+  },
+  "v8": {
+   "states": 64,
+   "optimal_choice_rate": 0.578,
+   "near_optimal_rate": 0.625,
+   "mean_regret": 0.261,
+   "total_regret": 16.717
+  },
+  "cheapest": {
+   "states": 64,
+   "optimal_choice_rate": 0.438,
+   "near_optimal_rate": 0.484,
+   "mean_regret": 0.805,
+   "total_regret": 51.491
+  },
+  "random": {
+   "states": 64,
+   "optimal_choice_rate": 0.359,
+   "near_optimal_rate": 0.359,
+   "mean_regret": 0.895,
+   "total_regret": 57.262
+  },
+  "confirmation": {
+   "states": 64,
+   "optimal_choice_rate": 0.391,
+   "near_optimal_rate": 0.391,
+   "mean_regret": 0.41,
+   "total_regret": 26.21
+  }
+ },
+ "by_type": {
+  "useful_vs_saturated_finder_branch": {
+   "v7-exploit": "5/8 regret 4.304",
+   "v7": "5/8 regret 4.304",
+   "v6": "0/8 regret 33.231",
+   "v8": "2/8 regret 4.819",
+   "cheapest": "5/8 regret 4.304",
+   "random": "1/8 regret 13.217",
+   "confirmation": "2/8 regret 4.819"
+  },
+  "generic_template_vs_discriminating_wallet": {
+   "v7-exploit": "4/8 regret 0.753",
+   "v7": "4/8 regret 0.753",
+   "v6": "2/8 regret 5.506",
+   "v8": "4/8 regret 0.753",
+   "cheapest": "4/8 regret 0.753",
+   "random": "4/8 regret 3.329",
+   "confirmation": "6/8 regret 1.861"
+  },
+  "new_contradiction_vs_confirmation": {
+   "v7-exploit": "4/8 regret 1.302",
+   "v7": "4/8 regret 1.302",
+   "v6": "0/8 regret 5.423",
+   "v8": "4/8 regret 1.302",
+   "cheapest": "4/8 regret 1.302",
+   "random": "3/8 regret 2.098",
+   "confirmation": "0/8 regret 4.074"
+  },
+  "replacement_hunt_vs_exhausted_artifact": {
+   "v7-exploit": "2/8 regret 4.66",
+   "v7": "4/8 regret 4.311",
+   "v6": "0/8 regret 17.07",
+   "v8": "6/8 regret 0.307",
+   "cheapest": "2/8 regret 4.66",
+   "random": "1/8 regret 10.964",
+   "confirmation": "2/8 regret 3.039"
+  },
+  "novel_exploration_opportunity": {
+   "v7-exploit": "8/8 regret 0",
+   "v7": "8/8 regret 0",
+   "v6": "0/8 regret 5.067",
+   "v8": "8/8 regret 0",
+   "cheapest": "8/8 regret 0",
+   "random": "5/8 regret 1.5",
+   "confirmation": "0/8 regret 5.099"
+  },
+  "two_competing_operations": {
+   "v7-exploit": "7/8 regret 0.926",
+   "v7": "6/8 regret 1.569",
+   "v6": "0/8 regret 24.097",
+   "v8": "7/8 regret 0.926",
+   "cheapest": "0/8 regret 7.757",
+   "random": "4/8 regret 6.078",
+   "confirmation": "7/8 regret 0.926"
+  },
+  "time_sensitive_disappearing_site": {
+   "v7-exploit": "5/8 regret 2.41",
+   "v7": "5/8 regret 2.41",
+   "v6": "0/8 regret 14.318",
+   "v8": "1/8 regret 7.348",
+   "cheapest": "5/8 regret 2.41",
+   "random": "4/8 regret 4.731",
+   "confirmation": "3/8 regret 5.13"
+  },
+  "expensive_high_value_vs_cheap_low_value": {
+   "v7-exploit": "5/8 regret 1.262",
+   "v7": "4/8 regret 2.676",
+   "v6": "0/8 regret 33.529",
+   "v8": "5/8 regret 1.262",
+   "cheapest": "0/8 regret 30.305",
+   "random": "1/8 regret 15.345",
+   "confirmation": "5/8 regret 1.262"
+  }
+ }
+}
+--- scientific-intelligence 10/10: ADAPTIVE_POLICY=v8 node --experimental-sqlite --import tsx --import file:///workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/lib/sqljs-fallback.mjs tests/scientific-real-revision.mjs
+[Database] Initialized new database at /tmp/operation-hidden-Apdzuq/wallet/data/wallet_investigator.sqlite
+[Migrations] Applying migration v1: 001_initial_schema...
+[Migrations] Applying migration v2: 002_indexes_and_views...
+[Migrations] Migration status: 2 applied. Current schema version: v2
+[MainPlatformV6] Initialized integration module 'wallet_investigator' with capabilities: [
+  'blockchain-analysis',
+  'wallet-validation',
+  'counterparty-discovery',
+  'fund-flow-analysis',
+  'controlled-wallet-expansion'
+]
+hunter-register {"registered":true,"events":0,"jobs":0,"outbox":0,"decisions":0,"errors":[]}
+SI collected public pages
+hunter-cycle {"registered":false,"events":40,"jobs":0,"outbox":0,"decisions":0,"errors":[]}
+Finder public discovery cycle complete
+{"round":0,"sites":["qd3c09832ad1.top"],"investigated":["qd3c09832ad1.top"],"validated_deposit_wallets":1,"finder_claims":1,"operation_present":false,"requests_so_far":29}
+SI collected public pages
+hunter-cycle {"registered":false,"events":6,"jobs":1,"outbox":1,"decisions":0,"errors":[]}
+Finder public discovery cycle complete
+{"round":1,"sites":["qd3c09832ad1.top"],"investigated":["qd3c09832ad1.top"],"validated_deposit_wallets":1,"finder_claims":0,"operation_present":true,"requests_so_far":56}
+SI collected public pages
+hunter-cycle {"registered":false,"events":0,"jobs":0,"outbox":0,"decisions":0,"errors":[]}
+Finder public discovery cycle complete
+{"round":2,"sites":["q7167ada25c2.top","qd3c09832ad1.top"],"investigated":["qd3c09832ad1.top"],"validated_deposit_wallets":1,"finder_claims":2,"operation_present":true,"requests_so_far":132}
+SI collected public pages
+hunter-cycle {"registered":false,"events":50,"jobs":0,"outbox":1,"decisions":0,"errors":[]}
+Finder public discovery cycle complete
+{"round":3,"sites":["q7167ada25c2.top","qd3c09832ad1.top"],"investigated":["qd3c09832ad1.top","q7167ada25c2.top"],"validated_deposit_wallets":1,"finder_claims":0,"operation_present":true,"requests_so_far":165}
+SI collected public pages
+hunter-cycle {"registered":false,"events":0,"jobs":0,"outbox":0,"decisions":0,"errors":[]}
+Finder public discovery cycle complete
+{"round":4,"sites":["q238c0978906.top","q7167ada25c2.top","qc8fce52c1ad.top","qd3c09832ad1.top","qfd428f1fc96.top"],"investigated":["qd3c09832ad1.top","q7167ada25c2.top"],"validated_deposit_wallets":1,"finder_claims":2,"operation_present":true,"requests_so_far":226}
+SI collected public pages
+hunter-cycle {"registered":false,"events":50,"jobs":0,"outbox":0,"decisions":0,"errors":[]}
+Finder public discovery cycle complete
+{"round":5,"sites":["q238c0978906.top","q7167ada25c2.top","qc8fce52c1ad.top","qd3c09832ad1.top","qfd428f1fc96.top"],"investigated":["qd3c09832ad1.top","q7167ada25c2.top","q238c0978906.top","qfd428f1fc96.top","qc8fce52c1ad.top"],"validated_deposit_wallets":2,"finder_claims":1,"operation_present":true,"requests_so_far":314}
+SI collected public pages
+hunter-cycle {"registered":false,"events":50,"jobs":0,"outbox":0,"decisions":0,"errors":[]}
+Finder public discovery cycle complete
+{"round":6,"sites":["q238c0978906.top","q7167ada25c2.top","qc8fce52c1ad.top","qd3c09832ad1.top","qfd428f1fc96.top"],"investigated":["qd3c09832ad1.top","q7167ada25c2.top","q238c0978906.top","qfd428f1fc96.top","qc8fce52c1ad.top"],"validated_deposit_wallets":3,"finder_claims":2,"operation_present":true,"requests_so_far":378}
+SI collected public pages
+hunter-cycle {"registered":false,"events":50,"jobs":1,"outbox":1,"decisions":0,"errors":[]}
+Finder public discovery cycle complete
+{"round":7,"sites":["q238c0978906.top","q7167ada25c2.top","qc8fce52c1ad.top","qd3c09832ad1.top","qfd428f1fc96.top"],"investigated":["qd3c09832ad1.top","q7167ada25c2.top","q238c0978906.top","qfd428f1fc96.top","qc8fce52c1ad.top"],"validated_deposit_wallets":3,"finder_claims":1,"operation_present":true,"requests_so_far":402}
+SI collected public pages
+hunter-cycle {"registered":false,"events":27,"jobs":1,"outbox":1,"decisions":0,"errors":[]}
+Finder public discovery cycle complete
+{"round":8,"sites":["q238c0978906.top","q7167ada25c2.top","qc8fce52c1ad.top","qd3c09832ad1.top","qfd428f1fc96.top"],"investigated":["qd3c09832ad1.top","q7167ada25c2.top","q238c0978906.top","qfd428f1fc96.top","qc8fce52c1ad.top"],"validated_deposit_wallets":3,"finder_claims":0,"operation_present":true,"requests_so_far":402}
+SI collected public pages
+hunter-cycle {"registered":false,"events":6,"jobs":1,"outbox":1,"decisions":0,"errors":[]}
+Finder public discovery cycle complete
+{"round":9,"sites":["q238c0978906.top","q7167ada25c2.top","qc8fce52c1ad.top","qd3c09832ad1.top","qfd428f1fc96.top"],"investigated":["qd3c09832ad1.top","q7167ada25c2.top","q238c0978906.top","qfd428f1fc96.top","qc8fce52c1ad.top"],"validated_deposit_wallets":3,"finder_claims":0,"operation_present":true,"requests_so_far":402}
+SI collected public pages
+hunter-cycle {"registered":false,"events":12,"jobs":1,"outbox":1,"decisions":0,"errors":[]}
+Finder public discovery cycle complete
+{"round":10,"sites":["q238c0978906.top","q7167ada25c2.top","qc8fce52c1ad.top","qd3c09832ad1.top","qfd428f1fc96.top"],"investigated":["qd3c09832ad1.top","q7167ada25c2.top","q238c0978906.top","qfd428f1fc96.top","qc8fce52c1ad.top"],"validated_deposit_wallets":3,"finder_claims":0,"operation_present":true,"requests_so_far":402}
+SI collected public pages
+hunter-cycle {"registered":false,"events":12,"jobs":1,"outbox":1,"decisions":0,"errors":["The module request limit has been exceeded. Retry with backoff."]}
+Finder public discovery cycle complete
+{"round":11,"sites":["q238c0978906.top","q7167ada25c2.top","qc8fce52c1ad.top","qd3c09832ad1.top","qfd428f1fc96.top"],"investigated":["qd3c09832ad1.top","q7167ada25c2.top","q238c0978906.top","qfd428f1fc96.top","qc8fce52c1ad.top"],"validated_deposit_wallets":3,"finder_claims":0,"operation_present":true,"requests_so_far":402}
+SI collected public pages
+hunter-cycle {"registered":false,"events":0,"jobs":0,"outbox":0,"decisions":0,"errors":["The module request limit has been exceeded. Retry with backoff."]}
+Finder public discovery cycle complete
+{"round":12,"sites":["q238c0978906.top","q7167ada25c2.top","qc8fce52c1ad.top","qd3c09832ad1.top","qfd428f1fc96.top"],"investigated":["qd3c09832ad1.top","q7167ada25c2.top","q238c0978906.top","qfd428f1fc96.top","qc8fce52c1ad.top"],"validated_deposit_wallets":3,"finder_claims":1,"operation_present":true,"requests_so_far":426}
+SI collected public pages
+hunter-cycle {"registered":false,"events":0,"jobs":0,"outbox":0,"decisions":0,"errors":["The module request limit has been exceeded. Retry with backoff."]}
+Finder public discovery cycle complete
+{"round":13,"sites":["q238c0978906.top","q7167ada25c2.top","qc8fce52c1ad.top","qd3c09832ad1.top","qfd428f1fc96.top"],"investigated":["qd3c09832ad1.top","q7167ada25c2.top","q238c0978906.top","qfd428f1fc96.top","qc8fce52c1ad.top"],"validated_deposit_wallets":3,"finder_claims":2,"operation_present":true,"requests_so_far":475}
+SI collected public pages
+hunter-cycle {"registered":false,"events":0,"jobs":0,"outbox":0,"decisions":0,"errors":["The module request limit has been exceeded. Retry with backoff."]}
+Finder public discovery cycle complete
+{"round":14,"sites":["q238c0978906.top","q7167ada25c2.top","qc8fce52c1ad.top","qd3c09832ad1.top","qfd428f1fc96.top"],"investigated":["qd3c09832ad1.top","q7167ada25c2.top","q238c0978906.top","qfd428f1fc96.top","qc8fce52c1ad.top"],"validated_deposit_wallets":3,"finder_claims":0,"operation_present":true,"requests_so_far":475}
+SI collected public pages
+hunter-cycle {"registered":false,"events":0,"jobs":0,"outbox":0,"decisions":0,"errors":["The module request limit has been exceeded. Retry with backoff."]}
+Finder public discovery cycle complete
+{"round":15,"sites":["q238c0978906.top","q7167ada25c2.top","qc8fce52c1ad.top","qd3c09832ad1.top","qfd428f1fc96.top"],"investigated":["qd3c09832ad1.top","q7167ada25c2.top","q238c0978906.top","qfd428f1fc96.top","qc8fce52c1ad.top"],"validated_deposit_wallets":3,"finder_claims":0,"operation_present":true,"requests_so_far":475}
+SI collected public pages
+hunter-cycle {"registered":false,"events":0,"jobs":0,"outbox":0,"decisions":0,"errors":["The module request limit has been exceeded. Retry with backoff."]}
+Finder public discovery cycle complete
+{"round":16,"sites":["q238c0978906.top","q7167ada25c2.top","qc8fce52c1ad.top","qd3c09832ad1.top","qfd428f1fc96.top"],"investigated":["qd3c09832ad1.top","q7167ada25c2.top","q238c0978906.top","qfd428f1fc96.top","qc8fce52c1ad.top"],"validated_deposit_wallets":3,"finder_claims":0,"operation_present":true,"requests_so_far":475}
+SI collected public pages
+hunter-cycle {"registered":false,"events":0,"jobs":0,"outbox":0,"decisions":0,"errors":["The module request limit has been exceeded. Retry with backoff."]}
+Finder public discovery cycle complete
+{"round":17,"sites":["q238c0978906.top","q7167ada25c2.top","qc8fce52c1ad.top","qd3c09832ad1.top","qfd428f1fc96.top"],"investigated":["qd3c09832ad1.top","q7167ada25c2.top","q238c0978906.top","qfd428f1fc96.top","qc8fce52c1ad.top"],"validated_deposit_wallets":3,"finder_claims":0,"operation_present":true,"requests_so_far":475}
+SI collected public pages
+hunter-cycle {"registered":false,"events":0,"jobs":0,"outbox":0,"decisions":0,"errors":[]}
+Finder public discovery cycle complete
+{"round":18,"sites":["q238c0978906.top","q7167ada25c2.top","qc8fce52c1ad.top","qd3c09832ad1.top","qfd428f1fc96.top"],"investigated":["qd3c09832ad1.top","q7167ada25c2.top","q238c0978906.top","qfd428f1fc96.top","qc8fce52c1ad.top"],"validated_deposit_wallets":3,"finder_claims":0,"operation_present":true,"requests_so_far":475}
+{"ok":true,"scientific_revision":{"initial":{"round":1,"operation_id":"c54758dd-7444-4f75-911b-8b8baf951206","status":"OPEN"},"final_status":"REJECTED","reason":"Wallet Investigator validated different deposit addresses; the explicit unchanged single-wallet prediction is false.","evidence":[{"evidence_id":"91534ba8-ad71-4c92-bc3f-9b71f856c8d9","source":"crypto_wallet_logger","authority":"wallet_investigator","value":"0x5555555555555555555555555555555555555555"},{"evidence_id":"c2441c70-8dc8-4533-a0e1-ce879c8d69df","source":"crypto_wallet_logger","authority":"wallet_investigator","value":"0x6666666666666666666666666666666666666666"},{"evidence_id":"86745e3e-fb33-4306-9bf5-f65cb0af265f","source":"crypto_wallet_logger","authority":"wallet_investigator","value":"0x4444444444444444444444444444444444444444"}],"resolved":2,"history":[{"before_state":null,"after_state":"{\"status\":\"OPEN\",\"supports\":[],\"contradicts\":[],\"statement\":\"Do the deployments retain one unchanged deposit wallet? — Possible explanation: Unchanged single wallet on every site\"}","evidence_ids":"[]","reason":"Evidence does not yet distinguish the competing explanations."},{"before_state":"{\"status\":\"OPEN\",\"supports\":[],\"contradicts\":[]}","after_state":"{\"status\":\"REJECTED\",\"supports\":[],\"contradicts\":[{\"id\":\"c2441c70-8dc8-4533-a0e1-ce879c8d69df\",\"subject\":\"fa3f6d11-a503-4452-beb0-6518eb1f2a72\",\"facet\":\"validated_deposit\",\"value\":\"0x6666666666666666666666666666666666666666\",\"reliability\":\"deterministic_validation\",\"unit\":\"deposit:evm:0x6666666666666666666666666666666666666666\",\"upstream\":\"deposit:evm:0x6666666666666666666666666666666666666666\",\"source\":\"wallet_investigator\",\"captured\":\"2026-10-03T16:43:23.823Z\",\"job\":\"cb677e91-402c-44f9-8529-057ab3c5c258\",\"detail\":{\"network\":\"ethereum\",\"validation_authority\":\"wallet_investigator\"}},{\"id\":\"86745e3e-fb33-4306-9bf5-f65cb0af265f\",\"subject\":\"e0164a99-e2aa-423f-b967-9f877842920a\",\"facet\":\"validated_deposit\",\"value\":\"0x4444444444444444444444444444444444444444\",\"reliability\":\"deterministic_validation\",\"unit\":\"deposit:evm:0x4444444444444444444444444444444444444444\",\"upstream\":\"deposit:evm:0x4444444444444444444444444444444444444444\",\"source\":\"wallet_investigator\",\"captured\":\"2026-10-03T16:43:12.721Z\",\"job\":\"03068a16-e932-48f1-82c3-97feb418cfee\",\"detail\":{\"network\":\"ethereum\",\"validation_authority\":\"wallet_investigator\"}}],\"statement\":\"Do the deployments retain one unchanged deposit wallet? — Possible explanation: Unchanged single wallet on every site\"}","evidence_ids":"[\"86745e3e-fb33-4306-9bf5-f65cb0af265f\",\"c2441c70-8dc8-4533-a0e1-ce879c8d69df\"]","reason":"Wallet Investigator validated different deposit addresses; the explicit unchanged single-wallet prediction is false."},{"before_state":"{\"status\":\"REJECTED\",\"supports\":[],\"contradicts\":[{\"id\":\"c2441c70-8dc8-4533-a0e1-ce879c8d69df\",\"subject\":\"fa3f6d11-a503-4452-beb0-6518eb1f2a72\",\"facet\":\"validated_deposit\",\"value\":\"0x6666666666666666666666666666666666666666\",\"reliability\":\"deterministic_validation\",\"unit\":\"deposit:evm:0x6666666666666666666666666666666666666666\",\"upstream\":\"deposit:evm:0x6666666666666666666666666666666666666666\",\"source\":\"wallet_investigator\",\"captured\":\"2026-10-03T16:43:23.823Z\",\"job\":\"cb677e91-402c-44f9-8529-057ab3c5c258\",\"detail\":{\"network\":\"ethereum\",\"validation_authority\":\"wallet_investigator\"}},{\"id\":\"86745e3e-fb33-4306-9bf5-f65cb0af265f\",\"subject\":\"e0164a99-e2aa-423f-b967-9f877842920a\",\"facet\":\"validated_deposit\",\"value\":\"0x4444444444444444444444444444444444444444\",\"reliability\":\"deterministic_validation\",\"unit\":\"deposit:evm:0x4444444444444444444444444444444444444444\",\"upstream\":\"deposit:evm:0x4444444444444444444444444444444444444444\",\"source\":\"wallet_investigator\",\"captured\":\"2026-10-03T16:43:12.721Z\",\"job\":\"03068a16-e932-48f1-82c3-97feb418cfee\",\"detail\":{\"network\":\"ethereum\",\"validation_authority\":\"wallet_investigator\"}}]}","after_state":"{\"status\":\"REJECTED\",\"supports\":[],\"contradicts\":[{\"id\":\"91534ba8-ad71-4c92-bc3f-9b71f856c8d9\",\"subject\":\"b6402747-c00f-437a-93fd-41284e3c8f30\",\"facet\":\"validated_deposit\",\"value\":\"0x5555555555555555555555555555555555555555\",\"reliability\":\"deterministic_validation\",\"unit\":\"deposit:evm:0x5555555555555555555555555555555555555555\",\"upstream\":\"deposit:evm:0x5555555555555555555555555555555555555555\",\"source\":\"wallet_investigator\",\"captured\":\"2026-10-03T16:43:25.684Z\",\"job\":\"a379ed63-679c-4b43-bdd0-1f94bd62e6ea\",\"detail\":{\"network\":\"ethereum\",\"validation_authority\":\"wallet_investigator\"}},{\"id\":\"c2441c70-8dc8-4533-a0e1-ce879c8d69df\",\"subject\":\"fa3f6d11-a503-4452-beb0-6518eb1f2a72\",\"facet\":\"validated_deposit\",\"value\":\"0x6666666666666666666666666666666666666666\",\"reliability\":\"deterministic_validation\",\"unit\":\"deposit:evm:0x6666666666666666666666666666666666666666\",\"upstream\":\"deposit:evm:0x6666666666666666666666666666666666666666\",\"source\":\"wallet_investigator\",\"captured\":\"2026-10-03T16:43:23.823Z\",\"job\":\"cb677e91-402c-44f9-8529-057ab3c5c258\",\"detail\":{\"network\":\"ethereum\",\"validation_authority\":\"wallet_investigator\"}},{\"id\":\"86745e3e-fb33-4306-9bf5-f65cb0af265f\",\"subject\":\"e0164a99-e2aa-423f-b967-9f877842920a\",\"facet\":\"validated_deposit\",\"value\":\"0x4444444444444444444444444444444444444444\",\"reliability\":\"deterministic_validation\",\"unit\":\"deposit:evm:0x4444444444444444444444444444444444444444\",\"upstream\":\"deposit:evm:0x4444444444444444444444444444444444444444\",\"source\":\"wallet_investigator\",\"captured\":\"2026-10-03T16:43:12.721Z\",\"job\":\"03068a16-e932-48f1-82c3-97feb418cfee\",\"detail\":{\"network\":\"ethereum\",\"validation_authority\":\"wallet_investigator\"}}],\"statement\":\"Do the deployments retain one unchanged deposit wallet? — Possible explanation: Unchanged single wallet on every site\"}","evidence_ids":"[\"86745e3e-fb33-4306-9bf5-f65cb0af265f\",\"91534ba8-ad71-4c92-bc3f-9b71f856c8d9\",\"c2441c70-8dc8-4533-a0e1-ce879c8d69df\"]","reason":"Wallet Investigator validated different deposit addresses; the explicit unchanged single-wallet prediction is false."}]},"policy":"v8","complete_at":{"round":5,"requests":314,"jobs":21},"quiescent_at":{"round":18,"requests":475},"max_rounds":24,"open_work":[],"open_jobs":[],"seed_sites":1,"initial_wallets":0,"hidden_sites_injected":0,"hidden_sites_discovered":3,"target_sites_investigated":4,"validated_target_wallets":2,"unsupported_ownership_claims":0,"duplicate_active_jobs":0,"human_actions":0,"jobs":35,"jobs_per_useful_discovery":11.666666666666666,"transport_requests":475,"requests_by_kind":{"http":195,"dns":274,"tls":6},"requests_per_useful_discovery":158.33333333333334,"provider_calls":3,"time_to_final_operation_update_ms":51680.738703999996,"restart":true,"source_proof":[{"domain":"q7167ada25c2.top","finder_site_records":1,"first_discovery_round":2},{"domain":"qfd428f1fc96.top","finder_site_records":1,"first_discovery_round":4},{"domain":"qc8fce52c1ad.top","finder_site_records":1,"first_discovery_round":4}],"multi_hop_useful_discoveries":2,"operation_next_bounded_hunts":6,"validated_wallet_reuse_site_candidates":2,"limitations":["Public/blockchain transports are synthetic.","Unchanged Logger classifier ran on real rendered DOM; installed extension lifecycle remains a separate environment-limited check.","This corpus does not certify all operation benchmark scenarios."]}
+PASS scientific-intelligence: 10/10 steps passed

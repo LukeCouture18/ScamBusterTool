@@ -1,0 +1,56 @@
+{
+  "manifest_version": 3,
+  "name": "Local Crypto Wallet Logger",
+  "version": "0.9.0",
+  "minimum_chrome_version": "111",
+  "description": "Passive local-first wallet evidence sensor (Wallet Discovery v2) with optional Main Platform synchronization.",
+  "permissions": [
+    "storage",
+    "unlimitedStorage",
+    "activeTab",
+    "alarms",
+    "scripting"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Crypto Wallet Logger",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "js": [
+        "main-world/wallet-core.js",
+        "page-hook.js"
+      ],
+      "run_at": "document_start",
+      "all_frames": true,
+      "match_origin_as_fallback": true,
+      "world": "MAIN"
+    },
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "js": [
+        "wallet-core.js",
+        "vendor/jsQR.js",
+        "qr-scanner.js",
+        "content.js"
+      ],
+      "run_at": "document_start",
+      "all_frames": true,
+      "match_origin_as_fallback": true
+    }
+  ],
+  "options_page": "accounts.html"
+}

@@ -1,0 +1,9 @@
+OK   node >= 22.13 with node:sqlite: v24.19.0
+OK   python interpreter: python3 (PATH)
+OK   python packages for Site Finder / bridge tests: flask 3.1.3
+OK   esbuild (platform): /workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/node_modules/esbuild/lib/main.js
+OK   tsx (platform): /workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/node_modules/tsx/dist/loader.mjs
+OK   tsx (wallet-investigator): /workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/wallet-investigator/node_modules/tsx/dist/loader.mjs
+OK   tsx (form-submitter): /workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/form-submitter/node_modules/tsx/dist/loader.mjs
+OK   built worker config (npm run build): /workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/dist/server/wrangler.json
+OK   harness portability (no raw-path imports, URL.pathname or POSIX-only python): 82 files, 36 npm scripts

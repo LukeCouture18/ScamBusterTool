@@ -1,0 +1,34 @@
+✔ keccak-256 known digests (7.35445ms)
+✔ base58 / base58check encoders round-trip published addresses (2.280352ms)
+✔ segwit encoder reproduces BIP-173 / BIP-350 published addresses (0.576011ms)
+✔ EVM: EIP-55 published vectors are valid with checksum eip55_valid (3.388973ms)
+✔ EVM: wrong case of one letter fails EIP-55 → invalid (4.422756ms)
+✔ EVM: all-lower and all-upper are format-valid with checksum absent (0.51274ms)
+✔ EVM: wrong length and non-hex are invalid (0.287335ms)
+✔ EVM: no usable hint and several candidates → network_ambiguous (never guessed) (9.775296ms)
+✔ EVM: single candidate or a usable hint resolves the network (7.270086ms)
+✔ EVM: hint contradicting the family → network_ambiguous with a reason (1.644201ms)
+✔ Bitcoin: published base58 addresses are valid and case-preserved (1.331111ms)
+✔ Bitcoin: one changed character breaks base58check (1.500143ms)
+✔ Bitcoin: bech32 / bech32m (BIP-173 / BIP-350) (0.843944ms)
+✔ Bitcoin: bech32 vs bech32m mix-ups, broken checksums, bad lengths and mixed case are invalid (3.736011ms)
+✔ Litecoin: base58 0x30 / 0x32 / 0x05 and bech32 ltc (1.098229ms)
+✔ Dogecoin: base58 0x1e / 0x16 (0.612116ms)
+✔ TRON: base58check 0x41, case preserved; broken checksum and wrong length invalid (0.577022ms)
+✔ TRON address with hint bsc → network_ambiguous, address kept (0.257409ms)
+✔ XRP: ripple-alphabet base58check (0.223207ms)
+✔ Solana: base58 decoding to exactly 32 bytes (0.351216ms)
+✔ Recognisable but unsupported chains → unsupported (0.129106ms)
+✔ Garbage input is invalid; internal failure → unable_to_validate (0.654886ms)
+✔ Normalisation: EVM lower, bech32 lower, base58 case-preserved; whitespace trimmed (0.384486ms)
+✔ Network labels map to canonical names (0.151371ms)
+✔ Legacy adapter keeps the old result shape and status names (0.778791ms)
+✔ conflicting observed networks require review even when the strongest hint names one (0.399517ms)
+ℹ tests 26
+ℹ suites 0
+ℹ pass 26
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2612.797401

@@ -1,0 +1,26 @@
+TAP version 13
+# DURABLE_BACKOFF {"status":{"state":"waiting","lastAttemptAt":"2026-10-04T17:49:02.082Z","lastSuccessAt":"2026-10-04T17:49:02.071Z","lastError":"ECONNREFUSED","pending":1},"queue":[{"id":"4bd27654ea24be6b7e82981a3b0cb719fb8194bac26a9cce40a1084ba97e3179","type":"deposit_option.observed","schemaVersion":"1.0.0","occurredAt":"2026-10-04T17:49:02.079Z","payload":{"n":3},"attempts":1,"nextAttemptAt":1791136144085}],"alarms":[["mainPlatformSyncRetry",{"delayInMinutes":1}]]}
+# Subtest: identical replays dedupe; permanent rejections do not block the queue; offline backs off
+not ok 1 - identical replays dedupe; permanent rejections do not block the queue; offline backs off
+  ---
+  duration_ms: 3148.813489
+  type: 'test'
+  location: '/workspace/scratch/0dbe5278a453/queue-observer-diagnostic.mjs:79:1'
+  failureType: 'testCodeFailure'
+  error: 'timed out'
+  code: 'ERR_TEST_FAILURE'
+  stack: |-
+    waitFor (file:///workspace/scratch/0dbe5278a453/queue-observer-diagnostic.mjs:36:47)
+    async TestContext.<anonymous> (file:///workspace/scratch/0dbe5278a453/queue-observer-diagnostic.mjs:97:3)
+    async Test.run (node:internal/test_runner/test:1054:7)
+    async startSubtestAfterBootstrap (node:internal/test_runner/harness:296:3)
+  ...
+1..1
+# tests 1
+# suites 0
+# pass 0
+# fail 1
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 3247.818395

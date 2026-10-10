@@ -1,0 +1,151 @@
+{
+  "ok": true,
+  "crashes": 18,
+  "results": [
+    {
+      "phase": "search-created",
+      "edge": "before",
+      "signal": "SIGKILL",
+      "investigations": 1,
+      "duplicate_active_jobs": 0,
+      "source_candidate_preserved": true
+    },
+    {
+      "phase": "search-created",
+      "edge": "after",
+      "signal": "SIGKILL",
+      "investigations": 1,
+      "duplicate_active_jobs": 0,
+      "source_candidate_preserved": true
+    },
+    {
+      "phase": "selection",
+      "edge": "before",
+      "signal": "SIGKILL",
+      "investigations": 1,
+      "duplicate_active_jobs": 0,
+      "source_candidate_preserved": true
+    },
+    {
+      "phase": "selection",
+      "edge": "after",
+      "signal": "SIGKILL",
+      "investigations": 1,
+      "duplicate_active_jobs": 0,
+      "source_candidate_preserved": true
+    },
+    {
+      "phase": "site-created",
+      "edge": "before",
+      "signal": "SIGKILL",
+      "investigations": 1,
+      "duplicate_active_jobs": 0,
+      "source_candidate_preserved": true
+    },
+    {
+      "phase": "site-created",
+      "edge": "after",
+      "signal": "SIGKILL",
+      "investigations": 1,
+      "duplicate_active_jobs": 0,
+      "source_candidate_preserved": true
+    },
+    {
+      "phase": "mission-created",
+      "edge": "before",
+      "signal": "SIGKILL",
+      "investigations": 1,
+      "duplicate_active_jobs": 0,
+      "source_candidate_preserved": true
+    },
+    {
+      "phase": "mission-created",
+      "edge": "after",
+      "signal": "SIGKILL",
+      "investigations": 1,
+      "duplicate_active_jobs": 0,
+      "source_candidate_preserved": true
+    },
+    {
+      "phase": "search-attached",
+      "edge": "before",
+      "signal": "SIGKILL",
+      "investigations": 1,
+      "duplicate_active_jobs": 0,
+      "source_candidate_preserved": true
+    },
+    {
+      "phase": "search-attached",
+      "edge": "after",
+      "signal": "SIGKILL",
+      "investigations": 1,
+      "duplicate_active_jobs": 0,
+      "source_candidate_preserved": true
+    },
+    {
+      "phase": "child-reserved",
+      "edge": "before",
+      "signal": "SIGKILL",
+      "investigations": 2,
+      "duplicate_active_jobs": 0,
+      "source_candidate_preserved": true
+    },
+    {
+      "phase": "child-reserved",
+      "edge": "after",
+      "signal": "SIGKILL",
+      "investigations": 2,
+      "duplicate_active_jobs": 0,
+      "source_candidate_preserved": true
+    },
+    {
+      "phase": "child-site-created",
+      "edge": "before",
+      "signal": "SIGKILL",
+      "investigations": 2,
+      "duplicate_active_jobs": 0,
+      "source_candidate_preserved": true
+    },
+    {
+      "phase": "child-site-created",
+      "edge": "after",
+      "signal": "SIGKILL",
+      "investigations": 2,
+      "duplicate_active_jobs": 0,
+      "source_candidate_preserved": true
+    },
+    {
+      "phase": "child-attached",
+      "edge": "before",
+      "signal": "SIGKILL",
+      "investigations": 2,
+      "duplicate_active_jobs": 0,
+      "source_candidate_preserved": true
+    },
+    {
+      "phase": "child-attached",
+      "edge": "after",
+      "signal": "SIGKILL",
+      "investigations": 2,
+      "duplicate_active_jobs": 0,
+      "source_candidate_preserved": true
+    },
+    {
+      "phase": "mission-history",
+      "edge": "before",
+      "signal": "SIGKILL",
+      "investigations": 2,
+      "duplicate_active_jobs": 0,
+      "source_candidate_preserved": true
+    },
+    {
+      "phase": "mission-history",
+      "edge": "after",
+      "signal": "SIGKILL",
+      "investigations": 2,
+      "duplicate_active_jobs": 0,
+      "source_candidate_preserved": true
+    }
+  ],
+  "scope": "Real SIGKILL before/after SQLite statement or batch; production v10 functions and routes. After restart lease expiry is accelerated. Remote D1, installed Chrome and mailbox/form server process termination are not certified here."
+}

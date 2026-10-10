@@ -1,0 +1,127 @@
+{
+  "runtime": "v24.19.0",
+  "source_identity": "fd4a22501e5e0c758fb35bde01a166132772f7988852a0668d1deba76391fe88",
+  "results": [
+    {
+      "group": "migration-matrix",
+      "exit_code": 0,
+      "seconds": 0.58,
+      "log": "final-node24-migration-matrix.log"
+    },
+    {
+      "group": "autonomy-v10",
+      "exit_code": 0,
+      "seconds": 309.77,
+      "log": "final-node24-autonomy-v10.log"
+    },
+    {
+      "group": "unit",
+      "exit_code": 0,
+      "seconds": 8.05,
+      "log": "final-node24-unit.log"
+    },
+    {
+      "group": "director",
+      "exit_code": 0,
+      "seconds": 24.54,
+      "log": "final-node24-director.log"
+    },
+    {
+      "group": "loops",
+      "exit_code": 0,
+      "seconds": 8.4,
+      "log": "final-node24-loops.log"
+    },
+    {
+      "group": "integration:v6",
+      "exit_code": 0,
+      "seconds": 4.48,
+      "log": "final-node24-integration-v6.log"
+    },
+    {
+      "group": "v2",
+      "exit_code": 0,
+      "seconds": 11.48,
+      "log": "final-node24-v2.log"
+    },
+    {
+      "group": "v3",
+      "exit_code": 0,
+      "seconds": 2.24,
+      "log": "final-node24-v3.log"
+    },
+    {
+      "group": "v4",
+      "exit_code": 0,
+      "seconds": 13.0,
+      "log": "final-node24-v4.log"
+    },
+    {
+      "group": "v5",
+      "exit_code": 0,
+      "seconds": 12.01,
+      "log": "final-node24-v5.log"
+    },
+    {
+      "group": "joined:hunter",
+      "exit_code": 0,
+      "seconds": 19.97,
+      "log": "final-node24-joined-hunter.log"
+    },
+    {
+      "group": "joined:v61",
+      "exit_code": 0,
+      "seconds": 26.26,
+      "log": "final-node24-joined-v61.log"
+    },
+    {
+      "group": "five-modules",
+      "exit_code": 0,
+      "seconds": 3.24,
+      "log": "final-node24-five-modules.log"
+    },
+    {
+      "group": "startup:modules",
+      "exit_code": 0,
+      "seconds": 12.57,
+      "log": "final-node24-startup-modules.log"
+    },
+    {
+      "group": "site-finder",
+      "exit_code": 0,
+      "seconds": 393.14,
+      "log": "final-node24-site-finder.log"
+    },
+    {
+      "group": "wallet-pipeline",
+      "exit_code": 1,
+      "seconds": 121.23,
+      "log": "final-node24-wallet-pipeline.log"
+    },
+    {
+      "group": "operation-intelligence",
+      "exit_code": 0,
+      "seconds": 207.85,
+      "log": "final-node24-operation-intelligence.log"
+    },
+    {
+      "group": "adaptive-intelligence",
+      "exit_code": 0,
+      "seconds": 363.04,
+      "log": "final-node24-adaptive-intelligence.log"
+    },
+    {
+      "group": "scientific-intelligence",
+      "exit_code": 0,
+      "seconds": 276.82,
+      "log": "final-node24-scientific-intelligence.log"
+    },
+    {
+      "group": "full-autonomy",
+      "exit_code": 0,
+      "seconds": 333.79,
+      "log": "final-node24-full-autonomy.log"
+    }
+  ],
+  "complete": true
+}

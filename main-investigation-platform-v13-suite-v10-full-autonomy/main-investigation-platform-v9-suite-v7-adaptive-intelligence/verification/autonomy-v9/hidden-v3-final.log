@@ -1,0 +1,77 @@
+[Database] Initialized new database at /tmp/operation-hidden-KiRfhw/wallet/data/wallet_investigator.sqlite
+[Migrations] Applying migration v1: 001_initial_schema...
+[Migrations] Applying migration v2: 002_indexes_and_views...
+[Migrations] Migration status: 2 applied. Current schema version: v2
+[MainPlatformV6] Initialized integration module 'wallet_investigator' with capabilities: [
+  'blockchain-analysis',
+  'wallet-validation',
+  'counterparty-discovery',
+  'fund-flow-analysis',
+  'controlled-wallet-expansion'
+]
+hunter-register {"registered":true,"events":0,"jobs":0,"outbox":0,"decisions":0,"errors":[]}
+SI collected public pages
+hunter-cycle {"registered":false,"events":40,"jobs":0,"outbox":0,"decisions":0,"errors":[]}
+Finder public discovery cycle complete
+{"round":0,"sites":["q1c6ceabc708.top"],"investigated":["q1c6ceabc708.top"],"validated_deposit_wallets":1,"finder_claims":1,"operation_present":false,"requests_so_far":29}
+SI collected public pages
+hunter-cycle {"registered":false,"events":6,"jobs":1,"outbox":1,"decisions":0,"errors":[]}
+Finder public discovery cycle complete
+{"round":1,"sites":["q1c6ceabc708.top"],"investigated":["q1c6ceabc708.top"],"validated_deposit_wallets":1,"finder_claims":0,"operation_present":true,"requests_so_far":54}
+SI collected public pages
+hunter-cycle {"registered":false,"events":0,"jobs":0,"outbox":0,"decisions":0,"errors":[]}
+Finder public discovery cycle complete
+{"round":2,"sites":["q1c6ceabc708.top","q9b97701443a.top"],"investigated":["q1c6ceabc708.top"],"validated_deposit_wallets":1,"finder_claims":1,"operation_present":true,"requests_so_far":97}
+SI collected public pages
+hunter-cycle {"registered":false,"events":50,"jobs":0,"outbox":1,"decisions":0,"errors":[]}
+Finder public discovery cycle complete
+{"round":3,"sites":["q1c6ceabc708.top","q9b97701443a.top"],"investigated":["q1c6ceabc708.top","q9b97701443a.top"],"validated_deposit_wallets":1,"finder_claims":1,"operation_present":true,"requests_so_far":163}
+SI collected public pages
+hunter-cycle {"registered":false,"events":0,"jobs":0,"outbox":0,"decisions":0,"errors":[]}
+Finder public discovery cycle complete
+{"round":4,"sites":["q1c6ceabc708.top","q9b97701443a.top","q9e99c254b43.top","qf8a0603ea19.top","qfaaae17e6eb.top"],"investigated":["q1c6ceabc708.top","q9b97701443a.top"],"validated_deposit_wallets":1,"finder_claims":2,"operation_present":true,"requests_so_far":225}
+SI collected public pages
+hunter-cycle {"registered":false,"events":50,"jobs":0,"outbox":0,"decisions":0,"errors":[]}
+Finder public discovery cycle complete
+{"round":5,"sites":["q1c6ceabc708.top","q9b97701443a.top","q9e99c254b43.top","qf8a0603ea19.top","qfaaae17e6eb.top"],"investigated":["q1c6ceabc708.top","q9b97701443a.top","q9e99c254b43.top","qfaaae17e6eb.top","qf8a0603ea19.top"],"validated_deposit_wallets":2,"finder_claims":0,"operation_present":true,"requests_so_far":289}
+SI collected public pages
+hunter-cycle {"registered":false,"events":50,"jobs":0,"outbox":0,"decisions":0,"errors":[]}
+Finder public discovery cycle complete
+{"round":6,"sites":["q1c6ceabc708.top","q9b97701443a.top","q9e99c254b43.top","qf8a0603ea19.top","qfaaae17e6eb.top"],"investigated":["q1c6ceabc708.top","q9b97701443a.top","q9e99c254b43.top","qfaaae17e6eb.top","qf8a0603ea19.top"],"validated_deposit_wallets":3,"finder_claims":2,"operation_present":true,"requests_so_far":353}
+SI collected public pages
+hunter-cycle {"registered":false,"events":50,"jobs":1,"outbox":1,"decisions":0,"errors":[]}
+Finder public discovery cycle complete
+{"round":7,"sites":["q1c6ceabc708.top","q9b97701443a.top","q9e99c254b43.top","qf8a0603ea19.top","qfaaae17e6eb.top"],"investigated":["q1c6ceabc708.top","q9b97701443a.top","q9e99c254b43.top","qfaaae17e6eb.top","qf8a0603ea19.top"],"validated_deposit_wallets":3,"finder_claims":2,"operation_present":true,"requests_so_far":401}
+SI collected public pages
+hunter-cycle {"registered":false,"events":27,"jobs":1,"outbox":1,"decisions":0,"errors":[]}
+Finder public discovery cycle complete
+{"round":8,"sites":["q1c6ceabc708.top","q9b97701443a.top","q9e99c254b43.top","qf8a0603ea19.top","qfaaae17e6eb.top"],"investigated":["q1c6ceabc708.top","q9b97701443a.top","q9e99c254b43.top","qfaaae17e6eb.top","qf8a0603ea19.top"],"validated_deposit_wallets":3,"finder_claims":0,"operation_present":true,"requests_so_far":401}
+SI collected public pages
+hunter-cycle {"registered":false,"events":6,"jobs":1,"outbox":1,"decisions":0,"errors":[]}
+Finder public discovery cycle complete
+{"round":9,"sites":["q1c6ceabc708.top","q9b97701443a.top","q9e99c254b43.top","qf8a0603ea19.top","qfaaae17e6eb.top"],"investigated":["q1c6ceabc708.top","q9b97701443a.top","q9e99c254b43.top","qfaaae17e6eb.top","qf8a0603ea19.top"],"validated_deposit_wallets":3,"finder_claims":0,"operation_present":true,"requests_so_far":401}
+SI collected public pages
+hunter-cycle {"registered":false,"events":12,"jobs":1,"outbox":1,"decisions":0,"errors":[]}
+Finder public discovery cycle complete
+{"round":10,"sites":["q1c6ceabc708.top","q9b97701443a.top","q9e99c254b43.top","qf8a0603ea19.top","qfaaae17e6eb.top"],"investigated":["q1c6ceabc708.top","q9b97701443a.top","q9e99c254b43.top","qfaaae17e6eb.top","qf8a0603ea19.top"],"validated_deposit_wallets":3,"finder_claims":0,"operation_present":true,"requests_so_far":401}
+SI collected public pages
+hunter-cycle {"registered":false,"events":12,"jobs":1,"outbox":1,"decisions":0,"errors":[]}
+Finder public discovery cycle complete
+{"round":11,"sites":["q1c6ceabc708.top","q9b97701443a.top","q9e99c254b43.top","qf8a0603ea19.top","qfaaae17e6eb.top"],"investigated":["q1c6ceabc708.top","q9b97701443a.top","q9e99c254b43.top","qfaaae17e6eb.top","qf8a0603ea19.top"],"validated_deposit_wallets":3,"finder_claims":0,"operation_present":true,"requests_so_far":401}
+SI collected public pages
+hunter-cycle {"registered":false,"events":0,"jobs":1,"outbox":1,"decisions":0,"errors":[]}
+Finder public discovery cycle complete
+{"round":12,"sites":["q1c6ceabc708.top","q9b97701443a.top","q9e99c254b43.top","qf8a0603ea19.top","qfaaae17e6eb.top"],"investigated":["q1c6ceabc708.top","q9b97701443a.top","q9e99c254b43.top","qfaaae17e6eb.top","qf8a0603ea19.top"],"validated_deposit_wallets":3,"finder_claims":1,"operation_present":true,"requests_so_far":425}
+SI collected public pages
+hunter-cycle {"registered":false,"events":0,"jobs":0,"outbox":0,"decisions":0,"errors":[]}
+Finder public discovery cycle complete
+{"round":13,"sites":["q1c6ceabc708.top","q9b97701443a.top","q9e99c254b43.top","qf8a0603ea19.top","qfaaae17e6eb.top"],"investigated":["q1c6ceabc708.top","q9b97701443a.top","q9e99c254b43.top","qfaaae17e6eb.top","qf8a0603ea19.top"],"validated_deposit_wallets":3,"finder_claims":1,"operation_present":true,"requests_so_far":449}
+SI collected public pages
+hunter-cycle {"registered":false,"events":0,"jobs":0,"outbox":0,"decisions":0,"errors":[]}
+Finder public discovery cycle complete
+{"round":14,"sites":["q1c6ceabc708.top","q9b97701443a.top","q9e99c254b43.top","qf8a0603ea19.top","qfaaae17e6eb.top"],"investigated":["q1c6ceabc708.top","q9b97701443a.top","q9e99c254b43.top","qfaaae17e6eb.top","qf8a0603ea19.top"],"validated_deposit_wallets":3,"finder_claims":1,"operation_present":true,"requests_so_far":474}
+SI collected public pages
+hunter-cycle {"registered":false,"events":0,"jobs":1,"outbox":1,"decisions":0,"errors":[]}
+Finder public discovery cycle complete
+{"round":15,"sites":["q1c6ceabc708.top","q9b97701443a.top","q9e99c254b43.top","qf8a0603ea19.top","qfaaae17e6eb.top"],"investigated":["q1c6ceabc708.top","q9b97701443a.top","q9e99c254b43.top","qfaaae17e6eb.top","qf8a0603ea19.top"],"validated_deposit_wallets":3,"finder_claims":0,"operation_present":true,"requests_so_far":474}
+{"ok":true,"policy":"v9","complete_at":{"round":5,"requests":289,"jobs":20},"quiescent_at":{"round":15,"requests":474},"max_rounds":24,"open_work":[],"open_jobs":[],"seed_sites":1,"initial_wallets":0,"hidden_sites_injected":0,"hidden_sites_discovered":3,"target_sites_investigated":4,"validated_target_wallets":2,"unsupported_ownership_claims":0,"duplicate_active_jobs":0,"human_actions":0,"jobs":36,"jobs_per_useful_discovery":12,"transport_requests":474,"requests_by_kind":{"http":193,"dns":275,"tls":6},"requests_per_useful_discovery":158,"provider_calls":3,"time_to_final_operation_update_ms":41260.351989,"restart":true,"source_proof":[{"domain":"q9b97701443a.top","finder_site_records":1,"first_discovery_round":2},{"domain":"qfaaae17e6eb.top","finder_site_records":1,"first_discovery_round":4},{"domain":"qf8a0603ea19.top","finder_site_records":1,"first_discovery_round":4}],"multi_hop_useful_discoveries":2,"operation_next_bounded_hunts":5,"validated_wallet_reuse_site_candidates":2,"limitations":["Public/blockchain transports are synthetic.","Unchanged Logger classifier ran on real rendered DOM; installed extension lifecycle remains a separate environment-limited check.","This corpus does not certify all operation benchmark scenarios."]}

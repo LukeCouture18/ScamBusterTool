@@ -1,0 +1,4357 @@
+{
+  "ok": true,
+  "policy": "v6",
+  "complete_at": {
+    "round": 5,
+    "requests": 313,
+    "jobs": 21
+  },
+  "quiescent_at": {
+    "round": 14,
+    "requests": 618
+  },
+  "max_rounds": 24,
+  "open_work": [],
+  "open_jobs": [],
+  "job_trace": [
+    {
+      "job_type": "DISCOVER_SITES",
+      "status": "completed",
+      "trigger_reason": "v5 operations: only 0 candidate(s) waiting",
+      "source": null,
+      "reason": "v5_continuous_discovery",
+      "seeds": null,
+      "artifacts": null,
+      "new_candidates": null,
+      "meter": null,
+      "created_at": "2026-10-04 17:49:42"
+    },
+    {
+      "job_type": "INVESTIGATE_SITE",
+      "status": "completed",
+      "trigger_reason": "Look for the deposit interface in public site evidence",
+      "source": null,
+      "reason": null,
+      "seeds": null,
+      "artifacts": null,
+      "new_candidates": null,
+      "meter": null,
+      "created_at": "2026-10-04 17:49:42"
+    },
+    {
+      "job_type": "ANALYZE_WALLET",
+      "status": "completed",
+      "trigger_reason": "wallet.validated requested ANALYZE_WALLET; profile deep-investigation; confidence 0.78; evidence 1 references",
+      "source": null,
+      "reason": null,
+      "seeds": null,
+      "artifacts": null,
+      "new_candidates": null,
+      "meter": null,
+      "created_at": "2026-10-04 17:49:43"
+    },
+    {
+      "job_type": "ANALYZE_WALLET",
+      "status": "completed",
+      "trigger_reason": "Wallet seen in a deposit context on q1c6ceabc708.top: validate and analyse",
+      "source": null,
+      "reason": null,
+      "seeds": null,
+      "artifacts": null,
+      "new_candidates": null,
+      "meter": "{\"provider_calls\":1,\"http\":0,\"worker_ms\":1648}",
+      "created_at": "2026-10-04 17:49:44"
+    },
+    {
+      "job_type": "HUNT_OPERATION",
+      "status": "completed",
+      "trigger_reason": "v5 operations: A module observed a wallet on q1c6ceabc708.top; reconstruct the operation behind it.",
+      "source": null,
+      "reason": "A module observed a wallet on q1c6ceabc708.top; reconstruct the operation behind it.",
+      "seeds": "[]",
+      "artifacts": null,
+      "new_candidates": null,
+      "meter": null,
+      "created_at": "2026-10-04 17:49:47"
+    },
+    {
+      "job_type": "FIND_RELATED_SITES",
+      "status": "completed",
+      "trigger_reason": "v5 operations: Operation Hunter (OP-BEHIND-Q1C6CEABC70): Only 1 site confirmed and Hunter's public pivots are exhausted: ask Site Finder to search for more sites like q1c6ceab",
+      "source": "hunter",
+      "reason": "Only 1 site confirmed and Hunter's public pivots are exhausted: ask Site Finder to search for more sites like q1c6ceabc708.top.",
+      "seeds": "[\"q1c6ceabc708.top\"]",
+      "artifacts": "[{\"kind\":\"wallet\",\"value\":\"0x1111111111111111111111111111111111111111\"},{\"kind\":\"contact\",\"value\":\"quorra_verified_support\"}]",
+      "new_candidates": "[\"q9b97701443a.top\"]",
+      "meter": "{\"http\":5,\"dns\":26,\"crtsh\":4,\"rdap\":2}",
+      "created_at": "2026-10-04 17:49:49"
+    },
+    {
+      "job_type": "INVESTIGATE_SITE",
+      "status": "completed",
+      "trigger_reason": "AI investigator step 1: The site has not been investigated yet; examine its public pages.",
+      "source": null,
+      "reason": null,
+      "seeds": null,
+      "artifacts": null,
+      "new_candidates": null,
+      "meter": null,
+      "created_at": "2026-10-04 17:49:50"
+    },
+    {
+      "job_type": "FIND_RELATED_SITES",
+      "status": "completed",
+      "trigger_reason": "v5 operations: Seek independent evidence: Re-check the live sites' DNS and the reserve domains in a few days.",
+      "source": "operation-intelligence",
+      "reason": "evidence_gap",
+      "seeds": "[\"q1c6ceabc708.top\"]",
+      "artifacts": "[]",
+      "new_candidates": "[]",
+      "meter": "{\"http\":0,\"dns\":20,\"crtsh\":4,\"rdap\":0}",
+      "created_at": "2026-10-04 17:49:50"
+    },
+    {
+      "job_type": "ANALYZE_WALLET",
+      "status": "completed",
+      "trigger_reason": "Wallet seen in a deposit context on q9b97701443a.top: validate and analyse",
+      "source": null,
+      "reason": null,
+      "seeds": null,
+      "artifacts": null,
+      "new_candidates": null,
+      "meter": "{\"provider_calls\":0,\"http\":0,\"worker_ms\":412}",
+      "created_at": "2026-10-04 17:49:53"
+    },
+    {
+      "job_type": "FIND_RELATED_SITES",
+      "status": "completed",
+      "trigger_reason": "v5 operations: Operation Hunter (OP-BEHIND-Q1C6CEABC70): Only 2 sites confirmed and Hunter's public pivots are exhausted: ask Site Finder to search for more sites like q1c6cea",
+      "source": "hunter",
+      "reason": "Only 2 sites confirmed and Hunter's public pivots are exhausted: ask Site Finder to search for more sites like q1c6ceabc708.top.",
+      "seeds": "[\"q1c6ceabc708.top\",\"q9b97701443a.top\"]",
+      "artifacts": "[{\"kind\":\"wallet\",\"value\":\"0x1111111111111111111111111111111111111111\"},{\"kind\":\"contact\",\"value\":\"quorra_verified_support\"}]",
+      "new_candidates": "[\"qfaaae17e6eb.top\"]",
+      "meter": "{\"http\":3,\"dns\":24,\"crtsh\":4,\"rdap\":1}",
+      "created_at": "2026-10-04 17:49:55"
+    },
+    {
+      "job_type": "FIND_RELATED_SITES",
+      "status": "completed",
+      "trigger_reason": "v5 operations: The investigation of q9b97701443a.top recorded 3 public artifacts; look for other sites that reuse them.",
+      "source": "investigation",
+      "reason": "investigation_artifacts",
+      "seeds": "[\"q9b97701443a.top\"]",
+      "artifacts": "[{\"kind\":\"analytics\",\"value\":\"ga4:g-q0rratest\"},{\"kind\":\"contact\",\"value\":\"quorra_verified_support\"},{\"kind\":\"title\",\"value\":\"quorra investment • earn daily profit\"}]",
+      "new_candidates": "[\"q9e99c254b43.top\",\"qf8a0603ea19.top\"]",
+      "meter": "{\"http\":4,\"dns\":24,\"crtsh\":4,\"rdap\":2}",
+      "created_at": "2026-10-04 17:49:55"
+    },
+    {
+      "job_type": "INVESTIGATE_SITE",
+      "status": "completed",
+      "trigger_reason": "AI investigator step 1: The site has not been investigated yet; examine its public pages.",
+      "source": null,
+      "reason": null,
+      "seeds": null,
+      "artifacts": null,
+      "new_candidates": null,
+      "meter": null,
+      "created_at": "2026-10-04 17:49:57"
+    },
+    {
+      "job_type": "INVESTIGATE_SITE",
+      "status": "completed",
+      "trigger_reason": "AI investigator step 1: The site has not been investigated yet; examine its public pages.",
+      "source": null,
+      "reason": null,
+      "seeds": null,
+      "artifacts": null,
+      "new_candidates": null,
+      "meter": null,
+      "created_at": "2026-10-04 17:49:57"
+    },
+    {
+      "job_type": "FIND_RELATED_SITES",
+      "status": "completed",
+      "trigger_reason": "v5 operations: Seek independent evidence: Re-check the live sites' DNS and the reserve domains in a few days.",
+      "source": "operation-intelligence",
+      "reason": "evidence_gap",
+      "seeds": "[\"q1c6ceabc708.top\"]",
+      "artifacts": "[]",
+      "new_candidates": "[]",
+      "meter": "{\"http\":0,\"dns\":20,\"crtsh\":4,\"rdap\":0}",
+      "created_at": "2026-10-04 17:49:57"
+    },
+    {
+      "job_type": "INVESTIGATE_SITE",
+      "status": "completed",
+      "trigger_reason": "Look for the deposit interface in public site evidence",
+      "source": null,
+      "reason": null,
+      "seeds": null,
+      "artifacts": null,
+      "new_candidates": null,
+      "meter": null,
+      "created_at": "2026-10-04 17:49:57"
+    },
+    {
+      "job_type": "ANALYZE_WALLET",
+      "status": "completed",
+      "trigger_reason": "wallet.validated requested ANALYZE_WALLET; profile deep-investigation; confidence 0.78; evidence 1 references",
+      "source": null,
+      "reason": null,
+      "seeds": null,
+      "artifacts": null,
+      "new_candidates": null,
+      "meter": null,
+      "created_at": "2026-10-04 17:50:00"
+    },
+    {
+      "job_type": "ANALYZE_WALLET",
+      "status": "completed",
+      "trigger_reason": "Wallet seen in a deposit context on q9e99c254b43.top: validate and analyse",
+      "source": null,
+      "reason": null,
+      "seeds": null,
+      "artifacts": null,
+      "new_candidates": null,
+      "meter": "{\"provider_calls\":1,\"http\":0,\"worker_ms\":419}",
+      "created_at": "2026-10-04 17:50:01"
+    },
+    {
+      "job_type": "ANALYZE_WALLET",
+      "status": "completed",
+      "trigger_reason": "wallet.validated requested ANALYZE_WALLET; profile deep-investigation; confidence 0.78; evidence 1 references",
+      "source": null,
+      "reason": null,
+      "seeds": null,
+      "artifacts": null,
+      "new_candidates": null,
+      "meter": null,
+      "created_at": "2026-10-04 17:50:03"
+    },
+    {
+      "job_type": "ANALYZE_WALLET",
+      "status": "completed",
+      "trigger_reason": "Wallet seen in a deposit context on qfaaae17e6eb.top: validate and analyse",
+      "source": null,
+      "reason": null,
+      "seeds": null,
+      "artifacts": null,
+      "new_candidates": null,
+      "meter": "{\"provider_calls\":1,\"http\":0,\"worker_ms\":1297}",
+      "created_at": "2026-10-04 17:50:04"
+    },
+    {
+      "job_type": "ANALYZE_WALLET",
+      "status": "completed",
+      "trigger_reason": "wallet.validated requested ANALYZE_WALLET; profile deep-investigation; confidence 0.78; evidence 1 references",
+      "source": null,
+      "reason": null,
+      "seeds": null,
+      "artifacts": null,
+      "new_candidates": null,
+      "meter": null,
+      "created_at": "2026-10-04 17:50:06"
+    },
+    {
+      "job_type": "ANALYZE_WALLET",
+      "status": "completed",
+      "trigger_reason": "Wallet seen in a deposit context on qf8a0603ea19.top: validate and analyse",
+      "source": null,
+      "reason": null,
+      "seeds": null,
+      "artifacts": null,
+      "new_candidates": null,
+      "meter": "{\"provider_calls\":0,\"http\":0,\"worker_ms\":959}",
+      "created_at": "2026-10-04 17:50:07"
+    },
+    {
+      "job_type": "ANALYZE_WALLET",
+      "status": "completed",
+      "trigger_reason": "v5 operations: Wallet seen on qf8a0603ea19.top has not been analysed",
+      "source": null,
+      "reason": null,
+      "seeds": null,
+      "artifacts": null,
+      "new_candidates": null,
+      "meter": null,
+      "created_at": "2026-10-04 17:50:10"
+    },
+    {
+      "job_type": "RECHECK_SITE",
+      "status": "completed",
+      "trigger_reason": "v5 operations: qf8a0603ea19.top: deposit appeared — observe the new state",
+      "source": null,
+      "reason": "revisit_changed_site",
+      "seeds": null,
+      "artifacts": null,
+      "new_candidates": null,
+      "meter": null,
+      "created_at": "2026-10-04 17:50:10"
+    },
+    {
+      "job_type": "FIND_RELATED_SITES",
+      "status": "completed",
+      "trigger_reason": "v5 operations: The investigation of q9e99c254b43.top recorded 3 public artifacts; look for other sites that reuse them.",
+      "source": "investigation",
+      "reason": "investigation_artifacts",
+      "seeds": "[\"q9e99c254b43.top\"]",
+      "artifacts": "[{\"kind\":\"analytics\",\"value\":\"ga4:g-q0rratest\"},{\"kind\":\"contact\",\"value\":\"unrelated_5_support\"},{\"kind\":\"title\",\"value\":\"quorra investment • earn daily profit\"}]",
+      "new_candidates": "[]",
+      "meter": "{\"http\":0,\"dns\":20,\"crtsh\":4,\"rdap\":0}",
+      "created_at": "2026-10-04 17:50:10"
+    },
+    {
+      "job_type": "FIND_RELATED_SITES",
+      "status": "completed",
+      "trigger_reason": "v5 operations: The investigation of qfaaae17e6eb.top recorded 3 public artifacts; look for other sites that reuse them.",
+      "source": "investigation",
+      "reason": "investigation_artifacts",
+      "seeds": "[\"qfaaae17e6eb.top\"]",
+      "artifacts": "[{\"kind\":\"analytics\",\"value\":\"ga4:g-q0rratest\"},{\"kind\":\"contact\",\"value\":\"quorra_verified_support\"},{\"kind\":\"title\",\"value\":\"quorra investment • earn daily profit\"}]",
+      "new_candidates": "[]",
+      "meter": "{\"http\":0,\"dns\":20,\"crtsh\":4,\"rdap\":0}",
+      "created_at": "2026-10-04 17:50:10"
+    },
+    {
+      "job_type": "HUNT_OPERATION",
+      "status": "completed",
+      "trigger_reason": "Ask Operation Hunter to evaluate the validated cross-site wallet signal",
+      "source": null,
+      "reason": "validated_wallet_overlap",
+      "seeds": "[{\"type\":\"site\",\"value\":\"q9b97701443a.top\"}]",
+      "artifacts": null,
+      "new_candidates": null,
+      "meter": null,
+      "created_at": "2026-10-04 17:50:10"
+    },
+    {
+      "job_type": "FIND_RELATED_SITES",
+      "status": "completed",
+      "trigger_reason": "v5 operations: The investigation of qf8a0603ea19.top recorded 3 public artifacts; look for other sites that reuse them.",
+      "source": "investigation",
+      "reason": "investigation_artifacts",
+      "seeds": "[\"qf8a0603ea19.top\"]",
+      "artifacts": "[{\"kind\":\"analytics\",\"value\":\"ga4:g-q0rratest\"},{\"kind\":\"contact\",\"value\":\"quorra_verified_support\"},{\"kind\":\"title\",\"value\":\"quorra investment • earn daily profit\"}]",
+      "new_candidates": "[]",
+      "meter": "{\"http\":0,\"dns\":20,\"crtsh\":4,\"rdap\":0}",
+      "created_at": "2026-10-04 17:50:16"
+    },
+    {
+      "job_type": "HUNT_OPERATION",
+      "status": "completed",
+      "trigger_reason": "v5 operations: A module observed a wallet on qf8a0603ea19.top; reconstruct the operation behind it.",
+      "source": null,
+      "reason": "A module observed a wallet on qf8a0603ea19.top; reconstruct the operation behind it.",
+      "seeds": "[]",
+      "artifacts": null,
+      "new_candidates": null,
+      "meter": null,
+      "created_at": "2026-10-04 17:50:16"
+    },
+    {
+      "job_type": "FIND_RELATED_SITES",
+      "status": "completed",
+      "trigger_reason": "Start a bounded related-site hunt from recorded public artifacts",
+      "source": null,
+      "reason": "director_evidence_gap",
+      "seeds": "[\"q9b97701443a.top\"]",
+      "artifacts": "[{\"kind\":\"analytics\",\"value\":\"ga4:g-q0rratest\"},{\"kind\":\"contact\",\"value\":\"quorra_verified_support\"},{\"kind\":\"title\",\"value\":\"quorra investment • earn daily profit\"},{\"kind\":\"wallet\",\"value\":\"0x1111111111111111111111111111111111111111\"}]",
+      "new_candidates": "[]",
+      "meter": "{\"http\":0,\"dns\":20,\"crtsh\":4,\"rdap\":0}",
+      "created_at": "2026-10-04 17:50:16"
+    },
+    {
+      "job_type": "HUNT_OPERATION",
+      "status": "completed",
+      "trigger_reason": "v5 operations: A module observed a wallet on qfaaae17e6eb.top; reconstruct the operation behind it.",
+      "source": null,
+      "reason": "A module observed a wallet on qfaaae17e6eb.top; reconstruct the operation behind it.",
+      "seeds": "[]",
+      "artifacts": null,
+      "new_candidates": null,
+      "meter": null,
+      "created_at": "2026-10-04 17:50:19"
+    },
+    {
+      "job_type": "FIND_RELATED_SITES",
+      "status": "completed",
+      "trigger_reason": "v5 operations: Find public deployments related to qf8a0603ea19.top; shared infrastructure remains context.",
+      "source": "operation-intelligence",
+      "reason": "evidence_gap",
+      "seeds": "[\"qf8a0603ea19.top\"]",
+      "artifacts": "[]",
+      "new_candidates": "[]",
+      "meter": "{\"http\":0,\"dns\":20,\"crtsh\":4,\"rdap\":0}",
+      "created_at": "2026-10-04 17:50:21"
+    },
+    {
+      "job_type": "HUNT_OPERATION",
+      "status": "completed",
+      "trigger_reason": "v5 operations: A module observed a wallet on q9e99c254b43.top; reconstruct the operation behind it.",
+      "source": null,
+      "reason": "A module observed a wallet on q9e99c254b43.top; reconstruct the operation behind it.",
+      "seeds": "[]",
+      "artifacts": null,
+      "new_candidates": null,
+      "meter": null,
+      "created_at": "2026-10-04 17:50:21"
+    },
+    {
+      "job_type": "FIND_RELATED_SITES",
+      "status": "completed",
+      "trigger_reason": "v5 operations: Find public deployments related to qfaaae17e6eb.top; shared infrastructure remains context.",
+      "source": "operation-intelligence",
+      "reason": "evidence_gap",
+      "seeds": "[\"qfaaae17e6eb.top\"]",
+      "artifacts": "[]",
+      "new_candidates": "[]",
+      "meter": "{\"http\":0,\"dns\":20,\"crtsh\":4,\"rdap\":0}",
+      "created_at": "2026-10-04 17:50:22"
+    },
+    {
+      "job_type": "FIND_RELATED_SITES",
+      "status": "completed",
+      "trigger_reason": "v5 operations: Find public deployments related to qf8a0603ea19.top; shared infrastructure remains context.",
+      "source": "operation-intelligence",
+      "reason": "evidence_gap",
+      "seeds": "[\"qf8a0603ea19.top\"]",
+      "artifacts": "[]",
+      "new_candidates": "[]",
+      "meter": "{\"http\":0,\"dns\":20,\"crtsh\":4,\"rdap\":0}",
+      "created_at": "2026-10-04 17:50:24"
+    },
+    {
+      "job_type": "FIND_RELATED_SITES",
+      "status": "completed",
+      "trigger_reason": "v5 operations: Find public deployments related to q9e99c254b43.top; shared infrastructure remains context.",
+      "source": "operation-intelligence",
+      "reason": "evidence_gap",
+      "seeds": "[\"q9e99c254b43.top\"]",
+      "artifacts": "[]",
+      "new_candidates": "[]",
+      "meter": "{\"http\":0,\"dns\":20,\"crtsh\":4,\"rdap\":0}",
+      "created_at": "2026-10-04 17:50:24"
+    },
+    {
+      "job_type": "FIND_RELATED_SITES",
+      "status": "completed",
+      "trigger_reason": "v5 operations: Find public deployments related to qfaaae17e6eb.top; shared infrastructure remains context.",
+      "source": "operation-intelligence",
+      "reason": "evidence_gap",
+      "seeds": "[\"qfaaae17e6eb.top\"]",
+      "artifacts": "[]",
+      "new_candidates": "[]",
+      "meter": "{\"http\":0,\"dns\":20,\"crtsh\":4,\"rdap\":0}",
+      "created_at": "2026-10-04 17:50:26"
+    },
+    {
+      "job_type": "FIND_RELATED_SITES",
+      "status": "completed",
+      "trigger_reason": "Start a bounded related-site hunt from recorded public artifacts",
+      "source": null,
+      "reason": "director_evidence_gap",
+      "seeds": "[\"q9e99c254b43.top\"]",
+      "artifacts": "[{\"kind\":\"analytics\",\"value\":\"ga4:g-q0rratest\"},{\"kind\":\"contact\",\"value\":\"unrelated_5_support\"},{\"kind\":\"title\",\"value\":\"quorra investment • earn daily profit\"},{\"kind\":\"wallet\",\"value\":\"0x3333333333333333333333333333333333333333\"}]",
+      "new_candidates": "[]",
+      "meter": "{\"http\":0,\"dns\":20,\"crtsh\":4,\"rdap\":0}",
+      "created_at": "2026-10-04 17:50:26"
+    },
+    {
+      "job_type": "FIND_RELATED_SITES",
+      "status": "completed",
+      "trigger_reason": "v5 operations: Find public deployments related to q9e99c254b43.top; shared infrastructure remains context.",
+      "source": "operation-intelligence",
+      "reason": "evidence_gap",
+      "seeds": "[\"q9e99c254b43.top\"]",
+      "artifacts": "[]",
+      "new_candidates": "[]",
+      "meter": "{\"http\":0,\"dns\":20,\"crtsh\":4,\"rdap\":0}",
+      "created_at": "2026-10-04 17:50:28"
+    },
+    {
+      "job_type": "HUNT_OPERATION",
+      "status": "completed",
+      "trigger_reason": "Ask Operation Hunter to evaluate the validated cross-site wallet signal",
+      "source": null,
+      "reason": "validated_wallet_overlap",
+      "seeds": "[{\"type\":\"site\",\"value\":\"qfaaae17e6eb.top\"}]",
+      "artifacts": null,
+      "new_candidates": null,
+      "meter": null,
+      "created_at": "2026-10-04 17:50:28"
+    },
+    {
+      "job_type": "FIND_RELATED_SITES",
+      "status": "completed",
+      "trigger_reason": "Start a bounded related-site hunt from recorded public artifacts",
+      "source": null,
+      "reason": "director_evidence_gap",
+      "seeds": "[\"qfaaae17e6eb.top\"]",
+      "artifacts": "[{\"kind\":\"analytics\",\"value\":\"ga4:g-q0rratest\"},{\"kind\":\"contact\",\"value\":\"quorra_verified_support\"},{\"kind\":\"title\",\"value\":\"quorra investment • earn daily profit\"},{\"kind\":\"wallet\",\"value\":\"0x2222222222222222222222222222222222222222\"}]",
+      "new_candidates": "[]",
+      "meter": "{\"http\":0,\"dns\":20,\"crtsh\":4,\"rdap\":0}",
+      "created_at": "2026-10-04 17:50:29"
+    }
+  ],
+  "adaptive_decisions": [],
+  "adaptive_tests": [],
+  "adaptive_costs": [],
+  "adaptive_outcomes": [],
+  "seed_sites": 1,
+  "initial_wallets": 0,
+  "hidden_sites_injected": 0,
+  "hidden_sites_discovered": 3,
+  "target_sites_investigated": 4,
+  "validated_target_wallets": 2,
+  "unsupported_ownership_claims": 0,
+  "duplicate_active_jobs": 0,
+  "human_actions": 0,
+  "jobs": 40,
+  "jobs_per_useful_discovery": 13.333333333333334,
+  "transport_requests": 618,
+  "requests_by_kind": {
+    "http": 217,
+    "dns": 395,
+    "tls": 6
+  },
+  "requests_per_useful_discovery": 206,
+  "provider_calls": 3,
+  "time_to_final_operation_update_ms": 51811.082351000005,
+  "restart": true,
+  "source_proof": [
+    {
+      "domain": "q9b97701443a.top",
+      "finder_site_records": 1,
+      "first_discovery_round": 2
+    },
+    {
+      "domain": "qfaaae17e6eb.top",
+      "finder_site_records": 1,
+      "first_discovery_round": 4
+    },
+    {
+      "domain": "qf8a0603ea19.top",
+      "finder_site_records": 1,
+      "first_discovery_round": 4
+    }
+  ],
+  "multi_hop_useful_discoveries": 2,
+  "operation_next_bounded_hunts": 11,
+  "validated_wallet_reuse_site_candidates": 2,
+  "rounds": [
+    {
+      "round": 0,
+      "sites": [
+        "q1c6ceabc708.top"
+      ],
+      "investigated": [
+        "q1c6ceabc708.top"
+      ],
+      "validated_deposit_wallets": 1,
+      "finder_claims": 1,
+      "operation_present": false,
+      "requests_so_far": 29
+    },
+    {
+      "round": 1,
+      "sites": [
+        "q1c6ceabc708.top"
+      ],
+      "investigated": [
+        "q1c6ceabc708.top"
+      ],
+      "validated_deposit_wallets": 1,
+      "finder_claims": 0,
+      "operation_present": true,
+      "requests_so_far": 54
+    },
+    {
+      "round": 2,
+      "sites": [
+        "q1c6ceabc708.top",
+        "q9b97701443a.top"
+      ],
+      "investigated": [
+        "q1c6ceabc708.top"
+      ],
+      "validated_deposit_wallets": 1,
+      "finder_claims": 1,
+      "operation_present": true,
+      "requests_so_far": 97
+    },
+    {
+      "round": 3,
+      "sites": [
+        "q1c6ceabc708.top",
+        "q9b97701443a.top"
+      ],
+      "investigated": [
+        "q1c6ceabc708.top",
+        "q9b97701443a.top"
+      ],
+      "validated_deposit_wallets": 1,
+      "finder_claims": 1,
+      "operation_present": true,
+      "requests_so_far": 163
+    },
+    {
+      "round": 4,
+      "sites": [
+        "q1c6ceabc708.top",
+        "q9b97701443a.top",
+        "q9e99c254b43.top",
+        "qf8a0603ea19.top",
+        "qfaaae17e6eb.top"
+      ],
+      "investigated": [
+        "q1c6ceabc708.top",
+        "q9b97701443a.top"
+      ],
+      "validated_deposit_wallets": 1,
+      "finder_claims": 2,
+      "operation_present": true,
+      "requests_so_far": 225
+    },
+    {
+      "round": 5,
+      "sites": [
+        "q1c6ceabc708.top",
+        "q9b97701443a.top",
+        "q9e99c254b43.top",
+        "qf8a0603ea19.top",
+        "qfaaae17e6eb.top"
+      ],
+      "investigated": [
+        "q1c6ceabc708.top",
+        "q9b97701443a.top",
+        "q9e99c254b43.top",
+        "qfaaae17e6eb.top",
+        "qf8a0603ea19.top"
+      ],
+      "validated_deposit_wallets": 2,
+      "finder_claims": 1,
+      "operation_present": true,
+      "requests_so_far": 313
+    },
+    {
+      "round": 6,
+      "sites": [
+        "q1c6ceabc708.top",
+        "q9b97701443a.top",
+        "q9e99c254b43.top",
+        "qf8a0603ea19.top",
+        "qfaaae17e6eb.top"
+      ],
+      "investigated": [
+        "q1c6ceabc708.top",
+        "q9b97701443a.top",
+        "q9e99c254b43.top",
+        "qfaaae17e6eb.top",
+        "qf8a0603ea19.top"
+      ],
+      "validated_deposit_wallets": 3,
+      "finder_claims": 2,
+      "operation_present": true,
+      "requests_so_far": 377
+    },
+    {
+      "round": 7,
+      "sites": [
+        "q1c6ceabc708.top",
+        "q9b97701443a.top",
+        "q9e99c254b43.top",
+        "qf8a0603ea19.top",
+        "qfaaae17e6eb.top"
+      ],
+      "investigated": [
+        "q1c6ceabc708.top",
+        "q9b97701443a.top",
+        "q9e99c254b43.top",
+        "qfaaae17e6eb.top",
+        "qf8a0603ea19.top"
+      ],
+      "validated_deposit_wallets": 3,
+      "finder_claims": 2,
+      "operation_present": true,
+      "requests_so_far": 425
+    },
+    {
+      "round": 8,
+      "sites": [
+        "q1c6ceabc708.top",
+        "q9b97701443a.top",
+        "q9e99c254b43.top",
+        "qf8a0603ea19.top",
+        "qfaaae17e6eb.top"
+      ],
+      "investigated": [
+        "q1c6ceabc708.top",
+        "q9b97701443a.top",
+        "q9e99c254b43.top",
+        "qfaaae17e6eb.top",
+        "qf8a0603ea19.top"
+      ],
+      "validated_deposit_wallets": 3,
+      "finder_claims": 0,
+      "operation_present": true,
+      "requests_so_far": 425
+    },
+    {
+      "round": 9,
+      "sites": [
+        "q1c6ceabc708.top",
+        "q9b97701443a.top",
+        "q9e99c254b43.top",
+        "qf8a0603ea19.top",
+        "qfaaae17e6eb.top"
+      ],
+      "investigated": [
+        "q1c6ceabc708.top",
+        "q9b97701443a.top",
+        "q9e99c254b43.top",
+        "qfaaae17e6eb.top",
+        "qf8a0603ea19.top"
+      ],
+      "validated_deposit_wallets": 3,
+      "finder_claims": 1,
+      "operation_present": true,
+      "requests_so_far": 450
+    },
+    {
+      "round": 10,
+      "sites": [
+        "q1c6ceabc708.top",
+        "q9b97701443a.top",
+        "q9e99c254b43.top",
+        "qf8a0603ea19.top",
+        "qfaaae17e6eb.top"
+      ],
+      "investigated": [
+        "q1c6ceabc708.top",
+        "q9b97701443a.top",
+        "q9e99c254b43.top",
+        "qfaaae17e6eb.top",
+        "qf8a0603ea19.top"
+      ],
+      "validated_deposit_wallets": 3,
+      "finder_claims": 1,
+      "operation_present": true,
+      "requests_so_far": 474
+    },
+    {
+      "round": 11,
+      "sites": [
+        "q1c6ceabc708.top",
+        "q9b97701443a.top",
+        "q9e99c254b43.top",
+        "qf8a0603ea19.top",
+        "qfaaae17e6eb.top"
+      ],
+      "investigated": [
+        "q1c6ceabc708.top",
+        "q9b97701443a.top",
+        "q9e99c254b43.top",
+        "qfaaae17e6eb.top",
+        "qf8a0603ea19.top"
+      ],
+      "validated_deposit_wallets": 3,
+      "finder_claims": 2,
+      "operation_present": true,
+      "requests_so_far": 522
+    },
+    {
+      "round": 12,
+      "sites": [
+        "q1c6ceabc708.top",
+        "q9b97701443a.top",
+        "q9e99c254b43.top",
+        "qf8a0603ea19.top",
+        "qfaaae17e6eb.top"
+      ],
+      "investigated": [
+        "q1c6ceabc708.top",
+        "q9b97701443a.top",
+        "q9e99c254b43.top",
+        "qfaaae17e6eb.top",
+        "qf8a0603ea19.top"
+      ],
+      "validated_deposit_wallets": 3,
+      "finder_claims": 2,
+      "operation_present": true,
+      "requests_so_far": 570
+    },
+    {
+      "round": 13,
+      "sites": [
+        "q1c6ceabc708.top",
+        "q9b97701443a.top",
+        "q9e99c254b43.top",
+        "qf8a0603ea19.top",
+        "qfaaae17e6eb.top"
+      ],
+      "investigated": [
+        "q1c6ceabc708.top",
+        "q9b97701443a.top",
+        "q9e99c254b43.top",
+        "qfaaae17e6eb.top",
+        "qf8a0603ea19.top"
+      ],
+      "validated_deposit_wallets": 3,
+      "finder_claims": 1,
+      "operation_present": true,
+      "requests_so_far": 594
+    },
+    {
+      "round": 14,
+      "sites": [
+        "q1c6ceabc708.top",
+        "q9b97701443a.top",
+        "q9e99c254b43.top",
+        "qf8a0603ea19.top",
+        "qfaaae17e6eb.top"
+      ],
+      "investigated": [
+        "q1c6ceabc708.top",
+        "q9b97701443a.top",
+        "q9e99c254b43.top",
+        "qfaaae17e6eb.top",
+        "qf8a0603ea19.top"
+      ],
+      "validated_deposit_wallets": 3,
+      "finder_claims": 1,
+      "operation_present": true,
+      "requests_so_far": 618
+    }
+  ],
+  "moduleTrace": [
+    {
+      "module": "finder",
+      "ran": {
+        "claimed": false,
+        "reason": "No work waiting."
+      },
+      "costs": {
+        "http": 0,
+        "dns": 0,
+        "crtsh": 0,
+        "rdap": 0,
+        "feed": 0
+      }
+    },
+    {
+      "module": "investigator",
+      "ran": true
+    },
+    {
+      "module": "logger",
+      "domain": "q1c6ceabc708.top"
+    },
+    {
+      "module": "investigator",
+      "ran": false
+    },
+    {
+      "module": "finder",
+      "ran": {
+        "claimed": true,
+        "job_id": "792b2da9-2a95-4942-8488-b0ed2684310c",
+        "job_type": "DISCOVER_SITES",
+        "ran": true,
+        "v2": {
+          "ran": true,
+          "cycle": 1,
+          "round": 1,
+          "sources": [
+            "ct_learned",
+            "cert_siblings",
+            "ct_terms"
+          ],
+          "delivered": 0,
+          "delivered_domains": [],
+          "new_unique": 0,
+          "new_infrastructure": 0,
+          "novel_ecosystems": 0,
+          "duplicate_sightings": 0,
+          "new_site_rate": 0,
+          "duplicate_rate": 0,
+          "near_duplicate_new": 0,
+          "near_duplicate_rate": 0,
+          "useful_new_site_rate_cumulative": 0,
+          "source_novelty": {
+            "ct_learned": 0,
+            "cert_siblings": 0,
+            "ct_terms": 0
+          },
+          "rediscovered": [],
+          "aged": 0,
+          "ecosystem_suppressed_total": 0,
+          "watch": {
+            "checked": 0,
+            "changed": 0,
+            "changes": [],
+            "dns_used": 0
+          },
+          "probed": 0,
+          "budget": {
+            "limits": {
+              "http": 120,
+              "dns": 600,
+              "crtsh": 12,
+              "rdap": 60
+            },
+            "used": {
+              "http": 0,
+              "dns": 0,
+              "crtsh": 12,
+              "rdap": 0
+            }
+          },
+          "recovered_interrupted": 0,
+          "saturated": true
+        }
+      },
+      "costs": {
+        "http": 0,
+        "dns": 0,
+        "crtsh": 12,
+        "rdap": 0,
+        "feed": 0
+      }
+    },
+    {
+      "module": "finder",
+      "ran": {
+        "claimed": false,
+        "reason": "No work waiting."
+      },
+      "costs": {
+        "http": 0,
+        "dns": 0,
+        "crtsh": 0,
+        "rdap": 0,
+        "feed": 0
+      }
+    },
+    {
+      "module": "investigator",
+      "ran": false
+    },
+    {
+      "module": "finder",
+      "ran": {
+        "claimed": false,
+        "reason": "No work waiting."
+      },
+      "costs": {
+        "http": 0,
+        "dns": 0,
+        "crtsh": 0,
+        "rdap": 0,
+        "feed": 0
+      }
+    },
+    {
+      "module": "investigator",
+      "ran": false
+    },
+    {
+      "module": "finder",
+      "ran": {
+        "claimed": true,
+        "job_id": "1c13e018-a343-4be3-a603-858f230a1d42",
+        "job_type": "FIND_RELATED_SITES",
+        "ran": true,
+        "v2": {
+          "seed": "q1c6ceabc708.top",
+          "round": 2,
+          "delivered": 1,
+          "campaign_key": "v2:round:2:q1c6ceabc708.top",
+          "new_candidates": [
+            "q9b97701443a.top"
+          ],
+          "hunt": "campaign:op-40f719dd",
+          "meter": {
+            "limits": {
+              "http": 40,
+              "dns": 40,
+              "crtsh": 4,
+              "rdap": 6
+            },
+            "used": {
+              "http": 5,
+              "dns": 26,
+              "crtsh": 4,
+              "rdap": 2
+            }
+          }
+        }
+      },
+      "costs": {
+        "http": 5,
+        "dns": 23,
+        "crtsh": 4,
+        "rdap": 2,
+        "feed": 0,
+        "page_search": 9
+      }
+    },
+    {
+      "module": "finder",
+      "ran": {
+        "claimed": false,
+        "reason": "No work waiting."
+      },
+      "costs": {
+        "http": 0,
+        "dns": 0,
+        "crtsh": 0,
+        "rdap": 0,
+        "feed": 0
+      }
+    },
+    {
+      "module": "investigator",
+      "ran": true
+    },
+    {
+      "module": "logger",
+      "domain": "q9b97701443a.top"
+    },
+    {
+      "module": "investigator",
+      "ran": false
+    },
+    {
+      "module": "finder",
+      "ran": {
+        "claimed": true,
+        "job_id": "f634e65a-a354-40e8-994a-1b28cac0a417",
+        "job_type": "FIND_RELATED_SITES",
+        "ran": true,
+        "v2": {
+          "seed": "q1c6ceabc708.top",
+          "round": 3,
+          "delivered": 0,
+          "campaign_key": "v2:round:3:q1c6ceabc708.top",
+          "new_candidates": [],
+          "hunt": "campaign:op-40f719dd",
+          "meter": {
+            "limits": {
+              "http": 40,
+              "dns": 40,
+              "crtsh": 4,
+              "rdap": 6
+            },
+            "used": {
+              "http": 0,
+              "dns": 20,
+              "crtsh": 4,
+              "rdap": 0
+            }
+          }
+        }
+      },
+      "costs": {
+        "http": 0,
+        "dns": 20,
+        "crtsh": 4,
+        "rdap": 0,
+        "feed": 0,
+        "page_search": 9
+      }
+    },
+    {
+      "module": "finder",
+      "ran": {
+        "claimed": false,
+        "reason": "No work waiting."
+      },
+      "costs": {
+        "http": 0,
+        "dns": 0,
+        "crtsh": 0,
+        "rdap": 0,
+        "feed": 0
+      }
+    },
+    {
+      "module": "investigator",
+      "ran": false
+    },
+    {
+      "module": "finder",
+      "ran": {
+        "claimed": true,
+        "job_id": "2d69be4e-5450-4689-9619-b713db2780fb",
+        "job_type": "FIND_RELATED_SITES",
+        "ran": true,
+        "v2": {
+          "seed": "q1c6ceabc708.top",
+          "round": 4,
+          "delivered": 1,
+          "campaign_key": "v2:round:4:q1c6ceabc708.top",
+          "new_candidates": [
+            "qfaaae17e6eb.top"
+          ],
+          "hunt": "campaign:op-40f719dd",
+          "meter": {
+            "limits": {
+              "http": 40,
+              "dns": 40,
+              "crtsh": 4,
+              "rdap": 6
+            },
+            "used": {
+              "http": 3,
+              "dns": 24,
+              "crtsh": 4,
+              "rdap": 1
+            }
+          }
+        }
+      },
+      "costs": {
+        "http": 3,
+        "dns": 22,
+        "crtsh": 4,
+        "rdap": 1,
+        "feed": 0
+      }
+    },
+    {
+      "module": "finder",
+      "ran": {
+        "claimed": true,
+        "job_id": "c49527c9-eb50-44f6-8f5d-b6910caf7af1",
+        "job_type": "FIND_RELATED_SITES",
+        "ran": true,
+        "v2": {
+          "seed": "q9b97701443a.top",
+          "round": 5,
+          "delivered": 2,
+          "campaign_key": "v2:round:5:q9b97701443a.top",
+          "new_candidates": [
+            "q9e99c254b43.top",
+            "qf8a0603ea19.top"
+          ],
+          "hunt": "investigation:q9b97701443a.top",
+          "meter": {
+            "limits": {
+              "http": 40,
+              "dns": 40,
+              "crtsh": 4,
+              "rdap": 6
+            },
+            "used": {
+              "http": 4,
+              "dns": 24,
+              "crtsh": 4,
+              "rdap": 2
+            }
+          }
+        }
+      },
+      "costs": {
+        "http": 4,
+        "dns": 22,
+        "crtsh": 4,
+        "rdap": 2,
+        "feed": 0
+      }
+    },
+    {
+      "module": "finder",
+      "ran": {
+        "claimed": false,
+        "reason": "No work waiting."
+      },
+      "costs": {
+        "http": 0,
+        "dns": 0,
+        "crtsh": 0,
+        "rdap": 0,
+        "feed": 0
+      }
+    },
+    {
+      "module": "investigator",
+      "ran": true
+    },
+    {
+      "module": "logger",
+      "domain": "q9e99c254b43.top"
+    },
+    {
+      "module": "investigator",
+      "ran": true
+    },
+    {
+      "module": "logger",
+      "domain": "qfaaae17e6eb.top"
+    },
+    {
+      "module": "investigator",
+      "ran": true
+    },
+    {
+      "module": "logger",
+      "domain": "qf8a0603ea19.top"
+    },
+    {
+      "module": "finder",
+      "ran": {
+        "claimed": true,
+        "job_id": "846521f7-ff0a-47d8-9509-65c15cacc204",
+        "job_type": "FIND_RELATED_SITES",
+        "ran": true,
+        "v2": {
+          "seed": "q1c6ceabc708.top",
+          "round": 6,
+          "delivered": 0,
+          "campaign_key": "v2:round:6:q1c6ceabc708.top",
+          "new_candidates": [],
+          "hunt": "campaign:op-40f719dd",
+          "meter": {
+            "limits": {
+              "http": 40,
+              "dns": 40,
+              "crtsh": 4,
+              "rdap": 6
+            },
+            "used": {
+              "http": 0,
+              "dns": 20,
+              "crtsh": 4,
+              "rdap": 0
+            }
+          }
+        }
+      },
+      "costs": {
+        "http": 0,
+        "dns": 20,
+        "crtsh": 4,
+        "rdap": 0,
+        "feed": 0
+      }
+    },
+    {
+      "module": "finder",
+      "ran": {
+        "claimed": false,
+        "reason": "No work waiting."
+      },
+      "costs": {
+        "http": 0,
+        "dns": 0,
+        "crtsh": 0,
+        "rdap": 0,
+        "feed": 0
+      }
+    },
+    {
+      "module": "investigator",
+      "ran": true
+    },
+    {
+      "module": "investigator",
+      "ran": false
+    },
+    {
+      "module": "finder",
+      "ran": {
+        "claimed": true,
+        "job_id": "22577ca6-5b4f-46e7-bdc9-39ee4c033b58",
+        "job_type": "FIND_RELATED_SITES",
+        "ran": true,
+        "v2": {
+          "seed": "q9e99c254b43.top",
+          "round": 7,
+          "delivered": 0,
+          "campaign_key": "v2:round:7:q9e99c254b43.top",
+          "new_candidates": [],
+          "hunt": "investigation:q9e99c254b43.top",
+          "meter": {
+            "limits": {
+              "http": 40,
+              "dns": 40,
+              "crtsh": 4,
+              "rdap": 6
+            },
+            "used": {
+              "http": 0,
+              "dns": 20,
+              "crtsh": 4,
+              "rdap": 0
+            }
+          }
+        }
+      },
+      "costs": {
+        "http": 0,
+        "dns": 20,
+        "crtsh": 4,
+        "rdap": 0,
+        "feed": 0
+      }
+    },
+    {
+      "module": "finder",
+      "ran": {
+        "claimed": true,
+        "job_id": "096f59a0-60f2-4574-8145-ce10f8578095",
+        "job_type": "FIND_RELATED_SITES",
+        "ran": true,
+        "v2": {
+          "seed": "qfaaae17e6eb.top",
+          "round": 8,
+          "delivered": 0,
+          "campaign_key": "v2:round:8:qfaaae17e6eb.top",
+          "new_candidates": [],
+          "hunt": "investigation:qfaaae17e6eb.top",
+          "meter": {
+            "limits": {
+              "http": 40,
+              "dns": 40,
+              "crtsh": 4,
+              "rdap": 6
+            },
+            "used": {
+              "http": 0,
+              "dns": 20,
+              "crtsh": 4,
+              "rdap": 0
+            }
+          }
+        }
+      },
+      "costs": {
+        "http": 0,
+        "dns": 20,
+        "crtsh": 4,
+        "rdap": 0,
+        "feed": 0
+      }
+    },
+    {
+      "module": "finder",
+      "ran": {
+        "claimed": false,
+        "reason": "No work waiting."
+      },
+      "costs": {
+        "http": 0,
+        "dns": 0,
+        "crtsh": 0,
+        "rdap": 0,
+        "feed": 0
+      }
+    },
+    {
+      "module": "investigator",
+      "ran": false
+    },
+    {
+      "module": "finder",
+      "ran": {
+        "claimed": true,
+        "job_id": "452cbe1c-aa1e-4f96-9843-a03ff94fe942",
+        "job_type": "FIND_RELATED_SITES",
+        "ran": true,
+        "v2": {
+          "seed": "qf8a0603ea19.top",
+          "round": 9,
+          "delivered": 0,
+          "campaign_key": "v2:round:9:qf8a0603ea19.top",
+          "new_candidates": [],
+          "hunt": "investigation:qf8a0603ea19.top",
+          "meter": {
+            "limits": {
+              "http": 40,
+              "dns": 40,
+              "crtsh": 4,
+              "rdap": 6
+            },
+            "used": {
+              "http": 0,
+              "dns": 20,
+              "crtsh": 4,
+              "rdap": 0
+            }
+          }
+        }
+      },
+      "costs": {
+        "http": 0,
+        "dns": 20,
+        "crtsh": 4,
+        "rdap": 0,
+        "feed": 0
+      }
+    },
+    {
+      "module": "finder",
+      "ran": {
+        "claimed": true,
+        "job_id": "99724003-335e-41bc-99cf-6937a25a3317",
+        "job_type": "FIND_RELATED_SITES",
+        "ran": true,
+        "v2": {
+          "seed": "q9b97701443a.top",
+          "round": 10,
+          "delivered": 0,
+          "campaign_key": "v2:round:10:q9b97701443a.top",
+          "new_candidates": [],
+          "hunt": "campaign:q9b97701443a.top",
+          "meter": {
+            "limits": {
+              "http": 40,
+              "dns": 40,
+              "crtsh": 4,
+              "rdap": 6
+            },
+            "used": {
+              "http": 0,
+              "dns": 20,
+              "crtsh": 4,
+              "rdap": 0
+            }
+          }
+        }
+      },
+      "costs": {
+        "http": 0,
+        "dns": 20,
+        "crtsh": 4,
+        "rdap": 0,
+        "feed": 0
+      }
+    },
+    {
+      "module": "finder",
+      "ran": {
+        "claimed": false,
+        "reason": "No work waiting."
+      },
+      "costs": {
+        "http": 0,
+        "dns": 0,
+        "crtsh": 0,
+        "rdap": 0,
+        "feed": 0
+      }
+    },
+    {
+      "module": "investigator",
+      "ran": false
+    },
+    {
+      "module": "finder",
+      "ran": {
+        "claimed": false,
+        "reason": "No work waiting."
+      },
+      "costs": {
+        "http": 0,
+        "dns": 0,
+        "crtsh": 0,
+        "rdap": 0,
+        "feed": 0
+      }
+    },
+    {
+      "module": "investigator",
+      "ran": false
+    },
+    {
+      "module": "finder",
+      "ran": {
+        "claimed": true,
+        "job_id": "c61b30b1-81ca-4e79-be39-d20c76c64be8",
+        "job_type": "FIND_RELATED_SITES",
+        "ran": true,
+        "v2": {
+          "seed": "qf8a0603ea19.top",
+          "round": 11,
+          "delivered": 0,
+          "campaign_key": "v2:round:11:qf8a0603ea19.top",
+          "new_candidates": [],
+          "hunt": "campaign:op-d9e1e082",
+          "meter": {
+            "limits": {
+              "http": 40,
+              "dns": 40,
+              "crtsh": 4,
+              "rdap": 6
+            },
+            "used": {
+              "http": 0,
+              "dns": 20,
+              "crtsh": 4,
+              "rdap": 0
+            }
+          }
+        }
+      },
+      "costs": {
+        "http": 0,
+        "dns": 20,
+        "crtsh": 4,
+        "rdap": 0,
+        "feed": 0,
+        "page_search": 1
+      }
+    },
+    {
+      "module": "finder",
+      "ran": {
+        "claimed": false,
+        "reason": "No work waiting."
+      },
+      "costs": {
+        "http": 0,
+        "dns": 0,
+        "crtsh": 0,
+        "rdap": 0,
+        "feed": 0
+      }
+    },
+    {
+      "module": "investigator",
+      "ran": false
+    },
+    {
+      "module": "finder",
+      "ran": {
+        "claimed": true,
+        "job_id": "c4354098-be4b-4b5c-986a-860f5c2e7fb9",
+        "job_type": "FIND_RELATED_SITES",
+        "ran": true,
+        "v2": {
+          "seed": "qfaaae17e6eb.top",
+          "round": 12,
+          "delivered": 0,
+          "campaign_key": "v2:round:12:qfaaae17e6eb.top",
+          "new_candidates": [],
+          "hunt": "campaign:op-ff6b878e",
+          "meter": {
+            "limits": {
+              "http": 40,
+              "dns": 40,
+              "crtsh": 4,
+              "rdap": 6
+            },
+            "used": {
+              "http": 0,
+              "dns": 20,
+              "crtsh": 4,
+              "rdap": 0
+            }
+          }
+        }
+      },
+      "costs": {
+        "http": 0,
+        "dns": 20,
+        "crtsh": 4,
+        "rdap": 0,
+        "feed": 0
+      }
+    },
+    {
+      "module": "finder",
+      "ran": {
+        "claimed": false,
+        "reason": "No work waiting."
+      },
+      "costs": {
+        "http": 0,
+        "dns": 0,
+        "crtsh": 0,
+        "rdap": 0,
+        "feed": 0
+      }
+    },
+    {
+      "module": "investigator",
+      "ran": false
+    },
+    {
+      "module": "finder",
+      "ran": {
+        "claimed": true,
+        "job_id": "a437e235-38e2-4050-8dc9-2f36a11d3aba",
+        "job_type": "FIND_RELATED_SITES",
+        "ran": true,
+        "v2": {
+          "seed": "qf8a0603ea19.top",
+          "round": 13,
+          "delivered": 0,
+          "campaign_key": "v2:round:13:qf8a0603ea19.top",
+          "new_candidates": [],
+          "hunt": "campaign:op-d9e1e082",
+          "meter": {
+            "limits": {
+              "http": 40,
+              "dns": 40,
+              "crtsh": 4,
+              "rdap": 6
+            },
+            "used": {
+              "http": 0,
+              "dns": 20,
+              "crtsh": 4,
+              "rdap": 0
+            }
+          }
+        }
+      },
+      "costs": {
+        "http": 0,
+        "dns": 20,
+        "crtsh": 4,
+        "rdap": 0,
+        "feed": 0
+      }
+    },
+    {
+      "module": "finder",
+      "ran": {
+        "claimed": true,
+        "job_id": "2532258b-4a89-43b7-8aed-be63b96f4343",
+        "job_type": "FIND_RELATED_SITES",
+        "ran": true,
+        "v2": {
+          "seed": "q9e99c254b43.top",
+          "round": 14,
+          "delivered": 0,
+          "campaign_key": "v2:round:14:q9e99c254b43.top",
+          "new_candidates": [],
+          "hunt": "campaign:op-3da39f0e",
+          "meter": {
+            "limits": {
+              "http": 40,
+              "dns": 40,
+              "crtsh": 4,
+              "rdap": 6
+            },
+            "used": {
+              "http": 0,
+              "dns": 20,
+              "crtsh": 4,
+              "rdap": 0
+            }
+          }
+        }
+      },
+      "costs": {
+        "http": 0,
+        "dns": 20,
+        "crtsh": 4,
+        "rdap": 0,
+        "feed": 0
+      }
+    },
+    {
+      "module": "finder",
+      "ran": {
+        "claimed": false,
+        "reason": "No work waiting."
+      },
+      "costs": {
+        "http": 0,
+        "dns": 0,
+        "crtsh": 0,
+        "rdap": 0,
+        "feed": 0
+      }
+    },
+    {
+      "module": "investigator",
+      "ran": false
+    },
+    {
+      "module": "finder",
+      "ran": {
+        "claimed": true,
+        "job_id": "f60ef210-6a1f-4039-8c5b-d8efd174120a",
+        "job_type": "FIND_RELATED_SITES",
+        "ran": true,
+        "v2": {
+          "seed": "qfaaae17e6eb.top",
+          "round": 15,
+          "delivered": 0,
+          "campaign_key": "v2:round:15:qfaaae17e6eb.top",
+          "new_candidates": [],
+          "hunt": "campaign:op-ff6b878e",
+          "meter": {
+            "limits": {
+              "http": 40,
+              "dns": 40,
+              "crtsh": 4,
+              "rdap": 6
+            },
+            "used": {
+              "http": 0,
+              "dns": 20,
+              "crtsh": 4,
+              "rdap": 0
+            }
+          }
+        }
+      },
+      "costs": {
+        "http": 0,
+        "dns": 20,
+        "crtsh": 4,
+        "rdap": 0,
+        "feed": 0
+      }
+    },
+    {
+      "module": "finder",
+      "ran": {
+        "claimed": true,
+        "job_id": "8b6335e8-e114-4427-b637-7da967efc236",
+        "job_type": "FIND_RELATED_SITES",
+        "ran": true,
+        "v2": {
+          "seed": "q9e99c254b43.top",
+          "round": 16,
+          "delivered": 0,
+          "campaign_key": "v2:round:16:q9e99c254b43.top",
+          "new_candidates": [],
+          "hunt": "campaign:q9e99c254b43.top",
+          "meter": {
+            "limits": {
+              "http": 40,
+              "dns": 40,
+              "crtsh": 4,
+              "rdap": 6
+            },
+            "used": {
+              "http": 0,
+              "dns": 20,
+              "crtsh": 4,
+              "rdap": 0
+            }
+          }
+        }
+      },
+      "costs": {
+        "http": 0,
+        "dns": 20,
+        "crtsh": 4,
+        "rdap": 0,
+        "feed": 0
+      }
+    },
+    {
+      "module": "finder",
+      "ran": {
+        "claimed": false,
+        "reason": "No work waiting."
+      },
+      "costs": {
+        "http": 0,
+        "dns": 0,
+        "crtsh": 0,
+        "rdap": 0,
+        "feed": 0
+      }
+    },
+    {
+      "module": "investigator",
+      "ran": false
+    },
+    {
+      "module": "finder",
+      "ran": {
+        "claimed": true,
+        "job_id": "999ce58e-d4b7-4275-992d-87effa65f977",
+        "job_type": "FIND_RELATED_SITES",
+        "ran": true,
+        "v2": {
+          "seed": "q9e99c254b43.top",
+          "round": 17,
+          "delivered": 0,
+          "campaign_key": "v2:round:17:q9e99c254b43.top",
+          "new_candidates": [],
+          "hunt": "campaign:op-3da39f0e",
+          "meter": {
+            "limits": {
+              "http": 40,
+              "dns": 40,
+              "crtsh": 4,
+              "rdap": 6
+            },
+            "used": {
+              "http": 0,
+              "dns": 20,
+              "crtsh": 4,
+              "rdap": 0
+            }
+          }
+        }
+      },
+      "costs": {
+        "http": 0,
+        "dns": 20,
+        "crtsh": 4,
+        "rdap": 0,
+        "feed": 0
+      }
+    },
+    {
+      "module": "finder",
+      "ran": {
+        "claimed": false,
+        "reason": "No work waiting."
+      },
+      "costs": {
+        "http": 0,
+        "dns": 0,
+        "crtsh": 0,
+        "rdap": 0,
+        "feed": 0
+      }
+    },
+    {
+      "module": "investigator",
+      "ran": false
+    },
+    {
+      "module": "finder",
+      "ran": {
+        "claimed": true,
+        "job_id": "a96ec8e0-8b85-490e-ba30-8be95a183e80",
+        "job_type": "FIND_RELATED_SITES",
+        "ran": true,
+        "v2": {
+          "seed": "qfaaae17e6eb.top",
+          "round": 18,
+          "delivered": 0,
+          "campaign_key": "v2:round:18:qfaaae17e6eb.top",
+          "new_candidates": [],
+          "hunt": "campaign:qfaaae17e6eb.top",
+          "meter": {
+            "limits": {
+              "http": 40,
+              "dns": 40,
+              "crtsh": 4,
+              "rdap": 6
+            },
+            "used": {
+              "http": 0,
+              "dns": 20,
+              "crtsh": 4,
+              "rdap": 0
+            }
+          }
+        }
+      },
+      "costs": {
+        "http": 0,
+        "dns": 20,
+        "crtsh": 4,
+        "rdap": 0,
+        "feed": 0
+      }
+    },
+    {
+      "module": "finder",
+      "ran": {
+        "claimed": false,
+        "reason": "No work waiting."
+      },
+      "costs": {
+        "http": 0,
+        "dns": 0,
+        "crtsh": 0,
+        "rdap": 0,
+        "feed": 0
+      }
+    }
+  ],
+  "requests": [
+    {
+      "module": "investigator",
+      "url": "dns://q1c6ceabc708.top/A"
+    },
+    {
+      "module": "investigator",
+      "url": "dns://q1c6ceabc708.top/AAAA"
+    },
+    {
+      "module": "investigator",
+      "url": "dns://q1c6ceabc708.top/NS"
+    },
+    {
+      "module": "investigator",
+      "url": "dns://q1c6ceabc708.top/MX"
+    },
+    {
+      "module": "investigator",
+      "url": "dns://q1c6ceabc708.top/TXT"
+    },
+    {
+      "module": "investigator",
+      "url": "dns://q1c6ceabc708.top/CNAME"
+    },
+    {
+      "module": "investigator",
+      "url": "tls://q1c6ceabc708.top:443"
+    },
+    {
+      "module": "investigator",
+      "url": "https://rdap.org/domain/q1c6ceabc708.top"
+    },
+    {
+      "module": "investigator",
+      "url": "https://crt.sh/?q=%25.q1c6ceabc708.top&output=json"
+    },
+    {
+      "module": "investigator",
+      "url": "https://rdap.org/ip/104.21.12.34"
+    },
+    {
+      "module": "investigator",
+      "url": "https://q1c6ceabc708.top"
+    },
+    {
+      "module": "investigator",
+      "url": "https://q1c6ceabc708.top/register"
+    },
+    {
+      "module": "investigator",
+      "url": "https://q1c6ceabc708.top/login"
+    },
+    {
+      "module": "investigator",
+      "url": "https://q1c6ceabc708.top/invest"
+    },
+    {
+      "module": "investigator",
+      "url": "https://q1c6ceabc708.top/trade"
+    },
+    {
+      "module": "investigator",
+      "url": "https://q1c6ceabc708.top/deposit"
+    },
+    {
+      "module": "logger",
+      "url": "https://q1c6ceabc708.top/deposit"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=%25defi%25&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=%25claim%25&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=%25airdrop%25&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=%25exchange%25&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=%25bit%25&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=%25arbitrage%25&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=%25yield%25&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=%25fx%25&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=%25crypto%25&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=%25profit%25&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=%25coin%25&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=%25h5%25&output=json"
+    },
+    {
+      "module": "hunter",
+      "url": "dns://q1c6ceabc708.top/A"
+    },
+    {
+      "module": "hunter",
+      "url": "https://crt.sh/?q=q1c6ceabc708.top&output=json"
+    },
+    {
+      "module": "hunter",
+      "url": "dns://q1c6ceabc708.top/AAAA"
+    },
+    {
+      "module": "hunter",
+      "url": "dns://q1c6ceabc708.top/NS"
+    },
+    {
+      "module": "hunter",
+      "url": "dns://q1c6ceabc708.top/MX"
+    },
+    {
+      "module": "hunter",
+      "url": "dns://q1c6ceabc708.top/TXT"
+    },
+    {
+      "module": "hunter",
+      "url": "dns://q1c6ceabc708.top/CNAME"
+    },
+    {
+      "module": "hunter",
+      "url": "https://crt.sh/?q=%25.q1c6ceabc708.top&output=json"
+    },
+    {
+      "module": "hunter",
+      "url": "https://urlscan.io/api/v1/search/?q=page.domain%3Aq1c6ceabc708.top%20OR%20task.domain%3Aq1c6ceabc708.top&size=10"
+    },
+    {
+      "module": "hunter",
+      "url": "https://api.hackertarget.com/findshareddns/?q=ns1.public-cdn.example"
+    },
+    {
+      "module": "hunter",
+      "url": "https://rdap.org/domain/q1c6ceabc708.top"
+    },
+    {
+      "module": "hunter",
+      "url": "https://stat.ripe.net/data/prefix-overview/data.json?resource=104.21.12.34&sourceapp=operation-hunter"
+    },
+    {
+      "module": "hunter",
+      "url": "https://stat.ripe.net/data/maxmind-geo-lite/data.json?resource=104.21.12.34&sourceapp=operation-hunter"
+    },
+    {
+      "module": "hunter",
+      "url": "https://eth.blockscout.com/api/v2/addresses/0x1111111111111111111111111111111111111111"
+    },
+    {
+      "module": "hunter",
+      "url": "https://arbitrum.blockscout.com/api/v2/addresses/0x1111111111111111111111111111111111111111"
+    },
+    {
+      "module": "hunter",
+      "url": "https://base.blockscout.com/api/v2/addresses/0x1111111111111111111111111111111111111111"
+    },
+    {
+      "module": "hunter",
+      "url": "https://optimism.blockscout.com/api/v2/addresses/0x1111111111111111111111111111111111111111"
+    },
+    {
+      "module": "hunter",
+      "url": "https://polygon.blockscout.com/api/v2/addresses/0x1111111111111111111111111111111111111111"
+    },
+    {
+      "module": "hunter",
+      "url": "https://gnosis.blockscout.com/api/v2/addresses/0x1111111111111111111111111111111111111111"
+    },
+    {
+      "module": "hunter",
+      "url": "https://eth.blockscout.com/api/v2/addresses/0xbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+    },
+    {
+      "module": "hunter",
+      "url": "https://arbitrum.blockscout.com/api/v2/addresses/0xbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+    },
+    {
+      "module": "hunter",
+      "url": "https://base.blockscout.com/api/v2/addresses/0xbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+    },
+    {
+      "module": "hunter",
+      "url": "https://optimism.blockscout.com/api/v2/addresses/0xbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+    },
+    {
+      "module": "hunter",
+      "url": "https://polygon.blockscout.com/api/v2/addresses/0xbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+    },
+    {
+      "module": "hunter",
+      "url": "https://gnosis.blockscout.com/api/v2/addresses/0xbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+    },
+    {
+      "module": "finder",
+      "url": "https://urlscan.io/api/v1/search/?q=page.title%3A%22Crypto+Recovery%22&size=100"
+    },
+    {
+      "module": "finder",
+      "url": "https://urlscan.io/api/v1/search/?q=page.title%3A%22Wealth+Management%22&size=100"
+    },
+    {
+      "module": "finder",
+      "url": "https://urlscan.io/api/v1/search/?q=page.title%3A%22Liquidity+Mining%22&size=100"
+    },
+    {
+      "module": "finder",
+      "url": "https://urlscan.io/api/v1/search/?q=page.title%3A%22Crypto+Exchange%22&size=100"
+    },
+    {
+      "module": "finder",
+      "url": "https://urlscan.io/api/v1/search/?q=page.title%3A%22Arbitrage%22&size=100"
+    },
+    {
+      "module": "finder",
+      "url": "https://urlscan.io/api/v1/search/?q=page.title%3A%22USDT+Mining%22&size=100"
+    },
+    {
+      "module": "finder",
+      "url": "https://urlscan.io/api/v1/search/?q=page.title%3A%22Asset+Recovery%22&size=100"
+    },
+    {
+      "module": "finder",
+      "url": "https://urlscan.io/api/v1/search/?q=page.title%3A%22Mining+Pool%22&size=100"
+    },
+    {
+      "module": "finder",
+      "url": "https://urlscan.io/api/v1/search/?q=page.title%3A%22AI+Trading%22&size=100"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=%25q1c6ceabc%25&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q1c6ceabc1.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q1c6ceabc2.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q1c6ceabc3.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q1c6ceabc5.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q1c6ceabc8.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q1c6ceabc24.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q1c6ceabc88.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q1c6ceabc-app.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q1c6ceabc-pro.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q1c6ceabc-vip.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q1c6ceabc-global.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://myq1c6ceabc.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://goq1c6ceabc.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q1c6ceabc.com"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q1c6ceabc.net"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q1c6ceabc.xyz"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q1c6ceabc.vip"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q1c6ceabc.app"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q1c6ceabc.cc"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q1c6ceabc.live"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=q1c6ceabc708.top&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=q1c6ceabc708.top&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=%25q1c6ceabc%25&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q1c6ceabc708.top"
+    },
+    {
+      "module": "finder",
+      "url": "https://q1c6ceabc708.top/"
+    },
+    {
+      "module": "finder",
+      "url": "https://rdap.org/domain/q1c6ceabc708.top"
+    },
+    {
+      "module": "finder",
+      "url": "https://q1c6ceabc708.top/favicon.ico"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q62f7883bf35.top"
+    },
+    {
+      "module": "finder",
+      "url": "https://q62f7883bf35.top/"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q9b97701443a.top"
+    },
+    {
+      "module": "finder",
+      "url": "https://q9b97701443a.top/"
+    },
+    {
+      "module": "finder",
+      "url": "https://rdap.org/domain/q9b97701443a.top"
+    },
+    {
+      "module": "finder",
+      "url": "https://q9b97701443a.top/favicon.ico"
+    },
+    {
+      "module": "investigator",
+      "url": "dns://q9b97701443a.top/A"
+    },
+    {
+      "module": "investigator",
+      "url": "dns://q9b97701443a.top/AAAA"
+    },
+    {
+      "module": "investigator",
+      "url": "dns://q9b97701443a.top/NS"
+    },
+    {
+      "module": "investigator",
+      "url": "dns://q9b97701443a.top/MX"
+    },
+    {
+      "module": "investigator",
+      "url": "dns://q9b97701443a.top/TXT"
+    },
+    {
+      "module": "investigator",
+      "url": "dns://q9b97701443a.top/CNAME"
+    },
+    {
+      "module": "investigator",
+      "url": "tls://q9b97701443a.top:443"
+    },
+    {
+      "module": "investigator",
+      "url": "https://rdap.org/domain/q9b97701443a.top"
+    },
+    {
+      "module": "investigator",
+      "url": "https://crt.sh/?q=%25.q9b97701443a.top&output=json"
+    },
+    {
+      "module": "investigator",
+      "url": "https://rdap.org/ip/104.21.12.34"
+    },
+    {
+      "module": "investigator",
+      "url": "https://q9b97701443a.top"
+    },
+    {
+      "module": "investigator",
+      "url": "https://q9b97701443a.top/register"
+    },
+    {
+      "module": "investigator",
+      "url": "https://q9b97701443a.top/login"
+    },
+    {
+      "module": "investigator",
+      "url": "https://q9b97701443a.top/invest"
+    },
+    {
+      "module": "investigator",
+      "url": "https://q9b97701443a.top/trade"
+    },
+    {
+      "module": "investigator",
+      "url": "https://q9b97701443a.top/deposit"
+    },
+    {
+      "module": "investigator",
+      "url": "https://q9b97701443a.top/"
+    },
+    {
+      "module": "investigator",
+      "url": "https://q9b97701443a.top/register"
+    },
+    {
+      "module": "investigator",
+      "url": "https://q9b97701443a.top/login"
+    },
+    {
+      "module": "investigator",
+      "url": "https://q9b97701443a.top/invest"
+    },
+    {
+      "module": "investigator",
+      "url": "https://q9b97701443a.top/trade"
+    },
+    {
+      "module": "investigator",
+      "url": "https://q9b97701443a.top/deposit"
+    },
+    {
+      "module": "logger",
+      "url": "https://q9b97701443a.top/deposit"
+    },
+    {
+      "module": "hunter",
+      "url": "https://rdap.org/domain/q9b97701443a.top"
+    },
+    {
+      "module": "hunter",
+      "url": "https://crt.sh/?q=q9b97701443a.top&output=json"
+    },
+    {
+      "module": "hunter",
+      "url": "https://urlscan.io/api/v1/search/?q=page.domain%3Aq9b97701443a.top%20OR%20task.domain%3Aq9b97701443a.top&size=10"
+    },
+    {
+      "module": "hunter",
+      "url": "https://crt.sh/?q=%25.q9b97701443a.top&output=json"
+    },
+    {
+      "module": "hunter",
+      "url": "dns://q9b97701443a.top/A"
+    },
+    {
+      "module": "hunter",
+      "url": "dns://q9b97701443a.top/AAAA"
+    },
+    {
+      "module": "hunter",
+      "url": "dns://q9b97701443a.top/NS"
+    },
+    {
+      "module": "hunter",
+      "url": "dns://q9b97701443a.top/MX"
+    },
+    {
+      "module": "hunter",
+      "url": "dns://q9b97701443a.top/TXT"
+    },
+    {
+      "module": "hunter",
+      "url": "dns://q9b97701443a.top/CNAME"
+    },
+    {
+      "module": "finder",
+      "url": "https://urlscan.io/api/v1/search/?q=page.title%3A%22Cloud+Mining%22&size=100"
+    },
+    {
+      "module": "finder",
+      "url": "https://urlscan.io/api/v1/search/?q=page.title%3A%22Buy+%26+Sell+Crypto%22&size=100"
+    },
+    {
+      "module": "finder",
+      "url": "https://urlscan.io/api/v1/search/?q=page.title%3A%22quorra+investment+%E2%80%A2+earn+daily+profit%22&size=100"
+    },
+    {
+      "module": "finder",
+      "url": "https://urlscan.io/api/v1/search/?q=page.title%3A%22Quant+Trading%22&size=100"
+    },
+    {
+      "module": "finder",
+      "url": "https://urlscan.io/api/v1/search/?q=page.title%3A%22Earn+Daily%22&size=100"
+    },
+    {
+      "module": "finder",
+      "url": "https://urlscan.io/api/v1/search/?q=page.title%3A%22Investment+%E2%80%A2+Earn+Daily+Profit%22&size=100"
+    },
+    {
+      "module": "finder",
+      "url": "https://urlscan.io/api/v1/search/?q=page.title%3A%22Invest+Platform%22&size=100"
+    },
+    {
+      "module": "finder",
+      "url": "https://urlscan.io/api/v1/search/?q=page.title%3A%22Staking+Rewards%22&size=100"
+    },
+    {
+      "module": "finder",
+      "url": "https://urlscan.io/api/v1/search/?q=page.title%3A%22Daily+Profit%22&size=100"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=%25q9b97701443a%25&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=%25q62f7883bf%25&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=%25trade%25&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=%25yield%25&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "dns://binance-kyc.io"
+    },
+    {
+      "module": "finder",
+      "url": "dns://binance-kyc.app"
+    },
+    {
+      "module": "finder",
+      "url": "dns://binance-kyc.info"
+    },
+    {
+      "module": "finder",
+      "url": "dns://binance-kyc.pro"
+    },
+    {
+      "module": "finder",
+      "url": "dns://binance-unlock.com"
+    },
+    {
+      "module": "finder",
+      "url": "dns://binance-unlock.net"
+    },
+    {
+      "module": "finder",
+      "url": "dns://binance-unlock.org"
+    },
+    {
+      "module": "finder",
+      "url": "dns://binance-unlock.xyz"
+    },
+    {
+      "module": "finder",
+      "url": "dns://binance-unlock.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://binance-unlock.live"
+    },
+    {
+      "module": "finder",
+      "url": "dns://binance-unlock.cc"
+    },
+    {
+      "module": "finder",
+      "url": "dns://binance-unlock.vip"
+    },
+    {
+      "module": "finder",
+      "url": "dns://binance-unlock.io"
+    },
+    {
+      "module": "finder",
+      "url": "dns://binance-unlock.app"
+    },
+    {
+      "module": "finder",
+      "url": "dns://binance-unlock.info"
+    },
+    {
+      "module": "finder",
+      "url": "dns://binance-unlock.pro"
+    },
+    {
+      "module": "finder",
+      "url": "dns://binance-rewards.com"
+    },
+    {
+      "module": "finder",
+      "url": "dns://binance-rewards.net"
+    },
+    {
+      "module": "finder",
+      "url": "dns://binance-rewards.org"
+    },
+    {
+      "module": "finder",
+      "url": "dns://binance-rewards.xyz"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=q9b97701443a.top&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=%25q9b97701443a%25&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q9b97701443a1.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q9b97701443a2.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q9b97701443a3.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q9b97701443a5.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q9b97701443a8.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q9b97701443a24.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q9b97701443a88.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q9b97701443a-app.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q9b97701443a-pro.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q9b97701443a-vip.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q9b97701443a-global.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://myq9b97701443a.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://goq9b97701443a.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q9b97701443a.com"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q9b97701443a.net"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q9b97701443a.xyz"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q9b97701443a.vip"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q9b97701443a.app"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q9b97701443a.cc"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q9b97701443a.live"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=%25vip%25&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=%25finance%25&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qead9d25afd3.top"
+    },
+    {
+      "module": "finder",
+      "url": "https://qead9d25afd3.top/"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qfaaae17e6eb.top"
+    },
+    {
+      "module": "finder",
+      "url": "https://qfaaae17e6eb.top/"
+    },
+    {
+      "module": "finder",
+      "url": "https://rdap.org/domain/qfaaae17e6eb.top"
+    },
+    {
+      "module": "finder",
+      "url": "https://qfaaae17e6eb.top/favicon.ico"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=qfaaae17e6eb.top&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=q9b97701443a.top&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=q9b97701443a.top&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=%25q9b97701443a%25&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q9b97701443a1.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q9b97701443a2.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q9b97701443a3.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q9b97701443a4.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q9b97701443a5.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q9b97701443a-app.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q9b97701443a-pro.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q9b97701443a-vip.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q9b97701443a-global.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q9b97701443a-h5.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q9b97701443a-plus.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q9b97701443ax.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q9b97701443aex.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q9b97701443afx.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q9b97701443apro.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q9b97701443aapp.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q9b97701443a.com"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q9b97701443a.net"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q9b97701443a.vip"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q9b97701443a.xyz"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q9e99c254b43.top"
+    },
+    {
+      "module": "finder",
+      "url": "https://q9e99c254b43.top/"
+    },
+    {
+      "module": "finder",
+      "url": "https://rdap.org/domain/q9e99c254b43.top"
+    },
+    {
+      "module": "finder",
+      "url": "https://q9e99c254b43.top/favicon.ico"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qf8a0603ea19.top"
+    },
+    {
+      "module": "finder",
+      "url": "https://qf8a0603ea19.top/"
+    },
+    {
+      "module": "finder",
+      "url": "https://rdap.org/domain/qf8a0603ea19.top"
+    },
+    {
+      "module": "finder",
+      "url": "https://qf8a0603ea19.top/favicon.ico"
+    },
+    {
+      "module": "investigator",
+      "url": "dns://q9e99c254b43.top/A"
+    },
+    {
+      "module": "investigator",
+      "url": "dns://q9e99c254b43.top/AAAA"
+    },
+    {
+      "module": "investigator",
+      "url": "dns://q9e99c254b43.top/NS"
+    },
+    {
+      "module": "investigator",
+      "url": "dns://q9e99c254b43.top/MX"
+    },
+    {
+      "module": "investigator",
+      "url": "dns://q9e99c254b43.top/TXT"
+    },
+    {
+      "module": "investigator",
+      "url": "dns://q9e99c254b43.top/CNAME"
+    },
+    {
+      "module": "investigator",
+      "url": "tls://q9e99c254b43.top:443"
+    },
+    {
+      "module": "investigator",
+      "url": "https://rdap.org/domain/q9e99c254b43.top"
+    },
+    {
+      "module": "investigator",
+      "url": "https://crt.sh/?q=%25.q9e99c254b43.top&output=json"
+    },
+    {
+      "module": "investigator",
+      "url": "https://rdap.org/ip/104.21.12.34"
+    },
+    {
+      "module": "investigator",
+      "url": "https://q9e99c254b43.top"
+    },
+    {
+      "module": "investigator",
+      "url": "https://q9e99c254b43.top/register"
+    },
+    {
+      "module": "investigator",
+      "url": "https://q9e99c254b43.top/login"
+    },
+    {
+      "module": "investigator",
+      "url": "https://q9e99c254b43.top/invest"
+    },
+    {
+      "module": "investigator",
+      "url": "https://q9e99c254b43.top/trade"
+    },
+    {
+      "module": "investigator",
+      "url": "https://q9e99c254b43.top/deposit"
+    },
+    {
+      "module": "investigator",
+      "url": "https://q9e99c254b43.top/"
+    },
+    {
+      "module": "investigator",
+      "url": "https://q9e99c254b43.top/register"
+    },
+    {
+      "module": "investigator",
+      "url": "https://q9e99c254b43.top/login"
+    },
+    {
+      "module": "investigator",
+      "url": "https://q9e99c254b43.top/invest"
+    },
+    {
+      "module": "investigator",
+      "url": "https://q9e99c254b43.top/trade"
+    },
+    {
+      "module": "investigator",
+      "url": "https://q9e99c254b43.top/deposit"
+    },
+    {
+      "module": "logger",
+      "url": "https://q9e99c254b43.top/deposit"
+    },
+    {
+      "module": "investigator",
+      "url": "dns://qfaaae17e6eb.top/A"
+    },
+    {
+      "module": "investigator",
+      "url": "dns://qfaaae17e6eb.top/AAAA"
+    },
+    {
+      "module": "investigator",
+      "url": "dns://qfaaae17e6eb.top/NS"
+    },
+    {
+      "module": "investigator",
+      "url": "dns://qfaaae17e6eb.top/MX"
+    },
+    {
+      "module": "investigator",
+      "url": "dns://qfaaae17e6eb.top/TXT"
+    },
+    {
+      "module": "investigator",
+      "url": "dns://qfaaae17e6eb.top/CNAME"
+    },
+    {
+      "module": "investigator",
+      "url": "tls://qfaaae17e6eb.top:443"
+    },
+    {
+      "module": "investigator",
+      "url": "https://rdap.org/domain/qfaaae17e6eb.top"
+    },
+    {
+      "module": "investigator",
+      "url": "https://crt.sh/?q=%25.qfaaae17e6eb.top&output=json"
+    },
+    {
+      "module": "investigator",
+      "url": "https://rdap.org/ip/104.21.12.34"
+    },
+    {
+      "module": "investigator",
+      "url": "https://qfaaae17e6eb.top"
+    },
+    {
+      "module": "investigator",
+      "url": "https://qfaaae17e6eb.top/register"
+    },
+    {
+      "module": "investigator",
+      "url": "https://qfaaae17e6eb.top/login"
+    },
+    {
+      "module": "investigator",
+      "url": "https://qfaaae17e6eb.top/invest"
+    },
+    {
+      "module": "investigator",
+      "url": "https://qfaaae17e6eb.top/trade"
+    },
+    {
+      "module": "investigator",
+      "url": "https://qfaaae17e6eb.top/deposit"
+    },
+    {
+      "module": "investigator",
+      "url": "https://qfaaae17e6eb.top/"
+    },
+    {
+      "module": "investigator",
+      "url": "https://qfaaae17e6eb.top/register"
+    },
+    {
+      "module": "investigator",
+      "url": "https://qfaaae17e6eb.top/login"
+    },
+    {
+      "module": "investigator",
+      "url": "https://qfaaae17e6eb.top/invest"
+    },
+    {
+      "module": "investigator",
+      "url": "https://qfaaae17e6eb.top/trade"
+    },
+    {
+      "module": "investigator",
+      "url": "https://qfaaae17e6eb.top/deposit"
+    },
+    {
+      "module": "logger",
+      "url": "https://qfaaae17e6eb.top/deposit"
+    },
+    {
+      "module": "investigator",
+      "url": "dns://qf8a0603ea19.top/A"
+    },
+    {
+      "module": "investigator",
+      "url": "dns://qf8a0603ea19.top/AAAA"
+    },
+    {
+      "module": "investigator",
+      "url": "dns://qf8a0603ea19.top/NS"
+    },
+    {
+      "module": "investigator",
+      "url": "dns://qf8a0603ea19.top/MX"
+    },
+    {
+      "module": "investigator",
+      "url": "dns://qf8a0603ea19.top/TXT"
+    },
+    {
+      "module": "investigator",
+      "url": "dns://qf8a0603ea19.top/CNAME"
+    },
+    {
+      "module": "investigator",
+      "url": "tls://qf8a0603ea19.top:443"
+    },
+    {
+      "module": "investigator",
+      "url": "https://rdap.org/domain/qf8a0603ea19.top"
+    },
+    {
+      "module": "investigator",
+      "url": "https://crt.sh/?q=%25.qf8a0603ea19.top&output=json"
+    },
+    {
+      "module": "investigator",
+      "url": "https://rdap.org/ip/104.21.12.34"
+    },
+    {
+      "module": "investigator",
+      "url": "https://qf8a0603ea19.top"
+    },
+    {
+      "module": "investigator",
+      "url": "https://qf8a0603ea19.top/register"
+    },
+    {
+      "module": "investigator",
+      "url": "https://qf8a0603ea19.top/login"
+    },
+    {
+      "module": "investigator",
+      "url": "https://qf8a0603ea19.top/invest"
+    },
+    {
+      "module": "investigator",
+      "url": "https://qf8a0603ea19.top/trade"
+    },
+    {
+      "module": "investigator",
+      "url": "https://qf8a0603ea19.top/deposit"
+    },
+    {
+      "module": "logger",
+      "url": "https://qf8a0603ea19.top/deposit"
+    },
+    {
+      "module": "logger",
+      "url": "https://qf8a0603ea19.top/assets/app.71f03cfe.js"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=%25qfaaae17e6eb%25&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=q9e99c254b43.top&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=%25qf8a0603ea%25&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=%25q9e99c254b%25&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "dns://binabce.io"
+    },
+    {
+      "module": "finder",
+      "url": "dns://binabce.app"
+    },
+    {
+      "module": "finder",
+      "url": "dns://binabce.info"
+    },
+    {
+      "module": "finder",
+      "url": "dns://binabce.pro"
+    },
+    {
+      "module": "finder",
+      "url": "dns://binace.com"
+    },
+    {
+      "module": "finder",
+      "url": "dns://binace.net"
+    },
+    {
+      "module": "finder",
+      "url": "dns://binace.org"
+    },
+    {
+      "module": "finder",
+      "url": "dns://binace.xyz"
+    },
+    {
+      "module": "finder",
+      "url": "dns://binace.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://binace.live"
+    },
+    {
+      "module": "finder",
+      "url": "dns://binace.cc"
+    },
+    {
+      "module": "finder",
+      "url": "dns://binace.vip"
+    },
+    {
+      "module": "finder",
+      "url": "dns://binace.io"
+    },
+    {
+      "module": "finder",
+      "url": "dns://binace.app"
+    },
+    {
+      "module": "finder",
+      "url": "dns://binace.info"
+    },
+    {
+      "module": "finder",
+      "url": "dns://binace.pro"
+    },
+    {
+      "module": "finder",
+      "url": "dns://binacne.com"
+    },
+    {
+      "module": "finder",
+      "url": "dns://binacne.net"
+    },
+    {
+      "module": "finder",
+      "url": "dns://binacne.org"
+    },
+    {
+      "module": "finder",
+      "url": "dns://binacne.xyz"
+    },
+    {
+      "module": "investigator",
+      "url": "dns://qf8a0603ea19.top/A"
+    },
+    {
+      "module": "investigator",
+      "url": "dns://qf8a0603ea19.top/AAAA"
+    },
+    {
+      "module": "investigator",
+      "url": "dns://qf8a0603ea19.top/NS"
+    },
+    {
+      "module": "investigator",
+      "url": "dns://qf8a0603ea19.top/MX"
+    },
+    {
+      "module": "investigator",
+      "url": "dns://qf8a0603ea19.top/TXT"
+    },
+    {
+      "module": "investigator",
+      "url": "dns://qf8a0603ea19.top/CNAME"
+    },
+    {
+      "module": "investigator",
+      "url": "tls://qf8a0603ea19.top:443"
+    },
+    {
+      "module": "investigator",
+      "url": "https://rdap.org/domain/qf8a0603ea19.top"
+    },
+    {
+      "module": "investigator",
+      "url": "https://crt.sh/?q=%25.qf8a0603ea19.top&output=json"
+    },
+    {
+      "module": "investigator",
+      "url": "https://rdap.org/ip/104.21.12.34"
+    },
+    {
+      "module": "investigator",
+      "url": "https://qf8a0603ea19.top"
+    },
+    {
+      "module": "investigator",
+      "url": "https://qf8a0603ea19.top/register"
+    },
+    {
+      "module": "investigator",
+      "url": "https://qf8a0603ea19.top/login"
+    },
+    {
+      "module": "investigator",
+      "url": "https://qf8a0603ea19.top/invest"
+    },
+    {
+      "module": "investigator",
+      "url": "https://qf8a0603ea19.top/trade"
+    },
+    {
+      "module": "investigator",
+      "url": "https://qf8a0603ea19.top/deposit"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=q9e99c254b43.top&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=%25q9e99c254b%25&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=q9e99c254b43.top&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=%25q9e99c254b%25&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q9e99c254b1.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q9e99c254b2.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q9e99c254b3.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q9e99c254b4.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q9e99c254b5.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q9e99c254b-app.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q9e99c254b-pro.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q9e99c254b-vip.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q9e99c254b-global.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q9e99c254b-h5.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q9e99c254b-plus.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q9e99c254bx.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q9e99c254bex.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q9e99c254bfx.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q9e99c254bpro.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q9e99c254bapp.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q9e99c254b.com"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q9e99c254b.net"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q9e99c254b.vip"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q9e99c254b.xyz"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=qf8a0603ea19.top&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=qfaaae17e6eb.top&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=%25qfaaae17e6eb%25&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=%25qfaaae17e6eb%25&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qfaaae17e6eb1.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qfaaae17e6eb2.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qfaaae17e6eb3.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qfaaae17e6eb4.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qfaaae17e6eb5.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qfaaae17e6eb-app.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qfaaae17e6eb-pro.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qfaaae17e6eb-vip.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qfaaae17e6eb-global.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qfaaae17e6eb-h5.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qfaaae17e6eb-plus.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qfaaae17e6ebx.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qfaaae17e6ebex.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qfaaae17e6ebfx.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qfaaae17e6ebpro.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qfaaae17e6ebapp.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qfaaae17e6eb.com"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qfaaae17e6eb.net"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qfaaae17e6eb.vip"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qfaaae17e6eb.xyz"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=qfaaae17e6eb.top&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=qf8a0603ea19.top&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=%25qf8a0603ea%25&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qf8a0603ea1.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qf8a0603ea2.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qf8a0603ea3.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qf8a0603ea4.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qf8a0603ea5.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qf8a0603ea-app.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qf8a0603ea-pro.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qf8a0603ea-vip.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qf8a0603ea-global.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qf8a0603ea-h5.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qf8a0603ea-plus.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qf8a0603eax.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qf8a0603eaex.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qf8a0603eafx.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qf8a0603eapro.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qf8a0603eaapp.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qf8a0603ea.com"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qf8a0603ea.net"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qf8a0603ea.vip"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qf8a0603ea.xyz"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=%25mining%25&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=%25bit%25&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=%25invest%25&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=%25crypto%25&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=%25trc20%25&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "dns://binqnce.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://binqnce.live"
+    },
+    {
+      "module": "finder",
+      "url": "dns://binqnce.cc"
+    },
+    {
+      "module": "finder",
+      "url": "dns://binqnce.vip"
+    },
+    {
+      "module": "finder",
+      "url": "dns://binqnce.io"
+    },
+    {
+      "module": "finder",
+      "url": "dns://binqnce.app"
+    },
+    {
+      "module": "finder",
+      "url": "dns://binqnce.info"
+    },
+    {
+      "module": "finder",
+      "url": "dns://binqnce.pro"
+    },
+    {
+      "module": "finder",
+      "url": "dns://binsnce.com"
+    },
+    {
+      "module": "finder",
+      "url": "dns://binsnce.net"
+    },
+    {
+      "module": "finder",
+      "url": "dns://binsnce.org"
+    },
+    {
+      "module": "finder",
+      "url": "dns://binsnce.xyz"
+    },
+    {
+      "module": "finder",
+      "url": "dns://binsnce.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://binsnce.live"
+    },
+    {
+      "module": "finder",
+      "url": "dns://binsnce.cc"
+    },
+    {
+      "module": "finder",
+      "url": "dns://binsnce.vip"
+    },
+    {
+      "module": "finder",
+      "url": "dns://binsnce.io"
+    },
+    {
+      "module": "finder",
+      "url": "dns://binsnce.app"
+    },
+    {
+      "module": "finder",
+      "url": "dns://binsnce.info"
+    },
+    {
+      "module": "finder",
+      "url": "dns://binsnce.pro"
+    },
+    {
+      "module": "finder",
+      "url": "https://urlscan.io/api/v1/search/?q=filename%3A%22app.71f03cfe.js%22&size=100"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=qf8a0603ea19.top&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=%25qf8a0603ea%25&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qf8a0603ea1.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qf8a0603ea2.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qf8a0603ea3.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qf8a0603ea5.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qf8a0603ea8.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qf8a0603ea24.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qf8a0603ea88.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qf8a0603ea-app.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qf8a0603ea-pro.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qf8a0603ea-vip.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qf8a0603ea-global.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://myqf8a0603ea.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://goqf8a0603ea.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qf8a0603ea.com"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qf8a0603ea.net"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qf8a0603ea.xyz"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qf8a0603ea.vip"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qf8a0603ea.app"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qf8a0603ea.cc"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qf8a0603ea.live"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=%25finance%25&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=%25airdrop%25&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qfaaae17e6eb1.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qfaaae17e6eb2.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qfaaae17e6eb3.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qfaaae17e6eb5.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qfaaae17e6eb8.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qfaaae17e6eb24.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qfaaae17e6eb88.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qfaaae17e6eb-app.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qfaaae17e6eb-pro.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qfaaae17e6eb-vip.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qfaaae17e6eb-global.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://myqfaaae17e6eb.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://goqfaaae17e6eb.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qfaaae17e6eb.com"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qfaaae17e6eb.net"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qfaaae17e6eb.xyz"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qfaaae17e6eb.vip"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qfaaae17e6eb.app"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qfaaae17e6eb.cc"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qfaaae17e6eb.live"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=%25yield%25&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=%25quant%25&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=%25fx%25&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=%25h5%25&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=%25crypto%25&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=%25claim%25&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=%25wallet%25&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=%25mining%25&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "dns://coinbase-verify.com"
+    },
+    {
+      "module": "finder",
+      "url": "dns://coinbase-verify.net"
+    },
+    {
+      "module": "finder",
+      "url": "dns://coinbase-verify.org"
+    },
+    {
+      "module": "finder",
+      "url": "dns://coinbase-verify.xyz"
+    },
+    {
+      "module": "finder",
+      "url": "dns://coinbase-verify.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://coinbase-verify.live"
+    },
+    {
+      "module": "finder",
+      "url": "dns://coinbase-verify.cc"
+    },
+    {
+      "module": "finder",
+      "url": "dns://coinbase-verify.vip"
+    },
+    {
+      "module": "finder",
+      "url": "dns://coinbase-verify.io"
+    },
+    {
+      "module": "finder",
+      "url": "dns://coinbase-verify.app"
+    },
+    {
+      "module": "finder",
+      "url": "dns://coinbase-verify.info"
+    },
+    {
+      "module": "finder",
+      "url": "dns://coinbase-verify.pro"
+    },
+    {
+      "module": "finder",
+      "url": "dns://coinbase-secure.com"
+    },
+    {
+      "module": "finder",
+      "url": "dns://coinbase-secure.net"
+    },
+    {
+      "module": "finder",
+      "url": "dns://coinbase-secure.org"
+    },
+    {
+      "module": "finder",
+      "url": "dns://coinbase-secure.xyz"
+    },
+    {
+      "module": "finder",
+      "url": "dns://coinbase-secure.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://coinbase-secure.live"
+    },
+    {
+      "module": "finder",
+      "url": "dns://coinbase-secure.cc"
+    },
+    {
+      "module": "finder",
+      "url": "dns://coinbase-secure.vip"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q9e99c254b1.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q9e99c254b2.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q9e99c254b3.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q9e99c254b5.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q9e99c254b8.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q9e99c254b24.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q9e99c254b88.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q9e99c254b-app.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q9e99c254b-pro.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q9e99c254b-vip.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q9e99c254b-global.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://myq9e99c254b.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://goq9e99c254b.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q9e99c254b.com"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q9e99c254b.net"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q9e99c254b.xyz"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q9e99c254b.vip"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q9e99c254b.app"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q9e99c254b.cc"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q9e99c254b.live"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=%25bit%25&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=%25trc20%25&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=%25yield%25&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=%25swap%25&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=%25capital%25&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=%25stake%25&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=%25fx%25&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=%25h5%25&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "dns://coinbase-sync.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://coinbase-sync.live"
+    },
+    {
+      "module": "finder",
+      "url": "dns://coinbase-sync.cc"
+    },
+    {
+      "module": "finder",
+      "url": "dns://coinbase-sync.vip"
+    },
+    {
+      "module": "finder",
+      "url": "dns://coinbase-sync.io"
+    },
+    {
+      "module": "finder",
+      "url": "dns://coinbase-sync.app"
+    },
+    {
+      "module": "finder",
+      "url": "dns://coinbase-sync.info"
+    },
+    {
+      "module": "finder",
+      "url": "dns://coinbase-sync.pro"
+    },
+    {
+      "module": "finder",
+      "url": "dns://coinbase-validate.com"
+    },
+    {
+      "module": "finder",
+      "url": "dns://coinbase-validate.net"
+    },
+    {
+      "module": "finder",
+      "url": "dns://coinbase-validate.org"
+    },
+    {
+      "module": "finder",
+      "url": "dns://coinbase-validate.xyz"
+    },
+    {
+      "module": "finder",
+      "url": "dns://coinbase-validate.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://coinbase-validate.live"
+    },
+    {
+      "module": "finder",
+      "url": "dns://coinbase-validate.cc"
+    },
+    {
+      "module": "finder",
+      "url": "dns://coinbase-validate.vip"
+    },
+    {
+      "module": "finder",
+      "url": "dns://coinbase-validate.io"
+    },
+    {
+      "module": "finder",
+      "url": "dns://coinbase-validate.app"
+    },
+    {
+      "module": "finder",
+      "url": "dns://coinbase-validate.info"
+    },
+    {
+      "module": "finder",
+      "url": "dns://coinbase-validate.pro"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=%25trc20%25&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=%25yield%25&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=%25bit%25&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=%25earn%25&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "dns://cionbase.com"
+    },
+    {
+      "module": "finder",
+      "url": "dns://cionbase.net"
+    },
+    {
+      "module": "finder",
+      "url": "dns://cionbase.org"
+    },
+    {
+      "module": "finder",
+      "url": "dns://cionbase.xyz"
+    },
+    {
+      "module": "finder",
+      "url": "dns://cionbase.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://cionbase.live"
+    },
+    {
+      "module": "finder",
+      "url": "dns://cionbase.cc"
+    },
+    {
+      "module": "finder",
+      "url": "dns://cionbase.vip"
+    },
+    {
+      "module": "finder",
+      "url": "dns://cionbase.io"
+    },
+    {
+      "module": "finder",
+      "url": "dns://cionbase.app"
+    },
+    {
+      "module": "finder",
+      "url": "dns://cionbase.info"
+    },
+    {
+      "module": "finder",
+      "url": "dns://cionbase.pro"
+    },
+    {
+      "module": "finder",
+      "url": "dns://ckinbase.com"
+    },
+    {
+      "module": "finder",
+      "url": "dns://ckinbase.net"
+    },
+    {
+      "module": "finder",
+      "url": "dns://ckinbase.org"
+    },
+    {
+      "module": "finder",
+      "url": "dns://ckinbase.xyz"
+    },
+    {
+      "module": "finder",
+      "url": "dns://ckinbase.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://ckinbase.live"
+    },
+    {
+      "module": "finder",
+      "url": "dns://ckinbase.cc"
+    },
+    {
+      "module": "finder",
+      "url": "dns://ckinbase.vip"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=%25trade%25&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=%25claim%25&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=%25exchange%25&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=%25fx%25&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "dns://coihbase.io"
+    },
+    {
+      "module": "finder",
+      "url": "dns://coihbase.app"
+    },
+    {
+      "module": "finder",
+      "url": "dns://coihbase.info"
+    },
+    {
+      "module": "finder",
+      "url": "dns://coihbase.pro"
+    },
+    {
+      "module": "finder",
+      "url": "dns://coiinbase.com"
+    },
+    {
+      "module": "finder",
+      "url": "dns://coiinbase.net"
+    },
+    {
+      "module": "finder",
+      "url": "dns://coiinbase.org"
+    },
+    {
+      "module": "finder",
+      "url": "dns://coiinbase.xyz"
+    },
+    {
+      "module": "finder",
+      "url": "dns://coiinbase.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://coiinbase.live"
+    },
+    {
+      "module": "finder",
+      "url": "dns://coiinbase.cc"
+    },
+    {
+      "module": "finder",
+      "url": "dns://coiinbase.vip"
+    },
+    {
+      "module": "finder",
+      "url": "dns://coiinbase.io"
+    },
+    {
+      "module": "finder",
+      "url": "dns://coiinbase.app"
+    },
+    {
+      "module": "finder",
+      "url": "dns://coiinbase.info"
+    },
+    {
+      "module": "finder",
+      "url": "dns://coiinbase.pro"
+    },
+    {
+      "module": "finder",
+      "url": "dns://coijbase.com"
+    },
+    {
+      "module": "finder",
+      "url": "dns://coijbase.net"
+    },
+    {
+      "module": "finder",
+      "url": "dns://coijbase.org"
+    },
+    {
+      "module": "finder",
+      "url": "dns://coijbase.xyz"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=%25yield%25&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=%25finance%25&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=%25defi%25&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=%25arbitrage%25&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "dns://coinbaase.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://coinbaase.live"
+    },
+    {
+      "module": "finder",
+      "url": "dns://coinbaase.cc"
+    },
+    {
+      "module": "finder",
+      "url": "dns://coinbaase.vip"
+    },
+    {
+      "module": "finder",
+      "url": "dns://coinbaase.io"
+    },
+    {
+      "module": "finder",
+      "url": "dns://coinbaase.app"
+    },
+    {
+      "module": "finder",
+      "url": "dns://coinbaase.info"
+    },
+    {
+      "module": "finder",
+      "url": "dns://coinbaase.pro"
+    },
+    {
+      "module": "finder",
+      "url": "dns://coinbade.com"
+    },
+    {
+      "module": "finder",
+      "url": "dns://coinbade.net"
+    },
+    {
+      "module": "finder",
+      "url": "dns://coinbade.org"
+    },
+    {
+      "module": "finder",
+      "url": "dns://coinbade.xyz"
+    },
+    {
+      "module": "finder",
+      "url": "dns://coinbade.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://coinbade.live"
+    },
+    {
+      "module": "finder",
+      "url": "dns://coinbade.cc"
+    },
+    {
+      "module": "finder",
+      "url": "dns://coinbade.vip"
+    },
+    {
+      "module": "finder",
+      "url": "dns://coinbade.io"
+    },
+    {
+      "module": "finder",
+      "url": "dns://coinbade.app"
+    },
+    {
+      "module": "finder",
+      "url": "dns://coinbade.info"
+    },
+    {
+      "module": "finder",
+      "url": "dns://coinbade.pro"
+    }
+  ],
+  "limitations": [
+    "Public/blockchain transports are synthetic.",
+    "Unchanged Logger classifier ran on real rendered DOM; installed extension lifecycle remains a separate environment-limited check.",
+    "This corpus does not certify all operation benchmark scenarios."
+  ]
+}

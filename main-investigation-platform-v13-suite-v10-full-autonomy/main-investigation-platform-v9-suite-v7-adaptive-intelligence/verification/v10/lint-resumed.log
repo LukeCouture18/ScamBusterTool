@@ -1,0 +1,391 @@
+
+/workspace/scratch/0dbe5278a453/v10-active/main-investigation-platform-v9-suite-v7-adaptive-intelligence/app/api/v1/investigations/[id]/report/route.ts
+  10:338  warning  '_ok' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+/workspace/scratch/0dbe5278a453/v10-active/main-investigation-platform-v9-suite-v7-adaptive-intelligence/bench-adaptive/sim.mjs
+  160:20  warning  'tick' is defined but never used  @typescript-eslint/no-unused-vars
+
+/workspace/scratch/0dbe5278a453/v10-active/main-investigation-platform-v9-suite-v7-adaptive-intelligence/bench-director/run-arm.mjs
+   8:15   warning  's' is defined but never used           @typescript-eslint/no-unused-vars
+  12:135  warning  'c' is assigned a value but never used  @typescript-eslint/no-unused-vars
+  33:157  warning  'x' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+/workspace/scratch/0dbe5278a453/v10-active/main-investigation-platform-v9-suite-v7-adaptive-intelligence/components/agent-panel.tsx
+  46:6  warning  React Hook useEffect has a missing dependency: 'view'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+/workspace/scratch/0dbe5278a453/v10-active/main-investigation-platform-v9-suite-v7-adaptive-intelligence/components/campaign-view.tsx
+  256:167  warning  Do not use `window.location.href` to navigate to internal Next.js pages. Use `redirect()` in the render phase, or `useRouter().push()` in Client Components' event handlers instead. See: https://nextjs.org/docs/messages/no-location-assign-relative-destination  @next/next/no-location-assign-relative-destination
+
+/workspace/scratch/0dbe5278a453/v10-active/main-investigation-platform-v9-suite-v7-adaptive-intelligence/components/orchestration-console.tsx
+  4:80  warning  'Clock3' is defined but never used  @typescript-eslint/no-unused-vars
+
+/workspace/scratch/0dbe5278a453/v10-active/main-investigation-platform-v9-suite-v7-adaptive-intelligence/components/suite/kit.tsx
+  29:78  warning  The ref value 'active.current' will likely have changed by the time this effect cleanup function runs. If this ref points to a node rendered by React, copy 'active.current' to a variable inside the effect, and use that variable in the cleanup function  react-hooks/exhaustive-deps
+
+/workspace/scratch/0dbe5278a453/v10-active/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/crypto-wallet-logger-v08/deposit.js
+  15:88   warning  Do not use `location.href` to navigate to internal Next.js pages. Use `redirect()` in the render phase, or `useRouter().push()` in Client Components' event handlers instead. See: https://nextjs.org/docs/messages/no-location-assign-relative-destination  @next/next/no-location-assign-relative-destination
+  15:252  warning  Do not use `location.href` to navigate to internal Next.js pages. Use `redirect()` in the render phase, or `useRouter().push()` in Client Components' event handlers instead. See: https://nextjs.org/docs/messages/no-location-assign-relative-destination  @next/next/no-location-assign-relative-destination
+
+/workspace/scratch/0dbe5278a453/v10-active/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/crypto-wallet-logger-v08/details.js
+  24:209  warning  Do not use `location.href` to navigate to internal Next.js pages. Use `redirect()` in the render phase, or `useRouter().push()` in Client Components' event handlers instead. See: https://nextjs.org/docs/messages/no-location-assign-relative-destination  @next/next/no-location-assign-relative-destination
+
+/workspace/scratch/0dbe5278a453/v10-active/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/crypto-wallet-logger-v08/history.js
+  12:97   warning  Do not use `location.href` to navigate to internal Next.js pages. Use `redirect()` in the render phase, or `useRouter().push()` in Client Components' event handlers instead. See: https://nextjs.org/docs/messages/no-location-assign-relative-destination  @next/next/no-location-assign-relative-destination
+  12:238  warning  Do not use `location.href` to navigate to internal Next.js pages. Use `redirect()` in the render phase, or `useRouter().push()` in Client Components' event handlers instead. See: https://nextjs.org/docs/messages/no-location-assign-relative-destination  @next/next/no-location-assign-relative-destination
+
+/workspace/scratch/0dbe5278a453/v10-active/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/crypto-wallet-logger-v08/page-hook.js
+  163:50  warning  'init' is defined but never used                                                   @typescript-eslint/no-unused-vars
+  163:58  warning  Unused eslint-disable directive (no problems were reported from 'no-unused-vars')
+  202:56  warning  Unused eslint-disable directive (no problems were reported from 'no-unused-vars')
+
+/workspace/scratch/0dbe5278a453/v10-active/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/crypto-wallet-logger-v08/tests/sync-queue.test.mjs
+  3:1  warning  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+
+/workspace/scratch/0dbe5278a453/v10-active/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/crypto-wallet-logger-v08/tests/wallet-core.test.mjs
+  3:1  warning  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+
+/workspace/scratch/0dbe5278a453/v10-active/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/crypto-wallet-logger-v08/website.js
+  26:115  warning  Do not use `location.href` to navigate to internal Next.js pages. Use `redirect()` in the render phase, or `useRouter().push()` in Client Components' event handlers instead. See: https://nextjs.org/docs/messages/no-location-assign-relative-destination  @next/next/no-location-assign-relative-destination
+  26:292  warning  Do not use `location.href` to navigate to internal Next.js pages. Use `redirect()` in the render phase, or `useRouter().push()` in Client Components' event handlers instead. See: https://nextjs.org/docs/messages/no-location-assign-relative-destination  @next/next/no-location-assign-relative-destination
+
+/workspace/scratch/0dbe5278a453/v10-active/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/form-submitter/server.ts
+  182:59  warning  'domain' is assigned a value but never used    @typescript-eslint/no-unused-vars
+  182:67  warning  'username' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+/workspace/scratch/0dbe5278a453/v10-active/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/form-submitter/server/durableStorage.ts
+   3:8   warning  'crypto' is defined but never used  @typescript-eslint/no-unused-vars
+  92:18  warning  '_' is defined but never used       @typescript-eslint/no-unused-vars
+
+/workspace/scratch/0dbe5278a453/v10-active/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/form-submitter/server/googleFormService.ts
+  322:3  warning  'idempotencyKey' is defined but never used  @typescript-eslint/no-unused-vars
+
+/workspace/scratch/0dbe5278a453/v10-active/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/form-submitter/src/components/AuditHistoryView.tsx
+   9:3   warning  'Copy' is defined but never used                 @typescript-eslint/no-unused-vars
+  10:3   warning  'Check' is defined but never used                @typescript-eslint/no-unused-vars
+  11:3   warning  'ShieldCheck' is defined but never used          @typescript-eslint/no-unused-vars
+  12:3   warning  'Calendar' is defined but never used             @typescript-eslint/no-unused-vars
+  29:10  warning  'copiedKey' is assigned a value but never used   @typescript-eslint/no-unused-vars
+  50:9   warning  'handleCopy' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+/workspace/scratch/0dbe5278a453/v10-active/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/form-submitter/src/components/FindingDetailModal.tsx
+   13:3   warning  'Trash2' is defined but never used                                                                                                                                                                                                                                                       @typescript-eslint/no-unused-vars
+   16:14  warning  'HistoryIcon' is defined but never used                                                                                                                                                                                                                                                  @typescript-eslint/no-unused-vars
+   18:32  warning  'CryptoNetwork' is defined but never used                                                                                                                                                                                                                                                @typescript-eslint/no-unused-vars
+  311:21  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+/workspace/scratch/0dbe5278a453/v10-active/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/form-submitter/src/components/FormMappingView.tsx
+    8:3   warning  'ExternalLink' is defined but never used                   @typescript-eslint/no-unused-vars
+   11:3   warning  'HelpCircle' is defined but never used                     @typescript-eslint/no-unused-vars
+   12:3   warning  'Play' is defined but never used                           @typescript-eslint/no-unused-vars
+   13:3   warning  'Layers' is defined but never used                         @typescript-eslint/no-unused-vars
+   14:3   warning  'Sparkles' is defined but never used                       @typescript-eslint/no-unused-vars
+   25:3   warning  'DEFAULT_FORM_CONFIG' is defined but never used            @typescript-eslint/no-unused-vars
+   49:10  warning  'testResult' is assigned a value but never used            @typescript-eslint/no-unused-vars
+  102:9   warning  'handleRunTestPrefill' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+/workspace/scratch/0dbe5278a453/v10-active/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/form-submitter/src/components/FormSetupWizardModal.tsx
+  12:3  warning  'ExternalLink' is defined but never used     @typescript-eslint/no-unused-vars
+  13:3  warning  'Layers' is defined but never used           @typescript-eslint/no-unused-vars
+  15:3  warning  'HelpCircle' is defined but never used       @typescript-eslint/no-unused-vars
+  17:3  warning  'Hash' is defined but never used             @typescript-eslint/no-unused-vars
+  18:3  warning  'FileSpreadsheet' is defined but never used  @typescript-eslint/no-unused-vars
+
+/workspace/scratch/0dbe5278a453/v10-active/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/form-submitter/src/components/Navbar.tsx
+  39:9  warning  'reviewCount' is assigned a value but never used   @typescript-eslint/no-unused-vars
+  40:9  warning  'blockedCount' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+/workspace/scratch/0dbe5278a453/v10-active/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/form-submitter/src/components/NewFindingInput.tsx
+   14:3   warning  'Eye' is defined but never used                                                                                                                                                                                                                                                          @typescript-eslint/no-unused-vars
+   16:3   warning  'Info' is defined but never used                                                                                                                                                                                                                                                         @typescript-eslint/no-unused-vars
+  584:21  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+/workspace/scratch/0dbe5278a453/v10-active/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/form-submitter/src/components/PlatformHub.tsx
+   4:3   warning  'ArrowRight' is defined but never used                 @typescript-eslint/no-unused-vars
+  11:3   warning  'Code' is defined but never used                       @typescript-eslint/no-unused-vars
+  23:10  warning  'platformFindings' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+/workspace/scratch/0dbe5278a453/v10-active/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/form-submitter/src/components/QueueView.tsx
+   19:3  warning  'Loader2' is defined but never used                                                                                                                                                                                                                                                                                                              @typescript-eslint/no-unused-vars
+   20:3  warning  'ShieldCheck' is defined but never used                                                                                                                                                                                                                                                                                                          @typescript-eslint/no-unused-vars
+   29:3  warning  'AutoSubmitSessionState' is defined but never used                                                                                                                                                                                                                                                                                               @typescript-eslint/no-unused-vars
+   60:3  warning  'onClearCompleted' is defined but never used                                                                                                                                                                                                                                                                                                     @typescript-eslint/no-unused-vars
+  273:6  warning  React Hook useEffect has missing dependencies: 'batchItems', 'formConfig', 'history', 'onFindingCompleted', 'onUpdateFindingState', 'queue', and 'settings'. Either include them or remove the dependency array. If 'onUpdateFindingState' changes too often, find the parent component that defines it and wrap that definition in useCallback  react-hooks/exhaustive-deps
+
+/workspace/scratch/0dbe5278a453/v10-active/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/form-submitter/src/components/SettingsModal.tsx
+   6:3   warning  'ShieldAlert' is defined but never used                 @typescript-eslint/no-unused-vars
+  11:3   warning  'Copy' is defined but never used                        @typescript-eslint/no-unused-vars
+  36:26  warning  'setDefaultFormUrl' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+/workspace/scratch/0dbe5278a453/v10-active/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/form-submitter/src/components/SubmissionModal.tsx
+  10:3  warning  'ArrowRight' is defined but never used   @typescript-eslint/no-unused-vars
+  11:3  warning  'ShieldAlert' is defined but never used  @typescript-eslint/no-unused-vars
+  17:3  warning  'Lock' is defined but never used         @typescript-eslint/no-unused-vars
+
+/workspace/scratch/0dbe5278a453/v10-active/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/form-submitter/src/components/ZipExportModal.tsx
+  30:9  warning  'staticZipUrl' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+/workspace/scratch/0dbe5278a453/v10-active/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/form-submitter/src/utils/formMapping.ts
+  112:16  warning  'i' is defined but never used  @typescript-eslint/no-unused-vars
+
+/workspace/scratch/0dbe5278a453/v10-active/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/form-submitter/src/utils/multiPageFormEngine.ts
+  5:3  warning  'SubmissionLifecycleState' is defined but never used  @typescript-eslint/no-unused-vars
+
+/workspace/scratch/0dbe5278a453/v10-active/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/form-submitter/src/utils/storage.ts
+  8:10  warning  'DEFAULT_FORM_CONFIG' is defined but never used  @typescript-eslint/no-unused-vars
+
+/workspace/scratch/0dbe5278a453/v10-active/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/form-submitter/src/utils/testSuite.ts
+   1:26  warning  'validateScamUrl' is defined but never used                 @typescript-eslint/no-unused-vars
+   1:43  warning  'evaluateFinding' is defined but never used                 @typescript-eslint/no-unused-vars
+   8:3   warning  'sha256Hex' is defined but never used                       @typescript-eslint/no-unused-vars
+  14:3   warning  'DEFAULT_AUTHORIZED_FORM_SCHEMA' is defined but never used  @typescript-eslint/no-unused-vars
+
+/workspace/scratch/0dbe5278a453/v10-active/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/form-submitter/src/utils/walletValidation.ts
+    8:3   warning  'decodeBase58' is defined but never used  @typescript-eslint/no-unused-vars
+  591:75  warning  'idx' is defined but never used           @typescript-eslint/no-unused-vars
+
+/workspace/scratch/0dbe5278a453/v10-active/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/app/review/static/js/app.js
+    27:12  warning  'e' is defined but never used                                                                                                                                                                                                                                       @typescript-eslint/no-unused-vars
+    47:10  warning  'timeAgo' is defined but never used                                                                                                                                                                                                                                 @typescript-eslint/no-unused-vars
+   132:9   warning  'stopping' is assigned a value but never used                                                                                                                                                                                                                       @typescript-eslint/no-unused-vars
+   220:12  warning  'e' is defined but never used                                                                                                                                                                                                                                       @typescript-eslint/no-unused-vars
+   249:12  warning  'e' is defined but never used                                                                                                                                                                                                                                       @typescript-eslint/no-unused-vars
+   252:10  warning  'openSiteDetail' is defined but never used                                                                                                                                                                                                                          @typescript-eslint/no-unused-vars
+   324:16  warning  'showSiteModal' is defined but never used                                                                                                                                                                                                                           @typescript-eslint/no-unused-vars
+   765:16  warning  'approveFinding' is defined but never used                                                                                                                                                                                                                          @typescript-eslint/no-unused-vars
+   775:16  warning  'rejectFinding' is defined but never used                                                                                                                                                                                                                           @typescript-eslint/no-unused-vars
+   785:16  warning  'prepareForm' is defined but never used                                                                                                                                                                                                                             @typescript-eslint/no-unused-vars
+   803:16  warning  'confirmManualSubmit' is defined but never used                                                                                                                                                                                                                     @typescript-eslint/no-unused-vars
+   852:10  warning  'openLightbox' is defined but never used                                                                                                                                                                                                                            @typescript-eslint/no-unused-vars
+   896:52  warning  'e' is defined but never used                                                                                                                                                                                                                                       @typescript-eslint/no-unused-vars
+  1172:12  warning  'e' is defined but never used                                                                                                                                                                                                                                       @typescript-eslint/no-unused-vars
+  1189:12  warning  'e' is defined but never used                                                                                                                                                                                                                                       @typescript-eslint/no-unused-vars
+  1230:12  warning  'e' is defined but never used                                                                                                                                                                                                                                       @typescript-eslint/no-unused-vars
+  1251:9   warning  'wallets' is assigned a value but never used                                                                                                                                                                                                                        @typescript-eslint/no-unused-vars
+  1298:16  warning  'showResultDetail' is defined but never used                                                                                                                                                                                                                        @typescript-eslint/no-unused-vars
+  1422:16  warning  'startSubmission' is defined but never used                                                                                                                                                                                                                         @typescript-eslint/no-unused-vars
+  1481:16  warning  'prepareSubmission' is defined but never used                                                                                                                                                                                                                       @typescript-eslint/no-unused-vars
+  1508:16  warning  'confirmSubmitted' is defined but never used                                                                                                                                                                                                                        @typescript-eslint/no-unused-vars
+  1534:12  warning  'e' is defined but never used                                                                                                                                                                                                                                       @typescript-eslint/no-unused-vars
+  1587:12  warning  'e' is defined but never used                                                                                                                                                                                                                                       @typescript-eslint/no-unused-vars
+  1632:16  warning  'showClusterDetail' is defined but never used                                                                                                                                                                                                                       @typescript-eslint/no-unused-vars
+  1690:12  warning  'e' is defined but never used                                                                                                                                                                                                                                       @typescript-eslint/no-unused-vars
+  1731:12  warning  'e' is defined but never used                                                                                                                                                                                                                                       @typescript-eslint/no-unused-vars
+  1734:10  warning  'openWorkspace' is defined but never used                                                                                                                                                                                                                           @typescript-eslint/no-unused-vars
+  1746:3   warning  Do not use `window.location.href` to navigate to internal Next.js pages. Use `redirect()` in the render phase, or `useRouter().push()` in Client Components' event handlers instead. See: https://nextjs.org/docs/messages/no-location-assign-relative-destination  @next/next/no-location-assign-relative-destination
+  1947:12  warning  'e' is defined but never used                                                                                                                                                                                                                                       @typescript-eslint/no-unused-vars
+  1966:12  warning  'e' is defined but never used                                                                                                                                                                                                                                       @typescript-eslint/no-unused-vars
+  2089:12  warning  'e' is defined but never used                                                                                                                                                                                                                                       @typescript-eslint/no-unused-vars
+  2140:16  warning  'showCampaignReport' is defined but never used                                                                                                                                                                                                                      @typescript-eslint/no-unused-vars
+  2183:16  warning  'resumeCampaign' is defined but never used                                                                                                                                                                                                                          @typescript-eslint/no-unused-vars
+  2503:16  warning  'reinstateIndicator' is defined but never used                                                                                                                                                                                                                      @typescript-eslint/no-unused-vars
+  2808:16  warning  'campaignControl' is defined but never used                                                                                                                                                                                                                         @typescript-eslint/no-unused-vars
+  2816:16  warning  'sweepMemory' is defined but never used                                                                                                                                                                                                                             @typescript-eslint/no-unused-vars
+  2826:16  warning  'showWhySurfaced' is defined but never used                                                                                                                                                                                                                         @typescript-eslint/no-unused-vars
+
+/workspace/scratch/0dbe5278a453/v10-active/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/wallet-investigator/server/engine/analysis.ts
+  9:20  warning  'queryFirst' is defined but never used  @typescript-eslint/no-unused-vars
+
+/workspace/scratch/0dbe5278a453/v10-active/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/wallet-investigator/server/engine/connected_wallets.ts
+  8:10  warning  'BlockchainNetwork' is defined but never used  @typescript-eslint/no-unused-vars
+
+/workspace/scratch/0dbe5278a453/v10-active/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/wallet-investigator/server/engine/normalizer.ts
+  9:10  warning  'BlockchainNetwork' is defined but never used    @typescript-eslint/no-unused-vars
+  9:51  warning  'CompletenessDetails' is defined but never used  @typescript-eslint/no-unused-vars
+
+/workspace/scratch/0dbe5278a453/v10-active/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/wallet-investigator/server/engine/path_finder.ts
+  7:10  warning  'BlockchainNetwork' is defined but never used  @typescript-eslint/no-unused-vars
+  7:29  warning  'DataCompleteness' is defined but never used   @typescript-eslint/no-unused-vars
+
+/workspace/scratch/0dbe5278a453/v10-active/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/wallet-investigator/server/integration/platform_worker.ts
+  4:9  warning  'globalJobQueue' is defined but never used       @typescript-eslint/no-unused-vars
+  9:7  warning  'moduleName' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+/workspace/scratch/0dbe5278a453/v10-active/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/wallet-investigator/server/providers/manager.ts
+  12:73  warning  'RawProviderTx' is defined but never used  @typescript-eslint/no-unused-vars
+
+/workspace/scratch/0dbe5278a453/v10-active/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/wallet-investigator/server/routes/api.ts
+  17:50  warning  'DataCompleteness' is defined but never used  @typescript-eslint/no-unused-vars
+
+/workspace/scratch/0dbe5278a453/v10-active/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/wallet-investigator/src/App.tsx
+  233:26  warning  'term' is defined but never used  @typescript-eslint/no-unused-vars
+
+/workspace/scratch/0dbe5278a453/v10-active/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/wallet-investigator/src/components/ConnectionsView.tsx
+  2:18  warning  'Star' is defined but never used         @typescript-eslint/no-unused-vars
+  2:24  warning  'ArrowRight' is defined but never used   @typescript-eslint/no-unused-vars
+  2:36  warning  'ShieldCheck' is defined but never used  @typescript-eslint/no-unused-vars
+  2:60  warning  'Filter' is defined but never used       @typescript-eslint/no-unused-vars
+
+/workspace/scratch/0dbe5278a453/v10-active/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/wallet-investigator/src/components/DashboardView.tsx
+  12:3  warning  'ExternalLink' is defined but never used    @typescript-eslint/no-unused-vars
+  32:3  warning  'onSelectWallet' is defined but never used  @typescript-eslint/no-unused-vars
+
+/workspace/scratch/0dbe5278a453/v10-active/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/wallet-investigator/src/components/ExportModal.tsx
+  25:5  warning  Do not use `window.location.href` to navigate to internal Next.js pages. Use `redirect()` in the render phase, or `useRouter().push()` in Client Components' event handlers instead. See: https://nextjs.org/docs/messages/no-location-assign-relative-destination  @next/next/no-location-assign-relative-destination
+
+/workspace/scratch/0dbe5278a453/v10-active/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/wallet-investigator/src/components/GraphView.tsx
+   1:38  warning  'useRef' is defined but never used                                                                                  @typescript-eslint/no-unused-vars
+   2:46  warning  'Filter' is defined but never used                                                                                  @typescript-eslint/no-unused-vars
+   2:64  warning  'Info' is defined but never used                                                                                    @typescript-eslint/no-unused-vars
+  37:3   warning  'onSelectWallet' is defined but never used                                                                          @typescript-eslint/no-unused-vars
+  57:6   warning  React Hook useEffect has a missing dependency: 'currentWalletId'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+/workspace/scratch/0dbe5278a453/v10-active/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/wallet-investigator/src/components/NewWalletModal.tsx
+   2:54  warning  'FileText' is defined but never used               @typescript-eslint/no-unused-vars
+   2:64  warning  'Upload' is defined but never used                 @typescript-eslint/no-unused-vars
+  33:10  warning  'isValidating' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+/workspace/scratch/0dbe5278a453/v10-active/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/wallet-investigator/src/components/ReviewQueueView.tsx
+   4:3  warning  'AlertTriangle' is defined but never used                                                                      @typescript-eslint/no-unused-vars
+   5:3  warning  'HelpCircle' is defined but never used                                                                         @typescript-eslint/no-unused-vars
+   6:3  warning  'Layers' is defined but never used                                                                             @typescript-eslint/no-unused-vars
+   7:3  warning  'ArrowRight' is defined but never used                                                                         @typescript-eslint/no-unused-vars
+   8:3  warning  'CheckCircle2' is defined but never used                                                                       @typescript-eslint/no-unused-vars
+   9:3  warning  'XCircle' is defined but never used                                                                            @typescript-eslint/no-unused-vars
+  10:3  warning  'Clock' is defined but never used                                                                              @typescript-eslint/no-unused-vars
+  21:3  warning  'onSelectWalletAddress' is defined but never used                                                              @typescript-eslint/no-unused-vars
+  45:6  warning  React Hook useEffect has a missing dependency: 'fetchQueue'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+/workspace/scratch/0dbe5278a453/v10-active/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/wallet-investigator/src/components/SettingsView.tsx
+   6:3   warning  'ShieldCheck' is defined but never used         @typescript-eslint/no-unused-vars
+   8:3   warning  'XCircle' is defined but never used             @typescript-eslint/no-unused-vars
+   9:3   warning  'Clock' is defined but never used               @typescript-eslint/no-unused-vars
+  10:3   warning  'CheckCircle2' is defined but never used        @typescript-eslint/no-unused-vars
+  20:10  warning  'isLoading' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+/workspace/scratch/0dbe5278a453/v10-active/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/wallet-investigator/src/components/TransactionExplorerView.tsx
+   2:18  warning  'Filter' is defined but never used                                                                                    @typescript-eslint/no-unused-vars
+   2:37  warning  'ListOrdered' is defined but never used                                                                               @typescript-eslint/no-unused-vars
+   2:50  warning  'ArrowUpDown' is defined but never used                                                                               @typescript-eslint/no-unused-vars
+  18:17  warning  'setAsset' is assigned a value but never used                                                                         @typescript-eslint/no-unused-vars
+  48:6   warning  React Hook useEffect has a missing dependency: 'fetchTransactions'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+/workspace/scratch/0dbe5278a453/v10-active/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/wallet-investigator/src/components/WalletDetailView.tsx
+   8:3  warning  'Play' is defined but never used           @typescript-eslint/no-unused-vars
+  11:3  warning  'ExternalLink' is defined but never used   @typescript-eslint/no-unused-vars
+  12:3  warning  'ShieldAlert' is defined but never used    @typescript-eslint/no-unused-vars
+  13:3  warning  'AlertTriangle' is defined but never used  @typescript-eslint/no-unused-vars
+  14:3  warning  'Layers' is defined but never used         @typescript-eslint/no-unused-vars
+  15:3  warning  'ListOrdered' is defined but never used    @typescript-eslint/no-unused-vars
+  16:3  warning  'Share2' is defined but never used         @typescript-eslint/no-unused-vars
+  17:3  warning  'FileText' is defined but never used       @typescript-eslint/no-unused-vars
+  18:3  warning  'Clock' is defined but never used          @typescript-eslint/no-unused-vars
+  19:3  warning  'Tag' is defined but never used            @typescript-eslint/no-unused-vars
+
+/workspace/scratch/0dbe5278a453/v10-active/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/wallet-investigator/src/components/WalletsView.tsx
+   4:3   warning  'Filter' is defined but never used                 @typescript-eslint/no-unused-vars
+   6:3   warning  'ExternalLink' is defined but never used           @typescript-eslint/no-unused-vars
+   8:3   warning  'HelpCircle' is defined but never used             @typescript-eslint/no-unused-vars
+  12:3   warning  'Clock' is defined but never used                  @typescript-eslint/no-unused-vars
+  13:3   warning  'ArrowUpDown' is defined but never used            @typescript-eslint/no-unused-vars
+  38:21  warning  'setSortField' is assigned a value but never used  @typescript-eslint/no-unused-vars
+  39:19  warning  'setSortAsc' is assigned a value but never used    @typescript-eslint/no-unused-vars
+
+/workspace/scratch/0dbe5278a453/v10-active/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/wallet-investigator/tests/run-all-tests.ts
+  18:35  warning  'queryAll' is assigned a value but never used                               @typescript-eslint/no-unused-vars
+  21:9   warning  'findPathBetweenWallets' is assigned a value but never used                 @typescript-eslint/no-unused-vars
+  23:9   warning  'promoteConnectedWalletToInvestigation' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+/workspace/scratch/0dbe5278a453/v10-active/main-investigation-platform-v9-suite-v7-adaptive-intelligence/lib/agent/runner.ts
+  28:10  warning  'CAPABILITY_BY_NAME' is defined but never used  @typescript-eslint/no-unused-vars
+
+/workspace/scratch/0dbe5278a453/v10-active/main-investigation-platform-v9-suite-v7-adaptive-intelligence/lib/ops/health.ts
+  15:31  warning  'owner' is defined but never used  @typescript-eslint/no-unused-vars
+
+/workspace/scratch/0dbe5278a453/v10-active/main-investigation-platform-v9-suite-v7-adaptive-intelligence/lib/planner.ts
+  2:38  warning  'timeline' is defined but never used  @typescript-eslint/no-unused-vars
+
+/workspace/scratch/0dbe5278a453/v10-active/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/adaptive-hidden.mjs
+  27:431  warning  'e' is defined but never used  @typescript-eslint/no-unused-vars
+
+/workspace/scratch/0dbe5278a453/v10-active/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/autonomy-crash.mjs
+  2:90  warning  'DatabaseSync' is defined but never used  @typescript-eslint/no-unused-vars
+
+/workspace/scratch/0dbe5278a453/v10-active/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/autonomy-v9.mjs
+  13:575  warning  'e' is defined but never used                                          @typescript-eslint/no-unused-vars
+  19:20   warning  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+  20:20   warning  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+  21:22   warning  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+  22:17   warning  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+
+/workspace/scratch/0dbe5278a453/v10-active/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/joined-finder-main-hunter.mjs
+  33:47  warning  'readFileSync' is defined but never used  @typescript-eslint/no-unused-vars
+  33:69  warning  'statSync' is defined but never used      @typescript-eslint/no-unused-vars
+  34:9   warning  'createServer' is defined but never used  @typescript-eslint/no-unused-vars
+  36:9   warning  'dirname' is defined but never used       @typescript-eslint/no-unused-vars
+  36:24  warning  'relative' is defined but never used      @typescript-eslint/no-unused-vars
+  36:43  warning  'sep' is defined but never used           @typescript-eslint/no-unused-vars
+  37:9   warning  'DatabaseSync' is defined but never used  @typescript-eslint/no-unused-vars
+  38:9   warning  'build' is defined but never used         @typescript-eslint/no-unused-vars
+  79:69  warning  'e' is defined but never used             @typescript-eslint/no-unused-vars
+
+/workspace/scratch/0dbe5278a453/v10-active/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/lib/bench-v4-arm.mjs
+  66:59  warning  'view' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+/workspace/scratch/0dbe5278a453/v10-active/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/lib/sqljs-standin/index.mjs
+  25:26  warning  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+
+/workspace/scratch/0dbe5278a453/v10-active/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/operation-benchmark.mjs
+  25:246  warning  'effect' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+/workspace/scratch/0dbe5278a453/v10-active/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/operation-hidden.mjs
+  24:431  warning  'e' is defined but never used  @typescript-eslint/no-unused-vars
+
+/workspace/scratch/0dbe5278a453/v10-active/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/operation-intelligence.mjs
+  2:65  warning  'readdirSync' is defined but never used  @typescript-eslint/no-unused-vars
+
+/workspace/scratch/0dbe5278a453/v10-active/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/scheduler-fallback-local.mjs
+  48:22  warning  '_' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+/workspace/scratch/0dbe5278a453/v10-active/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/scientific-real-revision.mjs
+  27:431  warning  'e' is defined but never used  @typescript-eslint/no-unused-vars
+
+/workspace/scratch/0dbe5278a453/v10-active/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/suite-workflow.mjs
+  121:9  warning  'again' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+/workspace/scratch/0dbe5278a453/v10-active/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/ui-tokens.test.mjs
+  5:9  warning  'join' is defined but never used  @typescript-eslint/no-unused-vars
+
+/workspace/scratch/0dbe5278a453/v10-active/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/ui/next-shim.tsx
+  22:67  warning  '_p' is defined but never used  @typescript-eslint/no-unused-vars
+  22:79  warning  '_s' is defined but never used  @typescript-eslint/no-unused-vars
+
+/workspace/scratch/0dbe5278a453/v10-active/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/v10-golden.mjs
+  15:587  warning  'e' is defined but never used                                          @typescript-eslint/no-unused-vars
+  21:20   warning  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+  22:20   warning  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+  23:22   warning  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+  24:17   warning  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+
+/workspace/scratch/0dbe5278a453/v10-active/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/v2-inbox.mjs
+  25:46  warning  'all' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+/workspace/scratch/0dbe5278a453/v10-active/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/v3-agent.mjs
+   46:162  warning  'agentStart' is assigned a value but never used       @typescript-eslint/no-unused-vars
+   47:9    warning  'checkpointRoute' is assigned a value but never used  @typescript-eslint/no-unused-vars
+  180:11   warning  'site' is assigned a value but never used             @typescript-eslint/no-unused-vars
+  194:36   warning  'ext' is assigned a value but never used              @typescript-eslint/no-unused-vars
+  250:11   warning  'runId' is assigned a value but never used            @typescript-eslint/no-unused-vars
+
+/workspace/scratch/0dbe5278a453/v10-active/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/v4-campaign.mjs
+   51:131  warning  'controlRoute' is assigned a value but never used  @typescript-eslint/no-unused-vars
+  469:11   warning  'walletEdges' is assigned a value but never used   @typescript-eslint/no-unused-vars
+
+/workspace/scratch/0dbe5278a453/v10-active/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/v5-operations.mjs
+   61:9    warning  'inboxDecision' is assigned a value but never used  @typescript-eslint/no-unused-vars
+   63:121  warning  'G' is assigned a value but never used              @typescript-eslint/no-unused-vars
+  747:11   warning  'kinds0' is assigned a value but never used         @typescript-eslint/no-unused-vars
+
+/workspace/scratch/0dbe5278a453/v10-active/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/wallet-browser-e2e.mjs
+  56:102  warning  'raw' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+/workspace/scratch/0dbe5278a453/v10-active/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/wallet-pipeline-e2e.mjs
+  18:9    warning  'repoRoot' is defined but never used      @typescript-eslint/no-unused-vars
+  30:137  warning  'raw' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+/workspace/scratch/0dbe5278a453/v10-active/main-investigation-platform-v9-suite-v7-adaptive-intelligence/worker.ts
+   7:1   warning  Assign object to a variable before exporting as module default  import/no-anonymous-default-export
+  14:82  warning  '_context' is defined but never used                            @typescript-eslint/no-unused-vars
+
+✖ 231 problems (0 errors, 231 warnings)
+  0 errors and 2 warnings potentially fixable with the `--fix` option.
+

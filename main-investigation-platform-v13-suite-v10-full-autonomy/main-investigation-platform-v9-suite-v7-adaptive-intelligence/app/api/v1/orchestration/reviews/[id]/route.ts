@@ -1,0 +1,4 @@
+import { z } from "zod";
+import { apiError,getD1,readJsonBody } from "@/lib/platform";
+const schema=z.object({action:z.enum(["resolve","dismiss"]),resolution:z.string().min(1).max(4000)}).strict();
+export async function PATCH(request:Request,context:{params:Promise<{id:string}>}){try{const {id}=await context.params;const body=schema.parse(await readJsonBody(request));const result=await getD1().prepare("UPDATE review_queue SET status=?,resolution=?,resolved_at=CURRENT_TIMESTAMP WHERE id=? AND status='open'").bind(body.action==="resolve"?"resolved":"dismissed",body.resolution,id).run();if((result.meta?.changes??0)!==1)return apiError(404,"REVIEW_NOT_FOUND","Open review item not found.");return Response.json({ok:true});}catch(error){if(error instanceof z.ZodError)return apiError(400,"VALIDATION_ERROR","Invalid review action.",error.issues);return apiError(500,"REVIEW_UPDATE_ERROR",error instanceof Error?error.message:"Unable to update review");}}

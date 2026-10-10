@@ -1,0 +1,18 @@
+✔ fresh upgrade preserves evidence and passes startup schema gate (33.421376ms)
+✔ v5 upgrade preserves evidence and passes startup schema gate (29.080003ms)
+✔ v6 upgrade preserves evidence and passes startup schema gate (32.260979ms)
+✔ v6.1 checkpoint upgrade preserves evidence and passes startup schema gate (29.450094ms)
+✔ before migration: rollback or refuse startup (12.354575ms)
+✔ between migrations: rollback or refuse startup (10.79116ms)
+✔ during schema modification: rollback or refuse startup (12.086468ms)
+✔ after schema before bookkeeping: rollback or refuse startup (14.655376ms)
+✔ during data migration: rollback or refuse startup (44.526862ms)
+✔ restart after partial migration: rollback or refuse startup (16.507433ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 10
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 427.429974

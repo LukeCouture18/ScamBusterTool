@@ -1,0 +1,12 @@
+{
+  "ok": false,
+  "checks": [
+    "actual production worker accepted source records and operation model",
+    "v10 production dashboard hydrated",
+    "production hydration, map connection and hypothesis source evidence",
+    "production 375px operation briefing"
+  ],
+  "errors": [
+    ""
+  ]
+}

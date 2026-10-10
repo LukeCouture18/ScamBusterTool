@@ -1,0 +1,11 @@
+✔ vault encrypts complete private payload, binds request identity, persists and locks on restart (143.505738ms)
+✔ explicit owned import, encrypted edit, locked capture and recursive secret hygiene (88.077308ms)
+✔ bounded mailbox identity precedes remote creation; lost commit recovers same identity without another POST (144.497663ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 3
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 458.13309

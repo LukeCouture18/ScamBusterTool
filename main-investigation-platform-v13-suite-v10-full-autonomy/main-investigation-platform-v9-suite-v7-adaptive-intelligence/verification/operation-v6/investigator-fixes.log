@@ -1,0 +1,1 @@
+{"ok": true, "checks": ["real ten-column page insert", "replayed page insert uses one record", "all fetch failures remain failed with evidence"]}

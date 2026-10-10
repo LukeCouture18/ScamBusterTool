@@ -1,0 +1,12 @@
+import assert from "node:assert/strict";
+const base=(process.env.MIP_BASE_URL??"http://localhost:8787").replace(/\/$/,"");
+const expected=process.env.MIP_EXPECT_INVESTIGATION;
+const moduleName=process.env.MIP_EXPECT_DISCONNECTED_MODULE;
+const orchestration=await fetch(`${base}/api/v1/orchestration`,{cache:"no-store"}).then(async r=>{if(r.status!==200)assert.fail(await r.text());return r.json();});
+assert.ok(orchestration.pipelines.length>0,"pipelines must survive a platform restart");
+assert.ok(orchestration.timeline.length>0,"timeline must survive a platform restart");
+if(expected)assert.ok(orchestration.pipelines.some(p=>p.investigation_external_id===expected),`missing persisted pipeline for ${expected}`);
+if(moduleName)assert.ok(orchestration.reviews.some(r=>r.review_type==="module_disconnect"&&String(r.title).includes(moduleName)),`missing disconnect review for ${moduleName}`);
+const dashboard=await fetch(`${base}/api/v1/dashboard`,{cache:"no-store"}).then(r=>r.json());
+assert.ok(Number(dashboard.counts.entities)>0,"central entities must survive restart");
+console.log(JSON.stringify({ok:true,pipelines:orchestration.pipelines.length,timeline_events:orchestration.timeline.length,open_reviews:orchestration.reviews.length,entities:dashboard.counts.entities},null,2));

@@ -1,0 +1,8 @@
+{
+  "number": 29,
+  "unit": "release-packaged-with-explicit-limits",
+  "at": "2026-10-04T18:25:30.152868+00:00",
+  "source_identity": "9e3253c2a56137092c801b8288a8fd21b0c4851c0dc281dce2338db7651b6f5f",
+  "freeze": true,
+  "next": "No execution tests remain running. Final package has CRC and every manifest hash verified; save named v13 source ZIP, full report, final live checkpoint/recovery notes and latest recovery ZIP. Further certification needs working installed browser/Windows/live authorized services, independent field calibration and quality/scale improvements described in report."
+}

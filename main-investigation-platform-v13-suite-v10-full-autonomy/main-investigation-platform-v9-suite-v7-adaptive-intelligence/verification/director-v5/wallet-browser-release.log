@@ -1,0 +1,47 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+file:///workspace/scratch/b4f855937e46/main/tests/wallet-browser-e2e.mjs:112
+  if (code !== 0) throw new Error(`browser script failed (${code}):\n${err.slice(-4000)}\n--- wallet worker ---\n${children.wallet?.out.slice(-1500)}\n--- form worker ---\n${children.form?.out.slice(-1500)}`);
+                        ^
+
+Error: browser script failed (1):
+g-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --enable-automation --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --disable-extensions-except=/workspace/scratch/b4f855937e46/main/integrations/crypto-wallet-logger-v08/ --load-extension=/workspace/scratch/b4f855937e46/main/integrations/crypto-wallet-logger-v08/ --host-resolver-rules=MAP *.test 127.0.0.1 --unsafely-treat-insecure-origin-as-secure=http://luckypay.test:43163 --user-data-dir=/tmp/mip-wallet-browser-3fydFc/profile --remote-debugging-pipe about:blank
+<launched> pid=91
+[pid=91][err] [91:91:1002/180352.543451:FATAL:chrome/browser/process_singleton_posix.cc:292] Check failed: . socket() failed: Operation not permitted (1)
+[pid=91][err] [1002/180352.543796:ERROR:third_party/crashpad/crashpad/util/linux/scoped_ptrace_attach.cc:27] ptrace: Operation not permitted (1)
+[pid=91][err] [1002/180352.543916:ERROR:third_party/crashpad/crashpad/util/file/directory_reader_posix.cc:43] opendir /proc/91/task: No such file or directory (2)
+Call log:
+  - <launching> /root/.cache/ms-playwright/chromium-1187/chrome-linux/chrome --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-client-side-phishing-detection --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-extensions --disable-features=AcceptCHFrame,AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,DialMediaRouteProvider,GlobalMediaControls,HttpsUpgrades,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,Translate,AutoDeElevate --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --export-tagged-pdf --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --edge-skip-compat-layer-relaunch --enable-automation --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --disable-extensions-except=/workspace/scratch/b4f855937e46/main/integrations/crypto-wallet-logger-v08/ --load-extension=/workspace/scratch/b4f855937e46/main/integrations/crypto-wallet-logger-v08/ --host-resolver-rules=MAP *.test 127.0.0.1 --unsafely-treat-insecure-origin-as-secure=http://luckypay.test:43163 --user-data-dir=/tmp/mip-wallet-browser-3fydFc/profile --remote-debugging-pipe about:blank
+  - <launched> pid=91
+  - [pid=91][err] [91:91:1002/180352.543451:FATAL:chrome/browser/process_singleton_posix.cc:292] Check failed: . socket() failed: Operation not permitted (1)
+  - [pid=91][err] [1002/180352.543796:ERROR:third_party/crashpad/crashpad/util/linux/scoped_ptrace_attach.cc:27] ptrace: Operation not permitted (1)
+  - [pid=91][err] [1002/180352.543916:ERROR:third_party/crashpad/crashpad/util/file/directory_reader_posix.cc:43] opendir /proc/91/task: No such file or directory (2)
+  - [pid=91] <gracefully close start>
+  - [pid=91] <kill>
+  - [pid=91] <will force kill>
+  - [pid=91] <process did exit: exitCode=null, signal=SIGABRT>
+  - [pid=91] starting temporary directories cleanup
+  - [pid=91] finished temporary directories cleanup
+  - [pid=91] <gracefully close end>
+
+
+--- wallet worker ---
+[MainPlatformV6] Initialized integration module 'wallet_investigator' with capabilities: [
+  'blockchain-analysis',
+  'wallet-validation',
+  'counterparty-discovery',
+  'fund-flow-analysis',
+  'controlled-wallet-expansion'
+]
+[Database] Initialized new database at /tmp/mip-wallet-browser-3fydFc/wallet-runtime/data/wallet_investigator.sqlite
+[Migrations] Applying migration v1: 001_initial_schema...
+[Migrations] Applying migration v2: 002_indexes_and_views...
+[Migrations] Migration status: 2 applied. Current schema version: v2
+WORKER_READY
+
+--- form worker ---
+WORKER_READY
+
+    at file:///workspace/scratch/b4f855937e46/main/tests/wallet-browser-e2e.mjs:112:25
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+
+Node.js v24.19.0

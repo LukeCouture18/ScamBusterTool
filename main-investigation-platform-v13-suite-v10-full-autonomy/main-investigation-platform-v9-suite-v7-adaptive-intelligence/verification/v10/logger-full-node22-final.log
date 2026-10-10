@@ -1,0 +1,322 @@
+TAP version 13
+# Subtest: lock during delayed encrypted commit cannot restore plaintext; next unlock waits and recovers committed identity
+ok 1 - lock during delayed encrypted commit cannot restore plaintext; next unlock waits and recovers committed identity
+  ---
+  duration_ms: 306.638443
+  type: 'test'
+  ...
+# Subtest: existing standalone vault fails closed and migrates all metadata before removing plaintext source
+ok 2 - existing standalone vault fails closed and migrates all metadata before removing plaintext source
+  ---
+  duration_ms: 349.455328
+  type: 'test'
+  ...
+# Subtest: vault encrypts complete private payload, binds request identity, persists and locks on restart
+ok 3 - vault encrypts complete private payload, binds request identity, persists and locks on restart
+  ---
+  duration_ms: 269.553486
+  type: 'test'
+  ...
+# Subtest: explicit owned import, encrypted edit, locked capture and recursive secret hygiene
+ok 4 - explicit owned import, encrypted edit, locked capture and recursive secret hygiene
+  ---
+  duration_ms: 171.779361
+  type: 'test'
+  ...
+# Subtest: bounded mailbox identity precedes remote creation; lost commit recovers same identity without another POST
+ok 5 - bounded mailbox identity precedes remote creation; lost commit recovers same identity without another POST
+  ---
+  duration_ms: 297.856403
+  type: 'test'
+  ...
+# Subtest: worker protects private APIs and pauses all new capture while locked or restarted
+ok 6 - worker protects private APIs and pauses all new capture while locked or restarted
+  ---
+  duration_ms: 238.403119
+  type: 'test'
+  ...
+# Subtest: structured private fields are excluded before wallet discovery while deposit fields survive
+ok 7 - structured private fields are excluded before wallet discovery while deposit fields survive
+  ---
+  duration_ms: 5.170589
+  type: 'test'
+  ...
+# Subtest: deposit card: address with its own label, copy button and QR
+ok 8 - deposit card: address with its own label, copy button and QR
+  ---
+  duration_ms: 18.765363
+  type: 'test'
+  ...
+# Subtest: deposit wording only in a heading, or only in the address's own sentence, is still deposit
+ok 9 - deposit wording only in a heading, or only in the address's own sentence, is still deposit
+  ---
+  duration_ms: 3.029001
+  type: 'test'
+  ...
+# Subtest: a lone address in a deposit section (no other address there) keeps the section's deposit wording
+ok 10 - a lone address in a deposit section (no other address there) keeps the section's deposit wording
+  ---
+  duration_ms: 0.931519
+  type: 'test'
+  ...
+# Subtest: deposit next to a contract mention stays deposit (contract evidence is not about this address)
+ok 11 - deposit next to a contract mention stays deposit (contract evidence is not about this address)
+  ---
+  duration_ms: 4.23214
+  type: 'test'
+  ...
+# Subtest: network responses and script config keep their key-path evidence
+ok 12 - network responses and script config keep their key-path evidence
+  ---
+  duration_ms: 3.912654
+  type: 'test'
+  ...
+# Subtest: token contract inside the deposit card: its own label beats the card's deposit cues
+ok 13 - token contract inside the deposit card: its own label beats the card's deposit cues
+  ---
+  duration_ms: 2.376938
+  type: 'test'
+  ...
+# Subtest: transaction history rows (table or div list) inside a deposit page
+ok 14 - transaction history rows (table or div list) inside a deposit page
+  ---
+  duration_ms: 5.359623
+  type: 'test'
+  ...
+# Subtest: example / documentation addresses
+ok 15 - example / documentation addresses
+  ---
+  duration_ms: 0.99783
+  type: 'test'
+  ...
+# Subtest: withdrawal inputs and the visitor's own addresses
+ok 16 - withdrawal inputs and the visitor's own addresses
+  ---
+  duration_ms: 1.769243
+  type: 'test'
+  ...
+# Subtest: unrelated addresses: partners, team wallets, referrers, reported scam addresses
+ok 17 - unrelated addresses: partners, team wallets, referrers, reported scam addresses
+  ---
+  duration_ms: 1.833104
+  type: 'test'
+  ...
+# Subtest: deposit cues that only describe the surrounding section give unknown, not deposit
+ok 18 - deposit cues that only describe the surrounding section give unknown, not deposit
+  ---
+  duration_ms: 0.656328
+  type: 'test'
+  ...
+# Subtest: malformed addresses (failing checksum) are never called deposit
+ok 19 - malformed addresses (failing checksum) are never called deposit
+  ---
+  duration_ms: 1.347741
+  type: 'test'
+  ...
+# Subtest: near zone is derived from `local` when the caller passes none
+ok 20 - near zone is derived from `local` when the caller passes none
+  ---
+  duration_ms: 1.126819
+  type: 'test'
+  ...
+# Subtest: a weakly supported deposit call gets a lower confidence than a well-supported one
+ok 21 - a weakly supported deposit call gets a lower confidence than a well-supported one
+  ---
+  duration_ms: 0.379581
+  type: 'test'
+  ...
+# Subtest: item enqueued while a delivery is in flight is delivered in the same drain and never lost
+ok 22 - item enqueued while a delivery is in flight is delivered in the same drain and never lost
+  ---
+  duration_ms: 88.549181
+  type: 'test'
+  ...
+# Subtest: many concurrent enqueues: every item delivered exactly once, queue empty
+ok 23 - many concurrent enqueues: every item delivered exactly once, queue empty
+  ---
+  duration_ms: 369.954311
+  type: 'test'
+  ...
+# Subtest: identical replays dedupe; permanent rejections do not block the queue; offline backs off
+ok 24 - identical replays dedupe; permanent rejections do not block the queue; offline backs off
+  ---
+  duration_ms: 134.415601
+  type: 'test'
+  ...
+# Subtest: wallet.observation envelope and payload follow contract §1
+ok 25 - wallet.observation envelope and payload follow contract §1
+  ---
+  duration_ms: 24.146112
+  type: 'test'
+  ...
+# Subtest: sha256 matches node:crypto
+ok 26 - sha256 matches node:crypto
+  ---
+  duration_ms: 7.942926
+  type: 'test'
+  ...
+# Subtest: keccak-256 (Ethereum padding) known vectors
+ok 27 - keccak-256 (Ethereum padding) known vectors
+  ---
+  duration_ms: 2.777802
+  type: 'test'
+  ...
+# Subtest: EIP-55 specification vectors
+ok 28 - EIP-55 specification vectors
+  ---
+  duration_ms: 5.624183
+  type: 'test'
+  ...
+# Subtest: built-in token contract list is internally valid
+ok 29 - built-in token contract list is internally valid
+  ---
+  duration_ms: 5.096315
+  type: 'test'
+  ...
+# Subtest: bitcoin base58check and bech32/bech32m with witness rules
+ok 30 - bitcoin base58check and bech32/bech32m with witness rules
+  ---
+  duration_ms: 2.109637
+  type: 'test'
+  ...
+# Subtest: litecoin and dogecoin (generated with reference encoders)
+ok 31 - litecoin and dogecoin (generated with reference encoders)
+  ---
+  duration_ms: 2.543625
+  type: 'test'
+  ...
+# Subtest: tron, xrp, solana
+ok 32 - tron, xrp, solana
+  ---
+  duration_ms: 1.610639
+  type: 'test'
+  ...
+# Subtest: extraction rejects tx hashes and hex substrings, keeps case
+ok 33 - extraction rejects tx hashes and hex substrings, keeps case
+  ---
+  duration_ms: 0.952443
+  type: 'test'
+  ...
+# Subtest: extraction across families with boundaries and zero-width characters
+ok 34 - extraction across families with boundaries and zero-width characters
+  ---
+  duration_ms: 2.995978
+  type: 'test'
+  ...
+# Subtest: solana-length base58 needs wallet context and is rejected after signature/hash labels
+ok 35 - solana-length base58 needs wallet context and is rejected after signature/hash labels
+  ---
+  duration_ms: 1.418619
+  type: 'test'
+  ...
+# Subtest: EIP-681 URIs: chain id, value and ERC-20 transfer recipient
+ok 36 - EIP-681 URIs: chain id, value and ERC-20 transfer recipient
+  ---
+  duration_ms: 2.067511
+  type: 'test'
+  ...
+# Subtest: bitcoin/litecoin/dogecoin/tron/solana/xrp URIs
+ok 37 - bitcoin/litecoin/dogecoin/tron/solana/xrp URIs
+  ---
+  duration_ms: 2.059399
+  type: 'test'
+  ...
+# Subtest: extractAll: token contract inside a transfer URI is not the payment target
+ok 38 - extractAll: token contract inside a transfer URI is not the payment target
+  ---
+  duration_ms: 1.532713
+  type: 'test'
+  ...
+# Subtest: network hints: canonical mapping and priority
+ok 39 - network hints: canonical mapping and priority
+  ---
+  duration_ms: 5.347266
+  type: 'test'
+  ...
+# Subtest: deposit: words + structure
+ok 40 - deposit: words + structure
+  ---
+  duration_ms: 10.874365
+  type: 'test'
+  ...
+# Subtest: recharge / top up / fund your account / payment instruction
+ok 41 - recharge / top up / fund your account / payment instruction
+  ---
+  duration_ms: 1.025419
+  type: 'test'
+  ...
+# Subtest: withdrawal never counts as deposit
+ok 42 - withdrawal never counts as deposit
+  ---
+  duration_ms: 1.047703
+  type: 'test'
+  ...
+# Subtest: examples: placeholder, e.g., docs code blocks, well-known addresses
+ok 43 - examples: placeholder, e.g., docs code blocks, well-known addresses
+  ---
+  duration_ms: 0.703824
+  type: 'test'
+  ...
+# Subtest: transaction history and contract/token
+ok 44 - transaction history and contract/token
+  ---
+  duration_ms: 5.068263
+  type: 'test'
+  ...
+# Subtest: unrelated and unknown
+ok 45 - unrelated and unknown
+  ---
+  duration_ms: 1.044709
+  type: 'test'
+  ...
+# Subtest: hidden-panel cue lowers confidence
+ok 46 - hidden-panel cue lowers confidence
+  ---
+  duration_ms: 0.691425
+  type: 'test'
+  ...
+# Subtest: key paths from script config / network responses
+ok 47 - key paths from script config / network responses
+  ---
+  duration_ms: 3.857425
+  type: 'test'
+  ...
+# Subtest: scanJson records key paths, sibling hints and never invokes getters
+ok 48 - scanJson records key paths, sibling hints and never invokes getters
+  ---
+  duration_ms: 1.647567
+  type: 'test'
+  ...
+# Subtest: scanScriptText: JS config with approximate key paths
+ok 49 - scanScriptText: JS config with approximate key paths
+  ---
+  duration_ms: 1.150444
+  type: 'test'
+  ...
+# Subtest: canonical identity and observationId
+ok 50 - canonical identity and observationId
+  ---
+  duration_ms: 0.304034
+  type: 'test'
+  ...
+# Subtest: legacy network labels keep v0.8 UI/verifier semantics
+ok 51 - legacy network labels keep v0.8 UI/verifier semantics
+  ---
+  duration_ms: 0.166614
+  type: 'test'
+  ...
+# Subtest: main-world/wallet-core.js is a byte-identical copy of wallet-core.js
+ok 52 - main-world/wallet-core.js is a byte-identical copy of wallet-core.js
+  ---
+  duration_ms: 1.074778
+  type: 'test'
+  ...
+1..52
+# tests 52
+# suites 0
+# pass 52
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1491.543196

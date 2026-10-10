@@ -1,0 +1,1136 @@
+{
+  "generated_at": "2026-09-23T20:34:30.663Z",
+  "seeds": 5,
+  "investigation_budget": 12,
+  "discovery_budget": 8,
+  "module_job_budget": 60,
+  "days": 5,
+  "ticks_per_day": 8,
+  "summary": {
+    "investigations": {
+      "v4": 10.4,
+      "v5": 12
+    },
+    "investigator_runs": {
+      "v4": 10.4,
+      "v5": 12
+    },
+    "useful_unique_results": {
+      "v4": 9.4,
+      "v5": 14.8
+    },
+    "unique_wallets_revealed": {
+      "v4": 9.4,
+      "v5": 14.8
+    },
+    "useful_sites": {
+      "v4": 9.4,
+      "v5": 12.2
+    },
+    "useful_evidence_items": {
+      "v4": 9.6,
+      "v5": 17
+    },
+    "duplicate_investigations": {
+      "v4": 0.8,
+      "v5": 1.2
+    },
+    "duplicate_rate": {
+      "v4": 0.077,
+      "v5": 0.1
+    },
+    "dead_or_low_value_jobs": {
+      "v4": 0.2,
+      "v5": 1.6
+    },
+    "non_scam_investigations": {
+      "v4": 0,
+      "v5": 0
+    },
+    "module_jobs": {
+      "v4": 28,
+      "v5": 42.4
+    },
+    "wasted_jobs": {
+      "v4": 6,
+      "v5": 7
+    },
+    "actions_per_useful_result": {
+      "v4": 3.01,
+      "v5": 2.912
+    },
+    "human_interventions": {
+      "v4": 1.2,
+      "v5": 0.4
+    },
+    "human_starts": {
+      "v4": 1,
+      "v5": 0
+    },
+    "checkpoints_resolved": {
+      "v4": 0.2,
+      "v5": 0.4
+    },
+    "contradiction_reviews": {
+      "v4": 0,
+      "v5": 0
+    },
+    "report_approvals_requested": {
+      "v4": 0,
+      "v5": 0
+    },
+    "discovery_requests": {
+      "v4": 8,
+      "v5": 8
+    },
+    "discovery_new_scam_sites": {
+      "v4": 7.2,
+      "v5": 9
+    },
+    "saturation": {
+      "v4": 0.6,
+      "v5": 0.425
+    },
+    "time_to_first_useful_tick": {
+      "v4": 1,
+      "v5": 1
+    },
+    "mean_tick_of_useful": {
+      "v4": 4.68,
+      "v5": 8.26
+    },
+    "useful_after_day1": {
+      "v4": 1.8,
+      "v5": 5.6
+    },
+    "model_calls": {
+      "v4": 0,
+      "v5": 0
+    },
+    "model_tokens": {
+      "v4": 0,
+      "v5": 0
+    },
+    "model_cost_usd": {
+      "v4": 0,
+      "v5": 0
+    },
+    "campaigns_completed": {
+      "v4": 0,
+      "v5": 3.2
+    },
+    "campaigns_total": {
+      "v4": 1,
+      "v5": 4.4
+    },
+    "revisits": {
+      "v4": 0,
+      "v5": 7.8
+    },
+    "useful_revisits": {
+      "v4": 0,
+      "v5": 5.6
+    },
+    "useful_revisit_rate": {
+      "v4": 0,
+      "v5": 0.72
+    },
+    "world_changes_on_surfaced_sites": {
+      "v4": 17.2,
+      "v5": 18.2
+    },
+    "changes_reobserved_by_modules": {
+      "v4": 0,
+      "v5": 5
+    },
+    "work_started": {
+      "v4": 18.4,
+      "v5": 55.2
+    },
+    "useful_per_started_work": {
+      "v4": 0.51,
+      "v5": 0.267
+    },
+    "useful_per_tick": {
+      "v4": 0.235,
+      "v5": 0.37
+    }
+  },
+  "per_seed": {
+    "v4": [
+      {
+        "investigations": 10,
+        "investigator_runs": 10,
+        "useful_unique_results": 10,
+        "unique_wallets_revealed": 10,
+        "useful_sites": 10,
+        "useful_evidence_items": 10,
+        "duplicate_investigations": 0,
+        "duplicate_rate": 0,
+        "dead_or_low_value_jobs": 0,
+        "non_scam_investigations": 0,
+        "module_jobs": 28,
+        "wasted_jobs": 4,
+        "actions_per_useful_result": 2.8,
+        "human_interventions": 1,
+        "human_starts": 1,
+        "checkpoints_resolved": 0,
+        "contradiction_reviews": 0,
+        "report_approvals_requested": 0,
+        "discovery_requests": 8,
+        "discovery_new_scam_sites": 7,
+        "saturation": 0.5,
+        "time_to_first_useful_tick": 1,
+        "mean_tick_of_useful": 4.5,
+        "useful_after_day1": 2,
+        "model_calls": 0,
+        "model_tokens": 0,
+        "model_cost_usd": 0,
+        "campaigns_completed": 0,
+        "campaigns_total": 1,
+        "revisits": 0,
+        "useful_revisits": 0,
+        "useful_revisit_rate": 0,
+        "world_changes_on_surfaced_sites": 16,
+        "changes_reobserved_by_modules": 0,
+        "work_started": 18,
+        "useful_per_started_work": 0.556,
+        "useful_per_tick": 0.25,
+        "wall_ms": 7600,
+        "diagnostic": {
+          "campaign": {
+            "status": "BUDGET_EXHAUSTED",
+            "stop_reason": "Campaign budget reached."
+          },
+          "ops": [
+            {
+              "kind": "investigate_candidate",
+              "status": "done",
+              "n": 10
+            },
+            {
+              "kind": "investigate_candidate",
+              "status": "suppressed",
+              "n": 12
+            },
+            {
+              "kind": "test_hypothesis",
+              "status": "done",
+              "n": 8
+            },
+            {
+              "kind": "test_hypothesis",
+              "status": "open",
+              "n": 9
+            },
+            {
+              "kind": "test_hypothesis",
+              "status": "saturated",
+              "n": 3
+            }
+          ],
+          "via": {
+            "investigate": 10,
+            "recheck": 0,
+            "checkpoint": 0
+          }
+        }
+      },
+      {
+        "investigations": 10,
+        "investigator_runs": 10,
+        "useful_unique_results": 8,
+        "unique_wallets_revealed": 8,
+        "useful_sites": 8,
+        "useful_evidence_items": 9,
+        "duplicate_investigations": 1,
+        "duplicate_rate": 0.1,
+        "dead_or_low_value_jobs": 0,
+        "non_scam_investigations": 0,
+        "module_jobs": 26,
+        "wasted_jobs": 7,
+        "actions_per_useful_result": 3.25,
+        "human_interventions": 2,
+        "human_starts": 1,
+        "checkpoints_resolved": 1,
+        "contradiction_reviews": 0,
+        "report_approvals_requested": 0,
+        "discovery_requests": 8,
+        "discovery_new_scam_sites": 7,
+        "saturation": 0.625,
+        "time_to_first_useful_tick": 1,
+        "mean_tick_of_useful": 4.6,
+        "useful_after_day1": 0,
+        "model_calls": 0,
+        "model_tokens": 0,
+        "model_cost_usd": 0,
+        "campaigns_completed": 0,
+        "campaigns_total": 1,
+        "revisits": 0,
+        "useful_revisits": 0,
+        "useful_revisit_rate": 0,
+        "world_changes_on_surfaced_sites": 13,
+        "changes_reobserved_by_modules": 0,
+        "work_started": 18,
+        "useful_per_started_work": 0.444,
+        "useful_per_tick": 0.2,
+        "wall_ms": 8004,
+        "diagnostic": {
+          "campaign": {
+            "status": "BUDGET_EXHAUSTED",
+            "stop_reason": "Campaign budget reached."
+          },
+          "ops": [
+            {
+              "kind": "investigate_candidate",
+              "status": "done",
+              "n": 10
+            },
+            {
+              "kind": "investigate_candidate",
+              "status": "suppressed",
+              "n": 8
+            },
+            {
+              "kind": "test_hypothesis",
+              "status": "done",
+              "n": 8
+            },
+            {
+              "kind": "test_hypothesis",
+              "status": "open",
+              "n": 8
+            },
+            {
+              "kind": "test_hypothesis",
+              "status": "saturated",
+              "n": 6
+            }
+          ],
+          "via": {
+            "investigate": 7,
+            "recheck": 0,
+            "checkpoint": 1
+          }
+        }
+      },
+      {
+        "investigations": 12,
+        "investigator_runs": 12,
+        "useful_unique_results": 11,
+        "unique_wallets_revealed": 11,
+        "useful_sites": 11,
+        "useful_evidence_items": 11,
+        "duplicate_investigations": 1,
+        "duplicate_rate": 0.083,
+        "dead_or_low_value_jobs": 0,
+        "non_scam_investigations": 0,
+        "module_jobs": 31,
+        "wasted_jobs": 6,
+        "actions_per_useful_result": 2.82,
+        "human_interventions": 1,
+        "human_starts": 1,
+        "checkpoints_resolved": 0,
+        "contradiction_reviews": 0,
+        "report_approvals_requested": 0,
+        "discovery_requests": 8,
+        "discovery_new_scam_sites": 7,
+        "saturation": 0.625,
+        "time_to_first_useful_tick": 1,
+        "mean_tick_of_useful": 5,
+        "useful_after_day1": 3,
+        "model_calls": 0,
+        "model_tokens": 0,
+        "model_cost_usd": 0,
+        "campaigns_completed": 0,
+        "campaigns_total": 1,
+        "revisits": 0,
+        "useful_revisits": 0,
+        "useful_revisit_rate": 0,
+        "world_changes_on_surfaced_sites": 21,
+        "changes_reobserved_by_modules": 0,
+        "work_started": 20,
+        "useful_per_started_work": 0.55,
+        "useful_per_tick": 0.275,
+        "wall_ms": 8575,
+        "diagnostic": {
+          "campaign": {
+            "status": "BUDGET_EXHAUSTED",
+            "stop_reason": "Campaign budget reached."
+          },
+          "ops": [
+            {
+              "kind": "investigate_candidate",
+              "status": "done",
+              "n": 12
+            },
+            {
+              "kind": "investigate_candidate",
+              "status": "suppressed",
+              "n": 13
+            },
+            {
+              "kind": "test_hypothesis",
+              "status": "done",
+              "n": 8
+            },
+            {
+              "kind": "test_hypothesis",
+              "status": "open",
+              "n": 11
+            },
+            {
+              "kind": "test_hypothesis",
+              "status": "saturated",
+              "n": 3
+            }
+          ],
+          "via": {
+            "investigate": 11,
+            "recheck": 0,
+            "checkpoint": 0
+          }
+        }
+      },
+      {
+        "investigations": 10,
+        "investigator_runs": 10,
+        "useful_unique_results": 10,
+        "unique_wallets_revealed": 10,
+        "useful_sites": 10,
+        "useful_evidence_items": 10,
+        "duplicate_investigations": 0,
+        "duplicate_rate": 0,
+        "dead_or_low_value_jobs": 0,
+        "non_scam_investigations": 0,
+        "module_jobs": 28,
+        "wasted_jobs": 5,
+        "actions_per_useful_result": 2.8,
+        "human_interventions": 1,
+        "human_starts": 1,
+        "checkpoints_resolved": 0,
+        "contradiction_reviews": 0,
+        "report_approvals_requested": 0,
+        "discovery_requests": 8,
+        "discovery_new_scam_sites": 9,
+        "saturation": 0.625,
+        "time_to_first_useful_tick": 1,
+        "mean_tick_of_useful": 4.5,
+        "useful_after_day1": 2,
+        "model_calls": 0,
+        "model_tokens": 0,
+        "model_cost_usd": 0,
+        "campaigns_completed": 0,
+        "campaigns_total": 1,
+        "revisits": 0,
+        "useful_revisits": 0,
+        "useful_revisit_rate": 0,
+        "world_changes_on_surfaced_sites": 20,
+        "changes_reobserved_by_modules": 0,
+        "work_started": 18,
+        "useful_per_started_work": 0.556,
+        "useful_per_tick": 0.25,
+        "wall_ms": 7918,
+        "diagnostic": {
+          "campaign": {
+            "status": "BUDGET_EXHAUSTED",
+            "stop_reason": "Campaign budget reached."
+          },
+          "ops": [
+            {
+              "kind": "investigate_candidate",
+              "status": "done",
+              "n": 10
+            },
+            {
+              "kind": "investigate_candidate",
+              "status": "suppressed",
+              "n": 8
+            },
+            {
+              "kind": "test_hypothesis",
+              "status": "done",
+              "n": 8
+            },
+            {
+              "kind": "test_hypothesis",
+              "status": "open",
+              "n": 13
+            },
+            {
+              "kind": "test_hypothesis",
+              "status": "saturated",
+              "n": 3
+            }
+          ],
+          "via": {
+            "investigate": 10,
+            "recheck": 0,
+            "checkpoint": 0
+          }
+        }
+      },
+      {
+        "investigations": 10,
+        "investigator_runs": 10,
+        "useful_unique_results": 8,
+        "unique_wallets_revealed": 8,
+        "useful_sites": 8,
+        "useful_evidence_items": 8,
+        "duplicate_investigations": 2,
+        "duplicate_rate": 0.2,
+        "dead_or_low_value_jobs": 1,
+        "non_scam_investigations": 0,
+        "module_jobs": 27,
+        "wasted_jobs": 8,
+        "actions_per_useful_result": 3.38,
+        "human_interventions": 1,
+        "human_starts": 1,
+        "checkpoints_resolved": 0,
+        "contradiction_reviews": 0,
+        "report_approvals_requested": 0,
+        "discovery_requests": 8,
+        "discovery_new_scam_sites": 6,
+        "saturation": 0.625,
+        "time_to_first_useful_tick": 1,
+        "mean_tick_of_useful": 4.8,
+        "useful_after_day1": 2,
+        "model_calls": 0,
+        "model_tokens": 0,
+        "model_cost_usd": 0,
+        "campaigns_completed": 0,
+        "campaigns_total": 1,
+        "revisits": 0,
+        "useful_revisits": 0,
+        "useful_revisit_rate": 0,
+        "world_changes_on_surfaced_sites": 16,
+        "changes_reobserved_by_modules": 0,
+        "work_started": 18,
+        "useful_per_started_work": 0.444,
+        "useful_per_tick": 0.2,
+        "wall_ms": 8033,
+        "diagnostic": {
+          "campaign": {
+            "status": "BUDGET_EXHAUSTED",
+            "stop_reason": "Campaign budget reached."
+          },
+          "ops": [
+            {
+              "kind": "investigate_candidate",
+              "status": "done",
+              "n": 10
+            },
+            {
+              "kind": "investigate_candidate",
+              "status": "suppressed",
+              "n": 6
+            },
+            {
+              "kind": "test_hypothesis",
+              "status": "done",
+              "n": 8
+            },
+            {
+              "kind": "test_hypothesis",
+              "status": "open",
+              "n": 7
+            },
+            {
+              "kind": "test_hypothesis",
+              "status": "saturated",
+              "n": 3
+            }
+          ],
+          "via": {
+            "investigate": 8,
+            "recheck": 0,
+            "checkpoint": 0
+          }
+        }
+      }
+    ],
+    "v5": [
+      {
+        "investigations": 12,
+        "investigator_runs": 12,
+        "useful_unique_results": 17,
+        "unique_wallets_revealed": 17,
+        "useful_sites": 13,
+        "useful_evidence_items": 17,
+        "duplicate_investigations": 0,
+        "duplicate_rate": 0,
+        "dead_or_low_value_jobs": 2,
+        "non_scam_investigations": 0,
+        "module_jobs": 44,
+        "wasted_jobs": 5,
+        "actions_per_useful_result": 2.59,
+        "human_interventions": 0,
+        "human_starts": 0,
+        "checkpoints_resolved": 0,
+        "contradiction_reviews": 0,
+        "report_approvals_requested": 0,
+        "discovery_requests": 8,
+        "discovery_new_scam_sites": 7,
+        "saturation": 0.625,
+        "time_to_first_useful_tick": 1,
+        "mean_tick_of_useful": 9.5,
+        "useful_after_day1": 7,
+        "model_calls": 0,
+        "model_tokens": 0,
+        "model_cost_usd": 0,
+        "campaigns_completed": 4,
+        "campaigns_total": 5,
+        "revisits": 7,
+        "useful_revisits": 7,
+        "useful_revisit_rate": 1,
+        "world_changes_on_surfaced_sites": 16,
+        "changes_reobserved_by_modules": 5,
+        "work_started": 58,
+        "useful_per_started_work": 0.293,
+        "useful_per_tick": 0.425,
+        "wall_ms": 8916,
+        "diagnostic": {
+          "work": [
+            {
+              "kind": "analyze_wallet",
+              "status": "done",
+              "n": 7
+            },
+            {
+              "kind": "campaign_step",
+              "status": "done",
+              "n": 5
+            },
+            {
+              "kind": "form_campaign",
+              "status": "done",
+              "n": 5
+            },
+            {
+              "kind": "inspect_infrastructure",
+              "status": "deferred",
+              "n": 3
+            },
+            {
+              "kind": "inspect_infrastructure",
+              "status": "done",
+              "n": 8
+            },
+            {
+              "kind": "investigate_candidate",
+              "status": "deferred",
+              "n": 29
+            },
+            {
+              "kind": "investigate_candidate",
+              "status": "done",
+              "n": 17
+            },
+            {
+              "kind": "revisit_changed_site",
+              "status": "done",
+              "n": 6
+            }
+          ],
+          "campaigns": [
+            {
+              "status": "COMPLETE",
+              "n": 4
+            },
+            {
+              "status": "RUNNING",
+              "n": 1
+            }
+          ],
+          "contradictions": [],
+          "budget": [
+            {
+              "kind": "discovery_requests",
+              "u": 8
+            },
+            {
+              "kind": "investigations",
+              "u": 12
+            },
+            {
+              "kind": "module_jobs",
+              "u": 13
+            }
+          ],
+          "via": {
+            "investigate": 10,
+            "recheck": 7,
+            "checkpoint": 0
+          }
+        }
+      },
+      {
+        "investigations": 12,
+        "investigator_runs": 12,
+        "useful_unique_results": 14,
+        "unique_wallets_revealed": 14,
+        "useful_sites": 12,
+        "useful_evidence_items": 19,
+        "duplicate_investigations": 1,
+        "duplicate_rate": 0.083,
+        "dead_or_low_value_jobs": 1,
+        "non_scam_investigations": 0,
+        "module_jobs": 40,
+        "wasted_jobs": 8,
+        "actions_per_useful_result": 2.86,
+        "human_interventions": 2,
+        "human_starts": 0,
+        "checkpoints_resolved": 2,
+        "contradiction_reviews": 0,
+        "report_approvals_requested": 0,
+        "discovery_requests": 8,
+        "discovery_new_scam_sites": 9,
+        "saturation": 0.375,
+        "time_to_first_useful_tick": 1,
+        "mean_tick_of_useful": 8.7,
+        "useful_after_day1": 4,
+        "model_calls": 0,
+        "model_tokens": 0,
+        "model_cost_usd": 0,
+        "campaigns_completed": 4,
+        "campaigns_total": 6,
+        "revisits": 8,
+        "useful_revisits": 4,
+        "useful_revisit_rate": 0.5,
+        "world_changes_on_surfaced_sites": 16,
+        "changes_reobserved_by_modules": 3,
+        "work_started": 55,
+        "useful_per_started_work": 0.255,
+        "useful_per_tick": 0.35,
+        "wall_ms": 8891,
+        "diagnostic": {
+          "work": [
+            {
+              "kind": "analyze_wallet",
+              "status": "done",
+              "n": 4
+            },
+            {
+              "kind": "campaign_step",
+              "status": "done",
+              "n": 6
+            },
+            {
+              "kind": "form_campaign",
+              "status": "done",
+              "n": 6
+            },
+            {
+              "kind": "inspect_infrastructure",
+              "status": "deferred",
+              "n": 1
+            },
+            {
+              "kind": "inspect_infrastructure",
+              "status": "done",
+              "n": 8
+            },
+            {
+              "kind": "investigate_candidate",
+              "status": "cancelled",
+              "n": 2
+            },
+            {
+              "kind": "investigate_candidate",
+              "status": "deferred",
+              "n": 30
+            },
+            {
+              "kind": "investigate_candidate",
+              "status": "done",
+              "n": 11
+            },
+            {
+              "kind": "revisit_changed_site",
+              "status": "done",
+              "n": 7
+            }
+          ],
+          "campaigns": [
+            {
+              "status": "COMPLETE",
+              "n": 4
+            },
+            {
+              "status": "RUNNING",
+              "n": 2
+            }
+          ],
+          "contradictions": [],
+          "budget": [
+            {
+              "kind": "discovery_requests",
+              "u": 8
+            },
+            {
+              "kind": "investigations",
+              "u": 12
+            },
+            {
+              "kind": "module_jobs",
+              "u": 11
+            }
+          ],
+          "via": {
+            "investigate": 8,
+            "recheck": 4,
+            "checkpoint": 2
+          }
+        }
+      },
+      {
+        "investigations": 12,
+        "investigator_runs": 12,
+        "useful_unique_results": 14,
+        "unique_wallets_revealed": 14,
+        "useful_sites": 11,
+        "useful_evidence_items": 16,
+        "duplicate_investigations": 3,
+        "duplicate_rate": 0.25,
+        "dead_or_low_value_jobs": 2,
+        "non_scam_investigations": 0,
+        "module_jobs": 44,
+        "wasted_jobs": 11,
+        "actions_per_useful_result": 3.14,
+        "human_interventions": 0,
+        "human_starts": 0,
+        "checkpoints_resolved": 0,
+        "contradiction_reviews": 0,
+        "report_approvals_requested": 0,
+        "discovery_requests": 8,
+        "discovery_new_scam_sites": 9,
+        "saturation": 0.5,
+        "time_to_first_useful_tick": 1,
+        "mean_tick_of_useful": 7.7,
+        "useful_after_day1": 6,
+        "model_calls": 0,
+        "model_tokens": 0,
+        "model_cost_usd": 0,
+        "campaigns_completed": 3,
+        "campaigns_total": 3,
+        "revisits": 10,
+        "useful_revisits": 6,
+        "useful_revisit_rate": 0.6,
+        "world_changes_on_surfaced_sites": 22,
+        "changes_reobserved_by_modules": 7,
+        "work_started": 59,
+        "useful_per_started_work": 0.237,
+        "useful_per_tick": 0.35,
+        "wall_ms": 9153,
+        "diagnostic": {
+          "work": [
+            {
+              "kind": "analyze_wallet",
+              "status": "done",
+              "n": 6
+            },
+            {
+              "kind": "campaign_step",
+              "status": "done",
+              "n": 3
+            },
+            {
+              "kind": "form_campaign",
+              "status": "done",
+              "n": 3
+            },
+            {
+              "kind": "inspect_infrastructure",
+              "status": "deferred",
+              "n": 3
+            },
+            {
+              "kind": "inspect_infrastructure",
+              "status": "done",
+              "n": 8
+            },
+            {
+              "kind": "investigate_candidate",
+              "status": "cancelled",
+              "n": 3
+            },
+            {
+              "kind": "investigate_candidate",
+              "status": "deferred",
+              "n": 34
+            },
+            {
+              "kind": "investigate_candidate",
+              "status": "done",
+              "n": 13
+            },
+            {
+              "kind": "revisit_changed_site",
+              "status": "done",
+              "n": 9
+            }
+          ],
+          "campaigns": [
+            {
+              "status": "COMPLETE",
+              "n": 3
+            }
+          ],
+          "contradictions": [],
+          "budget": [
+            {
+              "kind": "discovery_requests",
+              "u": 8
+            },
+            {
+              "kind": "investigations",
+              "u": 12
+            },
+            {
+              "kind": "module_jobs",
+              "u": 15
+            }
+          ],
+          "via": {
+            "investigate": 8,
+            "recheck": 6,
+            "checkpoint": 0
+          }
+        }
+      },
+      {
+        "investigations": 12,
+        "investigator_runs": 12,
+        "useful_unique_results": 18,
+        "unique_wallets_revealed": 18,
+        "useful_sites": 15,
+        "useful_evidence_items": 19,
+        "duplicate_investigations": 1,
+        "duplicate_rate": 0.083,
+        "dead_or_low_value_jobs": 0,
+        "non_scam_investigations": 0,
+        "module_jobs": 47,
+        "wasted_jobs": 4,
+        "actions_per_useful_result": 2.61,
+        "human_interventions": 0,
+        "human_starts": 0,
+        "checkpoints_resolved": 0,
+        "contradiction_reviews": 0,
+        "report_approvals_requested": 0,
+        "discovery_requests": 8,
+        "discovery_new_scam_sites": 12,
+        "saturation": 0.25,
+        "time_to_first_useful_tick": 1,
+        "mean_tick_of_useful": 11.4,
+        "useful_after_day1": 8,
+        "model_calls": 0,
+        "model_tokens": 0,
+        "model_cost_usd": 0,
+        "campaigns_completed": 3,
+        "campaigns_total": 5,
+        "revisits": 8,
+        "useful_revisits": 8,
+        "useful_revisit_rate": 1,
+        "world_changes_on_surfaced_sites": 21,
+        "changes_reobserved_by_modules": 4,
+        "work_started": 61,
+        "useful_per_started_work": 0.295,
+        "useful_per_tick": 0.45,
+        "wall_ms": 8915,
+        "diagnostic": {
+          "work": [
+            {
+              "kind": "analyze_wallet",
+              "status": "done",
+              "n": 8
+            },
+            {
+              "kind": "campaign_step",
+              "status": "done",
+              "n": 5
+            },
+            {
+              "kind": "form_campaign",
+              "status": "done",
+              "n": 5
+            },
+            {
+              "kind": "inspect_infrastructure",
+              "status": "done",
+              "n": 8
+            },
+            {
+              "kind": "investigate_candidate",
+              "status": "cancelled",
+              "n": 4
+            },
+            {
+              "kind": "investigate_candidate",
+              "status": "deferred",
+              "n": 23
+            },
+            {
+              "kind": "investigate_candidate",
+              "status": "done",
+              "n": 9
+            },
+            {
+              "kind": "revisit_changed_site",
+              "status": "done",
+              "n": 8
+            }
+          ],
+          "campaigns": [
+            {
+              "status": "COMPLETE",
+              "n": 3
+            },
+            {
+              "status": "RUNNING",
+              "n": 2
+            }
+          ],
+          "contradictions": [],
+          "budget": [
+            {
+              "kind": "discovery_requests",
+              "u": 8
+            },
+            {
+              "kind": "investigations",
+              "u": 12
+            },
+            {
+              "kind": "module_jobs",
+              "u": 16
+            }
+          ],
+          "via": {
+            "investigate": 10,
+            "recheck": 8,
+            "checkpoint": 0
+          }
+        }
+      },
+      {
+        "investigations": 12,
+        "investigator_runs": 12,
+        "useful_unique_results": 11,
+        "unique_wallets_revealed": 11,
+        "useful_sites": 10,
+        "useful_evidence_items": 14,
+        "duplicate_investigations": 1,
+        "duplicate_rate": 0.083,
+        "dead_or_low_value_jobs": 3,
+        "non_scam_investigations": 0,
+        "module_jobs": 37,
+        "wasted_jobs": 7,
+        "actions_per_useful_result": 3.36,
+        "human_interventions": 0,
+        "human_starts": 0,
+        "checkpoints_resolved": 0,
+        "contradiction_reviews": 0,
+        "report_approvals_requested": 0,
+        "discovery_requests": 8,
+        "discovery_new_scam_sites": 8,
+        "saturation": 0.375,
+        "time_to_first_useful_tick": 1,
+        "mean_tick_of_useful": 4,
+        "useful_after_day1": 3,
+        "model_calls": 0,
+        "model_tokens": 0,
+        "model_cost_usd": 0,
+        "campaigns_completed": 2,
+        "campaigns_total": 3,
+        "revisits": 6,
+        "useful_revisits": 3,
+        "useful_revisit_rate": 0.5,
+        "world_changes_on_surfaced_sites": 16,
+        "changes_reobserved_by_modules": 6,
+        "work_started": 43,
+        "useful_per_started_work": 0.256,
+        "useful_per_tick": 0.275,
+        "wall_ms": 9017,
+        "diagnostic": {
+          "work": [
+            {
+              "kind": "analyze_wallet",
+              "status": "done",
+              "n": 3
+            },
+            {
+              "kind": "campaign_step",
+              "status": "done",
+              "n": 3
+            },
+            {
+              "kind": "form_campaign",
+              "status": "done",
+              "n": 3
+            },
+            {
+              "kind": "inspect_infrastructure",
+              "status": "deferred",
+              "n": 3
+            },
+            {
+              "kind": "inspect_infrastructure",
+              "status": "done",
+              "n": 8
+            },
+            {
+              "kind": "investigate_candidate",
+              "status": "cancelled",
+              "n": 5
+            },
+            {
+              "kind": "investigate_candidate",
+              "status": "deferred",
+              "n": 28
+            },
+            {
+              "kind": "investigate_candidate",
+              "status": "done",
+              "n": 10
+            },
+            {
+              "kind": "revisit_changed_site",
+              "status": "done",
+              "n": 5
+            }
+          ],
+          "campaigns": [
+            {
+              "status": "COMPLETE",
+              "n": 2
+            },
+            {
+              "status": "RUNNING",
+              "n": 1
+            }
+          ],
+          "contradictions": [],
+          "budget": [
+            {
+              "kind": "discovery_requests",
+              "u": 8
+            },
+            {
+              "kind": "investigations",
+              "u": 12
+            },
+            {
+              "kind": "module_jobs",
+              "u": 8
+            }
+          ],
+          "via": {
+            "investigate": 8,
+            "recheck": 3,
+            "checkpoint": 0
+          }
+        }
+      }
+    ]
+  }
+}

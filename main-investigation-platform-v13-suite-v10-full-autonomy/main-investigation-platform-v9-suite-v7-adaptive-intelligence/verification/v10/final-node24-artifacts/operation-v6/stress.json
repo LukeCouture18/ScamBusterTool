@@ -1,0 +1,112 @@
+{
+  "ok": true,
+  "rows": {
+    "entities": 10000,
+    "relationships": 50100,
+    "evidence": 5000,
+    "investigations": 300,
+    "operations": 25,
+    "projected_edges": 50100
+  },
+  "timings": [
+    {
+      "name": "load_10000_entities_50100_relationships",
+      "ms": 908.38
+    },
+    {
+      "name": "director_projection_tick",
+      "ms": 4312.76
+    },
+    {
+      "name": "director_projection_tick",
+      "ms": 2638.09
+    },
+    {
+      "name": "director_projection_tick",
+      "ms": 3268.19
+    },
+    {
+      "name": "director_projection_tick",
+      "ms": 2577.96
+    },
+    {
+      "name": "director_projection_tick",
+      "ms": 1795.81
+    },
+    {
+      "name": "director_projection_tick",
+      "ms": 2825.93
+    },
+    {
+      "name": "director_projection_tick",
+      "ms": 3477.4
+    },
+    {
+      "name": "director_projection_tick",
+      "ms": 4581.52
+    },
+    {
+      "name": "director_projection_tick",
+      "ms": 3954.24
+    },
+    {
+      "name": "director_projection_tick",
+      "ms": 2434.12
+    },
+    {
+      "name": "director_projection_tick",
+      "ms": 2461.9
+    },
+    {
+      "name": "director_projection_tick",
+      "ms": 3156.82
+    },
+    {
+      "name": "director_projection_tick",
+      "ms": 7060.31
+    },
+    {
+      "name": "director_projection_tick",
+      "ms": 3308.44
+    },
+    {
+      "name": "briefing_and_graph_first_page",
+      "ms": 20.59
+    },
+    {
+      "name": "paginated_graph_query",
+      "ms": 16.23
+    },
+    {
+      "name": "wallet_view",
+      "ms": 23.96
+    },
+    {
+      "name": "edge_explanation",
+      "ms": 26.38
+    },
+    {
+      "name": "event_processing_10_wakeups",
+      "ms": 423.96
+    },
+    {
+      "name": "idle_portfolio_tick",
+      "ms": 1822.1
+    }
+  ],
+  "memory": {
+    "rss_before_bytes": 162451456,
+    "rss_after_bytes": 410497024,
+    "peak_rss_kb": 400876
+  },
+  "database": {
+    "before_bytes": 2297856,
+    "after_bytes": 101076992,
+    "growth_bytes": 98779136
+  },
+  "limits": {
+    "graph_page": 100,
+    "entity_page": 200,
+    "timeline_page": 100
+  }
+}

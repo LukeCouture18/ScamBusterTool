@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Wallet Logger Test Suite</title>
+  <link rel="stylesheet" href="../ui.css">
+  <link rel="stylesheet" href="test-page.css">
+</head>
+<body>
+  <main>
+    <header>
+      <div><h1>Wallet Logger Test Suite</h1><p>Local tests only. No saved wallet data is changed.</p></div>
+      <button id="runTests" class="primary">Run tests</button>
+    </header>
+    <section class="summary"><strong id="summary">Preparing tests…</strong><span id="timing"></span></section>
+    <section id="results" class="results"></section>
+    <section class="fixture">
+      <h2>Dynamic insertion fixture</h2>
+      <p>The test runner inserts a wallet below after the observer starts.</p>
+      <div id="dynamicFixture" class="deposit-panel"><strong>Selected network: TRC20</strong><span>USDT deposit address</span></div>
+    </section>
+    <section class="fixture" id="inputFixture">
+      <h2>Read-only deposit field</h2>
+      <label>ETH deposit address <input readonly value="0xde0B295669a9FD93d5F28D9Ec85E40f4cb697BAe"></label>
+    </section>
+    <section class="fixture" id="modalFixture" role="dialog" aria-label="USDT deposit modal">
+      <h2>Deposit USDT</h2><p>Selected network: TRC20</p><p>Deposit address: TXLAQ63Xg1NAzckPwKHvzw7CSEmLMEqcdj</p>
+    </section>
+    <section class="fixture deposit-panel" id="qrWalletFixture">
+      <h2>Bitcoin deposit</h2><p>Scan QR code or copy the receiving address.</p>
+      <img class="qr-code" width="128" height="128" src="fixtures/btc-deposit-qr.svg" alt="Bitcoin deposit QR" data-test-qr="bitcoin:1BoatSLRHtKNngkdXEeobR76b53LETtpyT">
+    </section>
+    <section class="fixture deposit-panel" id="qrInvalidFixture">
+      <h2>Crypto payment QR</h2><p>Scan this QR code.</p>
+      <img class="qr-code" width="128" height="128" src="fixtures/random-login-qr.svg" alt="Random non-wallet QR" data-test-qr="https://example.test/sign-in">
+    </section>
+    <section class="fixture deposit-panel" id="selectorFixture">
+      <h2>Deposit address</h2>
+      <label>Token <select name="token"><option selected>USDT</option></select></label>
+      <label>Network <select name="network"><option selected>BEP20</option></select></label>
+    </section>
+    <section class="fixture" id="shadowFixture"><h2>Shadow DOM fixture</h2><div id="shadowHost"></div></section>
+  </main>
+  <script src="../detector.js"></script>
+  <script src="../qr-scanner.js"></script>
+  <script src="../evidence-score.js"></script>
+  <script src="../blockchain-verifier.js"></script>
+  <script src="../record-store.js"></script>
+  <script src="../organization-store.js"></script>
+  <script src="../integration-export.js"></script>
+  <script src="../backup.js"></script>
+  <script src="test-page.js"></script>
+</body>
+</html>

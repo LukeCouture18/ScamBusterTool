@@ -1,0 +1,21 @@
+2026-10-04 13:04:36,534 INFO scamhunter.migrations: Migration: added feedback_attribution.novel_candidates
+2026-10-04 13:04:36,535 INFO scamhunter.migrations: Migration: added feedback_attribution.duplicate_candidates
+2026-10-04 13:04:36,536 INFO scamhunter.migrations: Migration: added feedback_attribution.api_cost
+2026-10-04 13:04:36,537 INFO scamhunter.migrations: Migration: added candidate_registry.novelty_score
+2026-10-04 13:04:36,538 INFO scamhunter.migrations: Migration: added candidate_registry.last_decision
+2026-10-04 13:04:36,538 INFO scamhunter.migrations: Migration: added pivot_technique_stats.novel_candidates
+2026-10-04 13:04:36,540 INFO scamhunter.db: Schema: 5 migration(s) run, 1 changed the schema.
+2026-10-04 13:04:36,540 INFO scamhunter.review: Database schema upgraded: 5 migration(s) run, 1 changed the schema.
+2026-10-04 13:04:36,540 INFO scamhunter.review: No Main Platform configured; running standalone and queueing everything locally.
+ * Serving Flask app 'app.review.server'
+ * Debug mode: off
+2026-10-04 13:04:36,588 INFO werkzeug: [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:48587
+2026-10-04 13:04:36,588 INFO werkzeug: [33mPress CTRL+C to quit[0m
+2026-10-04 13:04:36,718 INFO werkzeug: 127.0.0.1 - - [04/Oct/2026 13:04:36] "GET / HTTP/1.1" 200 -
+2026-10-04 13:04:51,251 INFO werkzeug: 127.0.0.1 - - [04/Oct/2026 13:04:51] "GET / HTTP/1.1" 200 -
+2026-10-04 13:04:51,361 INFO werkzeug: 127.0.0.1 - - [04/Oct/2026 13:04:51] "GET /api/v2/candidates HTTP/1.1" 200 -
+2026-10-04 13:04:51,369 INFO werkzeug: 127.0.0.1 - - [04/Oct/2026 13:04:51] "GET /api/v2/campaigns HTTP/1.1" 200 -
+2026-10-04 13:04:51,384 INFO werkzeug: 127.0.0.1 - - [04/Oct/2026 13:04:51] "GET /api/v2/investigation/frontier HTTP/1.1" 200 -
+2026-10-04 13:04:51,391 INFO werkzeug: 127.0.0.1 - - [04/Oct/2026 13:04:51] "GET /api/v2/operations/status HTTP/1.1" 200 -
+2026-10-04 13:04:51,421 INFO werkzeug: 127.0.0.1 - - [04/Oct/2026 13:04:51] "GET /api/v2/stats HTTP/1.1" 200 -

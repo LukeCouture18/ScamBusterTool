@@ -1,0 +1,143 @@
+{
+ "states": 64,
+ "summary": {
+  "v7-exploit": {
+   "states": 64,
+   "optimal_choice_rate": 0.625,
+   "near_optimal_rate": 0.672,
+   "mean_regret": 0.244,
+   "total_regret": 15.617
+  },
+  "v7": {
+   "states": 64,
+   "optimal_choice_rate": 0.625,
+   "near_optimal_rate": 0.672,
+   "mean_regret": 0.271,
+   "total_regret": 17.325
+  },
+  "v6": {
+   "states": 64,
+   "optimal_choice_rate": 0.031,
+   "near_optimal_rate": 0.031,
+   "mean_regret": 2.16,
+   "total_regret": 138.241
+  },
+  "v8": {
+   "states": 64,
+   "optimal_choice_rate": 0.578,
+   "near_optimal_rate": 0.625,
+   "mean_regret": 0.261,
+   "total_regret": 16.717
+  },
+  "v9": {
+   "states": 64,
+   "optimal_choice_rate": 0.688,
+   "near_optimal_rate": 0.734,
+   "mean_regret": 0.176,
+   "total_regret": 11.264
+  },
+  "cheapest": {
+   "states": 64,
+   "optimal_choice_rate": 0.438,
+   "near_optimal_rate": 0.484,
+   "mean_regret": 0.805,
+   "total_regret": 51.491
+  },
+  "random": {
+   "states": 64,
+   "optimal_choice_rate": 0.359,
+   "near_optimal_rate": 0.359,
+   "mean_regret": 0.895,
+   "total_regret": 57.262
+  },
+  "confirmation": {
+   "states": 64,
+   "optimal_choice_rate": 0.391,
+   "near_optimal_rate": 0.391,
+   "mean_regret": 0.41,
+   "total_regret": 26.21
+  }
+ },
+ "by_type": {
+  "useful_vs_saturated_finder_branch": {
+   "v7-exploit": "5/8 regret 4.304",
+   "v7": "5/8 regret 4.304",
+   "v6": "0/8 regret 33.231",
+   "v8": "2/8 regret 4.819",
+   "v9": "5/8 regret 4.304",
+   "cheapest": "5/8 regret 4.304",
+   "random": "1/8 regret 13.217",
+   "confirmation": "2/8 regret 4.819"
+  },
+  "generic_template_vs_discriminating_wallet": {
+   "v7-exploit": "4/8 regret 0.753",
+   "v7": "4/8 regret 0.753",
+   "v6": "2/8 regret 5.506",
+   "v8": "4/8 regret 0.753",
+   "v9": "4/8 regret 0.753",
+   "cheapest": "4/8 regret 0.753",
+   "random": "4/8 regret 3.329",
+   "confirmation": "6/8 regret 1.861"
+  },
+  "new_contradiction_vs_confirmation": {
+   "v7-exploit": "4/8 regret 1.302",
+   "v7": "4/8 regret 1.302",
+   "v6": "0/8 regret 5.423",
+   "v8": "4/8 regret 1.302",
+   "v9": "4/8 regret 1.302",
+   "cheapest": "4/8 regret 1.302",
+   "random": "3/8 regret 2.098",
+   "confirmation": "0/8 regret 4.074"
+  },
+  "replacement_hunt_vs_exhausted_artifact": {
+   "v7-exploit": "2/8 regret 4.66",
+   "v7": "4/8 regret 4.311",
+   "v6": "0/8 regret 17.07",
+   "v8": "6/8 regret 0.307",
+   "v9": "6/8 regret 0.307",
+   "cheapest": "2/8 regret 4.66",
+   "random": "1/8 regret 10.964",
+   "confirmation": "2/8 regret 3.039"
+  },
+  "novel_exploration_opportunity": {
+   "v7-exploit": "8/8 regret 0",
+   "v7": "8/8 regret 0",
+   "v6": "0/8 regret 5.067",
+   "v8": "8/8 regret 0",
+   "v9": "8/8 regret 0",
+   "cheapest": "8/8 regret 0",
+   "random": "5/8 regret 1.5",
+   "confirmation": "0/8 regret 5.099"
+  },
+  "two_competing_operations": {
+   "v7-exploit": "7/8 regret 0.926",
+   "v7": "6/8 regret 1.569",
+   "v6": "0/8 regret 24.097",
+   "v8": "7/8 regret 0.926",
+   "v9": "7/8 regret 0.926",
+   "cheapest": "0/8 regret 7.757",
+   "random": "4/8 regret 6.078",
+   "confirmation": "7/8 regret 0.926"
+  },
+  "time_sensitive_disappearing_site": {
+   "v7-exploit": "5/8 regret 2.41",
+   "v7": "5/8 regret 2.41",
+   "v6": "0/8 regret 14.318",
+   "v8": "1/8 regret 7.348",
+   "v9": "5/8 regret 2.41",
+   "cheapest": "5/8 regret 2.41",
+   "random": "4/8 regret 4.731",
+   "confirmation": "3/8 regret 5.13"
+  },
+  "expensive_high_value_vs_cheap_low_value": {
+   "v7-exploit": "5/8 regret 1.262",
+   "v7": "4/8 regret 2.676",
+   "v6": "0/8 regret 33.529",
+   "v8": "5/8 regret 1.262",
+   "v9": "5/8 regret 1.262",
+   "cheapest": "0/8 regret 30.305",
+   "random": "1/8 regret 15.345",
+   "confirmation": "5/8 regret 1.262"
+  }
+ }
+}

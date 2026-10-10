@@ -1,0 +1,14 @@
+[MainPlatformV6] Initialized integration module 'wallet_investigator' with capabilities: [
+  'blockchain-analysis',
+  'wallet-validation',
+  'counterparty-discovery',
+  'fund-flow-analysis',
+  'controlled-wallet-expansion'
+]
+[Wallet Investigator] Initializing SQLite database...
+(node:6) [UNDICI-EHPA] Warning: EnvHttpProxyAgent is experimental, expect them to change at any time.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[Database] Loaded persistent database from /workspace/scratch/b4f855937e46/module-install-check/wallet-investigator/data/wallet_investigator.sqlite (217088 bytes)
+[Migrations] Migration status: 0 applied. Current schema version: v2
+[Wallet Investigator] Running in production mode
+[Wallet Investigator] Server running on http://127.0.0.1:43218

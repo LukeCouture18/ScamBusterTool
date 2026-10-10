@@ -1,0 +1,23 @@
+
+=== integration:v6 (10 steps) ===
+--- integration:v6 1/10: node --experimental-sqlite tests/v6-integration.mjs
+{"ok":true,"events":14,"jobs":6,"decisions":11}
+--- integration:v6 2/10: node --experimental-sqlite tests/v6-three-modules.mjs
+{"ok":true,"modules":["site_finder","site_investigator","crypto_wallet_logger"],"triage":1,"claimed_job":"fdd6ce90-3611-4b77-b0e5-c7514e6eb78a","relationship_evidence":1,"wallet_sources":2,"logger_replay":true}
+--- integration:v6 3/10: node --experimental-sqlite tests/v6-feedback-local.mjs
+{"ok":true,"receiver":"127.0.0.1","synthetic":true,"attempts":8,"signature":true,"retry":true,"idempotent":true,"ack":true,"exhaustion_review":true}
+--- integration:v6 4/10: node tests/logger-queue-local.mjs
+{"ok":true,"synthetic":true,"stable_id":true,"no_silent_drop":true}
+--- integration:v6 5/10: python tests/site-bridge-synthetic.py
+{"ok": true, "synthetic": true, "record_types": {"sites": 1, "pages": 1, "wallets": 1, "deposit_options": 0, "evidence": 1, "relationships": 1}}
+--- integration:v6 6/10: python tests/site-bridge-worker.py
+{"ok": true, "synthetic": true, "registered": true, "claimed": true, "ingested": true, "completed": true, "provider_failure_retried": true}
+--- integration:v6 7/10: python tests/finder-feedback-synthetic.py
+{"ok": true, "downstream_wallets": 1, "self_report_excluded": true}
+--- integration:v6 8/10: python tests/finder-push-synthetic.py
+{"ok": true, "synthetic": true, "authenticated": true, "idempotent": true, "ack": true}
+--- integration:v6 9/10: python tests/scheduler-local.py
+{"ok": true, "synthetic": true, "receiver": "127.0.0.1", "feedback": true, "monitoring": true, "inbox_supply": true}
+--- integration:v6 10/10: node --experimental-sqlite tests/scheduler-fallback-local.mjs
+{"ok":true,"synthetic":true,"fallback":"local_scheduler","tick":["/api/v1/feedback/dispatch","/api/v1/monitoring/tick"],"loopback_feedback":true,"signed":true,"inbox_supply":true,"supply_isolated":true}
+PASS integration:v6

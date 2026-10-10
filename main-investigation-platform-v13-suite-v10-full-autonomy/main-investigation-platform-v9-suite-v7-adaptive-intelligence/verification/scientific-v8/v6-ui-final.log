@@ -1,0 +1,3 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+{"ok":true,"checks":["stored connection evidence and public-source link","hypothesis evidence clickthrough","all four operation views","375px page has no document overflow","overlap review target opens the form without changing boundaries","proposal alone preserves boundary","explicit reviewed split and refresh"],"errors":[],"scope":"Real app page/components and API, SSR/hydration harness with file-backed SQLite. Production worker smoke is separate."}

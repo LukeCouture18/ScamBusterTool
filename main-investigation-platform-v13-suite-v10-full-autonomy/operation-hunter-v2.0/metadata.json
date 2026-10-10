@@ -1,0 +1,6 @@
+{
+  "name": "Operation Hunter v2.0",
+  "description": "Reconstructs whole crypto-scam operations from a single seed — infrastructure, scam kit, money flows and how they change over time — using passive public sources, and works as the deep operation-intelligence engine of the Main Investigation Platform.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

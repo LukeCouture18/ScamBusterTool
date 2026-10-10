@@ -1,0 +1,15 @@
+PASS crash before operation snapshot
+PASS crash after operation snapshot
+PASS crash before hypothesis
+PASS crash after hypothesis
+PASS crash before contradiction
+PASS crash after contradiction
+PASS crash before temporal facet
+PASS crash after temporal facet
+PASS crash before evidence graph
+PASS crash after evidence graph
+PASS crash before hunt reservation
+PASS crash after hunt reservation
+PASS crash before module-work handoff
+PASS crash after module-work handoff
+{"ok":true,"crashes":14,"passed":[{"phase":"operation snapshot","edge":"before","actual_process_signal":"SIGKILL","logical_hunts":1,"preserved_evidence":1},{"phase":"operation snapshot","edge":"after","actual_process_signal":"SIGKILL","logical_hunts":1,"preserved_evidence":1},{"phase":"hypothesis","edge":"before","actual_process_signal":"SIGKILL","logical_hunts":1,"preserved_evidence":1},{"phase":"hypothesis","edge":"after","actual_process_signal":"SIGKILL","logical_hunts":1,"preserved_evidence":1},{"phase":"contradiction","edge":"before","actual_process_signal":"SIGKILL","logical_hunts":1,"preserved_evidence":1},{"phase":"contradiction","edge":"after","actual_process_signal":"SIGKILL","logical_hunts":1,"preserved_evidence":1},{"phase":"temporal facet","edge":"before","actual_process_signal":"SIGKILL","logical_hunts":1,"preserved_evidence":1},{"phase":"temporal facet","edge":"after","actual_process_signal":"SIGKILL","logical_hunts":1,"preserved_evidence":1},{"phase":"evidence graph","edge":"before","actual_process_signal":"SIGKILL","logical_hunts":1,"preserved_evidence":1},{"phase":"evidence graph","edge":"after","actual_process_signal":"SIGKILL","logical_hunts":1,"preserved_evidence":1},{"phase":"hunt reservation","edge":"before","actual_process_signal":"SIGKILL","logical_hunts":1,"preserved_evidence":1},{"phase":"hunt reservation","edge":"after","actual_process_signal":"SIGKILL","logical_hunts":1,"preserved_evidence":1},{"phase":"module-work handoff","edge":"before","actual_process_signal":"SIGKILL","logical_hunts":1,"preserved_evidence":1},{"phase":"module-work handoff","edge":"after","actual_process_signal":"SIGKILL","logical_hunts":1,"preserved_evidence":1}],"scope":"Actual child-process SIGKILL around SQL statements and atomic D1-double batches, restarting used SQLite state. External provider and Finder/Hunter outbox crash phases are covered by existing module tests, not all certified here."}

@@ -1,0 +1,17 @@
+AssertionError [ERR_ASSERTION]: {"error":{"code":"NOT_FOUND"}}
+
+404 !== 200
+
+    at ok (file:///workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/autonomy-stress.mjs:7:21)
+    at file:///workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/autonomy-stress.mjs:74:43
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async timed (file:///workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/autonomy-stress.mjs:6:79)
+    at async file:///workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/autonomy-stress.mjs:74:2 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: 404,
+  expected: 200,
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+

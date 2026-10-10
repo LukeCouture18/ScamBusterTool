@@ -1,0 +1,10 @@
+{
+  "runtime": "22.18.0",
+  "main_dependencies": "fresh npm ci, normal install",
+  "specialist_dependencies": "retained cached dependencies with unchanged lockfiles",
+  "exit_codes": {
+    "typescript": 0,
+    "lint": 0,
+    "build": 0
+  }
+}

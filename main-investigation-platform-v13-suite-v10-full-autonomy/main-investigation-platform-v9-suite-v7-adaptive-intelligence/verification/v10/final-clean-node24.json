@@ -1,0 +1,10 @@
+{
+  "runtime": "24.19.0",
+  "main_dependencies": "fresh npm ci, offline after cache populated by normal Node22 install",
+  "specialist_dependencies": "retained cached dependencies with unchanged lockfiles",
+  "exit_codes": {
+    "typescript": 0,
+    "lint": 0,
+    "build": 0
+  }
+}

@@ -1,0 +1,2105 @@
+
+=== unit (1 step) ===
+--- unit 1/1: node --test tests/director-migration.test.mjs tests/domain.test.mjs tests/migration.test.mjs tests/security.test.mjs tests/sqljs-fallback.test.mjs tests/ui-tokens.test.mjs tests/v5-contract.test.mjs tests/v5-hunter.test.mjs tests/v5-migration.test.mjs tests/v6-contract.test.mjs tests/v6-migration.test.mjs tests/wallet-db-lifecycle.test.mjs tests/wallet-key-migration.test.mjs
+✔ populated v4 migration and rollback retain candidates, observations, evidence and approval hashes (46.192339ms)
+✔ domain resolution deduplicates equivalent sites (1.182137ms)
+✔ wallet and token identity is network scoped (0.231167ms)
+✔ job keys prevent active duplicate work (0.254753ms)
+✔ job transition policy rejects processing loops (0.189876ms)
+✔ retry backoff is exponential and capped (0.225028ms)
+✔ schema major versions are checked (0.183486ms)
+✔ a wallet key that already names its network is not prefixed twice (0.193742ms)
+✔ coordination migration is additive and includes operational tables (8.047788ms)
+✔ orchestrator migration preserves data and adds durable workflow state (1.861599ms)
+✔ v4 migration adds a durable event backbone without replacing v3 data (4.626505ms)
+✔ module credentials are isolated (1.066773ms)
+✔ authentication fails closed and legacy fallback is opt-in (0.877609ms)
+✔ with real sql.js installed the fallback registers nothing and the Wallet worker keeps PlatformWorker and startPlatformWorker (658.226609ms)
+ℹ real sql.js is not installed here; used a temporary Wallet Investigator copy with a real-shaped sql.js package
+✖ without sql.js the fallback still serves the node:sqlite stand-in and the worker still loads (3282.338933ms)
+✔ each tool UI is in sync with the canonical tokens (2.343012ms)
+✔ the generated blocks only restyle: every tool keeps its own markup and variables (2.874441ms)
+✔ v5 migration adds triage, durable subscriptions and metrics without dropping v4 data (7.942649ms)
+✔ routing requires explicit promotion and does not infer wallet validity from confidence (2.177143ms)
+✔ both SDKs expose event delivery and metrics (4.171581ms)
+✔ migration 0012 is additive and required by the schema gate (28.344939ms)
+✔ migration 0014 (Site Finder hunts) is additive and required by the schema gate (29.06693ms)
+✔ migration 0015 (v4 wallet pipeline) is additive and required by the schema gate (59.230439ms)
+✔ contracts: module, job type and work kind (9.602645ms)
+✔ a Hunter snapshot is stored idempotently and its proposals become Main's own work (92.787714ms)
+✔ demo operations are mirrored for display but never create work (23.392781ms)
+✔ reconstruction: proposed only while Hunter is registered, routed as a HUNT_OPERATION job, judged by what it found (30.359057ms)
+✔ operator and module requests go through work items (29.530251ms)
+✔ v6 schema gate rejects an incomplete operation alias migration (22.303428ms)
+✔ v4 database upgrades to v5: every v4 record preserved, schema gate passes, v5 defaults seeded (58.262683ms)
+✔ an interrupted v5 upgrade rolls back and the platform refuses to start until it is applied (25.572091ms)
+✔ rollback to v4: v5 tables are additive, so v4 code reads a v5 database unchanged; dropping them restores the exact v4 schema (26.02706ms)
+✔ the server, SDK and machine readable event catalog agree (26.879992ms)
+✔ v6 contract includes all orchestration and evidence endpoints (0.602896ms)
+✔ v5 database upgrades to v6 without losing investigations and evidence (75.2701ms)
+✖ wallet database: clean start, restart with data, interrupted save and a damaged file (512.880996ms)
+✔ the Wallet verification suite never touches integrations/wallet-investigator/data (889.85458ms)
+✔ 0013 renames doubled wallet keys only when no correctly keyed twin exists (52.530988ms)
+ℹ tests 38
+ℹ suites 0
+ℹ pass 36
+ℹ fail 2
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 4066.054555
+
+✖ failing tests:
+
+test at tests/sqljs-fallback.test.mjs:84:1
+✖ without sql.js the fallback still serves the node:sqlite stand-in and the worker still loads (3282.338933ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+  
+  + 'undefined'
+  - 'function'
+  
+      at TestContext.<anonymous> (file:///workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/sqljs-fallback.test.mjs:92:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'undefined',
+    expected: 'function',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests/wallet-db-lifecycle.test.mjs:37:1
+✖ wallet database: clean start, restart with data, interrupted save and a damaged file (512.880996ms)
+  AssertionError [ERR_ASSERTION]: child failed:
+  file:///tmp/mip-wallet-db-5M51QW/[eval1]:2
+  await db.initDatabase(); db.runStatement('CREATE TABLE IF NOT EXISTS t(id INTEGER PRIMARY KEY, v TEXT)'); db.runStatement("INSERT INTO t(v) VALUES ('first')"); db.saveDatabaseToDisk();
+           ^
+  
+  TypeError: db.initDatabase is not a function
+      at file:///tmp/mip-wallet-db-5M51QW/[eval1]:2:10
+  
+  Node.js v24.19.0
+  
+  
+  
+  1 !== 0
+  
+      at run (file:///workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/wallet-db-lifecycle.test.mjs:31:10)
+      at TestContext.<anonymous> (file:///workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/wallet-db-lifecycle.test.mjs:41:5)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.start (node:internal/test_runner/test:1242:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 1,
+    expected: 0,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+FAIL unit: step 1/1 exited with 1: node --test tests/director-migration.test.mjs tests/domain.test.mjs tests/migration.test.mjs tests/security.test.mjs tests/sqljs-fallback.test.mjs tests/ui-tokens.test.mjs tests/v5-contract.test.mjs tests/v5-hunter.test.mjs tests/v5-migration.test.mjs tests/v6-contract.test.mjs tests/v6-migration.test.mjs tests/wallet-db-lifecycle.test.mjs tests/wallet-key-migration.test.mjs
+
+=== migration-matrix (1 step) ===
+--- migration-matrix 1/1: node --experimental-sqlite --test tests/v61-migration-matrix.mjs
+✔ fresh upgrade preserves evidence and passes startup schema gate (21.394511ms)
+✔ v5 upgrade preserves evidence and passes startup schema gate (19.915949ms)
+✔ v6 upgrade preserves evidence and passes startup schema gate (20.083962ms)
+✔ v6.1 checkpoint upgrade preserves evidence and passes startup schema gate (20.250531ms)
+✔ before migration: rollback or refuse startup (7.325413ms)
+✔ between migrations: rollback or refuse startup (7.727226ms)
+✔ during schema modification: rollback or refuse startup (7.743772ms)
+✔ after schema before bookkeeping: rollback or refuse startup (8.982814ms)
+✔ during data migration: rollback or refuse startup (9.924949ms)
+✔ restart after partial migration: rollback or refuse startup (12.853853ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 10
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 246.412716
+PASS migration-matrix
+
+=== suite (1 step) ===
+--- suite 1/1: node --experimental-sqlite --disable-warning=ExperimentalWarning --import tsx --import file:///workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/lib/sqljs-fallback.mjs tests/suite-workflow.mjs
+[test] sql.js is not installed; the Wallet Investigator runs on the node:sqlite stand-in (tests/lib/sqljs-standin).
+Traceback (most recent call last):
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/finder-ng-batches.py", line 15, in <module>
+    from benchmark.simnet import SimNet, installed
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/benchmark/simnet.py", line 17, in <module>
+    import requests
+ModuleNotFoundError: No module named 'requests'
+node:internal/errors:985
+  const err = new Error(message);
+              ^
+
+Error: Command failed: python3 /workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/finder-ng-batches.py
+Traceback (most recent call last):
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/finder-ng-batches.py", line 15, in <module>
+    from benchmark.simnet import SimNet, installed
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/benchmark/simnet.py", line 17, in <module>
+    import requests
+ModuleNotFoundError: No module named 'requests'
+
+    at genericNodeError (node:internal/errors:985:15)
+    at wrappedFn (node:internal/errors:539:14)
+    at checkExecSyncError (node:child_process:942:11)
+    at execFileSync (node:child_process:978:15)
+    at runPython (file:///workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/lib/portable.mjs:80:10)
+    at runPythonJson (file:///workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/lib/portable.mjs:84:62)
+    at file:///workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/suite-workflow.mjs:51:18
+    at ModuleJob.run (node:internal/modules/esm/module_job:439:25)
+    at async node:internal/modules/esm/loader:643:26
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:101:5) {
+  status: 1,
+  signal: null,
+  output: [
+    null,
+    '',
+    'Traceback (most recent call last):\n' +
+      '  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/finder-ng-batches.py", line 15, in <module>\n' +
+      '    from benchmark.simnet import SimNet, installed\n' +
+      '  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/benchmark/simnet.py", line 17, in <module>\n' +
+      '    import requests\n' +
+      "ModuleNotFoundError: No module named 'requests'\n"
+  ],
+  pid: 350,
+  stdout: '',
+  stderr: 'Traceback (most recent call last):\n' +
+    '  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/finder-ng-batches.py", line 15, in <module>\n' +
+    '    from benchmark.simnet import SimNet, installed\n' +
+    '  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/benchmark/simnet.py", line 17, in <module>\n' +
+    '    import requests\n' +
+    "ModuleNotFoundError: No module named 'requests'\n"
+}
+
+Node.js v24.19.0
+FAIL suite: step 1/1 exited with 1: node --experimental-sqlite --disable-warning=ExperimentalWarning --import tsx --import file:///workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/lib/sqljs-fallback.mjs tests/suite-workflow.mjs
+
+=== loops (1 step) ===
+--- loops 1/1: node --experimental-sqlite --disable-warning=ExperimentalWarning --import tsx tests/joined-pursuit-loops.mjs
+
+file:///workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/joined-pursuit-loops.mjs:40
+    if (code !== 0) return fail(new Error(`Site Finder ${cmd} exited ${code}:\n${err.slice(-3000)}`));
+                                ^
+
+Error: Site Finder setup exited 1:
+Traceback (most recent call last):
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/finder-pursuit-bridge.py", line 31, in <module>
+    from app.v2 import engine, netio, platform_bridge, pursuit, store  # noqa: E402
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/app/v2/engine.py", line 23, in <module>
+    from app.v2 import adaptive, classify, cluster, domains as dm, netio, ng, score as sc, selection, signals as sg, store, strategies as st
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/app/v2/classify.py", line 22, in <module>
+    from app.v2.netio import Snapshot, visible_text, title_of, links
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/app/v2/netio.py", line 27, in <module>
+    import requests
+ModuleNotFoundError: No module named 'requests'
+
+    at ChildProcess.<anonymous> (file:///workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/joined-pursuit-loops.mjs:40:33)
+    at ChildProcess.emit (node:events:509:28)
+    at maybeClose (node:internal/child_process:1141:16)
+    at ChildProcess._handle.onexit (node:internal/child_process:306:5)
+
+Node.js v24.19.0
+FAIL loops: step 1/1 exited with 1: node --experimental-sqlite --disable-warning=ExperimentalWarning --import tsx tests/joined-pursuit-loops.mjs
+
+=== integration:v6 (10 steps) ===
+--- integration:v6 1/10: node --experimental-sqlite tests/v6-integration.mjs
+{"ok":true,"events":14,"jobs":6,"decisions":11}
+--- integration:v6 2/10: node --experimental-sqlite tests/v6-three-modules.mjs
+{"ok":true,"modules":["site_finder","site_investigator","crypto_wallet_logger"],"triage":1,"claimed_job":"baca918d-3765-4dc5-9e16-174496035bbf","relationship_evidence":1,"wallet_sources":2,"logger_replay":true}
+--- integration:v6 3/10: node --experimental-sqlite tests/v6-feedback-local.mjs
+{"ok":true,"receiver":"127.0.0.1","synthetic":true,"attempts":8,"signature":true,"retry":true,"idempotent":true,"ack":true,"exhaustion_review":true}
+--- integration:v6 4/10: node tests/logger-queue-local.mjs
+{"ok":true,"synthetic":true,"stable_id":true,"no_silent_drop":true}
+--- integration:v6 5/10: python tests/site-bridge-synthetic.py
+{"ok": true, "synthetic": true, "record_types": {"sites": 1, "pages": 1, "wallets": 1, "deposit_options": 0, "evidence": 1, "relationships": 1}}
+--- integration:v6 6/10: python tests/site-bridge-worker.py
+{"ok": true, "synthetic": true, "registered": true, "claimed": true, "ingested": true, "completed": true, "provider_failure_retried": true}
+--- integration:v6 7/10: python tests/finder-feedback-synthetic.py
+{"ok": true, "downstream_wallets": 1, "self_report_excluded": true}
+--- integration:v6 8/10: python tests/finder-push-synthetic.py
+{"ok": true, "synthetic": true, "authenticated": true, "idempotent": true, "ack": true}
+--- integration:v6 9/10: python tests/scheduler-local.py
+{"ok": true, "synthetic": true, "receiver": "127.0.0.1", "feedback": true, "monitoring": true, "inbox_supply": true}
+--- integration:v6 10/10: node --experimental-sqlite tests/scheduler-fallback-local.mjs
+{"ok":true,"synthetic":true,"fallback":"local_scheduler","tick":["/api/v1/feedback/dispatch","/api/v1/monitoring/tick"],"loopback_feedback":true,"signed":true,"inbox_supply":true,"supply_isolated":true}
+PASS integration:v6
+
+=== v2 (2 steps) ===
+--- v2 1/2: node --experimental-sqlite tests/v2-inbox.mjs
+Traceback (most recent call last):
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/finder-v2-batches.py", line 12, in <module>
+    from benchmark.simnet import SimNet, installed
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/benchmark/simnet.py", line 17, in <module>
+    import requests
+ModuleNotFoundError: No module named 'requests'
+node:internal/errors:985
+  const err = new Error(message);
+              ^
+
+Error: Command failed: python3 /workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/finder-v2-batches.py
+Traceback (most recent call last):
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/finder-v2-batches.py", line 12, in <module>
+    from benchmark.simnet import SimNet, installed
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/benchmark/simnet.py", line 17, in <module>
+    import requests
+ModuleNotFoundError: No module named 'requests'
+
+    at genericNodeError (node:internal/errors:985:15)
+    at wrappedFn (node:internal/errors:539:14)
+    at checkExecSyncError (node:child_process:942:11)
+    at execFileSync (node:child_process:978:15)
+    at runPython (file:///workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/lib/portable.mjs:80:10)
+    at runPythonJson (file:///workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/lib/portable.mjs:84:62)
+    at file:///workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/v2-inbox.mjs:32:14
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5) {
+  status: 1,
+  signal: null,
+  output: [
+    null,
+    '',
+    'Traceback (most recent call last):\n' +
+      '  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/finder-v2-batches.py", line 12, in <module>\n' +
+      '    from benchmark.simnet import SimNet, installed\n' +
+      '  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/benchmark/simnet.py", line 17, in <module>\n' +
+      '    import requests\n' +
+      "ModuleNotFoundError: No module named 'requests'\n"
+  ],
+  pid: 552,
+  stdout: '',
+  stderr: 'Traceback (most recent call last):\n' +
+    '  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/finder-v2-batches.py", line 12, in <module>\n' +
+    '    from benchmark.simnet import SimNet, installed\n' +
+    '  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/benchmark/simnet.py", line 17, in <module>\n' +
+    '    import requests\n' +
+    "ModuleNotFoundError: No module named 'requests'\n"
+}
+
+Node.js v24.19.0
+FAIL v2: step 1/2 exited with 1: node --experimental-sqlite tests/v2-inbox.mjs
+
+=== v3 (1 step) ===
+--- v3 1/1: node --experimental-sqlite tests/v3-agent.mjs
+Traceback (most recent call last):
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/finder-v2-batches.py", line 12, in <module>
+    from benchmark.simnet import SimNet, installed
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/benchmark/simnet.py", line 17, in <module>
+    import requests
+ModuleNotFoundError: No module named 'requests'
+node:internal/errors:985
+  const err = new Error(message);
+              ^
+
+Error: Command failed: python3 /workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/finder-v2-batches.py
+Traceback (most recent call last):
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/finder-v2-batches.py", line 12, in <module>
+    from benchmark.simnet import SimNet, installed
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/benchmark/simnet.py", line 17, in <module>
+    import requests
+ModuleNotFoundError: No module named 'requests'
+
+    at genericNodeError (node:internal/errors:985:15)
+    at wrappedFn (node:internal/errors:539:14)
+    at checkExecSyncError (node:child_process:942:11)
+    at execFileSync (node:child_process:978:15)
+    at runPython (file:///workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/lib/portable.mjs:80:10)
+    at runPythonJson (file:///workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/lib/portable.mjs:84:62)
+    at file:///workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/v3-agent.mjs:71:18
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5) {
+  status: 1,
+  signal: null,
+  output: [
+    null,
+    '',
+    'Traceback (most recent call last):\n' +
+      '  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/finder-v2-batches.py", line 12, in <module>\n' +
+      '    from benchmark.simnet import SimNet, installed\n' +
+      '  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/benchmark/simnet.py", line 17, in <module>\n' +
+      '    import requests\n' +
+      "ModuleNotFoundError: No module named 'requests'\n"
+  ],
+  pid: 579,
+  stdout: '',
+  stderr: 'Traceback (most recent call last):\n' +
+    '  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/finder-v2-batches.py", line 12, in <module>\n' +
+    '    from benchmark.simnet import SimNet, installed\n' +
+    '  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/benchmark/simnet.py", line 17, in <module>\n' +
+    '    import requests\n' +
+    "ModuleNotFoundError: No module named 'requests'\n"
+}
+
+Node.js v24.19.0
+FAIL v3: step 1/1 exited with 1: node --experimental-sqlite tests/v3-agent.mjs
+
+=== v4 (2 steps) ===
+--- v4 1/2: node --experimental-sqlite tests/v4-campaign.mjs
+Traceback (most recent call last):
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/finder-v2-batches.py", line 12, in <module>
+    from benchmark.simnet import SimNet, installed
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/benchmark/simnet.py", line 17, in <module>
+    import requests
+ModuleNotFoundError: No module named 'requests'
+node:internal/errors:985
+  const err = new Error(message);
+              ^
+
+Error: Command failed: python3 /workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/finder-v2-batches.py
+Traceback (most recent call last):
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/finder-v2-batches.py", line 12, in <module>
+    from benchmark.simnet import SimNet, installed
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/benchmark/simnet.py", line 17, in <module>
+    import requests
+ModuleNotFoundError: No module named 'requests'
+
+    at genericNodeError (node:internal/errors:985:15)
+    at wrappedFn (node:internal/errors:539:14)
+    at checkExecSyncError (node:child_process:942:11)
+    at execFileSync (node:child_process:978:15)
+    at runPython (file:///workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/lib/portable.mjs:80:10)
+    at runPythonJson (file:///workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/lib/portable.mjs:84:62)
+    at file:///workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/v4-campaign.mjs:75:20
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5) {
+  status: 1,
+  signal: null,
+  output: [
+    null,
+    '',
+    'Traceback (most recent call last):\n' +
+      '  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/finder-v2-batches.py", line 12, in <module>\n' +
+      '    from benchmark.simnet import SimNet, installed\n' +
+      '  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/benchmark/simnet.py", line 17, in <module>\n' +
+      '    import requests\n' +
+      "ModuleNotFoundError: No module named 'requests'\n"
+  ],
+  pid: 612,
+  stdout: '',
+  stderr: 'Traceback (most recent call last):\n' +
+    '  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/finder-v2-batches.py", line 12, in <module>\n' +
+    '    from benchmark.simnet import SimNet, installed\n' +
+    '  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/benchmark/simnet.py", line 17, in <module>\n' +
+    '    import requests\n' +
+    "ModuleNotFoundError: No module named 'requests'\n"
+}
+
+Node.js v24.19.0
+FAIL v4: step 1/2 exited with 1: node --experimental-sqlite tests/v4-campaign.mjs
+
+=== v5 (2 steps) ===
+--- v5 1/2: node --experimental-sqlite tests/v5-operations.mjs
+Traceback (most recent call last):
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/finder-v2-batches.py", line 12, in <module>
+    from benchmark.simnet import SimNet, installed
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/benchmark/simnet.py", line 17, in <module>
+    import requests
+ModuleNotFoundError: No module named 'requests'
+node:internal/errors:985
+  const err = new Error(message);
+              ^
+
+Error: Command failed: python3 /workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/finder-v2-batches.py
+Traceback (most recent call last):
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/finder-v2-batches.py", line 12, in <module>
+    from benchmark.simnet import SimNet, installed
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/benchmark/simnet.py", line 17, in <module>
+    import requests
+ModuleNotFoundError: No module named 'requests'
+
+    at genericNodeError (node:internal/errors:985:15)
+    at wrappedFn (node:internal/errors:539:14)
+    at checkExecSyncError (node:child_process:942:11)
+    at execFileSync (node:child_process:978:15)
+    at runPython (file:///workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/lib/portable.mjs:80:10)
+    at runPythonJson (file:///workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/lib/portable.mjs:84:62)
+    at file:///workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/v5-operations.mjs:89:20
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5) {
+  status: 1,
+  signal: null,
+  output: [
+    null,
+    '',
+    'Traceback (most recent call last):\n' +
+      '  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/finder-v2-batches.py", line 12, in <module>\n' +
+      '    from benchmark.simnet import SimNet, installed\n' +
+      '  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/benchmark/simnet.py", line 17, in <module>\n' +
+      '    import requests\n' +
+      "ModuleNotFoundError: No module named 'requests'\n"
+  ],
+  pid: 639,
+  stdout: '',
+  stderr: 'Traceback (most recent call last):\n' +
+    '  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/finder-v2-batches.py", line 12, in <module>\n' +
+    '    from benchmark.simnet import SimNet, installed\n' +
+    '  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/benchmark/simnet.py", line 17, in <module>\n' +
+    '    import requests\n' +
+    "ModuleNotFoundError: No module named 'requests'\n"
+}
+
+Node.js v24.19.0
+FAIL v5: step 1/2 exited with 1: node --experimental-sqlite tests/v5-operations.mjs
+
+=== joined:hunter (1 step) ===
+--- joined:hunter 1/1: node --experimental-sqlite --disable-warning=ExperimentalWarning --import tsx tests/joined-finder-main-hunter.mjs
+/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/joined-finder-main-hunter.mjs:78
+    if (code !== 0) return fail(new Error(`Site Finder ${cmd} exited ${code}:\n${err.slice(-3000)}`));
+                                ^
+
+Error: Site Finder deliver exited 1:
+Traceback (most recent call last):
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/finder-joined-bridge.py", line 34, in <module>
+    from app.v2 import store, platform_bridge, engine  # noqa: E402
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/app/v2/engine.py", line 23, in <module>
+    from app.v2 import adaptive, classify, cluster, domains as dm, netio, ng, score as sc, selection, signals as sg, store, strategies as st
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/app/v2/classify.py", line 22, in <module>
+    from app.v2.netio import Snapshot, visible_text, title_of, links
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/app/v2/netio.py", line 27, in <module>
+    import requests
+ModuleNotFoundError: No module named 'requests'
+
+    at ChildProcess.<anonymous> (/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/joined-finder-main-hunter.mjs:78:33)
+    at ChildProcess.emit (node:events:509:28)
+    at maybeClose (node:internal/child_process:1141:16)
+    at ChildProcess._handle.onexit (node:internal/child_process:306:5)
+
+Node.js v24.19.0
+FAIL joined:hunter: step 1/1 exited with 1: node --experimental-sqlite --disable-warning=ExperimentalWarning --import tsx tests/joined-finder-main-hunter.mjs
+
+=== joined:v61 (2 steps) ===
+--- joined:v61 1/2: node --experimental-sqlite --import tsx --import file:///workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/lib/sqljs-fallback.mjs tests/v61-joined-five-modules.mjs
+[test] sql.js is not installed; the Wallet Investigator runs on the node:sqlite stand-in (tests/lib/sqljs-standin).
+file:///workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/v61-joined-five-modules.mjs:73
+  await walletWorker.startPlatformWorker();
+                     ^
+
+TypeError: walletWorker.startPlatformWorker is not a function
+    at file:///workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/v61-joined-five-modules.mjs:73:22
+
+Node.js v24.19.0
+FAIL joined:v61: step 1/2 exited with 1: node --experimental-sqlite --import tsx --import file:///workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/lib/sqljs-fallback.mjs tests/v61-joined-five-modules.mjs
+
+=== five-modules (4 steps) ===
+--- five-modules 1/4: node tests/form-source-local.mjs
+{"ok":true,"real_module":true,"localhost_receiver":true,"verified":true,"unknown":true,"duplicate_blocked":true,"external_requests":0}
+--- five-modules 2/4: node tests/form-configured-local.mjs
+{"ok":true,"real_form_source":true,"configured_adapter":true,"synthetic_receiver":true,"submissions":1,"duplicate_blocked":true}
+--- five-modules 3/4: [integrations/wallet-investigator] WALLET_INVESTIGATOR_SYNTHETIC_FIXTURES=1 node --import tsx --import file:///workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/lib/sqljs-fallback.mjs tests/run-all-tests.ts
+[test] sql.js is not installed; the Wallet Investigator runs on the node:sqlite stand-in (tests/lib/sqljs-standin).
+--- five-modules 4/4: [integrations/wallet-investigator] WALLET_INVESTIGATOR_SYNTHETIC_FIXTURES=1 node --import tsx --import file:///workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/lib/sqljs-fallback.mjs tests/platform-worker-local.ts
+[test] sql.js is not installed; the Wallet Investigator runs on the node:sqlite stand-in (tests/lib/sqljs-standin).
+PASS five-modules
+
+=== startup:modules (4 steps) ===
+--- startup:modules 1/4: python tests/site-finder-startup-local.py
+Traceback (most recent call last):
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/site-finder-startup-local.py", line 84, in <module>
+    raise AssertionError("Site Finder review server exited before outbox delivery:\n" + log_tail())
+AssertionError: Site Finder review server exited before outbox delivery:
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/tmp/site-finder-normal-startup-7uzjpdk3/v6/integrations/site-finder-v07/app/review/server.py", line 13, in <module>
+    from flask import Flask, render_template, request, jsonify, send_from_directory, Response, redirect
+ModuleNotFoundError: No module named 'flask'
+
+FAIL startup:modules: step 1/4 exited with 1: python tests/site-finder-startup-local.py
+
+=== site-finder (1 step) ===
+--- site-finder 1/1: [integrations/site-finder-v07] python run_tests_standalone.py
+  SKIP  test_active_frontier_browser.py (failed to import: No module named 'playwright')
+  SKIP  test_active_investigation.py (failed to import: No module named 'requests')
+  SKIP  test_campaign_graph_browser.py (failed to import: No module named 'playwright')
+  FAIL  test_campaigns.py::test_a_completed_campaign_reports_rather_than_restarting  (No module named 'requests')
+  FAIL  test_campaigns.py::test_a_promotion_records_why_it_was_prioritised  (No module named 'requests')
+  PASS  test_campaigns.py::test_a_refused_spend_does_not_consume_budget
+  FAIL  test_campaigns.py::test_a_scarce_deep_analysis_budget_goes_to_the_best_evidenced_candidate  (No module named 'requests')
+  FAIL  test_campaigns.py::test_campaign_language_never_claims_shared_ownership  (No module named 'requests')
+  FAIL  test_campaigns.py::test_campaign_reaches_a_site_that_shares_an_indicator_with_the_seed  (No module named 'requests')
+  FAIL  test_campaigns.py::test_campaign_walks_all_five_stages  (No module named 'requests')
+  FAIL  test_campaigns.py::test_candidate_budget_caps_how_many_new_sites_are_added  (No module named 'requests')
+  FAIL  test_campaigns.py::test_completed_leads_are_not_run_twice_across_resumes  (No module named 'requests')
+  FAIL  test_campaigns.py::test_deep_analysis_budget_caps_promotions  (No module named 'requests')
+  FAIL  test_campaigns.py::test_every_candidate_carries_an_explainable_discovery_path  (No module named 'requests')
+  FAIL  test_campaigns.py::test_interrupted_campaign_resumes_without_repeating_completed_stages  (No module named 'requests')
+  FAIL  test_campaigns.py::test_lead_budget_caps_how_many_leads_a_campaign_runs  (No module named 'requests')
+  FAIL  test_campaigns.py::test_report_separates_derived_correlation_from_observed_fact  (No module named 'requests')
+  PASS  test_campaigns.py::test_seed_kinds_all_resolve_without_inventing_sites
+  PASS  test_campaigns.py::test_time_limit_stops_a_campaign
+  PASS  test_campaigns.py::test_unsupported_seed_kind_is_refused_at_creation
+  FAIL  test_campaigns.py::test_weakly_connected_candidates_are_set_aside_with_a_stated_reason  (No module named 'requests')
+  PASS  test_candidate_priority.py::test_a_candidate_with_nothing_observed_scores_zero
+  PASS  test_candidate_priority.py::test_a_found_deposit_route_raises_a_candidate
+  PASS  test_candidate_priority.py::test_a_known_new_domain_scores_and_an_old_one_does_not
+  PASS  test_candidate_priority.py::test_an_observed_wallet_raises_a_candidate
+  PASS  test_candidate_priority.py::test_an_unknown_registration_date_scores_nothing
+  PASS  test_candidate_priority.py::test_an_unreachable_site_gets_no_activity_credit
+  PASS  test_candidate_priority.py::test_every_factor_carries_its_own_evidence_and_class
+  PASS  test_candidate_priority.py::test_priority_is_not_presented_as_a_judgement_about_the_site
+  PASS  test_candidate_priority.py::test_priority_never_exceeds_one
+  PASS  test_candidate_priority.py::test_ranking_an_unknown_site_does_not_crash
+  PASS  test_candidate_priority.py::test_ranking_puts_the_best_evidenced_candidate_first
+  PASS  test_candidate_priority.py::test_the_explanation_separates_observed_from_derived
+  PASS  test_candidate_selection.py::test_diversity_breaks_close_cluster_ties_but_not_large_quality_gap
+  PASS  test_candidate_selection.py::test_repeated_sightings_from_noisy_source_are_not_independent
+  PASS  test_candidate_selection.py::test_repetition_cannot_beat_independent_evidence
+  PASS  test_candidate_selection.py::test_selection_explanation_and_existing_queue
+  PASS  test_cluster_watch.py::test_a_new_domain_sharing_a_wallet_matches_the_family
+  PASS  test_cluster_watch.py::test_a_single_site_cluster_has_no_signature
+  PASS  test_cluster_watch.py::test_a_site_is_not_matched_against_its_own_family
+  PASS  test_cluster_watch.py::test_an_indicator_on_hundreds_of_sites_is_left_out_of_the_signature
+  PASS  test_cluster_watch.py::test_every_match_names_an_innocent_explanation
+  PASS  test_cluster_watch.py::test_match_language_never_claims_shared_ownership
+  PASS  test_cluster_watch.py::test_sharing_only_a_nameserver_does_not_match
+  PASS  test_cluster_watch.py::test_signature_explains_itself
+  PASS  test_cluster_watch.py::test_signature_is_built_from_what_members_actually_share
+  PASS  test_cluster_watch.py::test_two_independent_weak_categories_are_enough
+  PASS  test_cluster_watch.py::test_watch_does_not_record_the_same_domain_twice
+  PASS  test_cluster_watch.py::test_watch_records_a_newly_appearing_related_domain
+  PASS  test_cluster_watch.py::test_watch_report_is_readable
+  PASS  test_cluster_watch.py::test_watch_reports_clearly_when_there_is_nothing_to_watch
+  SKIP  test_ct_frontier.py (failed to import: No module named 'requests')
+  SKIP  test_ct_query_rotation.py (failed to import: No module named 'requests')
+  PASS  test_db.py::test_add_site_allows_distinct_domains
+  PASS  test_db.py::test_add_site_dedupes_by_domain
+  PASS  test_db.py::test_findings_lifecycle
+  PASS  test_db.py::test_list_findings_filters_by_status
+  PASS  test_db.py::test_next_sites_to_scan_respects_min_score_threshold
+  PASS  test_db.py::test_site_status_transitions
+  PASS  test_db.py::test_update_site_score_and_ordering
+  PASS  test_db.py::test_wallet_dedup_across_sightings
+  PASS  test_db.py::test_wallet_evidence_attached_to_sighting
+  PASS  test_db.py::test_wallet_sighting_dedup_same_page
+Process Process-1:
+Traceback (most recent call last):
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/run_tests_standalone.py", line 109, in _run_fake_site
+    from fake_scam_site import app as fake_app
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/tests/fixtures/fake_scam_site.py", line 19, in <module>
+    from flask import Flask, redirect
+ModuleNotFoundError: No module named 'flask'
+  FAIL  test_deep_wallet_hunt.py::test_deep_wallet_hunt_clicks_through_currency_tabs  (fake_scam_site did not start in time)
+Process Process-2:
+Traceback (most recent call last):
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/run_tests_standalone.py", line 109, in _run_fake_site
+    from fake_scam_site import app as fake_app
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/tests/fixtures/fake_scam_site.py", line 19, in <module>
+    from flask import Flask, redirect
+ModuleNotFoundError: No module named 'flask'
+  FAIL  test_deep_wallet_hunt.py::test_deep_wallet_hunt_mode_allows_more_pages_than_default  (fake_scam_site did not start in time)
+Process Process-3:
+Traceback (most recent call last):
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/run_tests_standalone.py", line 109, in _run_fake_site
+    from fake_scam_site import app as fake_app
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/tests/fixtures/fake_scam_site.py", line 19, in <module>
+    from flask import Flask, redirect
+ModuleNotFoundError: No module named 'flask'
+  FAIL  test_deep_wallet_hunt.py::test_post_signup_hunt_does_not_run_when_signup_hits_verification_wall  (fake_scam_site did not start in time)
+Process Process-4:
+Traceback (most recent call last):
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/run_tests_standalone.py", line 109, in _run_fake_site
+    from fake_scam_site import app as fake_app
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/tests/fixtures/fake_scam_site.py", line 19, in <module>
+    from flask import Flask, redirect
+ModuleNotFoundError: No module named 'flask'
+  FAIL  test_deep_wallet_hunt.py::test_post_signup_wallet_hunt_finds_member_only_deposit_page  (fake_scam_site did not start in time)
+Process Process-5:
+Traceback (most recent call last):
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/run_tests_standalone.py", line 109, in _run_fake_site
+    from fake_scam_site import app as fake_app
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/tests/fixtures/fake_scam_site.py", line 19, in <module>
+    from flask import Flask, redirect
+ModuleNotFoundError: No module named 'flask'
+  FAIL  test_deep_wallet_hunt.py::test_signup_never_attempted_when_allow_signup_false_even_in_deep_hunt_mode  (fake_scam_site did not start in time)
+Process Process-6:
+Traceback (most recent call last):
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/run_tests_standalone.py", line 109, in _run_fake_site
+    from fake_scam_site import app as fake_app
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/tests/fixtures/fake_scam_site.py", line 19, in <module>
+    from flask import Flask, redirect
+ModuleNotFoundError: No module named 'flask'
+  FAIL  test_deep_wallet_hunt.py::test_wallet_count_is_not_inflated_by_re_scanning_after_tab_clicks  (fake_scam_site did not start in time)
+Process Process-7:
+Traceback (most recent call last):
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/run_tests_standalone.py", line 109, in _run_fake_site
+    from fake_scam_site import app as fake_app
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/tests/fixtures/fake_scam_site.py", line 19, in <module>
+    from flask import Flask, redirect
+ModuleNotFoundError: No module named 'flask'
+  FAIL  test_deep_wallet_hunt.py::test_wallet_tab_clicks_are_logged_as_decisions  (fake_scam_site did not start in time)
+  PASS  test_discovery_contact_reuse.py::test_extracts_distinctive_domain_email
+  PASS  test_discovery_contact_reuse.py::test_extracts_telegram_from_tme_link
+  PASS  test_discovery_contact_reuse.py::test_extracts_telegram_handle
+  PASS  test_discovery_contact_reuse.py::test_extracts_whatsapp_number
+  PASS  test_discovery_contact_reuse.py::test_filters_generic_placeholder_email
+  PASS  test_discovery_contact_reuse.py::test_find_shared_contacts_matches_across_sites
+  PASS  test_discovery_contact_reuse.py::test_find_shared_contacts_returns_empty_when_nothing_matches
+  PASS  test_discovery_contact_reuse.py::test_has_any_contacts
+  PASS  test_discovery_contact_reuse.py::test_keeps_generic_local_part_on_distinctive_domain
+  PASS  test_discovery_contact_reuse.py::test_phone_numbers_are_deduped_when_one_is_a_suffix_of_another
+  PASS  test_discovery_contact_reuse.py::test_telegram_regex_does_not_false_positive_on_email_domain
+  PASS  test_discovery_contact_reuse.py::test_telegram_regex_does_not_false_positive_on_generic_email
+  FAIL  test_discovery_engine.py::test_engine_dedupes_across_repeated_runs  (No module named 'requests')
+  FAIL  test_discovery_engine.py::test_engine_handles_source_exception_without_crashing_the_run  (No module named 'requests')
+  FAIL  test_discovery_engine.py::test_engine_ingests_new_candidates_and_writes_discovery_fields  (No module named 'requests')
+  FAIL  test_discovery_engine.py::test_engine_logs_discovery_event_even_for_duplicates  (No module named 'requests')
+  (skipping: no DNS resolution available in this environment)
+  PASS  test_discovery_engine.py::test_engine_pivots_off_existing_sites_with_real_dns
+  FAIL  test_discovery_engine.py::test_engine_progress_callbacks_fire_for_discovered_sites  (No module named 'requests')
+  FAIL  test_discovery_engine.py::test_engine_records_run_stats_and_per_source_breakdown  (No module named 'requests')
+  SKIP  test_discovery_repeat_metrics.py (failed to import: No module named 'requests')
+  PASS  test_discovery_shared_infrastructure.py::test_build_fingerprint_cache_covers_all_requested_domains
+  PASS  test_discovery_shared_infrastructure.py::test_does_not_match_against_itself
+  PASS  test_discovery_shared_infrastructure.py::test_matches_on_shared_ip
+  PASS  test_discovery_shared_infrastructure.py::test_matches_on_shared_nameservers_when_ip_differs
+  PASS  test_discovery_shared_infrastructure.py::test_no_match_on_different_ip
+  PASS  test_discovery_shared_infrastructure.py::test_no_match_when_candidate_has_no_resolvable_ip
+  PASS  test_discovery_similar_domains.py::test_discover_from_brands_tags_brand_impersonation_category
+  PASS  test_discovery_similar_domains.py::test_discover_from_site_only_returns_resolving_variants
+  PASS  test_discovery_similar_domains.py::test_discover_from_site_returns_nothing_when_no_variants_resolve
+  PASS  test_discovery_similar_domains.py::test_discover_from_site_skips_short_roots
+  PASS  test_discovery_similar_domains.py::test_discover_respects_max_dns_checks_budget
+  PASS  test_discovery_similar_domains.py::test_domain_root_strips_scheme_and_www
+  PASS  test_discovery_similar_domains.py::test_generate_variants_excludes_seed_itself
+  PASS  test_discovery_similar_domains.py::test_generate_variants_handles_short_root_without_crashing
+  PASS  test_discovery_similar_domains.py::test_generate_variants_includes_affix_patterns
+  PASS  test_discovery_similar_domains.py::test_generate_variants_includes_omission_and_doubling
+  PASS  test_discovery_similar_domains.py::test_generate_variants_respects_max_limit
+  PASS  test_discovery_template_similarity.py::test_empty_html_produces_empty_fingerprint
+  PASS  test_discovery_template_similarity.py::test_extract_tag_sequence
+  PASS  test_discovery_template_similarity.py::test_extract_tag_sequence_ignores_attributes
+  PASS  test_discovery_template_similarity.py::test_find_matches_returns_only_above_threshold_sorted_desc
+  PASS  test_discovery_template_similarity.py::test_fingerprint_html_file_handles_missing_file_gracefully
+  PASS  test_discovery_template_similarity.py::test_fingerprint_html_file_reads_real_file
+  PASS  test_discovery_template_similarity.py::test_identical_html_scores_perfect_similarity
+  PASS  test_discovery_template_similarity.py::test_same_template_different_content_scores_high_similarity
+  PASS  test_discovery_template_similarity.py::test_similarity_with_empty_fingerprint_is_zero
+  PASS  test_discovery_template_similarity.py::test_unrelated_sites_score_low_similarity
+  FAIL  test_investigation_intelligence.py::test_actions_are_bounded_and_campaign_review_does_not_cast_domain_votes  (No module named 'requests')
+  FAIL  test_investigation_intelligence.py::test_campaign_api_compatible_with_existing_queue  (No module named 'flask')
+  PASS  test_investigation_intelligence.py::test_campaign_feedback_requires_five_distinct_campaigns
+  PASS  test_investigation_intelligence.py::test_campaign_merge_split_and_provenance_survive_restart
+  PASS  test_investigation_intelligence.py::test_explicit_merge_and_split_preserve_analyst_evidence
+  FAIL  test_investigation_intelligence.py::test_graph_schema_rollback_preserves_release_candidate_tables  (No module named 'requests')
+  PASS  test_investigation_intelligence.py::test_high_degree_wallet_does_not_explode_pivots_or_campaigns
+  PASS  test_investigation_intelligence.py::test_independent_evidence_stronger_than_repeated_certificate
+  PASS  test_investigation_intelligence.py::test_migration_backfills_existing_v2_without_mutating_candidates
+  PASS  test_investigation_intelligence.py::test_migration_preserves_v1_observations_and_source_urls
+  PASS  test_investigation_intelligence.py::test_one_shared_support_service_alone_is_not_a_relationship
+  FAIL  test_investigation_intelligence.py::test_shortlist_defers_same_campaign_member_with_recorded_reason  (No module named 'requests')
+  PASS  test_investigation_intelligence.py::test_temporal_wallet_and_reactivation_recorded_once
+  PASS  test_investigation_intelligence.py::test_weak_shared_host_and_generic_template_never_form_campaign
+  PASS  test_knowledge_graph.py::test_an_observed_edge_says_where_the_fact_came_from
+  PASS  test_knowledge_graph.py::test_every_derived_edge_states_a_reason
+  PASS  test_knowledge_graph.py::test_every_node_and_edge_declares_its_evidence_class
+  PASS  test_knowledge_graph.py::test_every_site_records_where_it_was_discovered
+  PASS  test_knowledge_graph.py::test_export_node_and_edge_types_are_all_declared
+  PASS  test_knowledge_graph.py::test_families_appear_as_cluster_nodes
+  PASS  test_knowledge_graph.py::test_graph_contains_sites_indicators_wallets_and_infrastructure
+  PASS  test_knowledge_graph.py::test_graph_language_never_claims_shared_ownership
+  PASS  test_knowledge_graph.py::test_graph_stats_are_cheap_and_complete
+  PASS  test_knowledge_graph.py::test_neighbourhood_of_an_unknown_site_says_so
+  PASS  test_knowledge_graph.py::test_neighbourhood_returns_the_graph_around_one_site
+  PASS  test_knowledge_graph.py::test_observed_only_view_strips_every_software_conclusion
+  PASS  test_knowledge_graph.py::test_platform_export_is_typed_and_carries_its_evidence_policy
+  PASS  test_knowledge_graph.py::test_wallets_and_infrastructure_are_separate_node_types
+Process Process-8:
+Traceback (most recent call last):
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/run_tests_standalone.py", line 109, in _run_fake_site
+    from fake_scam_site import app as fake_app
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/tests/fixtures/fake_scam_site.py", line 19, in <module>
+    from flask import Flask, redirect
+ModuleNotFoundError: No module named 'flask'
+  FAIL  test_navigator_integration.py::test_avoids_infinite_loop_between_two_pages  (fake_scam_site did not start in time)
+Process Process-9:
+Traceback (most recent call last):
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/run_tests_standalone.py", line 109, in _run_fake_site
+    from fake_scam_site import app as fake_app
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/tests/fixtures/fake_scam_site.py", line 19, in <module>
+    from flask import Flask, redirect
+ModuleNotFoundError: No module named 'flask'
+  FAIL  test_navigator_integration.py::test_decision_log_records_navigation_reasoning  (fake_scam_site did not start in time)
+Process Process-10:
+Traceback (most recent call last):
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/run_tests_standalone.py", line 109, in _run_fake_site
+    from fake_scam_site import app as fake_app
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/tests/fixtures/fake_scam_site.py", line 19, in <module>
+    from flask import Flask, redirect
+ModuleNotFoundError: No module named 'flask'
+  FAIL  test_navigator_integration.py::test_does_not_follow_external_domain_links  (fake_scam_site did not start in time)
+Process Process-11:
+Traceback (most recent call last):
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/run_tests_standalone.py", line 109, in _run_fake_site
+    from fake_scam_site import app as fake_app
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/tests/fixtures/fake_scam_site.py", line 19, in <module>
+    from flask import Flask, redirect
+ModuleNotFoundError: No module named 'flask'
+  FAIL  test_navigator_integration.py::test_full_investigation_finds_wallets_and_follows_relevant_links  (fake_scam_site did not start in time)
+Process Process-12:
+Traceback (most recent call last):
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/run_tests_standalone.py", line 109, in _run_fake_site
+    from fake_scam_site import app as fake_app
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/tests/fixtures/fake_scam_site.py", line 19, in <module>
+    from flask import Flask, redirect
+ModuleNotFoundError: No module named 'flask'
+  FAIL  test_navigator_integration.py::test_handles_dead_link_without_crashing  (fake_scam_site did not start in time)
+Process Process-13:
+Traceback (most recent call last):
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/run_tests_standalone.py", line 109, in _run_fake_site
+    from fake_scam_site import app as fake_app
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/tests/fixtures/fake_scam_site.py", line 19, in <module>
+    from flask import Flask, redirect
+ModuleNotFoundError: No module named 'flask'
+  FAIL  test_navigator_integration.py::test_handles_redirect_and_continues_on_final_url  (fake_scam_site did not start in time)
+Process Process-14:
+Traceback (most recent call last):
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/run_tests_standalone.py", line 109, in _run_fake_site
+    from fake_scam_site import app as fake_app
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/tests/fixtures/fake_scam_site.py", line 19, in <module>
+    from flask import Flask, redirect
+ModuleNotFoundError: No module named 'flask'
+  FAIL  test_navigator_integration.py::test_investigation_record_wallets_found_count_matches_actual_wallets  (fake_scam_site did not start in time)
+Process Process-15:
+Traceback (most recent call last):
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/run_tests_standalone.py", line 109, in _run_fake_site
+    from fake_scam_site import app as fake_app
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/tests/fixtures/fake_scam_site.py", line 19, in <module>
+    from flask import Flask, redirect
+ModuleNotFoundError: No module named 'flask'
+  FAIL  test_navigator_integration.py::test_recognizes_login_page_without_entering_credentials  (fake_scam_site did not start in time)
+Process Process-16:
+Traceback (most recent call last):
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/run_tests_standalone.py", line 109, in _run_fake_site
+    from fake_scam_site import app as fake_app
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/tests/fixtures/fake_scam_site.py", line 19, in <module>
+    from flask import Flask, redirect
+ModuleNotFoundError: No module named 'flask'
+  FAIL  test_navigator_integration.py::test_recognizes_signup_page_and_skips_when_disabled  (fake_scam_site did not start in time)
+Process Process-17:
+Traceback (most recent call last):
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/run_tests_standalone.py", line 109, in _run_fake_site
+    from fake_scam_site import app as fake_app
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/tests/fixtures/fake_scam_site.py", line 19, in <module>
+    from flask import Flask, redirect
+ModuleNotFoundError: No module named 'flask'
+  FAIL  test_navigator_integration.py::test_stops_entire_investigation_at_payment_access_control_wall  (fake_scam_site did not start in time)
+Process Process-18:
+Traceback (most recent call last):
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/run_tests_standalone.py", line 109, in _run_fake_site
+    from fake_scam_site import app as fake_app
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/tests/fixtures/fake_scam_site.py", line 19, in <module>
+    from flask import Flask, redirect
+ModuleNotFoundError: No module named 'flask'
+  FAIL  test_navigator_integration.py::test_wallet_evidence_captured_with_screenshot  (fake_scam_site did not start in time)
+  SKIP  test_navigator_safety.py (failed to import: No module named 'playwright')
+  SKIP  test_ng_discovery.py (failed to import: No module named 'requests')
+  SKIP  test_operation_v6.py (failed to import: No module named 'requests')
+  SKIP  test_operational_resilience.py (failed to import: No module named 'requests')
+  PASS  test_page_classifier.py::test_classifies_deposit_page
+  PASS  test_page_classifier.py::test_classifies_investment_page
+  PASS  test_page_classifier.py::test_classifies_login_page
+  PASS  test_page_classifier.py::test_classifies_trading_page
+  PASS  test_page_classifier.py::test_classifies_wallet_page
+  PASS  test_page_classifier.py::test_filter_interesting_links_ranks_by_keyword_hits
+  PASS  test_page_classifier.py::test_filter_interesting_links_respects_max_links
+  PASS  test_page_classifier.py::test_filter_wallet_priority_links_empty_when_nothing_matches
+  PASS  test_page_classifier.py::test_filter_wallet_priority_links_prefers_deposit_specific_terms
+  PASS  test_page_classifier.py::test_filter_wallet_priority_links_respects_max_links
+  PASS  test_page_classifier.py::test_nav_bar_text_does_not_leak_into_classification
+  PASS  test_page_classifier.py::test_unrecognized_page_is_other
+  PASS  test_page_understanding.py::test_access_control_detected_from_html_when_text_is_empty
+  PASS  test_page_understanding.py::test_body_signal_alone_without_password_field_is_not_enough
+  PASS  test_page_understanding.py::test_body_signal_with_password_field_is_recognized
+  PASS  test_page_understanding.py::test_combined_login_signup_toggle_page
+  PASS  test_page_understanding.py::test_detects_captcha
+  PASS  test_page_understanding.py::test_detects_kyc
+  PASS  test_page_understanding.py::test_detects_payment_requirement
+  PASS  test_page_understanding.py::test_detects_phone_verification
+  PASS  test_page_understanding.py::test_homepage_with_signup_nav_link_is_not_misclassified_as_signup_page
+  PASS  test_page_understanding.py::test_login_page_detected
+  PASS  test_page_understanding.py::test_login_page_not_also_flagged_as_signup_due_to_nav_mentioning_signup
+  PASS  test_page_understanding.py::test_normal_page_has_no_access_control
+  PASS  test_page_understanding.py::test_normal_page_not_flagged_as_auth
+  PASS  test_page_understanding.py::test_signup_page_detected
+  PASS  test_page_understanding.py::test_understand_page_normal_content
+  PASS  test_page_understanding.py::test_understand_page_stops_at_access_control_before_reporting_auth
+  PASS  test_page_understanding.py::test_url_path_signal_alone_is_sufficient
+  PASS  test_pivot_engine.py::test_branches_to_depth_two
+  PASS  test_pivot_engine.py::test_budget_reports_which_brake_stopped_it
+  PASS  test_pivot_engine.py::test_candidate_budget_caps_new_sites
+  PASS  test_pivot_engine.py::test_convergence_ranks_multi_path_sites_higher
+  PASS  test_pivot_engine.py::test_convergence_summary_does_not_claim_ownership
+  PASS  test_pivot_engine.py::test_depth_limit_is_expressed_in_hops_from_seed
+  PASS  test_pivot_engine.py::test_every_discovered_site_has_an_explaining_path
+  PASS  test_pivot_engine.py::test_finds_site_sharing_an_indicator_with_the_seed
+  PASS  test_pivot_engine.py::test_lead_budget_stops_the_run
+  PASS  test_pivot_engine.py::test_lead_keys_are_stable_and_case_insensitive
+  PASS  test_pivot_engine.py::test_leads_are_not_re_executed_across_runs
+  PASS  test_pivot_engine.py::test_promiscuous_indicator_is_skipped
+  PASS  test_pivot_engine.py::test_refuses_to_pivot_without_confident_seeds
+  PASS  test_pivot_engine.py::test_time_limit_stops_the_run
+  PASS  test_pivot_engine.py::test_weak_indicators_never_become_leads
+  SKIP  test_pursuit.py (failed to import: No module named 'requests')
+  SKIP  test_quality_pipeline.py (failed to import: No module named 'requests')
+  SKIP  test_queue_worker.py (failed to import: No module named 'playwright')
+  SKIP  test_ranker.py (failed to import: No module named 'requests')
+Process Process-19:
+Traceback (most recent call last):
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/run_tests_standalone.py", line 109, in _run_fake_site
+    from fake_scam_site import app as fake_app
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/tests/fixtures/fake_scam_site.py", line 19, in <module>
+    from flask import Flask, redirect
+ModuleNotFoundError: No module named 'flask'
+  FAIL  test_runner_integration.py::test_runner_full_cycle_ranks_then_investigates_high_risk_only  (fake_scam_site did not start in time)
+Process Process-20:
+Traceback (most recent call last):
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/run_tests_standalone.py", line 109, in _run_fake_site
+    from fake_scam_site import app as fake_app
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/tests/fixtures/fake_scam_site.py", line 19, in <module>
+    from flask import Flask, redirect
+ModuleNotFoundError: No module named 'flask'
+  FAIL  test_runner_integration.py::test_runner_only_auto_investigates_sites_at_or_above_risk_threshold  (fake_scam_site did not start in time)
+Process Process-21:
+Traceback (most recent call last):
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/run_tests_standalone.py", line 109, in _run_fake_site
+    from fake_scam_site import app as fake_app
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/tests/fixtures/fake_scam_site.py", line 19, in <module>
+    from flask import Flask, redirect
+ModuleNotFoundError: No module named 'flask'
+  FAIL  test_runner_integration.py::test_runner_pause_and_stop_during_auto_investigation  (fake_scam_site did not start in time)
+  PASS  test_submission.py::test_checksum_invalid_wallet_blocks_submission
+  PASS  test_submission.py::test_confirm_submitted_records_human_confirmation
+  PASS  test_submission.py::test_credentials_persist_in_settings_table
+  PASS  test_submission.py::test_credentials_saved_once_and_reused
+  PASS  test_submission.py::test_duplicate_site_guard
+  PASS  test_submission.py::test_duplicate_wallet_guard_across_different_sites
+  PASS  test_submission.py::test_failed_validation_is_recorded_for_audit
+  PASS  test_submission.py::test_fully_prepared_site_passes_validation
+  PASS  test_submission.py::test_invalid_mode_rejected
+  PASS  test_submission.py::test_low_confidence_blocks_submission
+  PASS  test_submission.py::test_manual_mode_validates_without_opening_browser
+  PASS  test_submission.py::test_missing_credentials_block_submission
+  PASS  test_submission.py::test_missing_deep_profile_blocks_submission
+  PASS  test_submission.py::test_unsupported_wallet_network_blocks_submission
+  PASS  test_submission.py::test_wallet_with_activity_is_preferred_for_submission
+  PASS  test_technique_learning.py::test_a_small_sample_is_never_throttled
+  PASS  test_technique_learning.py::test_a_technique_that_finds_nothing_useful_scores_badly
+  PASS  test_technique_learning.py::test_a_technique_that_finds_real_sites_scores_well
+  PASS  test_technique_learning.py::test_an_unknown_technique_is_neither_preferred_nor_avoided
+  PASS  test_technique_learning.py::test_an_unrun_technique_is_neutral_not_condemned
+  PASS  test_technique_learning.py::test_every_score_states_the_arithmetic_behind_it
+  PASS  test_technique_learning.py::test_learning_report_labels_its_conclusions_as_derived
+  PASS  test_technique_learning.py::test_mediocre_yield_is_reduced_rather_than_suspended
+  PASS  test_technique_learning.py::test_priority_prefers_proven_techniques
+  PASS  test_technique_learning.py::test_scores_stay_inside_zero_to_one
+  PASS  test_technique_learning.py::test_shallower_leads_still_win_regardless_of_learning
+  PASS  test_technique_learning.py::test_skip_gate_lets_a_suspended_technique_back_in_periodically
+  PASS  test_technique_learning.py::test_suspended_techniques_drop_out_of_the_queue
+  PASS  test_technique_learning.py::test_suspension_is_explicitly_reversible
+  PASS  test_technique_learning.py::test_sustained_noise_is_suspended_with_a_reason
+  SKIP  test_triage.py (failed to import: No module named 'requests')
+  SKIP  test_unified_dashboard_browser.py (failed to import: No module named 'playwright')
+  FAIL  test_unified_review_routes.py::test_review_and_discovery_routes  (No module named 'flask')
+  PASS  test_url_utils.py::test_domain_case_normalized
+  PASS  test_url_utils.py::test_fragment_stripped
+  PASS  test_url_utils.py::test_meaningful_query_params_preserved
+  PASS  test_url_utils.py::test_tracking_params_stripped
+  PASS  test_url_utils.py::test_trailing_slash_normalized
+  PASS  test_url_utils.py::test_visited_tracker_catches_all_loop_variants
+  PASS  test_url_utils.py::test_visited_tracker_count
+  PASS  test_url_utils.py::test_visited_tracker_enforces_max_pages
+  PASS  test_url_utils.py::test_www_prefix_normalized
+  PASS  test_v05_discovery_intelligence.py::test_a_candidate_that_fails_the_gate_is_not_handed_over
+  PASS  test_v05_discovery_intelligence.py::test_a_handoff_is_recorded_on_the_sites_timeline
+  PASS  test_v05_discovery_intelligence.py::test_a_widely_shared_indicator_is_refused_before_any_budget_is_spent
+  PASS  test_v05_discovery_intelligence.py::test_an_indicator_that_produced_something_useful_is_kept
+  PASS  test_v05_discovery_intelligence.py::test_an_indicator_with_a_small_sample_is_never_retired
+  PASS  test_v05_discovery_intelligence.py::test_an_unmeasured_source_is_flagged_and_not_promoted
+  PASS  test_v05_discovery_intelligence.py::test_campaign_performance_reports_cost_per_useful_result
+  PASS  test_v05_discovery_intelligence.py::test_deep_work_falls_back_to_local_when_the_platform_is_unreachable
+  PASS  test_v05_discovery_intelligence.py::test_deep_work_is_handed_over_when_the_platform_is_reachable
+  PASS  test_v05_discovery_intelligence.py::test_overview_reports_the_funnel_and_names_its_best_and_worst
+  PASS  test_v05_discovery_intelligence.py::test_pivot_performance_shows_the_whole_funnel
+  PASS  test_v05_discovery_intelligence.py::test_retirement_can_be_reversed
+  PASS  test_v05_discovery_intelligence.py::test_retirement_never_claims_anything_about_the_sites
+  PASS  test_v05_discovery_intelligence.py::test_sources_are_ranked_by_what_they_delivered_not_by_volume
+  PASS  test_v05_discovery_intelligence.py::test_stats_never_rank_on_a_rate_built_from_nothing
+  PASS  test_v05_discovery_intelligence.py::test_volume_without_results_is_retired_with_its_numbers
+  PASS  test_v05_discovery_intelligence.py::test_with_no_platform_configured_everything_stays_local
+  FAIL  test_v06_audit_fixes.py::test_a_finished_campaign_queues_its_progress_for_the_platform  (No module named 'requests')
+  PASS  test_v06_audit_fixes.py::test_a_half_upgraded_database_converges
+  FAIL  test_v06_audit_fixes.py::test_a_technique_stops_once_it_has_spent_its_share  (No module named 'requests')
+  PASS  test_v06_audit_fixes.py::test_allocation_bounds_hold
+  PASS  test_v06_audit_fixes.py::test_an_existing_database_can_be_upgraded
+  PASS  test_v06_audit_fixes.py::test_campaign_activity_uses_the_contracts_own_record_type
+  PASS  test_v06_audit_fixes.py::test_corroboration_now_reaches_candidate_priority
+  PASS  test_v06_audit_fixes.py::test_downstream_usefulness_actually_reaches_technique_learning
+  PASS  test_v06_audit_fixes.py::test_existing_sites_are_backfilled_into_the_candidate_registry
+  PASS  test_v06_audit_fixes.py::test_migrations_are_idempotent
+  PASS  test_v06_audit_fixes.py::test_refreshing_scores_repeatedly_does_not_inflate_a_technique
+  FAIL  test_v06_audit_fixes.py::test_starting_the_link_twice_is_refused  (No module named 'requests')
+  FAIL  test_v06_audit_fixes.py::test_the_allocation_is_persisted_so_a_resumed_campaign_spends_the_same_plan  (No module named 'requests')
+  FAIL  test_v06_audit_fixes.py::test_the_controller_can_start_and_stop_the_platform_link  (No module named 'requests')
+  PASS  test_v06_audit_fixes.py::test_the_deleted_contracts_helpers_are_gone
+  PASS  test_v06_audit_fixes.py::test_the_schema_report_names_what_is_pending
+  PASS  test_v06_discovery_quality.py::test_a_campaign_can_tell_what_it_already_handled
+  PASS  test_v06_discovery_quality.py::test_a_daily_ceiling_holds_across_windows
+  PASS  test_v06_discovery_quality.py::test_a_daily_snapshot_records_the_funnel
+  PASS  test_v06_discovery_quality.py::test_a_retry_after_is_obeyed_exactly
+  PASS  test_v06_discovery_quality.py::test_a_service_is_refused_once_its_window_is_used_up
+  PASS  test_v06_discovery_quality.py::test_a_single_sighting_earns_no_bonus
+  PASS  test_v06_discovery_quality.py::test_a_small_feedback_sample_stays_provisional
+  PASS  test_v06_discovery_quality.py::test_a_successful_call_clears_accumulated_backoff
+  PASS  test_v06_discovery_quality.py::test_a_weak_technique_keeps_a_share_so_it_can_recover
+  PASS  test_v06_discovery_quality.py::test_a_widely_shared_indicator_makes_a_weak_route
+  PASS  test_v06_discovery_quality.py::test_allocation_explains_itself
+  PASS  test_v06_discovery_quality.py::test_an_operator_supplied_indicator_beats_inherited_hosting
+  PASS  test_v06_discovery_quality.py::test_an_unreachable_site_is_not_scored_against_the_technique
+  PASS  test_v06_discovery_quality.py::test_backoff_grows_when_no_retry_after_is_given
+  PASS  test_v06_discovery_quality.py::test_budgets_survive_a_restart
+  PASS  test_v06_discovery_quality.py::test_corroboration_bonus_is_small_and_bounded
+  PASS  test_v06_discovery_quality.py::test_credit_goes_to_the_route_that_produced_the_candidate
+  PASS  test_v06_discovery_quality.py::test_distance_from_the_seed_costs
+  PASS  test_v06_discovery_quality.py::test_feedback_is_idempotent_so_redelivery_cannot_inflate_a_technique
+  PASS  test_v06_discovery_quality.py::test_limits_are_never_described_as_something_to_work_around
+  PASS  test_v06_discovery_quality.py::test_multipliers_stay_inside_their_bounds
+  PASS  test_v06_discovery_quality.py::test_no_confident_feedback_moves_no_budget
+  PASS  test_v06_discovery_quality.py::test_outcome_words_are_about_the_lead_never_about_the_site
+  PASS  test_v06_discovery_quality.py::test_path_quality_explains_itself_and_claims_nothing
+  PASS  test_v06_discovery_quality.py::test_recording_the_same_day_twice_replaces_rather_than_duplicates
+  PASS  test_v06_discovery_quality.py::test_rediscovery_by_another_campaign_is_corroboration_not_waste
+  PASS  test_v06_discovery_quality.py::test_refusals_are_counted_but_never_raise
+  PASS  test_v06_discovery_quality.py::test_rescoring_records_every_path
+  PASS  test_v06_discovery_quality.py::test_subdomains_are_not_merged_into_their_parent
+  PASS  test_v06_discovery_quality.py::test_the_same_campaign_and_route_records_nothing_new
+  PASS  test_v06_discovery_quality.py::test_the_same_domain_is_one_candidate_however_it_is_written
+  PASS  test_v06_discovery_quality.py::test_unproven_techniques_draw_from_a_reserved_share
+  PASS  test_v06_discovery_quality.py::test_unscored_techniques_neither_help_nor_hurt
+  PASS  test_v06_discovery_quality.py::test_usefulness_shows_its_arithmetic
+  PASS  test_v07_adaptive_discovery.py::test_a_branch_is_slowed_before_it_is_stopped
+  PASS  test_v07_adaptive_discovery.py::test_a_budget_change_is_applied_at_the_wave_boundary
+  PASS  test_v07_adaptive_discovery.py::test_a_campaign_can_be_paused_and_resumed_without_losing_state
+  PASS  test_v07_adaptive_discovery.py::test_a_completely_new_candidate_scores_novel
+  PASS  test_v07_adaptive_discovery.py::test_a_decision_records_what_was_known_at_the_time
+  PASS  test_v07_adaptive_discovery.py::test_a_familiar_candidate_scores_low_and_is_not_penalised_for_it
+  PASS  test_v07_adaptive_discovery.py::test_a_one_line_summary_is_available_for_lists
+  PASS  test_v07_adaptive_discovery.py::test_a_previously_dismissed_candidate_is_not_reprocessed
+  PASS  test_v07_adaptive_discovery.py::test_a_productive_branch_is_left_alone
+  PASS  test_v07_adaptive_discovery.py::test_a_small_branch_is_never_declared_saturated
+  PASS  test_v07_adaptive_discovery.py::test_an_unknown_control_is_refused
+  PASS  test_v07_adaptive_discovery.py::test_an_unreachable_candidate_earns_one_cheap_recheck
+  PASS  test_v07_adaptive_discovery.py::test_controls_default_to_running
+  PASS  test_v07_adaptive_discovery.py::test_convergence_distinguishes_independence_from_repetition
+  PASS  test_v07_adaptive_discovery.py::test_decision_language_is_about_attention_not_about_the_site
+  PASS  test_v07_adaptive_discovery.py::test_duplicate_saturation_is_detected_and_explained
+  PASS  test_v07_adaptive_discovery.py::test_elapsed_time_alone_does_not_reopen_a_candidate
+  PASS  test_v07_adaptive_discovery.py::test_every_part_of_the_explanation_says_observed_or_derived
+  PASS  test_v07_adaptive_discovery.py::test_meaningful_new_evidence_reopens_a_dismissed_candidate
+  PASS  test_v07_adaptive_discovery.py::test_novelty_is_not_a_claim_about_the_site
+  PASS  test_v07_adaptive_discovery.py::test_novelty_stays_separate_from_priority
+  PASS  test_v07_adaptive_discovery.py::test_only_contract_decisions_are_accepted
+  PASS  test_v07_adaptive_discovery.py::test_saturation_never_says_anything_about_the_sites
+  PASS  test_v07_adaptive_discovery.py::test_stop_reasons_come_from_a_closed_vocabulary
+  PASS  test_v07_adaptive_discovery.py::test_the_explanation_claims_nothing_about_the_site
+  PASS  test_v07_adaptive_discovery.py::test_the_explanation_contains_everything_an_analyst_needs
+  PASS  test_v07_adaptive_discovery.py::test_the_explanation_keeps_the_scores_separate
+  PASS  test_v07_adaptive_discovery.py::test_the_original_decision_survives_reconsideration
+  PASS  test_v07_adaptive_discovery.py::test_why_expansion_stopped_separates_finished_from_out_of_budget
+  SKIP  test_v2_precision.py (failed to import: No module named 'requests')
+  PASS  test_v3_learning.py::test_ai_inference_basis_is_never_learned_from
+  PASS  test_v3_learning.py::test_allocation_reserves_exploration_and_caps_dominance
+  FAIL  test_v3_learning.py::test_dead_site_penalises_strategy_but_not_signals  (No module named 'requests')
+  PASS  test_v3_learning.py::test_exploration_lets_a_collapsed_strategy_recover
+  FAIL  test_v3_learning.py::test_pull_outcomes_is_idempotent  (No module named 'requests')
+  FAIL  test_v3_learning.py::test_wallet_outcome_rewards_the_finding_strategy  (No module named 'requests')
+  SKIP  test_v4_context.py (failed to import: No module named 'requests')
+  PASS  test_v4_integration_e2e.py::test_a_bad_api_key_is_a_rejection_not_an_outage
+  PASS  test_v4_integration_e2e.py::test_a_bad_record_is_dead_lettered_without_failing_the_batch
+  PASS  test_v4_integration_e2e.py::test_a_discovery_becomes_an_investigate_site_job_for_site_investigator
+  PASS  test_v4_integration_e2e.py::test_a_job_demanding_prohibited_work_is_returned_for_review
+  PASS  test_v4_integration_e2e.py::test_a_job_requiring_authentication_is_refused
+  PASS  test_v4_integration_e2e.py::test_a_non_contract_event_field_is_refused_before_it_is_sent
+  PASS  test_v4_integration_e2e.py::test_a_relationship_without_evidence_is_refused_before_it_is_sent
+  PASS  test_v4_integration_e2e.py::test_a_replayed_batch_returns_the_original_result
+  PASS  test_v4_integration_e2e.py::test_a_restart_does_not_double_deliver
+  PASS  test_v4_integration_e2e.py::test_a_restart_hands_held_jobs_back_instead_of_letting_leases_rot
+  PASS  test_v4_integration_e2e.py::test_a_transient_failure_is_absorbed_by_the_sdks_own_retry
+  PASS  test_v4_integration_e2e.py::test_an_incompatible_schema_stops_sending_rather_than_shipping_garbage
+  PASS  test_v4_integration_e2e.py::test_an_interrupted_send_is_requeued_not_assumed_delivered
+  PASS  test_v4_integration_e2e.py::test_an_unconfigured_platform_is_supported_not_an_error
+  PASS  test_v4_integration_e2e.py::test_an_unreachable_platform_loses_nothing
+  PASS  test_v4_integration_e2e.py::test_claiming_is_a_lease_so_two_workers_cannot_take_the_same_job
+  PASS  test_v4_integration_e2e.py::test_conflicting_observations_do_not_overwrite_each_other
+  FAIL  test_v4_integration_e2e.py::test_downstream_outcomes_reach_the_ledger_and_move_budget  (No module named 'requests')
+  PASS  test_v4_integration_e2e.py::test_every_site_record_states_site_finders_limited_role
+  PASS  test_v4_integration_e2e.py::test_everything_drains_on_reconnect
+  PASS  test_v4_integration_e2e.py::test_feedback_never_calls_a_site_malicious
+  PASS  test_v4_integration_e2e.py::test_feedback_polling_is_idempotent
+  PASS  test_v4_integration_e2e.py::test_heartbeat_reports_health_and_is_accepted
+  PASS  test_v4_integration_e2e.py::test_investigation_identity_is_permanent_and_shared
+  PASS  test_v4_integration_e2e.py::test_no_work_waiting_is_not_an_error
+  PASS  test_v4_integration_e2e.py::test_nothing_sent_claims_shared_ownership_or_maliciousness
+  PASS  test_v4_integration_e2e.py::test_only_contract_record_types_are_ever_sent
+  PASS  test_v4_integration_e2e.py::test_registration_advertises_the_contracts_own_capabilities
+  PASS  test_v4_integration_e2e.py::test_resubmitting_a_changed_observation_updates_rather_than_duplicates
+  FAIL  test_v4_integration_e2e.py::test_site_finder_claims_and_completes_a_find_related_sites_job  (No module named 'requests')
+  PASS  test_v4_integration_e2e.py::test_site_finder_publishes_no_event_type_of_its_own
+  PASS  test_v4_integration_e2e.py::test_the_gap_report_lists_what_the_contract_cannot_express
+  PASS  test_v4_integration_e2e.py::test_the_handoff_carries_the_discovery_path
+  PASS  test_v4_integration_e2e.py::test_the_platforms_investigation_uuid_is_stored_when_learned
+  PASS  test_v4_integration_e2e.py::test_the_same_candidate_never_queues_twice
+  PASS  test_v4_integration_e2e.py::test_unpromoted_discovery_is_durable_and_later_promotion_is_distinct
+  PASS  test_v4_integration_e2e.py::test_wallets_and_relationships_arrive_as_the_contracts_own_records
+  SKIP  test_v5_continuous.py (failed to import: No module named 'requests')
+  PASS  test_wallet_extractor.py::test_context_window_does_not_bleed_across_unrelated_blocks
+  PASS  test_wallet_extractor.py::test_dedup_within_single_extraction
+  PASS  test_wallet_extractor.py::test_extracts_eth_address_with_high_confidence_in_context
+  PASS  test_wallet_extractor.py::test_extracts_tron_address
+  PASS  test_wallet_extractor.py::test_multiple_distinct_evm_addresses_labeled_independently
+  PASS  test_wallet_extractor.py::test_no_false_positive_on_short_hex_noise
+  PASS  test_wallet_extractor.py::test_plain_eth_address_stays_eth_with_no_special_context
+  PASS  test_wallet_extractor.py::test_relabels_evm_address_as_bnb_from_bep20_context
+  PASS  test_wallet_extractor.py::test_relabels_evm_address_as_matic_from_polygon_context
+  PASS  test_wallet_extractor.py::test_relabels_evm_address_as_usdt_from_context
+  PASS  test_wallet_extractor.py::test_sol_address_rejected_without_context
+  SKIP  test_wallet_validator.py (failed to import: No module named 'requests')
+
+============================================================
+Results: 331 passed, 56 failed, 20 file(s) skipped (need pytest): test_active_frontier_browser.py, test_active_investigation.py, test_campaign_graph_browser.py, test_ct_frontier.py, test_ct_query_rotation.py, test_discovery_repeat_metrics.py, test_navigator_safety.py, test_ng_discovery.py, test_operation_v6.py, test_operational_resilience.py, test_pursuit.py, test_quality_pipeline.py, test_queue_worker.py, test_ranker.py, test_triage.py, test_unified_dashboard_browser.py, test_v2_precision.py, test_v4_context.py, test_v5_continuous.py, test_wallet_validator.py
+============================================================
+
+Failure details:
+
+--- test_campaigns.py::test_a_completed_campaign_reports_rather_than_restarting ---
+Traceback (most recent call last):
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/run_tests_standalone.py", line 218, in run_all
+    func(*args)
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/tests/test_campaigns.py", line 201, in test_a_completed_campaign_reports_rather_than_restarting
+    campaigns.run_campaign(created["campaign_id"])
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/app/discovery/campaigns.py", line 324, in run_campaign
+    validated, promoted, rejected, interrupted = _validate_candidates(
+                                                 ^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/app/discovery/campaigns.py", line 614, in _validate_candidates
+    from app.analysis.triage import triage_site
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/app/analysis/triage.py", line 23, in <module>
+    import requests
+ModuleNotFoundError: No module named 'requests'
+
+--- test_campaigns.py::test_a_promotion_records_why_it_was_prioritised ---
+Traceback (most recent call last):
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/run_tests_standalone.py", line 218, in run_all
+    func(*args)
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/tests/test_campaigns.py", line 346, in test_a_promotion_records_why_it_was_prioritised
+    campaigns.run_campaign(created["campaign_id"], progress_cb=progress)
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/app/discovery/campaigns.py", line 324, in run_campaign
+    validated, promoted, rejected, interrupted = _validate_candidates(
+                                                 ^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/app/discovery/campaigns.py", line 614, in _validate_candidates
+    from app.analysis.triage import triage_site
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/app/analysis/triage.py", line 23, in <module>
+    import requests
+ModuleNotFoundError: No module named 'requests'
+
+--- test_campaigns.py::test_a_scarce_deep_analysis_budget_goes_to_the_best_evidenced_candidate ---
+Traceback (most recent call last):
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/run_tests_standalone.py", line 218, in run_all
+    func(*args)
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/tests/test_campaigns.py", line 330, in test_a_scarce_deep_analysis_budget_goes_to_the_best_evidenced_candidate
+    campaigns.run_campaign(created["campaign_id"], progress_cb=progress)
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/app/discovery/campaigns.py", line 324, in run_campaign
+    validated, promoted, rejected, interrupted = _validate_candidates(
+                                                 ^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/app/discovery/campaigns.py", line 614, in _validate_candidates
+    from app.analysis.triage import triage_site
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/app/analysis/triage.py", line 23, in <module>
+    import requests
+ModuleNotFoundError: No module named 'requests'
+
+--- test_campaigns.py::test_campaign_language_never_claims_shared_ownership ---
+Traceback (most recent call last):
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/run_tests_standalone.py", line 218, in run_all
+    func(*args)
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/tests/test_campaigns.py", line 370, in test_campaign_language_never_claims_shared_ownership
+    campaigns.run_campaign(created["campaign_id"])
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/app/discovery/campaigns.py", line 324, in run_campaign
+    validated, promoted, rejected, interrupted = _validate_candidates(
+                                                 ^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/app/discovery/campaigns.py", line 614, in _validate_candidates
+    from app.analysis.triage import triage_site
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/app/analysis/triage.py", line 23, in <module>
+    import requests
+ModuleNotFoundError: No module named 'requests'
+
+--- test_campaigns.py::test_campaign_reaches_a_site_that_shares_an_indicator_with_the_seed ---
+Traceback (most recent call last):
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/run_tests_standalone.py", line 218, in run_all
+    func(*args)
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/tests/test_campaigns.py", line 81, in test_campaign_reaches_a_site_that_shares_an_indicator_with_the_seed
+    campaigns.run_campaign(created["campaign_id"])
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/app/discovery/campaigns.py", line 324, in run_campaign
+    validated, promoted, rejected, interrupted = _validate_candidates(
+                                                 ^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/app/discovery/campaigns.py", line 614, in _validate_candidates
+    from app.analysis.triage import triage_site
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/app/analysis/triage.py", line 23, in <module>
+    import requests
+ModuleNotFoundError: No module named 'requests'
+
+--- test_campaigns.py::test_campaign_walks_all_five_stages ---
+Traceback (most recent call last):
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/run_tests_standalone.py", line 218, in run_all
+    func(*args)
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/tests/test_campaigns.py", line 69, in test_campaign_walks_all_five_stages
+    result = campaigns.run_campaign(created["campaign_id"])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/app/discovery/campaigns.py", line 324, in run_campaign
+    validated, promoted, rejected, interrupted = _validate_candidates(
+                                                 ^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/app/discovery/campaigns.py", line 614, in _validate_candidates
+    from app.analysis.triage import triage_site
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/app/analysis/triage.py", line 23, in <module>
+    import requests
+ModuleNotFoundError: No module named 'requests'
+
+--- test_campaigns.py::test_candidate_budget_caps_how_many_new_sites_are_added ---
+Traceback (most recent call last):
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/run_tests_standalone.py", line 218, in run_all
+    func(*args)
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/tests/test_campaigns.py", line 236, in test_candidate_budget_caps_how_many_new_sites_are_added
+    campaigns.run_campaign(created["campaign_id"])
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/app/discovery/campaigns.py", line 324, in run_campaign
+    validated, promoted, rejected, interrupted = _validate_candidates(
+                                                 ^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/app/discovery/campaigns.py", line 614, in _validate_candidates
+    from app.analysis.triage import triage_site
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/app/analysis/triage.py", line 23, in <module>
+    import requests
+ModuleNotFoundError: No module named 'requests'
+
+--- test_campaigns.py::test_completed_leads_are_not_run_twice_across_resumes ---
+Traceback (most recent call last):
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/run_tests_standalone.py", line 218, in run_all
+    func(*args)
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/tests/test_campaigns.py", line 183, in test_completed_leads_are_not_run_twice_across_resumes
+    campaigns.run_campaign(cid)
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/app/discovery/campaigns.py", line 324, in run_campaign
+    validated, promoted, rejected, interrupted = _validate_candidates(
+                                                 ^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/app/discovery/campaigns.py", line 614, in _validate_candidates
+    from app.analysis.triage import triage_site
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/app/analysis/triage.py", line 23, in <module>
+    import requests
+ModuleNotFoundError: No module named 'requests'
+
+--- test_campaigns.py::test_deep_analysis_budget_caps_promotions ---
+Traceback (most recent call last):
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/run_tests_standalone.py", line 218, in run_all
+    func(*args)
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/tests/test_campaigns.py", line 276, in test_deep_analysis_budget_caps_promotions
+    result = campaigns.run_campaign(created["campaign_id"])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/app/discovery/campaigns.py", line 324, in run_campaign
+    validated, promoted, rejected, interrupted = _validate_candidates(
+                                                 ^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/app/discovery/campaigns.py", line 614, in _validate_candidates
+    from app.analysis.triage import triage_site
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/app/analysis/triage.py", line 23, in <module>
+    import requests
+ModuleNotFoundError: No module named 'requests'
+
+--- test_campaigns.py::test_every_candidate_carries_an_explainable_discovery_path ---
+Traceback (most recent call last):
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/run_tests_standalone.py", line 218, in run_all
+    func(*args)
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/tests/test_campaigns.py", line 93, in test_every_candidate_carries_an_explainable_discovery_path
+    campaigns.run_campaign(created["campaign_id"])
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/app/discovery/campaigns.py", line 324, in run_campaign
+    validated, promoted, rejected, interrupted = _validate_candidates(
+                                                 ^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/app/discovery/campaigns.py", line 614, in _validate_candidates
+    from app.analysis.triage import triage_site
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/app/analysis/triage.py", line 23, in <module>
+    import requests
+ModuleNotFoundError: No module named 'requests'
+
+--- test_campaigns.py::test_interrupted_campaign_resumes_without_repeating_completed_stages ---
+Traceback (most recent call last):
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/run_tests_standalone.py", line 218, in run_all
+    func(*args)
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/tests/test_campaigns.py", line 170, in test_interrupted_campaign_resumes_without_repeating_completed_stages
+    second = campaigns.run_campaign(cid)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/app/discovery/campaigns.py", line 324, in run_campaign
+    validated, promoted, rejected, interrupted = _validate_candidates(
+                                                 ^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/app/discovery/campaigns.py", line 614, in _validate_candidates
+    from app.analysis.triage import triage_site
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/app/analysis/triage.py", line 23, in <module>
+    import requests
+ModuleNotFoundError: No module named 'requests'
+
+--- test_campaigns.py::test_lead_budget_caps_how_many_leads_a_campaign_runs ---
+Traceback (most recent call last):
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/run_tests_standalone.py", line 218, in run_all
+    func(*args)
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/tests/test_campaigns.py", line 218, in test_lead_budget_caps_how_many_leads_a_campaign_runs
+    result = campaigns.run_campaign(created["campaign_id"])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/app/discovery/campaigns.py", line 324, in run_campaign
+    validated, promoted, rejected, interrupted = _validate_candidates(
+                                                 ^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/app/discovery/campaigns.py", line 614, in _validate_candidates
+    from app.analysis.triage import triage_site
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/app/analysis/triage.py", line 23, in <module>
+    import requests
+ModuleNotFoundError: No module named 'requests'
+
+--- test_campaigns.py::test_report_separates_derived_correlation_from_observed_fact ---
+Traceback (most recent call last):
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/run_tests_standalone.py", line 218, in run_all
+    func(*args)
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/tests/test_campaigns.py", line 108, in test_report_separates_derived_correlation_from_observed_fact
+    campaigns.run_campaign(created["campaign_id"])
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/app/discovery/campaigns.py", line 324, in run_campaign
+    validated, promoted, rejected, interrupted = _validate_candidates(
+                                                 ^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/app/discovery/campaigns.py", line 614, in _validate_candidates
+    from app.analysis.triage import triage_site
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/app/analysis/triage.py", line 23, in <module>
+    import requests
+ModuleNotFoundError: No module named 'requests'
+
+--- test_campaigns.py::test_weakly_connected_candidates_are_set_aside_with_a_stated_reason ---
+Traceback (most recent call last):
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/run_tests_standalone.py", line 218, in run_all
+    func(*args)
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/tests/test_campaigns.py", line 296, in test_weakly_connected_candidates_are_set_aside_with_a_stated_reason
+    result = campaigns.run_campaign(created["campaign_id"], progress_cb=progress)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/app/discovery/campaigns.py", line 324, in run_campaign
+    validated, promoted, rejected, interrupted = _validate_candidates(
+                                                 ^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/app/discovery/campaigns.py", line 614, in _validate_candidates
+    from app.analysis.triage import triage_site
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/app/analysis/triage.py", line 23, in <module>
+    import requests
+ModuleNotFoundError: No module named 'requests'
+
+--- test_deep_wallet_hunt.py::test_deep_wallet_hunt_clicks_through_currency_tabs ---
+Traceback (most recent call last):
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/run_tests_standalone.py", line 206, in run_all
+    fixture_values["fake_site_server"] = get_fake_site_server()
+                                         ^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/run_tests_standalone.py", line 162, in get_fake_site_server
+    url, teardown = make_fake_site_server()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/run_tests_standalone.py", line 135, in make_fake_site_server
+    raise RuntimeError("fake_scam_site did not start in time")
+RuntimeError: fake_scam_site did not start in time
+
+--- test_deep_wallet_hunt.py::test_deep_wallet_hunt_mode_allows_more_pages_than_default ---
+Traceback (most recent call last):
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/run_tests_standalone.py", line 206, in run_all
+    fixture_values["fake_site_server"] = get_fake_site_server()
+                                         ^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/run_tests_standalone.py", line 162, in get_fake_site_server
+    url, teardown = make_fake_site_server()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/run_tests_standalone.py", line 135, in make_fake_site_server
+    raise RuntimeError("fake_scam_site did not start in time")
+RuntimeError: fake_scam_site did not start in time
+
+--- test_deep_wallet_hunt.py::test_post_signup_hunt_does_not_run_when_signup_hits_verification_wall ---
+Traceback (most recent call last):
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/run_tests_standalone.py", line 206, in run_all
+    fixture_values["fake_site_server"] = get_fake_site_server()
+                                         ^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/run_tests_standalone.py", line 162, in get_fake_site_server
+    url, teardown = make_fake_site_server()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/run_tests_standalone.py", line 135, in make_fake_site_server
+    raise RuntimeError("fake_scam_site did not start in time")
+RuntimeError: fake_scam_site did not start in time
+
+--- test_deep_wallet_hunt.py::test_post_signup_wallet_hunt_finds_member_only_deposit_page ---
+Traceback (most recent call last):
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/run_tests_standalone.py", line 206, in run_all
+    fixture_values["fake_site_server"] = get_fake_site_server()
+                                         ^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/run_tests_standalone.py", line 162, in get_fake_site_server
+    url, teardown = make_fake_site_server()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/run_tests_standalone.py", line 135, in make_fake_site_server
+    raise RuntimeError("fake_scam_site did not start in time")
+RuntimeError: fake_scam_site did not start in time
+
+--- test_deep_wallet_hunt.py::test_signup_never_attempted_when_allow_signup_false_even_in_deep_hunt_mode ---
+Traceback (most recent call last):
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/run_tests_standalone.py", line 206, in run_all
+    fixture_values["fake_site_server"] = get_fake_site_server()
+                                         ^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/run_tests_standalone.py", line 162, in get_fake_site_server
+    url, teardown = make_fake_site_server()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/run_tests_standalone.py", line 135, in make_fake_site_server
+    raise RuntimeError("fake_scam_site did not start in time")
+RuntimeError: fake_scam_site did not start in time
+
+--- test_deep_wallet_hunt.py::test_wallet_count_is_not_inflated_by_re_scanning_after_tab_clicks ---
+Traceback (most recent call last):
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/run_tests_standalone.py", line 206, in run_all
+    fixture_values["fake_site_server"] = get_fake_site_server()
+                                         ^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/run_tests_standalone.py", line 162, in get_fake_site_server
+    url, teardown = make_fake_site_server()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/run_tests_standalone.py", line 135, in make_fake_site_server
+    raise RuntimeError("fake_scam_site did not start in time")
+RuntimeError: fake_scam_site did not start in time
+
+--- test_deep_wallet_hunt.py::test_wallet_tab_clicks_are_logged_as_decisions ---
+Traceback (most recent call last):
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/run_tests_standalone.py", line 206, in run_all
+    fixture_values["fake_site_server"] = get_fake_site_server()
+                                         ^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/run_tests_standalone.py", line 162, in get_fake_site_server
+    url, teardown = make_fake_site_server()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/run_tests_standalone.py", line 135, in make_fake_site_server
+    raise RuntimeError("fake_scam_site did not start in time")
+RuntimeError: fake_scam_site did not start in time
+
+--- test_discovery_engine.py::test_engine_dedupes_across_repeated_runs ---
+Traceback (most recent call last):
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/run_tests_standalone.py", line 218, in run_all
+    func(*args)
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/tests/test_discovery_engine.py", line 45, in test_engine_dedupes_across_repeated_runs
+    import app.discovery.engine as engine_mod
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/app/discovery/engine.py", line 23, in <module>
+    from app.discovery.certificate_transparency import CertificateTransparencyDiscoverer
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/app/discovery/certificate_transparency.py", line 21, in <module>
+    import requests
+ModuleNotFoundError: No module named 'requests'
+
+--- test_discovery_engine.py::test_engine_handles_source_exception_without_crashing_the_run ---
+Traceback (most recent call last):
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/run_tests_standalone.py", line 218, in run_all
+    func(*args)
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/tests/test_discovery_engine.py", line 105, in test_engine_handles_source_exception_without_crashing_the_run
+    import app.discovery.engine as engine_mod
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/app/discovery/engine.py", line 23, in <module>
+    from app.discovery.certificate_transparency import CertificateTransparencyDiscoverer
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/app/discovery/certificate_transparency.py", line 21, in <module>
+    import requests
+ModuleNotFoundError: No module named 'requests'
+
+--- test_discovery_engine.py::test_engine_ingests_new_candidates_and_writes_discovery_fields ---
+Traceback (most recent call last):
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/run_tests_standalone.py", line 218, in run_all
+    func(*args)
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/tests/test_discovery_engine.py", line 21, in test_engine_ingests_new_candidates_and_writes_discovery_fields
+    import app.discovery.engine as engine_mod
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/app/discovery/engine.py", line 23, in <module>
+    from app.discovery.certificate_transparency import CertificateTransparencyDiscoverer
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/app/discovery/certificate_transparency.py", line 21, in <module>
+    import requests
+ModuleNotFoundError: No module named 'requests'
+
+--- test_discovery_engine.py::test_engine_logs_discovery_event_even_for_duplicates ---
+Traceback (most recent call last):
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/run_tests_standalone.py", line 218, in run_all
+    func(*args)
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/tests/test_discovery_engine.py", line 66, in test_engine_logs_discovery_event_even_for_duplicates
+    import app.discovery.engine as engine_mod
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/app/discovery/engine.py", line 23, in <module>
+    from app.discovery.certificate_transparency import CertificateTransparencyDiscoverer
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/app/discovery/certificate_transparency.py", line 21, in <module>
+    import requests
+ModuleNotFoundError: No module named 'requests'
+
+--- test_discovery_engine.py::test_engine_progress_callbacks_fire_for_discovered_sites ---
+Traceback (most recent call last):
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/run_tests_standalone.py", line 218, in run_all
+    func(*args)
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/tests/test_discovery_engine.py", line 127, in test_engine_progress_callbacks_fire_for_discovered_sites
+    import app.discovery.engine as engine_mod
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/app/discovery/engine.py", line 23, in <module>
+    from app.discovery.certificate_transparency import CertificateTransparencyDiscoverer
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/app/discovery/certificate_transparency.py", line 21, in <module>
+    import requests
+ModuleNotFoundError: No module named 'requests'
+
+--- test_discovery_engine.py::test_engine_records_run_stats_and_per_source_breakdown ---
+Traceback (most recent call last):
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/run_tests_standalone.py", line 218, in run_all
+    func(*args)
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/tests/test_discovery_engine.py", line 83, in test_engine_records_run_stats_and_per_source_breakdown
+    import app.discovery.engine as engine_mod
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/app/discovery/engine.py", line 23, in <module>
+    from app.discovery.certificate_transparency import CertificateTransparencyDiscoverer
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/app/discovery/certificate_transparency.py", line 21, in <module>
+    import requests
+ModuleNotFoundError: No module named 'requests'
+
+--- test_investigation_intelligence.py::test_actions_are_bounded_and_campaign_review_does_not_cast_domain_votes ---
+Traceback (most recent call last):
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/run_tests_standalone.py", line 218, in run_all
+    func(*args)
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/tests/test_investigation_intelligence.py", line 159, in test_actions_are_bounded_and_campaign_review_does_not_cast_domain_votes
+    ig.review_campaign(ig.campaign_for("a.test"), "watch", "Monitor infrastructure")
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/app/v2/intelligence.py", line 689, in review_campaign
+    from app.v2 import operations
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/app/v2/operations.py", line 7, in <module>
+    from app.v2 import active, intelligence, sources, store
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/app/v2/active.py", line 14, in <module>
+    from app.v2 import domains, intelligence, netio, store, strategies
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/app/v2/netio.py", line 27, in <module>
+    import requests
+ModuleNotFoundError: No module named 'requests'
+
+--- test_investigation_intelligence.py::test_campaign_api_compatible_with_existing_queue ---
+Traceback (most recent call last):
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/run_tests_standalone.py", line 218, in run_all
+    func(*args)
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/tests/test_investigation_intelligence.py", line 181, in test_campaign_api_compatible_with_existing_queue
+    from app.review.server import app
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/app/review/server.py", line 13, in <module>
+    from flask import Flask, render_template, request, jsonify, send_from_directory, Response, redirect
+ModuleNotFoundError: No module named 'flask'
+
+--- test_investigation_intelligence.py::test_graph_schema_rollback_preserves_release_candidate_tables ---
+Traceback (most recent call last):
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/run_tests_standalone.py", line 218, in run_all
+    func(*args)
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/tests/test_investigation_intelligence.py", line 144, in test_graph_schema_rollback_preserves_release_candidate_tables
+    assert ig.rollback_graph_only(confirm=True)["original_data_preserved"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/app/v2/intelligence.py", line 493, in rollback_graph_only
+    from app.v2 import active
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/app/v2/active.py", line 14, in <module>
+    from app.v2 import domains, intelligence, netio, store, strategies
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/app/v2/netio.py", line 27, in <module>
+    import requests
+ModuleNotFoundError: No module named 'requests'
+
+--- test_investigation_intelligence.py::test_shortlist_defers_same_campaign_member_with_recorded_reason ---
+Traceback (most recent call last):
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/run_tests_standalone.py", line 218, in run_all
+    func(*args)
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/tests/test_investigation_intelligence.py", line 198, in test_shortlist_defers_same_campaign_member_with_recorded_reason
+    from app.v2 import engine
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/app/v2/engine.py", line 23, in <module>
+    from app.v2 import adaptive, classify, cluster, domains as dm, netio, ng, score as sc, selection, signals as sg, store, strategies as st
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/app/v2/classify.py", line 22, in <module>
+    from app.v2.netio import Snapshot, visible_text, title_of, links
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/app/v2/netio.py", line 27, in <module>
+    import requests
+ModuleNotFoundError: No module named 'requests'
+
+--- test_navigator_integration.py::test_avoids_infinite_loop_between_two_pages ---
+Traceback (most recent call last):
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/run_tests_standalone.py", line 206, in run_all
+    fixture_values["fake_site_server"] = get_fake_site_server()
+                                         ^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/run_tests_standalone.py", line 162, in get_fake_site_server
+    url, teardown = make_fake_site_server()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/run_tests_standalone.py", line 135, in make_fake_site_server
+    raise RuntimeError("fake_scam_site did not start in time")
+RuntimeError: fake_scam_site did not start in time
+
+--- test_navigator_integration.py::test_decision_log_records_navigation_reasoning ---
+Traceback (most recent call last):
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/run_tests_standalone.py", line 206, in run_all
+    fixture_values["fake_site_server"] = get_fake_site_server()
+                                         ^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/run_tests_standalone.py", line 162, in get_fake_site_server
+    url, teardown = make_fake_site_server()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/run_tests_standalone.py", line 135, in make_fake_site_server
+    raise RuntimeError("fake_scam_site did not start in time")
+RuntimeError: fake_scam_site did not start in time
+
+--- test_navigator_integration.py::test_does_not_follow_external_domain_links ---
+Traceback (most recent call last):
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/run_tests_standalone.py", line 206, in run_all
+    fixture_values["fake_site_server"] = get_fake_site_server()
+                                         ^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/run_tests_standalone.py", line 162, in get_fake_site_server
+    url, teardown = make_fake_site_server()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/run_tests_standalone.py", line 135, in make_fake_site_server
+    raise RuntimeError("fake_scam_site did not start in time")
+RuntimeError: fake_scam_site did not start in time
+
+--- test_navigator_integration.py::test_full_investigation_finds_wallets_and_follows_relevant_links ---
+Traceback (most recent call last):
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/run_tests_standalone.py", line 206, in run_all
+    fixture_values["fake_site_server"] = get_fake_site_server()
+                                         ^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/run_tests_standalone.py", line 162, in get_fake_site_server
+    url, teardown = make_fake_site_server()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/run_tests_standalone.py", line 135, in make_fake_site_server
+    raise RuntimeError("fake_scam_site did not start in time")
+RuntimeError: fake_scam_site did not start in time
+
+--- test_navigator_integration.py::test_handles_dead_link_without_crashing ---
+Traceback (most recent call last):
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/run_tests_standalone.py", line 206, in run_all
+    fixture_values["fake_site_server"] = get_fake_site_server()
+                                         ^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/run_tests_standalone.py", line 162, in get_fake_site_server
+    url, teardown = make_fake_site_server()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/run_tests_standalone.py", line 135, in make_fake_site_server
+    raise RuntimeError("fake_scam_site did not start in time")
+RuntimeError: fake_scam_site did not start in time
+
+--- test_navigator_integration.py::test_handles_redirect_and_continues_on_final_url ---
+Traceback (most recent call last):
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/run_tests_standalone.py", line 206, in run_all
+    fixture_values["fake_site_server"] = get_fake_site_server()
+                                         ^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/run_tests_standalone.py", line 162, in get_fake_site_server
+    url, teardown = make_fake_site_server()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/run_tests_standalone.py", line 135, in make_fake_site_server
+    raise RuntimeError("fake_scam_site did not start in time")
+RuntimeError: fake_scam_site did not start in time
+
+--- test_navigator_integration.py::test_investigation_record_wallets_found_count_matches_actual_wallets ---
+Traceback (most recent call last):
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/run_tests_standalone.py", line 206, in run_all
+    fixture_values["fake_site_server"] = get_fake_site_server()
+                                         ^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/run_tests_standalone.py", line 162, in get_fake_site_server
+    url, teardown = make_fake_site_server()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/run_tests_standalone.py", line 135, in make_fake_site_server
+    raise RuntimeError("fake_scam_site did not start in time")
+RuntimeError: fake_scam_site did not start in time
+
+--- test_navigator_integration.py::test_recognizes_login_page_without_entering_credentials ---
+Traceback (most recent call last):
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/run_tests_standalone.py", line 206, in run_all
+    fixture_values["fake_site_server"] = get_fake_site_server()
+                                         ^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/run_tests_standalone.py", line 162, in get_fake_site_server
+    url, teardown = make_fake_site_server()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/run_tests_standalone.py", line 135, in make_fake_site_server
+    raise RuntimeError("fake_scam_site did not start in time")
+RuntimeError: fake_scam_site did not start in time
+
+--- test_navigator_integration.py::test_recognizes_signup_page_and_skips_when_disabled ---
+Traceback (most recent call last):
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/run_tests_standalone.py", line 206, in run_all
+    fixture_values["fake_site_server"] = get_fake_site_server()
+                                         ^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/run_tests_standalone.py", line 162, in get_fake_site_server
+    url, teardown = make_fake_site_server()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/run_tests_standalone.py", line 135, in make_fake_site_server
+    raise RuntimeError("fake_scam_site did not start in time")
+RuntimeError: fake_scam_site did not start in time
+
+--- test_navigator_integration.py::test_stops_entire_investigation_at_payment_access_control_wall ---
+Traceback (most recent call last):
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/run_tests_standalone.py", line 206, in run_all
+    fixture_values["fake_site_server"] = get_fake_site_server()
+                                         ^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/run_tests_standalone.py", line 162, in get_fake_site_server
+    url, teardown = make_fake_site_server()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/run_tests_standalone.py", line 135, in make_fake_site_server
+    raise RuntimeError("fake_scam_site did not start in time")
+RuntimeError: fake_scam_site did not start in time
+
+--- test_navigator_integration.py::test_wallet_evidence_captured_with_screenshot ---
+Traceback (most recent call last):
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/run_tests_standalone.py", line 206, in run_all
+    fixture_values["fake_site_server"] = get_fake_site_server()
+                                         ^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/run_tests_standalone.py", line 162, in get_fake_site_server
+    url, teardown = make_fake_site_server()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/run_tests_standalone.py", line 135, in make_fake_site_server
+    raise RuntimeError("fake_scam_site did not start in time")
+RuntimeError: fake_scam_site did not start in time
+
+--- test_runner_integration.py::test_runner_full_cycle_ranks_then_investigates_high_risk_only ---
+Traceback (most recent call last):
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/run_tests_standalone.py", line 206, in run_all
+    fixture_values["fake_site_server"] = get_fake_site_server()
+                                         ^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/run_tests_standalone.py", line 162, in get_fake_site_server
+    url, teardown = make_fake_site_server()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/run_tests_standalone.py", line 135, in make_fake_site_server
+    raise RuntimeError("fake_scam_site did not start in time")
+RuntimeError: fake_scam_site did not start in time
+
+--- test_runner_integration.py::test_runner_only_auto_investigates_sites_at_or_above_risk_threshold ---
+Traceback (most recent call last):
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/run_tests_standalone.py", line 206, in run_all
+    fixture_values["fake_site_server"] = get_fake_site_server()
+                                         ^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/run_tests_standalone.py", line 162, in get_fake_site_server
+    url, teardown = make_fake_site_server()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/run_tests_standalone.py", line 135, in make_fake_site_server
+    raise RuntimeError("fake_scam_site did not start in time")
+RuntimeError: fake_scam_site did not start in time
+
+--- test_runner_integration.py::test_runner_pause_and_stop_during_auto_investigation ---
+Traceback (most recent call last):
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/run_tests_standalone.py", line 206, in run_all
+    fixture_values["fake_site_server"] = get_fake_site_server()
+                                         ^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/run_tests_standalone.py", line 162, in get_fake_site_server
+    url, teardown = make_fake_site_server()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/run_tests_standalone.py", line 135, in make_fake_site_server
+    raise RuntimeError("fake_scam_site did not start in time")
+RuntimeError: fake_scam_site did not start in time
+
+--- test_unified_review_routes.py::test_review_and_discovery_routes ---
+Traceback (most recent call last):
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/run_tests_standalone.py", line 218, in run_all
+    func(*args)
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/tests/test_unified_review_routes.py", line 6, in test_review_and_discovery_routes
+    from app.review import server
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/app/review/server.py", line 13, in <module>
+    from flask import Flask, render_template, request, jsonify, send_from_directory, Response, redirect
+ModuleNotFoundError: No module named 'flask'
+
+--- test_v06_audit_fixes.py::test_a_finished_campaign_queues_its_progress_for_the_platform ---
+Traceback (most recent call last):
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/run_tests_standalone.py", line 218, in run_all
+    func(*args)
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/tests/test_v06_audit_fixes.py", line 318, in test_a_finished_campaign_queues_its_progress_for_the_platform
+    campaigns.run_campaign(created["campaign_id"])
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/app/discovery/campaigns.py", line 324, in run_campaign
+    validated, promoted, rejected, interrupted = _validate_candidates(
+                                                 ^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/app/discovery/campaigns.py", line 614, in _validate_candidates
+    from app.analysis.triage import triage_site
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/app/analysis/triage.py", line 23, in <module>
+    import requests
+ModuleNotFoundError: No module named 'requests'
+
+--- test_v06_audit_fixes.py::test_a_technique_stops_once_it_has_spent_its_share ---
+Traceback (most recent call last):
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/run_tests_standalone.py", line 218, in run_all
+    func(*args)
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/tests/test_v06_audit_fixes.py", line 181, in test_a_technique_stops_once_it_has_spent_its_share
+    result = campaigns.run_campaign(campaign_id, progress_cb=progress)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/app/discovery/campaigns.py", line 324, in run_campaign
+    validated, promoted, rejected, interrupted = _validate_candidates(
+                                                 ^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/app/discovery/campaigns.py", line 614, in _validate_candidates
+    from app.analysis.triage import triage_site
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/app/analysis/triage.py", line 23, in <module>
+    import requests
+ModuleNotFoundError: No module named 'requests'
+
+--- test_v06_audit_fixes.py::test_starting_the_link_twice_is_refused ---
+Traceback (most recent call last):
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/run_tests_standalone.py", line 218, in run_all
+    func(*args)
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/tests/test_v06_audit_fixes.py", line 272, in test_starting_the_link_twice_is_refused
+    from app.runner import ScanController
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/app/runner.py", line 26, in <module>
+    from app.collectors import run_collectors
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/app/collectors/__init__.py", line 4, in <module>
+    from app.collectors.public_feeds import PublicFeedCollector
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/app/collectors/public_feeds.py", line 16, in <module>
+    import requests
+ModuleNotFoundError: No module named 'requests'
+
+--- test_v06_audit_fixes.py::test_the_allocation_is_persisted_so_a_resumed_campaign_spends_the_same_plan ---
+Traceback (most recent call last):
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/run_tests_standalone.py", line 218, in run_all
+    func(*args)
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/tests/test_v06_audit_fixes.py", line 142, in test_the_allocation_is_persisted_so_a_resumed_campaign_spends_the_same_plan
+    campaigns.run_campaign(created["campaign_id"])
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/app/discovery/campaigns.py", line 324, in run_campaign
+    validated, promoted, rejected, interrupted = _validate_candidates(
+                                                 ^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/app/discovery/campaigns.py", line 614, in _validate_candidates
+    from app.analysis.triage import triage_site
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/app/analysis/triage.py", line 23, in <module>
+    import requests
+ModuleNotFoundError: No module named 'requests'
+
+--- test_v06_audit_fixes.py::test_the_controller_can_start_and_stop_the_platform_link ---
+Traceback (most recent call last):
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/run_tests_standalone.py", line 218, in run_all
+    func(*args)
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/tests/test_v06_audit_fixes.py", line 258, in test_the_controller_can_start_and_stop_the_platform_link
+    from app.runner import ScanController
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/app/runner.py", line 26, in <module>
+    from app.collectors import run_collectors
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/app/collectors/__init__.py", line 4, in <module>
+    from app.collectors.public_feeds import PublicFeedCollector
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/app/collectors/public_feeds.py", line 16, in <module>
+    import requests
+ModuleNotFoundError: No module named 'requests'
+
+--- test_v3_learning.py::test_dead_site_penalises_strategy_but_not_signals ---
+Traceback (most recent call last):
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/run_tests_standalone.py", line 218, in run_all
+    func(*args)
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/tests/test_v3_learning.py", line 33, in test_dead_site_penalises_strategy_but_not_signals
+    outcomes.apply_outcome("dead-b.example", "dead_site", "observed")
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/app/v2/outcomes.py", line 91, in apply_outcome
+    from app.v2 import context
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/app/v2/context.py", line 39, in <module>
+    from app.v2 import adaptive, netio, store
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/app/v2/netio.py", line 27, in <module>
+    import requests
+ModuleNotFoundError: No module named 'requests'
+
+--- test_v3_learning.py::test_pull_outcomes_is_idempotent ---
+Traceback (most recent call last):
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/run_tests_standalone.py", line 218, in run_all
+    func(*args)
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/tests/test_v3_learning.py", line 66, in test_pull_outcomes_is_idempotent
+    first = outcomes.pull_outcomes(client)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/app/v2/outcomes.py", line 136, in pull_outcomes
+    if apply_outcome(domain, str(row.get("outcome")), str(row.get("basis"))):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/app/v2/outcomes.py", line 91, in apply_outcome
+    from app.v2 import context
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/app/v2/context.py", line 39, in <module>
+    from app.v2 import adaptive, netio, store
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/app/v2/netio.py", line 27, in <module>
+    import requests
+ModuleNotFoundError: No module named 'requests'
+
+--- test_v3_learning.py::test_wallet_outcome_rewards_the_finding_strategy ---
+Traceback (most recent call last):
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/run_tests_standalone.py", line 218, in run_all
+    func(*args)
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/tests/test_v3_learning.py", line 25, in test_wallet_outcome_rewards_the_finding_strategy
+    assert outcomes.apply_outcome("scam-a.example", "wallet_evidence", "observed") is True
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/app/v2/outcomes.py", line 91, in apply_outcome
+    from app.v2 import context
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/app/v2/context.py", line 39, in <module>
+    from app.v2 import adaptive, netio, store
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/app/v2/netio.py", line 27, in <module>
+    import requests
+ModuleNotFoundError: No module named 'requests'
+
+--- test_v4_integration_e2e.py::test_downstream_outcomes_reach_the_ledger_and_move_budget ---
+Traceback (most recent call last):
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/run_tests_standalone.py", line 218, in run_all
+    func(*args)
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/tests/test_v4_integration_e2e.py", line 708, in test_downstream_outcomes_reach_the_ledger_and_move_budget
+    campaigns.run_campaign(before["campaign_id"])
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/app/discovery/campaigns.py", line 324, in run_campaign
+    validated, promoted, rejected, interrupted = _validate_candidates(
+                                                 ^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/app/discovery/campaigns.py", line 614, in _validate_candidates
+    from app.analysis.triage import triage_site
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/app/analysis/triage.py", line 23, in <module>
+    import requests
+ModuleNotFoundError: No module named 'requests'
+
+--- test_v4_integration_e2e.py::test_site_finder_claims_and_completes_a_find_related_sites_job ---
+Traceback (most recent call last):
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/run_tests_standalone.py", line 218, in run_all
+    func(*args)
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/tests/test_v4_integration_e2e.py", line 556, in test_site_finder_claims_and_completes_a_find_related_sites_job
+    from benchmark.simnet import SimNet, installed
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07/benchmark/simnet.py", line 17, in <module>
+    import requests
+ModuleNotFoundError: No module named 'requests'
+
+FAIL site-finder: step 1/1 exited with 1: [integrations/site-finder-v07] python run_tests_standalone.py
+
+=== wallet-pipeline (6 steps) ===
+--- wallet-pipeline 1/6: [integrations/crypto-wallet-logger-v08] node --test tests/wallet-core.test.js tests/sync-queue.test.js tests/context-precision.test.js
+✔ deposit card: address with its own label, copy button and QR (8.998428ms)
+✔ deposit wording only in a heading, or only in the address's own sentence, is still deposit (2.227559ms)
+✔ a lone address in a deposit section (no other address there) keeps the section's deposit wording (1.640677ms)
+✔ deposit next to a contract mention stays deposit (contract evidence is not about this address) (0.417127ms)
+✔ network responses and script config keep their key-path evidence (1.68913ms)
+✔ token contract inside the deposit card: its own label beats the card's deposit cues (0.644909ms)
+✔ transaction history rows (table or div list) inside a deposit page (2.501451ms)
+✔ example / documentation addresses (0.856798ms)
+✔ withdrawal inputs and the visitor's own addresses (0.982788ms)
+✔ unrelated addresses: partners, team wallets, referrers, reported scam addresses (1.861919ms)
+✔ deposit cues that only describe the surrounding section give unknown, not deposit (0.520583ms)
+✔ malformed addresses (failing checksum) are never called deposit (0.680123ms)
+✔ near zone is derived from `local` when the caller passes none (0.404648ms)
+✔ a weakly supported deposit call gets a lower confidence than a well-supported one (0.300281ms)
+✔ item enqueued while a delivery is in flight is delivered in the same drain and never lost (57.64963ms)
+✔ many concurrent enqueues: every item delivered exactly once, queue empty (381.791188ms)
+✔ identical replays dedupe; permanent rejections do not block the queue; offline backs off (46.565175ms)
+✔ wallet.observation envelope and payload follow contract §1 (27.107557ms)
+✔ sha256 matches node:crypto (6.978441ms)
+✔ keccak-256 (Ethereum padding) known vectors (2.808031ms)
+✔ EIP-55 specification vectors (0.880434ms)
+✔ built-in token contract list is internally valid (2.641962ms)
+✔ bitcoin base58check and bech32/bech32m with witness rules (1.326525ms)
+✔ litecoin and dogecoin (generated with reference encoders) (1.282548ms)
+✔ tron, xrp, solana (0.325249ms)
+✔ extraction rejects tx hashes and hex substrings, keeps case (0.561875ms)
+✔ extraction across families with boundaries and zero-width characters (1.040754ms)
+✔ solana-length base58 needs wallet context and is rejected after signature/hash labels (0.599362ms)
+✔ EIP-681 URIs: chain id, value and ERC-20 transfer recipient (0.902107ms)
+✔ bitcoin/litecoin/dogecoin/tron/solana/xrp URIs (0.510147ms)
+✔ extractAll: token contract inside a transfer URI is not the payment target (0.763088ms)
+✔ network hints: canonical mapping and priority (2.416583ms)
+✔ deposit: words + structure (7.219974ms)
+✔ recharge / top up / fund your account / payment instruction (0.876098ms)
+✔ withdrawal never counts as deposit (1.588919ms)
+✔ examples: placeholder, e.g., docs code blocks, well-known addresses (0.828465ms)
+✔ transaction history and contract/token (1.970612ms)
+✔ unrelated and unknown (0.533171ms)
+✔ hidden-panel cue lowers confidence (0.893333ms)
+✔ key paths from script config / network responses (2.369232ms)
+✔ scanJson records key paths, sibling hints and never invokes getters (1.315447ms)
+✔ scanScriptText: JS config with approximate key paths (0.67845ms)
+✔ canonical identity and observationId (0.237777ms)
+✔ legacy network labels keep v0.8 UI/verifier semantics (0.150036ms)
+✔ main-world/wallet-core.js is a byte-identical copy of wallet-core.js (0.564419ms)
+ℹ tests 45
+ℹ suites 0
+ℹ pass 45
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 611.747111
+--- wallet-pipeline 2/6: [integrations/crypto-wallet-logger-v08] python tests/browser_extension_test.py
+Traceback (most recent call last):
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/crypto-wallet-logger-v08/tests/browser_extension_test.py", line 29, in <module>
+    from playwright.sync_api import sync_playwright
+ModuleNotFoundError: No module named 'playwright'
+FAIL wallet-pipeline: step 2/6 exited with 1: [integrations/crypto-wallet-logger-v08] python tests/browser_extension_test.py
+
+=== director (4 steps) ===
+--- director 1/4: node --test tests/director-migration.test.mjs
+✔ populated v4 migration and rollback retain candidates, observations, evidence and approval hashes (33.535766ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 1
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 124.355672
+--- director 2/4: node --experimental-sqlite --import tsx --import file:///workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/lib/sqljs-fallback.mjs tests/director-acceptance.mjs
+[test] sql.js is not installed; the Wallet Investigator runs on the node:sqlite stand-in (tests/lib/sqljs-standin).
+{"ok":true,"checks":["scheduler pause reconciles state without starting public or wallet work","durable one-action loop and restart without duplicate public jobs","global resource reservation atomically refuses work across module paths","partial v4 analysis adopted; backoff and refresh identity survive restart","concurrent director ticks create one action and one job","uncertain submission is parked after a lost worker lease","exhausted global budget prevents a new public investigation","shared CDN/template never becomes a director ownership relationship"]}
+--- director 3/4: node --experimental-sqlite --import tsx --import file:///workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/lib/sqljs-fallback.mjs tests/director-provider-recovery.mjs
+[test] sql.js is not installed; the Wallet Investigator runs on the node:sqlite stand-in (tests/lib/sqljs-standin).
+TypeError: initDatabase is not a function
+    at file:///workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/director-provider-recovery.mjs:12:103
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+FAIL director: step 3/4 exited with 1: node --experimental-sqlite --import tsx --import file:///workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/lib/sqljs-fallback.mjs tests/director-provider-recovery.mjs
+
+=== operation-intelligence (7 steps) ===
+--- operation-intelligence 1/7: node --experimental-sqlite --import tsx tests/operation-intelligence.mjs
+PASS canonical evidence graph, competing hypotheses and complete source lineage
+PASS hypothesis source clickthrough is scoped and malformed pagination is rejected
+PASS 100 weak correlations never become independent evidence or ownership
+PASS Hunter replay keeps one logical hypothesis and contradiction history
+PASS omitted contradictions and challenging evidence survive later snapshots
+PASS disappearance and reappearance are explicit temporal facts; old observations cannot undo them
+PASS pause projects evidence but does not create hunts
+PASS 50 real events and their replay coalesce to a dirty operation without hunt storms
+PASS event storms and concurrent evaluation create one bounded discriminating hunt
+PASS used-state Main restart preserves hypotheses, challenges, budgets and action identity
+PASS unfinished durable handoff recovers the exact work fingerprint
+PASS split is proposed without boundary mutation and stale review hashes are rejected
+PASS analyst-approved split is atomic, replay-safe and retains original provenance
+PASS Hunter replay cannot undo analyst boundaries
+PASS consolidation requires a reviewed decision, preserves aliases and rejects stale revisions
+PASS two competing reviewed boundary decisions cannot both mutate one revision
+PASS bounded hunt exhaustion parks without repeat work
+PASS duplicate evidence overlap suggests review without consolidating boundaries
+PASS populated v5 additive migration is replayable and rollback leaves prior data intact
+{"ok":true,"checks":19,"passed":["canonical evidence graph, competing hypotheses and complete source lineage","hypothesis source clickthrough is scoped and malformed pagination is rejected","100 weak correlations never become independent evidence or ownership","Hunter replay keeps one logical hypothesis and contradiction history","omitted contradictions and challenging evidence survive later snapshots","disappearance and reappearance are explicit temporal facts; old observations cannot undo them","pause projects evidence but does not create hunts","50 real events and their replay coalesce to a dirty operation without hunt storms","event storms and concurrent evaluation create one bounded discriminating hunt","used-state Main restart preserves hypotheses, challenges, budgets and action identity","unfinished durable handoff recovers the exact work fingerprint","split is proposed without boundary mutation and stale review hashes are rejected","analyst-approved split is atomic, replay-safe and retains original provenance","Hunter replay cannot undo analyst boundaries","consolidation requires a reviewed decision, preserves aliases and rejects stale revisions","two competing reviewed boundary decisions cannot both mutate one revision","bounded hunt exhaustion parks without repeat work","duplicate evidence overlap suggests review without consolidating boundaries","populated v5 additive migration is replayable and rollback leaves prior data intact"]}
+--- operation-intelligence 2/7: node --experimental-sqlite --import tsx tests/operation-crash.mjs
+PASS crash before operation snapshot
+PASS crash after operation snapshot
+PASS crash before hypothesis
+PASS crash after hypothesis
+PASS crash before contradiction
+PASS crash after contradiction
+PASS crash before temporal facet
+PASS crash after temporal facet
+PASS crash before evidence graph
+PASS crash after evidence graph
+PASS crash before hunt reservation
+PASS crash after hunt reservation
+PASS crash before module-work handoff
+PASS crash after module-work handoff
+PASS crash before operation split
+PASS crash after operation split
+PASS crash before event-driven wakeup
+PASS crash after event-driven wakeup
+{"ok":true,"crashes":18,"passed":[{"phase":"operation snapshot","edge":"before","actual_process_signal":"SIGKILL","logical_hunts":1,"preserved_evidence":1},{"phase":"operation snapshot","edge":"after","actual_process_signal":"SIGKILL","logical_hunts":1,"preserved_evidence":1},{"phase":"hypothesis","edge":"before","actual_process_signal":"SIGKILL","logical_hunts":1,"preserved_evidence":1},{"phase":"hypothesis","edge":"after","actual_process_signal":"SIGKILL","logical_hunts":1,"preserved_evidence":1},{"phase":"contradiction","edge":"before","actual_process_signal":"SIGKILL","logical_hunts":1,"preserved_evidence":1},{"phase":"contradiction","edge":"after","actual_process_signal":"SIGKILL","logical_hunts":1,"preserved_evidence":1},{"phase":"temporal facet","edge":"before","actual_process_signal":"SIGKILL","logical_hunts":1,"preserved_evidence":1},{"phase":"temporal facet","edge":"after","actual_process_signal":"SIGKILL","logical_hunts":1,"preserved_evidence":1},{"phase":"evidence graph","edge":"before","actual_process_signal":"SIGKILL","logical_hunts":1,"preserved_evidence":1},{"phase":"evidence graph","edge":"after","actual_process_signal":"SIGKILL","logical_hunts":1,"preserved_evidence":1},{"phase":"hunt reservation","edge":"before","actual_process_signal":"SIGKILL","logical_hunts":1,"preserved_evidence":1},{"phase":"hunt reservation","edge":"after","actual_process_signal":"SIGKILL","logical_hunts":1,"preserved_evidence":1},{"phase":"module-work handoff","edge":"before","actual_process_signal":"SIGKILL","logical_hunts":1,"preserved_evidence":1},{"phase":"module-work handoff","edge":"after","actual_process_signal":"SIGKILL","logical_hunts":1,"preserved_evidence":1},{"phase":"operation split","edge":"before","actual_process_signal":"SIGKILL","logical_hunts":1,"preserved_evidence":1},{"phase":"operation split","edge":"after","actual_process_signal":"SIGKILL","logical_hunts":1,"preserved_evidence":1},{"phase":"event-driven wakeup","edge":"before","actual_process_signal":"SIGKILL","logical_hunts":1,"preserved_evidence":1},{"phase":"event-driven wakeup","edge":"after","actual_process_signal":"SIGKILL","logical_hunts":1,"preserved_evidence":1}],"scope":"Actual child-process SIGKILL around SQL statements and atomic D1-double batches, restarting used SQLite state. External provider and Finder/Hunter outbox crash phases are covered by existing module tests, not all certified here."}
+--- operation-intelligence 3/7: node --experimental-sqlite --import tsx tests/operation-benchmark.mjs
+{"ok":true,"corpus_operations":3,"authoritative_fixture_relationships":122,"true_evidence_relationships_recovered":122,"false_factual_relationships":0,"unsupported_ownership_claims":0,"hypotheses":6,"challenged_hypotheses":1,"hypotheses_rejected_by_contradiction":0,"split_correctness":true,"reappearance_detection":true,"human_actions":2,"time_to_model_ms":2982.931586,"passed":["three labeled operation records and misleading shared kit/CDN","late challenge, replacement domain, wallet change, wave and reappearance retained","accidental association split survives Hunter replay without provenance loss","110 redundant overlaps retain one independent unit; common counterparty is not ownership","used-state restart and identical snapshot replay preserve memory"],"limitations":["Fixture graph and Hunter snapshots are supplied inputs, not an end-to-end discovery run.","Challenged means unlikely in supplied Hunter verdict; no definitive rejection is invented.","This corpus does not measure autonomous multi-operation inference accuracy or provider outages."]}
+--- operation-intelligence 4/7: node --experimental-sqlite --import tsx tests/operation-stress.mjs
+node:internal/modules/esm/resolve:201
+  const resolvedOption = FSLegacyMainResolve(pkgPath, packageConfig.main, baseStringified);
+                         ^
+
+Error: Cannot find package '/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/node_modules/tsx/index.js' imported from /workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/
+    at legacyMainResolve (node:internal/modules/esm/resolve:201:26)
+    at packageResolve (node:internal/modules/esm/resolve:778:12)
+    at moduleResolve (node:internal/modules/esm/resolve:859:18)
+    at defaultResolve (node:internal/modules/esm/resolve:992:11)
+    at #cachedDefaultResolve (node:internal/modules/esm/loader:701:20)
+    at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:721:38)
+    at ModuleLoader.resolveSync (node:internal/modules/esm/loader:759:56)
+    at #resolve (node:internal/modules/esm/loader:683:17)
+    at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:603:35)
+    at node:internal/modules/esm/loader:632:32 {
+  code: 'ERR_MODULE_NOT_FOUND'
+}
+
+Node.js v24.19.0
+FAIL operation-intelligence: step 4/7 exited with 1: node --experimental-sqlite --import tsx tests/operation-stress.mjs
+
+=== adaptive-intelligence (8 steps) ===
+--- adaptive-intelligence 1/8: node --experimental-sqlite --import tsx tests/adaptive-intelligence.mjs
+node:internal/modules/esm/resolve:201
+  const resolvedOption = FSLegacyMainResolve(pkgPath, packageConfig.main, baseStringified);
+                         ^
+
+Error: Cannot find package '/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/node_modules/tsx/index.js' imported from /workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/
+    at legacyMainResolve (node:internal/modules/esm/resolve:201:26)
+    at packageResolve (node:internal/modules/esm/resolve:778:12)
+    at moduleResolve (node:internal/modules/esm/resolve:859:18)
+    at defaultResolve (node:internal/modules/esm/resolve:992:11)
+    at #cachedDefaultResolve (node:internal/modules/esm/loader:701:20)
+    at #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:721:38)
+    at ModuleLoader.resolveSync (node:internal/modules/esm/loader:759:56)
+    at #resolve (node:internal/modules/esm/loader:683:17)
+    at ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:603:35)
+    at node:internal/modules/esm/loader:632:32 {
+  code: 'ERR_MODULE_NOT_FOUND'
+}
+
+Node.js v24.19.0
+FAIL adaptive-intelligence: step 1/8 exited with 1: node --experimental-sqlite --import tsx tests/adaptive-intelligence.mjs
+
+=== summary ===
+FAIL unit
+PASS migration-matrix
+FAIL suite
+FAIL loops
+PASS integration:v6
+FAIL v2
+FAIL v3
+FAIL v4
+FAIL v5
+FAIL joined:hunter
+FAIL joined:v61
+PASS five-modules
+FAIL startup:modules
+FAIL site-finder
+FAIL wallet-pipeline
+FAIL director
+FAIL operation-intelligence
+FAIL adaptive-intelligence

@@ -1,0 +1,8 @@
+[
+  'all populated v8 rows preserved by additive 0020',
+  '0020 replay idempotent',
+  'old investigation resumes without duplicate',
+  'old report and source provenance remain exact after continuation',
+  'used-state restart and operator view',
+  'fresh install through 0020'
+]

@@ -1,0 +1,12 @@
+AssertionError [ERR_ASSERTION]: {"batch_id":"initial-wallet","status":"failed","received_count":1,"inserted_count":1,"updated_count":0,"duplicate_count":0,"error_count":1,"errors":[{"record":"evidence:initial-wallet","message":"[\n  {\n    \"validation\": \"uuid\",\n    \"code\": \"invalid_string\",\n    \"message\": \"Invalid uuid\",\n    \"path\": [\n      \"entity_id\"\n    ]\n  }\n]"}],"replayed":false}
+    at ok (file:///workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/autonomy-scientific-integration.mjs:6:21)
+    at ingest (file:///workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/autonomy-scientific-integration.mjs:13:56)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async file:///workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/autonomy-scientific-integration.mjs:14:2 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}

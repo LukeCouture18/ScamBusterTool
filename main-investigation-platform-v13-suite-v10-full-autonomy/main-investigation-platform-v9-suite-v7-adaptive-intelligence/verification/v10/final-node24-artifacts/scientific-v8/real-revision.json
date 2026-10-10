@@ -1,0 +1,5135 @@
+{
+  "ok": true,
+  "scientific_revision": {
+    "initial": {
+      "round": 1,
+      "operation_id": "d0a6290c-e232-41df-9089-176852527adb",
+      "status": "OPEN"
+    },
+    "final_status": "REJECTED",
+    "reason": "Wallet Investigator validated different deposit addresses; the explicit unchanged single-wallet prediction is false.",
+    "evidence": [
+      {
+        "evidence_id": "2f464d40-b16a-4edf-8b6e-0a9de1ad91cc",
+        "source": "crypto_wallet_logger",
+        "authority": "wallet_investigator",
+        "value": "0x5555555555555555555555555555555555555555"
+      },
+      {
+        "evidence_id": "98d4773d-0278-45c6-84b4-2b47a2b3bbc9",
+        "source": "crypto_wallet_logger",
+        "authority": "wallet_investigator",
+        "value": "0x6666666666666666666666666666666666666666"
+      },
+      {
+        "evidence_id": "a12e6c41-824c-4ae2-8cef-970323b08d65",
+        "source": "crypto_wallet_logger",
+        "authority": "wallet_investigator",
+        "value": "0x4444444444444444444444444444444444444444"
+      }
+    ],
+    "resolved": 2,
+    "history": [
+      {
+        "before_state": null,
+        "after_state": "{\"status\":\"OPEN\",\"supports\":[],\"contradicts\":[],\"statement\":\"Do the deployments retain one unchanged deposit wallet? — Possible explanation: Unchanged single wallet on every site\"}",
+        "evidence_ids": "[]",
+        "reason": "Evidence does not yet distinguish the competing explanations."
+      },
+      {
+        "before_state": "{\"status\":\"OPEN\",\"supports\":[],\"contradicts\":[]}",
+        "after_state": "{\"status\":\"REJECTED\",\"supports\":[],\"contradicts\":[{\"id\":\"98d4773d-0278-45c6-84b4-2b47a2b3bbc9\",\"subject\":\"3c74731e-132c-48f8-bb55-01ba929f5911\",\"facet\":\"validated_deposit\",\"value\":\"0x6666666666666666666666666666666666666666\",\"reliability\":\"deterministic_validation\",\"unit\":\"deposit:evm:0x6666666666666666666666666666666666666666\",\"upstream\":\"deposit:evm:0x6666666666666666666666666666666666666666\",\"source\":\"wallet_investigator\",\"captured\":\"2026-10-04T17:55:43.189Z\",\"job\":\"1e299305-a733-468a-bdac-3850a5f522e7\",\"detail\":{\"network\":\"ethereum\",\"validation_authority\":\"wallet_investigator\"}},{\"id\":\"a12e6c41-824c-4ae2-8cef-970323b08d65\",\"subject\":\"3f26b7e5-ffec-4b0a-ac9a-12854fbb2e8b\",\"facet\":\"validated_deposit\",\"value\":\"0x4444444444444444444444444444444444444444\",\"reliability\":\"deterministic_validation\",\"unit\":\"deposit:evm:0x4444444444444444444444444444444444444444\",\"upstream\":\"deposit:evm:0x4444444444444444444444444444444444444444\",\"source\":\"wallet_investigator\",\"captured\":\"2026-10-04T17:55:26.357Z\",\"job\":\"5f921666-8178-47dc-b42c-f7c371551d1d\",\"detail\":{\"network\":\"ethereum\",\"validation_authority\":\"wallet_investigator\"}}],\"statement\":\"Do the deployments retain one unchanged deposit wallet? — Possible explanation: Unchanged single wallet on every site\"}",
+        "evidence_ids": "[\"98d4773d-0278-45c6-84b4-2b47a2b3bbc9\",\"a12e6c41-824c-4ae2-8cef-970323b08d65\"]",
+        "reason": "Wallet Investigator validated different deposit addresses; the explicit unchanged single-wallet prediction is false."
+      },
+      {
+        "before_state": "{\"status\":\"REJECTED\",\"supports\":[],\"contradicts\":[{\"id\":\"98d4773d-0278-45c6-84b4-2b47a2b3bbc9\",\"subject\":\"3c74731e-132c-48f8-bb55-01ba929f5911\",\"facet\":\"validated_deposit\",\"value\":\"0x6666666666666666666666666666666666666666\",\"reliability\":\"deterministic_validation\",\"unit\":\"deposit:evm:0x6666666666666666666666666666666666666666\",\"upstream\":\"deposit:evm:0x6666666666666666666666666666666666666666\",\"source\":\"wallet_investigator\",\"captured\":\"2026-10-04T17:55:43.189Z\",\"job\":\"1e299305-a733-468a-bdac-3850a5f522e7\",\"detail\":{\"network\":\"ethereum\",\"validation_authority\":\"wallet_investigator\"}},{\"id\":\"a12e6c41-824c-4ae2-8cef-970323b08d65\",\"subject\":\"3f26b7e5-ffec-4b0a-ac9a-12854fbb2e8b\",\"facet\":\"validated_deposit\",\"value\":\"0x4444444444444444444444444444444444444444\",\"reliability\":\"deterministic_validation\",\"unit\":\"deposit:evm:0x4444444444444444444444444444444444444444\",\"upstream\":\"deposit:evm:0x4444444444444444444444444444444444444444\",\"source\":\"wallet_investigator\",\"captured\":\"2026-10-04T17:55:26.357Z\",\"job\":\"5f921666-8178-47dc-b42c-f7c371551d1d\",\"detail\":{\"network\":\"ethereum\",\"validation_authority\":\"wallet_investigator\"}}]}",
+        "after_state": "{\"status\":\"REJECTED\",\"supports\":[],\"contradicts\":[{\"id\":\"2f464d40-b16a-4edf-8b6e-0a9de1ad91cc\",\"subject\":\"8356e565-ded8-4eb1-a9d8-8bdfa4e573ad\",\"facet\":\"validated_deposit\",\"value\":\"0x5555555555555555555555555555555555555555\",\"reliability\":\"deterministic_validation\",\"unit\":\"deposit:evm:0x5555555555555555555555555555555555555555\",\"upstream\":\"deposit:evm:0x5555555555555555555555555555555555555555\",\"source\":\"wallet_investigator\",\"captured\":\"2026-10-04T17:55:46.400Z\",\"job\":\"f5ac725f-1dc9-4467-a04b-b5dfdf9f7fb1\",\"detail\":{\"network\":\"ethereum\",\"validation_authority\":\"wallet_investigator\"}},{\"id\":\"98d4773d-0278-45c6-84b4-2b47a2b3bbc9\",\"subject\":\"3c74731e-132c-48f8-bb55-01ba929f5911\",\"facet\":\"validated_deposit\",\"value\":\"0x6666666666666666666666666666666666666666\",\"reliability\":\"deterministic_validation\",\"unit\":\"deposit:evm:0x6666666666666666666666666666666666666666\",\"upstream\":\"deposit:evm:0x6666666666666666666666666666666666666666\",\"source\":\"wallet_investigator\",\"captured\":\"2026-10-04T17:55:43.189Z\",\"job\":\"1e299305-a733-468a-bdac-3850a5f522e7\",\"detail\":{\"network\":\"ethereum\",\"validation_authority\":\"wallet_investigator\"}},{\"id\":\"a12e6c41-824c-4ae2-8cef-970323b08d65\",\"subject\":\"3f26b7e5-ffec-4b0a-ac9a-12854fbb2e8b\",\"facet\":\"validated_deposit\",\"value\":\"0x4444444444444444444444444444444444444444\",\"reliability\":\"deterministic_validation\",\"unit\":\"deposit:evm:0x4444444444444444444444444444444444444444\",\"upstream\":\"deposit:evm:0x4444444444444444444444444444444444444444\",\"source\":\"wallet_investigator\",\"captured\":\"2026-10-04T17:55:26.357Z\",\"job\":\"5f921666-8178-47dc-b42c-f7c371551d1d\",\"detail\":{\"network\":\"ethereum\",\"validation_authority\":\"wallet_investigator\"}}],\"statement\":\"Do the deployments retain one unchanged deposit wallet? — Possible explanation: Unchanged single wallet on every site\"}",
+        "evidence_ids": "[\"2f464d40-b16a-4edf-8b6e-0a9de1ad91cc\",\"98d4773d-0278-45c6-84b4-2b47a2b3bbc9\",\"a12e6c41-824c-4ae2-8cef-970323b08d65\"]",
+        "reason": "Wallet Investigator validated different deposit addresses; the explicit unchanged single-wallet prediction is false."
+      }
+    ]
+  },
+  "policy": "v8",
+  "complete_at": {
+    "round": 5,
+    "requests": 312,
+    "jobs": 21
+  },
+  "quiescent_at": {
+    "round": 14,
+    "requests": 473
+  },
+  "max_rounds": 24,
+  "open_work": [],
+  "open_jobs": [],
+  "job_trace": [
+    {
+      "job_type": "DISCOVER_SITES",
+      "status": "completed",
+      "trigger_reason": "v5 operations: only 0 candidate(s) waiting",
+      "source": null,
+      "reason": "v5_continuous_discovery",
+      "seeds": null,
+      "artifacts": null,
+      "new_candidates": null,
+      "meter": null,
+      "created_at": "2026-10-04 17:55:23"
+    },
+    {
+      "job_type": "INVESTIGATE_SITE",
+      "status": "completed",
+      "trigger_reason": "Look for the deposit interface in public site evidence",
+      "source": null,
+      "reason": null,
+      "seeds": null,
+      "artifacts": null,
+      "new_candidates": null,
+      "meter": null,
+      "created_at": "2026-10-04 17:55:23"
+    },
+    {
+      "job_type": "ANALYZE_WALLET",
+      "status": "completed",
+      "trigger_reason": "wallet.validated requested ANALYZE_WALLET; profile deep-investigation; confidence 0.78; evidence 1 references",
+      "source": null,
+      "reason": null,
+      "seeds": null,
+      "artifacts": null,
+      "new_candidates": null,
+      "meter": null,
+      "created_at": "2026-10-04 17:55:25"
+    },
+    {
+      "job_type": "ANALYZE_WALLET",
+      "status": "completed",
+      "trigger_reason": "Wallet seen in a deposit context on qd3c09832ad1.top: validate and analyse",
+      "source": null,
+      "reason": null,
+      "seeds": null,
+      "artifacts": null,
+      "new_candidates": null,
+      "meter": "{\"provider_calls\":1,\"http\":0,\"worker_ms\":1028}",
+      "created_at": "2026-10-04 17:55:26"
+    },
+    {
+      "job_type": "HUNT_OPERATION",
+      "status": "completed",
+      "trigger_reason": "v5 operations: A module observed a wallet on qd3c09832ad1.top; reconstruct the operation behind it.",
+      "source": null,
+      "reason": "A module observed a wallet on qd3c09832ad1.top; reconstruct the operation behind it.",
+      "seeds": "[]",
+      "artifacts": null,
+      "new_candidates": null,
+      "meter": null,
+      "created_at": "2026-10-04 17:55:28"
+    },
+    {
+      "job_type": "FIND_RELATED_SITES",
+      "status": "completed",
+      "trigger_reason": "v5 operations: Operation Hunter (OP-BEHIND-QD3C09832AD): Only 1 site confirmed and Hunter's public pivots are exhausted: ask Site Finder to search for more sites like qd3c0983",
+      "source": "hunter",
+      "reason": "Only 1 site confirmed and Hunter's public pivots are exhausted: ask Site Finder to search for more sites like qd3c09832ad1.top.",
+      "seeds": "[\"qd3c09832ad1.top\"]",
+      "artifacts": "[{\"kind\":\"wallet\",\"value\":\"0x4444444444444444444444444444444444444444\"},{\"kind\":\"contact\",\"value\":\"helios_verified_support\"}]",
+      "new_candidates": "[\"q7167ada25c2.top\"]",
+      "meter": "{\"http\":5,\"dns\":26,\"crtsh\":4,\"rdap\":2}",
+      "created_at": "2026-10-04 17:55:30"
+    },
+    {
+      "job_type": "FIND_RELATED_SITES",
+      "status": "completed",
+      "trigger_reason": "v5 operations: Search for reuse of a distinctive public artifact: Are there undiscovered public deployments of this operation?",
+      "source": "adaptive-intelligence",
+      "reason": "Search for public sites containing analytics ga4:g-q0rratest.",
+      "seeds": "[\"qd3c09832ad1.top\"]",
+      "artifacts": "[{\"kind\":\"analytics\",\"value\":\"ga4:g-q0rratest\"}]",
+      "new_candidates": "[]",
+      "meter": "{\"http\":0,\"dns\":20,\"crtsh\":4,\"rdap\":0}",
+      "created_at": "2026-10-04 17:55:30"
+    },
+    {
+      "job_type": "INVESTIGATE_SITE",
+      "status": "completed",
+      "trigger_reason": "AI investigator step 1: The site has not been investigated yet; examine its public pages.",
+      "source": null,
+      "reason": null,
+      "seeds": null,
+      "artifacts": null,
+      "new_candidates": null,
+      "meter": null,
+      "created_at": "2026-10-04 17:55:32"
+    },
+    {
+      "job_type": "ANALYZE_WALLET",
+      "status": "completed",
+      "trigger_reason": "Wallet seen in a deposit context on q7167ada25c2.top: validate and analyse",
+      "source": null,
+      "reason": null,
+      "seeds": null,
+      "artifacts": null,
+      "new_candidates": null,
+      "meter": "{\"provider_calls\":0,\"http\":0,\"worker_ms\":761}",
+      "created_at": "2026-10-04 17:55:35"
+    },
+    {
+      "job_type": "FIND_RELATED_SITES",
+      "status": "completed",
+      "trigger_reason": "v5 operations: Operation Hunter (OP-BEHIND-QD3C09832AD): Only 2 sites confirmed and Hunter's public pivots are exhausted: ask Site Finder to search for more sites like qd3c098",
+      "source": "hunter",
+      "reason": "Only 2 sites confirmed and Hunter's public pivots are exhausted: ask Site Finder to search for more sites like qd3c09832ad1.top.",
+      "seeds": "[\"qd3c09832ad1.top\",\"q7167ada25c2.top\"]",
+      "artifacts": "[{\"kind\":\"wallet\",\"value\":\"0x4444444444444444444444444444444444444444\"},{\"kind\":\"contact\",\"value\":\"helios_verified_support\"}]",
+      "new_candidates": "[\"qfd428f1fc96.top\"]",
+      "meter": "{\"http\":3,\"dns\":24,\"crtsh\":4,\"rdap\":1}",
+      "created_at": "2026-10-04 17:55:37"
+    },
+    {
+      "job_type": "FIND_RELATED_SITES",
+      "status": "completed",
+      "trigger_reason": "v5 operations: The investigation of q7167ada25c2.top recorded 3 public artifacts; look for other sites that reuse them.",
+      "source": "investigation",
+      "reason": "investigation_artifacts",
+      "seeds": "[\"q7167ada25c2.top\"]",
+      "artifacts": "[{\"kind\":\"analytics\",\"value\":\"ga4:g-q0rratest\"},{\"kind\":\"contact\",\"value\":\"helios_verified_support\"},{\"kind\":\"title\",\"value\":\"quorra investment • earn daily profit\"}]",
+      "new_candidates": "[\"q238c0978906.top\",\"qc8fce52c1ad.top\"]",
+      "meter": "{\"http\":4,\"dns\":24,\"crtsh\":4,\"rdap\":2}",
+      "created_at": "2026-10-04 17:55:37"
+    },
+    {
+      "job_type": "INVESTIGATE_SITE",
+      "status": "completed",
+      "trigger_reason": "AI investigator step 1: The site has not been investigated yet; examine its public pages.",
+      "source": null,
+      "reason": null,
+      "seeds": null,
+      "artifacts": null,
+      "new_candidates": null,
+      "meter": null,
+      "created_at": "2026-10-04 17:55:39"
+    },
+    {
+      "job_type": "INVESTIGATE_SITE",
+      "status": "completed",
+      "trigger_reason": "AI investigator step 1: The site has not been investigated yet; examine its public pages.",
+      "source": null,
+      "reason": null,
+      "seeds": null,
+      "artifacts": null,
+      "new_candidates": null,
+      "meter": null,
+      "created_at": "2026-10-04 17:55:39"
+    },
+    {
+      "job_type": "FIND_RELATED_SITES",
+      "status": "completed",
+      "trigger_reason": "Start a bounded related-site hunt from recorded public artifacts",
+      "source": null,
+      "reason": "director_evidence_gap",
+      "seeds": "[\"qd3c09832ad1.top\"]",
+      "artifacts": "[{\"kind\":\"analytics\",\"value\":\"ga4:g-q0rratest\"},{\"kind\":\"contact\",\"value\":\"helios_verified_support\"},{\"kind\":\"title\",\"value\":\"quorra investment • earn daily profit\"},{\"kind\":\"wallet\",\"value\":\"0x4444444444444444444444444444444444444444\"}]",
+      "new_candidates": "[]",
+      "meter": "{\"http\":0,\"dns\":20,\"crtsh\":4,\"rdap\":0}",
+      "created_at": "2026-10-04 17:55:39"
+    },
+    {
+      "job_type": "INVESTIGATE_SITE",
+      "status": "completed",
+      "trigger_reason": "Look for the deposit interface in public site evidence",
+      "source": null,
+      "reason": null,
+      "seeds": null,
+      "artifacts": null,
+      "new_candidates": null,
+      "meter": null,
+      "created_at": "2026-10-04 17:55:39"
+    },
+    {
+      "job_type": "ANALYZE_WALLET",
+      "status": "completed",
+      "trigger_reason": "wallet.validated requested ANALYZE_WALLET; profile deep-investigation; confidence 0.78; evidence 1 references",
+      "source": null,
+      "reason": null,
+      "seeds": null,
+      "artifacts": null,
+      "new_candidates": null,
+      "meter": null,
+      "created_at": "2026-10-04 17:55:42"
+    },
+    {
+      "job_type": "ANALYZE_WALLET",
+      "status": "completed",
+      "trigger_reason": "Wallet seen in a deposit context on q238c0978906.top: validate and analyse",
+      "source": null,
+      "reason": null,
+      "seeds": null,
+      "artifacts": null,
+      "new_candidates": null,
+      "meter": "{\"provider_calls\":1,\"http\":0,\"worker_ms\":932}",
+      "created_at": "2026-10-04 17:55:43"
+    },
+    {
+      "job_type": "ANALYZE_WALLET",
+      "status": "completed",
+      "trigger_reason": "wallet.validated requested ANALYZE_WALLET; profile deep-investigation; confidence 0.78; evidence 1 references",
+      "source": null,
+      "reason": null,
+      "seeds": null,
+      "artifacts": null,
+      "new_candidates": null,
+      "meter": null,
+      "created_at": "2026-10-04 17:55:45"
+    },
+    {
+      "job_type": "ANALYZE_WALLET",
+      "status": "completed",
+      "trigger_reason": "Wallet seen in a deposit context on qfd428f1fc96.top: validate and analyse",
+      "source": null,
+      "reason": null,
+      "seeds": null,
+      "artifacts": null,
+      "new_candidates": null,
+      "meter": "{\"provider_calls\":1,\"http\":0,\"worker_ms\":735}",
+      "created_at": "2026-10-04 17:55:46"
+    },
+    {
+      "job_type": "ANALYZE_WALLET",
+      "status": "completed",
+      "trigger_reason": "wallet.validated requested ANALYZE_WALLET; profile deep-investigation; confidence 0.78; evidence 1 references",
+      "source": null,
+      "reason": null,
+      "seeds": null,
+      "artifacts": null,
+      "new_candidates": null,
+      "meter": null,
+      "created_at": "2026-10-04 17:55:48"
+    },
+    {
+      "job_type": "ANALYZE_WALLET",
+      "status": "completed",
+      "trigger_reason": "Wallet seen in a deposit context on qc8fce52c1ad.top: validate and analyse",
+      "source": null,
+      "reason": null,
+      "seeds": null,
+      "artifacts": null,
+      "new_candidates": null,
+      "meter": "{\"provider_calls\":0,\"http\":0,\"worker_ms\":628}",
+      "created_at": "2026-10-04 17:55:49"
+    },
+    {
+      "job_type": "ANALYZE_WALLET",
+      "status": "completed",
+      "trigger_reason": "v5 operations: Wallet seen on qc8fce52c1ad.top has not been analysed",
+      "source": null,
+      "reason": null,
+      "seeds": null,
+      "artifacts": null,
+      "new_candidates": null,
+      "meter": null,
+      "created_at": "2026-10-04 17:55:53"
+    },
+    {
+      "job_type": "RECHECK_SITE",
+      "status": "completed",
+      "trigger_reason": "v5 operations: qc8fce52c1ad.top: deposit appeared — observe the new state",
+      "source": null,
+      "reason": "revisit_changed_site",
+      "seeds": null,
+      "artifacts": null,
+      "new_candidates": null,
+      "meter": null,
+      "created_at": "2026-10-04 17:55:53"
+    },
+    {
+      "job_type": "FIND_RELATED_SITES",
+      "status": "completed",
+      "trigger_reason": "v5 operations: The investigation of q238c0978906.top recorded 3 public artifacts; look for other sites that reuse them.",
+      "source": "investigation",
+      "reason": "investigation_artifacts",
+      "seeds": "[\"q238c0978906.top\"]",
+      "artifacts": "[{\"kind\":\"analytics\",\"value\":\"ga4:g-q0rratest\"},{\"kind\":\"contact\",\"value\":\"unrelated_5_support\"},{\"kind\":\"title\",\"value\":\"quorra investment • earn daily profit\"}]",
+      "new_candidates": "[]",
+      "meter": "{\"http\":0,\"dns\":20,\"crtsh\":4,\"rdap\":0}",
+      "created_at": "2026-10-04 17:55:53"
+    },
+    {
+      "job_type": "FIND_RELATED_SITES",
+      "status": "completed",
+      "trigger_reason": "v5 operations: The investigation of qfd428f1fc96.top recorded 3 public artifacts; look for other sites that reuse them.",
+      "source": "investigation",
+      "reason": "investigation_artifacts",
+      "seeds": "[\"qfd428f1fc96.top\"]",
+      "artifacts": "[{\"kind\":\"analytics\",\"value\":\"ga4:g-q0rratest\"},{\"kind\":\"contact\",\"value\":\"helios_verified_support\"},{\"kind\":\"title\",\"value\":\"quorra investment • earn daily profit\"}]",
+      "new_candidates": "[]",
+      "meter": "{\"http\":0,\"dns\":20,\"crtsh\":4,\"rdap\":0}",
+      "created_at": "2026-10-04 17:55:53"
+    },
+    {
+      "job_type": "FIND_RELATED_SITES",
+      "status": "completed",
+      "trigger_reason": "v5 operations: The investigation of qc8fce52c1ad.top recorded 3 public artifacts; look for other sites that reuse them.",
+      "source": "investigation",
+      "reason": "investigation_artifacts",
+      "seeds": "[\"qc8fce52c1ad.top\"]",
+      "artifacts": "[{\"kind\":\"analytics\",\"value\":\"ga4:g-q0rratest\"},{\"kind\":\"contact\",\"value\":\"helios_verified_support\"},{\"kind\":\"title\",\"value\":\"quorra investment • earn daily profit\"}]",
+      "new_candidates": "[]",
+      "meter": "{\"http\":0,\"dns\":20,\"crtsh\":4,\"rdap\":0}",
+      "created_at": "2026-10-04 17:55:59"
+    },
+    {
+      "job_type": "HUNT_OPERATION",
+      "status": "completed",
+      "trigger_reason": "v5 operations: A module observed a wallet on q238c0978906.top; reconstruct the operation behind it.",
+      "source": null,
+      "reason": "A module observed a wallet on q238c0978906.top; reconstruct the operation behind it.",
+      "seeds": "[]",
+      "artifacts": null,
+      "new_candidates": null,
+      "meter": null,
+      "created_at": "2026-10-04 17:55:59"
+    },
+    {
+      "job_type": "HUNT_OPERATION",
+      "status": "completed",
+      "trigger_reason": "v5 operations: A module observed a wallet on qc8fce52c1ad.top; reconstruct the operation behind it.",
+      "source": null,
+      "reason": "A module observed a wallet on qc8fce52c1ad.top; reconstruct the operation behind it.",
+      "seeds": "[]",
+      "artifacts": null,
+      "new_candidates": null,
+      "meter": null,
+      "created_at": "2026-10-04 17:56:02"
+    },
+    {
+      "job_type": "HUNT_OPERATION",
+      "status": "completed",
+      "trigger_reason": "v5 operations: Ask Operation Hunter a structured question: Is the operation still running?",
+      "source": null,
+      "reason": "Ask Operation Hunter a structured question: Is the operation still running?",
+      "seeds": "[]",
+      "artifacts": null,
+      "new_candidates": null,
+      "meter": null,
+      "created_at": "2026-10-04 17:56:03"
+    },
+    {
+      "job_type": "HUNT_OPERATION",
+      "status": "completed",
+      "trigger_reason": "v5 operations: Ask Operation Hunter a structured question: Which explanation best fits the public observations?",
+      "source": null,
+      "reason": "Ask Operation Hunter a structured question: Which explanation best fits the public observations?",
+      "seeds": "[]",
+      "artifacts": null,
+      "new_candidates": null,
+      "meter": null,
+      "created_at": "2026-10-04 17:56:05"
+    },
+    {
+      "job_type": "HUNT_OPERATION",
+      "status": "completed",
+      "trigger_reason": "v5 operations: Ask Operation Hunter a structured question: Which explanation best fits the public observations?",
+      "source": null,
+      "reason": "Ask Operation Hunter a structured question: Which explanation best fits the public observations?",
+      "seeds": "[]",
+      "artifacts": null,
+      "new_candidates": null,
+      "meter": null,
+      "created_at": "2026-10-04 17:56:07"
+    },
+    {
+      "job_type": "HUNT_OPERATION",
+      "status": "completed",
+      "trigger_reason": "v5 operations: A module observed a wallet on qfd428f1fc96.top; reconstruct the operation behind it.",
+      "source": null,
+      "reason": "A module observed a wallet on qfd428f1fc96.top; reconstruct the operation behind it.",
+      "seeds": "[]",
+      "artifacts": null,
+      "new_candidates": null,
+      "meter": null,
+      "created_at": "2026-10-04 17:56:08"
+    },
+    {
+      "job_type": "FIND_RELATED_SITES",
+      "status": "completed",
+      "trigger_reason": "Start a bounded related-site hunt from recorded public artifacts",
+      "source": null,
+      "reason": "director_evidence_gap",
+      "seeds": "[\"q238c0978906.top\"]",
+      "artifacts": "[{\"kind\":\"analytics\",\"value\":\"ga4:g-q0rratest\"},{\"kind\":\"contact\",\"value\":\"unrelated_5_support\"},{\"kind\":\"title\",\"value\":\"quorra investment • earn daily profit\"},{\"kind\":\"wallet\",\"value\":\"0x6666666666666666666666666666666666666666\"}]",
+      "new_candidates": "[]",
+      "meter": "{\"http\":0,\"dns\":20,\"crtsh\":4,\"rdap\":0}",
+      "created_at": "2026-10-04 17:56:08"
+    },
+    {
+      "job_type": "FIND_RELATED_SITES",
+      "status": "completed",
+      "trigger_reason": "Start a bounded related-site hunt from recorded public artifacts",
+      "source": null,
+      "reason": "director_evidence_gap",
+      "seeds": "[\"qfd428f1fc96.top\"]",
+      "artifacts": "[{\"kind\":\"analytics\",\"value\":\"ga4:g-q0rratest\"},{\"kind\":\"contact\",\"value\":\"helios_verified_support\"},{\"kind\":\"title\",\"value\":\"quorra investment • earn daily profit\"},{\"kind\":\"wallet\",\"value\":\"0x5555555555555555555555555555555555555555\"}]",
+      "new_candidates": "[]",
+      "meter": "{\"http\":0,\"dns\":20,\"crtsh\":4,\"rdap\":0}",
+      "created_at": "2026-10-04 17:56:10"
+    },
+    {
+      "job_type": "FIND_RELATED_SITES",
+      "status": "completed",
+      "trigger_reason": "Start a bounded related-site hunt from recorded public artifacts",
+      "source": null,
+      "reason": "director_evidence_gap",
+      "seeds": "[\"qc8fce52c1ad.top\"]",
+      "artifacts": "[{\"kind\":\"analytics\",\"value\":\"ga4:g-q0rratest\"},{\"kind\":\"contact\",\"value\":\"helios_verified_support\"},{\"kind\":\"title\",\"value\":\"quorra investment • earn daily profit\"},{\"kind\":\"wallet\",\"value\":\"0x5555555555555555555555555555555555555555\"}]",
+      "new_candidates": "[]",
+      "meter": "{\"http\":0,\"dns\":20,\"crtsh\":4,\"rdap\":0}",
+      "created_at": "2026-10-04 17:56:10"
+    },
+    {
+      "job_type": "HUNT_OPERATION",
+      "status": "completed",
+      "trigger_reason": "Ask Operation Hunter to evaluate the validated cross-site wallet signal",
+      "source": null,
+      "reason": "validated_wallet_overlap",
+      "seeds": "[{\"type\":\"site\",\"value\":\"qfd428f1fc96.top\"}]",
+      "artifacts": null,
+      "new_candidates": null,
+      "meter": null,
+      "created_at": "2026-10-04 17:56:12"
+    }
+  ],
+  "adaptive_decisions": [
+    {
+      "scope_kind": "investigation",
+      "seq": 1,
+      "status": "finished",
+      "chosen_family": "PUBLIC_SITE_INSPECTION",
+      "question": "What does qd3c09832ad1.top publicly present?",
+      "why_selected": "Gap uncertainty 0.9 × answer power 0.9 for SITE_IDENTITY. Unlocks 16 dependent gap families (SITE_REPLACEMENT, PAYMENT_INTERFACE, DEPOSIT_WALLET). Next wallet observation unit is worth 0.85×0.6^0 (0 independent unit(s) already known; copies of a known unit add nothing). Context: time sensitivity ×1.15. Expected cost 61.5 effort units; value per cost 0.968.",
+      "stop_state": null,
+      "stop_reason": null
+    },
+    {
+      "scope_kind": "operation",
+      "seq": 1,
+      "status": "finished",
+      "chosen_family": "CORRELATION_REVIEW",
+      "question": "Is 0x4444444444444444444444444444444444444444 independently presented by another deployment?",
+      "why_selected": "Gap uncertainty 0.75 × answer power 0.6 for WALLET_REUSE. Next validated wallet reuse unit is worth 0.9×0.6^0 (0 independent unit(s) already known; copies of a known unit add nothing). Expected cost 0.017 effort units; value per cost 0.8678690669006967 (next best 0.5071571906354515).",
+      "stop_state": null,
+      "stop_reason": null
+    },
+    {
+      "scope_kind": "operation",
+      "seq": 2,
+      "status": "finished",
+      "chosen_family": "PUBLIC_ARTIFACT_SEARCH",
+      "question": "Are there undiscovered public deployments of this operation?",
+      "why_selected": "A new deployment would open its own investigation chain (16 dependent gap families through to a report). Gap uncertainty 0.8 × answer power 0.5 for RELATED_SITE (1 new input(s) to Site Finder; P(at least one hit) 0.5). Next site observation unit is worth 0.6×0.7^0 (0 independent unit(s) already known; copies of a known unit add nothing). Expected cost 67.5 effort units; value per cost 0.5071571906354515 (next best 0.5071571906354515).",
+      "stop_state": null,
+      "stop_reason": null
+    },
+    {
+      "scope_kind": "operation",
+      "seq": 3,
+      "status": "stopped",
+      "chosen_family": null,
+      "question": null,
+      "why_selected": "Best remaining test has marginal value 0.037 (Marginal value 0.037 is below the 0.06 floor.).",
+      "stop_state": "waiting_for_evidence",
+      "stop_reason": "Best remaining test has marginal value 0.037 (Marginal value 0.037 is below the 0.06 floor.)."
+    },
+    {
+      "scope_kind": "investigation",
+      "seq": 2,
+      "status": "finished",
+      "chosen_family": "CORRELATION_REVIEW",
+      "question": "Is 0x4444444444444444444444444444444444444444 independently presented by another deployment?",
+      "why_selected": "Gap uncertainty 0.75 × answer power 0.6 for WALLET_REUSE. Next validated wallet reuse unit is worth 0.9×0.6^0 (0 independent unit(s) already known; copies of a known unit add nothing). Expected cost 0.017 effort units; value per cost 0.754 (next best 0.362).",
+      "stop_state": null,
+      "stop_reason": null
+    },
+    {
+      "scope_kind": "operation",
+      "seq": 4,
+      "status": "stopped",
+      "chosen_family": null,
+      "question": null,
+      "why_selected": "Best remaining test has marginal value 0.043 (Marginal value 0.043 is below the 0.06 floor.).",
+      "stop_state": "temporarily_low_value",
+      "stop_reason": "Best remaining test has marginal value 0.043 (Marginal value 0.043 is below the 0.06 floor.)."
+    },
+    {
+      "scope_kind": "operation",
+      "seq": 5,
+      "status": "finished",
+      "chosen_family": "CORRELATION_REVIEW",
+      "question": "Is the shared infrastructure generic (CDN) or specific?",
+      "why_selected": "Gap uncertainty 0.5 × answer power 0.7 for INFRASTRUCTURE_SPECIFICITY. Next infrastructure context unit is worth 0.08×0.3^1 (1 independent unit(s) already known; copies of a known unit add nothing). Expected cost 0.017 effort units; value per cost 0.30261224043247975.",
+      "stop_state": null,
+      "stop_reason": null
+    },
+    {
+      "scope_kind": "operation",
+      "seq": 6,
+      "status": "stopped",
+      "chosen_family": null,
+      "question": null,
+      "why_selected": "Best remaining test has marginal value 0.027 (Marginal value 0.027 is below the 0.06 floor.).",
+      "stop_state": "waiting_for_evidence",
+      "stop_reason": "Best remaining test has marginal value 0.027 (Marginal value 0.027 is below the 0.06 floor.)."
+    },
+    {
+      "scope_kind": "investigation",
+      "seq": 3,
+      "status": "finished",
+      "chosen_family": "RELATED_SITE_HUNT",
+      "question": "Are there undiscovered public deployments of this operation?",
+      "why_selected": "A new deployment would open its own investigation chain (16 dependent gap families through to a report). Gap uncertainty 0.8 × answer power 0.45 for RELATED_SITE. Next site observation unit is worth 0.6×0.7^0 (0 independent unit(s) already known; copies of a known unit add nothing). Expected cost 78 effort units; value per cost 0.362.",
+      "stop_state": null,
+      "stop_reason": null
+    },
+    {
+      "scope_kind": "investigation",
+      "seq": 1,
+      "status": "finished",
+      "chosen_family": "CORRELATION_REVIEW",
+      "question": "Is 0x4444444444444444444444444444444444444444 independently presented by another deployment?",
+      "why_selected": "Gap uncertainty 0.75 × answer power 0.6 for WALLET_REUSE. Next validated wallet reuse unit is worth 0.9×0.6^0 (0 independent unit(s) already known; copies of a known unit add nothing). Expected cost 0.017 effort units; value per cost 0.754 (next best 0.362).",
+      "stop_state": null,
+      "stop_reason": null
+    },
+    {
+      "scope_kind": "investigation",
+      "seq": 1,
+      "status": "finished",
+      "chosen_family": "PUBLIC_SITE_INSPECTION",
+      "question": "What does qc8fce52c1ad.top publicly present?",
+      "why_selected": "Gap uncertainty 0.9 × answer power 0.9 for SITE_IDENTITY. Unlocks 16 dependent gap families (SITE_REPLACEMENT, PAYMENT_INTERFACE, DEPOSIT_WALLET). Next wallet observation unit is worth 0.85×0.6^0 (0 independent unit(s) already known; copies of a known unit add nothing). Context: time sensitivity ×1.15. Expected cost 61.5 effort units; value per cost 0.968.",
+      "stop_state": null,
+      "stop_reason": null
+    },
+    {
+      "scope_kind": "operation",
+      "seq": 7,
+      "status": "stopped",
+      "chosen_family": null,
+      "question": null,
+      "why_selected": "Best remaining test has marginal value 0.026 (Marginal value 0.026 is below the 0.06 floor.).",
+      "stop_state": "waiting_for_evidence",
+      "stop_reason": "Best remaining test has marginal value 0.026 (Marginal value 0.026 is below the 0.06 floor.)."
+    },
+    {
+      "scope_kind": "investigation",
+      "seq": 2,
+      "status": "finished",
+      "chosen_family": "RELATED_SITE_HUNT",
+      "question": "Are there undiscovered public deployments of this operation?",
+      "why_selected": "A new deployment would open its own investigation chain (16 dependent gap families through to a report). Gap uncertainty 0.8 × answer power 0.45 for RELATED_SITE. Next site observation unit is worth 0.6×0.7^0 (0 independent unit(s) already known; copies of a known unit add nothing). Expected cost 78 effort units; value per cost 0.362 (next best 0.112).",
+      "stop_state": null,
+      "stop_reason": null
+    },
+    {
+      "scope_kind": "operation",
+      "seq": 8,
+      "status": "finished",
+      "chosen_family": "CORRELATION_REVIEW",
+      "question": "Is 0x6666666666666666666666666666666666666666 independently presented by another deployment?",
+      "why_selected": "Gap uncertainty 0.75 × answer power 0.6 for WALLET_REUSE. Next validated wallet reuse unit is worth 0.9×0.6^2 (2 independent unit(s) already known; copies of a known unit add nothing). Expected cost 0.017 effort units; value per cost 0.7422564387966485 (next best 0.3723397993311036).",
+      "stop_state": null,
+      "stop_reason": null
+    },
+    {
+      "scope_kind": "operation",
+      "seq": 9,
+      "status": "finished",
+      "chosen_family": "PUBLIC_ARTIFACT_SEARCH",
+      "question": "Are the member sites run by one operator?",
+      "why_selected": "Expected 0.337 bits between \"Unrelated sites that happen to share hosting\" and \"Several customers of the same kit vendor\" from validated wallet reuse (P=0.6 vs 0.02). Gap uncertainty 0.85 × answer power 0.25 for HYPOTHESIS_DISCRIMINATION. Next validated wallet reuse unit is worth 0.9×0.6^2 (2 independent unit(s) already known; copies of a known unit add nothing). Expected cost 67.5 effort units; value per cost 0.3723397993311036 (next best 0.16779605781865967).",
+      "stop_state": null,
+      "stop_reason": null
+    },
+    {
+      "scope_kind": "operation",
+      "seq": 10,
+      "status": "finished",
+      "chosen_family": "CORRELATION_REVIEW",
+      "question": "Is 0x5555555555555555555555555555555555555555 independently presented by another deployment?",
+      "why_selected": "Gap uncertainty 0.75 × answer power 0.6 for WALLET_REUSE. Next validated wallet reuse unit is worth 0.9×0.6^2 (2 independent unit(s) already known; copies of a known unit add nothing). Context: historical yield ×0.85. Expected cost 0.017 effort units; value per cost 0.628063140520241 (next best 0.3723397993311036).",
+      "stop_state": null,
+      "stop_reason": null
+    },
+    {
+      "scope_kind": "operation",
+      "seq": 11,
+      "status": "finished",
+      "chosen_family": "PUBLIC_ARTIFACT_SEARCH",
+      "question": "Are the member sites run by one operator?",
+      "why_selected": "Expected 0.337 bits between \"Unrelated sites that happen to share hosting\" and \"Several customers of the same kit vendor\" from validated wallet reuse (P=0.6 vs 0.02). Gap uncertainty 0.85 × answer power 0.25 for HYPOTHESIS_DISCRIMINATION. Next validated wallet reuse unit is worth 0.9×0.6^2 (2 independent unit(s) already known; copies of a known unit add nothing). Expected cost 67.5 effort units; value per cost 0.3723397993311036 (next best 0.16779605781865967).",
+      "stop_state": null,
+      "stop_reason": null
+    },
+    {
+      "scope_kind": "operation",
+      "seq": 1,
+      "status": "finished",
+      "chosen_family": "CORRELATION_REVIEW",
+      "question": "Is the shared infrastructure generic (CDN) or specific?",
+      "why_selected": "Gap uncertainty 0.5 × answer power 0.7 for INFRASTRUCTURE_SPECIFICITY. Context: historical yield ×0.834. Expected cost 0.017 effort units; value per cost 0.24551559129427603.",
+      "stop_state": null,
+      "stop_reason": null
+    },
+    {
+      "scope_kind": "operation",
+      "seq": 2,
+      "status": "stopped",
+      "chosen_family": null,
+      "question": null,
+      "why_selected": "Best remaining test has marginal value 0.011 (Marginal value 0.011 is below the 0.06 floor.).",
+      "stop_state": "temporarily_low_value",
+      "stop_reason": "Best remaining test has marginal value 0.011 (Marginal value 0.011 is below the 0.06 floor.)."
+    },
+    {
+      "scope_kind": "operation",
+      "seq": 12,
+      "status": "finished",
+      "chosen_family": "HUNTER_HYPOTHESIS_TEST",
+      "question": "Is the operation still running?",
+      "why_selected": "Gap uncertainty 0.85 × answer power 0.35 for HYPOTHESIS_DISCRIMINATION. Next hunter pursuit unit is worth 0.35×0.5^0 (0 independent unit(s) already known; copies of a known unit add nothing). Expected 0.029 bits between \"Still running on the known sites\" and \"Paused, likely to return\" from hunter pursuit (P=0.55 vs 0.35). Expected cost 69 effort units; value per cost 0.16779605781865967 (next best 0.1627784494086728).",
+      "stop_state": null,
+      "stop_reason": null
+    },
+    {
+      "scope_kind": "operation",
+      "seq": 1,
+      "status": "finished",
+      "chosen_family": "CORRELATION_REVIEW",
+      "question": "Is the shared infrastructure generic (CDN) or specific?",
+      "why_selected": "Gap uncertainty 0.5 × answer power 0.7 for INFRASTRUCTURE_SPECIFICITY. Context: historical yield ×0.822. Expected cost 0.017 effort units; value per cost 0.24266075883736588.",
+      "stop_state": null,
+      "stop_reason": null
+    },
+    {
+      "scope_kind": "operation",
+      "seq": 2,
+      "status": "stopped",
+      "chosen_family": null,
+      "question": null,
+      "why_selected": "Best remaining test has marginal value 0.011 (Marginal value 0.011 is below the 0.06 floor.).",
+      "stop_state": "temporarily_low_value",
+      "stop_reason": "Best remaining test has marginal value 0.011 (Marginal value 0.011 is below the 0.06 floor.)."
+    },
+    {
+      "scope_kind": "operation",
+      "seq": 13,
+      "status": "stopped",
+      "chosen_family": null,
+      "question": null,
+      "why_selected": "Best remaining test has marginal value 0.114 (below the utility floor).",
+      "stop_state": "temporarily_low_value",
+      "stop_reason": "Best remaining test has marginal value 0.114 (below the utility floor)."
+    },
+    {
+      "scope_kind": "operation",
+      "seq": 3,
+      "status": "finished",
+      "chosen_family": "HUNTER_HYPOTHESIS_TEST",
+      "question": "Which explanation best fits the public observations?",
+      "why_selected": "Gap uncertainty 0.85 × answer power 0.35 for HYPOTHESIS_DISCRIMINATION. Next hunter pursuit unit is worth 0.35×0.5^0 (0 independent unit(s) already known; copies of a known unit add nothing). Expected 0.017 bits between \"Unrelated deployments reuse the same kit or vendor artifacts.\" and \"Scoped sites share a meaningful operation association.\" from hunter pursuit (P=0.5 vs 0.35). Expected cost 69 effort units; value per cost 0.1627784494086728.",
+      "stop_state": null,
+      "stop_reason": null
+    },
+    {
+      "scope_kind": "operation",
+      "seq": 3,
+      "status": "finished",
+      "chosen_family": "HUNTER_HYPOTHESIS_TEST",
+      "question": "Which explanation best fits the public observations?",
+      "why_selected": "Gap uncertainty 0.85 × answer power 0.35 for HYPOTHESIS_DISCRIMINATION. Next hunter pursuit unit is worth 0.35×0.5^0 (0 independent unit(s) already known; copies of a known unit add nothing). Expected 0.017 bits between \"Unrelated deployments reuse the same kit or vendor artifacts.\" and \"Scoped sites share a meaningful operation association.\" from hunter pursuit (P=0.5 vs 0.35). Expected cost 69 effort units; value per cost 0.1627784494086728.",
+      "stop_state": null,
+      "stop_reason": null
+    },
+    {
+      "scope_kind": "operation",
+      "seq": 4,
+      "status": "stopped",
+      "chosen_family": null,
+      "question": null,
+      "why_selected": "Best remaining test has marginal value 0.006 (Marginal value 0.006 is below the 0.06 floor.).",
+      "stop_state": "temporarily_low_value",
+      "stop_reason": "Best remaining test has marginal value 0.006 (Marginal value 0.006 is below the 0.06 floor.)."
+    },
+    {
+      "scope_kind": "investigation",
+      "seq": 1,
+      "status": "finished",
+      "chosen_family": "CORRELATION_REVIEW",
+      "question": "Is 0x5555555555555555555555555555555555555555 independently presented by another deployment?",
+      "why_selected": "Gap uncertainty 0.75 × answer power 0.6 for WALLET_REUSE. Next validated wallet reuse unit is worth 0.9×0.6^0 (0 independent unit(s) already known; copies of a known unit add nothing). Context: historical yield ×0.813. Expected cost 0.017 effort units; value per cost 0.611.",
+      "stop_state": null,
+      "stop_reason": null
+    },
+    {
+      "scope_kind": "investigation",
+      "seq": 1,
+      "status": "finished",
+      "chosen_family": "CORRELATION_REVIEW",
+      "question": "Is 0x6666666666666666666666666666666666666666 independently presented by another deployment?",
+      "why_selected": "Gap uncertainty 0.75 × answer power 0.6 for WALLET_REUSE. Next validated wallet reuse unit is worth 0.9×0.6^0 (0 independent unit(s) already known; copies of a known unit add nothing). Context: historical yield ×0.813. Expected cost 0.017 effort units; value per cost 0.611 (next best 0.362).",
+      "stop_state": null,
+      "stop_reason": null
+    },
+    {
+      "scope_kind": "operation",
+      "seq": 5,
+      "status": "stopped",
+      "chosen_family": null,
+      "question": null,
+      "why_selected": "Best remaining test has marginal value 0.006 (Marginal value 0.006 is below the 0.06 floor.).",
+      "stop_state": "temporarily_low_value",
+      "stop_reason": "Best remaining test has marginal value 0.006 (Marginal value 0.006 is below the 0.06 floor.)."
+    },
+    {
+      "scope_kind": "operation",
+      "seq": 4,
+      "status": "stopped",
+      "chosen_family": null,
+      "question": null,
+      "why_selected": "Best remaining test has marginal value 0.006 (Marginal value 0.006 is below the 0.06 floor.).",
+      "stop_state": "temporarily_low_value",
+      "stop_reason": "Best remaining test has marginal value 0.006 (Marginal value 0.006 is below the 0.06 floor.)."
+    },
+    {
+      "scope_kind": "investigation",
+      "seq": 2,
+      "status": "finished",
+      "chosen_family": "CORRELATION_REVIEW",
+      "question": "Is 0x5555555555555555555555555555555555555555 independently presented by another deployment?",
+      "why_selected": "Gap uncertainty 0.75 × answer power 0.6 for WALLET_REUSE. Next validated wallet reuse unit is worth 0.9×0.6^0 (0 independent unit(s) already known; copies of a known unit add nothing). Context: historical yield ×0.813. Expected cost 0.017 effort units; value per cost 0.611 (next best 0.362).",
+      "stop_state": null,
+      "stop_reason": null
+    },
+    {
+      "scope_kind": "investigation",
+      "seq": 2,
+      "status": "finished",
+      "chosen_family": "RELATED_SITE_HUNT",
+      "question": "Are there undiscovered public deployments of this operation?",
+      "why_selected": "A new deployment would open its own investigation chain (16 dependent gap families through to a report). Gap uncertainty 0.8 × answer power 0.45 for RELATED_SITE. Next site observation unit is worth 0.6×0.7^0 (0 independent unit(s) already known; copies of a known unit add nothing). Expected cost 78 effort units; value per cost 0.362.",
+      "stop_state": null,
+      "stop_reason": null
+    },
+    {
+      "scope_kind": "operation",
+      "seq": 5,
+      "status": "stopped",
+      "chosen_family": null,
+      "question": null,
+      "why_selected": "Best remaining test has marginal value 0.006 (Marginal value 0.006 is below the 0.06 floor.).",
+      "stop_state": "waiting_for_evidence",
+      "stop_reason": "Best remaining test has marginal value 0.006 (Marginal value 0.006 is below the 0.06 floor.)."
+    },
+    {
+      "scope_kind": "investigation",
+      "seq": 2,
+      "status": "finished",
+      "chosen_family": "RELATED_SITE_HUNT",
+      "question": "Are there undiscovered public deployments of this operation?",
+      "why_selected": "A new deployment would open its own investigation chain (16 dependent gap families through to a report). Gap uncertainty 0.8 × answer power 0.45 for RELATED_SITE. Next site observation unit is worth 0.6×0.7^0 (0 independent unit(s) already known; copies of a known unit add nothing). Expected cost 78 effort units; value per cost 0.362 (next best 0.112).",
+      "stop_state": null,
+      "stop_reason": null
+    },
+    {
+      "scope_kind": "investigation",
+      "seq": 3,
+      "status": "finished",
+      "chosen_family": "RELATED_SITE_HUNT",
+      "question": "Are there undiscovered public deployments of this operation?",
+      "why_selected": "A new deployment would open its own investigation chain (16 dependent gap families through to a report). Gap uncertainty 0.8 × answer power 0.45 for RELATED_SITE. Next site observation unit is worth 0.6×0.7^0 (0 independent unit(s) already known; copies of a known unit add nothing). Expected cost 78 effort units; value per cost 0.362 (next best 0.112).",
+      "stop_state": null,
+      "stop_reason": null
+    },
+    {
+      "scope_kind": "operation",
+      "seq": 1,
+      "status": "finished",
+      "chosen_family": "CORRELATION_REVIEW",
+      "question": "Is the shared infrastructure generic (CDN) or specific?",
+      "why_selected": "Gap uncertainty 0.5 × answer power 0.7 for INFRASTRUCTURE_SPECIFICITY. Context: historical yield ×0.813. Expected cost 0.017 effort units; value per cost 0.2398059263804557.",
+      "stop_state": null,
+      "stop_reason": null
+    },
+    {
+      "scope_kind": "operation",
+      "seq": 2,
+      "status": "stopped",
+      "chosen_family": null,
+      "question": null,
+      "why_selected": "Best remaining test has marginal value 0.01 (Marginal value 0.01 is below the 0.06 floor.).",
+      "stop_state": "waiting_for_evidence",
+      "stop_reason": "Best remaining test has marginal value 0.01 (Marginal value 0.01 is below the 0.06 floor.)."
+    },
+    {
+      "scope_kind": "investigation",
+      "seq": 3,
+      "status": "finished",
+      "chosen_family": "HUNTER_HYPOTHESIS_TEST",
+      "question": "Ask Operation Hunter to evaluate the validated cross-site wallet signal",
+      "why_selected": "Next hunter pursuit unit is worth 0.35×0.5^0 (0 independent unit(s) already known; copies of a known unit add nothing). Gap uncertainty 0.6 × answer power 0.25 for OPERATION_MEMBERSHIP. Expected 0.017 bits between \"shared operation\" and \"shared kit / unrelated\" from hunter pursuit (P=0.5 vs 0.35). Context: historical yield ×0.85. Expected cost 69 effort units; value per cost 0.096.",
+      "stop_state": null,
+      "stop_reason": null
+    },
+    {
+      "scope_kind": "investigation",
+      "seq": 4,
+      "status": "finished",
+      "chosen_family": "HUNTER_HYPOTHESIS_TEST",
+      "question": "Ask Operation Hunter to evaluate the validated cross-site wallet signal",
+      "why_selected": "Next hunter pursuit unit is worth 0.35×0.5^0 (0 independent unit(s) already known; copies of a known unit add nothing). Gap uncertainty 0.6 × answer power 0.25 for OPERATION_MEMBERSHIP. Expected 0.017 bits between \"shared operation\" and \"shared kit / unrelated\" from hunter pursuit (P=0.5 vs 0.35). Context: historical yield ×0.85. Expected cost 69 effort units; value per cost 0.096.",
+      "stop_state": null,
+      "stop_reason": null
+    },
+    {
+      "scope_kind": "operation",
+      "seq": 3,
+      "status": "stopped",
+      "chosen_family": null,
+      "question": null,
+      "why_selected": "Best remaining test has marginal value 0.01 (Marginal value 0.01 is below the 0.06 floor.).",
+      "stop_state": "temporarily_low_value",
+      "stop_reason": "Best remaining test has marginal value 0.01 (Marginal value 0.01 is below the 0.06 floor.)."
+    }
+  ],
+  "adaptive_tests": [
+    {
+      "family": "CORRELATION_REVIEW",
+      "subject": "wallet:evm:0x4444444444444444444444444444444444444444",
+      "status": "finished",
+      "useful": 0,
+      "outcome": "{\"reviewed\":\"validated deposit observations\",\"other_investigations\":[],\"inputs_validated_sites\":1,\"caveat\":\"A shared validated deposit observation is a correlation signal, not common ownership.\",\"dead_end\":true}"
+    },
+    {
+      "family": "PUBLIC_ARTIFACT_SEARCH",
+      "subject": "artifact:analytics:ga4:g-q0rratest",
+      "status": "finished",
+      "useful": 0,
+      "outcome": "{\"job_status\":\"completed\",\"independent_gain\":2,\"weak_gain\":0,\"contradictions_gain\":0,\"hypothesis_updates\":4,\"new_candidates\":[],\"duplicate\":false,\"useful\":false,\"dead_end\":true}"
+    },
+    {
+      "family": "CORRELATION_REVIEW",
+      "subject": "infra:d0a6290c-e232-41df-9089-176852527adb",
+      "status": "finished",
+      "useful": 1,
+      "outcome": "{\"reviewed\":\"infrastructure indicators\",\"indicators\":1,\"generic_indicators\":0,\"determination\":\"Shared indicators are not widely shared in Main's records; still context, not ownership.\",\"generic_evidence\":true}"
+    },
+    {
+      "family": "CORRELATION_REVIEW",
+      "subject": "wallet:evm:0x6666666666666666666666666666666666666666",
+      "status": "finished",
+      "useful": 0,
+      "outcome": "{\"reviewed\":\"validated deposit observations\",\"other_investigations\":[],\"inputs_validated_sites\":1,\"caveat\":\"A shared validated deposit observation is a correlation signal, not common ownership.\",\"dead_end\":true}"
+    },
+    {
+      "family": "PUBLIC_ARTIFACT_SEARCH",
+      "subject": "artifact:wallet:evm:0x6666666666666666666666666666666666666666",
+      "status": "failed",
+      "useful": 0,
+      "outcome": "{\"job_status\":null,\"independent_gain\":1,\"weak_gain\":0,\"contradictions_gain\":0,\"hypothesis_updates\":0,\"new_candidates\":[],\"duplicate\":false,\"useful\":false,\"dead_end\":false}"
+    },
+    {
+      "family": "CORRELATION_REVIEW",
+      "subject": "wallet:evm:0x5555555555555555555555555555555555555555",
+      "status": "finished",
+      "useful": 0,
+      "outcome": "{\"reviewed\":\"validated deposit observations\",\"other_investigations\":[],\"inputs_validated_sites\":1,\"caveat\":\"A shared validated deposit observation is a correlation signal, not common ownership.\",\"dead_end\":true}"
+    },
+    {
+      "family": "PUBLIC_ARTIFACT_SEARCH",
+      "subject": "artifact:wallet:evm:0x5555555555555555555555555555555555555555",
+      "status": "failed",
+      "useful": 0,
+      "outcome": "{\"job_status\":null,\"independent_gain\":0,\"weak_gain\":0,\"contradictions_gain\":0,\"hypothesis_updates\":0,\"new_candidates\":[],\"duplicate\":false,\"useful\":false,\"dead_end\":false}"
+    },
+    {
+      "family": "CORRELATION_REVIEW",
+      "subject": "infra:defbf6bd-1ed2-4d1a-91ee-1619638e54d0",
+      "status": "finished",
+      "useful": 1,
+      "outcome": "{\"reviewed\":\"infrastructure indicators\",\"indicators\":3,\"generic_indicators\":0,\"determination\":\"Shared indicators are not widely shared in Main's records; still context, not ownership.\",\"generic_evidence\":true}"
+    },
+    {
+      "family": "HUNTER_HYPOTHESIS_TEST",
+      "subject": "hunter:d0a6290c-e232-41df-9089-176852527adb",
+      "status": "finished",
+      "useful": 0,
+      "outcome": "{\"job_status\":\"completed\",\"independent_gain\":0,\"weak_gain\":0,\"contradictions_gain\":0,\"hypothesis_updates\":0,\"duplicate\":true,\"useful\":false,\"dead_end\":true}"
+    },
+    {
+      "family": "CORRELATION_REVIEW",
+      "subject": "infra:7f16485c-b183-41bc-a776-d22b1eee16e2",
+      "status": "finished",
+      "useful": 1,
+      "outcome": "{\"reviewed\":\"infrastructure indicators\",\"indicators\":4,\"generic_indicators\":0,\"determination\":\"Shared indicators are not widely shared in Main's records; still context, not ownership.\",\"generic_evidence\":true}"
+    },
+    {
+      "family": "HUNTER_HYPOTHESIS_TEST",
+      "subject": "hunter:defbf6bd-1ed2-4d1a-91ee-1619638e54d0",
+      "status": "finished",
+      "useful": 0,
+      "outcome": "{\"job_status\":\"completed\",\"independent_gain\":4,\"weak_gain\":0,\"contradictions_gain\":0,\"hypothesis_updates\":0,\"duplicate\":false,\"useful\":false,\"dead_end\":true}"
+    },
+    {
+      "family": "HUNTER_HYPOTHESIS_TEST",
+      "subject": "hunter:7f16485c-b183-41bc-a776-d22b1eee16e2",
+      "status": "finished",
+      "useful": 0,
+      "outcome": "{\"job_status\":\"completed\",\"independent_gain\":3,\"weak_gain\":0,\"contradictions_gain\":0,\"hypothesis_updates\":0,\"duplicate\":false,\"useful\":false,\"dead_end\":true}"
+    },
+    {
+      "family": "CORRELATION_REVIEW",
+      "subject": "infra:aa664b2f-82e0-4edd-9e19-f425c4496cb1",
+      "status": "finished",
+      "useful": 1,
+      "outcome": "{\"reviewed\":\"infrastructure indicators\",\"indicators\":4,\"generic_indicators\":0,\"determination\":\"Shared indicators are not widely shared in Main's records; still context, not ownership.\",\"generic_evidence\":true}"
+    }
+  ],
+  "adaptive_costs": [
+    {
+      "family": "CORRELATION_REVIEW",
+      "dimension": "bytes",
+      "reserved": 0,
+      "consumed": null,
+      "measured": 1,
+      "source": "main_local"
+    },
+    {
+      "family": "CORRELATION_REVIEW",
+      "dimension": "certificate",
+      "reserved": 0,
+      "consumed": 0,
+      "measured": 1,
+      "source": "main_local"
+    },
+    {
+      "family": "CORRELATION_REVIEW",
+      "dimension": "dns",
+      "reserved": 0,
+      "consumed": 0,
+      "measured": 1,
+      "source": "main_local"
+    },
+    {
+      "family": "CORRELATION_REVIEW",
+      "dimension": "http",
+      "reserved": 0,
+      "consumed": 0,
+      "measured": 1,
+      "source": "main_local"
+    },
+    {
+      "family": "CORRELATION_REVIEW",
+      "dimension": "jobs",
+      "reserved": 0,
+      "consumed": 0,
+      "measured": 1,
+      "source": "main_local"
+    },
+    {
+      "family": "CORRELATION_REVIEW",
+      "dimension": "provider_calls",
+      "reserved": 0,
+      "consumed": 0,
+      "measured": 1,
+      "source": "main_local"
+    },
+    {
+      "family": "CORRELATION_REVIEW",
+      "dimension": "rdap",
+      "reserved": 0,
+      "consumed": 0,
+      "measured": 1,
+      "source": "main_local"
+    },
+    {
+      "family": "CORRELATION_REVIEW",
+      "dimension": "retries",
+      "reserved": 0,
+      "consumed": 0,
+      "measured": 1,
+      "source": "main_local"
+    },
+    {
+      "family": "CORRELATION_REVIEW",
+      "dimension": "wall_ms",
+      "reserved": 0,
+      "consumed": 21,
+      "measured": 1,
+      "source": "main_local"
+    },
+    {
+      "family": "CORRELATION_REVIEW",
+      "dimension": "worker_ms",
+      "reserved": 0,
+      "consumed": 0,
+      "measured": 1,
+      "source": "main_local"
+    },
+    {
+      "family": "PUBLIC_ARTIFACT_SEARCH",
+      "dimension": "bytes",
+      "reserved": 0,
+      "consumed": null,
+      "measured": 0,
+      "source": "not exposed"
+    },
+    {
+      "family": "PUBLIC_ARTIFACT_SEARCH",
+      "dimension": "certificate",
+      "reserved": 4,
+      "consumed": 4,
+      "measured": 1,
+      "source": "site_finder.round_meter"
+    },
+    {
+      "family": "PUBLIC_ARTIFACT_SEARCH",
+      "dimension": "dns",
+      "reserved": 30,
+      "consumed": 20,
+      "measured": 1,
+      "source": "site_finder.round_meter"
+    },
+    {
+      "family": "PUBLIC_ARTIFACT_SEARCH",
+      "dimension": "http",
+      "reserved": 40,
+      "consumed": 0,
+      "measured": 1,
+      "source": "site_finder.round_meter"
+    },
+    {
+      "family": "PUBLIC_ARTIFACT_SEARCH",
+      "dimension": "jobs",
+      "reserved": 1,
+      "consumed": 1,
+      "measured": 1,
+      "source": "main.jobs"
+    },
+    {
+      "family": "PUBLIC_ARTIFACT_SEARCH",
+      "dimension": "provider_calls",
+      "reserved": 0,
+      "consumed": 0,
+      "measured": 1,
+      "source": "not exposed"
+    },
+    {
+      "family": "PUBLIC_ARTIFACT_SEARCH",
+      "dimension": "rdap",
+      "reserved": 2,
+      "consumed": 0,
+      "measured": 1,
+      "source": "site_finder.round_meter"
+    },
+    {
+      "family": "PUBLIC_ARTIFACT_SEARCH",
+      "dimension": "retries",
+      "reserved": 0,
+      "consumed": 0,
+      "measured": 1,
+      "source": "main.jobs.attempt_count"
+    },
+    {
+      "family": "PUBLIC_ARTIFACT_SEARCH",
+      "dimension": "wall_ms",
+      "reserved": 180000,
+      "consumed": 1000,
+      "measured": 1,
+      "source": "main.jobs timestamps (second resolution)"
+    },
+    {
+      "family": "PUBLIC_ARTIFACT_SEARCH",
+      "dimension": "worker_ms",
+      "reserved": 180000,
+      "consumed": 0,
+      "measured": 1,
+      "source": "main.job_events claimed->finished (second resolution)"
+    },
+    {
+      "family": "CORRELATION_REVIEW",
+      "dimension": "bytes",
+      "reserved": 0,
+      "consumed": null,
+      "measured": 1,
+      "source": "main_local"
+    },
+    {
+      "family": "CORRELATION_REVIEW",
+      "dimension": "certificate",
+      "reserved": 0,
+      "consumed": 0,
+      "measured": 1,
+      "source": "main_local"
+    },
+    {
+      "family": "CORRELATION_REVIEW",
+      "dimension": "dns",
+      "reserved": 0,
+      "consumed": 0,
+      "measured": 1,
+      "source": "main_local"
+    },
+    {
+      "family": "CORRELATION_REVIEW",
+      "dimension": "http",
+      "reserved": 0,
+      "consumed": 0,
+      "measured": 1,
+      "source": "main_local"
+    },
+    {
+      "family": "CORRELATION_REVIEW",
+      "dimension": "jobs",
+      "reserved": 0,
+      "consumed": 0,
+      "measured": 1,
+      "source": "main_local"
+    },
+    {
+      "family": "CORRELATION_REVIEW",
+      "dimension": "provider_calls",
+      "reserved": 0,
+      "consumed": 0,
+      "measured": 1,
+      "source": "main_local"
+    },
+    {
+      "family": "CORRELATION_REVIEW",
+      "dimension": "rdap",
+      "reserved": 0,
+      "consumed": 0,
+      "measured": 1,
+      "source": "main_local"
+    },
+    {
+      "family": "CORRELATION_REVIEW",
+      "dimension": "retries",
+      "reserved": 0,
+      "consumed": 0,
+      "measured": 1,
+      "source": "main_local"
+    },
+    {
+      "family": "CORRELATION_REVIEW",
+      "dimension": "wall_ms",
+      "reserved": 0,
+      "consumed": 29,
+      "measured": 1,
+      "source": "main_local"
+    },
+    {
+      "family": "CORRELATION_REVIEW",
+      "dimension": "worker_ms",
+      "reserved": 0,
+      "consumed": 0,
+      "measured": 1,
+      "source": "main_local"
+    },
+    {
+      "family": "CORRELATION_REVIEW",
+      "dimension": "bytes",
+      "reserved": 0,
+      "consumed": null,
+      "measured": 1,
+      "source": "main_local"
+    },
+    {
+      "family": "CORRELATION_REVIEW",
+      "dimension": "certificate",
+      "reserved": 0,
+      "consumed": 0,
+      "measured": 1,
+      "source": "main_local"
+    },
+    {
+      "family": "CORRELATION_REVIEW",
+      "dimension": "dns",
+      "reserved": 0,
+      "consumed": 0,
+      "measured": 1,
+      "source": "main_local"
+    },
+    {
+      "family": "CORRELATION_REVIEW",
+      "dimension": "http",
+      "reserved": 0,
+      "consumed": 0,
+      "measured": 1,
+      "source": "main_local"
+    },
+    {
+      "family": "CORRELATION_REVIEW",
+      "dimension": "jobs",
+      "reserved": 0,
+      "consumed": 0,
+      "measured": 1,
+      "source": "main_local"
+    },
+    {
+      "family": "CORRELATION_REVIEW",
+      "dimension": "provider_calls",
+      "reserved": 0,
+      "consumed": 0,
+      "measured": 1,
+      "source": "main_local"
+    },
+    {
+      "family": "CORRELATION_REVIEW",
+      "dimension": "rdap",
+      "reserved": 0,
+      "consumed": 0,
+      "measured": 1,
+      "source": "main_local"
+    },
+    {
+      "family": "CORRELATION_REVIEW",
+      "dimension": "retries",
+      "reserved": 0,
+      "consumed": 0,
+      "measured": 1,
+      "source": "main_local"
+    },
+    {
+      "family": "CORRELATION_REVIEW",
+      "dimension": "wall_ms",
+      "reserved": 0,
+      "consumed": 72,
+      "measured": 1,
+      "source": "main_local"
+    },
+    {
+      "family": "CORRELATION_REVIEW",
+      "dimension": "worker_ms",
+      "reserved": 0,
+      "consumed": 0,
+      "measured": 1,
+      "source": "main_local"
+    },
+    {
+      "family": "PUBLIC_ARTIFACT_SEARCH",
+      "dimension": "bytes",
+      "reserved": 0,
+      "consumed": null,
+      "measured": 0,
+      "source": "not exposed"
+    },
+    {
+      "family": "PUBLIC_ARTIFACT_SEARCH",
+      "dimension": "certificate",
+      "reserved": 4,
+      "consumed": null,
+      "measured": 0,
+      "source": "not exposed"
+    },
+    {
+      "family": "PUBLIC_ARTIFACT_SEARCH",
+      "dimension": "dns",
+      "reserved": 30,
+      "consumed": null,
+      "measured": 0,
+      "source": "not exposed"
+    },
+    {
+      "family": "PUBLIC_ARTIFACT_SEARCH",
+      "dimension": "http",
+      "reserved": 40,
+      "consumed": null,
+      "measured": 0,
+      "source": "not exposed"
+    },
+    {
+      "family": "PUBLIC_ARTIFACT_SEARCH",
+      "dimension": "jobs",
+      "reserved": 1,
+      "consumed": null,
+      "measured": 0,
+      "source": "not exposed"
+    },
+    {
+      "family": "PUBLIC_ARTIFACT_SEARCH",
+      "dimension": "provider_calls",
+      "reserved": 0,
+      "consumed": null,
+      "measured": 0,
+      "source": "not exposed"
+    },
+    {
+      "family": "PUBLIC_ARTIFACT_SEARCH",
+      "dimension": "rdap",
+      "reserved": 2,
+      "consumed": null,
+      "measured": 0,
+      "source": "not exposed"
+    },
+    {
+      "family": "PUBLIC_ARTIFACT_SEARCH",
+      "dimension": "retries",
+      "reserved": 0,
+      "consumed": null,
+      "measured": 0,
+      "source": "not exposed"
+    },
+    {
+      "family": "PUBLIC_ARTIFACT_SEARCH",
+      "dimension": "wall_ms",
+      "reserved": 180000,
+      "consumed": null,
+      "measured": 0,
+      "source": "not exposed"
+    },
+    {
+      "family": "PUBLIC_ARTIFACT_SEARCH",
+      "dimension": "worker_ms",
+      "reserved": 180000,
+      "consumed": null,
+      "measured": 0,
+      "source": "not exposed"
+    },
+    {
+      "family": "CORRELATION_REVIEW",
+      "dimension": "bytes",
+      "reserved": 0,
+      "consumed": null,
+      "measured": 1,
+      "source": "main_local"
+    },
+    {
+      "family": "CORRELATION_REVIEW",
+      "dimension": "certificate",
+      "reserved": 0,
+      "consumed": 0,
+      "measured": 1,
+      "source": "main_local"
+    },
+    {
+      "family": "CORRELATION_REVIEW",
+      "dimension": "dns",
+      "reserved": 0,
+      "consumed": 0,
+      "measured": 1,
+      "source": "main_local"
+    },
+    {
+      "family": "CORRELATION_REVIEW",
+      "dimension": "http",
+      "reserved": 0,
+      "consumed": 0,
+      "measured": 1,
+      "source": "main_local"
+    },
+    {
+      "family": "CORRELATION_REVIEW",
+      "dimension": "jobs",
+      "reserved": 0,
+      "consumed": 0,
+      "measured": 1,
+      "source": "main_local"
+    },
+    {
+      "family": "CORRELATION_REVIEW",
+      "dimension": "provider_calls",
+      "reserved": 0,
+      "consumed": 0,
+      "measured": 1,
+      "source": "main_local"
+    },
+    {
+      "family": "CORRELATION_REVIEW",
+      "dimension": "rdap",
+      "reserved": 0,
+      "consumed": 0,
+      "measured": 1,
+      "source": "main_local"
+    },
+    {
+      "family": "CORRELATION_REVIEW",
+      "dimension": "retries",
+      "reserved": 0,
+      "consumed": 0,
+      "measured": 1,
+      "source": "main_local"
+    },
+    {
+      "family": "CORRELATION_REVIEW",
+      "dimension": "wall_ms",
+      "reserved": 0,
+      "consumed": 105,
+      "measured": 1,
+      "source": "main_local"
+    },
+    {
+      "family": "CORRELATION_REVIEW",
+      "dimension": "worker_ms",
+      "reserved": 0,
+      "consumed": 0,
+      "measured": 1,
+      "source": "main_local"
+    },
+    {
+      "family": "PUBLIC_ARTIFACT_SEARCH",
+      "dimension": "bytes",
+      "reserved": 0,
+      "consumed": null,
+      "measured": 0,
+      "source": "not exposed"
+    },
+    {
+      "family": "PUBLIC_ARTIFACT_SEARCH",
+      "dimension": "certificate",
+      "reserved": 4,
+      "consumed": null,
+      "measured": 0,
+      "source": "not exposed"
+    },
+    {
+      "family": "PUBLIC_ARTIFACT_SEARCH",
+      "dimension": "dns",
+      "reserved": 30,
+      "consumed": null,
+      "measured": 0,
+      "source": "not exposed"
+    },
+    {
+      "family": "PUBLIC_ARTIFACT_SEARCH",
+      "dimension": "http",
+      "reserved": 40,
+      "consumed": null,
+      "measured": 0,
+      "source": "not exposed"
+    },
+    {
+      "family": "PUBLIC_ARTIFACT_SEARCH",
+      "dimension": "jobs",
+      "reserved": 1,
+      "consumed": null,
+      "measured": 0,
+      "source": "not exposed"
+    },
+    {
+      "family": "PUBLIC_ARTIFACT_SEARCH",
+      "dimension": "provider_calls",
+      "reserved": 0,
+      "consumed": null,
+      "measured": 0,
+      "source": "not exposed"
+    },
+    {
+      "family": "PUBLIC_ARTIFACT_SEARCH",
+      "dimension": "rdap",
+      "reserved": 2,
+      "consumed": null,
+      "measured": 0,
+      "source": "not exposed"
+    },
+    {
+      "family": "PUBLIC_ARTIFACT_SEARCH",
+      "dimension": "retries",
+      "reserved": 0,
+      "consumed": null,
+      "measured": 0,
+      "source": "not exposed"
+    },
+    {
+      "family": "PUBLIC_ARTIFACT_SEARCH",
+      "dimension": "wall_ms",
+      "reserved": 180000,
+      "consumed": null,
+      "measured": 0,
+      "source": "not exposed"
+    },
+    {
+      "family": "PUBLIC_ARTIFACT_SEARCH",
+      "dimension": "worker_ms",
+      "reserved": 180000,
+      "consumed": null,
+      "measured": 0,
+      "source": "not exposed"
+    },
+    {
+      "family": "CORRELATION_REVIEW",
+      "dimension": "bytes",
+      "reserved": 0,
+      "consumed": null,
+      "measured": 1,
+      "source": "main_local"
+    },
+    {
+      "family": "CORRELATION_REVIEW",
+      "dimension": "certificate",
+      "reserved": 0,
+      "consumed": 0,
+      "measured": 1,
+      "source": "main_local"
+    },
+    {
+      "family": "CORRELATION_REVIEW",
+      "dimension": "dns",
+      "reserved": 0,
+      "consumed": 0,
+      "measured": 1,
+      "source": "main_local"
+    },
+    {
+      "family": "CORRELATION_REVIEW",
+      "dimension": "http",
+      "reserved": 0,
+      "consumed": 0,
+      "measured": 1,
+      "source": "main_local"
+    },
+    {
+      "family": "CORRELATION_REVIEW",
+      "dimension": "jobs",
+      "reserved": 0,
+      "consumed": 0,
+      "measured": 1,
+      "source": "main_local"
+    },
+    {
+      "family": "CORRELATION_REVIEW",
+      "dimension": "provider_calls",
+      "reserved": 0,
+      "consumed": 0,
+      "measured": 1,
+      "source": "main_local"
+    },
+    {
+      "family": "CORRELATION_REVIEW",
+      "dimension": "rdap",
+      "reserved": 0,
+      "consumed": 0,
+      "measured": 1,
+      "source": "main_local"
+    },
+    {
+      "family": "CORRELATION_REVIEW",
+      "dimension": "retries",
+      "reserved": 0,
+      "consumed": 0,
+      "measured": 1,
+      "source": "main_local"
+    },
+    {
+      "family": "CORRELATION_REVIEW",
+      "dimension": "wall_ms",
+      "reserved": 0,
+      "consumed": 53,
+      "measured": 1,
+      "source": "main_local"
+    },
+    {
+      "family": "CORRELATION_REVIEW",
+      "dimension": "worker_ms",
+      "reserved": 0,
+      "consumed": 0,
+      "measured": 1,
+      "source": "main_local"
+    },
+    {
+      "family": "HUNTER_HYPOTHESIS_TEST",
+      "dimension": "bytes",
+      "reserved": 0,
+      "consumed": null,
+      "measured": 0,
+      "source": "not exposed"
+    },
+    {
+      "family": "HUNTER_HYPOTHESIS_TEST",
+      "dimension": "certificate",
+      "reserved": 2,
+      "consumed": null,
+      "measured": 0,
+      "source": "not exposed"
+    },
+    {
+      "family": "HUNTER_HYPOTHESIS_TEST",
+      "dimension": "dns",
+      "reserved": 20,
+      "consumed": null,
+      "measured": 0,
+      "source": "not exposed"
+    },
+    {
+      "family": "HUNTER_HYPOTHESIS_TEST",
+      "dimension": "http",
+      "reserved": 40,
+      "consumed": null,
+      "measured": 0,
+      "source": "not exposed"
+    },
+    {
+      "family": "HUNTER_HYPOTHESIS_TEST",
+      "dimension": "jobs",
+      "reserved": 1,
+      "consumed": 1,
+      "measured": 1,
+      "source": "main.jobs"
+    },
+    {
+      "family": "HUNTER_HYPOTHESIS_TEST",
+      "dimension": "provider_calls",
+      "reserved": 0,
+      "consumed": null,
+      "measured": 0,
+      "source": "not exposed"
+    },
+    {
+      "family": "HUNTER_HYPOTHESIS_TEST",
+      "dimension": "rdap",
+      "reserved": 6,
+      "consumed": null,
+      "measured": 0,
+      "source": "not exposed"
+    },
+    {
+      "family": "HUNTER_HYPOTHESIS_TEST",
+      "dimension": "retries",
+      "reserved": 0,
+      "consumed": 0,
+      "measured": 1,
+      "source": "main.jobs.attempt_count"
+    },
+    {
+      "family": "HUNTER_HYPOTHESIS_TEST",
+      "dimension": "wall_ms",
+      "reserved": 180000,
+      "consumed": 1000,
+      "measured": 1,
+      "source": "main.jobs timestamps (second resolution)"
+    },
+    {
+      "family": "HUNTER_HYPOTHESIS_TEST",
+      "dimension": "worker_ms",
+      "reserved": 180000,
+      "consumed": 0,
+      "measured": 1,
+      "source": "main.job_events claimed->finished (second resolution)"
+    },
+    {
+      "family": "CORRELATION_REVIEW",
+      "dimension": "bytes",
+      "reserved": 0,
+      "consumed": null,
+      "measured": 1,
+      "source": "main_local"
+    },
+    {
+      "family": "CORRELATION_REVIEW",
+      "dimension": "certificate",
+      "reserved": 0,
+      "consumed": 0,
+      "measured": 1,
+      "source": "main_local"
+    },
+    {
+      "family": "CORRELATION_REVIEW",
+      "dimension": "dns",
+      "reserved": 0,
+      "consumed": 0,
+      "measured": 1,
+      "source": "main_local"
+    },
+    {
+      "family": "CORRELATION_REVIEW",
+      "dimension": "http",
+      "reserved": 0,
+      "consumed": 0,
+      "measured": 1,
+      "source": "main_local"
+    },
+    {
+      "family": "CORRELATION_REVIEW",
+      "dimension": "jobs",
+      "reserved": 0,
+      "consumed": 0,
+      "measured": 1,
+      "source": "main_local"
+    },
+    {
+      "family": "CORRELATION_REVIEW",
+      "dimension": "provider_calls",
+      "reserved": 0,
+      "consumed": 0,
+      "measured": 1,
+      "source": "main_local"
+    },
+    {
+      "family": "CORRELATION_REVIEW",
+      "dimension": "rdap",
+      "reserved": 0,
+      "consumed": 0,
+      "measured": 1,
+      "source": "main_local"
+    },
+    {
+      "family": "CORRELATION_REVIEW",
+      "dimension": "retries",
+      "reserved": 0,
+      "consumed": 0,
+      "measured": 1,
+      "source": "main_local"
+    },
+    {
+      "family": "CORRELATION_REVIEW",
+      "dimension": "wall_ms",
+      "reserved": 0,
+      "consumed": 91,
+      "measured": 1,
+      "source": "main_local"
+    },
+    {
+      "family": "CORRELATION_REVIEW",
+      "dimension": "worker_ms",
+      "reserved": 0,
+      "consumed": 0,
+      "measured": 1,
+      "source": "main_local"
+    },
+    {
+      "family": "HUNTER_HYPOTHESIS_TEST",
+      "dimension": "bytes",
+      "reserved": 0,
+      "consumed": null,
+      "measured": 0,
+      "source": "not exposed"
+    },
+    {
+      "family": "HUNTER_HYPOTHESIS_TEST",
+      "dimension": "certificate",
+      "reserved": 2,
+      "consumed": null,
+      "measured": 0,
+      "source": "not exposed"
+    },
+    {
+      "family": "HUNTER_HYPOTHESIS_TEST",
+      "dimension": "dns",
+      "reserved": 20,
+      "consumed": null,
+      "measured": 0,
+      "source": "not exposed"
+    },
+    {
+      "family": "HUNTER_HYPOTHESIS_TEST",
+      "dimension": "http",
+      "reserved": 40,
+      "consumed": null,
+      "measured": 0,
+      "source": "not exposed"
+    },
+    {
+      "family": "HUNTER_HYPOTHESIS_TEST",
+      "dimension": "jobs",
+      "reserved": 1,
+      "consumed": 1,
+      "measured": 1,
+      "source": "main.jobs"
+    },
+    {
+      "family": "HUNTER_HYPOTHESIS_TEST",
+      "dimension": "provider_calls",
+      "reserved": 0,
+      "consumed": null,
+      "measured": 0,
+      "source": "not exposed"
+    },
+    {
+      "family": "HUNTER_HYPOTHESIS_TEST",
+      "dimension": "rdap",
+      "reserved": 6,
+      "consumed": null,
+      "measured": 0,
+      "source": "not exposed"
+    },
+    {
+      "family": "HUNTER_HYPOTHESIS_TEST",
+      "dimension": "retries",
+      "reserved": 0,
+      "consumed": 0,
+      "measured": 1,
+      "source": "main.jobs.attempt_count"
+    },
+    {
+      "family": "HUNTER_HYPOTHESIS_TEST",
+      "dimension": "wall_ms",
+      "reserved": 180000,
+      "consumed": 1000,
+      "measured": 1,
+      "source": "main.jobs timestamps (second resolution)"
+    },
+    {
+      "family": "HUNTER_HYPOTHESIS_TEST",
+      "dimension": "worker_ms",
+      "reserved": 180000,
+      "consumed": 0,
+      "measured": 1,
+      "source": "main.job_events claimed->finished (second resolution)"
+    },
+    {
+      "family": "HUNTER_HYPOTHESIS_TEST",
+      "dimension": "bytes",
+      "reserved": 0,
+      "consumed": null,
+      "measured": 0,
+      "source": "not exposed"
+    },
+    {
+      "family": "HUNTER_HYPOTHESIS_TEST",
+      "dimension": "certificate",
+      "reserved": 2,
+      "consumed": null,
+      "measured": 0,
+      "source": "not exposed"
+    },
+    {
+      "family": "HUNTER_HYPOTHESIS_TEST",
+      "dimension": "dns",
+      "reserved": 20,
+      "consumed": null,
+      "measured": 0,
+      "source": "not exposed"
+    },
+    {
+      "family": "HUNTER_HYPOTHESIS_TEST",
+      "dimension": "http",
+      "reserved": 40,
+      "consumed": null,
+      "measured": 0,
+      "source": "not exposed"
+    },
+    {
+      "family": "HUNTER_HYPOTHESIS_TEST",
+      "dimension": "jobs",
+      "reserved": 1,
+      "consumed": 1,
+      "measured": 1,
+      "source": "main.jobs"
+    },
+    {
+      "family": "HUNTER_HYPOTHESIS_TEST",
+      "dimension": "provider_calls",
+      "reserved": 0,
+      "consumed": null,
+      "measured": 0,
+      "source": "not exposed"
+    },
+    {
+      "family": "HUNTER_HYPOTHESIS_TEST",
+      "dimension": "rdap",
+      "reserved": 6,
+      "consumed": null,
+      "measured": 0,
+      "source": "not exposed"
+    },
+    {
+      "family": "HUNTER_HYPOTHESIS_TEST",
+      "dimension": "retries",
+      "reserved": 0,
+      "consumed": 0,
+      "measured": 1,
+      "source": "main.jobs.attempt_count"
+    },
+    {
+      "family": "HUNTER_HYPOTHESIS_TEST",
+      "dimension": "wall_ms",
+      "reserved": 180000,
+      "consumed": 1000,
+      "measured": 1,
+      "source": "main.jobs timestamps (second resolution)"
+    },
+    {
+      "family": "HUNTER_HYPOTHESIS_TEST",
+      "dimension": "worker_ms",
+      "reserved": 180000,
+      "consumed": 0,
+      "measured": 1,
+      "source": "main.job_events claimed->finished (second resolution)"
+    },
+    {
+      "family": "CORRELATION_REVIEW",
+      "dimension": "bytes",
+      "reserved": 0,
+      "consumed": null,
+      "measured": 1,
+      "source": "main_local"
+    },
+    {
+      "family": "CORRELATION_REVIEW",
+      "dimension": "certificate",
+      "reserved": 0,
+      "consumed": 0,
+      "measured": 1,
+      "source": "main_local"
+    },
+    {
+      "family": "CORRELATION_REVIEW",
+      "dimension": "dns",
+      "reserved": 0,
+      "consumed": 0,
+      "measured": 1,
+      "source": "main_local"
+    },
+    {
+      "family": "CORRELATION_REVIEW",
+      "dimension": "http",
+      "reserved": 0,
+      "consumed": 0,
+      "measured": 1,
+      "source": "main_local"
+    },
+    {
+      "family": "CORRELATION_REVIEW",
+      "dimension": "jobs",
+      "reserved": 0,
+      "consumed": 0,
+      "measured": 1,
+      "source": "main_local"
+    },
+    {
+      "family": "CORRELATION_REVIEW",
+      "dimension": "provider_calls",
+      "reserved": 0,
+      "consumed": 0,
+      "measured": 1,
+      "source": "main_local"
+    },
+    {
+      "family": "CORRELATION_REVIEW",
+      "dimension": "rdap",
+      "reserved": 0,
+      "consumed": 0,
+      "measured": 1,
+      "source": "main_local"
+    },
+    {
+      "family": "CORRELATION_REVIEW",
+      "dimension": "retries",
+      "reserved": 0,
+      "consumed": 0,
+      "measured": 1,
+      "source": "main_local"
+    },
+    {
+      "family": "CORRELATION_REVIEW",
+      "dimension": "wall_ms",
+      "reserved": 0,
+      "consumed": 99,
+      "measured": 1,
+      "source": "main_local"
+    },
+    {
+      "family": "CORRELATION_REVIEW",
+      "dimension": "worker_ms",
+      "reserved": 0,
+      "consumed": 0,
+      "measured": 1,
+      "source": "main_local"
+    }
+  ],
+  "adaptive_outcomes": [
+    {
+      "outcome_kind": "dead_end",
+      "outcome_ref": "c32c716d0d867674c35d396cb2df10120834a5217f317f1d8fceef5d8c6866e9",
+      "credit": 1,
+      "basis": "observed",
+      "family": "CORRELATION_REVIEW"
+    },
+    {
+      "outcome_kind": "dead_end",
+      "outcome_ref": "7aec5f27f99399e6811fb62bc3792a9fc2484a3940accd783492805c946df56b",
+      "credit": 1,
+      "basis": "observed",
+      "family": "PUBLIC_ARTIFACT_SEARCH"
+    },
+    {
+      "outcome_kind": "dead_end",
+      "outcome_ref": "5f1749a1f825cf6cda25602a17de526265b259ca495d7cb3a10c818d18880672",
+      "credit": 1,
+      "basis": "observed",
+      "family": "CORRELATION_REVIEW"
+    },
+    {
+      "outcome_kind": "dead_end",
+      "outcome_ref": "525063604c6fb2dd88cbf6335437bd2ff46bb1ee5d80d1bf402ced25c003cf19",
+      "credit": 1,
+      "basis": "observed",
+      "family": "CORRELATION_REVIEW"
+    },
+    {
+      "outcome_kind": "duplicate",
+      "outcome_ref": "b4cfc26f71af07d831f7d45955990a9ed53144f7a34d387fc28c401c7938a421",
+      "credit": 1,
+      "basis": "observed",
+      "family": "HUNTER_HYPOTHESIS_TEST"
+    },
+    {
+      "outcome_kind": "dead_end",
+      "outcome_ref": "51f7ffe8c21f723c3103b6bb08e9482827d565add3fc33542dc01a43b83d84ac",
+      "credit": 1,
+      "basis": "observed",
+      "family": "HUNTER_HYPOTHESIS_TEST"
+    },
+    {
+      "outcome_kind": "dead_end",
+      "outcome_ref": "ea839f4f346747129963b6b08c0115e8a22a5f35083b41b250c8d7b9a35625f3",
+      "credit": 1,
+      "basis": "observed",
+      "family": "HUNTER_HYPOTHESIS_TEST"
+    }
+  ],
+  "seed_sites": 1,
+  "initial_wallets": 0,
+  "hidden_sites_injected": 0,
+  "hidden_sites_discovered": 3,
+  "target_sites_investigated": 4,
+  "validated_target_wallets": 2,
+  "unsupported_ownership_claims": 0,
+  "duplicate_active_jobs": 0,
+  "human_actions": 0,
+  "jobs": 36,
+  "jobs_per_useful_discovery": 12,
+  "transport_requests": 473,
+  "requests_by_kind": {
+    "http": 193,
+    "dns": 274,
+    "tls": 6
+  },
+  "requests_per_useful_discovery": 157.66666666666666,
+  "provider_calls": 3,
+  "time_to_final_operation_update_ms": 53562.565533,
+  "restart": true,
+  "source_proof": [
+    {
+      "domain": "q7167ada25c2.top",
+      "finder_site_records": 1,
+      "first_discovery_round": 2
+    },
+    {
+      "domain": "qfd428f1fc96.top",
+      "finder_site_records": 1,
+      "first_discovery_round": 4
+    },
+    {
+      "domain": "qc8fce52c1ad.top",
+      "finder_site_records": 1,
+      "first_discovery_round": 4
+    }
+  ],
+  "multi_hop_useful_discoveries": 2,
+  "operation_next_bounded_hunts": 6,
+  "validated_wallet_reuse_site_candidates": 2,
+  "rounds": [
+    {
+      "round": 0,
+      "sites": [
+        "qd3c09832ad1.top"
+      ],
+      "investigated": [
+        "qd3c09832ad1.top"
+      ],
+      "validated_deposit_wallets": 1,
+      "finder_claims": 1,
+      "operation_present": false,
+      "requests_so_far": 29
+    },
+    {
+      "round": 1,
+      "sites": [
+        "qd3c09832ad1.top"
+      ],
+      "investigated": [
+        "qd3c09832ad1.top"
+      ],
+      "validated_deposit_wallets": 1,
+      "finder_claims": 0,
+      "operation_present": true,
+      "requests_so_far": 54
+    },
+    {
+      "round": 2,
+      "sites": [
+        "q7167ada25c2.top",
+        "qd3c09832ad1.top"
+      ],
+      "investigated": [
+        "qd3c09832ad1.top"
+      ],
+      "validated_deposit_wallets": 1,
+      "finder_claims": 2,
+      "operation_present": true,
+      "requests_so_far": 130
+    },
+    {
+      "round": 3,
+      "sites": [
+        "q7167ada25c2.top",
+        "qd3c09832ad1.top"
+      ],
+      "investigated": [
+        "qd3c09832ad1.top",
+        "q7167ada25c2.top"
+      ],
+      "validated_deposit_wallets": 1,
+      "finder_claims": 0,
+      "operation_present": true,
+      "requests_so_far": 163
+    },
+    {
+      "round": 4,
+      "sites": [
+        "q238c0978906.top",
+        "q7167ada25c2.top",
+        "qc8fce52c1ad.top",
+        "qd3c09832ad1.top",
+        "qfd428f1fc96.top"
+      ],
+      "investigated": [
+        "qd3c09832ad1.top",
+        "q7167ada25c2.top"
+      ],
+      "validated_deposit_wallets": 1,
+      "finder_claims": 2,
+      "operation_present": true,
+      "requests_so_far": 224
+    },
+    {
+      "round": 5,
+      "sites": [
+        "q238c0978906.top",
+        "q7167ada25c2.top",
+        "qc8fce52c1ad.top",
+        "qd3c09832ad1.top",
+        "qfd428f1fc96.top"
+      ],
+      "investigated": [
+        "qd3c09832ad1.top",
+        "q7167ada25c2.top",
+        "q238c0978906.top",
+        "qfd428f1fc96.top",
+        "qc8fce52c1ad.top"
+      ],
+      "validated_deposit_wallets": 2,
+      "finder_claims": 1,
+      "operation_present": true,
+      "requests_so_far": 312
+    },
+    {
+      "round": 6,
+      "sites": [
+        "q238c0978906.top",
+        "q7167ada25c2.top",
+        "qc8fce52c1ad.top",
+        "qd3c09832ad1.top",
+        "qfd428f1fc96.top"
+      ],
+      "investigated": [
+        "qd3c09832ad1.top",
+        "q7167ada25c2.top",
+        "q238c0978906.top",
+        "qfd428f1fc96.top",
+        "qc8fce52c1ad.top"
+      ],
+      "validated_deposit_wallets": 3,
+      "finder_claims": 2,
+      "operation_present": true,
+      "requests_so_far": 376
+    },
+    {
+      "round": 7,
+      "sites": [
+        "q238c0978906.top",
+        "q7167ada25c2.top",
+        "qc8fce52c1ad.top",
+        "qd3c09832ad1.top",
+        "qfd428f1fc96.top"
+      ],
+      "investigated": [
+        "qd3c09832ad1.top",
+        "q7167ada25c2.top",
+        "q238c0978906.top",
+        "qfd428f1fc96.top",
+        "qc8fce52c1ad.top"
+      ],
+      "validated_deposit_wallets": 3,
+      "finder_claims": 1,
+      "operation_present": true,
+      "requests_so_far": 400
+    },
+    {
+      "round": 8,
+      "sites": [
+        "q238c0978906.top",
+        "q7167ada25c2.top",
+        "qc8fce52c1ad.top",
+        "qd3c09832ad1.top",
+        "qfd428f1fc96.top"
+      ],
+      "investigated": [
+        "qd3c09832ad1.top",
+        "q7167ada25c2.top",
+        "q238c0978906.top",
+        "qfd428f1fc96.top",
+        "qc8fce52c1ad.top"
+      ],
+      "validated_deposit_wallets": 3,
+      "finder_claims": 0,
+      "operation_present": true,
+      "requests_so_far": 400
+    },
+    {
+      "round": 9,
+      "sites": [
+        "q238c0978906.top",
+        "q7167ada25c2.top",
+        "qc8fce52c1ad.top",
+        "qd3c09832ad1.top",
+        "qfd428f1fc96.top"
+      ],
+      "investigated": [
+        "qd3c09832ad1.top",
+        "q7167ada25c2.top",
+        "q238c0978906.top",
+        "qfd428f1fc96.top",
+        "qc8fce52c1ad.top"
+      ],
+      "validated_deposit_wallets": 3,
+      "finder_claims": 0,
+      "operation_present": true,
+      "requests_so_far": 400
+    },
+    {
+      "round": 10,
+      "sites": [
+        "q238c0978906.top",
+        "q7167ada25c2.top",
+        "qc8fce52c1ad.top",
+        "qd3c09832ad1.top",
+        "qfd428f1fc96.top"
+      ],
+      "investigated": [
+        "qd3c09832ad1.top",
+        "q7167ada25c2.top",
+        "q238c0978906.top",
+        "qfd428f1fc96.top",
+        "qc8fce52c1ad.top"
+      ],
+      "validated_deposit_wallets": 3,
+      "finder_claims": 0,
+      "operation_present": true,
+      "requests_so_far": 400
+    },
+    {
+      "round": 11,
+      "sites": [
+        "q238c0978906.top",
+        "q7167ada25c2.top",
+        "qc8fce52c1ad.top",
+        "qd3c09832ad1.top",
+        "qfd428f1fc96.top"
+      ],
+      "investigated": [
+        "qd3c09832ad1.top",
+        "q7167ada25c2.top",
+        "q238c0978906.top",
+        "qfd428f1fc96.top",
+        "qc8fce52c1ad.top"
+      ],
+      "validated_deposit_wallets": 3,
+      "finder_claims": 0,
+      "operation_present": true,
+      "requests_so_far": 400
+    },
+    {
+      "round": 12,
+      "sites": [
+        "q238c0978906.top",
+        "q7167ada25c2.top",
+        "qc8fce52c1ad.top",
+        "qd3c09832ad1.top",
+        "qfd428f1fc96.top"
+      ],
+      "investigated": [
+        "qd3c09832ad1.top",
+        "q7167ada25c2.top",
+        "q238c0978906.top",
+        "qfd428f1fc96.top",
+        "qc8fce52c1ad.top"
+      ],
+      "validated_deposit_wallets": 3,
+      "finder_claims": 1,
+      "operation_present": true,
+      "requests_so_far": 424
+    },
+    {
+      "round": 13,
+      "sites": [
+        "q238c0978906.top",
+        "q7167ada25c2.top",
+        "qc8fce52c1ad.top",
+        "qd3c09832ad1.top",
+        "qfd428f1fc96.top"
+      ],
+      "investigated": [
+        "qd3c09832ad1.top",
+        "q7167ada25c2.top",
+        "q238c0978906.top",
+        "qfd428f1fc96.top",
+        "qc8fce52c1ad.top"
+      ],
+      "validated_deposit_wallets": 3,
+      "finder_claims": 2,
+      "operation_present": true,
+      "requests_so_far": 473
+    },
+    {
+      "round": 14,
+      "sites": [
+        "q238c0978906.top",
+        "q7167ada25c2.top",
+        "qc8fce52c1ad.top",
+        "qd3c09832ad1.top",
+        "qfd428f1fc96.top"
+      ],
+      "investigated": [
+        "qd3c09832ad1.top",
+        "q7167ada25c2.top",
+        "q238c0978906.top",
+        "qfd428f1fc96.top",
+        "qc8fce52c1ad.top"
+      ],
+      "validated_deposit_wallets": 3,
+      "finder_claims": 0,
+      "operation_present": true,
+      "requests_so_far": 473
+    }
+  ],
+  "moduleTrace": [
+    {
+      "module": "finder",
+      "ran": {
+        "claimed": false,
+        "reason": "No work waiting."
+      },
+      "costs": {
+        "http": 0,
+        "dns": 0,
+        "crtsh": 0,
+        "rdap": 0,
+        "feed": 0
+      }
+    },
+    {
+      "module": "investigator",
+      "ran": true
+    },
+    {
+      "module": "logger",
+      "domain": "qd3c09832ad1.top"
+    },
+    {
+      "module": "investigator",
+      "ran": false
+    },
+    {
+      "module": "finder",
+      "ran": {
+        "claimed": true,
+        "job_id": "90d1b378-7190-45ef-aee9-839bdb4ae405",
+        "job_type": "DISCOVER_SITES",
+        "ran": true,
+        "v2": {
+          "ran": true,
+          "cycle": 1,
+          "round": 1,
+          "sources": [
+            "ct_learned",
+            "cert_siblings",
+            "ct_terms"
+          ],
+          "delivered": 0,
+          "delivered_domains": [],
+          "new_unique": 0,
+          "new_infrastructure": 0,
+          "novel_ecosystems": 0,
+          "duplicate_sightings": 0,
+          "new_site_rate": 0,
+          "duplicate_rate": 0,
+          "near_duplicate_new": 0,
+          "near_duplicate_rate": 0,
+          "useful_new_site_rate_cumulative": 0,
+          "source_novelty": {
+            "ct_learned": 0,
+            "cert_siblings": 0,
+            "ct_terms": 0
+          },
+          "rediscovered": [],
+          "aged": 0,
+          "ecosystem_suppressed_total": 0,
+          "watch": {
+            "checked": 0,
+            "changed": 0,
+            "changes": [],
+            "dns_used": 0
+          },
+          "probed": 0,
+          "budget": {
+            "limits": {
+              "http": 120,
+              "dns": 600,
+              "crtsh": 12,
+              "rdap": 60
+            },
+            "used": {
+              "http": 0,
+              "dns": 0,
+              "crtsh": 12,
+              "rdap": 0
+            }
+          },
+          "recovered_interrupted": 0,
+          "saturated": true
+        }
+      },
+      "costs": {
+        "http": 0,
+        "dns": 0,
+        "crtsh": 12,
+        "rdap": 0,
+        "feed": 0
+      }
+    },
+    {
+      "module": "finder",
+      "ran": {
+        "claimed": false,
+        "reason": "No work waiting."
+      },
+      "costs": {
+        "http": 0,
+        "dns": 0,
+        "crtsh": 0,
+        "rdap": 0,
+        "feed": 0
+      }
+    },
+    {
+      "module": "investigator",
+      "ran": false
+    },
+    {
+      "module": "finder",
+      "ran": {
+        "claimed": false,
+        "reason": "No work waiting."
+      },
+      "costs": {
+        "http": 0,
+        "dns": 0,
+        "crtsh": 0,
+        "rdap": 0,
+        "feed": 0
+      }
+    },
+    {
+      "module": "investigator",
+      "ran": false
+    },
+    {
+      "module": "finder",
+      "ran": {
+        "claimed": true,
+        "job_id": "5bd5091f-c0bf-424a-958d-95926176c47f",
+        "job_type": "FIND_RELATED_SITES",
+        "ran": true,
+        "v2": {
+          "seed": "qd3c09832ad1.top",
+          "round": 2,
+          "delivered": 1,
+          "campaign_key": "v2:round:2:qd3c09832ad1.top",
+          "new_candidates": [
+            "q7167ada25c2.top"
+          ],
+          "hunt": "campaign:op-bd35d3fc",
+          "meter": {
+            "limits": {
+              "http": 40,
+              "dns": 40,
+              "crtsh": 4,
+              "rdap": 6
+            },
+            "used": {
+              "http": 5,
+              "dns": 26,
+              "crtsh": 4,
+              "rdap": 2
+            }
+          }
+        }
+      },
+      "costs": {
+        "http": 5,
+        "dns": 23,
+        "crtsh": 4,
+        "rdap": 2,
+        "feed": 0,
+        "page_search": 9
+      }
+    },
+    {
+      "module": "finder",
+      "ran": {
+        "claimed": true,
+        "job_id": "70a545bb-4320-48dd-87b9-f6215019de7e",
+        "job_type": "FIND_RELATED_SITES",
+        "ran": true,
+        "v2": {
+          "seed": "qd3c09832ad1.top",
+          "round": 3,
+          "delivered": 0,
+          "campaign_key": "v2:round:3:qd3c09832ad1.top",
+          "new_candidates": [],
+          "hunt": "campaign:op-bd35d3fc",
+          "meter": {
+            "limits": {
+              "http": 40,
+              "dns": 40,
+              "crtsh": 4,
+              "rdap": 6
+            },
+            "used": {
+              "http": 0,
+              "dns": 20,
+              "crtsh": 4,
+              "rdap": 0
+            }
+          }
+        }
+      },
+      "costs": {
+        "http": 0,
+        "dns": 20,
+        "crtsh": 4,
+        "rdap": 0,
+        "feed": 0,
+        "page_search": 9
+      }
+    },
+    {
+      "module": "finder",
+      "ran": {
+        "claimed": false,
+        "reason": "No work waiting."
+      },
+      "costs": {
+        "http": 0,
+        "dns": 0,
+        "crtsh": 0,
+        "rdap": 0,
+        "feed": 0
+      }
+    },
+    {
+      "module": "investigator",
+      "ran": true
+    },
+    {
+      "module": "logger",
+      "domain": "q7167ada25c2.top"
+    },
+    {
+      "module": "investigator",
+      "ran": false
+    },
+    {
+      "module": "finder",
+      "ran": {
+        "claimed": false,
+        "reason": "No work waiting."
+      },
+      "costs": {
+        "http": 0,
+        "dns": 0,
+        "crtsh": 0,
+        "rdap": 0,
+        "feed": 0
+      }
+    },
+    {
+      "module": "investigator",
+      "ran": false
+    },
+    {
+      "module": "finder",
+      "ran": {
+        "claimed": true,
+        "job_id": "b267bc76-6ef4-4440-82c8-116f01b81050",
+        "job_type": "FIND_RELATED_SITES",
+        "ran": true,
+        "v2": {
+          "seed": "qd3c09832ad1.top",
+          "round": 4,
+          "delivered": 1,
+          "campaign_key": "v2:round:4:qd3c09832ad1.top",
+          "new_candidates": [
+            "qfd428f1fc96.top"
+          ],
+          "hunt": "campaign:op-bd35d3fc",
+          "meter": {
+            "limits": {
+              "http": 40,
+              "dns": 40,
+              "crtsh": 4,
+              "rdap": 6
+            },
+            "used": {
+              "http": 3,
+              "dns": 24,
+              "crtsh": 4,
+              "rdap": 1
+            }
+          }
+        }
+      },
+      "costs": {
+        "http": 3,
+        "dns": 22,
+        "crtsh": 4,
+        "rdap": 1,
+        "feed": 0
+      }
+    },
+    {
+      "module": "finder",
+      "ran": {
+        "claimed": true,
+        "job_id": "6650fb12-7ae5-4f6c-a0af-8864020e9862",
+        "job_type": "FIND_RELATED_SITES",
+        "ran": true,
+        "v2": {
+          "seed": "q7167ada25c2.top",
+          "round": 5,
+          "delivered": 2,
+          "campaign_key": "v2:round:5:q7167ada25c2.top",
+          "new_candidates": [
+            "q238c0978906.top",
+            "qc8fce52c1ad.top"
+          ],
+          "hunt": "investigation:q7167ada25c2.top",
+          "meter": {
+            "limits": {
+              "http": 40,
+              "dns": 40,
+              "crtsh": 4,
+              "rdap": 6
+            },
+            "used": {
+              "http": 4,
+              "dns": 24,
+              "crtsh": 4,
+              "rdap": 2
+            }
+          }
+        }
+      },
+      "costs": {
+        "http": 4,
+        "dns": 21,
+        "crtsh": 4,
+        "rdap": 2,
+        "feed": 0
+      }
+    },
+    {
+      "module": "finder",
+      "ran": {
+        "claimed": false,
+        "reason": "No work waiting."
+      },
+      "costs": {
+        "http": 0,
+        "dns": 0,
+        "crtsh": 0,
+        "rdap": 0,
+        "feed": 0
+      }
+    },
+    {
+      "module": "investigator",
+      "ran": true
+    },
+    {
+      "module": "logger",
+      "domain": "q238c0978906.top"
+    },
+    {
+      "module": "investigator",
+      "ran": true
+    },
+    {
+      "module": "logger",
+      "domain": "qfd428f1fc96.top"
+    },
+    {
+      "module": "investigator",
+      "ran": true
+    },
+    {
+      "module": "logger",
+      "domain": "qc8fce52c1ad.top"
+    },
+    {
+      "module": "finder",
+      "ran": {
+        "claimed": true,
+        "job_id": "09959df7-484f-425d-a92d-c8881357e6c1",
+        "job_type": "FIND_RELATED_SITES",
+        "ran": true,
+        "v2": {
+          "seed": "qd3c09832ad1.top",
+          "round": 6,
+          "delivered": 0,
+          "campaign_key": "v2:round:6:qd3c09832ad1.top",
+          "new_candidates": [],
+          "hunt": "campaign:qd3c09832ad1.top",
+          "meter": {
+            "limits": {
+              "http": 40,
+              "dns": 40,
+              "crtsh": 4,
+              "rdap": 6
+            },
+            "used": {
+              "http": 0,
+              "dns": 20,
+              "crtsh": 4,
+              "rdap": 0
+            }
+          }
+        }
+      },
+      "costs": {
+        "http": 0,
+        "dns": 20,
+        "crtsh": 4,
+        "rdap": 0,
+        "feed": 0
+      }
+    },
+    {
+      "module": "finder",
+      "ran": {
+        "claimed": false,
+        "reason": "No work waiting."
+      },
+      "costs": {
+        "http": 0,
+        "dns": 0,
+        "crtsh": 0,
+        "rdap": 0,
+        "feed": 0
+      }
+    },
+    {
+      "module": "investigator",
+      "ran": true
+    },
+    {
+      "module": "investigator",
+      "ran": false
+    },
+    {
+      "module": "finder",
+      "ran": {
+        "claimed": true,
+        "job_id": "e0c9e81f-70cf-42ac-ba77-1a41ce49d24b",
+        "job_type": "FIND_RELATED_SITES",
+        "ran": true,
+        "v2": {
+          "seed": "q238c0978906.top",
+          "round": 7,
+          "delivered": 0,
+          "campaign_key": "v2:round:7:q238c0978906.top",
+          "new_candidates": [],
+          "hunt": "investigation:q238c0978906.top",
+          "meter": {
+            "limits": {
+              "http": 40,
+              "dns": 40,
+              "crtsh": 4,
+              "rdap": 6
+            },
+            "used": {
+              "http": 0,
+              "dns": 20,
+              "crtsh": 4,
+              "rdap": 0
+            }
+          }
+        }
+      },
+      "costs": {
+        "http": 0,
+        "dns": 20,
+        "crtsh": 4,
+        "rdap": 0,
+        "feed": 0
+      }
+    },
+    {
+      "module": "finder",
+      "ran": {
+        "claimed": true,
+        "job_id": "e0d3b514-d504-4baa-8a5c-e47bc18713ca",
+        "job_type": "FIND_RELATED_SITES",
+        "ran": true,
+        "v2": {
+          "seed": "qfd428f1fc96.top",
+          "round": 8,
+          "delivered": 0,
+          "campaign_key": "v2:round:8:qfd428f1fc96.top",
+          "new_candidates": [],
+          "hunt": "investigation:qfd428f1fc96.top",
+          "meter": {
+            "limits": {
+              "http": 40,
+              "dns": 40,
+              "crtsh": 4,
+              "rdap": 6
+            },
+            "used": {
+              "http": 0,
+              "dns": 20,
+              "crtsh": 4,
+              "rdap": 0
+            }
+          }
+        }
+      },
+      "costs": {
+        "http": 0,
+        "dns": 20,
+        "crtsh": 4,
+        "rdap": 0,
+        "feed": 0
+      }
+    },
+    {
+      "module": "finder",
+      "ran": {
+        "claimed": false,
+        "reason": "No work waiting."
+      },
+      "costs": {
+        "http": 0,
+        "dns": 0,
+        "crtsh": 0,
+        "rdap": 0,
+        "feed": 0
+      }
+    },
+    {
+      "module": "investigator",
+      "ran": false
+    },
+    {
+      "module": "finder",
+      "ran": {
+        "claimed": true,
+        "job_id": "c4df8860-fa06-4c59-99d7-d7fcf83bfa56",
+        "job_type": "FIND_RELATED_SITES",
+        "ran": true,
+        "v2": {
+          "seed": "qc8fce52c1ad.top",
+          "round": 9,
+          "delivered": 0,
+          "campaign_key": "v2:round:9:qc8fce52c1ad.top",
+          "new_candidates": [],
+          "hunt": "investigation:qc8fce52c1ad.top",
+          "meter": {
+            "limits": {
+              "http": 40,
+              "dns": 40,
+              "crtsh": 4,
+              "rdap": 6
+            },
+            "used": {
+              "http": 0,
+              "dns": 20,
+              "crtsh": 4,
+              "rdap": 0
+            }
+          }
+        }
+      },
+      "costs": {
+        "http": 0,
+        "dns": 20,
+        "crtsh": 4,
+        "rdap": 0,
+        "feed": 0
+      }
+    },
+    {
+      "module": "finder",
+      "ran": {
+        "claimed": false,
+        "reason": "No work waiting."
+      },
+      "costs": {
+        "http": 0,
+        "dns": 0,
+        "crtsh": 0,
+        "rdap": 0,
+        "feed": 0
+      }
+    },
+    {
+      "module": "investigator",
+      "ran": false
+    },
+    {
+      "module": "finder",
+      "ran": {
+        "claimed": false,
+        "reason": "No work waiting."
+      },
+      "costs": {
+        "http": 0,
+        "dns": 0,
+        "crtsh": 0,
+        "rdap": 0,
+        "feed": 0
+      }
+    },
+    {
+      "module": "investigator",
+      "ran": false
+    },
+    {
+      "module": "finder",
+      "ran": {
+        "claimed": false,
+        "reason": "No work waiting."
+      },
+      "costs": {
+        "http": 0,
+        "dns": 0,
+        "crtsh": 0,
+        "rdap": 0,
+        "feed": 0
+      }
+    },
+    {
+      "module": "investigator",
+      "ran": false
+    },
+    {
+      "module": "finder",
+      "ran": {
+        "claimed": false,
+        "reason": "No work waiting."
+      },
+      "costs": {
+        "http": 0,
+        "dns": 0,
+        "crtsh": 0,
+        "rdap": 0,
+        "feed": 0
+      }
+    },
+    {
+      "module": "investigator",
+      "ran": false
+    },
+    {
+      "module": "finder",
+      "ran": {
+        "claimed": false,
+        "reason": "No work waiting."
+      },
+      "costs": {
+        "http": 0,
+        "dns": 0,
+        "crtsh": 0,
+        "rdap": 0,
+        "feed": 0
+      }
+    },
+    {
+      "module": "investigator",
+      "ran": false
+    },
+    {
+      "module": "finder",
+      "ran": {
+        "claimed": true,
+        "job_id": "c9a7f723-d20a-4acc-b9a0-96293f93f060",
+        "job_type": "FIND_RELATED_SITES",
+        "ran": true,
+        "v2": {
+          "seed": "q238c0978906.top",
+          "round": 10,
+          "delivered": 0,
+          "campaign_key": "v2:round:10:q238c0978906.top",
+          "new_candidates": [],
+          "hunt": "campaign:q238c0978906.top",
+          "meter": {
+            "limits": {
+              "http": 40,
+              "dns": 40,
+              "crtsh": 4,
+              "rdap": 6
+            },
+            "used": {
+              "http": 0,
+              "dns": 20,
+              "crtsh": 4,
+              "rdap": 0
+            }
+          }
+        }
+      },
+      "costs": {
+        "http": 0,
+        "dns": 20,
+        "crtsh": 4,
+        "rdap": 0,
+        "feed": 0
+      }
+    },
+    {
+      "module": "finder",
+      "ran": {
+        "claimed": false,
+        "reason": "No work waiting."
+      },
+      "costs": {
+        "http": 0,
+        "dns": 0,
+        "crtsh": 0,
+        "rdap": 0,
+        "feed": 0
+      }
+    },
+    {
+      "module": "investigator",
+      "ran": false
+    },
+    {
+      "module": "finder",
+      "ran": {
+        "claimed": true,
+        "job_id": "4c46534b-94c9-42b7-a68a-046335bd6593",
+        "job_type": "FIND_RELATED_SITES",
+        "ran": true,
+        "v2": {
+          "seed": "qfd428f1fc96.top",
+          "round": 11,
+          "delivered": 0,
+          "campaign_key": "v2:round:11:qfd428f1fc96.top",
+          "new_candidates": [],
+          "hunt": "campaign:qfd428f1fc96.top",
+          "meter": {
+            "limits": {
+              "http": 40,
+              "dns": 40,
+              "crtsh": 4,
+              "rdap": 6
+            },
+            "used": {
+              "http": 0,
+              "dns": 20,
+              "crtsh": 4,
+              "rdap": 0
+            }
+          }
+        }
+      },
+      "costs": {
+        "http": 0,
+        "dns": 20,
+        "crtsh": 4,
+        "rdap": 0,
+        "feed": 0
+      }
+    },
+    {
+      "module": "finder",
+      "ran": {
+        "claimed": true,
+        "job_id": "71e1c6f0-9c25-4479-b344-c004bd31ce22",
+        "job_type": "FIND_RELATED_SITES",
+        "ran": true,
+        "v2": {
+          "seed": "qc8fce52c1ad.top",
+          "round": 12,
+          "delivered": 0,
+          "campaign_key": "v2:round:12:qc8fce52c1ad.top",
+          "new_candidates": [],
+          "hunt": "campaign:qc8fce52c1ad.top",
+          "meter": {
+            "limits": {
+              "http": 40,
+              "dns": 40,
+              "crtsh": 4,
+              "rdap": 6
+            },
+            "used": {
+              "http": 0,
+              "dns": 20,
+              "crtsh": 4,
+              "rdap": 0
+            }
+          }
+        }
+      },
+      "costs": {
+        "http": 0,
+        "dns": 20,
+        "crtsh": 4,
+        "rdap": 0,
+        "feed": 0,
+        "page_search": 1
+      }
+    },
+    {
+      "module": "finder",
+      "ran": {
+        "claimed": false,
+        "reason": "No work waiting."
+      },
+      "costs": {
+        "http": 0,
+        "dns": 0,
+        "crtsh": 0,
+        "rdap": 0,
+        "feed": 0
+      }
+    },
+    {
+      "module": "investigator",
+      "ran": false
+    },
+    {
+      "module": "finder",
+      "ran": {
+        "claimed": false,
+        "reason": "No work waiting."
+      },
+      "costs": {
+        "http": 0,
+        "dns": 0,
+        "crtsh": 0,
+        "rdap": 0,
+        "feed": 0
+      }
+    }
+  ],
+  "requests": [
+    {
+      "module": "investigator",
+      "url": "dns://qd3c09832ad1.top/A"
+    },
+    {
+      "module": "investigator",
+      "url": "dns://qd3c09832ad1.top/AAAA"
+    },
+    {
+      "module": "investigator",
+      "url": "dns://qd3c09832ad1.top/NS"
+    },
+    {
+      "module": "investigator",
+      "url": "dns://qd3c09832ad1.top/MX"
+    },
+    {
+      "module": "investigator",
+      "url": "dns://qd3c09832ad1.top/TXT"
+    },
+    {
+      "module": "investigator",
+      "url": "dns://qd3c09832ad1.top/CNAME"
+    },
+    {
+      "module": "investigator",
+      "url": "tls://qd3c09832ad1.top:443"
+    },
+    {
+      "module": "investigator",
+      "url": "https://rdap.org/domain/qd3c09832ad1.top"
+    },
+    {
+      "module": "investigator",
+      "url": "https://crt.sh/?q=%25.qd3c09832ad1.top&output=json"
+    },
+    {
+      "module": "investigator",
+      "url": "https://rdap.org/ip/104.21.12.34"
+    },
+    {
+      "module": "investigator",
+      "url": "https://qd3c09832ad1.top"
+    },
+    {
+      "module": "investigator",
+      "url": "https://qd3c09832ad1.top/register"
+    },
+    {
+      "module": "investigator",
+      "url": "https://qd3c09832ad1.top/login"
+    },
+    {
+      "module": "investigator",
+      "url": "https://qd3c09832ad1.top/invest"
+    },
+    {
+      "module": "investigator",
+      "url": "https://qd3c09832ad1.top/trade"
+    },
+    {
+      "module": "investigator",
+      "url": "https://qd3c09832ad1.top/deposit"
+    },
+    {
+      "module": "logger",
+      "url": "https://qd3c09832ad1.top/deposit"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=%25defi%25&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=%25claim%25&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=%25airdrop%25&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=%25exchange%25&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=%25bit%25&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=%25arbitrage%25&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=%25yield%25&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=%25fx%25&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=%25crypto%25&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=%25profit%25&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=%25coin%25&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=%25h5%25&output=json"
+    },
+    {
+      "module": "hunter",
+      "url": "dns://qd3c09832ad1.top/A"
+    },
+    {
+      "module": "hunter",
+      "url": "dns://qd3c09832ad1.top/AAAA"
+    },
+    {
+      "module": "hunter",
+      "url": "dns://qd3c09832ad1.top/NS"
+    },
+    {
+      "module": "hunter",
+      "url": "dns://qd3c09832ad1.top/MX"
+    },
+    {
+      "module": "hunter",
+      "url": "dns://qd3c09832ad1.top/TXT"
+    },
+    {
+      "module": "hunter",
+      "url": "dns://qd3c09832ad1.top/CNAME"
+    },
+    {
+      "module": "hunter",
+      "url": "https://crt.sh/?q=qd3c09832ad1.top&output=json"
+    },
+    {
+      "module": "hunter",
+      "url": "https://crt.sh/?q=%25.qd3c09832ad1.top&output=json"
+    },
+    {
+      "module": "hunter",
+      "url": "https://rdap.org/domain/qd3c09832ad1.top"
+    },
+    {
+      "module": "hunter",
+      "url": "https://eth.blockscout.com/api/v2/addresses/0x4444444444444444444444444444444444444444"
+    },
+    {
+      "module": "hunter",
+      "url": "https://arbitrum.blockscout.com/api/v2/addresses/0x4444444444444444444444444444444444444444"
+    },
+    {
+      "module": "hunter",
+      "url": "https://base.blockscout.com/api/v2/addresses/0x4444444444444444444444444444444444444444"
+    },
+    {
+      "module": "hunter",
+      "url": "https://optimism.blockscout.com/api/v2/addresses/0x4444444444444444444444444444444444444444"
+    },
+    {
+      "module": "hunter",
+      "url": "https://polygon.blockscout.com/api/v2/addresses/0x4444444444444444444444444444444444444444"
+    },
+    {
+      "module": "hunter",
+      "url": "https://gnosis.blockscout.com/api/v2/addresses/0x4444444444444444444444444444444444444444"
+    },
+    {
+      "module": "hunter",
+      "url": "https://urlscan.io/api/v1/search/?q=page.domain%3Aqd3c09832ad1.top%20OR%20task.domain%3Aqd3c09832ad1.top&size=10"
+    },
+    {
+      "module": "hunter",
+      "url": "https://api.hackertarget.com/findshareddns/?q=ns1.public-cdn.example"
+    },
+    {
+      "module": "hunter",
+      "url": "https://eth.blockscout.com/api/v2/addresses/0xbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+    },
+    {
+      "module": "hunter",
+      "url": "https://arbitrum.blockscout.com/api/v2/addresses/0xbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+    },
+    {
+      "module": "hunter",
+      "url": "https://base.blockscout.com/api/v2/addresses/0xbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+    },
+    {
+      "module": "hunter",
+      "url": "https://optimism.blockscout.com/api/v2/addresses/0xbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+    },
+    {
+      "module": "hunter",
+      "url": "https://polygon.blockscout.com/api/v2/addresses/0xbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+    },
+    {
+      "module": "hunter",
+      "url": "https://gnosis.blockscout.com/api/v2/addresses/0xbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+    },
+    {
+      "module": "hunter",
+      "url": "https://stat.ripe.net/data/prefix-overview/data.json?resource=104.21.12.34&sourceapp=operation-hunter"
+    },
+    {
+      "module": "hunter",
+      "url": "https://stat.ripe.net/data/maxmind-geo-lite/data.json?resource=104.21.12.34&sourceapp=operation-hunter"
+    },
+    {
+      "module": "finder",
+      "url": "https://urlscan.io/api/v1/search/?q=page.title%3A%22Crypto+Recovery%22&size=100"
+    },
+    {
+      "module": "finder",
+      "url": "https://urlscan.io/api/v1/search/?q=page.title%3A%22Wealth+Management%22&size=100"
+    },
+    {
+      "module": "finder",
+      "url": "https://urlscan.io/api/v1/search/?q=page.title%3A%22Liquidity+Mining%22&size=100"
+    },
+    {
+      "module": "finder",
+      "url": "https://urlscan.io/api/v1/search/?q=page.title%3A%22Crypto+Exchange%22&size=100"
+    },
+    {
+      "module": "finder",
+      "url": "https://urlscan.io/api/v1/search/?q=page.title%3A%22Arbitrage%22&size=100"
+    },
+    {
+      "module": "finder",
+      "url": "https://urlscan.io/api/v1/search/?q=page.title%3A%22USDT+Mining%22&size=100"
+    },
+    {
+      "module": "finder",
+      "url": "https://urlscan.io/api/v1/search/?q=page.title%3A%22Asset+Recovery%22&size=100"
+    },
+    {
+      "module": "finder",
+      "url": "https://urlscan.io/api/v1/search/?q=page.title%3A%22Mining+Pool%22&size=100"
+    },
+    {
+      "module": "finder",
+      "url": "https://urlscan.io/api/v1/search/?q=page.title%3A%22AI+Trading%22&size=100"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=%25qd3c09832ad%25&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qd3c09832ad2.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qd3c09832ad3.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qd3c09832ad5.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qd3c09832ad8.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qd3c09832ad24.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qd3c09832ad88.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qd3c09832ad-app.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qd3c09832ad-pro.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qd3c09832ad-vip.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qd3c09832ad-global.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://myqd3c09832ad.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://goqd3c09832ad.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qd3c09832ad.com"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qd3c09832ad.net"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qd3c09832ad.xyz"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qd3c09832ad.vip"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qd3c09832ad.app"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qd3c09832ad.cc"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qd3c09832ad.live"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qd3c09832ad.io"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=qd3c09832ad1.top&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=qd3c09832ad1.top&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=%25qd3c09832ad%25&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qd3c09832ad1.top"
+    },
+    {
+      "module": "finder",
+      "url": "https://qd3c09832ad1.top/"
+    },
+    {
+      "module": "finder",
+      "url": "https://rdap.org/domain/qd3c09832ad1.top"
+    },
+    {
+      "module": "finder",
+      "url": "https://qd3c09832ad1.top/favicon.ico"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q7167ada25c2.top"
+    },
+    {
+      "module": "finder",
+      "url": "https://q7167ada25c2.top/"
+    },
+    {
+      "module": "finder",
+      "url": "https://rdap.org/domain/q7167ada25c2.top"
+    },
+    {
+      "module": "finder",
+      "url": "https://q7167ada25c2.top/favicon.ico"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qc1ebd33bc78.top"
+    },
+    {
+      "module": "finder",
+      "url": "https://qc1ebd33bc78.top/"
+    },
+    {
+      "module": "finder",
+      "url": "https://urlscan.io/api/v1/search/?q=page.title%3A%22Cloud+Mining%22&size=100"
+    },
+    {
+      "module": "finder",
+      "url": "https://urlscan.io/api/v1/search/?q=page.title%3A%22Buy+%26+Sell+Crypto%22&size=100"
+    },
+    {
+      "module": "finder",
+      "url": "https://urlscan.io/api/v1/search/?q=page.title%3A%22quorra+investment+%E2%80%A2+earn+daily+profit%22&size=100"
+    },
+    {
+      "module": "finder",
+      "url": "https://urlscan.io/api/v1/search/?q=page.title%3A%22Quant+Trading%22&size=100"
+    },
+    {
+      "module": "finder",
+      "url": "https://urlscan.io/api/v1/search/?q=page.title%3A%22Earn+Daily%22&size=100"
+    },
+    {
+      "module": "finder",
+      "url": "https://urlscan.io/api/v1/search/?q=page.title%3A%22Investment+%E2%80%A2+Earn+Daily+Profit%22&size=100"
+    },
+    {
+      "module": "finder",
+      "url": "https://urlscan.io/api/v1/search/?q=page.title%3A%22Invest+Platform%22&size=100"
+    },
+    {
+      "module": "finder",
+      "url": "https://urlscan.io/api/v1/search/?q=page.title%3A%22Staking+Rewards%22&size=100"
+    },
+    {
+      "module": "finder",
+      "url": "https://urlscan.io/api/v1/search/?q=page.title%3A%22Daily+Profit%22&size=100"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=%25qc1ebd33bc%25&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=%25q7167ada25c%25&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=%25trade%25&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=%25yield%25&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "dns://binance-kyc.io"
+    },
+    {
+      "module": "finder",
+      "url": "dns://binance-kyc.app"
+    },
+    {
+      "module": "finder",
+      "url": "dns://binance-kyc.info"
+    },
+    {
+      "module": "finder",
+      "url": "dns://binance-kyc.pro"
+    },
+    {
+      "module": "finder",
+      "url": "dns://binance-unlock.com"
+    },
+    {
+      "module": "finder",
+      "url": "dns://binance-unlock.net"
+    },
+    {
+      "module": "finder",
+      "url": "dns://binance-unlock.org"
+    },
+    {
+      "module": "finder",
+      "url": "dns://binance-unlock.xyz"
+    },
+    {
+      "module": "finder",
+      "url": "dns://binance-unlock.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://binance-unlock.live"
+    },
+    {
+      "module": "finder",
+      "url": "dns://binance-unlock.cc"
+    },
+    {
+      "module": "finder",
+      "url": "dns://binance-unlock.vip"
+    },
+    {
+      "module": "finder",
+      "url": "dns://binance-unlock.io"
+    },
+    {
+      "module": "finder",
+      "url": "dns://binance-unlock.app"
+    },
+    {
+      "module": "finder",
+      "url": "dns://binance-unlock.info"
+    },
+    {
+      "module": "finder",
+      "url": "dns://binance-unlock.pro"
+    },
+    {
+      "module": "finder",
+      "url": "dns://binance-rewards.com"
+    },
+    {
+      "module": "finder",
+      "url": "dns://binance-rewards.net"
+    },
+    {
+      "module": "finder",
+      "url": "dns://binance-rewards.org"
+    },
+    {
+      "module": "finder",
+      "url": "dns://binance-rewards.xyz"
+    },
+    {
+      "module": "investigator",
+      "url": "dns://q7167ada25c2.top/A"
+    },
+    {
+      "module": "investigator",
+      "url": "dns://q7167ada25c2.top/AAAA"
+    },
+    {
+      "module": "investigator",
+      "url": "dns://q7167ada25c2.top/NS"
+    },
+    {
+      "module": "investigator",
+      "url": "dns://q7167ada25c2.top/MX"
+    },
+    {
+      "module": "investigator",
+      "url": "dns://q7167ada25c2.top/TXT"
+    },
+    {
+      "module": "investigator",
+      "url": "dns://q7167ada25c2.top/CNAME"
+    },
+    {
+      "module": "investigator",
+      "url": "tls://q7167ada25c2.top:443"
+    },
+    {
+      "module": "investigator",
+      "url": "https://rdap.org/domain/q7167ada25c2.top"
+    },
+    {
+      "module": "investigator",
+      "url": "https://crt.sh/?q=%25.q7167ada25c2.top&output=json"
+    },
+    {
+      "module": "investigator",
+      "url": "https://rdap.org/ip/104.21.12.34"
+    },
+    {
+      "module": "investigator",
+      "url": "https://q7167ada25c2.top"
+    },
+    {
+      "module": "investigator",
+      "url": "https://q7167ada25c2.top/register"
+    },
+    {
+      "module": "investigator",
+      "url": "https://q7167ada25c2.top/login"
+    },
+    {
+      "module": "investigator",
+      "url": "https://q7167ada25c2.top/invest"
+    },
+    {
+      "module": "investigator",
+      "url": "https://q7167ada25c2.top/trade"
+    },
+    {
+      "module": "investigator",
+      "url": "https://q7167ada25c2.top/deposit"
+    },
+    {
+      "module": "investigator",
+      "url": "https://q7167ada25c2.top/"
+    },
+    {
+      "module": "investigator",
+      "url": "https://q7167ada25c2.top/register"
+    },
+    {
+      "module": "investigator",
+      "url": "https://q7167ada25c2.top/login"
+    },
+    {
+      "module": "investigator",
+      "url": "https://q7167ada25c2.top/invest"
+    },
+    {
+      "module": "investigator",
+      "url": "https://q7167ada25c2.top/trade"
+    },
+    {
+      "module": "investigator",
+      "url": "https://q7167ada25c2.top/deposit"
+    },
+    {
+      "module": "logger",
+      "url": "https://q7167ada25c2.top/deposit"
+    },
+    {
+      "module": "hunter",
+      "url": "https://crt.sh/?q=q7167ada25c2.top&output=json"
+    },
+    {
+      "module": "hunter",
+      "url": "https://crt.sh/?q=%25.q7167ada25c2.top&output=json"
+    },
+    {
+      "module": "hunter",
+      "url": "dns://q7167ada25c2.top/A"
+    },
+    {
+      "module": "hunter",
+      "url": "https://rdap.org/domain/q7167ada25c2.top"
+    },
+    {
+      "module": "hunter",
+      "url": "dns://q7167ada25c2.top/AAAA"
+    },
+    {
+      "module": "hunter",
+      "url": "dns://q7167ada25c2.top/NS"
+    },
+    {
+      "module": "hunter",
+      "url": "dns://q7167ada25c2.top/MX"
+    },
+    {
+      "module": "hunter",
+      "url": "dns://q7167ada25c2.top/TXT"
+    },
+    {
+      "module": "hunter",
+      "url": "dns://q7167ada25c2.top/CNAME"
+    },
+    {
+      "module": "hunter",
+      "url": "https://urlscan.io/api/v1/search/?q=page.domain%3Aq7167ada25c2.top%20OR%20task.domain%3Aq7167ada25c2.top&size=10"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=q7167ada25c2.top&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=%25q7167ada25c%25&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q7167ada25c1.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q7167ada25c3.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q7167ada25c5.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q7167ada25c8.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q7167ada25c24.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q7167ada25c88.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q7167ada25c-app.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q7167ada25c-pro.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q7167ada25c-vip.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q7167ada25c-global.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://myq7167ada25c.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://goq7167ada25c.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q7167ada25c.com"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q7167ada25c.net"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q7167ada25c.xyz"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q7167ada25c.vip"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q7167ada25c.app"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q7167ada25c.cc"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q7167ada25c.live"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q7167ada25c.io"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=%25vip%25&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=%25finance%25&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q07c81c29dc1.top"
+    },
+    {
+      "module": "finder",
+      "url": "https://q07c81c29dc1.top/"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qfd428f1fc96.top"
+    },
+    {
+      "module": "finder",
+      "url": "https://qfd428f1fc96.top/"
+    },
+    {
+      "module": "finder",
+      "url": "https://rdap.org/domain/qfd428f1fc96.top"
+    },
+    {
+      "module": "finder",
+      "url": "https://qfd428f1fc96.top/favicon.ico"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=qfd428f1fc96.top&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=q7167ada25c2.top&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=q7167ada25c2.top&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=%25q7167ada25c%25&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q7167ada25c1.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q7167ada25c3.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q7167ada25c4.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q7167ada25c5.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q7167ada25c-app.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q7167ada25c-pro.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q7167ada25c-vip.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q7167ada25c-global.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q7167ada25c-h5.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q7167ada25c-plus.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q7167ada25cx.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q7167ada25cex.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q7167ada25cfx.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q7167ada25cpro.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q7167ada25capp.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q7167ada25c.com"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q7167ada25c.net"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q7167ada25c.vip"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q7167ada25c.xyz"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q238c0978906.top"
+    },
+    {
+      "module": "finder",
+      "url": "https://q238c0978906.top/"
+    },
+    {
+      "module": "finder",
+      "url": "https://rdap.org/domain/q238c0978906.top"
+    },
+    {
+      "module": "finder",
+      "url": "https://q238c0978906.top/favicon.ico"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qc8fce52c1ad.top"
+    },
+    {
+      "module": "finder",
+      "url": "https://qc8fce52c1ad.top/"
+    },
+    {
+      "module": "finder",
+      "url": "https://rdap.org/domain/qc8fce52c1ad.top"
+    },
+    {
+      "module": "finder",
+      "url": "https://qc8fce52c1ad.top/favicon.ico"
+    },
+    {
+      "module": "investigator",
+      "url": "dns://q238c0978906.top/A"
+    },
+    {
+      "module": "investigator",
+      "url": "dns://q238c0978906.top/AAAA"
+    },
+    {
+      "module": "investigator",
+      "url": "dns://q238c0978906.top/NS"
+    },
+    {
+      "module": "investigator",
+      "url": "dns://q238c0978906.top/MX"
+    },
+    {
+      "module": "investigator",
+      "url": "dns://q238c0978906.top/TXT"
+    },
+    {
+      "module": "investigator",
+      "url": "dns://q238c0978906.top/CNAME"
+    },
+    {
+      "module": "investigator",
+      "url": "tls://q238c0978906.top:443"
+    },
+    {
+      "module": "investigator",
+      "url": "https://rdap.org/domain/q238c0978906.top"
+    },
+    {
+      "module": "investigator",
+      "url": "https://crt.sh/?q=%25.q238c0978906.top&output=json"
+    },
+    {
+      "module": "investigator",
+      "url": "https://rdap.org/ip/104.21.12.34"
+    },
+    {
+      "module": "investigator",
+      "url": "https://q238c0978906.top"
+    },
+    {
+      "module": "investigator",
+      "url": "https://q238c0978906.top/register"
+    },
+    {
+      "module": "investigator",
+      "url": "https://q238c0978906.top/login"
+    },
+    {
+      "module": "investigator",
+      "url": "https://q238c0978906.top/invest"
+    },
+    {
+      "module": "investigator",
+      "url": "https://q238c0978906.top/trade"
+    },
+    {
+      "module": "investigator",
+      "url": "https://q238c0978906.top/deposit"
+    },
+    {
+      "module": "investigator",
+      "url": "https://q238c0978906.top/"
+    },
+    {
+      "module": "investigator",
+      "url": "https://q238c0978906.top/register"
+    },
+    {
+      "module": "investigator",
+      "url": "https://q238c0978906.top/login"
+    },
+    {
+      "module": "investigator",
+      "url": "https://q238c0978906.top/invest"
+    },
+    {
+      "module": "investigator",
+      "url": "https://q238c0978906.top/trade"
+    },
+    {
+      "module": "investigator",
+      "url": "https://q238c0978906.top/deposit"
+    },
+    {
+      "module": "logger",
+      "url": "https://q238c0978906.top/deposit"
+    },
+    {
+      "module": "investigator",
+      "url": "dns://qfd428f1fc96.top/A"
+    },
+    {
+      "module": "investigator",
+      "url": "dns://qfd428f1fc96.top/AAAA"
+    },
+    {
+      "module": "investigator",
+      "url": "dns://qfd428f1fc96.top/NS"
+    },
+    {
+      "module": "investigator",
+      "url": "dns://qfd428f1fc96.top/MX"
+    },
+    {
+      "module": "investigator",
+      "url": "dns://qfd428f1fc96.top/TXT"
+    },
+    {
+      "module": "investigator",
+      "url": "dns://qfd428f1fc96.top/CNAME"
+    },
+    {
+      "module": "investigator",
+      "url": "tls://qfd428f1fc96.top:443"
+    },
+    {
+      "module": "investigator",
+      "url": "https://rdap.org/domain/qfd428f1fc96.top"
+    },
+    {
+      "module": "investigator",
+      "url": "https://crt.sh/?q=%25.qfd428f1fc96.top&output=json"
+    },
+    {
+      "module": "investigator",
+      "url": "https://rdap.org/ip/104.21.12.34"
+    },
+    {
+      "module": "investigator",
+      "url": "https://qfd428f1fc96.top"
+    },
+    {
+      "module": "investigator",
+      "url": "https://qfd428f1fc96.top/register"
+    },
+    {
+      "module": "investigator",
+      "url": "https://qfd428f1fc96.top/login"
+    },
+    {
+      "module": "investigator",
+      "url": "https://qfd428f1fc96.top/invest"
+    },
+    {
+      "module": "investigator",
+      "url": "https://qfd428f1fc96.top/trade"
+    },
+    {
+      "module": "investigator",
+      "url": "https://qfd428f1fc96.top/deposit"
+    },
+    {
+      "module": "investigator",
+      "url": "https://qfd428f1fc96.top/"
+    },
+    {
+      "module": "investigator",
+      "url": "https://qfd428f1fc96.top/register"
+    },
+    {
+      "module": "investigator",
+      "url": "https://qfd428f1fc96.top/login"
+    },
+    {
+      "module": "investigator",
+      "url": "https://qfd428f1fc96.top/invest"
+    },
+    {
+      "module": "investigator",
+      "url": "https://qfd428f1fc96.top/trade"
+    },
+    {
+      "module": "investigator",
+      "url": "https://qfd428f1fc96.top/deposit"
+    },
+    {
+      "module": "logger",
+      "url": "https://qfd428f1fc96.top/deposit"
+    },
+    {
+      "module": "investigator",
+      "url": "dns://qc8fce52c1ad.top/A"
+    },
+    {
+      "module": "investigator",
+      "url": "dns://qc8fce52c1ad.top/AAAA"
+    },
+    {
+      "module": "investigator",
+      "url": "dns://qc8fce52c1ad.top/NS"
+    },
+    {
+      "module": "investigator",
+      "url": "dns://qc8fce52c1ad.top/MX"
+    },
+    {
+      "module": "investigator",
+      "url": "dns://qc8fce52c1ad.top/TXT"
+    },
+    {
+      "module": "investigator",
+      "url": "dns://qc8fce52c1ad.top/CNAME"
+    },
+    {
+      "module": "investigator",
+      "url": "tls://qc8fce52c1ad.top:443"
+    },
+    {
+      "module": "investigator",
+      "url": "https://rdap.org/domain/qc8fce52c1ad.top"
+    },
+    {
+      "module": "investigator",
+      "url": "https://crt.sh/?q=%25.qc8fce52c1ad.top&output=json"
+    },
+    {
+      "module": "investigator",
+      "url": "https://rdap.org/ip/104.21.12.34"
+    },
+    {
+      "module": "investigator",
+      "url": "https://qc8fce52c1ad.top"
+    },
+    {
+      "module": "investigator",
+      "url": "https://qc8fce52c1ad.top/register"
+    },
+    {
+      "module": "investigator",
+      "url": "https://qc8fce52c1ad.top/login"
+    },
+    {
+      "module": "investigator",
+      "url": "https://qc8fce52c1ad.top/invest"
+    },
+    {
+      "module": "investigator",
+      "url": "https://qc8fce52c1ad.top/trade"
+    },
+    {
+      "module": "investigator",
+      "url": "https://qc8fce52c1ad.top/deposit"
+    },
+    {
+      "module": "logger",
+      "url": "https://qc8fce52c1ad.top/deposit"
+    },
+    {
+      "module": "logger",
+      "url": "https://qc8fce52c1ad.top/assets/app.71f03cfe.js"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=q238c0978906.top&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=%25qfd428f1fc%25&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=%25qc8fce52c1ad%25&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=%25qfd428f1fc%25&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "dns://binabce.io"
+    },
+    {
+      "module": "finder",
+      "url": "dns://binabce.app"
+    },
+    {
+      "module": "finder",
+      "url": "dns://binabce.info"
+    },
+    {
+      "module": "finder",
+      "url": "dns://binabce.pro"
+    },
+    {
+      "module": "finder",
+      "url": "dns://binace.com"
+    },
+    {
+      "module": "finder",
+      "url": "dns://binace.net"
+    },
+    {
+      "module": "finder",
+      "url": "dns://binace.org"
+    },
+    {
+      "module": "finder",
+      "url": "dns://binace.xyz"
+    },
+    {
+      "module": "finder",
+      "url": "dns://binace.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://binace.live"
+    },
+    {
+      "module": "finder",
+      "url": "dns://binace.cc"
+    },
+    {
+      "module": "finder",
+      "url": "dns://binace.vip"
+    },
+    {
+      "module": "finder",
+      "url": "dns://binace.io"
+    },
+    {
+      "module": "finder",
+      "url": "dns://binace.app"
+    },
+    {
+      "module": "finder",
+      "url": "dns://binace.info"
+    },
+    {
+      "module": "finder",
+      "url": "dns://binace.pro"
+    },
+    {
+      "module": "finder",
+      "url": "dns://binacne.com"
+    },
+    {
+      "module": "finder",
+      "url": "dns://binacne.net"
+    },
+    {
+      "module": "finder",
+      "url": "dns://binacne.org"
+    },
+    {
+      "module": "finder",
+      "url": "dns://binacne.xyz"
+    },
+    {
+      "module": "investigator",
+      "url": "dns://qc8fce52c1ad.top/A"
+    },
+    {
+      "module": "investigator",
+      "url": "dns://qc8fce52c1ad.top/AAAA"
+    },
+    {
+      "module": "investigator",
+      "url": "dns://qc8fce52c1ad.top/NS"
+    },
+    {
+      "module": "investigator",
+      "url": "dns://qc8fce52c1ad.top/MX"
+    },
+    {
+      "module": "investigator",
+      "url": "dns://qc8fce52c1ad.top/TXT"
+    },
+    {
+      "module": "investigator",
+      "url": "dns://qc8fce52c1ad.top/CNAME"
+    },
+    {
+      "module": "investigator",
+      "url": "tls://qc8fce52c1ad.top:443"
+    },
+    {
+      "module": "investigator",
+      "url": "https://rdap.org/domain/qc8fce52c1ad.top"
+    },
+    {
+      "module": "investigator",
+      "url": "https://crt.sh/?q=%25.qc8fce52c1ad.top&output=json"
+    },
+    {
+      "module": "investigator",
+      "url": "https://rdap.org/ip/104.21.12.34"
+    },
+    {
+      "module": "investigator",
+      "url": "https://qc8fce52c1ad.top"
+    },
+    {
+      "module": "investigator",
+      "url": "https://qc8fce52c1ad.top/register"
+    },
+    {
+      "module": "investigator",
+      "url": "https://qc8fce52c1ad.top/login"
+    },
+    {
+      "module": "investigator",
+      "url": "https://qc8fce52c1ad.top/invest"
+    },
+    {
+      "module": "investigator",
+      "url": "https://qc8fce52c1ad.top/trade"
+    },
+    {
+      "module": "investigator",
+      "url": "https://qc8fce52c1ad.top/deposit"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=q238c0978906.top&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=q238c0978906.top&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=%25q238c%25&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q238c1.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q238c2.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q238c3.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q238c4.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q238c5.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q238c-app.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q238c-pro.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q238c-vip.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q238c-global.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q238c-h5.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q238c-plus.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q238cx.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q238cex.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q238cfx.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q238cpro.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q238capp.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q238c.com"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q238c.net"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q238c.vip"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q238c.xyz"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=%25invest%25&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=qc8fce52c1ad.top&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=qfd428f1fc96.top&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=%25qfd428f1fc%25&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qfd428f1fc1.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qfd428f1fc2.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qfd428f1fc3.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qfd428f1fc4.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qfd428f1fc5.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qfd428f1fc-app.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qfd428f1fc-pro.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qfd428f1fc-vip.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qfd428f1fc-global.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qfd428f1fc-h5.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qfd428f1fc-plus.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qfd428f1fcx.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qfd428f1fcex.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qfd428f1fcfx.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qfd428f1fcpro.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qfd428f1fcapp.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qfd428f1fc.com"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qfd428f1fc.net"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qfd428f1fc.vip"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qfd428f1fc.xyz"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=%25quant%25&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=qfd428f1fc96.top&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=qc8fce52c1ad.top&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=%25qc8fce52c1ad%25&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qc8fce52c1ad1.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qc8fce52c1ad2.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qc8fce52c1ad3.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qc8fce52c1ad4.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qc8fce52c1ad5.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qc8fce52c1ad-app.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qc8fce52c1ad-pro.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qc8fce52c1ad-vip.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qc8fce52c1ad-global.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qc8fce52c1ad-h5.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qc8fce52c1ad-plus.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qc8fce52c1adx.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qc8fce52c1adex.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qc8fce52c1adfx.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qc8fce52c1adpro.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qc8fce52c1adapp.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qc8fce52c1ad.com"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qc8fce52c1ad.net"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qc8fce52c1ad.vip"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qc8fce52c1ad.xyz"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=%25defi%25&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q238c1.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q238c2.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q238c3.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q238c5.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q238c8.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q238c24.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q238c88.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q238c-app.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q238c-pro.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q238c-vip.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q238c-global.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://myq238c.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://goq238c.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q238c.com"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q238c.net"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q238c.xyz"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q238c.vip"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q238c.app"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q238c.cc"
+    },
+    {
+      "module": "finder",
+      "url": "dns://q238c.live"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=%25invest%25&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=%25bit%25&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=%25exchange%25&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=%25wallet%25&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qfd428f1fc1.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qfd428f1fc2.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qfd428f1fc3.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qfd428f1fc5.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qfd428f1fc8.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qfd428f1fc24.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qfd428f1fc88.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qfd428f1fc-app.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qfd428f1fc-pro.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qfd428f1fc-vip.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qfd428f1fc-global.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://myqfd428f1fc.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://goqfd428f1fc.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qfd428f1fc.com"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qfd428f1fc.net"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qfd428f1fc.xyz"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qfd428f1fc.vip"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qfd428f1fc.app"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qfd428f1fc.cc"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qfd428f1fc.live"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=%25trc20%25&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=%25finance%25&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=%25claim%25&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=%25recover%25&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "https://urlscan.io/api/v1/search/?q=filename%3A%22app.71f03cfe.js%22&size=100"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=%25qc8fce52c1ad%25&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=qc8fce52c1ad.top&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qc8fce52c1ad1.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qc8fce52c1ad2.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qc8fce52c1ad3.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qc8fce52c1ad5.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qc8fce52c1ad8.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qc8fce52c1ad24.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qc8fce52c1ad88.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qc8fce52c1ad-app.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qc8fce52c1ad-pro.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qc8fce52c1ad-vip.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qc8fce52c1ad-global.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://myqc8fce52c1ad.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://goqc8fce52c1ad.top"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qc8fce52c1ad.com"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qc8fce52c1ad.net"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qc8fce52c1ad.xyz"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qc8fce52c1ad.vip"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qc8fce52c1ad.app"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qc8fce52c1ad.cc"
+    },
+    {
+      "module": "finder",
+      "url": "dns://qc8fce52c1ad.live"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=%25mining%25&output=json"
+    },
+    {
+      "module": "finder",
+      "url": "https://crt.sh/?q=%25yield%25&output=json"
+    }
+  ],
+  "limitations": [
+    "Public/blockchain transports are synthetic.",
+    "Unchanged Logger classifier ran on real rendered DOM; installed extension lifecycle remains a separate environment-limited check.",
+    "This corpus does not certify all operation benchmark scenarios."
+  ]
+}

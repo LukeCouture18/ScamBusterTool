@@ -1,0 +1,152 @@
+{
+  "ok": true,
+  "rows": {
+    "entities": 10000,
+    "relationships": 50100,
+    "evidence": 5000,
+    "investigations": 300,
+    "operations": 25,
+    "projected_edges": 50100,
+    "v7_history": {
+      "decisions": 10000,
+      "components": 144000,
+      "tests": 10000,
+      "costs": 100000,
+      "outcomes": 30000,
+      "lineage": 20000,
+      "gaps": 5000,
+      "gap_history": 20000
+    },
+    "new_v7_decisions_during_run": 25,
+    "new_v7_tests_during_run": 4
+  },
+  "timings": [
+    {
+      "name": "load_10000_entities_50100_relationships_5000_evidence",
+      "ms": 703.59
+    },
+    {
+      "name": "load_v7_history",
+      "ms": 1409.81
+    },
+    {
+      "name": "director_projection_tick",
+      "ms": 2706.3
+    },
+    {
+      "name": "director_projection_tick",
+      "ms": 2281
+    },
+    {
+      "name": "director_projection_tick",
+      "ms": 1842.87
+    },
+    {
+      "name": "director_projection_tick",
+      "ms": 1931.72
+    },
+    {
+      "name": "director_projection_tick",
+      "ms": 1975.51
+    },
+    {
+      "name": "director_projection_tick",
+      "ms": 2049.6
+    },
+    {
+      "name": "director_projection_tick",
+      "ms": 2057.95
+    },
+    {
+      "name": "director_projection_tick",
+      "ms": 2061.66
+    },
+    {
+      "name": "director_projection_tick",
+      "ms": 2202.39
+    },
+    {
+      "name": "director_projection_tick",
+      "ms": 2703.39
+    },
+    {
+      "name": "director_projection_tick",
+      "ms": 2602.18
+    },
+    {
+      "name": "director_projection_tick",
+      "ms": 4303.75
+    },
+    {
+      "name": "director_projection_tick",
+      "ms": 6912.46
+    },
+    {
+      "name": "adaptive_portfolio_decision_tick_8_operations",
+      "ms": 2956.91
+    },
+    {
+      "name": "adaptive_portfolio_decision_tick_8_operations",
+      "ms": 3151.83
+    },
+    {
+      "name": "adaptive_portfolio_decision_tick_8_operations",
+      "ms": 2900.95
+    },
+    {
+      "name": "adaptive_portfolio_decision_tick_8_operations",
+      "ms": 2586.74
+    },
+    {
+      "name": "adaptive_unchanged_parked_tick",
+      "ms": 2139.74
+    },
+    {
+      "name": "v6_policy_tick_8_operations_same_state",
+      "ms": 2393.99
+    },
+    {
+      "name": "v6_policy_tick_8_operations_same_state",
+      "ms": 2664.54
+    },
+    {
+      "name": "adaptive_operation_view",
+      "ms": 19.9
+    },
+    {
+      "name": "adaptive_operation_view_with_efficiency",
+      "ms": 124.64
+    },
+    {
+      "name": "adaptive_portfolio_efficiency",
+      "ms": 727.36
+    },
+    {
+      "name": "briefing_and_graph_first_page",
+      "ms": 21.78
+    }
+  ],
+  "decision_latency_ms": [
+    2956.91,
+    3151.83,
+    2900.95,
+    2586.74
+  ],
+  "v6_policy_tick_ms": [
+    2393.99,
+    2664.54
+  ],
+  "memory": {
+    "rss_before_bytes": 164610048,
+    "rss_after_bytes": 333131776,
+    "peak_rss_kb": 325324
+  },
+  "database": {
+    "before_bytes": 2297856,
+    "after_fixture_and_history_bytes": 88961024,
+    "after_bytes": 163614720,
+    "growth_bytes": 161316864,
+    "growth_during_run_bytes": 74653696
+  },
+  "scope": "Local file-backed SQLite through the D1 double and the real Main API routes; not a remote D1 service-level measurement."
+}

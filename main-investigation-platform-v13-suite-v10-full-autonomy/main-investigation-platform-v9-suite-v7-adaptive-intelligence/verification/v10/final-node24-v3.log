@@ -1,0 +1,13 @@
+
+=== v3 (1 step) ===
+--- v3 1/1: node --experimental-sqlite tests/v3-agent.mjs
+  PASS  golden path: rules-driven plans → typed jobs → evidence changes plan → COMPLETE, no loops, provenance intact
+  PASS  human checkpoint: login wall pauses, then resumes automatically from new evidence
+  PASS  policy: unknown capability, smuggled evidence, hallucinated citations, bad args and links are all rejected; only a valid action runs
+  PASS  budgets: with a 1-action budget the investigator stops at BUDGET_EXHAUSTED even though a wallet remained to analyse
+  PASS  restart recovery: an expired lease is reclaimed and re-ticking never duplicates a step's job
+  PASS  finder feedback: downstream outcomes are fed back with observed/human basis, never AI inference; feed is authenticated
+
+all v3 agent scenarios passed
+{"ok":true,"scenarios":7,"providerless_and_scripted":true,"synthetic":true}
+PASS v3: 1/1 steps passed

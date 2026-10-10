@@ -1,0 +1,277 @@
+{
+  "ok": true,
+  "crashes": 30,
+  "results": [
+    {
+      "phase": "site investigation",
+      "edge": "before",
+      "signal": "SIGKILL",
+      "source_preserved": true,
+      "duplicate_candidates": 0,
+      "duplicate_reports": 0,
+      "duplicate_active_jobs": 0
+    },
+    {
+      "phase": "site investigation",
+      "edge": "after",
+      "signal": "SIGKILL",
+      "source_preserved": true,
+      "duplicate_candidates": 0,
+      "duplicate_reports": 0,
+      "duplicate_active_jobs": 0
+    },
+    {
+      "phase": "wallet observation ingestion",
+      "edge": "before",
+      "signal": "SIGKILL",
+      "source_preserved": true,
+      "duplicate_candidates": 0,
+      "duplicate_reports": 0,
+      "duplicate_active_jobs": 0
+    },
+    {
+      "phase": "wallet observation ingestion",
+      "edge": "after",
+      "signal": "SIGKILL",
+      "source_preserved": true,
+      "duplicate_candidates": 0,
+      "duplicate_reports": 0,
+      "duplicate_active_jobs": 0
+    },
+    {
+      "phase": "candidate deduplication",
+      "edge": "before",
+      "signal": "SIGKILL",
+      "source_preserved": true,
+      "duplicate_candidates": 0,
+      "duplicate_reports": 0,
+      "duplicate_active_jobs": 0
+    },
+    {
+      "phase": "candidate deduplication",
+      "edge": "after",
+      "signal": "SIGKILL",
+      "source_preserved": true,
+      "duplicate_candidates": 0,
+      "duplicate_reports": 0,
+      "duplicate_active_jobs": 0
+    },
+    {
+      "phase": "validation scheduling",
+      "edge": "before",
+      "signal": "SIGKILL",
+      "source_preserved": true,
+      "duplicate_candidates": 0,
+      "duplicate_reports": 0,
+      "duplicate_active_jobs": 0
+    },
+    {
+      "phase": "validation scheduling",
+      "edge": "after",
+      "signal": "SIGKILL",
+      "source_preserved": true,
+      "duplicate_candidates": 0,
+      "duplicate_reports": 0,
+      "duplicate_active_jobs": 0
+    },
+    {
+      "phase": "Wallet Investigator completion",
+      "edge": "before",
+      "signal": "SIGKILL",
+      "source_preserved": true,
+      "duplicate_candidates": 0,
+      "duplicate_reports": 0,
+      "duplicate_active_jobs": 0
+    },
+    {
+      "phase": "Wallet Investigator completion",
+      "edge": "after",
+      "signal": "SIGKILL",
+      "source_preserved": true,
+      "duplicate_candidates": 0,
+      "duplicate_reports": 0,
+      "duplicate_active_jobs": 0
+    },
+    {
+      "phase": "provider retry",
+      "edge": "before",
+      "signal": "SIGKILL",
+      "source_preserved": true,
+      "duplicate_candidates": 0,
+      "duplicate_reports": 0,
+      "duplicate_active_jobs": 0
+    },
+    {
+      "phase": "provider retry",
+      "edge": "after",
+      "signal": "SIGKILL",
+      "source_preserved": true,
+      "duplicate_candidates": 0,
+      "duplicate_reports": 0,
+      "duplicate_active_jobs": 0
+    },
+    {
+      "phase": "operation update",
+      "edge": "before",
+      "signal": "SIGKILL",
+      "source_preserved": true,
+      "duplicate_candidates": 0,
+      "duplicate_reports": 0,
+      "duplicate_active_jobs": 0
+    },
+    {
+      "phase": "operation update",
+      "edge": "after",
+      "signal": "SIGKILL",
+      "source_preserved": true,
+      "duplicate_candidates": 0,
+      "duplicate_reports": 0,
+      "duplicate_active_jobs": 0
+    },
+    {
+      "phase": "report rebuild",
+      "edge": "before",
+      "signal": "SIGKILL",
+      "source_preserved": true,
+      "duplicate_candidates": 0,
+      "duplicate_reports": 0,
+      "duplicate_active_jobs": 0
+    },
+    {
+      "phase": "report rebuild",
+      "edge": "after",
+      "signal": "SIGKILL",
+      "source_preserved": true,
+      "duplicate_candidates": 0,
+      "duplicate_reports": 0,
+      "duplicate_active_jobs": 0
+    },
+    {
+      "phase": "exact approval",
+      "edge": "before",
+      "signal": "SIGKILL",
+      "source_preserved": true,
+      "duplicate_candidates": 0,
+      "duplicate_reports": 0,
+      "duplicate_active_jobs": 0
+    },
+    {
+      "phase": "exact approval",
+      "edge": "after",
+      "signal": "SIGKILL",
+      "source_preserved": true,
+      "duplicate_candidates": 0,
+      "duplicate_reports": 0,
+      "duplicate_active_jobs": 0
+    },
+    {
+      "phase": "submission handoff",
+      "edge": "before",
+      "signal": "SIGKILL",
+      "source_preserved": true,
+      "duplicate_candidates": 0,
+      "duplicate_reports": 0,
+      "duplicate_active_jobs": 0
+    },
+    {
+      "phase": "submission handoff",
+      "edge": "after",
+      "signal": "SIGKILL",
+      "source_preserved": true,
+      "duplicate_candidates": 0,
+      "duplicate_reports": 0,
+      "duplicate_active_jobs": 0
+    },
+    {
+      "phase": "lost confirmation",
+      "edge": "before",
+      "signal": "SIGKILL",
+      "source_preserved": true,
+      "duplicate_candidates": 0,
+      "duplicate_reports": 0,
+      "duplicate_active_jobs": 0
+    },
+    {
+      "phase": "lost confirmation",
+      "edge": "after",
+      "signal": "SIGKILL",
+      "source_preserved": true,
+      "duplicate_candidates": 0,
+      "duplicate_reports": 0,
+      "duplicate_active_jobs": 0
+    },
+    {
+      "phase": "Finder hunt handoff",
+      "edge": "before",
+      "signal": "SIGKILL",
+      "source_preserved": true,
+      "duplicate_candidates": 0,
+      "duplicate_reports": 0,
+      "duplicate_active_jobs": 0
+    },
+    {
+      "phase": "Finder hunt handoff",
+      "edge": "after",
+      "signal": "SIGKILL",
+      "source_preserved": true,
+      "duplicate_candidates": 0,
+      "duplicate_reports": 0,
+      "duplicate_active_jobs": 0
+    },
+    {
+      "phase": "Hunter update",
+      "edge": "before",
+      "signal": "SIGKILL",
+      "source_preserved": true,
+      "duplicate_candidates": 0,
+      "duplicate_reports": 0,
+      "duplicate_active_jobs": 0
+    },
+    {
+      "phase": "Hunter update",
+      "edge": "after",
+      "signal": "SIGKILL",
+      "source_preserved": true,
+      "duplicate_candidates": 0,
+      "duplicate_reports": 0,
+      "duplicate_active_jobs": 0
+    },
+    {
+      "phase": "queue reconciliation",
+      "edge": "before",
+      "signal": "SIGKILL",
+      "source_preserved": true,
+      "duplicate_candidates": 0,
+      "duplicate_reports": 0,
+      "duplicate_active_jobs": 0
+    },
+    {
+      "phase": "queue reconciliation",
+      "edge": "after",
+      "signal": "SIGKILL",
+      "source_preserved": true,
+      "duplicate_candidates": 0,
+      "duplicate_reports": 0,
+      "duplicate_active_jobs": 0
+    },
+    {
+      "phase": "scientific revision",
+      "edge": "before",
+      "signal": "SIGKILL",
+      "source_preserved": true,
+      "duplicate_candidates": 0,
+      "duplicate_reports": 0,
+      "duplicate_active_jobs": 0
+    },
+    {
+      "phase": "scientific revision",
+      "edge": "after",
+      "signal": "SIGKILL",
+      "source_preserved": true,
+      "duplicate_candidates": 0,
+      "duplicate_reports": 0,
+      "duplicate_active_jobs": 0
+    }
+  ],
+  "scope": "Real child-process SIGKILL before/after local SQLite statements or transactions. Production workflow functions and exact approval route are used. Specialist delivery fixtures are preloaded; remote provider, remote D1 and an in-flight external submission process are not certified by this matrix."
+}

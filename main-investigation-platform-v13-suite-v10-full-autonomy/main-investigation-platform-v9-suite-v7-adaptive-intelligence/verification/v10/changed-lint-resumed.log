@@ -1,0 +1,16 @@
+
+/workspace/scratch/0dbe5278a453/v10-active/main-investigation-platform-v9-suite-v7-adaptive-intelligence/components/suite/kit.tsx
+  29:78  warning  The ref value 'active.current' will likely have changed by the time this effect cleanup function runs. If this ref points to a node rendered by React, copy 'active.current' to a variable inside the effect, and use that variable in the cleanup function  react-hooks/exhaustive-deps
+
+/workspace/scratch/0dbe5278a453/v10-active/main-investigation-platform-v9-suite-v7-adaptive-intelligence/scripts/checkpoint-v10.py
+  0:0  warning  File ignored because no matching configuration was supplied
+
+/workspace/scratch/0dbe5278a453/v10-active/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/v10-golden.mjs
+  15:587  warning  'e' is defined but never used                                          @typescript-eslint/no-unused-vars
+  21:20   warning  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+  22:20   warning  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+  23:22   warning  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+  24:17   warning  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+
+✖ 7 problems (0 errors, 7 warnings)
+

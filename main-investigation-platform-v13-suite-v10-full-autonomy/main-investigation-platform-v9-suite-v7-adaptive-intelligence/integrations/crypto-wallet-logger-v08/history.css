@@ -1,0 +1,22 @@
+body { min-width:940px; }
+.page-header { display:flex; align-items:center; justify-content:space-between; gap:18px; padding:24px 28px; border-bottom:1px solid var(--border); }
+h1 { margin:0; font-size:25px; }.page-header p { margin:4px 0 0; color:var(--muted); }
+.header-actions,.toolbar { display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
+.toolbar { padding:12px 28px; position:sticky; top:0; background:var(--bg); border-bottom:1px solid var(--border); z-index:3; }
+#search { flex:1; min-width:300px; } #summary { margin-left:auto; white-space:nowrap; }
+main { padding:18px 28px 34px; }
+.export-menu { position:relative; }.export-menu>summary { list-style:none; cursor:pointer; padding:7px 11px; border:1px solid var(--border); border-radius:7px; background:#172036; }.export-menu>summary::-webkit-details-marker{display:none}
+.export-menu>div { position:absolute; right:0; top:40px; z-index:10; display:grid; grid-template-columns:1fr 1fr; width:290px; gap:7px; padding:10px; border:1px solid var(--border); border-radius:10px; background:var(--panel); box-shadow:0 12px 30px #0008; }
+.record { display:grid; grid-template-columns:minmax(230px,1.2fr) minmax(170px,.7fr) minmax(180px,.8fr) minmax(190px,.8fr) auto; gap:16px; align-items:start; padding:15px; background:var(--panel); border:1px solid var(--border); border-radius:11px; margin-bottom:10px; }
+.record.website { grid-template-columns:minmax(230px,1fr) minmax(260px,1fr) minmax(230px,1fr) auto; }
+.record.deposit { grid-template-columns:minmax(230px,1fr) minmax(190px,.75fr) minmax(260px,1.2fr) auto; }
+.record h2 { margin:0 0 7px; font-size:15px; }.domain-title { font-size:18px!important; overflow-wrap:anywhere; }
+.wallet-address,.url { overflow-wrap:anywhere; }.context { margin-top:8px; color:var(--muted); font-size:12px; display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden; }
+.site-link { overflow-wrap:anywhere; } details summary { cursor:pointer; color:var(--accent); } details ul { margin:6px 0 0; padding-left:18px; max-height:150px; overflow:auto; }
+.record-actions { display:flex; flex-direction:column; gap:6px; }.score-number { font-size:24px; color:#91b7ff; font-weight:800; }
+.activity { display:inline-block; padding:3px 7px; border-radius:999px; background:#263552; font-size:10px; font-weight:800; }.activity.active { background:#14532d;color:#bbf7d0 }.activity.failed { background:#4c1d1d;color:#fecaca }.activity.none { background:#3b2f13;color:#fde68a }
+.mini-grid { display:grid; grid-template-columns:repeat(3,minmax(70px,1fr)); gap:7px; }.mini-grid div { padding:8px; border-radius:8px; background:#10182a; }.mini-grid strong { display:block; font-size:18px; }.mini-grid span { color:var(--muted); font-size:11px; }
+.chips { display:flex; flex-wrap:wrap; gap:5px; margin:7px 0; }.chip { padding:3px 7px; border-radius:999px; background:#1d2b47; font-size:10px; }.chip.label { background:#3b2d58; color:#e9d5ff; }
+.subtle { color:var(--muted); font-size:12px; margin-top:5px; }.qr-yes { color:#86efac; font-weight:700; }
+@media(max-width:1100px){.record,.record.website,.record.deposit{grid-template-columns:1fr 1fr}.record-actions{flex-direction:row}}
+.simple-toolbar{gap:12px}.view-tabs{display:flex;gap:4px}.view-tabs button.active{background:var(--accent);color:#071225}.sync-bar{margin:12px 28px 0;padding:10px 12px;border:1px solid var(--border);border-radius:10px;background:var(--panel);display:flex;gap:12px;align-items:center}.sync-bar details{margin-left:auto}.sync-config{display:grid;gap:8px;width:430px;padding:12px}.simple-record{display:grid;grid-template-columns:minmax(330px,1.7fr) 110px minmax(160px,.7fr) minmax(180px,.7fr) 80px;gap:18px;align-items:center;padding:16px 18px;background:var(--panel);border:1px solid var(--border);border-radius:12px;margin-bottom:10px;cursor:pointer}.simple-record:hover{border-color:#5876aa}.simple-record h2{font-size:17px;margin:0 0 5px;overflow-wrap:anywhere}.metric strong{display:block;font-size:24px}.metric span,.muted{color:var(--muted);font-size:12px}.status-pill{display:inline-block;margin:2px 5px 2px 0;padding:4px 8px;border-radius:999px;font-size:10px;font-weight:800}.status-pill.new{background:#164e63;color:#a5f3fc}.status-pill.review{background:#4c1d1d;color:#fecaca}.status-pill.verified{background:#14532d;color:#bbf7d0}@media(max-width:900px){body{min-width:0}.simple-record{grid-template-columns:1fr 100px}.simple-record>:nth-child(3),.simple-record>:nth-child(4){display:none}}

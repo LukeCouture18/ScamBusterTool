@@ -1,0 +1,36 @@
+{
+ "ok": false,
+ "pages": 21,
+ "controls": 242,
+ "clicked": 242,
+ "external_links": 0,
+ "hydrated": 21,
+ "already_active": 12,
+ "failures": [
+  {
+   "where": "/reports :: a 'Main Investigation Platform home'",
+   "problem": "console error: Failed to load resource: the server responded with a status of 404 (Not Found)"
+  },
+  {
+   "where": "/reports :: a 'Main Investigation Platform home'",
+   "problem": "bad response: GET /api/v1/autonomy/search/7c33601c-bf92-4d96-b22a-4b313bf7caec -> 404"
+  },
+  {
+   "where": "/tasks :: a 'Main Investigation Platform home'",
+   "problem": "console error: Failed to load resource: the server responded with a status of 404 (Not Found)"
+  },
+  {
+   "where": "/tasks :: a 'Main Investigation Platform home'",
+   "problem": "bad response: GET /api/v1/autonomy/search/7c33601c-bf92-4d96-b22a-4b313bf7caec -> 404"
+  },
+  {
+   "where": "/wallets :: a 'Main Investigation Platform home'",
+   "problem": "console error: Failed to load resource: the server responded with a status of 404 (Not Found)"
+  },
+  {
+   "where": "/wallets :: a 'Main Investigation Platform home'",
+   "problem": "bad response: GET /api/v1/autonomy/search/7c33601c-bf92-4d96-b22a-4b313bf7caec -> 404"
+  }
+ ],
+ "warnings": []
+}

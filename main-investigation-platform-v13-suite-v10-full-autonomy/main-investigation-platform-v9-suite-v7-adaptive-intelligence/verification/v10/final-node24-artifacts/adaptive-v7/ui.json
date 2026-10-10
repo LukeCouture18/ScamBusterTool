@@ -1,0 +1,13 @@
+{
+  "ok": true,
+  "checks": [
+    "default view: what Main chose, the question, why it matters",
+    "expected vs actual cost and what changed, from the measured ledger",
+    "numerical internals only under Advanced",
+    "Advanced efficiency view",
+    "typed gaps listed",
+    "375px page has no document overflow"
+  ],
+  "errors": [],
+  "scope": "Real app page/components and API in the SSR/hydration harness with file-backed SQLite and Playwright Chromium. Not the built production worker."
+}

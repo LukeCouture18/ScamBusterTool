@@ -1,0 +1,146 @@
+{
+ "states": 42,
+ "summary": {
+  "v7-exploit": {
+   "states": 42,
+   "optimal_choice_rate": 0.524,
+   "near_optimal_rate": 0.548,
+   "mean_regret": 0.425,
+   "total_regret": 17.851
+  },
+  "v7": {
+   "states": 42,
+   "optimal_choice_rate": 0.548,
+   "near_optimal_rate": 0.571,
+   "mean_regret": 0.432,
+   "total_regret": 18.133
+  },
+  "v6": {
+   "states": 42,
+   "optimal_choice_rate": 0.048,
+   "near_optimal_rate": 0.048,
+   "mean_regret": 2.077,
+   "total_regret": 87.235
+  },
+  "v8": {
+   "states": 42,
+   "optimal_choice_rate": 0.738,
+   "near_optimal_rate": 0.762,
+   "mean_regret": 0.195,
+   "total_regret": 8.172
+  },
+  "cheapest": {
+   "states": 42,
+   "optimal_choice_rate": 0.381,
+   "near_optimal_rate": 0.405,
+   "mean_regret": 0.939,
+   "total_regret": 39.422
+  },
+  "random": {
+   "states": 42,
+   "optimal_choice_rate": 0.262,
+   "near_optimal_rate": 0.262,
+   "mean_regret": 0.981,
+   "total_regret": 41.182
+  },
+  "confirmation": {
+   "states": 42,
+   "optimal_choice_rate": 0.452,
+   "near_optimal_rate": 0.452,
+   "mean_regret": 0.434,
+   "total_regret": 18.247
+  }
+ },
+ "by_type": {
+  "useful_vs_saturated_finder_branch": {
+   "v7-exploit": "0/5 regret 5.898",
+   "v7": "0/5 regret 5.898",
+   "v6": "0/5 regret 18.409",
+   "v8": "5/5 regret 0",
+   "cheapest": "0/5 regret 5.898",
+   "random": "1/5 regret 7.493",
+   "confirmation": "5/5 regret 0"
+  },
+  "generic_template_vs_discriminating_wallet": {
+   "v7-exploit": "3/5 regret 1.859",
+   "v7": "3/5 regret 1.859",
+   "v6": "1/5 regret 4.921",
+   "v8": "3/5 regret 1.859",
+   "cheapest": "3/5 regret 1.859",
+   "random": "2/5 regret 3.714",
+   "confirmation": "3/5 regret 3.01"
+  },
+  "new_contradiction_vs_confirmation": {
+   "v7-exploit": "3/5 regret 0.112",
+   "v7": "4/5 regret 0.012",
+   "v6": "0/5 regret 2.493",
+   "v8": "3/5 regret 0.112",
+   "cheapest": "3/5 regret 0.112",
+   "random": "1/5 regret 0.992",
+   "confirmation": "0/5 regret 1.468"
+  },
+  "replacement_hunt_vs_exhausted_artifact": {
+   "v7-exploit": "0/5 regret 6.446",
+   "v7": "0/5 regret 6.446",
+   "v6": "0/5 regret 13.76",
+   "v8": "3/5 regret 1.191",
+   "cheapest": "0/5 regret 6.446",
+   "random": "1/5 regret 9.649",
+   "confirmation": "1/5 regret 3.938"
+  },
+  "novel_exploration_opportunity": {
+   "v7-exploit": "5/5 regret 0",
+   "v7": "5/5 regret 0",
+   "v6": "0/5 regret 2.726",
+   "v8": "5/5 regret 0",
+   "cheapest": "5/5 regret 0",
+   "random": "2/5 regret 1.95",
+   "confirmation": "0/5 regret 2.746"
+  },
+  "two_competing_operations": {
+   "v7-exploit": "3/5 regret 1.83",
+   "v7": "3/5 regret 2.212",
+   "v6": "0/5 regret 14.536",
+   "v8": "3/5 regret 1.83",
+   "cheapest": "2/5 regret 3.788",
+   "random": "0/5 regret 6.752",
+   "confirmation": "3/5 regret 1.83"
+  },
+  "time_sensitive_disappearing_site": {
+   "v7-exploit": "2/5 regret 0.787",
+   "v7": "2/5 regret 0.787",
+   "v6": "0/5 regret 7.264",
+   "v8": "3/5 regret 2.261",
+   "cheapest": "2/5 regret 0.787",
+   "random": "0/5 regret 5.23",
+   "confirmation": "2/5 regret 3.36"
+  },
+  "expensive_high_value_vs_cheap_low_value": {
+   "v7-exploit": "4/5 regret 0.919",
+   "v7": "4/5 regret 0.919",
+   "v6": "0/5 regret 22.15",
+   "v8": "4/5 regret 0.919",
+   "cheapest": "0/5 regret 19.556",
+   "random": "2/5 regret 5.402",
+   "confirmation": "4/5 regret 0.919"
+  },
+  "provider_retry_vs_unrelated_expansion": {
+   "v7-exploit": "1/1 regret 0",
+   "v7": "1/1 regret 0",
+   "v6": "1/1 regret 0",
+   "v8": "1/1 regret 0",
+   "cheapest": "1/1 regret 0",
+   "random": "1/1 regret 0",
+   "confirmation": "1/1 regret 0"
+  },
+  "report_blocker_vs_low_value_correlation": {
+   "v7-exploit": "1/1 regret 0",
+   "v7": "1/1 regret 0",
+   "v6": "0/1 regret 0.976",
+   "v8": "1/1 regret 0",
+   "cheapest": "0/1 regret 0.976",
+   "random": "1/1 regret 0",
+   "confirmation": "0/1 regret 0.976"
+  }
+ }
+}

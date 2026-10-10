@@ -1,0 +1,11 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/v10-golden.mjs
+  15:587  warning  'e' is defined but never used                                          @typescript-eslint/no-unused-vars
+  21:20   warning  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+  22:20   warning  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+  23:22   warning  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+  24:17   warning  Expected an assignment or function call and instead saw an expression  @typescript-eslint/no-unused-expressions
+
+✖ 5 problems (0 errors, 5 warnings)
+

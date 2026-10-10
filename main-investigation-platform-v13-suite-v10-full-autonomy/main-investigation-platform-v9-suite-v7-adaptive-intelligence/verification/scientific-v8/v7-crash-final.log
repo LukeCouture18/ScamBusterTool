@@ -1,0 +1,23 @@
+PASS crash before gap creation
+PASS crash after gap creation
+PASS crash before test planning (candidate components)
+PASS crash after test planning (candidate components)
+PASS crash before decision selection
+PASS crash after decision selection
+PASS crash before resource reservation
+PASS crash after resource reservation
+PASS crash before specialist handoff
+PASS crash after specialist handoff
+PASS crash before cost accounting
+PASS crash after cost accounting
+PASS crash before outcome attribution
+PASS crash after outcome attribution
+PASS crash before learning update
+PASS crash after learning update
+PASS crash before budget adjustment
+PASS crash after budget adjustment
+PASS crash before parking
+PASS crash after parking
+PASS crash before reawakening
+PASS crash after reawakening
+{"ok":true,"crashes":22}

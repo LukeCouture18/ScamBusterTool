@@ -1,0 +1,29 @@
+
+=== joined:v61 (2 steps) ===
+--- joined:v61 1/2: node --experimental-sqlite --import tsx --import file:///workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/lib/sqljs-fallback.mjs tests/v61-joined-five-modules.mjs
+[MainPlatformV6] Initialized integration module 'wallet_investigator' with capabilities: [
+  'blockchain-analysis',
+  'wallet-validation',
+  'counterparty-discovery',
+  'fund-flow-analysis',
+  'controlled-wallet-expansion'
+]
+[Database] Initialized new database at /tmp/mip-three-modules-FCdYsp/wallet-runtime/data/wallet_investigator.sqlite
+[Migrations] Applying migration v1: 001_initial_schema...
+[Migrations] Applying migration v2: 002_indexes_and_views...
+[Migrations] Migration status: 2 applied. Current schema version: v2
+{"ok":true,"path":"golden","modules":["site_finder","site_investigator","crypto_wallet_logger","wallet_investigator","form_submitter"],"synthetic_provider":true,"synthetic_form":true,"platform_restart":false,"verification":"verified","investigation_id":"d59218fa-f7e1-4719-8ba8-e8443d5f0f01","wallet_job":"6d322a8b-2d07-48a1-a563-374933c94e21","report_id":"15dc601e-e0f7-42e7-92af-dd264d10aa9a","submissions":1}
+--- joined:v61 2/2: V61_FAILURE_PATH=1 node --experimental-sqlite --import tsx --import file:///workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/lib/sqljs-fallback.mjs tests/v61-joined-five-modules.mjs
+[MainPlatformV6] Initialized integration module 'wallet_investigator' with capabilities: [
+  'blockchain-analysis',
+  'wallet-validation',
+  'counterparty-discovery',
+  'fund-flow-analysis',
+  'controlled-wallet-expansion'
+]
+[Database] Initialized new database at /tmp/mip-three-modules-Tsewo3/wallet-runtime/data/wallet_investigator.sqlite
+[Migrations] Applying migration v1: 001_initial_schema...
+[Migrations] Applying migration v2: 002_indexes_and_views...
+[Migrations] Migration status: 2 applied. Current schema version: v2
+{"ok":true,"path":"failure-recovery","modules":["site_finder","site_investigator","crypto_wallet_logger","wallet_investigator","form_submitter"],"synthetic_provider":true,"synthetic_form":true,"platform_restart":true,"verification":"unknown","investigation_id":"cf3ebd55-9ae9-4928-8b64-bccaafe475e7","wallet_job":"cf7d1acd-be05-4ab8-88b9-ca7cb7e4a880","report_id":"6df17af3-1a9d-47f1-b81e-272f9c9d5cde","submissions":1}
+PASS joined:v61: 2/2 steps passed

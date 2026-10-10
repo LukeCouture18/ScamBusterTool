@@ -1,0 +1,109 @@
+[Database] Initialized new database at /tmp/operation-hidden-uOjkYw/wallet/data/wallet_investigator.sqlite
+[Migrations] Applying migration v1: 001_initial_schema...
+[Migrations] Applying migration v2: 002_indexes_and_views...
+[Migrations] Migration status: 2 applied. Current schema version: v2
+[MainPlatformV6] Initialized integration module 'wallet_investigator' with capabilities: [
+  'blockchain-analysis',
+  'wallet-validation',
+  'counterparty-discovery',
+  'fund-flow-analysis',
+  'controlled-wallet-expansion'
+]
+hunter-register {"registered":true,"events":0,"jobs":0,"outbox":0,"decisions":0,"errors":[]}
+SI collected public pages
+hunter-cycle {"registered":false,"events":40,"jobs":0,"outbox":0,"decisions":0,"errors":[]}
+Finder public discovery cycle complete
+{"round":0,"sites":["q1c6ceabc708.top"],"investigated":["q1c6ceabc708.top"],"validated_deposit_wallets":1,"finder_claims":1,"operation_present":false,"requests_so_far":29}
+SI collected public pages
+hunter-cycle {"registered":false,"events":6,"jobs":1,"outbox":1,"decisions":0,"errors":[]}
+Finder public discovery cycle complete
+{"round":1,"sites":["q1c6ceabc708.top"],"investigated":["q1c6ceabc708.top"],"validated_deposit_wallets":1,"finder_claims":0,"operation_present":true,"requests_so_far":54}
+SI collected public pages
+hunter-cycle {"registered":false,"events":50,"jobs":0,"outbox":1,"decisions":0,"errors":[]}
+Finder public discovery cycle complete
+{"round":2,"sites":["q1c6ceabc708.top","q9b97701443a.top"],"investigated":["q1c6ceabc708.top"],"validated_deposit_wallets":1,"finder_claims":1,"operation_present":true,"requests_so_far":113}
+SI collected public pages
+hunter-cycle {"registered":false,"events":50,"jobs":0,"outbox":1,"decisions":0,"errors":[]}
+Finder public discovery cycle complete
+{"round":3,"sites":["q1c6ceabc708.top","q9b97701443a.top"],"investigated":["q1c6ceabc708.top","q9b97701443a.top"],"validated_deposit_wallets":1,"finder_claims":1,"operation_present":true,"requests_so_far":179}
+SI collected public pages
+hunter-cycle {"registered":false,"events":0,"jobs":0,"outbox":0,"decisions":0,"errors":[]}
+Finder public discovery cycle complete
+{"round":4,"sites":["q1c6ceabc708.top","q9b97701443a.top","q9e99c254b43.top","qf8a0603ea19.top","qfaaae17e6eb.top"],"investigated":["q1c6ceabc708.top","q9b97701443a.top"],"validated_deposit_wallets":1,"finder_claims":2,"operation_present":true,"requests_so_far":241}
+SI collected public pages
+hunter-cycle {"registered":false,"events":50,"jobs":0,"outbox":0,"decisions":0,"errors":[]}
+Finder public discovery cycle complete
+{"round":5,"sites":["q1c6ceabc708.top","q9b97701443a.top","q9e99c254b43.top","qf8a0603ea19.top","qfaaae17e6eb.top"],"investigated":["q1c6ceabc708.top","q9b97701443a.top","q9e99c254b43.top","qfaaae17e6eb.top","qf8a0603ea19.top"],"validated_deposit_wallets":2,"finder_claims":0,"operation_present":true,"requests_so_far":305}
+SI collected public pages
+hunter-cycle {"registered":false,"events":50,"jobs":0,"outbox":0,"decisions":0,"errors":[]}
+Finder public discovery cycle complete
+{"round":6,"sites":["q1c6ceabc708.top","q9b97701443a.top","q9e99c254b43.top","qf8a0603ea19.top","qfaaae17e6eb.top"],"investigated":["q1c6ceabc708.top","q9b97701443a.top","q9e99c254b43.top","qfaaae17e6eb.top","qf8a0603ea19.top"],"validated_deposit_wallets":3,"finder_claims":2,"operation_present":true,"requests_so_far":353}
+SI collected public pages
+hunter-cycle {"registered":false,"events":12,"jobs":0,"outbox":0,"decisions":0,"errors":[]}
+Finder public discovery cycle complete
+{"round":7,"sites":["q1c6ceabc708.top","q9b97701443a.top","q9e99c254b43.top","qf8a0603ea19.top","qfaaae17e6eb.top"],"investigated":["q1c6ceabc708.top","q9b97701443a.top","q9e99c254b43.top","qfaaae17e6eb.top","qf8a0603ea19.top"],"validated_deposit_wallets":3,"finder_claims":2,"operation_present":true,"requests_so_far":401}
+SI collected public pages
+hunter-cycle {"registered":false,"events":12,"jobs":1,"outbox":1,"decisions":0,"errors":[]}
+Finder public discovery cycle complete
+{"round":8,"sites":["q1c6ceabc708.top","q9b97701443a.top","q9e99c254b43.top","qf8a0603ea19.top","qfaaae17e6eb.top"],"investigated":["q1c6ceabc708.top","q9b97701443a.top","q9e99c254b43.top","qfaaae17e6eb.top","qf8a0603ea19.top"],"validated_deposit_wallets":3,"finder_claims":0,"operation_present":true,"requests_so_far":401}
+SI collected public pages
+hunter-cycle {"registered":false,"events":6,"jobs":1,"outbox":1,"decisions":0,"errors":[]}
+Finder public discovery cycle complete
+{"round":9,"sites":["q1c6ceabc708.top","q9b97701443a.top","q9e99c254b43.top","qf8a0603ea19.top","qfaaae17e6eb.top"],"investigated":["q1c6ceabc708.top","q9b97701443a.top","q9e99c254b43.top","qfaaae17e6eb.top","qf8a0603ea19.top"],"validated_deposit_wallets":3,"finder_claims":0,"operation_present":true,"requests_so_far":401}
+SI collected public pages
+hunter-cycle {"registered":false,"events":12,"jobs":1,"outbox":1,"decisions":0,"errors":[]}
+Finder public discovery cycle complete
+{"round":10,"sites":["q1c6ceabc708.top","q9b97701443a.top","q9e99c254b43.top","qf8a0603ea19.top","qfaaae17e6eb.top"],"investigated":["q1c6ceabc708.top","q9b97701443a.top","q9e99c254b43.top","qfaaae17e6eb.top","qf8a0603ea19.top"],"validated_deposit_wallets":3,"finder_claims":0,"operation_present":true,"requests_so_far":401}
+SI collected public pages
+hunter-cycle {"registered":false,"events":12,"jobs":1,"outbox":1,"decisions":0,"errors":[]}
+Finder public discovery cycle complete
+{"round":11,"sites":["q1c6ceabc708.top","q9b97701443a.top","q9e99c254b43.top","qf8a0603ea19.top","qfaaae17e6eb.top"],"investigated":["q1c6ceabc708.top","q9b97701443a.top","q9e99c254b43.top","qfaaae17e6eb.top","qf8a0603ea19.top"],"validated_deposit_wallets":3,"finder_claims":0,"operation_present":true,"requests_so_far":401}
+SI collected public pages
+hunter-cycle {"registered":false,"events":0,"jobs":0,"outbox":0,"decisions":0,"errors":["The module request limit has been exceeded. Retry with backoff."]}
+Finder public discovery cycle complete
+{"round":12,"sites":["q1c6ceabc708.top","q9b97701443a.top","q9e99c254b43.top","qf8a0603ea19.top","qfaaae17e6eb.top"],"investigated":["q1c6ceabc708.top","q9b97701443a.top","q9e99c254b43.top","qfaaae17e6eb.top","qf8a0603ea19.top"],"validated_deposit_wallets":3,"finder_claims":0,"operation_present":true,"requests_so_far":401}
+SI collected public pages
+hunter-cycle {"registered":false,"events":0,"jobs":0,"outbox":0,"decisions":0,"errors":["The module request limit has been exceeded. Retry with backoff."]}
+Finder public discovery cycle complete
+{"round":13,"sites":["q1c6ceabc708.top","q9b97701443a.top","q9e99c254b43.top","qf8a0603ea19.top","qfaaae17e6eb.top"],"investigated":["q1c6ceabc708.top","q9b97701443a.top","q9e99c254b43.top","qfaaae17e6eb.top","qf8a0603ea19.top"],"validated_deposit_wallets":3,"finder_claims":0,"operation_present":true,"requests_so_far":401}
+SI collected public pages
+hunter-cycle {"registered":false,"events":0,"jobs":0,"outbox":0,"decisions":0,"errors":["The module request limit has been exceeded. Retry with backoff."]}
+Finder public discovery cycle complete
+{"round":14,"sites":["q1c6ceabc708.top","q9b97701443a.top","q9e99c254b43.top","qf8a0603ea19.top","qfaaae17e6eb.top"],"investigated":["q1c6ceabc708.top","q9b97701443a.top","q9e99c254b43.top","qfaaae17e6eb.top","qf8a0603ea19.top"],"validated_deposit_wallets":3,"finder_claims":0,"operation_present":true,"requests_so_far":401}
+SI collected public pages
+hunter-cycle {"registered":false,"events":0,"jobs":0,"outbox":0,"decisions":0,"errors":["The module request limit has been exceeded. Retry with backoff."]}
+Finder public discovery cycle complete
+{"round":15,"sites":["q1c6ceabc708.top","q9b97701443a.top","q9e99c254b43.top","qf8a0603ea19.top","qfaaae17e6eb.top"],"investigated":["q1c6ceabc708.top","q9b97701443a.top","q9e99c254b43.top","qfaaae17e6eb.top","qf8a0603ea19.top"],"validated_deposit_wallets":3,"finder_claims":0,"operation_present":true,"requests_so_far":401}
+SI collected public pages
+hunter-cycle {"registered":false,"events":0,"jobs":0,"outbox":0,"decisions":0,"errors":["The module request limit has been exceeded. Retry with backoff."]}
+Finder public discovery cycle complete
+{"round":16,"sites":["q1c6ceabc708.top","q9b97701443a.top","q9e99c254b43.top","qf8a0603ea19.top","qfaaae17e6eb.top"],"investigated":["q1c6ceabc708.top","q9b97701443a.top","q9e99c254b43.top","qfaaae17e6eb.top","qf8a0603ea19.top"],"validated_deposit_wallets":3,"finder_claims":0,"operation_present":true,"requests_so_far":401}
+SI collected public pages
+hunter-cycle {"registered":false,"events":0,"jobs":0,"outbox":0,"decisions":0,"errors":["The module request limit has been exceeded. Retry with backoff."]}
+Finder public discovery cycle complete
+{"round":17,"sites":["q1c6ceabc708.top","q9b97701443a.top","q9e99c254b43.top","qf8a0603ea19.top","qfaaae17e6eb.top"],"investigated":["q1c6ceabc708.top","q9b97701443a.top","q9e99c254b43.top","qfaaae17e6eb.top","qf8a0603ea19.top"],"validated_deposit_wallets":3,"finder_claims":0,"operation_present":true,"requests_so_far":401}
+SI collected public pages
+hunter-cycle {"registered":false,"events":0,"jobs":0,"outbox":0,"decisions":0,"errors":["The module request limit has been exceeded. Retry with backoff."]}
+Finder public discovery cycle complete
+{"round":18,"sites":["q1c6ceabc708.top","q9b97701443a.top","q9e99c254b43.top","qf8a0603ea19.top","qfaaae17e6eb.top"],"investigated":["q1c6ceabc708.top","q9b97701443a.top","q9e99c254b43.top","qfaaae17e6eb.top","qf8a0603ea19.top"],"validated_deposit_wallets":3,"finder_claims":0,"operation_present":true,"requests_so_far":401}
+SI collected public pages
+hunter-cycle {"registered":false,"events":0,"jobs":0,"outbox":0,"decisions":0,"errors":["The module request limit has been exceeded. Retry with backoff."]}
+Finder public discovery cycle complete
+{"round":19,"sites":["q1c6ceabc708.top","q9b97701443a.top","q9e99c254b43.top","qf8a0603ea19.top","qfaaae17e6eb.top"],"investigated":["q1c6ceabc708.top","q9b97701443a.top","q9e99c254b43.top","qfaaae17e6eb.top","qf8a0603ea19.top"],"validated_deposit_wallets":3,"finder_claims":0,"operation_present":true,"requests_so_far":401}
+SI collected public pages
+hunter-cycle {"registered":false,"events":0,"jobs":0,"outbox":1,"decisions":0,"errors":[]}
+Finder public discovery cycle complete
+{"round":20,"sites":["q1c6ceabc708.top","q9b97701443a.top","q9e99c254b43.top","qf8a0603ea19.top","qfaaae17e6eb.top"],"investigated":["q1c6ceabc708.top","q9b97701443a.top","q9e99c254b43.top","qfaaae17e6eb.top","qf8a0603ea19.top"],"validated_deposit_wallets":3,"finder_claims":0,"operation_present":true,"requests_so_far":401}
+SI collected public pages
+hunter-cycle {"registered":false,"events":0,"jobs":0,"outbox":0,"decisions":0,"errors":[]}
+Finder public discovery cycle complete
+{"round":21,"sites":["q1c6ceabc708.top","q9b97701443a.top","q9e99c254b43.top","qf8a0603ea19.top","qfaaae17e6eb.top"],"investigated":["q1c6ceabc708.top","q9b97701443a.top","q9e99c254b43.top","qfaaae17e6eb.top","qf8a0603ea19.top"],"validated_deposit_wallets":3,"finder_claims":0,"operation_present":true,"requests_so_far":401}
+SI collected public pages
+hunter-cycle {"registered":false,"events":0,"jobs":0,"outbox":0,"decisions":0,"errors":[]}
+Finder public discovery cycle complete
+{"round":22,"sites":["q1c6ceabc708.top","q9b97701443a.top","q9e99c254b43.top","qf8a0603ea19.top","qfaaae17e6eb.top"],"investigated":["q1c6ceabc708.top","q9b97701443a.top","q9e99c254b43.top","qfaaae17e6eb.top","qf8a0603ea19.top"],"validated_deposit_wallets":3,"finder_claims":0,"operation_present":true,"requests_so_far":401}
+SI collected public pages
+hunter-cycle {"registered":false,"events":0,"jobs":0,"outbox":0,"decisions":0,"errors":[]}
+Finder public discovery cycle complete
+{"round":23,"sites":["q1c6ceabc708.top","q9b97701443a.top","q9e99c254b43.top","qf8a0603ea19.top","qfaaae17e6eb.top"],"investigated":["q1c6ceabc708.top","q9b97701443a.top","q9e99c254b43.top","qfaaae17e6eb.top","qf8a0603ea19.top"],"validated_deposit_wallets":3,"finder_claims":0,"operation_present":true,"requests_so_far":401}
+{"ok":true,"policy":"v7","complete_at":{"round":5,"requests":305,"jobs":21},"quiescent_at":null,"max_rounds":24,"open_work":[{"kind":"investigate_candidate","status":"queued","target_key":"qf8a0603ea19.top","reason":"Operation Hunter (OP-BEHIND-QF8A0603EA1): qf8a0603ea19.top is part of the operation (100%): Seed you started from"},{"kind":"revisit_changed_site","status":"queued","target_key":"q9e99c254b43.top","reason":"q9e99c254b43.top: deposit appeared — observe the new state"},{"kind":"revisit_changed_site","status":"queued","target_key":"qfaaae17e6eb.top","reason":"qfaaae17e6eb.top: deposit appeared — observe the new state"},{"kind":"revisit_changed_site","status":"queued","target_key":"qf8a0603ea19.top","reason":"qf8a0603ea19.top: deposit appeared — observe the new state"},{"kind":"investigate_candidate","status":"running","target_key":"qfaaae17e6eb.top","reason":"Site Finder surfaced it (score 0.96): Investment scheme · promises 3% daily · deposit address shown (USDT)"},{"kind":"investigate_candidate","status":"running","target_key":"q9b97701443a.top","reason":"Site Finder surfaced it (score 0.97): Investment scheme · promises 3% daily · deposit address shown (USDT) · 2 related sites"},{"kind":"investigate_candidate","status":"running","target_key":"q9e99c254b43.top","reason":"Site Finder surfaced it (score 0.97): Investment scheme · promises 3% daily · deposit address shown (USDT) · 1 related site"}],"open_jobs":[],"seed_sites":1,"initial_wallets":0,"hidden_sites_injected":0,"hidden_sites_discovered":3,"target_sites_investigated":4,"validated_target_wallets":2,"unsupported_ownership_claims":0,"duplicate_active_jobs":0,"human_actions":0,"jobs":30,"jobs_per_useful_discovery":10,"transport_requests":401,"requests_by_kind":{"http":180,"dns":215,"tls":6},"requests_per_useful_discovery":133.66666666666666,"provider_calls":3,"time_to_final_operation_update_ms":59922.63791,"restart":true,"source_proof":[{"domain":"q9b97701443a.top","finder_site_records":1,"first_discovery_round":2},{"domain":"qfaaae17e6eb.top","finder_site_records":1,"first_discovery_round":4},{"domain":"qf8a0603ea19.top","finder_site_records":1,"first_discovery_round":4}],"multi_hop_useful_discoveries":2,"operation_next_bounded_hunts":3,"validated_wallet_reuse_site_candidates":2,"limitations":["Public/blockchain transports are synthetic.","Unchanged Logger classifier ran on real rendered DOM; installed extension lifecycle remains a separate environment-limited check.","This corpus does not certify all operation benchmark scenarios."]}

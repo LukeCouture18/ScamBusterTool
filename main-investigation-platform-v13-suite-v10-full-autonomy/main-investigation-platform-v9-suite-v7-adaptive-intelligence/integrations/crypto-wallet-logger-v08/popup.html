@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Crypto Wallet Logger</title>
+  <link rel="stylesheet" href="ui.css">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header>
+    <div>
+      <h1>Wallet Logger</h1>
+      <div class="domain-row"><span id="statusDot" class="status-dot"></span><span id="domain" class="muted">Current website</span></div>
+    </div>
+    <span id="count" class="count">0</span>
+  </header>
+
+  <section class="status-grid" aria-label="Detection status">
+    <div><strong id="pagesScanned">0</strong><span>Pages scanned</span></div>
+    <div><strong id="depositPages">0</strong><span>Deposit pages</span></div>
+    <div><strong id="siteWallets">0</strong><span>Site wallets</span></div>
+    <div><strong id="highConfidence">0</strong><span>High confidence</span></div>
+    <div><strong id="newWallets">0</strong><span>New this session</span></div>
+    <div><strong id="uncertainWallets">0</strong><span>Needs review</span></div>
+  </section>
+
+  <main id="records"><div class="empty">Checking this website…</div></main>
+
+  <footer>
+    <a href="accounts.html" target="_blank" rel="noopener noreferrer">Private accounts</a>
+    <button id="rescan">Rescan page</button>
+    <button id="openWebsite">Website record</button>
+    <button id="openHistory" class="primary">All findings</button>
+  </footer>
+  <script src="evidence-score.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

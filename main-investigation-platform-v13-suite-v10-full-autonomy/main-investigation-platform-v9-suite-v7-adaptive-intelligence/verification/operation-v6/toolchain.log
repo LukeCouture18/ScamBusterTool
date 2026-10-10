@@ -1,0 +1,9 @@
+OK   node >= 22.13 with node:sqlite: v24.19.0
+OK   python interpreter: /workspace/scratch/b4f855937e46/.venv/bin/python (MIP_PYTHON)
+OK   python packages for Site Finder / bridge tests: flask 3.1.3
+OK   esbuild (platform): /workspace/scratch/b4f855937e46/main/node_modules/esbuild/lib/main.js
+OK   tsx (platform): /workspace/scratch/b4f855937e46/main/node_modules/tsx/dist/loader.mjs
+OK   tsx (wallet-investigator): /workspace/scratch/b4f855937e46/main/node_modules/tsx/dist/loader.mjs
+OK   tsx (form-submitter): /workspace/scratch/b4f855937e46/main/node_modules/tsx/dist/loader.mjs
+OK   built worker config (npm run build): /workspace/scratch/b4f855937e46/main/dist/server/wrangler.json
+OK   harness portability (no raw-path imports, URL.pathname or POSIX-only python): 58 files, 32 npm scripts

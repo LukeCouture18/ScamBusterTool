@@ -1,0 +1,6 @@
+(node:5) [UNDICI-EHPA] Warning: EnvHttpProxyAgent is experimental, expect them to change at any time.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:5) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(node:5) [UNDICI-EHPA] Warning: EnvHttpProxyAgent is experimental, expect them to change at any time.
+(Use `node --trace-warnings ...` to show where the warning was created)
+{"ok":true,"checks":["scheduler pause reconciles state without starting public or wallet work","durable one-action loop and restart without duplicate public jobs","global resource reservation atomically refuses work across module paths","partial v4 analysis adopted; backoff and refresh identity survive restart","concurrent director ticks create one action and one job","uncertain submission is parked after a lost worker lease","exhausted global budget prevents a new public investigation","shared CDN/template never becomes a director ownership relationship"]}

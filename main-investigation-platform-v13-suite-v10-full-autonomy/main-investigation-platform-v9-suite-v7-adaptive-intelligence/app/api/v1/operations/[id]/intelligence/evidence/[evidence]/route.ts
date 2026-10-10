@@ -1,0 +1,2 @@
+import {apiError} from '@/lib/platform';import {operationEvidence} from '@/lib/ops/intelligence';
+export async function GET(_r:Request,c:{params:Promise<{id:string;evidence:string}>}) {try{const p=await c.params,data=await operationEvidence(p.id,p.evidence);return data?Response.json(data):apiError(404,'NOT_FOUND','No such evidence in this operation.');}catch(e){return apiError(500,'OPERATION_ERROR',e instanceof Error?e.message:'Unavailable');}}

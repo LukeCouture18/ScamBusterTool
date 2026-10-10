@@ -1,0 +1,61 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+[MainPlatformV6] Initialized integration module 'wallet_investigator' with capabilities: [
+  'blockchain-analysis',
+  'wallet-validation',
+  'counterparty-discovery',
+  'fund-flow-analysis',
+  'controlled-wallet-expansion'
+]
+[Database] Initialized new database at /tmp/mip-suite-NQ2c4M/wallet-runtime/data/wallet_investigator.sqlite
+[Migrations] Applying migration v1: 001_initial_schema...
+[Migrations] Applying migration v2: 002_indexes_and_views...
+[Migrations] Migration status: 2 applied. Current schema version: v2
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/ui-click-all.py:62: SyntaxWarning: invalid escape sequence '\s'
+  !!el.getAttribute('aria-current') || /(^|\s)(active|on|selected)(\s|$)/.test(el.className || '') ||
+SWEEP /advanced: 20 controls
+SWEEP /campaigns/f9d97fea-2ff5-4cae-ae50-5f7543ce23e7: 21 controls
+SWEEP /campaigns: 10 controls
+SWEEP /discovery: 13 controls
+SWEEP /finder: 26 controls
+SWEEP /hunter: 17 controls
+SWEEP /inbox: 12 controls
+SWEEP /integration: 9 controls
+SWEEP /integration/status: 9 controls
+SWEEP /intelligence: 46 controls
+SWEEP /investigations/0be5fb02-8aa7-4f74-9577-8af116bf5a4f: 26 controls
+SWEEP /investigations: 17 controls
+SWEEP /logger: 14 controls
+SWEEP /operations/hunter%3Aop%3Asuite-1: 58 controls
+SWEEP /operations: 22 controls
+SWEEP /orchestration: 61 controls
+SWEEP /overview: 16 controls
+SWEEP /: 30 controls
+SWEEP /reports: 12 controls
+SWEEP /tasks: 13 controls
+SWEEP /wallets: 14 controls
+/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/ui-click-all.py:62: SyntaxWarning: invalid escape sequence '\s'
+  !!el.getAttribute('aria-current') || /(^|\s)(active|on|selected)(\s|$)/.test(el.className || '') ||
+SWEEP /advanced: 20 controls
+SWEEP /campaigns/f9d97fea-2ff5-4cae-ae50-5f7543ce23e7: 19 controls
+SWEEP /campaigns: 10 controls
+SWEEP /discovery: 12 controls
+SWEEP /finder: 26 controls
+SWEEP /hunter: 17 controls
+SWEEP /inbox: 12 controls
+SWEEP /integration: 9 controls
+SWEEP /integration/status: 9 controls
+SWEEP /intelligence: 46 controls
+SWEEP /investigations/0be5fb02-8aa7-4f74-9577-8af116bf5a4f: 26 controls
+SWEEP /investigations: 17 controls
+SWEEP /logger: 14 controls
+SWEEP /operations/hunter%3Aop%3Asuite-1: 59 controls
+SWEEP /operations: 22 controls
+SWEEP /orchestration: 47 controls
+SWEEP /overview: 16 controls
+SWEEP /: 30 controls
+SWEEP /reports: 12 controls
+SWEEP /tasks: 13 controls
+SWEEP /wallets: 14 controls
+{"ok":true,"ui_decisions":4,"discovery":{"delivered":6,"target":"chaininvestcoin.cc","reached_by":"page_asset"},"wallet":{"transactions":4,"counterparties":3},"report":{"status":"verified","submissions":1},"ui":{"checks":40,"passed":["v9 start action is primary and diagnostics are collapsed","sidebar lists exactly the five tools","Needs you and Advanced sit below the tools","home shows each tool's state","home lists what happened","finder queue has sites waiting","each site says why it is worth a look","scores are hidden until you ask why","why reveals the score and its meaning","pursuit leads say why they were found","the discovery chain is shown step by step","the reviewed site is listed under Investigate with its stage","hunts are listed in plain words","hunt internals stay behind Details","Site Finder shows exactly three views","picking a site sets the context","evidence is labelled as seen on the site","no raw JSON or module-internal titles by default","site evidence comes first","shared-infrastructure caution is shown","module jobs stay behind Details","site context survives the move to Wallet Investigator","money flow explained in words","context survives a reload","logger capture visible in Main","report status in plain words","operation joins the context","hunter briefing leads with the headline","membership is labelled as analysis","member site opens in Site Finder with the new site in context","context can be cleared","advanced links to Main's views","no sideways scroll at phone width on /","no sideways scroll at phone width on /finder","no sideways scroll at phone width on /finder","no sideways scroll at phone width on /wallets","no sideways scroll at phone width on /logger","no sideways scroll at phone width on /reports","no sideways scroll at phone width on /hunter","no browser errors"]},"sweep":{"pages":21,"hydrated":21,"controls":466,"clicked":430,"already_active":14,"external_links":2,"warnings":35},"sweep_after_restart":{"pages":21,"hydrated":21,"controls":450,"clicked":427,"already_active":13,"external_links":2,"warnings":21}}

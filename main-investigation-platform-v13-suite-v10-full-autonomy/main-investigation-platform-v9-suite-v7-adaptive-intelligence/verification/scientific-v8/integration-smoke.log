@@ -1,0 +1,16 @@
+PASS ontology: every requested gap family and test family is defined with its required fields
+AssertionError [ERR_ASSERTION]: 500: {"error":{"code":"OPERATION_ERROR","message":"no such column: o.captured_at"},"request_id":"f35ae5a2-48f4-4db9-8210-5734c75d333f"}
+    at ok (file:///workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/adaptive-intelligence.mjs:14:21)
+    at evaluate (file:///workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/adaptive-intelligence.mjs:26:85)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async file:///workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/adaptive-intelligence.mjs:49:3
+    at async test (file:///workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/adaptive-intelligence.mjs:15:28)
+    at async file:///workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/adaptive-intelligence.mjs:48:2 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+POST /api/v1/operations/op-v7/intelligence 500 {"error":{"code":"OPERATION_ERROR","message":"no such column: o.captured_at"},"request_id":"f35ae5a2-48f4-4db9-8210-5734c75d333f"}

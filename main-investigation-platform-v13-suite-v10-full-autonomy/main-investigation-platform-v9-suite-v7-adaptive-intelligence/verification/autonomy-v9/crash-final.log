@@ -1,0 +1,31 @@
+PASS before site investigation
+PASS after site investigation
+PASS before wallet observation ingestion
+PASS after wallet observation ingestion
+PASS before candidate deduplication
+PASS after candidate deduplication
+PASS before validation scheduling
+PASS after validation scheduling
+PASS before Wallet Investigator completion
+PASS after Wallet Investigator completion
+PASS before provider retry
+PASS after provider retry
+PASS before operation update
+PASS after operation update
+PASS before report rebuild
+PASS after report rebuild
+PASS before exact approval
+AssertionError [ERR_ASSERTION]: {"error":{"code":"CANDIDATE_NOT_PENDING","message":"Candidate is missing or has already been decided."},"request_id":"19c88fd4-a2b4-4d55-bdd1-904cd9662871"}
+
+409 !== 200
+
+    at action (file:///workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/autonomy-crash.mjs:35:217)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async file:///workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/autonomy-crash.mjs:69:96 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: 409,
+  expected: 200,
+  operator: 'strictEqual',
+  diff: 'simple'
+}

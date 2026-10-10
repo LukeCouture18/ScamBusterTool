@@ -1,0 +1,2 @@
+/** Operator words only; specialist and evidence states retain their meanings. */
+export function operatorStatus(status:string){const key=status.toLowerCase().replaceAll('-','_');const words:Record<string,string>={running:'Working',processing:'Working',active_job:'Working',in_progress:'Working',pending:'Scheduled',queued:'Scheduled',retrying:'Waiting for retry',needs_review:'Needs you',waiting_for_human:'Needs you',done:'Complete',completed:'Complete',not_connected:'Disconnected',offline:'Disconnected'};return words[key]??status.replaceAll('_',' ');}

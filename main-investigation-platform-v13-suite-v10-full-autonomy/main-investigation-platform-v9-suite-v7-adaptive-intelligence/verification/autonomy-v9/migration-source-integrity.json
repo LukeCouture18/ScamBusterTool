@@ -1,0 +1,105 @@
+{
+  "ok": true,
+  "migrations": [
+    {
+      "file": "0000_initial.sql",
+      "sha256": "c3a906be5a10702649c0eea95924be02437fb0f38458defa6ee4883deafd903d",
+      "unchanged": true
+    },
+    {
+      "file": "0001_coordination_hub.sql",
+      "sha256": "d55d2fb42e6f943ef5d39856888849bbf2936a8c1dc5275456e8a599f52c42fd",
+      "unchanged": true
+    },
+    {
+      "file": "0002_investigation_orchestrator.sql",
+      "sha256": "870c40cc96a728126385b3086ab8ac24e7eacbee9f6ba98703be20c285bd36f4",
+      "unchanged": true
+    },
+    {
+      "file": "0003_event_driven_backbone.sql",
+      "sha256": "fbe5cb3ba68acf7b496b07a582005d0e2a1b1c2781b7ccc49e6dff9b9501c560",
+      "unchanged": true
+    },
+    {
+      "file": "0004_v5_sensor_feedback.sql",
+      "sha256": "229efcd754c1416e386892bc84f7fe9fac865a9d74914553860b1c7639527265",
+      "unchanged": true
+    },
+    {
+      "file": "0005_v6_planning.sql",
+      "sha256": "912b951f6f33fcac478bedc2bd6358f15f412c226bbe26f672362e34d9051e84",
+      "unchanged": true
+    },
+    {
+      "file": "0006_feedback_delivery.sql",
+      "sha256": "9a504e0791ab50268f2cf9a39a375d7db90c40faa67b584b0d91ba5d4b066095",
+      "unchanged": true
+    },
+    {
+      "file": "0007_monitoring_diffs.sql",
+      "sha256": "03f925c958b2faca0a08b64c4de6feeccc6193cfb71c01da2064bb546bb455f6",
+      "unchanged": true
+    },
+    {
+      "file": "0008_inbox_v2.sql",
+      "sha256": "d1a8eb4baf15c7cf9bfbb270b0b857168c7ad67b303484597a71e2b4e5d77ad8",
+      "unchanged": true
+    },
+    {
+      "file": "0009_ai_investigator_v3.sql",
+      "sha256": "30b585ea9265fab7d5d869d2af74f242e46ffdf7d54a1c19f79f7a28dd4ff173",
+      "unchanged": true
+    },
+    {
+      "file": "0010_campaigns_v4.sql",
+      "sha256": "21fb10f1cc882de0cea13a7b73f3b9a20ff2043b2d2536d130d41c5533fcf654",
+      "unchanged": true
+    },
+    {
+      "file": "0011_operations_v5.sql",
+      "sha256": "4a826b1d77f7b8873c1c3164dae22586fc54bf9f5d44a5692e7bca23721ed4bd",
+      "unchanged": true
+    },
+    {
+      "file": "0012_operation_hunter.sql",
+      "sha256": "623baadd6c5457b1c2e9ccd15bc6142000a53020928e2c54ac8c7eccd27a025c",
+      "unchanged": true
+    },
+    {
+      "file": "0013_wallet_key_prefix.sql",
+      "sha256": "f428dc74aa78ec6887dcd26b3f9e47ab0e72535e2ab1bdafdd7dc6a5a4a72aae",
+      "unchanged": true
+    },
+    {
+      "file": "0014_finder_hunts.sql",
+      "sha256": "8574f73b7a964a530dae25d3a1f618fd1dc2d2969a93f899fbb0c167392f5a9c",
+      "unchanged": true
+    },
+    {
+      "file": "0015_wallet_pipeline.sql",
+      "sha256": "81fe388a2abafa71e70a90f90845db4a31e5d90d66d38b0320c98aabb4661530",
+      "unchanged": true
+    },
+    {
+      "file": "0016_investigation_director.sql",
+      "sha256": "2a87b2fb9a3bd151942612a8d6cbb6205212526fc1207950dcfc8a79866eec90",
+      "unchanged": true
+    },
+    {
+      "file": "0017_operation_intelligence.sql",
+      "sha256": "038d85f1c2c45c895c5b1997e667d0cda73d68f531dfc48b6cc262b89efaaf80",
+      "unchanged": true
+    },
+    {
+      "file": "0018_adaptive_intelligence.sql",
+      "sha256": "17e1461ce1a89eec21e5a3947bb0fe9f6784d91fb59f8851bfc8762f5694beec",
+      "unchanged": true
+    },
+    {
+      "file": "0019_scientific_intelligence.sql",
+      "sha256": "3e92f3fc76cda32a4d93b0be8313ef093e56f283a1c6dfaaf36921a9e3ec58cd",
+      "unchanged": true
+    }
+  ]
+}

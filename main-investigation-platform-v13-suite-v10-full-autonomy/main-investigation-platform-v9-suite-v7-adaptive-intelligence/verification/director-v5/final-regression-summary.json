@@ -1,0 +1,25 @@
+{
+  "node": "24.19.0",
+  "groups": {
+    "unit": "PASS",
+    "migration-matrix": "PASS",
+    "suite": "PASS",
+    "loops": "PASS",
+    "integration:v6": "PASS",
+    "v2": "PASS",
+    "v3": "PASS",
+    "v4": "PASS",
+    "v5": "PASS",
+    "joined:hunter": "PASS",
+    "joined:v61": "PASS",
+    "five-modules": "PASS",
+    "startup:modules": "PASS",
+    "site-finder": "PASS",
+    "wallet-pipeline": "FAIL",
+    "director": "PASS"
+  },
+  "overall": "not certified: extension environment block",
+  "pass_groups": 15,
+  "blocked_groups": 1,
+  "site_finder_test_counts_in_log": []
+}

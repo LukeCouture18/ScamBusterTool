@@ -1,0 +1,11 @@
+{
+  "runtime": "node22",
+  "source_identity": "fd4a22501e5e0c758fb35bde01a166132772f7988852a0668d1deba76391fe88",
+  "main_dependencies": "fresh npm ci",
+  "specialist_dependencies": "cached, lockfiles unchanged",
+  "exit_codes": {
+    "typescript": 0,
+    "lint": 0,
+    "build": 0
+  }
+}

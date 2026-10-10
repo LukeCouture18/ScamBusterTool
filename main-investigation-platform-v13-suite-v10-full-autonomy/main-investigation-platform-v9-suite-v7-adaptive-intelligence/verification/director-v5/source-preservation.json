@@ -1,0 +1,184 @@
+{
+  "input_sha256": "811c067288e30debcf4f18357d7348836e1562e3bbf7a13d25b39ff368ae7187",
+  "original_file_count": 795,
+  "unchanged_original_file_count": 752,
+  "changed_original_files": [
+    {
+      "path": "README.md",
+      "sha256": "5a27c12e1843f0aab0f43710b55a81783a5c4da1b74061fd604c99ade7bae8f0"
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "d51ddc7ce765c367014b937bf80076e196bdde53812030e9c129928857a2a5bc"
+    },
+    {
+      "path": "package.json",
+      "sha256": "d3f45f8b00d490b332883be1ecc9c42535e70eb99204f456cf0e0682822367ee"
+    },
+    {
+      "path": "app/api/v1/compat/logger/route.ts",
+      "sha256": "7d9b4c4ad13c9831e73cf9687cff804040b53fd6aa458fbd45abb563f65fdd36"
+    },
+    {
+      "path": "app/api/v1/ingest/[module]/route.ts",
+      "sha256": "67e74d501a4a3abadb66c5acbc7db9c1989d0fe05a75742dc1f31e6695ede8df"
+    },
+    {
+      "path": "app/api/v1/investigations/[id]/report/route.ts",
+      "sha256": "148a86291ba384652878457a007a0af70e29422818862fe498c2bda2286c7d40"
+    },
+    {
+      "path": "app/investigations/[id]/page.tsx",
+      "sha256": "9acf74d3b7fe4c799607a3f96bdd5467503a1e1fd67ee7ce16c6c2b5d4e439aa"
+    },
+    {
+      "path": "components/agent-panel.tsx",
+      "sha256": "89ae8d8230c7fd62263b9d7bba1af495d58fc97c2ae86edd1d135de17b00bd63"
+    },
+    {
+      "path": "components/campaign-view.tsx",
+      "sha256": "84653c28c7c834d3aa58f437ba0cac6a32c1dbc007f7c175976bea79094ff418"
+    },
+    {
+      "path": "components/ops/pages.tsx",
+      "sha256": "cb9de397d4af35b206ce32c719eb7050dde472fc97c55b6d9df54e97248a0dc1"
+    },
+    {
+      "path": "components/suite/finder.tsx",
+      "sha256": "5154d28f3b5c4993841576222b034c1defa308a0df43bda619fec07218cb3b44"
+    },
+    {
+      "path": "integrations/local_scheduler.py",
+      "sha256": "1531f3b31164e16a47fef2ab2c8bc0e359c5b98b9aa91b5449c4e22c1f8c8434"
+    },
+    {
+      "path": "integrations/site_investigator_bridge.py",
+      "sha256": "49de7bd582545090939675fb9afe56f0d1954d411a6b723bcced7fe1dc384ce8"
+    },
+    {
+      "path": "integrations/site-finder-v07/app/v2/context.py",
+      "sha256": "e87e3a7382bec83cddb42e4dc46d13b30b87508126db663fb17a59730dc39fd7"
+    },
+    {
+      "path": "integrations/site-finder-v07/app/v2/continuous.py",
+      "sha256": "952e6e0c14448e3dba0a797f4e4700adc40cbb5afc8001a016089881d0b25c7f"
+    },
+    {
+      "path": "integrations/site-finder-v07/app/v2/platform_bridge.py",
+      "sha256": "f43a5c3f87c524f71b4517b1e7686037a8c54b7055c5df0e6904e98517093a24"
+    },
+    {
+      "path": "integrations/site-investigator-v01/siteinvestigator/investigator.py",
+      "sha256": "e5ca2319eeb41172e7e5a540063bf7da562a49f9289915239de2c92a9c005960"
+    },
+    {
+      "path": "integrations/wallet-investigator/package-lock.json",
+      "sha256": "7f4fde474466aa7f2249752076595405926a232da97d0755dc98db979c1bd0f5"
+    },
+    {
+      "path": "integrations/wallet-investigator/package.json",
+      "sha256": "c7d77b159889a254f3c4b1c73708ca91ccf7e1a4a994b693bb5b17d409ab8d24"
+    },
+    {
+      "path": "integrations/wallet-investigator/server.ts",
+      "sha256": "6a1d0fd011179a8fbdf9ca4c07d7debc8c62977dad8a0e962c54d4b08d3cb306"
+    },
+    {
+      "path": "integrations/wallet-investigator/server/crypto/validation.ts",
+      "sha256": "766890372e752bb97dee3fd2f73b7e20d0f38ba5a1897651883ad2e9185607f8"
+    },
+    {
+      "path": "integrations/wallet-investigator/server/integration/main_platform_v6.ts",
+      "sha256": "073eb7d4ea742f51810155a54a0d6ba422bfb6155c9c28c3b641571d944a305b"
+    },
+    {
+      "path": "integrations/wallet-investigator/server/integration/platform_worker.ts",
+      "sha256": "9dadf4553508156ae89f6b8d7326d33163bc00f74700b9da402e920003a2def7"
+    },
+    {
+      "path": "integrations/wallet-investigator/server/jobs/job_queue.ts",
+      "sha256": "3ab7bb3a7556d64eedf0fb956f21b622ecea0099e4df29c73f66d8cbb880e7dd"
+    },
+    {
+      "path": "integrations/wallet-investigator/server/providers/manager.ts",
+      "sha256": "1a37a8165cd6917070563863063fcae315e569a654b24201410fe7875582b4b8"
+    },
+    {
+      "path": "integrations/wallet-investigator/src/types.ts",
+      "sha256": "e60957624e9436d099ab76e50ad71ee9e1146dfdaa4976aa252a1be04d527f51"
+    },
+    {
+      "path": "integrations/wallet-investigator/tests/validation-v4.test.ts",
+      "sha256": "b65940d43da57978737dee3ea52be365d8257f56ab8f20b9665f62672285197f"
+    },
+    {
+      "path": "lib/jobs.ts",
+      "sha256": "d0c8d4aaa46d934eba069265affbb095e96c0f06909ec0b1b85a75c383f66c6d"
+    },
+    {
+      "path": "lib/logger-adapter.ts",
+      "sha256": "6498640f23cc7724715a57a82a8e339c5de33da76e959e88aba6edd50a2b77b0"
+    },
+    {
+      "path": "lib/schema-ready.ts",
+      "sha256": "fd85f5b784802739939c4c92965e14a47d4631967e991481c59ca9828f957ac6"
+    },
+    {
+      "path": "lib/wallet-pipeline.ts",
+      "sha256": "63ae453bacaffbeb09465c4d7adb53809fa13531d9b9aa6d2409ffe30c7e3722"
+    },
+    {
+      "path": "lib/agent/checkpoints.ts",
+      "sha256": "c0296de336850bc8d1d3a9b266343e9e06827ada4b45231d8093705a56b00c85"
+    },
+    {
+      "path": "lib/agent/model_planner.ts",
+      "sha256": "cfafdf58878b1c3daf2decad0986ca8948645dff2e10a2339d02853886cf8924"
+    },
+    {
+      "path": "lib/agent/runner.ts",
+      "sha256": "43c863aae208547272f2dacf8eca7fe9469ca9c7cf7a5673a7fa3e8c8f9631ab"
+    },
+    {
+      "path": "lib/ops/scheduler.ts",
+      "sha256": "a4e7cb9a4c09db41e00adee484800f52bbb127bd1c6ec115672a2a96cbdc691c"
+    },
+    {
+      "path": "lib/ops/team.ts",
+      "sha256": "9752c19ea638dae90e3eb1cac8f383ec4d00a3e309b6627e93f8603b1df9552c"
+    },
+    {
+      "path": "lib/ops/view.ts",
+      "sha256": "b9ad2aed40c15ad8a151152f9b7d42d6d59d9926ad531e90ae09a8bd1e2920e8"
+    },
+    {
+      "path": "scripts/run-tests.mjs",
+      "sha256": "745fde0efd099df3b1bafe366b3b8f965930a224cd2aad7fc312d8befb341ab0"
+    },
+    {
+      "path": "tests/joined-finder-main-hunter.mjs",
+      "sha256": "a8e1be0cd0504182d5496db576c0fac6ccfa8504c729927aade2eb2091b4954e"
+    },
+    {
+      "path": "tests/ui-act.py",
+      "sha256": "885ccbc1afeb8e56b464cc98252d67ef7dc04796132ae9f576364f069a8134b3"
+    },
+    {
+      "path": "tests/v5-hunter.test.mjs",
+      "sha256": "de03021cf88a084ecc87f5f4196dc90be5c7d89c304167af926e9927b712582c"
+    },
+    {
+      "path": "tests/wallet-pipeline-e2e.mjs",
+      "sha256": "d84fe4e59aa16b78b3de0c5ed109f2e596ea916c67dae1ca037f686e712cccba"
+    },
+    {
+      "path": "tests/ui/entry.tsx",
+      "sha256": "9aee38aba474607fc7cb7e2ef6c962d0860fd9b8824d616b51d5ddbc612850df"
+    }
+  ],
+  "checks": {
+    "earlier_migrations_unchanged": true,
+    "logger_files_unchanged": true,
+    "missing_original_files": 0
+  }
+}

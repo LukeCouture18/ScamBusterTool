@@ -1,0 +1,347 @@
+{
+  "ok": true,
+  "trace": [
+    {
+      "scenario": "temporal changed authoritative deposit",
+      "chosen_policy_question": "PUBLIC_SITE_INSPECTION",
+      "plan_hash": "a614641a73708133a9979a0077ac18e998ed71f9435ed7fcf86230247bb1cd71",
+      "matches": [
+        {
+          "test_id": "test-0",
+          "hypothesis_key": "wallet:network",
+          "role": "network_change",
+          "outcome": "weakens",
+          "evidence_ids": "[\"9ec92fec-e689-4752-9ebc-dcafc2fe81b4\"]",
+          "reason": "Changed scoped addresses validate on the same network; network change alone is insufficient."
+        },
+        {
+          "test_id": "test-0",
+          "hypothesis_key": "wallet:rotation",
+          "role": "rotation",
+          "outcome": "supports",
+          "evidence_ids": "[\"9ec92fec-e689-4752-9ebc-dcafc2fe81b4\"]",
+          "reason": "The same deployment presents a different validated deposit at a later time. Rotation remains one of several explanations."
+        },
+        {
+          "test_id": "test-0",
+          "hypothesis_key": "wallet:single",
+          "role": "single_wallet",
+          "outcome": "contradicts",
+          "evidence_ids": "[\"9ec92fec-e689-4752-9ebc-dcafc2fe81b4\"]",
+          "reason": "New authoritative scoped deposit evidence contradicts the unchanged-wallet prediction."
+        },
+        {
+          "test_id": "test-0",
+          "hypothesis_key": "wallet:unknown",
+          "role": "unknown",
+          "outcome": "unchanged",
+          "evidence_ids": "[]",
+          "reason": "Unknown remains legitimate after bounded checks."
+        }
+      ],
+      "outcomes": [
+        "hypothesis_discriminated",
+        "hypothesis_discriminated",
+        "hypothesis_discriminated",
+        "fresh_branch_independent_evidence",
+        "hypothesis_discriminated",
+        "hypothesis_discriminated",
+        "old_contradiction_resolved",
+        "contradiction_resolved"
+      ],
+      "next_learning": {
+        "TEMPORAL_RECHECK": {
+          "n": 1,
+          "useful": 1,
+          "validated_site": 0,
+          "validated_wallet": 0,
+          "independent": 0,
+          "discrimination": 1,
+          "report": 0,
+          "contradiction": 1,
+          "dead": 0,
+          "duplicate": 0,
+          "generic": 0,
+          "measured_n": 0,
+          "cost_mean": null
+        }
+      },
+      "next_policy_question": "PUBLIC_SITE_INSPECTION"
+    },
+    {
+      "scenario": "generic provider alternative",
+      "chosen_policy_question": "PUBLIC_SITE_INSPECTION",
+      "plan_hash": "165a637b95950ed9f9feaed5bd657e1385e27b0e87803e3a5cbb4654d1b8f60e",
+      "matches": [
+        {
+          "test_id": "test-1",
+          "hypothesis_key": "linkage:association",
+          "role": "operation",
+          "outcome": "unchanged",
+          "evidence_ids": "[]",
+          "reason": "This result does not directly distinguish this prediction."
+        },
+        {
+          "test_id": "test-1",
+          "hypothesis_key": "linkage:shared_kit",
+          "role": "kit",
+          "outcome": "supports",
+          "evidence_ids": "[\"9d2f9a51-9973-4516-859e-b220efb7998f\"]",
+          "reason": "Generic overlap is compatible with this alternative and cannot establish an operator."
+        },
+        {
+          "test_id": "test-1",
+          "hypothesis_key": "linkage:shared_provider",
+          "role": "infrastructure",
+          "outcome": "supports",
+          "evidence_ids": "[\"9d2f9a51-9973-4516-859e-b220efb7998f\"]",
+          "reason": "Generic overlap is compatible with this alternative and cannot establish an operator."
+        },
+        {
+          "test_id": "test-1",
+          "hypothesis_key": "linkage:unknown",
+          "role": "unknown",
+          "outcome": "unchanged",
+          "evidence_ids": "[]",
+          "reason": "Unknown remains legitimate after bounded checks."
+        }
+      ],
+      "outcomes": [
+        "hypothesis_discriminated",
+        "alternative_explanation_discovered",
+        "hypothesis_discriminated",
+        "alternative_explanation_discovered",
+        "generic_correlation_rejected",
+        "fresh_branch_independent_evidence"
+      ],
+      "next_learning": {
+        "PUBLIC_ARTIFACT_SEARCH": {
+          "n": 1,
+          "useful": 1,
+          "validated_site": 0,
+          "validated_wallet": 0,
+          "independent": 0,
+          "discrimination": 1,
+          "report": 0,
+          "contradiction": 0,
+          "dead": 0,
+          "duplicate": 0,
+          "generic": 0,
+          "measured_n": 0,
+          "cost_mean": null
+        },
+        "TEMPORAL_RECHECK": {
+          "n": 1,
+          "useful": 1,
+          "validated_site": 0,
+          "validated_wallet": 0,
+          "independent": 0,
+          "discrimination": 1,
+          "report": 0,
+          "contradiction": 1,
+          "dead": 0,
+          "duplicate": 0,
+          "generic": 0,
+          "measured_n": 0,
+          "cost_mean": null
+        }
+      },
+      "next_policy_question": "LIKELY_WALLET_PAGE_INSPECTION"
+    },
+    {
+      "scenario": "replacement with observed continuity",
+      "chosen_policy_question": "LIKELY_WALLET_PAGE_INSPECTION",
+      "plan_hash": "165a637b95950ed9f9feaed5bd657e1385e27b0e87803e3a5cbb4654d1b8f60e",
+      "matches": [
+        {
+          "test_id": "test-2",
+          "hypothesis_key": "linkage:association",
+          "role": "operation",
+          "outcome": "unchanged",
+          "evidence_ids": "[]",
+          "reason": "This result does not directly distinguish this prediction."
+        },
+        {
+          "test_id": "test-2",
+          "hypothesis_key": "linkage:shared_kit",
+          "role": "kit",
+          "outcome": "unchanged",
+          "evidence_ids": "[]",
+          "reason": "This result does not directly distinguish this prediction."
+        },
+        {
+          "test_id": "test-2",
+          "hypothesis_key": "linkage:shared_provider",
+          "role": "infrastructure",
+          "outcome": "unchanged",
+          "evidence_ids": "[]",
+          "reason": "This result does not directly distinguish this prediction."
+        },
+        {
+          "test_id": "test-2",
+          "hypothesis_key": "linkage:unknown",
+          "role": "unknown",
+          "outcome": "unchanged",
+          "evidence_ids": "[]",
+          "reason": "Unknown remains legitimate after bounded checks."
+        }
+      ],
+      "outcomes": [
+        "replacement_found",
+        "fresh_branch_independent_evidence"
+      ],
+      "next_learning": {
+        "REPLACEMENT_SITE_HUNT": {
+          "n": 1,
+          "useful": 0,
+          "validated_site": 0,
+          "validated_wallet": 0,
+          "independent": 0,
+          "discrimination": 0,
+          "report": 0,
+          "contradiction": 0,
+          "dead": 0,
+          "duplicate": 0,
+          "generic": 0,
+          "measured_n": 0,
+          "cost_mean": null
+        },
+        "PUBLIC_ARTIFACT_SEARCH": {
+          "n": 1,
+          "useful": 1,
+          "validated_site": 0,
+          "validated_wallet": 0,
+          "independent": 0,
+          "discrimination": 1,
+          "report": 0,
+          "contradiction": 0,
+          "dead": 0,
+          "duplicate": 0,
+          "generic": 0,
+          "measured_n": 0,
+          "cost_mean": null
+        },
+        "TEMPORAL_RECHECK": {
+          "n": 1,
+          "useful": 1,
+          "validated_site": 0,
+          "validated_wallet": 0,
+          "independent": 0,
+          "discrimination": 1,
+          "report": 0,
+          "contradiction": 1,
+          "dead": 0,
+          "duplicate": 0,
+          "generic": 0,
+          "measured_n": 0,
+          "cost_mean": null
+        }
+      },
+      "next_policy_question": "RELATED_SITE_HUNT"
+    },
+    {
+      "scenario": "inconclusive failed public check",
+      "chosen_policy_question": "RELATED_SITE_HUNT",
+      "plan_hash": "165a637b95950ed9f9feaed5bd657e1385e27b0e87803e3a5cbb4654d1b8f60e",
+      "matches": [
+        {
+          "test_id": "test-3",
+          "hypothesis_key": "linkage:association",
+          "role": "operation",
+          "outcome": "inconclusive",
+          "evidence_ids": "[]",
+          "reason": "This result does not directly distinguish this prediction."
+        },
+        {
+          "test_id": "test-3",
+          "hypothesis_key": "linkage:shared_kit",
+          "role": "kit",
+          "outcome": "inconclusive",
+          "evidence_ids": "[]",
+          "reason": "This result does not directly distinguish this prediction."
+        },
+        {
+          "test_id": "test-3",
+          "hypothesis_key": "linkage:shared_provider",
+          "role": "infrastructure",
+          "outcome": "inconclusive",
+          "evidence_ids": "[]",
+          "reason": "This result does not directly distinguish this prediction."
+        },
+        {
+          "test_id": "test-3",
+          "hypothesis_key": "linkage:unknown",
+          "role": "unknown",
+          "outcome": "unchanged",
+          "evidence_ids": "[]",
+          "reason": "Unknown remains legitimate after bounded checks."
+        }
+      ],
+      "outcomes": [],
+      "next_learning": {
+        "PUBLIC_SITE_INSPECTION": {
+          "n": 1,
+          "useful": 0,
+          "validated_site": 0,
+          "validated_wallet": 0,
+          "independent": 0,
+          "discrimination": 0,
+          "report": 0,
+          "contradiction": 0,
+          "dead": 0,
+          "duplicate": 0,
+          "generic": 0,
+          "measured_n": 0,
+          "cost_mean": null
+        },
+        "REPLACEMENT_SITE_HUNT": {
+          "n": 1,
+          "useful": 0,
+          "validated_site": 0,
+          "validated_wallet": 0,
+          "independent": 0,
+          "discrimination": 0,
+          "report": 0,
+          "contradiction": 0,
+          "dead": 0,
+          "duplicate": 0,
+          "generic": 0,
+          "measured_n": 0,
+          "cost_mean": null
+        },
+        "PUBLIC_ARTIFACT_SEARCH": {
+          "n": 1,
+          "useful": 1,
+          "validated_site": 0,
+          "validated_wallet": 0,
+          "independent": 0,
+          "discrimination": 1,
+          "report": 0,
+          "contradiction": 0,
+          "dead": 0,
+          "duplicate": 0,
+          "generic": 0,
+          "measured_n": 0,
+          "cost_mean": null
+        },
+        "TEMPORAL_RECHECK": {
+          "n": 1,
+          "useful": 1,
+          "validated_site": 0,
+          "validated_wallet": 0,
+          "independent": 0,
+          "discrimination": 1,
+          "report": 0,
+          "contradiction": 1,
+          "dead": 0,
+          "duplicate": 0,
+          "generic": 0,
+          "measured_n": 0,
+          "cost_mean": null
+        }
+      },
+      "next_policy_question": "RELATED_SITE_HUNT"
+    }
+  ],
+  "scope": "Full production scientific DB loop with observed source fixtures, precommitted plans, matching, revision, causal credit, family learning and the next production policy decision. Specialist transports are fixture records. Operation-split confirmation is certified separately; this is not a live-provider score."
+}

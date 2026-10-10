@@ -1,0 +1,16 @@
+✔ migration 0012 is additive and required by the schema gate (35.027989ms)
+✔ migration 0014 (Site Finder hunts) is additive and required by the schema gate (32.411718ms)
+✔ migration 0015 (v4 wallet pipeline) is additive and required by the schema gate (55.046682ms)
+✔ contracts: module, job type and work kind (10.769039ms)
+✔ a Hunter snapshot is stored idempotently and its proposals become Main's own work (102.248381ms)
+✔ demo operations are mirrored for display but never create work (34.972436ms)
+✔ reconstruction: proposed only while Hunter is registered, routed as a HUNT_OPERATION job, judged by what it found (56.547441ms)
+✔ operator and module requests go through work items (47.330924ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 597.184209

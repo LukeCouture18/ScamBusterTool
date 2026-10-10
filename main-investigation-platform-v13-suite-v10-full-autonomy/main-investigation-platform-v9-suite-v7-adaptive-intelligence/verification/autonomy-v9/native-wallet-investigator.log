@@ -1,0 +1,14 @@
+[MainPlatformV6] Initialized integration module 'wallet_investigator' with capabilities: [
+  'blockchain-analysis',
+  'wallet-validation',
+  'counterparty-discovery',
+  'fund-flow-analysis',
+  'controlled-wallet-expansion'
+]
+[Wallet Investigator] Initializing SQLite database...
+[Database] Initialized new database at /tmp/v9-native-vj9uwf8z/wallet-investigator/data/wallet_investigator.sqlite
+[Migrations] Applying migration v1: 001_initial_schema...
+[Migrations] Applying migration v2: 002_indexes_and_views...
+[Migrations] Migration status: 2 applied. Current schema version: v2
+[Wallet Investigator] Running in production mode
+[Wallet Investigator] Server running on http://127.0.0.1:35555

@@ -1,0 +1,7 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> react-example@0.0.0 lint
+> tsc --noEmit
+
+server/integration/platform_worker.ts(78,263): error TS2339: Property 'refresh_key' does not exist on type 'WalletV4Payload'.
+server/integration/platform_worker.ts(78,307): error TS2339: Property 'refresh_key' does not exist on type 'WalletV4Payload'.

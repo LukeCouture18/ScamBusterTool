@@ -1,0 +1,37 @@
+[Database] Initialized new database at /tmp/operation-hidden-oXICek/wallet/data/wallet_investigator.sqlite
+[Migrations] Applying migration v1: 001_initial_schema...
+[Migrations] Applying migration v2: 002_indexes_and_views...
+[Migrations] Migration status: 2 applied. Current schema version: v2
+[MainPlatformV6] Initialized integration module 'wallet_investigator' with capabilities: [
+  'blockchain-analysis',
+  'wallet-validation',
+  'counterparty-discovery',
+  'fund-flow-analysis',
+  'controlled-wallet-expansion'
+]
+{"round":0,"sites":["q1c6ceabc708.top"],"investigated":["q1c6ceabc708.top"],"validated_deposit_wallets":1,"finder_claimed":true,"operation_present":false}
+{"round":1,"sites":["q1c6ceabc708.top"],"investigated":["q1c6ceabc708.top"],"validated_deposit_wallets":1,"finder_claimed":false,"operation_present":false}
+{"round":2,"sites":["q1c6ceabc708.top"],"investigated":["q1c6ceabc708.top"],"validated_deposit_wallets":1,"finder_claimed":true,"operation_present":false}
+{"round":3,"sites":["q1c6ceabc708.top"],"investigated":["q1c6ceabc708.top"],"validated_deposit_wallets":1,"finder_claimed":false,"operation_present":false}
+{"round":4,"sites":["q1c6ceabc708.top"],"investigated":["q1c6ceabc708.top"],"validated_deposit_wallets":1,"finder_claimed":false,"operation_present":false}
+{"round":5,"sites":["q1c6ceabc708.top"],"investigated":["q1c6ceabc708.top"],"validated_deposit_wallets":1,"finder_claimed":false,"operation_present":false}
+{"round":6,"sites":["q1c6ceabc708.top"],"investigated":["q1c6ceabc708.top"],"validated_deposit_wallets":1,"finder_claimed":false,"operation_present":false}
+{"round":7,"sites":["q1c6ceabc708.top"],"investigated":["q1c6ceabc708.top"],"validated_deposit_wallets":1,"finder_claimed":false,"operation_present":false}
+{"round":8,"sites":["q1c6ceabc708.top"],"investigated":["q1c6ceabc708.top"],"validated_deposit_wallets":1,"finder_claimed":false,"operation_present":false}
+{"round":9,"sites":["q1c6ceabc708.top"],"investigated":["q1c6ceabc708.top"],"validated_deposit_wallets":1,"finder_claimed":false,"operation_present":false}
+{"round":10,"sites":["q1c6ceabc708.top"],"investigated":["q1c6ceabc708.top"],"validated_deposit_wallets":1,"finder_claimed":false,"operation_present":false}
+{"round":11,"sites":["q1c6ceabc708.top"],"investigated":["q1c6ceabc708.top"],"validated_deposit_wallets":1,"finder_claimed":false,"operation_present":false}
+AssertionError [ERR_ASSERTION]: All hidden target deployments must be discovered through module work.
+
+0 !== 3
+
+    at <anonymous> (/workspace/scratch/b4f855937e46/main/tests/operation-hidden.mjs:78:9)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: 0,
+  expected: 3,
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+{"jobs":[{"job_type":"DISCOVER_SITES","status":"completed","investigation_id":null,"result":"{\"ran\":true,\"cycle\":1,\"round\":1,\"sources\":[\"ct_learned\",\"cert_siblings\",\"ct_terms\"],\"delivered\":0,\"delivered_domains\":[],\"new_unique\":0,\"new_infrastructure\":0,\"novel_ecosystems\":0,\"duplicate_sightings\":0,\"new_site_rate\":0,\"duplicate_rate\":0,\"near_duplicate_new\":0,\"near_duplicate_rate\":0,\"useful_new_site_rate_cumulative\":0,\"source_novelty\":{\"ct_learned\":0,\"cert_siblings\":0,\"ct_terms\":0},\"rediscovered\":[],\"aged\":0,\"ecosystem_suppressed_total\":0,\"watch\":{\"checked\":0,\"changed\":0,\"changes\":[],\"dns_used\":0},\"probed\":0,\"budget\":{\"limits\":{\"http\":120,\"dns\":600,\"crtsh\":12,\"rdap\":60},\"used\":{\"http\":0,\"dns\":0,\"crtsh\":12,\"rdap\":0}},\"recovered_interrupted\":0,\"saturated\":true}"},{"job_type":"INVESTIGATE_SITE","status":"completed","investigation_id":"92e7efb9-3003-433e-9554-6e02efaa1c7a","result":"{\"batch_id\":\"si:0b5fbad2-6163-49ac-a6bb-958cc3a89784:9621c7c1c7fffc608a5d9d8f40428123\",\"record_count\":18}"},{"job_type":"ANALYZE_WALLET","status":"completed","investigation_id":"92e7efb9-3003-433e-9554-6e02efaa1c7a","result":"{\"pipeline\":\"wallet-v4\",\"wallet_candidate_id\":\"fc7056e4-7231-498d-a902-a7d1b4c04d01\",\"validation_status\":\"valid\",\"network\":\"ethereum\",\"canonical_key\":\"ethereum:0x1111111111111111111111111111111111111111\",\"ingestion_batch\":\"wallet-v4:cae343e9-578f-445e-902a-e0f199d078f7\",\"analysis\":\"COMPLETED\",\"completeness\":\"COMPLETE\",\"transactions\":1,\"counterparties\":1,\"evidence\":3,\"relationships\":1}"},{"job_type":"FIND_RELATED_SITES","status":"completed","investigation_id":"92e7efb9-3003-433e-9554-6e02efaa1c7a","result":"{\"seed\":\"q1c6ceabc708.top\",\"round\":2,\"delivered\":0,\"campaign_key\":\"v2:round:2:q1c6ceabc708.top\",\"new_candidates\":[],\"hunt\":\"campaign:q1c6ceabc708.top\"}"}],"work":[{"kind":"discovery_cycle","status":"done","reason":"only 0 candidate(s) waiting","result":"{\"ran\":true,\"cycle\":1,\"round\":1,\"sources\":[\"ct_learned\",\"cert_siblings\",\"ct_terms\"],\"delivered\":0,\"delivered_domains\":[],\"new_unique\":0,\"new_infrastructure\":0,\"novel_ecosystems\":0,\"duplicate_sightings\":0,\"new_site_rate\":0,\"duplicate_rate\":0,\"near_duplicate_new\":0,\"near_duplicate_rate\":0,\"useful_new_site_rate_cumulative\":0,\"source_novelty\":{\"ct_learned\":0,\"cert_siblings\":0,\"ct_terms\":0},\"rediscovered\":[],\"aged\":0,\"ecosystem_suppressed_total\":0,\"watch\":{\"checked\":0,\"changed\":0,\"changes\":[],\"dns_used\":0},\"probed\":0,\"budget\":{\"limits\":{\"http\":120,\"dns\":600,\"crtsh\":12,\"rdap\":60},\"used\":{\"http\":0,\"dns\":0,\"crtsh\":12,\"rdap\":0}},\"recovered_interrupted\":0,\"saturated\":true,\"useful\":0}"},{"kind":"analyze_wallet","status":"cancelled","reason":"Wallet seen on q1c6ceabc708.top has not been analysed","result":"{\"cancelled\":\"gap resolved: Wallet Investigator analysed it\"}"}],"candidates":[]}

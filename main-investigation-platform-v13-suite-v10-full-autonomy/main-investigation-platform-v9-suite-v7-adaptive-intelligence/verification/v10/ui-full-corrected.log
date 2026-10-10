@@ -1,0 +1,37 @@
+
+=== suite (1 step) ===
+--- suite 1/1: node --experimental-sqlite --disable-warning=ExperimentalWarning --import tsx --import file:///workspace/scratch/0dbe5278a453/v10-active/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/lib/sqljs-fallback.mjs tests/suite-workflow.mjs
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+[MainPlatformV6] Initialized integration module 'wallet_investigator' with capabilities: [
+  'blockchain-analysis',
+  'wallet-validation',
+  'counterparty-discovery',
+  'fund-flow-analysis',
+  'controlled-wallet-expansion'
+]
+[Database] Initialized new database at /tmp/mip-suite-PB68nW/wallet-runtime/data/wallet_investigator.sqlite
+[Migrations] Applying migration v1: 001_initial_schema...
+[Migrations] Applying migration v2: 002_indexes_and_views...
+[Migrations] Migration status: 2 applied. Current schema version: v2
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+/workspace/scratch/0dbe5278a453/v10-active/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/ui-click-all.py:62: SyntaxWarning: invalid escape sequence '\s'
+  !!el.getAttribute('aria-current') || /(^|\s)(active|on|selected)(\s|$)/.test(el.className || '') ||
+SWEEP /advanced: 20 controls
+SWEEP /campaigns/90732499-926d-400a-9886-5e7fdda3be40: 21 controls
+SWEEP /campaigns: 10 controls
+SWEEP /discovery: 13 controls
+SWEEP /finder: 28 controls
+SWEEP /hunter: 15 controls
+SWEEP /inbox: 10 controls
+SWEEP /integration: 9 controls
+SWEEP /integration/status: 9 controls
+SWEEP /intelligence: 46 controls
+SWEEP /investigations/1a96c347-8fcf-428d-bea1-8a445158a8f7: 26 controls
+SWEEP /investigations: 17 controls
+SWEEP /logger: 14 controls
+SWEEP /operations/hunter%3Aop%3Asuite-1: 56 controls
+SWEEP /operations: 22 controls
+SWEEP /orchestration: 63 controls
+SWEEP /overview: 16 controls
+SWEEP /: 32 controls

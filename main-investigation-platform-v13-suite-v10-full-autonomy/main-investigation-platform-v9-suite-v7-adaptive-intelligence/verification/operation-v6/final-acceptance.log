@@ -1,0 +1,84 @@
+
+=== operation-intelligence (4 steps) ===
+--- operation-intelligence 1/4: node --experimental-sqlite --import tsx tests/operation-intelligence.mjs
+PASS canonical evidence graph, competing hypotheses and complete source lineage
+PASS 100 weak correlations never become independent evidence or ownership
+PASS Hunter replay keeps one logical hypothesis and contradiction history
+PASS omitted contradictions and challenging evidence survive later snapshots
+PASS disappearance and reappearance are explicit temporal facts; old observations cannot undo them
+PASS pause projects evidence but does not create hunts
+PASS event storms and concurrent evaluation create one bounded discriminating hunt
+PASS used-state Main restart preserves hypotheses, challenges, budgets and action identity
+PASS unfinished durable handoff recovers the exact work fingerprint
+PASS split is proposed without boundary mutation and stale review hashes are rejected
+PASS analyst-approved split is atomic, replay-safe and retains original provenance
+PASS Hunter replay cannot undo analyst boundaries
+PASS consolidation requires a reviewed decision, preserves aliases and rejects stale revisions
+PASS bounded hunt exhaustion parks without repeat work
+PASS populated v5 additive migration is replayable and rollback leaves prior data intact
+{"ok":true,"checks":15,"passed":["canonical evidence graph, competing hypotheses and complete source lineage","100 weak correlations never become independent evidence or ownership","Hunter replay keeps one logical hypothesis and contradiction history","omitted contradictions and challenging evidence survive later snapshots","disappearance and reappearance are explicit temporal facts; old observations cannot undo them","pause projects evidence but does not create hunts","event storms and concurrent evaluation create one bounded discriminating hunt","used-state Main restart preserves hypotheses, challenges, budgets and action identity","unfinished durable handoff recovers the exact work fingerprint","split is proposed without boundary mutation and stale review hashes are rejected","analyst-approved split is atomic, replay-safe and retains original provenance","Hunter replay cannot undo analyst boundaries","consolidation requires a reviewed decision, preserves aliases and rejects stale revisions","bounded hunt exhaustion parks without repeat work","populated v5 additive migration is replayable and rollback leaves prior data intact"]}
+--- operation-intelligence 2/4: node --experimental-sqlite --import tsx tests/operation-crash.mjs
+PASS crash before operation snapshot
+PASS crash after operation snapshot
+PASS crash before hypothesis
+PASS crash after hypothesis
+PASS crash before contradiction
+PASS crash after contradiction
+PASS crash before temporal facet
+PASS crash after temporal facet
+PASS crash before evidence graph
+PASS crash after evidence graph
+PASS crash before hunt reservation
+PASS crash after hunt reservation
+PASS crash before module-work handoff
+PASS crash after module-work handoff
+{"ok":true,"crashes":14,"passed":[{"phase":"operation snapshot","edge":"before","actual_process_signal":"SIGKILL","logical_hunts":1,"preserved_evidence":1},{"phase":"operation snapshot","edge":"after","actual_process_signal":"SIGKILL","logical_hunts":1,"preserved_evidence":1},{"phase":"hypothesis","edge":"before","actual_process_signal":"SIGKILL","logical_hunts":1,"preserved_evidence":1},{"phase":"hypothesis","edge":"after","actual_process_signal":"SIGKILL","logical_hunts":1,"preserved_evidence":1},{"phase":"contradiction","edge":"before","actual_process_signal":"SIGKILL","logical_hunts":1,"preserved_evidence":1},{"phase":"contradiction","edge":"after","actual_process_signal":"SIGKILL","logical_hunts":1,"preserved_evidence":1},{"phase":"temporal facet","edge":"before","actual_process_signal":"SIGKILL","logical_hunts":1,"preserved_evidence":1},{"phase":"temporal facet","edge":"after","actual_process_signal":"SIGKILL","logical_hunts":1,"preserved_evidence":1},{"phase":"evidence graph","edge":"before","actual_process_signal":"SIGKILL","logical_hunts":1,"preserved_evidence":1},{"phase":"evidence graph","edge":"after","actual_process_signal":"SIGKILL","logical_hunts":1,"preserved_evidence":1},{"phase":"hunt reservation","edge":"before","actual_process_signal":"SIGKILL","logical_hunts":1,"preserved_evidence":1},{"phase":"hunt reservation","edge":"after","actual_process_signal":"SIGKILL","logical_hunts":1,"preserved_evidence":1},{"phase":"module-work handoff","edge":"before","actual_process_signal":"SIGKILL","logical_hunts":1,"preserved_evidence":1},{"phase":"module-work handoff","edge":"after","actual_process_signal":"SIGKILL","logical_hunts":1,"preserved_evidence":1}],"scope":"Actual child-process SIGKILL around SQL statements and atomic D1-double batches, restarting used SQLite state. External provider and Finder/Hunter outbox crash phases are covered by existing module tests, not all certified here."}
+--- operation-intelligence 3/4: node --experimental-sqlite --import tsx tests/operation-stress.mjs
+{"ok":true,"rows":{"entities":10000,"relationships":50100,"evidence":5000,"investigations":300,"operations":25,"projected_edges":50100},"timings":[{"name":"load_10000_entities_50100_relationships","ms":634.53},{"name":"director_projection_tick","ms":1729.66},{"name":"director_projection_tick","ms":1499.65},{"name":"director_projection_tick","ms":1433.49},{"name":"director_projection_tick","ms":1481.27},{"name":"director_projection_tick","ms":1469.71},{"name":"director_projection_tick","ms":1404.57},{"name":"director_projection_tick","ms":1423.37},{"name":"director_projection_tick","ms":1515.64},{"name":"director_projection_tick","ms":1514.65},{"name":"director_projection_tick","ms":1879.94},{"name":"director_projection_tick","ms":3108.65},{"name":"director_projection_tick","ms":1914.07},{"name":"director_projection_tick","ms":1451.65},{"name":"director_projection_tick","ms":641.98},{"name":"briefing_and_graph_first_page","ms":17468.66},{"name":"paginated_graph_query","ms":17409.13},{"name":"wallet_view","ms":16806.61},{"name":"edge_explanation","ms":3.67},{"name":"idle_portfolio_tick","ms":138.04}],"memory":{"rss_before_bytes":137199616,"rss_after_bytes":411815936,"peak_rss_kb":402164},"database":{"before_bytes":1777664,"after_bytes":84811776,"growth_bytes":83034112},"limits":{"graph_page":100,"entity_page":200,"timeline_page":100}}
+--- operation-intelligence 4/4: node --experimental-sqlite --import tsx tests/operation-hidden.mjs
+[Database] Initialized new database at /tmp/operation-hidden-jQePYq/wallet/data/wallet_investigator.sqlite
+[Migrations] Applying migration v1: 001_initial_schema...
+[Migrations] Applying migration v2: 002_indexes_and_views...
+[Migrations] Migration status: 2 applied. Current schema version: v2
+[MainPlatformV6] Initialized integration module 'wallet_investigator' with capabilities: [
+  'blockchain-analysis',
+  'wallet-validation',
+  'counterparty-discovery',
+  'fund-flow-analysis',
+  'controlled-wallet-expansion'
+]
+hunter-register {"registered":true,"events":0,"jobs":0,"outbox":0,"decisions":0,"errors":[]}
+SI collected public pages
+hunter-cycle {"registered":false,"events":40,"jobs":0,"outbox":0,"decisions":0,"errors":[]}
+Finder public discovery cycle complete
+{"round":0,"sites":["q1c6ceabc708.top"],"investigated":["q1c6ceabc708.top"],"validated_deposit_wallets":1,"finder_claimed":true,"operation_present":false}
+SI collected public pages
+hunter-cycle {"registered":false,"events":6,"jobs":1,"outbox":1,"decisions":0,"errors":[]}
+Finder public discovery cycle complete
+{"round":1,"sites":["q1c6ceabc708.top"],"investigated":["q1c6ceabc708.top"],"validated_deposit_wallets":1,"finder_claimed":false,"operation_present":true}
+SI collected public pages
+hunter-cycle {"registered":false,"events":50,"jobs":0,"outbox":1,"decisions":0,"errors":[]}
+Finder public discovery cycle complete
+{"round":2,"sites":["q1c6ceabc708.top","q9b97701443a.top"],"investigated":["q1c6ceabc708.top"],"validated_deposit_wallets":1,"finder_claimed":true,"operation_present":true}
+SI collected public pages
+hunter-cycle {"registered":false,"events":50,"jobs":0,"outbox":1,"decisions":0,"errors":[]}
+Finder public discovery cycle complete
+{"round":3,"sites":["q1c6ceabc708.top","q9b97701443a.top"],"investigated":["q1c6ceabc708.top","q9b97701443a.top"],"validated_deposit_wallets":1,"finder_claimed":true,"operation_present":true}
+SI collected public pages
+hunter-cycle {"registered":false,"events":0,"jobs":0,"outbox":0,"decisions":0,"errors":[]}
+Finder public discovery cycle complete
+{"round":4,"sites":["q1c6ceabc708.top","q9b97701443a.top","qfaaae17e6eb.top"],"investigated":["q1c6ceabc708.top","q9b97701443a.top"],"validated_deposit_wallets":1,"finder_claimed":true,"operation_present":true}
+SI collected public pages
+hunter-cycle {"registered":false,"events":50,"jobs":0,"outbox":0,"decisions":0,"errors":[]}
+Finder public discovery cycle complete
+{"round":5,"sites":["q1c6ceabc708.top","q9b97701443a.top","q9e99c254b43.top","qf8a0603ea19.top","qfaaae17e6eb.top"],"investigated":["q1c6ceabc708.top","q9b97701443a.top","qfaaae17e6eb.top"],"validated_deposit_wallets":2,"finder_claimed":true,"operation_present":true}
+SI collected public pages
+hunter-cycle {"registered":false,"events":50,"jobs":1,"outbox":1,"decisions":0,"errors":[]}
+Finder public discovery cycle complete
+{"round":6,"sites":["q1c6ceabc708.top","q9b97701443a.top","q9e99c254b43.top","qf8a0603ea19.top","qfaaae17e6eb.top"],"investigated":["q1c6ceabc708.top","q9b97701443a.top","qfaaae17e6eb.top","q9e99c254b43.top"],"validated_deposit_wallets":3,"finder_claimed":true,"operation_present":true}
+SI collected public pages
+hunter-cycle {"registered":false,"events":50,"jobs":1,"outbox":1,"decisions":0,"errors":[]}
+Finder public discovery cycle complete
+{"round":7,"sites":["q1c6ceabc708.top","q9b97701443a.top","q9e99c254b43.top","qf8a0603ea19.top","qfaaae17e6eb.top"],"investigated":["q1c6ceabc708.top","q9b97701443a.top","qfaaae17e6eb.top","q9e99c254b43.top","qf8a0603ea19.top"],"validated_deposit_wallets":3,"finder_claimed":true,"operation_present":true}
+{"ok":true,"seed_sites":1,"initial_wallets":0,"hidden_sites_injected":0,"hidden_sites_discovered":3,"target_sites_investigated":4,"validated_target_wallets":2,"unsupported_ownership_claims":0,"duplicate_active_jobs":0,"human_actions":0,"jobs":25,"jobs_per_useful_discovery":8.333333333333334,"transport_requests":299,"requests_per_useful_discovery":99.66666666666667,"provider_calls":3,"time_to_final_operation_update_ms":33604.890825,"restart":true,"limitations":["Public/blockchain transports are synthetic.","Unchanged Logger classifier ran on real rendered DOM; installed extension lifecycle remains a separate environment-limited check.","This corpus does not certify all operation benchmark scenarios."]}
+PASS operation-intelligence

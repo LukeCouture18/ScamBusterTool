@@ -1,0 +1,402 @@
+
+=== autonomy-v10 (9 steps) ===
+--- autonomy-v10 1/9: node --experimental-sqlite --import tsx tests/v10-one-click.mjs
+(node:12) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+PASS [
+  'generic correlation / copied and unknown origins / counter-evidence / forged wallet flag rejected',
+  'bounded search / concurrent supply / supported selection / no analyst vote / restart and site-start dedup / timeout park'
+]
+--- autonomy-v10 2/9: node --experimental-sqlite --import tsx tests/v10-missions.mjs
+(node:49) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+PASS bounded missions and recovery
+--- autonomy-v10 3/9: node --experimental-sqlite --import tsx tests/v10-authority.mjs
+(node:88) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+[Database] Initialized new database at /tmp/v10-authority-TMaql8/wallet/data/wallet_investigator.sqlite
+[Migrations] Applying migration v1: 001_initial_schema...
+[Migrations] Applying migration v2: 002_indexes_and_views...
+[Migrations] Migration status: 2 applied. Current schema version: v2
+[MainPlatformV6] Initialized integration module 'wallet_investigator' with capabilities: [
+  'blockchain-analysis',
+  'wallet-validation',
+  'counterparty-discovery',
+  'fund-flow-analysis',
+  'controlled-wallet-expansion'
+]
+PASS authoritative confidence and expired-owner fencing
+--- autonomy-v10 4/9: node --experimental-sqlite --import tsx tests/v10-crash.mjs
+(node:138) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+PASS before search-created
+PASS after search-created
+PASS before selection
+PASS after selection
+PASS before site-created
+PASS after site-created
+PASS before mission-created
+PASS after mission-created
+PASS before search-attached
+PASS after search-attached
+PASS before child-reserved
+PASS after child-reserved
+PASS before child-site-created
+PASS after child-site-created
+PASS before child-attached
+PASS after child-attached
+PASS before mission-history
+PASS after mission-history
+--- autonomy-v10 5/9: node --experimental-sqlite --import tsx tests/v10-golden.mjs
+(node:888) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+[Database] Initialized new database at /tmp/autonomy-v10-SDm2TQ/wallet/data/wallet_investigator.sqlite
+[Migrations] Applying migration v1: 001_initial_schema...
+[Migrations] Applying migration v2: 002_indexes_and_views...
+[Migrations] Migration status: 2 applied. Current schema version: v2
+[MainPlatformV6] Initialized integration module 'wallet_investigator' with capabilities: [
+  'blockchain-analysis',
+  'wallet-validation',
+  'counterparty-discovery',
+  'fund-flow-analysis',
+  'controlled-wallet-expansion'
+]
+AssertionError [ERR_ASSERTION]: {"id":"golden-start-public","state":"Finding site","candidate_id":null,"investigation_id":null,"assessment":{},"generation":2,"reason":"Bounded Finder discovery queued","deadline_at":"2026-10-04T05:38:57.719Z","workspace_url":null}
++ actual - expected
+
++ 'Finding site'
+- 'Investigating'
+
+    at <anonymous> (/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/v10-golden.mjs:60:81)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: 'Finding site',
+  expected: 'Investigating',
+  operator: 'strictEqual'
+}
+FAIL autonomy-v10: step 5/9 exited with 1: node --experimental-sqlite --import tsx tests/v10-golden.mjs
+--- autonomy-v10 6/9: node --experimental-sqlite --import tsx tests/v10-request-lifecycle.mjs
+{"ok": true, "checks": ["malformed stored context", "URL context precedence", "stale response rejected", "slow polling completes without starvation", "empty URL clears previous data and stops requests", "context set/clear updates links"], "requests": {"a": 1, "b": 15, "slow": 3}, "errors": []}
+--- autonomy-v10 7/9: [integrations/crypto-wallet-logger-v08] node --test tests/accounts-v10.test.mjs tests/accounts-worker-v10.test.mjs tests/wallet-core.test.mjs tests/context-precision.test.mjs tests/sync-queue.test.mjs
+TAP version 13
+# Subtest: existing standalone vault fails closed and migrates all metadata before removing plaintext source
+ok 1 - existing standalone vault fails closed and migrates all metadata before removing plaintext source
+  ---
+  duration_ms: 285.955597
+  type: 'test'
+  ...
+# Subtest: vault encrypts complete private payload, binds request identity, persists and locks on restart
+ok 2 - vault encrypts complete private payload, binds request identity, persists and locks on restart
+  ---
+  duration_ms: 276.869372
+  type: 'test'
+  ...
+# Subtest: explicit owned import, encrypted edit, locked capture and recursive secret hygiene
+ok 3 - explicit owned import, encrypted edit, locked capture and recursive secret hygiene
+  ---
+  duration_ms: 202.744366
+  type: 'test'
+  ...
+# Subtest: bounded mailbox identity precedes remote creation; lost commit recovers same identity without another POST
+ok 4 - bounded mailbox identity precedes remote creation; lost commit recovers same identity without another POST
+  ---
+  duration_ms: 287.131811
+  type: 'test'
+  ...
+# Subtest: worker protects private APIs and pauses all new capture while locked or restarted
+ok 5 - worker protects private APIs and pauses all new capture while locked or restarted
+  ---
+  duration_ms: 212.970109
+  type: 'test'
+  ...
+# Subtest: structured private fields are excluded before wallet discovery while deposit fields survive
+ok 6 - structured private fields are excluded before wallet discovery while deposit fields survive
+  ---
+  duration_ms: 4.066474
+  type: 'test'
+  ...
+# Subtest: deposit card: address with its own label, copy button and QR
+ok 7 - deposit card: address with its own label, copy button and QR
+  ---
+  duration_ms: 12.38442
+  type: 'test'
+  ...
+# Subtest: deposit wording only in a heading, or only in the address's own sentence, is still deposit
+ok 8 - deposit wording only in a heading, or only in the address's own sentence, is still deposit
+  ---
+  duration_ms: 3.093205
+  type: 'test'
+  ...
+# Subtest: a lone address in a deposit section (no other address there) keeps the section's deposit wording
+ok 9 - a lone address in a deposit section (no other address there) keeps the section's deposit wording
+  ---
+  duration_ms: 0.924124
+  type: 'test'
+  ...
+# Subtest: deposit next to a contract mention stays deposit (contract evidence is not about this address)
+ok 10 - deposit next to a contract mention stays deposit (contract evidence is not about this address)
+  ---
+  duration_ms: 1.158077
+  type: 'test'
+  ...
+# Subtest: network responses and script config keep their key-path evidence
+ok 11 - network responses and script config keep their key-path evidence
+  ---
+  duration_ms: 2.195602
+  type: 'test'
+  ...
+# Subtest: token contract inside the deposit card: its own label beats the card's deposit cues
+ok 12 - token contract inside the deposit card: its own label beats the card's deposit cues
+  ---
+  duration_ms: 1.475586
+  type: 'test'
+  ...
+# Subtest: transaction history rows (table or div list) inside a deposit page
+ok 13 - transaction history rows (table or div list) inside a deposit page
+  ---
+  duration_ms: 3.124183
+  type: 'test'
+  ...
+# Subtest: example / documentation addresses
+ok 14 - example / documentation addresses
+  ---
+  duration_ms: 0.90842
+  type: 'test'
+  ...
+# Subtest: withdrawal inputs and the visitor's own addresses
+ok 15 - withdrawal inputs and the visitor's own addresses
+  ---
+  duration_ms: 1.365129
+  type: 'test'
+  ...
+# Subtest: unrelated addresses: partners, team wallets, referrers, reported scam addresses
+ok 16 - unrelated addresses: partners, team wallets, referrers, reported scam addresses
+  ---
+  duration_ms: 0.832585
+  type: 'test'
+  ...
+# Subtest: deposit cues that only describe the surrounding section give unknown, not deposit
+ok 17 - deposit cues that only describe the surrounding section give unknown, not deposit
+  ---
+  duration_ms: 0.349087
+  type: 'test'
+  ...
+# Subtest: malformed addresses (failing checksum) are never called deposit
+ok 18 - malformed addresses (failing checksum) are never called deposit
+  ---
+  duration_ms: 0.684102
+  type: 'test'
+  ...
+# Subtest: near zone is derived from `local` when the caller passes none
+ok 19 - near zone is derived from `local` when the caller passes none
+  ---
+  duration_ms: 0.774068
+  type: 'test'
+  ...
+# Subtest: a weakly supported deposit call gets a lower confidence than a well-supported one
+ok 20 - a weakly supported deposit call gets a lower confidence than a well-supported one
+  ---
+  duration_ms: 0.296227
+  type: 'test'
+  ...
+# Subtest: item enqueued while a delivery is in flight is delivered in the same drain and never lost
+ok 21 - item enqueued while a delivery is in flight is delivered in the same drain and never lost
+  ---
+  duration_ms: 56.455573
+  type: 'test'
+  ...
+# Subtest: many concurrent enqueues: every item delivered exactly once, queue empty
+ok 22 - many concurrent enqueues: every item delivered exactly once, queue empty
+  ---
+  duration_ms: 370.1762
+  type: 'test'
+  ...
+# Subtest: identical replays dedupe; permanent rejections do not block the queue; offline backs off
+ok 23 - identical replays dedupe; permanent rejections do not block the queue; offline backs off
+  ---
+  duration_ms: 50.977291
+  type: 'test'
+  ...
+# Subtest: wallet.observation envelope and payload follow contract §1
+ok 24 - wallet.observation envelope and payload follow contract §1
+  ---
+  duration_ms: 24.93498
+  type: 'test'
+  ...
+# Subtest: sha256 matches node:crypto
+ok 25 - sha256 matches node:crypto
+  ---
+  duration_ms: 5.868812
+  type: 'test'
+  ...
+# Subtest: keccak-256 (Ethereum padding) known vectors
+ok 26 - keccak-256 (Ethereum padding) known vectors
+  ---
+  duration_ms: 1.921048
+  type: 'test'
+  ...
+# Subtest: EIP-55 specification vectors
+ok 27 - EIP-55 specification vectors
+  ---
+  duration_ms: 2.447021
+  type: 'test'
+  ...
+# Subtest: built-in token contract list is internally valid
+ok 28 - built-in token contract list is internally valid
+  ---
+  duration_ms: 4.251503
+  type: 'test'
+  ...
+# Subtest: bitcoin base58check and bech32/bech32m with witness rules
+ok 29 - bitcoin base58check and bech32/bech32m with witness rules
+  ---
+  duration_ms: 3.874854
+  type: 'test'
+  ...
+# Subtest: litecoin and dogecoin (generated with reference encoders)
+ok 30 - litecoin and dogecoin (generated with reference encoders)
+  ---
+  duration_ms: 1.53784
+  type: 'test'
+  ...
+# Subtest: tron, xrp, solana
+ok 31 - tron, xrp, solana
+  ---
+  duration_ms: 0.500295
+  type: 'test'
+  ...
+# Subtest: extraction rejects tx hashes and hex substrings, keeps case
+ok 32 - extraction rejects tx hashes and hex substrings, keeps case
+  ---
+  duration_ms: 2.53905
+  type: 'test'
+  ...
+# Subtest: extraction across families with boundaries and zero-width characters
+ok 33 - extraction across families with boundaries and zero-width characters
+  ---
+  duration_ms: 1.454895
+  type: 'test'
+  ...
+# Subtest: solana-length base58 needs wallet context and is rejected after signature/hash labels
+ok 34 - solana-length base58 needs wallet context and is rejected after signature/hash labels
+  ---
+  duration_ms: 1.150095
+  type: 'test'
+  ...
+# Subtest: EIP-681 URIs: chain id, value and ERC-20 transfer recipient
+ok 35 - EIP-681 URIs: chain id, value and ERC-20 transfer recipient
+  ---
+  duration_ms: 2.576285
+  type: 'test'
+  ...
+# Subtest: bitcoin/litecoin/dogecoin/tron/solana/xrp URIs
+ok 36 - bitcoin/litecoin/dogecoin/tron/solana/xrp URIs
+  ---
+  duration_ms: 0.904034
+  type: 'test'
+  ...
+# Subtest: extractAll: token contract inside a transfer URI is not the payment target
+ok 37 - extractAll: token contract inside a transfer URI is not the payment target
+  ---
+  duration_ms: 0.799426
+  type: 'test'
+  ...
+# Subtest: network hints: canonical mapping and priority
+ok 38 - network hints: canonical mapping and priority
+  ---
+  duration_ms: 2.728545
+  type: 'test'
+  ...
+# Subtest: deposit: words + structure
+ok 39 - deposit: words + structure
+  ---
+  duration_ms: 7.178558
+  type: 'test'
+  ...
+# Subtest: recharge / top up / fund your account / payment instruction
+ok 40 - recharge / top up / fund your account / payment instruction
+  ---
+  duration_ms: 0.932867
+  type: 'test'
+  ...
+# Subtest: withdrawal never counts as deposit
+ok 41 - withdrawal never counts as deposit
+  ---
+  duration_ms: 1.568696
+  type: 'test'
+  ...
+# Subtest: examples: placeholder, e.g., docs code blocks, well-known addresses
+ok 42 - examples: placeholder, e.g., docs code blocks, well-known addresses
+  ---
+  duration_ms: 0.66304
+  type: 'test'
+  ...
+# Subtest: transaction history and contract/token
+ok 43 - transaction history and contract/token
+  ---
+  duration_ms: 2.570898
+  type: 'test'
+  ...
+# Subtest: unrelated and unknown
+ok 44 - unrelated and unknown
+  ---
+  duration_ms: 0.754668
+  type: 'test'
+  ...
+# Subtest: hidden-panel cue lowers confidence
+ok 45 - hidden-panel cue lowers confidence
+  ---
+  duration_ms: 0.40414
+  type: 'test'
+  ...
+# Subtest: key paths from script config / network responses
+ok 46 - key paths from script config / network responses
+  ---
+  duration_ms: 2.374281
+  type: 'test'
+  ...
+# Subtest: scanJson records key paths, sibling hints and never invokes getters
+ok 47 - scanJson records key paths, sibling hints and never invokes getters
+  ---
+  duration_ms: 1.232079
+  type: 'test'
+  ...
+# Subtest: scanScriptText: JS config with approximate key paths
+ok 48 - scanScriptText: JS config with approximate key paths
+  ---
+  duration_ms: 0.891154
+  type: 'test'
+  ...
+# Subtest: canonical identity and observationId
+ok 49 - canonical identity and observationId
+  ---
+  duration_ms: 0.259832
+  type: 'test'
+  ...
+# Subtest: legacy network labels keep v0.8 UI/verifier semantics
+ok 50 - legacy network labels keep v0.8 UI/verifier semantics
+  ---
+  duration_ms: 0.154723
+  type: 'test'
+  ...
+# Subtest: main-world/wallet-core.js is a byte-identical copy of wallet-core.js
+ok 51 - main-world/wallet-core.js is a byte-identical copy of wallet-core.js
+  ---
+  duration_ms: 0.784814
+  type: 'test'
+  ...
+1..51
+# tests 51
+# suites 0
+# pass 51
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1117.398547
+--- autonomy-v10 8/9: python tests/v10-account-fill.py
+{"ok": true, "scope": "Rendered Chromium DOM, production fill function; no installed extension or browser API isolation certification", "cases": [{"case": "login", "filled": 2, "submissions": 0}, {"case": "signup", "filled": 3, "submissions": 0}, {"case": "code", "filled": 1, "submissions": 0}, {"case": "new-password-login", "filled": 0, "submissions": 0}, {"case": "duplicate-forms", "filled": 0, "submissions": 0}, {"case": "ambiguous-passwords", "filled": 0, "submissions": 0}, {"case": "disabled", "filled": 0, "submissions": 0}, {"case": "readonly", "filled": 0, "submissions": 0}, {"case": "hidden", "filled": 0, "submissions": 0}, {"case": "hidden-extra", "filled": 2, "submissions": 0}, {"case": "wrong-origin", "filled": 0, "submissions": 0}, {"case": "iframe", "filled": 0, "submissions": 0}], "page_errors": []}
+--- autonomy-v10 9/9: python tests/v10-accounts-ui.py
+{"ok": true, "checks": ["locked empty state", "explicit intent and same identity recovery", "exact tab selection, explicit fill, open site and coarse login confirmation", "private reveal/copy, production mailbox parsing, message disclosure, code and operator-opened verification link", "375/1024/1280/1600 widths without overflow", "lock clears secrets; error stays visible; encrypted restart recovery"], "errors": [], "scope": "Production account UI, real WebCrypto and mailbox parser in rendered Chromium; Chrome messaging/tabs/clipboard/provider transport are fixtures. Fill function and trusted worker boundaries are tested separately; no installed extension certification."}
+FAIL autonomy-v10: 8/9 steps passed

@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/workspace/scratch/0dbe5278a453/verification-runs/node24/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/v10-production-browser.py", line 40, in <module>
+    created=started.value.json();assert started.value.status==202;search_id=created['id'];assert created['state']=='Finding site'
+                                        ^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

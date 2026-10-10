@@ -1,0 +1,10 @@
+{
+  "name": "crypto-wallet-logger",
+  "version": "0.9.0",
+  "private": true,
+  "type": "commonjs",
+  "description": "Chrome MV3 extension. This file only tells Node (unit tests) to treat the extension scripts as classic/CommonJS scripts; Chrome ignores it.",
+  "scripts": {
+    "test": "node tests/run-tests.mjs"
+  }
+}

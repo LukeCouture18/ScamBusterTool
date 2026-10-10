@@ -1,0 +1,9928 @@
+{
+ "summary": {
+  "config": {
+   "seeds": [
+    101,
+    203,
+    307
+   ],
+   "rounds": 8,
+   "difficulty": "hard",
+   "scenarios": [
+    "mixed",
+    "cert_blackout",
+    "cdn_maze",
+    "copycat",
+    "migration",
+    "mirror_flood",
+    "collapse",
+    "dark_family"
+   ],
+   "budgets": {
+    "fetch_budget": 60,
+    "dns_budget": 220,
+    "crtsh_budget": 6,
+    "rdap_budget": 30,
+    "max_deliver": 5
+   },
+   "review_slots": 5
+  },
+  "trees": {
+   "main-investigation-platform-v9-suite-v7-adaptive-intelligence": {
+    "new_useful": 21.583333333333332,
+    "found_share": 0.44370833333333337,
+    "pool_useful": 21.791666666666668,
+    "precision": 0.93275,
+    "multi_hop": 6.083333333333333,
+    "median_pivots": 1.0833333333333333,
+    "operations": 8.208333333333334,
+    "unknown_family": 3.4583333333333335,
+    "reappearances": 1.7083333333333333,
+    "value": 69.96666666666667,
+    "requests_total": 3128.0416666666665,
+    "requests_per_useful": 166.95416666666668,
+    "queries_per_useful": 9.75,
+    "dead_end_queries": 168.08333333333334,
+    "repeated_queries": 35.625,
+    "mirror_requests": 114.75,
+    "junk_fetches": 190.54166666666666,
+    "rel_false_cross_op": 0.0,
+    "first_useful_round": 0.16666666666666666,
+    "first_useful_requests": 344.125,
+    "runs": 24,
+    "new_useful_sum": 518,
+    "value_sum": 1679.2,
+    "requests_sum": 75073,
+    "engine_errors": 0,
+    "reachable_units": 1147,
+    "found_share_of_reachable": 0.452
+   }
+  },
+  "per_scenario": {
+   "mixed": {
+    "main-investigation-platform-v9-suite-v7-adaptive-intelligence": {
+     "new_useful": 15.666666666666666,
+     "found_share": 0.373,
+     "pool_useful": 16.0,
+     "precision": 0.9133333333333332,
+     "multi_hop": 5.0,
+     "median_pivots": 1.3333333333333333,
+     "operations": 7.333333333333333,
+     "unknown_family": 4.333333333333333,
+     "reappearances": 0.0,
+     "value": 48.833333333333336,
+     "requests_total": 2731.6666666666665,
+     "requests_per_useful": 184.26666666666665,
+     "queries_per_useful": 10.366666666666665,
+     "dead_end_queries": 133.33333333333334,
+     "repeated_queries": 28.666666666666668,
+     "mirror_requests": 91.66666666666667,
+     "junk_fetches": 160.66666666666666,
+     "rel_false_cross_op": 0.0,
+     "first_useful_round": 0.0,
+     "first_useful_requests": 284.3333333333333,
+     "runs": 3,
+     "new_useful_sum": 47,
+     "value_sum": 146.5,
+     "requests_sum": 8195,
+     "engine_errors": 0,
+     "reachable_units": 125,
+     "found_share_of_reachable": 0.376
+    }
+   },
+   "cert_blackout": {
+    "main-investigation-platform-v9-suite-v7-adaptive-intelligence": {
+     "new_useful": 27.333333333333332,
+     "found_share": 0.5666666666666668,
+     "pool_useful": 27.666666666666668,
+     "precision": 0.9833333333333334,
+     "multi_hop": 6.333333333333333,
+     "median_pivots": 1.0,
+     "operations": 9.666666666666666,
+     "unknown_family": 2.0,
+     "reappearances": 4.0,
+     "value": 100.7,
+     "requests_total": 3166.6666666666665,
+     "requests_per_useful": 123.16666666666667,
+     "queries_per_useful": 8.533333333333333,
+     "dead_end_queries": 195.66666666666666,
+     "repeated_queries": 45.333333333333336,
+     "mirror_requests": 117.0,
+     "junk_fetches": 151.0,
+     "rel_false_cross_op": 0.0,
+     "first_useful_round": 0.0,
+     "first_useful_requests": 255.33333333333334,
+     "runs": 3,
+     "new_useful_sum": 82,
+     "value_sum": 302.1,
+     "requests_sum": 9500,
+     "engine_errors": 0,
+     "reachable_units": 142,
+     "found_share_of_reachable": 0.577
+    }
+   },
+   "cdn_maze": {
+    "main-investigation-platform-v9-suite-v7-adaptive-intelligence": {
+     "new_useful": 19.666666666666668,
+     "found_share": 0.3606666666666667,
+     "pool_useful": 19.666666666666668,
+     "precision": 0.9366666666666666,
+     "multi_hop": 4.333333333333333,
+     "median_pivots": 1.0,
+     "operations": 7.666666666666667,
+     "unknown_family": 2.3333333333333335,
+     "reappearances": 2.0,
+     "value": 70.83333333333333,
+     "requests_total": 2937.0,
+     "requests_per_useful": 149.76666666666668,
+     "queries_per_useful": 9.433333333333334,
+     "dead_end_queries": 155.66666666666666,
+     "repeated_queries": 40.0,
+     "mirror_requests": 77.33333333333333,
+     "junk_fetches": 152.66666666666666,
+     "rel_false_cross_op": 0.0,
+     "first_useful_round": 0.3333333333333333,
+     "first_useful_requests": 404.3333333333333,
+     "runs": 3,
+     "new_useful_sum": 59,
+     "value_sum": 212.5,
+     "requests_sum": 8811,
+     "engine_errors": 0,
+     "reachable_units": 164,
+     "found_share_of_reachable": 0.36
+    }
+   },
+   "copycat": {
+    "main-investigation-platform-v9-suite-v7-adaptive-intelligence": {
+     "new_useful": 24.0,
+     "found_share": 0.48533333333333334,
+     "pool_useful": 24.333333333333332,
+     "precision": 0.934,
+     "multi_hop": 7.333333333333333,
+     "median_pivots": 1.0,
+     "operations": 10.0,
+     "unknown_family": 4.0,
+     "reappearances": 1.6666666666666667,
+     "value": 67.73333333333333,
+     "requests_total": 3521.3333333333335,
+     "requests_per_useful": 158.26666666666668,
+     "queries_per_useful": 9.633333333333333,
+     "dead_end_queries": 190.33333333333334,
+     "repeated_queries": 32.666666666666664,
+     "mirror_requests": 141.66666666666666,
+     "junk_fetches": 252.33333333333334,
+     "rel_false_cross_op": 0.0,
+     "first_useful_round": 0.3333333333333333,
+     "first_useful_requests": 438.0,
+     "runs": 3,
+     "new_useful_sum": 72,
+     "value_sum": 203.2,
+     "requests_sum": 10564,
+     "engine_errors": 0,
+     "reachable_units": 148,
+     "found_share_of_reachable": 0.486
+    }
+   },
+   "migration": {
+    "main-investigation-platform-v9-suite-v7-adaptive-intelligence": {
+     "new_useful": 20.0,
+     "found_share": 0.42366666666666664,
+     "pool_useful": 20.0,
+     "precision": 0.9423333333333334,
+     "multi_hop": 5.666666666666667,
+     "median_pivots": 1.0,
+     "operations": 7.333333333333333,
+     "unknown_family": 0.6666666666666666,
+     "reappearances": 1.3333333333333333,
+     "value": 61.86666666666667,
+     "requests_total": 2971.3333333333335,
+     "requests_per_useful": 198.63333333333335,
+     "queries_per_useful": 10.6,
+     "dead_end_queries": 158.66666666666666,
+     "repeated_queries": 36.666666666666664,
+     "mirror_requests": 128.0,
+     "junk_fetches": 183.33333333333334,
+     "rel_false_cross_op": 0.0,
+     "first_useful_round": 0.3333333333333333,
+     "first_useful_requests": 398.6666666666667,
+     "runs": 3,
+     "new_useful_sum": 60,
+     "value_sum": 185.6,
+     "requests_sum": 8914,
+     "engine_errors": 0,
+     "reachable_units": 134,
+     "found_share_of_reachable": 0.448
+    }
+   },
+   "mirror_flood": {
+    "main-investigation-platform-v9-suite-v7-adaptive-intelligence": {
+     "new_useful": 20.333333333333332,
+     "found_share": 0.454,
+     "pool_useful": 20.666666666666668,
+     "precision": 0.9066666666666667,
+     "multi_hop": 6.0,
+     "median_pivots": 1.3333333333333333,
+     "operations": 8.0,
+     "unknown_family": 4.666666666666667,
+     "reappearances": 1.3333333333333333,
+     "value": 66.3,
+     "requests_total": 3263.6666666666665,
+     "requests_per_useful": 169.16666666666666,
+     "queries_per_useful": 10.633333333333333,
+     "dead_end_queries": 172.33333333333334,
+     "repeated_queries": 39.0,
+     "mirror_requests": 204.0,
+     "junk_fetches": 197.33333333333334,
+     "rel_false_cross_op": 0.0,
+     "first_useful_round": 0.0,
+     "first_useful_requests": 283.0,
+     "runs": 3,
+     "new_useful_sum": 61,
+     "value_sum": 198.9,
+     "requests_sum": 9791,
+     "engine_errors": 0,
+     "reachable_units": 134,
+     "found_share_of_reachable": 0.455
+    }
+   },
+   "collapse": {
+    "main-investigation-platform-v9-suite-v7-adaptive-intelligence": {
+     "new_useful": 16.0,
+     "found_share": 0.38633333333333336,
+     "pool_useful": 16.0,
+     "precision": 0.888,
+     "multi_hop": 3.3333333333333335,
+     "median_pivots": 1.0,
+     "operations": 5.333333333333333,
+     "unknown_family": 1.3333333333333333,
+     "reappearances": 1.3333333333333333,
+     "value": 43.96666666666667,
+     "requests_total": 3050.6666666666665,
+     "requests_per_useful": 238.20000000000002,
+     "queries_per_useful": 10.566666666666666,
+     "dead_end_queries": 127.33333333333333,
+     "repeated_queries": 23.0,
+     "mirror_requests": 85.33333333333333,
+     "junk_fetches": 211.33333333333334,
+     "rel_false_cross_op": 0.0,
+     "first_useful_round": 0.3333333333333333,
+     "first_useful_requests": 408.6666666666667,
+     "runs": 3,
+     "new_useful_sum": 48,
+     "value_sum": 131.9,
+     "requests_sum": 9152,
+     "engine_errors": 0,
+     "reachable_units": 121,
+     "found_share_of_reachable": 0.397
+    }
+   },
+   "dark_family": {
+    "main-investigation-platform-v9-suite-v7-adaptive-intelligence": {
+     "new_useful": 29.666666666666668,
+     "found_share": 0.5,
+     "pool_useful": 30.0,
+     "precision": 0.9576666666666666,
+     "multi_hop": 10.666666666666666,
+     "median_pivots": 1.0,
+     "operations": 10.333333333333334,
+     "unknown_family": 8.333333333333334,
+     "reappearances": 2.0,
+     "value": 99.5,
+     "requests_total": 3382.0,
+     "requests_per_useful": 114.16666666666667,
+     "queries_per_useful": 8.233333333333333,
+     "dead_end_queries": 211.33333333333334,
+     "repeated_queries": 39.666666666666664,
+     "mirror_requests": 73.0,
+     "junk_fetches": 215.66666666666666,
+     "rel_false_cross_op": 0.0,
+     "first_useful_round": 0.0,
+     "first_useful_requests": 280.6666666666667,
+     "runs": 3,
+     "new_useful_sum": 89,
+     "value_sum": 298.5,
+     "requests_sum": 10146,
+     "engine_errors": 0,
+     "reachable_units": 179,
+     "found_share_of_reachable": 0.497
+    }
+   }
+  },
+  "unique": {},
+  "wins": [],
+  "world": {
+   "mixed": {
+    "useful_units": 151,
+    "by_min_pivots": {
+     "1": 76,
+     "2": 34,
+     "3": 7,
+     "4": 2,
+     "5+": 3,
+     "unreachable": 26,
+     "0": 3
+    },
+    "unknown_family": 21,
+    "returned": 6,
+    "mirrors": 450,
+    "main_known_r0": 23,
+    "seeds": 3
+   },
+   "cert_blackout": {
+    "useful_units": 154,
+    "by_min_pivots": {
+     "1": 98,
+     "2": 32,
+     "3": 8,
+     "unreachable": 12,
+     "0": 2,
+     "4": 2
+    },
+    "unknown_family": 21,
+    "returned": 14,
+    "mirrors": 450,
+    "main_known_r0": 33,
+    "seeds": 3
+   },
+   "cdn_maze": {
+    "useful_units": 193,
+    "by_min_pivots": {
+     "1": 91,
+     "2": 43,
+     "3": 14,
+     "4": 6,
+     "5+": 7,
+     "unreachable": 29,
+     "0": 3
+    },
+    "unknown_family": 26,
+    "returned": 13,
+    "mirrors": 450,
+    "main_known_r0": 32,
+    "seeds": 3
+   },
+   "copycat": {
+    "useful_units": 171,
+    "by_min_pivots": {
+     "0": 3,
+     "1": 93,
+     "2": 45,
+     "unreachable": 23,
+     "3": 4,
+     "4": 3
+    },
+    "unknown_family": 29,
+    "returned": 8,
+    "mirrors": 450,
+    "main_known_r0": 40,
+    "seeds": 3
+   },
+   "migration": {
+    "useful_units": 159,
+    "by_min_pivots": {
+     "0": 2,
+     "1": 83,
+     "2": 34,
+     "3": 9,
+     "4": 5,
+     "unreachable": 25,
+     "5+": 1
+    },
+    "unknown_family": 18,
+    "returned": 15,
+    "mirrors": 450,
+    "main_known_r0": 26,
+    "seeds": 3
+   },
+   "mirror_flood": {
+    "useful_units": 158,
+    "by_min_pivots": {
+     "0": 4,
+     "1": 88,
+     "2": 30,
+     "3": 8,
+     "unreachable": 24,
+     "4": 2,
+     "5+": 2
+    },
+    "unknown_family": 29,
+    "returned": 9,
+    "mirrors": 1710,
+    "main_known_r0": 35,
+    "seeds": 3
+   },
+   "collapse": {
+    "useful_units": 147,
+    "by_min_pivots": {
+     "0": 3,
+     "1": 74,
+     "2": 33,
+     "3": 7,
+     "4": 4,
+     "unreachable": 26
+    },
+    "unknown_family": 24,
+    "returned": 7,
+    "mirrors": 450,
+    "main_known_r0": 35,
+    "seeds": 3
+   },
+   "dark_family": {
+    "useful_units": 195,
+    "by_min_pivots": {
+     "0": 2,
+     "1": 103,
+     "2": 60,
+     "3": 12,
+     "4": 2,
+     "unreachable": 16
+    },
+    "unknown_family": 61,
+    "returned": 9,
+    "mirrors": 450,
+    "main_known_r0": 30,
+    "seeds": 3
+   }
+  },
+  "noise_floor": {
+   "new_useful": {
+    "values": [
+     [
+      19,
+      19,
+      19
+     ]
+    ],
+    "max_abs_diff": 0
+   },
+   "found_share": {
+    "values": [
+     [
+      0.452,
+      0.452,
+      0.452
+     ]
+    ],
+    "max_abs_diff": 0.0
+   },
+   "pool_useful": {
+    "values": [
+     [
+      20,
+      20,
+      20
+     ]
+    ],
+    "max_abs_diff": 0
+   },
+   "precision": {
+    "values": [
+     [
+      0.95,
+      0.95,
+      0.95
+     ]
+    ],
+    "max_abs_diff": 0.0
+   },
+   "multi_hop": {
+    "values": [
+     [
+      6,
+      6,
+      6
+     ]
+    ],
+    "max_abs_diff": 0
+   },
+   "median_pivots": {
+    "values": [
+     [
+      1,
+      1,
+      1
+     ]
+    ],
+    "max_abs_diff": 0
+   },
+   "operations": {
+    "values": [
+     [
+      7,
+      7,
+      7
+     ]
+    ],
+    "max_abs_diff": 0
+   },
+   "unknown_family": {
+    "values": [
+     [
+      7,
+      7,
+      7
+     ]
+    ],
+    "max_abs_diff": 0
+   },
+   "reappearances": {
+    "values": [
+     [
+      0,
+      0,
+      0
+     ]
+    ],
+    "max_abs_diff": 0
+   },
+   "value": {
+    "values": [
+     [
+      49.9,
+      49.9,
+      49.9
+     ]
+    ],
+    "max_abs_diff": 0.0
+   },
+   "requests_total": {
+    "values": [
+     [
+      2714,
+      2714,
+      2714
+     ]
+    ],
+    "max_abs_diff": 0
+   },
+   "requests_per_useful": {
+    "values": [
+     [
+      142.8,
+      142.8,
+      142.8
+     ]
+    ],
+    "max_abs_diff": 0.0
+   },
+   "queries_per_useful": {
+    "values": [
+     [
+      7.8,
+      7.8,
+      7.8
+     ]
+    ],
+    "max_abs_diff": 0.0
+   },
+   "dead_end_queries": {
+    "values": [
+     [
+      126,
+      126,
+      126
+     ]
+    ],
+    "max_abs_diff": 0
+   },
+   "repeated_queries": {
+    "values": [
+     [
+      28,
+      28,
+      28
+     ]
+    ],
+    "max_abs_diff": 0
+   },
+   "mirror_requests": {
+    "values": [
+     [
+      92,
+      92,
+      92
+     ]
+    ],
+    "max_abs_diff": 0
+   },
+   "junk_fetches": {
+    "values": [
+     [
+      136,
+      136,
+      136
+     ]
+    ],
+    "max_abs_diff": 0
+   },
+   "rel_false_cross_op": {
+    "values": [
+     [
+      0,
+      0,
+      0
+     ]
+    ],
+    "max_abs_diff": 0
+   },
+   "first_useful_round": {
+    "values": [
+     [
+      0,
+      0,
+      0
+     ]
+    ],
+    "max_abs_diff": 0
+   },
+   "first_useful_requests": {
+    "values": [
+     [
+      287,
+      287,
+      287
+     ]
+    ],
+    "max_abs_diff": 0
+   }
+  },
+  "wall_seconds": 35.9
+ },
+ "runs": [
+  {
+   "tree": "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07",
+   "seed": 101,
+   "scenario": "cert_blackout",
+   "difficulty": "hard",
+   "rounds": 8,
+   "hashseed": "0",
+   "seconds": 2.7,
+   "world": {
+    "useful_units": 46,
+    "by_min_pivots": {
+     "1": 32,
+     "2": 4,
+     "3": 2,
+     "unreachable": 8
+    },
+    "unknown_family": 5,
+    "returned": 5,
+    "operations": 9,
+    "mirrors": 150,
+    "main_known_r0": 12,
+    "domains_total_r0": 708
+   },
+   "metrics": {
+    "new_useful": 19,
+    "found_share": 0.5,
+    "reviewed": 20,
+    "precision": 0.95,
+    "multi_hop": 0,
+    "median_pivots": 1,
+    "unreachable_found": 0,
+    "operations": 8,
+    "unknown_family": 1,
+    "reappearances": 4,
+    "value": 78.0,
+    "pool_useful": 19,
+    "requests": {
+     "http": 195,
+     "dns": 2322,
+     "crtsh": 3,
+     "rdap": 50,
+     "feed": 18,
+     "page_search": 159,
+     "passive_dns": 16
+    },
+    "requests_total": 2763,
+    "queries_total": 178,
+    "requests_per_useful": 145.4,
+    "queries_per_useful": 9.4,
+    "repeated_queries": 33,
+    "dead_end_queries": 158,
+    "dead_end_dns": 2304,
+    "junk_fetches": 105,
+    "mirror_requests": 32,
+    "rel_total": 13,
+    "rel_false_cross_op": 0,
+    "rel_non_scam": 0,
+    "rel_same_op": 13,
+    "rel_note": "",
+    "first_useful_round": 0,
+    "first_useful_requests": 252,
+    "skip_reasons": {
+     "mirror": 1
+    },
+    "outcomes": {
+     "wallet_evidence": 13,
+     "meaningful_evidence": 2
+    },
+    "engine_errors": 0
+   },
+   "useful_domains": [
+    "dexovo.icu",
+    "dexovo2.vip",
+    "domador.live",
+    "fyrasto.org",
+    "heliodiapro.shop",
+    "ilyovo1.pro",
+    "ilyovo2.live",
+    "kairora.app",
+    "kairoskapro.org",
+    "kestaton1.xyz",
+    "lumosto-h5.club",
+    "peloska3.icu",
+    "sorinlin.bond",
+    "sorinlin3.club",
+    "sorinlinex.bond",
+    "sorinlinex.pro",
+    "ulmoviapro.lat",
+    "vantavo1.club",
+    "vantavoex.club"
+   ],
+   "pool_useful": [
+    "dexovo.icu",
+    "dexovo2.vip",
+    "domador.live",
+    "fyrasto.org",
+    "heliodiapro.shop",
+    "ilyovo1.pro",
+    "ilyovo2.live",
+    "kairora.app",
+    "kairoskapro.org",
+    "kestaton1.xyz",
+    "lumosto-h5.club",
+    "peloska3.icu",
+    "sorinlin.bond",
+    "sorinlin3.club",
+    "sorinlinex.bond",
+    "sorinlinex.pro",
+    "ulmoviapro.lat",
+    "vantavo1.club",
+    "vantavoex.club"
+   ],
+   "verdicts": [
+    {
+     "r": 0,
+     "domain": "elvovo40.cfd",
+     "useful": false,
+     "why": "mirror",
+     "op": "M0",
+     "min_pivots": 1
+    },
+    {
+     "r": 0,
+     "domain": "lumosto-h5.club",
+     "useful": true,
+     "why": "member",
+     "op": "O8",
+     "min_pivots": 1
+    },
+    {
+     "r": 0,
+     "domain": "dexovo.icu",
+     "useful": true,
+     "why": "member",
+     "op": "O4",
+     "min_pivots": 1
+    },
+    {
+     "r": 0,
+     "domain": "domador.live",
+     "useful": true,
+     "why": "chain_anchor",
+     "op": "O5",
+     "min_pivots": 1
+    },
+    {
+     "r": 1,
+     "domain": "sorinlinex.bond",
+     "useful": true,
+     "why": "member",
+     "op": "O0",
+     "min_pivots": 1
+    },
+    {
+     "r": 1,
+     "domain": "dexovo2.vip",
+     "useful": true,
+     "why": "member",
+     "op": "O4",
+     "min_pivots": 1
+    },
+    {
+     "r": 2,
+     "domain": "sorinlin.bond",
+     "useful": true,
+     "why": "member",
+     "op": "O0",
+     "min_pivots": 1
+    },
+    {
+     "r": 2,
+     "domain": "sorinlinex.pro",
+     "useful": true,
+     "why": "member",
+     "op": "O0",
+     "min_pivots": 1
+    },
+    {
+     "r": 3,
+     "domain": "peloska3.icu",
+     "useful": true,
+     "why": "member",
+     "op": "O3",
+     "min_pivots": 1
+    },
+    {
+     "r": 3,
+     "domain": "heliodiapro.shop",
+     "useful": true,
+     "why": "member",
+     "op": "O7",
+     "min_pivots": 1
+    },
+    {
+     "r": 4,
+     "domain": "kestaton1.xyz",
+     "useful": true,
+     "why": "member",
+     "op": "O6",
+     "min_pivots": 1
+    },
+    {
+     "r": 4,
+     "domain": "fyrasto.org",
+     "useful": true,
+     "why": "member",
+     "op": "O7",
+     "min_pivots": 1
+    },
+    {
+     "r": 4,
+     "domain": "kairoskapro.org",
+     "useful": true,
+     "why": "member",
+     "op": "O6",
+     "min_pivots": 1
+    },
+    {
+     "r": 4,
+     "domain": "sorinlin3.club",
+     "useful": true,
+     "why": "member",
+     "op": "O0",
+     "min_pivots": 1
+    },
+    {
+     "r": 5,
+     "domain": "vantavoex.club",
+     "useful": true,
+     "why": "returned",
+     "op": "O3",
+     "min_pivots": 1
+    },
+    {
+     "r": 5,
+     "domain": "ulmoviapro.lat",
+     "useful": true,
+     "why": "returned",
+     "op": "O3",
+     "min_pivots": 1
+    },
+    {
+     "r": 6,
+     "domain": "vantavo1.club",
+     "useful": true,
+     "why": "returned",
+     "op": "O3",
+     "min_pivots": 1
+    },
+    {
+     "r": 7,
+     "domain": "ilyovo2.live",
+     "useful": true,
+     "why": "member",
+     "op": "O1",
+     "min_pivots": 1
+    },
+    {
+     "r": 7,
+     "domain": "kairora.app",
+     "useful": true,
+     "why": "returned",
+     "op": "O1",
+     "min_pivots": 1
+    },
+    {
+     "r": 7,
+     "domain": "ilyovo1.pro",
+     "useful": true,
+     "why": "member",
+     "op": "O1",
+     "min_pivots": 1
+    }
+   ],
+   "trace": [
+    {
+     "round": 0,
+     "reviewed": 4,
+     "useful_cum": 3,
+     "requests_cum": 252
+    },
+    {
+     "round": 1,
+     "reviewed": 2,
+     "useful_cum": 5,
+     "requests_cum": 716
+    },
+    {
+     "round": 2,
+     "reviewed": 2,
+     "useful_cum": 7,
+     "requests_cum": 1055
+    },
+    {
+     "round": 3,
+     "reviewed": 2,
+     "useful_cum": 9,
+     "requests_cum": 1359
+    },
+    {
+     "round": 4,
+     "reviewed": 4,
+     "useful_cum": 13,
+     "requests_cum": 1833
+    },
+    {
+     "round": 5,
+     "reviewed": 2,
+     "useful_cum": 15,
+     "requests_cum": 2106
+    },
+    {
+     "round": 6,
+     "reviewed": 1,
+     "useful_cum": 16,
+     "requests_cum": 2375
+    },
+    {
+     "round": 7,
+     "reviewed": 3,
+     "useful_cum": 19,
+     "requests_cum": 2763
+    }
+   ],
+   "errors": [],
+   "label": "main-investigation-platform-v9-suite-v7-adaptive-intelligence",
+   "noise_floor": false
+  },
+  {
+   "tree": "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07",
+   "seed": 101,
+   "scenario": "mixed",
+   "difficulty": "hard",
+   "rounds": 8,
+   "hashseed": "0",
+   "seconds": 2.9,
+   "world": {
+    "useful_units": 54,
+    "by_min_pivots": {
+     "1": 22,
+     "2": 12,
+     "3": 3,
+     "4": 2,
+     "5+": 3,
+     "unreachable": 12
+    },
+    "unknown_family": 9,
+    "returned": 3,
+    "operations": 10,
+    "mirrors": 150,
+    "main_known_r0": 8,
+    "domains_total_r0": 751
+   },
+   "metrics": {
+    "new_useful": 19,
+    "found_share": 0.452,
+    "reviewed": 20,
+    "precision": 0.95,
+    "multi_hop": 6,
+    "median_pivots": 1,
+    "unreachable_found": 3,
+    "operations": 7,
+    "unknown_family": 7,
+    "reappearances": 0,
+    "value": 49.9,
+    "pool_useful": 20,
+    "requests": {
+     "http": 253,
+     "dns": 2238,
+     "crtsh": 9,
+     "rdap": 59,
+     "feed": 16,
+     "page_search": 124,
+     "passive_dns": 15
+    },
+    "requests_total": 2714,
+    "queries_total": 148,
+    "requests_per_useful": 142.8,
+    "queries_per_useful": 7.8,
+    "repeated_queries": 28,
+    "dead_end_queries": 126,
+    "dead_end_dns": 2220,
+    "junk_fetches": 136,
+    "mirror_requests": 92,
+    "rel_total": 68,
+    "rel_false_cross_op": 0,
+    "rel_non_scam": 0,
+    "rel_same_op": 68,
+    "rel_note": "",
+    "first_useful_round": 0,
+    "first_useful_requests": 287,
+    "skip_reasons": {
+     "mirror": 1
+    },
+    "outcomes": {
+     "low_evidence": 3,
+     "wallet_evidence": 9,
+     "investigation_completed": 2
+    },
+    "engine_errors": 0
+   },
+   "useful_domains": [
+    "bravapex.cc",
+    "bravaton-pro.cfd",
+    "dexorel.sbs",
+    "dexorel1.sbs",
+    "fyraviapro.cfd",
+    "ganopexpro.net",
+    "heliovia-app.vip",
+    "nuvorel.lat",
+    "opranor.vip",
+    "oprarel.xyz",
+    "peloqua.live",
+    "praxmen.live",
+    "rivarapro.net",
+    "sorinpexmining.cfd",
+    "talvonor-pro.net",
+    "vantastopro.io",
+    "vantaton-pro.icu",
+    "walletjorvovia.io",
+    "zenilix.com"
+   ],
+   "pool_useful": [
+    "bravapex.cc",
+    "bravaton-pro.cfd",
+    "dexorel.sbs",
+    "dexorel1.sbs",
+    "fyraviapro.cfd",
+    "ganopexpro.net",
+    "heliovia-app.vip",
+    "nuvorel.lat",
+    "opranor.vip",
+    "oprarel.xyz",
+    "peloqua.live",
+    "praxmen.live",
+    "rivarapro.net",
+    "sorinpexmining.cfd",
+    "talvonor-pro.net",
+    "tavivo-global.icu",
+    "vantastopro.io",
+    "vantaton-pro.icu",
+    "walletjorvovia.io",
+    "zenilix.com"
+   ],
+   "verdicts": [
+    {
+     "r": 0,
+     "domain": "rivarapro.net",
+     "useful": true,
+     "why": "member",
+     "op": "O9",
+     "min_pivots": 2
+    },
+    {
+     "r": 0,
+     "domain": "oprarel.xyz",
+     "useful": true,
+     "why": "member",
+     "op": "O4",
+     "min_pivots": 2
+    },
+    {
+     "r": 0,
+     "domain": "rivaton2.cfd",
+     "useful": false,
+     "why": "mirror",
+     "op": "M0",
+     "min_pivots": 1
+    },
+    {
+     "r": 0,
+     "domain": "dexorel.sbs",
+     "useful": true,
+     "why": "member",
+     "op": "O3",
+     "min_pivots": 1
+    },
+    {
+     "r": 1,
+     "domain": "talvonor-pro.net",
+     "useful": true,
+     "why": "member",
+     "op": "O9",
+     "min_pivots": 1
+    },
+    {
+     "r": 1,
+     "domain": "dexorel1.sbs",
+     "useful": true,
+     "why": "member",
+     "op": "O3",
+     "min_pivots": 1
+    },
+    {
+     "r": 1,
+     "domain": "peloqua.live",
+     "useful": true,
+     "why": "member",
+     "op": "O8",
+     "min_pivots": 2
+    },
+    {
+     "r": 1,
+     "domain": "fyraviapro.cfd",
+     "useful": true,
+     "why": "member",
+     "op": "O1",
+     "min_pivots": 1
+    },
+    {
+     "r": 2,
+     "domain": "zenilix.com",
+     "useful": true,
+     "why": "member",
+     "op": "O9",
+     "min_pivots": 2
+    },
+    {
+     "r": 3,
+     "domain": "opranor.vip",
+     "useful": true,
+     "why": "member",
+     "op": "O5",
+     "min_pivots": 1
+    },
+    {
+     "r": 3,
+     "domain": "walletjorvovia.io",
+     "useful": true,
+     "why": "member",
+     "op": "O0",
+     "min_pivots": 1
+    },
+    {
+     "r": 3,
+     "domain": "nuvorel.lat",
+     "useful": true,
+     "why": "member",
+     "op": "O0",
+     "min_pivots": 1
+    },
+    {
+     "r": 4,
+     "domain": "vantaton-pro.icu",
+     "useful": true,
+     "why": "member",
+     "op": "O3",
+     "min_pivots": 2
+    },
+    {
+     "r": 4,
+     "domain": "heliovia-app.vip",
+     "useful": true,
+     "why": "member",
+     "op": "O5",
+     "min_pivots": 1
+    },
+    {
+     "r": 4,
+     "domain": "bravapex.cc",
+     "useful": true,
+     "why": "member",
+     "op": "O4",
+     "min_pivots": null
+    },
+    {
+     "r": 7,
+     "domain": "ganopexpro.net",
+     "useful": true,
+     "why": "member",
+     "op": "O3",
+     "min_pivots": 1
+    },
+    {
+     "r": 7,
+     "domain": "praxmen.live",
+     "useful": true,
+     "why": "member",
+     "op": "O0",
+     "min_pivots": null
+    },
+    {
+     "r": 7,
+     "domain": "bravaton-pro.cfd",
+     "useful": true,
+     "why": "member",
+     "op": "O9",
+     "min_pivots": null
+    },
+    {
+     "r": 7,
+     "domain": "sorinpexmining.cfd",
+     "useful": true,
+     "why": "member",
+     "op": "O8",
+     "min_pivots": 1
+    },
+    {
+     "r": 7,
+     "domain": "vantastopro.io",
+     "useful": true,
+     "why": "member",
+     "op": "O8",
+     "min_pivots": 2
+    }
+   ],
+   "trace": [
+    {
+     "round": 0,
+     "reviewed": 4,
+     "useful_cum": 3,
+     "requests_cum": 287
+    },
+    {
+     "round": 1,
+     "reviewed": 4,
+     "useful_cum": 7,
+     "requests_cum": 801
+    },
+    {
+     "round": 2,
+     "reviewed": 1,
+     "useful_cum": 8,
+     "requests_cum": 1201
+    },
+    {
+     "round": 3,
+     "reviewed": 3,
+     "useful_cum": 11,
+     "requests_cum": 1477
+    },
+    {
+     "round": 4,
+     "reviewed": 3,
+     "useful_cum": 14,
+     "requests_cum": 1921
+    },
+    {
+     "round": 5,
+     "reviewed": 0,
+     "useful_cum": 14,
+     "requests_cum": 2236
+    },
+    {
+     "round": 6,
+     "reviewed": 0,
+     "useful_cum": 14,
+     "requests_cum": 2344
+    },
+    {
+     "round": 7,
+     "reviewed": 5,
+     "useful_cum": 19,
+     "requests_cum": 2714
+    }
+   ],
+   "errors": [],
+   "label": "main-investigation-platform-v9-suite-v7-adaptive-intelligence",
+   "noise_floor": false
+  },
+  {
+   "tree": "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07",
+   "seed": 101,
+   "scenario": "cdn_maze",
+   "difficulty": "hard",
+   "rounds": 8,
+   "hashseed": "0",
+   "seconds": 3.3,
+   "world": {
+    "useful_units": 65,
+    "by_min_pivots": {
+     "1": 30,
+     "2": 13,
+     "3": 5,
+     "4": 2,
+     "5+": 3,
+     "unreachable": 12
+    },
+    "unknown_family": 4,
+    "returned": 6,
+    "operations": 9,
+    "mirrors": 150,
+    "main_known_r0": 11,
+    "domains_total_r0": 732
+   },
+   "metrics": {
+    "new_useful": 19,
+    "found_share": 0.358,
+    "reviewed": 21,
+    "precision": 0.905,
+    "multi_hop": 7,
+    "median_pivots": 1,
+    "unreachable_found": 1,
+    "operations": 6,
+    "unknown_family": 0,
+    "reappearances": 3,
+    "value": 62.0,
+    "pool_useful": 19,
+    "requests": {
+     "http": 305,
+     "dns": 2495,
+     "crtsh": 9,
+     "rdap": 70,
+     "feed": 18,
+     "page_search": 193,
+     "passive_dns": 13
+    },
+    "requests_total": 3103,
+    "queries_total": 215,
+    "requests_per_useful": 163.3,
+    "queries_per_useful": 11.3,
+    "repeated_queries": 47,
+    "dead_end_queries": 174,
+    "dead_end_dns": 2486,
+    "junk_fetches": 156,
+    "mirror_requests": 88,
+    "rel_total": 7,
+    "rel_false_cross_op": 0,
+    "rel_non_scam": 0,
+    "rel_same_op": 7,
+    "rel_note": "",
+    "first_useful_round": 0,
+    "first_useful_requests": 286,
+    "skip_reasons": {
+     "mirror": 2
+    },
+    "outcomes": {
+     "wallet_evidence": 12,
+     "low_evidence": 4,
+     "dead_site": 1
+    },
+    "engine_errors": 0
+   },
+   "useful_domains": [
+    "astradiafx.club",
+    "bravaska.com",
+    "bravaska7.cfd",
+    "fyradia-h5.net",
+    "fyrador.bond",
+    "ganolix1.com",
+    "ganolixfx.cc",
+    "ganovo.org",
+    "helioska.lat",
+    "hexara-h5.bond",
+    "ilyoton.net",
+    "marledor.top",
+    "movirax.com",
+    "nexapex1.lat",
+    "pelolin.net",
+    "talvomeninvest.lat",
+    "taviskapro.cfd",
+    "vantavofx.icu",
+    "vantavox.cc"
+   ],
+   "pool_useful": [
+    "astradiafx.club",
+    "bravaska.com",
+    "bravaska7.cfd",
+    "fyradia-h5.net",
+    "fyrador.bond",
+    "ganolix1.com",
+    "ganolixfx.cc",
+    "ganovo.org",
+    "helioska.lat",
+    "hexara-h5.bond",
+    "ilyoton.net",
+    "marledor.top",
+    "movirax.com",
+    "nexapex1.lat",
+    "pelolin.net",
+    "talvomeninvest.lat",
+    "taviskapro.cfd",
+    "vantavofx.icu",
+    "vantavox.cc"
+   ],
+   "verdicts": [
+    {
+     "r": 0,
+     "domain": "ganovo.org",
+     "useful": true,
+     "why": "member",
+     "op": "O7",
+     "min_pivots": 2
+    },
+    {
+     "r": 0,
+     "domain": "bravaska7.cfd",
+     "useful": true,
+     "why": "member",
+     "op": "O0",
+     "min_pivots": 1
+    },
+    {
+     "r": 0,
+     "domain": "ilyoton.net",
+     "useful": true,
+     "why": "member",
+     "op": "O2",
+     "min_pivots": 1
+    },
+    {
+     "r": 0,
+     "domain": "orbinor32.sbs",
+     "useful": false,
+     "why": "mirror",
+     "op": "M0",
+     "min_pivots": 1
+    },
+    {
+     "r": 1,
+     "domain": "bravaska.com",
+     "useful": true,
+     "why": "member",
+     "op": "O0",
+     "min_pivots": 1
+    },
+    {
+     "r": 1,
+     "domain": "talvomeninvest.lat",
+     "useful": true,
+     "why": "member",
+     "op": "O7",
+     "min_pivots": 1
+    },
+    {
+     "r": 1,
+     "domain": "astradiafx.club",
+     "useful": true,
+     "why": "member",
+     "op": "O1",
+     "min_pivots": 1
+    },
+    {
+     "r": 1,
+     "domain": "marledor.top",
+     "useful": true,
+     "why": "chain1",
+     "op": "O5",
+     "min_pivots": 2
+    },
+    {
+     "r": 1,
+     "domain": "ganolix1.com",
+     "useful": true,
+     "why": "chain_anchor",
+     "op": "O5",
+     "min_pivots": 2
+    },
+    {
+     "r": 2,
+     "domain": "ganolixfx.cc",
+     "useful": true,
+     "why": "member",
+     "op": "O5",
+     "min_pivots": 1
+    },
+    {
+     "r": 3,
+     "domain": "fyradia-h5.net",
+     "useful": true,
+     "why": "member",
+     "op": "O6",
+     "min_pivots": 1
+    },
+    {
+     "r": 3,
+     "domain": "orbinor3.io",
+     "useful": false,
+     "why": "mirror",
+     "op": "M0",
+     "min_pivots": 1
+    },
+    {
+     "r": 4,
+     "domain": "taviskapro.cfd",
+     "useful": true,
+     "why": "chain1",
+     "op": "O0",
+     "min_pivots": 1
+    },
+    {
+     "r": 4,
+     "domain": "movirax.com",
+     "useful": true,
+     "why": "chain2",
+     "op": "O0",
+     "min_pivots": 2
+    },
+    {
+     "r": 4,
+     "domain": "vantavofx.icu",
+     "useful": true,
+     "why": "member",
+     "op": "O2",
+     "min_pivots": 3
+    },
+    {
+     "r": 4,
+     "domain": "helioska.lat",
+     "useful": true,
+     "why": "member",
+     "op": "O2",
+     "min_pivots": 3
+    },
+    {
+     "r": 4,
+     "domain": "vantavox.cc",
+     "useful": true,
+     "why": "member",
+     "op": "O2",
+     "min_pivots": 2
+    },
+    {
+     "r": 5,
+     "domain": "pelolin.net",
+     "useful": true,
+     "why": "returned",
+     "op": "O2",
+     "min_pivots": 1
+    },
+    {
+     "r": 5,
+     "domain": "hexara-h5.bond",
+     "useful": true,
+     "why": "returned",
+     "op": "O2",
+     "min_pivots": 1
+    },
+    {
+     "r": 6,
+     "domain": "nexapex1.lat",
+     "useful": true,
+     "why": "member",
+     "op": "O0",
+     "min_pivots": null
+    },
+    {
+     "r": 7,
+     "domain": "fyrador.bond",
+     "useful": true,
+     "why": "returned",
+     "op": "O2",
+     "min_pivots": 1
+    }
+   ],
+   "trace": [
+    {
+     "round": 0,
+     "reviewed": 4,
+     "useful_cum": 3,
+     "requests_cum": 286
+    },
+    {
+     "round": 1,
+     "reviewed": 5,
+     "useful_cum": 8,
+     "requests_cum": 805
+    },
+    {
+     "round": 2,
+     "reviewed": 1,
+     "useful_cum": 9,
+     "requests_cum": 1228
+    },
+    {
+     "round": 3,
+     "reviewed": 2,
+     "useful_cum": 10,
+     "requests_cum": 1520
+    },
+    {
+     "round": 4,
+     "reviewed": 5,
+     "useful_cum": 15,
+     "requests_cum": 2010
+    },
+    {
+     "round": 5,
+     "reviewed": 2,
+     "useful_cum": 17,
+     "requests_cum": 2326
+    },
+    {
+     "round": 6,
+     "reviewed": 1,
+     "useful_cum": 18,
+     "requests_cum": 2671
+    },
+    {
+     "round": 7,
+     "reviewed": 1,
+     "useful_cum": 19,
+     "requests_cum": 3103
+    }
+   ],
+   "errors": [],
+   "label": "main-investigation-platform-v9-suite-v7-adaptive-intelligence",
+   "noise_floor": false
+  },
+  {
+   "tree": "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07",
+   "seed": 101,
+   "scenario": "migration",
+   "difficulty": "hard",
+   "rounds": 8,
+   "hashseed": "0",
+   "seconds": 1.6,
+   "world": {
+    "useful_units": 48,
+    "by_min_pivots": {
+     "0": 1,
+     "1": 25,
+     "2": 6,
+     "3": 2,
+     "4": 2,
+     "unreachable": 12
+    },
+    "unknown_family": 3,
+    "returned": 4,
+    "operations": 9,
+    "mirrors": 150,
+    "main_known_r0": 8,
+    "domains_total_r0": 722
+   },
+   "metrics": {
+    "new_useful": 7,
+    "found_share": 0.194,
+    "reviewed": 8,
+    "precision": 0.875,
+    "multi_hop": 0,
+    "median_pivots": 1,
+    "unreachable_found": 0,
+    "operations": 4,
+    "unknown_family": 0,
+    "reappearances": 0,
+    "value": 25.0,
+    "pool_useful": 7,
+    "requests": {
+     "http": 250,
+     "dns": 1852,
+     "crtsh": 14,
+     "rdap": 40,
+     "feed": 13,
+     "page_search": 79,
+     "passive_dns": 7
+    },
+    "requests_total": 2255,
+    "queries_total": 100,
+    "requests_per_useful": 322.1,
+    "queries_per_useful": 14.3,
+    "repeated_queries": 10,
+    "dead_end_queries": 88,
+    "dead_end_dns": 1834,
+    "junk_fetches": 169,
+    "mirror_requests": 60,
+    "rel_total": 12,
+    "rel_false_cross_op": 0,
+    "rel_non_scam": 0,
+    "rel_same_op": 12,
+    "rel_note": "",
+    "first_useful_round": 1,
+    "first_useful_requests": 659,
+    "skip_reasons": {
+     "mirror": 1
+    },
+    "outcomes": {
+     "wallet_evidence": 4
+    },
+    "engine_errors": 0
+   },
+   "useful_domains": [
+    "astralin.homes",
+    "astravo-app.cfd",
+    "bravapex.lat",
+    "kestadia3.co",
+    "lumopex.sbs",
+    "nuvotonpro.co",
+    "quilovox.shop"
+   ],
+   "pool_useful": [
+    "astralin.homes",
+    "astravo-app.cfd",
+    "bravapex.lat",
+    "kestadia3.co",
+    "lumopex.sbs",
+    "nuvotonpro.co",
+    "quilovox.shop"
+   ],
+   "verdicts": [
+    {
+     "r": 0,
+     "domain": "lumolix63.sbs",
+     "useful": false,
+     "why": "mirror",
+     "op": "M0",
+     "min_pivots": 1
+    },
+    {
+     "r": 1,
+     "domain": "astralin.homes",
+     "useful": true,
+     "why": "member",
+     "op": "O7",
+     "min_pivots": 1
+    },
+    {
+     "r": 1,
+     "domain": "astravo-app.cfd",
+     "useful": true,
+     "why": "member",
+     "op": "O5",
+     "min_pivots": 1
+    },
+    {
+     "r": 1,
+     "domain": "lumopex.sbs",
+     "useful": true,
+     "why": "chain1",
+     "op": "O0",
+     "min_pivots": 1
+    },
+    {
+     "r": 3,
+     "domain": "bravapex.lat",
+     "useful": true,
+     "why": "member",
+     "op": "O1",
+     "min_pivots": 1
+    },
+    {
+     "r": 7,
+     "domain": "nuvotonpro.co",
+     "useful": true,
+     "why": "member",
+     "op": "O1",
+     "min_pivots": 1
+    },
+    {
+     "r": 7,
+     "domain": "kestadia3.co",
+     "useful": true,
+     "why": "member",
+     "op": "O1",
+     "min_pivots": 1
+    },
+    {
+     "r": 7,
+     "domain": "quilovox.shop",
+     "useful": true,
+     "why": "member",
+     "op": "O1",
+     "min_pivots": 1
+    }
+   ],
+   "trace": [
+    {
+     "round": 0,
+     "reviewed": 1,
+     "useful_cum": 0,
+     "requests_cum": 268
+    },
+    {
+     "round": 1,
+     "reviewed": 3,
+     "useful_cum": 3,
+     "requests_cum": 659
+    },
+    {
+     "round": 2,
+     "reviewed": 0,
+     "useful_cum": 3,
+     "requests_cum": 1000
+    },
+    {
+     "round": 3,
+     "reviewed": 1,
+     "useful_cum": 4,
+     "requests_cum": 1172
+    },
+    {
+     "round": 4,
+     "reviewed": 0,
+     "useful_cum": 4,
+     "requests_cum": 1633
+    },
+    {
+     "round": 5,
+     "reviewed": 0,
+     "useful_cum": 4,
+     "requests_cum": 1737
+    },
+    {
+     "round": 6,
+     "reviewed": 0,
+     "useful_cum": 4,
+     "requests_cum": 1903
+    },
+    {
+     "round": 7,
+     "reviewed": 3,
+     "useful_cum": 7,
+     "requests_cum": 2255
+    }
+   ],
+   "errors": [],
+   "label": "main-investigation-platform-v9-suite-v7-adaptive-intelligence",
+   "noise_floor": false
+  },
+  {
+   "tree": "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07",
+   "seed": 101,
+   "scenario": "copycat",
+   "difficulty": "hard",
+   "rounds": 8,
+   "hashseed": "0",
+   "seconds": 3.9,
+   "world": {
+    "useful_units": 55,
+    "by_min_pivots": {
+     "0": 2,
+     "1": 35,
+     "2": 10,
+     "unreachable": 8
+    },
+    "unknown_family": 10,
+    "returned": 3,
+    "operations": 13,
+    "mirrors": 150,
+    "main_known_r0": 11,
+    "domains_total_r0": 809
+   },
+   "metrics": {
+    "new_useful": 19,
+    "found_share": 0.404,
+    "reviewed": 20,
+    "precision": 0.95,
+    "multi_hop": 4,
+    "median_pivots": 1,
+    "unreachable_found": 0,
+    "operations": 9,
+    "unknown_family": 6,
+    "reappearances": 1,
+    "value": 50.9,
+    "pool_useful": 19,
+    "requests": {
+     "http": 515,
+     "dns": 2891,
+     "crtsh": 9,
+     "rdap": 119,
+     "feed": 18,
+     "page_search": 186,
+     "passive_dns": 25
+    },
+    "requests_total": 3763,
+    "queries_total": 220,
+    "requests_per_useful": 198.1,
+    "queries_per_useful": 11.6,
+    "repeated_queries": 30,
+    "dead_end_queries": 192,
+    "dead_end_dns": 2866,
+    "junk_fetches": 271,
+    "mirror_requests": 262,
+    "rel_total": 192,
+    "rel_false_cross_op": 0,
+    "rel_non_scam": 0,
+    "rel_same_op": 192,
+    "rel_note": "",
+    "first_useful_round": 0,
+    "first_useful_requests": 288,
+    "skip_reasons": {
+     "mirror": 1
+    },
+    "outcomes": {
+     "wallet_evidence": 11,
+     "dead_site": 1,
+     "low_evidence": 3
+    },
+    "engine_errors": 0
+   },
+   "useful_domains": [
+    "astramenex.xyz",
+    "bravalin.shop",
+    "bravarelx.xyz",
+    "corvisto7.sbs",
+    "cyralixpro.shop",
+    "dexonor-pro.top",
+    "earnnexarel.bond",
+    "ilyopex-pro.vip",
+    "jorvopex.net",
+    "nuvomenex.lat",
+    "nuvomenx.club",
+    "pelotonx.homes",
+    "praxlin.homes",
+    "praxlix.club",
+    "praxlix2.pro",
+    "praxlixfx.club",
+    "selalix-app.net",
+    "selaqua-app.org",
+    "tavinor2.xyz"
+   ],
+   "pool_useful": [
+    "astramenex.xyz",
+    "bravalin.shop",
+    "bravarelx.xyz",
+    "corvisto7.sbs",
+    "cyralixpro.shop",
+    "dexonor-pro.top",
+    "earnnexarel.bond",
+    "ilyopex-pro.vip",
+    "jorvopex.net",
+    "nuvomenex.lat",
+    "nuvomenx.club",
+    "pelotonx.homes",
+    "praxlin.homes",
+    "praxlix.club",
+    "praxlix2.pro",
+    "praxlixfx.club",
+    "selalix-app.net",
+    "selaqua-app.org",
+    "tavinor2.xyz"
+   ],
+   "verdicts": [
+    {
+     "r": 0,
+     "domain": "corvisto7.sbs",
+     "useful": true,
+     "why": "mirror",
+     "op": "M0",
+     "min_pivots": 1
+    },
+    {
+     "r": 1,
+     "domain": "praxlin.homes",
+     "useful": true,
+     "why": "member",
+     "op": "O11",
+     "min_pivots": 1
+    },
+    {
+     "r": 1,
+     "domain": "corvisto86.xyz",
+     "useful": false,
+     "why": "mirror",
+     "op": "M0",
+     "min_pivots": 1
+    },
+    {
+     "r": 1,
+     "domain": "jorvopex.net",
+     "useful": true,
+     "why": "member",
+     "op": "O5",
+     "min_pivots": 1
+    },
+    {
+     "r": 1,
+     "domain": "selalix-app.net",
+     "useful": true,
+     "why": "member",
+     "op": "O3",
+     "min_pivots": 1
+    },
+    {
+     "r": 1,
+     "domain": "tavinor2.xyz",
+     "useful": true,
+     "why": "member",
+     "op": "O1",
+     "min_pivots": 1
+    },
+    {
+     "r": 2,
+     "domain": "cyralixpro.shop",
+     "useful": true,
+     "why": "member",
+     "op": "O11",
+     "min_pivots": 2
+    },
+    {
+     "r": 2,
+     "domain": "pelotonx.homes",
+     "useful": true,
+     "why": "member",
+     "op": "O11",
+     "min_pivots": 2
+    },
+    {
+     "r": 2,
+     "domain": "astramenex.xyz",
+     "useful": true,
+     "why": "member",
+     "op": "O9",
+     "min_pivots": 1
+    },
+    {
+     "r": 2,
+     "domain": "ilyopex-pro.vip",
+     "useful": true,
+     "why": "member",
+     "op": "O6",
+     "min_pivots": 1
+    },
+    {
+     "r": 3,
+     "domain": "bravalin.shop",
+     "useful": true,
+     "why": "member",
+     "op": "O11",
+     "min_pivots": 2
+    },
+    {
+     "r": 3,
+     "domain": "nuvomenx.club",
+     "useful": true,
+     "why": "member",
+     "op": "O10",
+     "min_pivots": 2
+    },
+    {
+     "r": 3,
+     "domain": "nuvomenex.lat",
+     "useful": true,
+     "why": "member",
+     "op": "O10",
+     "min_pivots": 1
+    },
+    {
+     "r": 3,
+     "domain": "selaqua-app.org",
+     "useful": true,
+     "why": "member",
+     "op": "O0",
+     "min_pivots": 1
+    },
+    {
+     "r": 4,
+     "domain": "bravarelx.xyz",
+     "useful": true,
+     "why": "member",
+     "op": "O9",
+     "min_pivots": 1
+    },
+    {
+     "r": 4,
+     "domain": "praxlix2.pro",
+     "useful": true,
+     "why": "member",
+     "op": "O3",
+     "min_pivots": 1
+    },
+    {
+     "r": 5,
+     "domain": "earnnexarel.bond",
+     "useful": true,
+     "why": "member",
+     "op": "O9",
+     "min_pivots": 1
+    },
+    {
+     "r": 5,
+     "domain": "praxlix.club",
+     "useful": true,
+     "why": "member",
+     "op": "O3",
+     "min_pivots": 1
+    },
+    {
+     "r": 5,
+     "domain": "dexonor-pro.top",
+     "useful": true,
+     "why": "member",
+     "op": "O9",
+     "min_pivots": 1
+    },
+    {
+     "r": 6,
+     "domain": "praxlixfx.club",
+     "useful": true,
+     "why": "returned",
+     "op": "O3",
+     "min_pivots": 1
+    }
+   ],
+   "trace": [
+    {
+     "round": 0,
+     "reviewed": 1,
+     "useful_cum": 1,
+     "requests_cum": 288
+    },
+    {
+     "round": 1,
+     "reviewed": 5,
+     "useful_cum": 5,
+     "requests_cum": 1124
+    },
+    {
+     "round": 2,
+     "reviewed": 4,
+     "useful_cum": 9,
+     "requests_cum": 1562
+    },
+    {
+     "round": 3,
+     "reviewed": 4,
+     "useful_cum": 13,
+     "requests_cum": 1934
+    },
+    {
+     "round": 4,
+     "reviewed": 2,
+     "useful_cum": 15,
+     "requests_cum": 2511
+    },
+    {
+     "round": 5,
+     "reviewed": 3,
+     "useful_cum": 18,
+     "requests_cum": 2900
+    },
+    {
+     "round": 6,
+     "reviewed": 1,
+     "useful_cum": 19,
+     "requests_cum": 3300
+    },
+    {
+     "round": 7,
+     "reviewed": 0,
+     "useful_cum": 19,
+     "requests_cum": 3763
+    }
+   ],
+   "errors": [],
+   "label": "main-investigation-platform-v9-suite-v7-adaptive-intelligence",
+   "noise_floor": false
+  },
+  {
+   "tree": "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07",
+   "seed": 101,
+   "scenario": "mirror_flood",
+   "difficulty": "hard",
+   "rounds": 8,
+   "hashseed": "0",
+   "seconds": 4.1,
+   "world": {
+    "useful_units": 55,
+    "by_min_pivots": {
+     "0": 2,
+     "1": 28,
+     "2": 8,
+     "3": 1,
+     "unreachable": 16
+    },
+    "unknown_family": 7,
+    "returned": 3,
+    "operations": 10,
+    "mirrors": 570,
+    "main_known_r0": 10,
+    "domains_total_r0": 913
+   },
+   "metrics": {
+    "new_useful": 20,
+    "found_share": 0.513,
+    "reviewed": 22,
+    "precision": 0.909,
+    "multi_hop": 1,
+    "median_pivots": 1,
+    "unreachable_found": 3,
+    "operations": 9,
+    "unknown_family": 1,
+    "reappearances": 2,
+    "value": 65.2,
+    "pool_useful": 20,
+    "requests": {
+     "http": 405,
+     "dns": 2532,
+     "crtsh": 9,
+     "rdap": 92,
+     "feed": 17,
+     "page_search": 202,
+     "passive_dns": 33
+    },
+    "requests_total": 3290,
+    "queries_total": 244,
+    "requests_per_useful": 164.5,
+    "queries_per_useful": 12.2,
+    "repeated_queries": 45,
+    "dead_end_queries": 204,
+    "dead_end_dns": 2516,
+    "junk_fetches": 201,
+    "mirror_requests": 213,
+    "rel_total": 39,
+    "rel_false_cross_op": 0,
+    "rel_non_scam": 0,
+    "rel_same_op": 39,
+    "rel_note": "",
+    "first_useful_round": 0,
+    "first_useful_requests": 287,
+    "skip_reasons": {
+     "mirror": 2
+    },
+    "outcomes": {
+     "wallet_evidence": 13,
+     "low_evidence": 3
+    },
+    "engine_errors": 0
+   },
+   "useful_domains": [
+    "bravarelpro.co",
+    "corvilix.icu",
+    "elvostox.com",
+    "ferrolin.co",
+    "ganolixx.shop",
+    "ganora.pro",
+    "kairoviax.com",
+    "kairovo.cfd",
+    "kairovo2.cfd",
+    "marlepexex.net",
+    "nuvorel-app.xyz",
+    "pelolix-pro.icu",
+    "pelotonx.vip",
+    "rivalix1.net",
+    "seladia.pro",
+    "selamen.com",
+    "sorindor2.net",
+    "sorindorex.net",
+    "tavilin-global.bond",
+    "ulmopexpro.net"
+   ],
+   "pool_useful": [
+    "bravarelpro.co",
+    "corvilix.icu",
+    "elvostox.com",
+    "ferrolin.co",
+    "ganolixx.shop",
+    "ganora.pro",
+    "kairoviax.com",
+    "kairovo.cfd",
+    "kairovo2.cfd",
+    "marlepexex.net",
+    "nuvorel-app.xyz",
+    "pelolix-pro.icu",
+    "pelotonx.vip",
+    "rivalix1.net",
+    "seladia.pro",
+    "selamen.com",
+    "sorindor2.net",
+    "sorindorex.net",
+    "tavilin-global.bond",
+    "ulmopexpro.net"
+   ],
+   "verdicts": [
+    {
+     "r": 0,
+     "domain": "elvolix11.homes",
+     "useful": false,
+     "why": "mirror",
+     "op": "M0",
+     "min_pivots": 1
+    },
+    {
+     "r": 0,
+     "domain": "marlepexex.net",
+     "useful": true,
+     "why": "member",
+     "op": "O3",
+     "min_pivots": 1
+    },
+    {
+     "r": 0,
+     "domain": "ganora.pro",
+     "useful": true,
+     "why": "member",
+     "op": "O8",
+     "min_pivots": 1
+    },
+    {
+     "r": 0,
+     "domain": "corvilix.icu",
+     "useful": true,
+     "why": "member",
+     "op": "O2",
+     "min_pivots": 1
+    },
+    {
+     "r": 1,
+     "domain": "bravarelpro.co",
+     "useful": true,
+     "why": "member",
+     "op": "O6",
+     "min_pivots": 1
+    },
+    {
+     "r": 1,
+     "domain": "sorindor2.net",
+     "useful": true,
+     "why": "member",
+     "op": "O0",
+     "min_pivots": 1
+    },
+    {
+     "r": 1,
+     "domain": "ferrolin.co",
+     "useful": true,
+     "why": "member",
+     "op": "O7",
+     "min_pivots": 1
+    },
+    {
+     "r": 1,
+     "domain": "nexasto115.pro",
+     "useful": false,
+     "why": "mirror",
+     "op": "M1",
+     "min_pivots": 1
+    },
+    {
+     "r": 1,
+     "domain": "seladia.pro",
+     "useful": true,
+     "why": "member",
+     "op": "O1",
+     "min_pivots": 1
+    },
+    {
+     "r": 2,
+     "domain": "ulmopexpro.net",
+     "useful": true,
+     "why": "member",
+     "op": "O6",
+     "min_pivots": 2
+    },
+    {
+     "r": 2,
+     "domain": "elvostox.com",
+     "useful": true,
+     "why": "member",
+     "op": "O4",
+     "min_pivots": null
+    },
+    {
+     "r": 3,
+     "domain": "selamen.com",
+     "useful": true,
+     "why": "chain1",
+     "op": "O4",
+     "min_pivots": null
+    },
+    {
+     "r": 3,
+     "domain": "pelolix-pro.icu",
+     "useful": true,
+     "why": "member",
+     "op": "O5",
+     "min_pivots": 1
+    },
+    {
+     "r": 3,
+     "domain": "tavilin-global.bond",
+     "useful": true,
+     "why": "member",
+     "op": "O0",
+     "min_pivots": 1
+    },
+    {
+     "r": 4,
+     "domain": "pelotonx.vip",
+     "useful": true,
+     "why": "member",
+     "op": "O6",
+     "min_pivots": 1
+    },
+    {
+     "r": 4,
+     "domain": "sorindorex.net",
+     "useful": true,
+     "why": "member",
+     "op": "O0",
+     "min_pivots": 1
+    },
+    {
+     "r": 4,
+     "domain": "kairovo2.cfd",
+     "useful": true,
+     "why": "returned",
+     "op": "O3",
+     "min_pivots": 1
+    },
+    {
+     "r": 4,
+     "domain": "nuvorel-app.xyz",
+     "useful": true,
+     "why": "member",
+     "op": "O2",
+     "min_pivots": 1
+    },
+    {
+     "r": 6,
+     "domain": "kairovo.cfd",
+     "useful": true,
+     "why": "member",
+     "op": "O3",
+     "min_pivots": 1
+    },
+    {
+     "r": 7,
+     "domain": "ganolixx.shop",
+     "useful": true,
+     "why": "returned",
+     "op": "O0",
+     "min_pivots": 1
+    },
+    {
+     "r": 7,
+     "domain": "kairoviax.com",
+     "useful": true,
+     "why": "member",
+     "op": "O2",
+     "min_pivots": null
+    },
+    {
+     "r": 7,
+     "domain": "rivalix1.net",
+     "useful": true,
+     "why": "member",
+     "op": "O1",
+     "min_pivots": 1
+    }
+   ],
+   "trace": [
+    {
+     "round": 0,
+     "reviewed": 4,
+     "useful_cum": 3,
+     "requests_cum": 287
+    },
+    {
+     "round": 1,
+     "reviewed": 5,
+     "useful_cum": 7,
+     "requests_cum": 1016
+    },
+    {
+     "round": 2,
+     "reviewed": 2,
+     "useful_cum": 9,
+     "requests_cum": 1425
+    },
+    {
+     "round": 3,
+     "reviewed": 3,
+     "useful_cum": 12,
+     "requests_cum": 1771
+    },
+    {
+     "round": 4,
+     "reviewed": 4,
+     "useful_cum": 16,
+     "requests_cum": 2300
+    },
+    {
+     "round": 5,
+     "reviewed": 0,
+     "useful_cum": 16,
+     "requests_cum": 2698
+    },
+    {
+     "round": 6,
+     "reviewed": 1,
+     "useful_cum": 17,
+     "requests_cum": 2839
+    },
+    {
+     "round": 7,
+     "reviewed": 3,
+     "useful_cum": 20,
+     "requests_cum": 3290
+    }
+   ],
+   "errors": [],
+   "label": "main-investigation-platform-v9-suite-v7-adaptive-intelligence",
+   "noise_floor": false
+  },
+  {
+   "tree": "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07",
+   "seed": 101,
+   "scenario": "collapse",
+   "difficulty": "hard",
+   "rounds": 8,
+   "hashseed": "0",
+   "seconds": 3.6,
+   "world": {
+    "useful_units": 53,
+    "by_min_pivots": {
+     "0": 1,
+     "1": 25,
+     "2": 14,
+     "3": 2,
+     "4": 1,
+     "unreachable": 10
+    },
+    "unknown_family": 6,
+    "returned": 4,
+    "operations": 9,
+    "mirrors": 150,
+    "main_known_r0": 11,
+    "domains_total_r0": 730
+   },
+   "metrics": {
+    "new_useful": 25,
+    "found_share": 0.581,
+    "reviewed": 27,
+    "precision": 0.926,
+    "multi_hop": 7,
+    "median_pivots": 1,
+    "unreachable_found": 4,
+    "operations": 5,
+    "unknown_family": 4,
+    "reappearances": 3,
+    "value": 73.3,
+    "pool_useful": 25,
+    "requests": {
+     "http": 278,
+     "dns": 2520,
+     "crtsh": 9,
+     "rdap": 60,
+     "feed": 18,
+     "page_search": 166,
+     "passive_dns": 15
+    },
+    "requests_total": 3066,
+    "queries_total": 190,
+    "requests_per_useful": 122.6,
+    "queries_per_useful": 7.6,
+    "repeated_queries": 32,
+    "dead_end_queries": 161,
+    "dead_end_dns": 2495,
+    "junk_fetches": 165,
+    "mirror_requests": 60,
+    "rel_total": 1,
+    "rel_false_cross_op": 0,
+    "rel_non_scam": 0,
+    "rel_same_op": 1,
+    "rel_note": "",
+    "first_useful_round": 0,
+    "first_useful_requests": 283,
+    "skip_reasons": {
+     "mirror": 2
+    },
+    "outcomes": {
+     "low_evidence": 4,
+     "wallet_evidence": 12,
+     "investigation_completed": 1,
+     "meaningful_evidence": 1
+    },
+    "engine_errors": 0
+   },
+   "useful_domains": [
+    "astraska-global.pro",
+    "astraska1.cfd",
+    "astraskafx.net",
+    "corviska.lat",
+    "ferroskapro.app",
+    "ferroton-pro.club",
+    "ferrotonx.club",
+    "fyravia.cc",
+    "ganoqua.app",
+    "ganotonx.sbs",
+    "hexapex-pro.top",
+    "hexapexusdt.net",
+    "kairoqua.sbs",
+    "nuvodia.com",
+    "nuvorel.app",
+    "nuvorel.pro",
+    "nuvorelstake.co",
+    "nuvorelx.live",
+    "opravo.cfd",
+    "selasto-global.pro",
+    "selasto2.pro",
+    "sorinlixpro.com",
+    "ulmoqua.net",
+    "vantapexpro.top",
+    "vantaqua-h5.live"
+   ],
+   "pool_useful": [
+    "astraska-global.pro",
+    "astraska1.cfd",
+    "astraskafx.net",
+    "corviska.lat",
+    "ferroskapro.app",
+    "ferroton-pro.club",
+    "ferrotonx.club",
+    "fyravia.cc",
+    "ganoqua.app",
+    "ganotonx.sbs",
+    "hexapex-pro.top",
+    "hexapexusdt.net",
+    "kairoqua.sbs",
+    "nuvodia.com",
+    "nuvorel.app",
+    "nuvorel.pro",
+    "nuvorelstake.co",
+    "nuvorelx.live",
+    "opravo.cfd",
+    "selasto-global.pro",
+    "selasto2.pro",
+    "sorinlixpro.com",
+    "ulmoqua.net",
+    "vantapexpro.top",
+    "vantaqua-h5.live"
+   ],
+   "verdicts": [
+    {
+     "r": 0,
+     "domain": "nuvorel.pro",
+     "useful": true,
+     "why": "member",
+     "op": "O8",
+     "min_pivots": 2
+    },
+    {
+     "r": 0,
+     "domain": "quilonor11.app",
+     "useful": false,
+     "why": "mirror",
+     "op": "M0",
+     "min_pivots": 1
+    },
+    {
+     "r": 1,
+     "domain": "quilonor55.bond",
+     "useful": false,
+     "why": "mirror",
+     "op": "M0",
+     "min_pivots": 1
+    },
+    {
+     "r": 1,
+     "domain": "ganotonx.sbs",
+     "useful": true,
+     "why": "chain1",
+     "op": "O0",
+     "min_pivots": 1
+    },
+    {
+     "r": 1,
+     "domain": "nuvorelx.live",
+     "useful": true,
+     "why": "member",
+     "op": "O8",
+     "min_pivots": 2
+    },
+    {
+     "r": 1,
+     "domain": "kairoqua.sbs",
+     "useful": true,
+     "why": "member",
+     "op": "O0",
+     "min_pivots": 1
+    },
+    {
+     "r": 1,
+     "domain": "nuvorelstake.co",
+     "useful": true,
+     "why": "member",
+     "op": "O8",
+     "min_pivots": 1
+    },
+    {
+     "r": 2,
+     "domain": "opravo.cfd",
+     "useful": true,
+     "why": "member",
+     "op": "O1",
+     "min_pivots": 1
+    },
+    {
+     "r": 2,
+     "domain": "vantapexpro.top",
+     "useful": true,
+     "why": "member",
+     "op": "O4",
+     "min_pivots": 1
+    },
+    {
+     "r": 2,
+     "domain": "ulmoqua.net",
+     "useful": true,
+     "why": "member",
+     "op": "O0",
+     "min_pivots": 1
+    },
+    {
+     "r": 2,
+     "domain": "hexapex-pro.top",
+     "useful": true,
+     "why": "member",
+     "op": "O1",
+     "min_pivots": 1
+    },
+    {
+     "r": 2,
+     "domain": "vantaqua-h5.live",
+     "useful": true,
+     "why": "member",
+     "op": "O1",
+     "min_pivots": 1
+    },
+    {
+     "r": 3,
+     "domain": "nuvodia.com",
+     "useful": true,
+     "why": "chain2",
+     "op": "O1",
+     "min_pivots": 2
+    },
+    {
+     "r": 3,
+     "domain": "sorinlixpro.com",
+     "useful": true,
+     "why": "chain1",
+     "op": "O1",
+     "min_pivots": 1
+    },
+    {
+     "r": 3,
+     "domain": "fyravia.cc",
+     "useful": true,
+     "why": "member",
+     "op": "O7",
+     "min_pivots": null
+    },
+    {
+     "r": 3,
+     "domain": "hexapexusdt.net",
+     "useful": true,
+     "why": "member",
+     "op": "O1",
+     "min_pivots": 0
+    },
+    {
+     "r": 3,
+     "domain": "nuvorel.app",
+     "useful": true,
+     "why": "member",
+     "op": "O8",
+     "min_pivots": 2
+    },
+    {
+     "r": 4,
+     "domain": "corviska.lat",
+     "useful": true,
+     "why": "member",
+     "op": "O4",
+     "min_pivots": null
+    },
+    {
+     "r": 4,
+     "domain": "selasto-global.pro",
+     "useful": true,
+     "why": "member",
+     "op": "O0",
+     "min_pivots": 2
+    },
+    {
+     "r": 5,
+     "domain": "selasto2.pro",
+     "useful": true,
+     "why": "returned",
+     "op": "O0",
+     "min_pivots": 1
+    },
+    {
+     "r": 6,
+     "domain": "ferroskapro.app",
+     "useful": true,
+     "why": "member",
+     "op": "O0",
+     "min_pivots": null
+    },
+    {
+     "r": 6,
+     "domain": "astraskafx.net",
+     "useful": true,
+     "why": "returned",
+     "op": "O1",
+     "min_pivots": 1
+    },
+    {
+     "r": 6,
+     "domain": "ferroton-pro.club",
+     "useful": true,
+     "why": "member",
+     "op": "O7",
+     "min_pivots": 2
+    },
+    {
+     "r": 6,
+     "domain": "astraska-global.pro",
+     "useful": true,
+     "why": "returned",
+     "op": "O1",
+     "min_pivots": 1
+    },
+    {
+     "r": 6,
+     "domain": "ferrotonx.club",
+     "useful": true,
+     "why": "member",
+     "op": "O7",
+     "min_pivots": 2
+    },
+    {
+     "r": 7,
+     "domain": "ganoqua.app",
+     "useful": true,
+     "why": "member",
+     "op": "O7",
+     "min_pivots": null
+    },
+    {
+     "r": 7,
+     "domain": "astraska1.cfd",
+     "useful": true,
+     "why": "member",
+     "op": "O1",
+     "min_pivots": 1
+    }
+   ],
+   "trace": [
+    {
+     "round": 0,
+     "reviewed": 2,
+     "useful_cum": 1,
+     "requests_cum": 283
+    },
+    {
+     "round": 1,
+     "reviewed": 5,
+     "useful_cum": 5,
+     "requests_cum": 753
+    },
+    {
+     "round": 2,
+     "reviewed": 5,
+     "useful_cum": 10,
+     "requests_cum": 1133
+    },
+    {
+     "round": 3,
+     "reviewed": 5,
+     "useful_cum": 15,
+     "requests_cum": 1507
+    },
+    {
+     "round": 4,
+     "reviewed": 2,
+     "useful_cum": 17,
+     "requests_cum": 1994
+    },
+    {
+     "round": 5,
+     "reviewed": 1,
+     "useful_cum": 18,
+     "requests_cum": 2306
+    },
+    {
+     "round": 6,
+     "reviewed": 5,
+     "useful_cum": 23,
+     "requests_cum": 2652
+    },
+    {
+     "round": 7,
+     "reviewed": 2,
+     "useful_cum": 25,
+     "requests_cum": 3066
+    }
+   ],
+   "errors": [],
+   "label": "main-investigation-platform-v9-suite-v7-adaptive-intelligence",
+   "noise_floor": false
+  },
+  {
+   "tree": "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07",
+   "seed": 203,
+   "scenario": "mixed",
+   "difficulty": "hard",
+   "rounds": 8,
+   "hashseed": "0",
+   "seconds": 2.3,
+   "world": {
+    "useful_units": 47,
+    "by_min_pivots": {
+     "0": 2,
+     "1": 28,
+     "2": 7,
+     "3": 1,
+     "unreachable": 9
+    },
+    "unknown_family": 4,
+    "returned": 1,
+    "operations": 9,
+    "mirrors": 150,
+    "main_known_r0": 7,
+    "domains_total_r0": 796
+   },
+   "metrics": {
+    "new_useful": 11,
+    "found_share": 0.289,
+    "reviewed": 13,
+    "precision": 0.846,
+    "multi_hop": 1,
+    "median_pivots": 1,
+    "unreachable_found": 0,
+    "operations": 6,
+    "unknown_family": 2,
+    "reappearances": 0,
+    "value": 43.0,
+    "pool_useful": 11,
+    "requests": {
+     "http": 316,
+     "dns": 2216,
+     "crtsh": 14,
+     "rdap": 53,
+     "feed": 15,
+     "page_search": 104,
+     "passive_dns": 11
+    },
+    "requests_total": 2729,
+    "queries_total": 129,
+    "requests_per_useful": 248.1,
+    "queries_per_useful": 11.7,
+    "repeated_queries": 22,
+    "dead_end_queries": 102,
+    "dead_end_dns": 2199,
+    "junk_fetches": 218,
+    "mirror_requests": 88,
+    "rel_total": 16,
+    "rel_false_cross_op": 0,
+    "rel_non_scam": 0,
+    "rel_same_op": 16,
+    "rel_note": "",
+    "first_useful_round": 0,
+    "first_useful_requests": 296,
+    "skip_reasons": {
+     "mirror": 2
+    },
+    "outcomes": {
+     "wallet_evidence": 9,
+     "meaningful_evidence": 1
+    },
+    "engine_errors": 0
+   },
+   "useful_domains": [
+    "corviska-vip.xyz",
+    "dexora.live",
+    "ganomen.lat",
+    "ganomenmining.io",
+    "jorvovopro.app",
+    "kestador1.vip",
+    "kestador2.vip",
+    "marlevopro.com",
+    "movirel-global.app",
+    "movirel2.vip",
+    "talvovofx.bond"
+   ],
+   "pool_useful": [
+    "corviska-vip.xyz",
+    "dexora.live",
+    "ganomen.lat",
+    "ganomenmining.io",
+    "jorvovopro.app",
+    "kestador1.vip",
+    "kestador2.vip",
+    "marlevopro.com",
+    "movirel-global.app",
+    "movirel2.vip",
+    "talvovofx.bond"
+   ],
+   "verdicts": [
+    {
+     "r": 0,
+     "domain": "sorinvo106.co",
+     "useful": false,
+     "why": "mirror",
+     "op": "M0",
+     "min_pivots": 1
+    },
+    {
+     "r": 0,
+     "domain": "kestador1.vip",
+     "useful": true,
+     "why": "member",
+     "op": "O4",
+     "min_pivots": 1
+    },
+    {
+     "r": 0,
+     "domain": "ganomen.lat",
+     "useful": true,
+     "why": "member",
+     "op": "O8",
+     "min_pivots": 1
+    },
+    {
+     "r": 1,
+     "domain": "sorinvo16.shop",
+     "useful": false,
+     "why": "mirror",
+     "op": "M0",
+     "min_pivots": 1
+    },
+    {
+     "r": 1,
+     "domain": "movirel2.vip",
+     "useful": true,
+     "why": "member",
+     "op": "O5",
+     "min_pivots": 1
+    },
+    {
+     "r": 1,
+     "domain": "kestador2.vip",
+     "useful": true,
+     "why": "member",
+     "op": "O4",
+     "min_pivots": 2
+    },
+    {
+     "r": 1,
+     "domain": "jorvovopro.app",
+     "useful": true,
+     "why": "member",
+     "op": "O5",
+     "min_pivots": 1
+    },
+    {
+     "r": 1,
+     "domain": "corviska-vip.xyz",
+     "useful": true,
+     "why": "member",
+     "op": "O2",
+     "min_pivots": 1
+    },
+    {
+     "r": 3,
+     "domain": "movirel-global.app",
+     "useful": true,
+     "why": "member",
+     "op": "O5",
+     "min_pivots": 1
+    },
+    {
+     "r": 4,
+     "domain": "dexora.live",
+     "useful": true,
+     "why": "chain1",
+     "op": "O3",
+     "min_pivots": 1
+    },
+    {
+     "r": 4,
+     "domain": "talvovofx.bond",
+     "useful": true,
+     "why": "member",
+     "op": "O3",
+     "min_pivots": 1
+    },
+    {
+     "r": 4,
+     "domain": "ganomenmining.io",
+     "useful": true,
+     "why": "member",
+     "op": "O8",
+     "min_pivots": 1
+    },
+    {
+     "r": 7,
+     "domain": "marlevopro.com",
+     "useful": true,
+     "why": "member",
+     "op": "O0",
+     "min_pivots": 1
+    }
+   ],
+   "trace": [
+    {
+     "round": 0,
+     "reviewed": 3,
+     "useful_cum": 2,
+     "requests_cum": 296
+    },
+    {
+     "round": 1,
+     "reviewed": 5,
+     "useful_cum": 6,
+     "requests_cum": 939
+    },
+    {
+     "round": 2,
+     "reviewed": 0,
+     "useful_cum": 6,
+     "requests_cum": 1360
+    },
+    {
+     "round": 3,
+     "reviewed": 1,
+     "useful_cum": 7,
+     "requests_cum": 1534
+    },
+    {
+     "round": 4,
+     "reviewed": 3,
+     "useful_cum": 10,
+     "requests_cum": 2006
+    },
+    {
+     "round": 5,
+     "reviewed": 0,
+     "useful_cum": 10,
+     "requests_cum": 2340
+    },
+    {
+     "round": 6,
+     "reviewed": 0,
+     "useful_cum": 10,
+     "requests_cum": 2478
+    },
+    {
+     "round": 7,
+     "reviewed": 1,
+     "useful_cum": 11,
+     "requests_cum": 2729
+    }
+   ],
+   "errors": [],
+   "label": "main-investigation-platform-v9-suite-v7-adaptive-intelligence",
+   "noise_floor": false
+  },
+  {
+   "tree": "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07",
+   "seed": 101,
+   "scenario": "dark_family",
+   "difficulty": "hard",
+   "rounds": 8,
+   "hashseed": "0",
+   "seconds": 4.0,
+   "world": {
+    "useful_units": 69,
+    "by_min_pivots": {
+     "0": 1,
+     "1": 39,
+     "2": 18,
+     "3": 3,
+     "4": 1,
+     "unreachable": 7
+    },
+    "unknown_family": 19,
+    "returned": 4,
+    "operations": 13,
+    "mirrors": 150,
+    "main_known_r0": 7,
+    "domains_total_r0": 750
+   },
+   "metrics": {
+    "new_useful": 28,
+    "found_share": 0.452,
+    "reviewed": 29,
+    "precision": 0.966,
+    "multi_hop": 10,
+    "median_pivots": 1,
+    "unreachable_found": 0,
+    "operations": 10,
+    "unknown_family": 9,
+    "reappearances": 2,
+    "value": 101.9,
+    "pool_useful": 28,
+    "requests": {
+     "http": 347,
+     "dns": 2635,
+     "crtsh": 9,
+     "rdap": 62,
+     "feed": 18,
+     "page_search": 189,
+     "passive_dns": 27
+    },
+    "requests_total": 3287,
+    "queries_total": 225,
+    "requests_per_useful": 117.4,
+    "queries_per_useful": 8.0,
+    "repeated_queries": 32,
+    "dead_end_queries": 200,
+    "dead_end_dns": 2612,
+    "junk_fetches": 206,
+    "mirror_requests": 65,
+    "rel_total": 4,
+    "rel_false_cross_op": 0,
+    "rel_non_scam": 0,
+    "rel_same_op": 4,
+    "rel_note": "",
+    "first_useful_round": 0,
+    "first_useful_requests": 283,
+    "skip_reasons": {
+     "mirror": 1
+    },
+    "outcomes": {
+     "wallet_evidence": 17,
+     "low_evidence": 1,
+     "meaningful_evidence": 2
+    },
+    "engine_errors": 0
+   },
+   "useful_domains": [
+    "bravaqua.icu",
+    "corvistopro.pro",
+    "cyrara-global.sbs",
+    "dexoton.pro",
+    "dexoton1.com",
+    "dexotonx.com",
+    "exchangelyraton.sbs",
+    "ferrodor-h5.club",
+    "ferrodor-pro.club",
+    "ferroquafx.shop",
+    "fyramenmining.vip",
+    "ganovox.sbs",
+    "heliotonx.top",
+    "ilyovo.net",
+    "jorvorafx.club",
+    "kestadia-global.app",
+    "kestadia1.app",
+    "kestadiafx.lat",
+    "marleska1.io",
+    "marletonfx.xyz",
+    "movinor-pro.io",
+    "opraquax.top",
+    "pelolin2.net",
+    "pelolin3.net",
+    "rivaskax.icu",
+    "tavilinex.lat",
+    "ulmonor.icu",
+    "vantalin.homes"
+   ],
+   "pool_useful": [
+    "bravaqua.icu",
+    "corvistopro.pro",
+    "cyrara-global.sbs",
+    "dexoton.pro",
+    "dexoton1.com",
+    "dexotonx.com",
+    "exchangelyraton.sbs",
+    "ferrodor-h5.club",
+    "ferrodor-pro.club",
+    "ferroquafx.shop",
+    "fyramenmining.vip",
+    "ganovox.sbs",
+    "heliotonx.top",
+    "ilyovo.net",
+    "jorvorafx.club",
+    "kestadia-global.app",
+    "kestadia1.app",
+    "kestadiafx.lat",
+    "marleska1.io",
+    "marletonfx.xyz",
+    "movinor-pro.io",
+    "opraquax.top",
+    "pelolin2.net",
+    "pelolin3.net",
+    "rivaskax.icu",
+    "tavilinex.lat",
+    "ulmonor.icu",
+    "vantalin.homes"
+   ],
+   "verdicts": [
+    {
+     "r": 0,
+     "domain": "ferroquafx.shop",
+     "useful": true,
+     "why": "member",
+     "op": "O2",
+     "min_pivots": 1
+    },
+    {
+     "r": 0,
+     "domain": "kestadia1.app",
+     "useful": true,
+     "why": "member",
+     "op": "O5",
+     "min_pivots": 1
+    },
+    {
+     "r": 0,
+     "domain": "zenipex41.sbs",
+     "useful": false,
+     "why": "mirror",
+     "op": "M0",
+     "min_pivots": 1
+    },
+    {
+     "r": 1,
+     "domain": "kestadia-global.app",
+     "useful": true,
+     "why": "member",
+     "op": "O5",
+     "min_pivots": 1
+    },
+    {
+     "r": 1,
+     "domain": "kestadiafx.lat",
+     "useful": true,
+     "why": "member",
+     "op": "O5",
+     "min_pivots": 1
+    },
+    {
+     "r": 1,
+     "domain": "pelolin2.net",
+     "useful": true,
+     "why": "member",
+     "op": "O1",
+     "min_pivots": 1
+    },
+    {
+     "r": 1,
+     "domain": "ilyovo.net",
+     "useful": true,
+     "why": "chain1",
+     "op": "O1",
+     "min_pivots": 1
+    },
+    {
+     "r": 1,
+     "domain": "pelolin3.net",
+     "useful": true,
+     "why": "member",
+     "op": "O1",
+     "min_pivots": 1
+    },
+    {
+     "r": 2,
+     "domain": "movinor-pro.io",
+     "useful": true,
+     "why": "member",
+     "op": "O11",
+     "min_pivots": 2
+    },
+    {
+     "r": 2,
+     "domain": "ganovox.sbs",
+     "useful": true,
+     "why": "member",
+     "op": "O10",
+     "min_pivots": 2
+    },
+    {
+     "r": 2,
+     "domain": "tavilinex.lat",
+     "useful": true,
+     "why": "member",
+     "op": "O10",
+     "min_pivots": 1
+    },
+    {
+     "r": 2,
+     "domain": "corvistopro.pro",
+     "useful": true,
+     "why": "member",
+     "op": "O0",
+     "min_pivots": 1
+    },
+    {
+     "r": 2,
+     "domain": "opraquax.top",
+     "useful": true,
+     "why": "member",
+     "op": "O5",
+     "min_pivots": 1
+    },
+    {
+     "r": 3,
+     "domain": "cyrara-global.sbs",
+     "useful": true,
+     "why": "member",
+     "op": "O10",
+     "min_pivots": 2
+    },
+    {
+     "r": 4,
+     "domain": "fyramenmining.vip",
+     "useful": true,
+     "why": "member",
+     "op": "O12",
+     "min_pivots": 1
+    },
+    {
+     "r": 4,
+     "domain": "heliotonx.top",
+     "useful": true,
+     "why": "member",
+     "op": "O2",
+     "min_pivots": 1
+    },
+    {
+     "r": 4,
+     "domain": "rivaskax.icu",
+     "useful": true,
+     "why": "member",
+     "op": "O6",
+     "min_pivots": 2
+    },
+    {
+     "r": 4,
+     "domain": "bravaqua.icu",
+     "useful": true,
+     "why": "member",
+     "op": "O6",
+     "min_pivots": 2
+    },
+    {
+     "r": 4,
+     "domain": "ferrodor-h5.club",
+     "useful": true,
+     "why": "member",
+     "op": "O3",
+     "min_pivots": 3
+    },
+    {
+     "r": 5,
+     "domain": "ferrodor-pro.club",
+     "useful": true,
+     "why": "member",
+     "op": "O3",
+     "min_pivots": 2
+    },
+    {
+     "r": 5,
+     "domain": "dexotonx.com",
+     "useful": true,
+     "why": "member",
+     "op": "O0",
+     "min_pivots": 1
+    },
+    {
+     "r": 5,
+     "domain": "exchangelyraton.sbs",
+     "useful": true,
+     "why": "member",
+     "op": "O12",
+     "min_pivots": 1
+    },
+    {
+     "r": 5,
+     "domain": "marletonfx.xyz",
+     "useful": true,
+     "why": "member",
+     "op": "O11",
+     "min_pivots": 2
+    },
+    {
+     "r": 6,
+     "domain": "vantalin.homes",
+     "useful": true,
+     "why": "returned",
+     "op": "O2",
+     "min_pivots": 1
+    },
+    {
+     "r": 6,
+     "domain": "jorvorafx.club",
+     "useful": true,
+     "why": "member",
+     "op": "O5",
+     "min_pivots": 1
+    },
+    {
+     "r": 6,
+     "domain": "dexoton.pro",
+     "useful": true,
+     "why": "returned",
+     "op": "O0",
+     "min_pivots": 1
+    },
+    {
+     "r": 6,
+     "domain": "dexoton1.com",
+     "useful": true,
+     "why": "member",
+     "op": "O0",
+     "min_pivots": 2
+    },
+    {
+     "r": 6,
+     "domain": "marleska1.io",
+     "useful": true,
+     "why": "member",
+     "op": "O12",
+     "min_pivots": 2
+    },
+    {
+     "r": 7,
+     "domain": "ulmonor.icu",
+     "useful": true,
+     "why": "member",
+     "op": "O8",
+     "min_pivots": 1
+    }
+   ],
+   "trace": [
+    {
+     "round": 0,
+     "reviewed": 3,
+     "useful_cum": 2,
+     "requests_cum": 283
+    },
+    {
+     "round": 1,
+     "reviewed": 5,
+     "useful_cum": 7,
+     "requests_cum": 842
+    },
+    {
+     "round": 2,
+     "reviewed": 5,
+     "useful_cum": 12,
+     "requests_cum": 1258
+    },
+    {
+     "round": 3,
+     "reviewed": 1,
+     "useful_cum": 13,
+     "requests_cum": 1620
+    },
+    {
+     "round": 4,
+     "reviewed": 5,
+     "useful_cum": 18,
+     "requests_cum": 2123
+    },
+    {
+     "round": 5,
+     "reviewed": 4,
+     "useful_cum": 22,
+     "requests_cum": 2514
+    },
+    {
+     "round": 6,
+     "reviewed": 5,
+     "useful_cum": 27,
+     "requests_cum": 2856
+    },
+    {
+     "round": 7,
+     "reviewed": 1,
+     "useful_cum": 28,
+     "requests_cum": 3287
+    }
+   ],
+   "errors": [],
+   "label": "main-investigation-platform-v9-suite-v7-adaptive-intelligence",
+   "noise_floor": false
+  },
+  {
+   "tree": "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07",
+   "seed": 203,
+   "scenario": "cdn_maze",
+   "difficulty": "hard",
+   "rounds": 8,
+   "hashseed": "0",
+   "seconds": 3.3,
+   "world": {
+    "useful_units": 67,
+    "by_min_pivots": {
+     "0": 2,
+     "1": 31,
+     "2": 14,
+     "3": 5,
+     "4": 3,
+     "5+": 3,
+     "unreachable": 9
+    },
+    "unknown_family": 12,
+    "returned": 3,
+    "operations": 10,
+    "mirrors": 150,
+    "main_known_r0": 11,
+    "domains_total_r0": 781
+   },
+   "metrics": {
+    "new_useful": 19,
+    "found_share": 0.328,
+    "reviewed": 20,
+    "precision": 0.95,
+    "multi_hop": 3,
+    "median_pivots": 1,
+    "unreachable_found": 0,
+    "operations": 7,
+    "unknown_family": 4,
+    "reappearances": 0,
+    "value": 71.6,
+    "pool_useful": 19,
+    "requests": {
+     "http": 309,
+     "dns": 2293,
+     "crtsh": 12,
+     "rdap": 63,
+     "feed": 15,
+     "page_search": 145,
+     "passive_dns": 4
+    },
+    "requests_total": 2841,
+    "queries_total": 161,
+    "requests_per_useful": 149.5,
+    "queries_per_useful": 8.5,
+    "repeated_queries": 27,
+    "dead_end_queries": 139,
+    "dead_end_dns": 2277,
+    "junk_fetches": 184,
+    "mirror_requests": 64,
+    "rel_total": 2,
+    "rel_false_cross_op": 0,
+    "rel_non_scam": 0,
+    "rel_same_op": 2,
+    "rel_note": "",
+    "first_useful_round": 1,
+    "first_useful_requests": 684,
+    "skip_reasons": {
+     "mirror": 1
+    },
+    "outcomes": {
+     "wallet_evidence": 12,
+     "low_evidence": 2,
+     "dead_site": 1,
+     "meaningful_evidence": 4
+    },
+    "engine_errors": 0
+   },
+   "useful_domains": [
+    "elvovia-global.app",
+    "elvovia.live",
+    "elvoviafx.app",
+    "ferrorelx.sbs",
+    "heliosto3.cfd",
+    "heliostox.com",
+    "ilyodor.cfd",
+    "kestadia.club",
+    "kestamen5.homes",
+    "kestamenusdt.homes",
+    "kestaskapro.cfd",
+    "nexaska.cfd",
+    "pelosto.cc",
+    "rivaska-global.icu",
+    "rivaskaexchange.lat",
+    "sorindortrade.co",
+    "ulmoton1.top",
+    "zeniquaex.club",
+    "zeniquaex.net"
+   ],
+   "pool_useful": [
+    "elvovia-global.app",
+    "elvovia.live",
+    "elvoviafx.app",
+    "ferrorelx.sbs",
+    "heliosto3.cfd",
+    "heliostox.com",
+    "ilyodor.cfd",
+    "kestadia.club",
+    "kestamen5.homes",
+    "kestamenusdt.homes",
+    "kestaskapro.cfd",
+    "nexaska.cfd",
+    "pelosto.cc",
+    "rivaska-global.icu",
+    "rivaskaexchange.lat",
+    "sorindortrade.co",
+    "ulmoton1.top",
+    "zeniquaex.club",
+    "zeniquaex.net"
+   ],
+   "verdicts": [
+    {
+     "r": 0,
+     "domain": "ferronor53.com",
+     "useful": false,
+     "why": "mirror",
+     "op": "M0",
+     "min_pivots": 1
+    },
+    {
+     "r": 1,
+     "domain": "rivaskaexchange.lat",
+     "useful": true,
+     "why": "member",
+     "op": "O8",
+     "min_pivots": 1
+    },
+    {
+     "r": 1,
+     "domain": "kestaskapro.cfd",
+     "useful": true,
+     "why": "chain1",
+     "op": "O0",
+     "min_pivots": 1
+    },
+    {
+     "r": 1,
+     "domain": "zeniquaex.club",
+     "useful": true,
+     "why": "member",
+     "op": "O5",
+     "min_pivots": 1
+    },
+    {
+     "r": 1,
+     "domain": "ferrorelx.sbs",
+     "useful": true,
+     "why": "member",
+     "op": "O7",
+     "min_pivots": 1
+    },
+    {
+     "r": 1,
+     "domain": "elvoviafx.app",
+     "useful": true,
+     "why": "member",
+     "op": "O7",
+     "min_pivots": 1
+    },
+    {
+     "r": 2,
+     "domain": "kestadia.club",
+     "useful": true,
+     "why": "member",
+     "op": "O3",
+     "min_pivots": 1
+    },
+    {
+     "r": 2,
+     "domain": "nexaska.cfd",
+     "useful": true,
+     "why": "chain2",
+     "op": "O0",
+     "min_pivots": 2
+    },
+    {
+     "r": 2,
+     "domain": "elvovia-global.app",
+     "useful": true,
+     "why": "member",
+     "op": "O7",
+     "min_pivots": 1
+    },
+    {
+     "r": 2,
+     "domain": "ilyodor.cfd",
+     "useful": true,
+     "why": "member",
+     "op": "O0",
+     "min_pivots": 1
+    },
+    {
+     "r": 2,
+     "domain": "kestamen5.homes",
+     "useful": true,
+     "why": "member",
+     "op": "O9",
+     "min_pivots": 2
+    },
+    {
+     "r": 3,
+     "domain": "sorindortrade.co",
+     "useful": true,
+     "why": "member",
+     "op": "O0",
+     "min_pivots": 1
+    },
+    {
+     "r": 3,
+     "domain": "heliosto3.cfd",
+     "useful": true,
+     "why": "member",
+     "op": "O3",
+     "min_pivots": 1
+    },
+    {
+     "r": 3,
+     "domain": "heliostox.com",
+     "useful": true,
+     "why": "member",
+     "op": "O3",
+     "min_pivots": 1
+    },
+    {
+     "r": 3,
+     "domain": "kestamenusdt.homes",
+     "useful": true,
+     "why": "member",
+     "op": "O9",
+     "min_pivots": 1
+    },
+    {
+     "r": 3,
+     "domain": "elvovia.live",
+     "useful": true,
+     "why": "chain_anchor",
+     "op": "O7",
+     "min_pivots": 1
+    },
+    {
+     "r": 4,
+     "domain": "pelosto.cc",
+     "useful": true,
+     "why": "member",
+     "op": "O0",
+     "min_pivots": 1
+    },
+    {
+     "r": 4,
+     "domain": "zeniquaex.net",
+     "useful": true,
+     "why": "member",
+     "op": "O5",
+     "min_pivots": 1
+    },
+    {
+     "r": 4,
+     "domain": "rivaska-global.icu",
+     "useful": true,
+     "why": "member",
+     "op": "O8",
+     "min_pivots": 2
+    },
+    {
+     "r": 4,
+     "domain": "ulmoton1.top",
+     "useful": true,
+     "why": "member",
+     "op": "O1",
+     "min_pivots": 1
+    }
+   ],
+   "trace": [
+    {
+     "round": 0,
+     "reviewed": 1,
+     "useful_cum": 0,
+     "requests_cum": 292
+    },
+    {
+     "round": 1,
+     "reviewed": 5,
+     "useful_cum": 5,
+     "requests_cum": 684
+    },
+    {
+     "round": 2,
+     "reviewed": 5,
+     "useful_cum": 10,
+     "requests_cum": 1140
+    },
+    {
+     "round": 3,
+     "reviewed": 5,
+     "useful_cum": 15,
+     "requests_cum": 1572
+    },
+    {
+     "round": 4,
+     "reviewed": 4,
+     "useful_cum": 19,
+     "requests_cum": 2049
+    },
+    {
+     "round": 5,
+     "reviewed": 0,
+     "useful_cum": 19,
+     "requests_cum": 2374
+    },
+    {
+     "round": 6,
+     "reviewed": 0,
+     "useful_cum": 19,
+     "requests_cum": 2533
+    },
+    {
+     "round": 7,
+     "reviewed": 0,
+     "useful_cum": 19,
+     "requests_cum": 2841
+    }
+   ],
+   "errors": [],
+   "label": "main-investigation-platform-v9-suite-v7-adaptive-intelligence",
+   "noise_floor": false
+  },
+  {
+   "tree": "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07",
+   "seed": 203,
+   "scenario": "cert_blackout",
+   "difficulty": "hard",
+   "rounds": 8,
+   "hashseed": "0",
+   "seconds": 5.5,
+   "world": {
+    "useful_units": 57,
+    "by_min_pivots": {
+     "0": 1,
+     "1": 36,
+     "2": 16,
+     "3": 2,
+     "4": 1,
+     "unreachable": 1
+    },
+    "unknown_family": 7,
+    "returned": 6,
+    "operations": 11,
+    "mirrors": 150,
+    "main_known_r0": 11,
+    "domains_total_r0": 800
+   },
+   "metrics": {
+    "new_useful": 38,
+    "found_share": 0.679,
+    "reviewed": 38,
+    "precision": 1.0,
+    "multi_hop": 14,
+    "median_pivots": 1,
+    "unreachable_found": 0,
+    "operations": 11,
+    "unknown_family": 3,
+    "reappearances": 6,
+    "value": 135.5,
+    "pool_useful": 39,
+    "requests": {
+     "http": 308,
+     "dns": 2631,
+     "crtsh": 2,
+     "rdap": 85,
+     "feed": 18,
+     "page_search": 242,
+     "passive_dns": 31
+    },
+    "requests_total": 3317,
+    "queries_total": 275,
+    "requests_per_useful": 87.3,
+    "queries_per_useful": 7.2,
+    "repeated_queries": 54,
+    "dead_end_queries": 239,
+    "dead_end_dns": 2610,
+    "junk_fetches": 156,
+    "mirror_requests": 74,
+    "rel_total": 5,
+    "rel_false_cross_op": 0,
+    "rel_non_scam": 0,
+    "rel_same_op": 5,
+    "rel_note": "",
+    "first_useful_round": 0,
+    "first_useful_requests": 264,
+    "skip_reasons": {},
+    "outcomes": {
+     "wallet_evidence": 20,
+     "dead_site": 1,
+     "low_evidence": 3,
+     "meaningful_evidence": 4
+    },
+    "engine_errors": 0
+   },
+   "useful_domains": [
+    "astrarelpro.xyz",
+    "corviton.live",
+    "corvivopro.live",
+    "elvodiapro.homes",
+    "elvora-global.org",
+    "ferrolin.club",
+    "ferrora.homes",
+    "fyradorfx.xyz",
+    "fyralin-h5.sbs",
+    "heliovo2.org",
+    "ilyodorpro.cfd",
+    "ilyora.club",
+    "jorvoqua-vip.com",
+    "kairodor.org",
+    "kestador.live",
+    "kestanor.pro",
+    "kestara2.xyz",
+    "kestaraex.bond",
+    "kestaton56.vip",
+    "lumomen2.xyz",
+    "nexavia.pro",
+    "nexavia2.club",
+    "nexavia2.pro",
+    "opramenpro.cfd",
+    "praxmenpro.live",
+    "selapexx.io",
+    "selarel.cfd",
+    "selastopro.top",
+    "sorinton.pro",
+    "sorintonx.club",
+    "talvoska.cfd",
+    "talvoska.co",
+    "talvoton.app",
+    "ulmovia-vip.bond",
+    "ulmovia.bond",
+    "vantalinx.app",
+    "vantaqua.org",
+    "vantavo-vip.cc"
+   ],
+   "pool_useful": [
+    "astrarelpro.xyz",
+    "corviton.live",
+    "corvivopro.live",
+    "elvodiapro.homes",
+    "elvora-global.org",
+    "ferrolin.club",
+    "ferrora.homes",
+    "fyradorfx.xyz",
+    "fyralin-h5.sbs",
+    "heliovo2.org",
+    "ilyodorpro.cfd",
+    "ilyora.club",
+    "jorvoqua-vip.com",
+    "kairodor.org",
+    "kestador.live",
+    "kestanor.pro",
+    "kestara2.xyz",
+    "kestaraex.bond",
+    "kestaton56.vip",
+    "lumomen2.xyz",
+    "nexavia.pro",
+    "nexavia2.club",
+    "nexavia2.pro",
+    "opramenpro.cfd",
+    "praxmenpro.live",
+    "selapexx.io",
+    "selarel.cfd",
+    "selastopro.top",
+    "sorinton.club",
+    "sorinton.pro",
+    "sorintonx.club",
+    "talvoska.cfd",
+    "talvoska.co",
+    "talvoton.app",
+    "ulmovia-vip.bond",
+    "ulmovia.bond",
+    "vantalinx.app",
+    "vantaqua.org",
+    "vantavo-vip.cc"
+   ],
+   "verdicts": [
+    {
+     "r": 0,
+     "domain": "talvoska.cfd",
+     "useful": true,
+     "why": "member",
+     "op": "O1",
+     "min_pivots": 1
+    },
+    {
+     "r": 0,
+     "domain": "kestaton56.vip",
+     "useful": true,
+     "why": "mirror",
+     "op": "M0",
+     "min_pivots": 2
+    },
+    {
+     "r": 0,
+     "domain": "elvora-global.org",
+     "useful": true,
+     "why": "member",
+     "op": "O5",
+     "min_pivots": 2
+    },
+    {
+     "r": 1,
+     "domain": "fyralin-h5.sbs",
+     "useful": true,
+     "why": "member",
+     "op": "O8",
+     "min_pivots": 2
+    },
+    {
+     "r": 1,
+     "domain": "ilyodorpro.cfd",
+     "useful": true,
+     "why": "member",
+     "op": "O0",
+     "min_pivots": 1
+    },
+    {
+     "r": 1,
+     "domain": "selapexx.io",
+     "useful": true,
+     "why": "chain1",
+     "op": "O2",
+     "min_pivots": 1
+    },
+    {
+     "r": 1,
+     "domain": "heliovo2.org",
+     "useful": true,
+     "why": "member",
+     "op": "O4",
+     "min_pivots": 1
+    },
+    {
+     "r": 1,
+     "domain": "corvivopro.live",
+     "useful": true,
+     "why": "chain_anchor",
+     "op": "O7",
+     "min_pivots": 1
+    },
+    {
+     "r": 2,
+     "domain": "ulmovia.bond",
+     "useful": true,
+     "why": "member",
+     "op": "O9",
+     "min_pivots": 1
+    },
+    {
+     "r": 2,
+     "domain": "vantaqua.org",
+     "useful": true,
+     "why": "chain2",
+     "op": "O2",
+     "min_pivots": 2
+    },
+    {
+     "r": 2,
+     "domain": "kestaraex.bond",
+     "useful": true,
+     "why": "member",
+     "op": "O6",
+     "min_pivots": 1
+    },
+    {
+     "r": 2,
+     "domain": "sorintonx.club",
+     "useful": true,
+     "why": "member",
+     "op": "O2",
+     "min_pivots": 1
+    },
+    {
+     "r": 2,
+     "domain": "elvodiapro.homes",
+     "useful": true,
+     "why": "chain1",
+     "op": "O7",
+     "min_pivots": 2
+    },
+    {
+     "r": 3,
+     "domain": "selarel.cfd",
+     "useful": true,
+     "why": "member",
+     "op": "O1",
+     "min_pivots": 2
+    },
+    {
+     "r": 3,
+     "domain": "corviton.live",
+     "useful": true,
+     "why": "member",
+     "op": "O7",
+     "min_pivots": 2
+    },
+    {
+     "r": 3,
+     "domain": "ulmovia-vip.bond",
+     "useful": true,
+     "why": "member",
+     "op": "O9",
+     "min_pivots": 2
+    },
+    {
+     "r": 3,
+     "domain": "talvoska.co",
+     "useful": true,
+     "why": "member",
+     "op": "O1",
+     "min_pivots": 1
+    },
+    {
+     "r": 3,
+     "domain": "sorinton.pro",
+     "useful": true,
+     "why": "member",
+     "op": "O2",
+     "min_pivots": 1
+    },
+    {
+     "r": 4,
+     "domain": "talvoton.app",
+     "useful": true,
+     "why": "returned",
+     "op": "O3",
+     "min_pivots": 1
+    },
+    {
+     "r": 4,
+     "domain": "kestador.live",
+     "useful": true,
+     "why": "chain3",
+     "op": "O7",
+     "min_pivots": 4
+    },
+    {
+     "r": 4,
+     "domain": "vantavo-vip.cc",
+     "useful": true,
+     "why": "returned",
+     "op": "O1",
+     "min_pivots": 1
+    },
+    {
+     "r": 4,
+     "domain": "selastopro.top",
+     "useful": true,
+     "why": "member",
+     "op": "O4",
+     "min_pivots": 1
+    },
+    {
+     "r": 4,
+     "domain": "kairodor.org",
+     "useful": true,
+     "why": "chain3",
+     "op": "O2",
+     "min_pivots": 3
+    },
+    {
+     "r": 5,
+     "domain": "opramenpro.cfd",
+     "useful": true,
+     "why": "returned",
+     "op": "O1",
+     "min_pivots": 1
+    },
+    {
+     "r": 5,
+     "domain": "astrarelpro.xyz",
+     "useful": true,
+     "why": "member",
+     "op": "O6",
+     "min_pivots": 2
+    },
+    {
+     "r": 5,
+     "domain": "ilyora.club",
+     "useful": true,
+     "why": "member",
+     "op": "O3",
+     "min_pivots": 1
+    },
+    {
+     "r": 5,
+     "domain": "praxmenpro.live",
+     "useful": true,
+     "why": "member",
+     "op": "O7",
+     "min_pivots": 2
+    },
+    {
+     "r": 5,
+     "domain": "kestara2.xyz",
+     "useful": true,
+     "why": "member",
+     "op": "O6",
+     "min_pivots": 1
+    },
+    {
+     "r": 6,
+     "domain": "nexavia2.pro",
+     "useful": true,
+     "why": "member",
+     "op": "O4",
+     "min_pivots": 1
+    },
+    {
+     "r": 6,
+     "domain": "nexavia.pro",
+     "useful": true,
+     "why": "member",
+     "op": "O4",
+     "min_pivots": 1
+    },
+    {
+     "r": 6,
+     "domain": "kestanor.pro",
+     "useful": true,
+     "why": "member",
+     "op": "O2",
+     "min_pivots": 1
+    },
+    {
+     "r": 6,
+     "domain": "vantalinx.app",
+     "useful": true,
+     "why": "member",
+     "op": "O3",
+     "min_pivots": 1
+    },
+    {
+     "r": 6,
+     "domain": "ferrora.homes",
+     "useful": true,
+     "why": "chain2",
+     "op": "O7",
+     "min_pivots": 3
+    },
+    {
+     "r": 7,
+     "domain": "fyradorfx.xyz",
+     "useful": true,
+     "why": "member",
+     "op": "O7",
+     "min_pivots": 2
+    },
+    {
+     "r": 7,
+     "domain": "nexavia2.club",
+     "useful": true,
+     "why": "member",
+     "op": "O4",
+     "min_pivots": 1
+    },
+    {
+     "r": 7,
+     "domain": "lumomen2.xyz",
+     "useful": true,
+     "why": "returned",
+     "op": "O1",
+     "min_pivots": 1
+    },
+    {
+     "r": 7,
+     "domain": "jorvoqua-vip.com",
+     "useful": true,
+     "why": "returned",
+     "op": "O3",
+     "min_pivots": 1
+    },
+    {
+     "r": 7,
+     "domain": "ferrolin.club",
+     "useful": true,
+     "why": "returned",
+     "op": "O3",
+     "min_pivots": 1
+    }
+   ],
+   "trace": [
+    {
+     "round": 0,
+     "reviewed": 3,
+     "useful_cum": 3,
+     "requests_cum": 264
+    },
+    {
+     "round": 1,
+     "reviewed": 5,
+     "useful_cum": 8,
+     "requests_cum": 786
+    },
+    {
+     "round": 2,
+     "reviewed": 5,
+     "useful_cum": 13,
+     "requests_cum": 1275
+    },
+    {
+     "round": 3,
+     "reviewed": 5,
+     "useful_cum": 18,
+     "requests_cum": 1635
+    },
+    {
+     "round": 4,
+     "reviewed": 5,
+     "useful_cum": 23,
+     "requests_cum": 2158
+    },
+    {
+     "round": 5,
+     "reviewed": 5,
+     "useful_cum": 28,
+     "requests_cum": 2492
+    },
+    {
+     "round": 6,
+     "reviewed": 5,
+     "useful_cum": 33,
+     "requests_cum": 2810
+    },
+    {
+     "round": 7,
+     "reviewed": 5,
+     "useful_cum": 38,
+     "requests_cum": 3317
+    }
+   ],
+   "errors": [],
+   "label": "main-investigation-platform-v9-suite-v7-adaptive-intelligence",
+   "noise_floor": false
+  },
+  {
+   "tree": "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07",
+   "seed": 203,
+   "scenario": "copycat",
+   "difficulty": "hard",
+   "rounds": 8,
+   "hashseed": "0",
+   "seconds": 3.8,
+   "world": {
+    "useful_units": 59,
+    "by_min_pivots": {
+     "0": 1,
+     "1": 25,
+     "2": 19,
+     "3": 3,
+     "4": 3,
+     "unreachable": 8
+    },
+    "unknown_family": 9,
+    "returned": 2,
+    "operations": 12,
+    "mirrors": 150,
+    "main_known_r0": 11,
+    "domains_total_r0": 887
+   },
+   "metrics": {
+    "new_useful": 20,
+    "found_share": 0.392,
+    "reviewed": 22,
+    "precision": 0.909,
+    "multi_hop": 9,
+    "median_pivots": 1,
+    "unreachable_found": 1,
+    "operations": 9,
+    "unknown_family": 4,
+    "reappearances": 1,
+    "value": 62.4,
+    "pool_useful": 20,
+    "requests": {
+     "http": 458,
+     "dns": 2840,
+     "crtsh": 12,
+     "rdap": 69,
+     "feed": 17,
+     "page_search": 173,
+     "passive_dns": 18
+    },
+    "requests_total": 3587,
+    "queries_total": 203,
+    "requests_per_useful": 179.3,
+    "queries_per_useful": 10.2,
+    "repeated_queries": 32,
+    "dead_end_queries": 168,
+    "dead_end_dns": 2821,
+    "junk_fetches": 332,
+    "mirror_requests": 75,
+    "rel_total": 16,
+    "rel_false_cross_op": 0,
+    "rel_non_scam": 0,
+    "rel_same_op": 16,
+    "rel_note": "",
+    "first_useful_round": 0,
+    "first_useful_requests": 296,
+    "skip_reasons": {
+     "mirror": 2
+    },
+    "outcomes": {
+     "wallet_evidence": 14,
+     "low_evidence": 1,
+     "dead_site": 1,
+     "meaningful_evidence": 2
+    },
+    "engine_errors": 0
+   },
+   "useful_domains": [
+    "bravaska-global.vip",
+    "corvistoex.net",
+    "elvolix.io",
+    "elvolixfx.io",
+    "elvosto.live",
+    "helioton.bond",
+    "hexaton.live",
+    "kairoska1.live",
+    "kairoska2.live",
+    "lumopexx.net",
+    "lyravo.io",
+    "movipexpro.org",
+    "nuvorel1.sbs",
+    "pelovia.app",
+    "praxlix.app",
+    "seladia-h5.cfd",
+    "selanor.io",
+    "ulmorel2.bond",
+    "zeninor2.live",
+    "zeninorstake.homes"
+   ],
+   "pool_useful": [
+    "bravaska-global.vip",
+    "corvistoex.net",
+    "elvolix.io",
+    "elvolixfx.io",
+    "elvosto.live",
+    "helioton.bond",
+    "hexaton.live",
+    "kairoska1.live",
+    "kairoska2.live",
+    "lumopexx.net",
+    "lyravo.io",
+    "movipexpro.org",
+    "nuvorel1.sbs",
+    "pelovia.app",
+    "praxlix.app",
+    "seladia-h5.cfd",
+    "selanor.io",
+    "ulmorel2.bond",
+    "zeninor2.live",
+    "zeninorstake.homes"
+   ],
+   "verdicts": [
+    {
+     "r": 0,
+     "domain": "selanor.io",
+     "useful": true,
+     "why": "member",
+     "op": "O8",
+     "min_pivots": 2
+    },
+    {
+     "r": 0,
+     "domain": "elvolixfx.io",
+     "useful": true,
+     "why": "member",
+     "op": "O8",
+     "min_pivots": 2
+    },
+    {
+     "r": 0,
+     "domain": "ganovia9.net",
+     "useful": false,
+     "why": "mirror",
+     "op": "M0",
+     "min_pivots": 1
+    },
+    {
+     "r": 0,
+     "domain": "bravaska-global.vip",
+     "useful": true,
+     "why": "member",
+     "op": "O6",
+     "min_pivots": 1
+    },
+    {
+     "r": 1,
+     "domain": "elvosto.live",
+     "useful": true,
+     "why": "chain2",
+     "op": "O3",
+     "min_pivots": 2
+    },
+    {
+     "r": 1,
+     "domain": "kairoska1.live",
+     "useful": true,
+     "why": "member",
+     "op": "O10",
+     "min_pivots": 2
+    },
+    {
+     "r": 1,
+     "domain": "elvolix.io",
+     "useful": true,
+     "why": "member",
+     "op": "O8",
+     "min_pivots": 2
+    },
+    {
+     "r": 1,
+     "domain": "ganovia67.cc",
+     "useful": false,
+     "why": "mirror",
+     "op": "M0",
+     "min_pivots": 1
+    },
+    {
+     "r": 1,
+     "domain": "praxlix.app",
+     "useful": true,
+     "why": "chain1",
+     "op": "O3",
+     "min_pivots": 1
+    },
+    {
+     "r": 2,
+     "domain": "pelovia.app",
+     "useful": true,
+     "why": "chain3",
+     "op": "O3",
+     "min_pivots": 3
+    },
+    {
+     "r": 2,
+     "domain": "hexaton.live",
+     "useful": true,
+     "why": "member",
+     "op": "O3",
+     "min_pivots": 1
+    },
+    {
+     "r": 2,
+     "domain": "nuvorel1.sbs",
+     "useful": true,
+     "why": "member",
+     "op": "O2",
+     "min_pivots": 1
+    },
+    {
+     "r": 2,
+     "domain": "ulmorel2.bond",
+     "useful": true,
+     "why": "member",
+     "op": "O10",
+     "min_pivots": 2
+    },
+    {
+     "r": 2,
+     "domain": "corvistoex.net",
+     "useful": true,
+     "why": "member",
+     "op": "O11",
+     "min_pivots": 1
+    },
+    {
+     "r": 3,
+     "domain": "kairoska2.live",
+     "useful": true,
+     "why": "member",
+     "op": "O10",
+     "min_pivots": 2
+    },
+    {
+     "r": 4,
+     "domain": "movipexpro.org",
+     "useful": true,
+     "why": "member",
+     "op": "O6",
+     "min_pivots": 1
+    },
+    {
+     "r": 4,
+     "domain": "seladia-h5.cfd",
+     "useful": true,
+     "why": "member",
+     "op": "O4",
+     "min_pivots": 1
+    },
+    {
+     "r": 4,
+     "domain": "zeninor2.live",
+     "useful": true,
+     "why": "member",
+     "op": "O0",
+     "min_pivots": 1
+    },
+    {
+     "r": 4,
+     "domain": "lumopexx.net",
+     "useful": true,
+     "why": "member",
+     "op": "O3",
+     "min_pivots": 2
+    },
+    {
+     "r": 4,
+     "domain": "zeninorstake.homes",
+     "useful": true,
+     "why": "member",
+     "op": "O0",
+     "min_pivots": 1
+    },
+    {
+     "r": 5,
+     "domain": "helioton.bond",
+     "useful": true,
+     "why": "returned",
+     "op": "O1",
+     "min_pivots": 1
+    },
+    {
+     "r": 7,
+     "domain": "lyravo.io",
+     "useful": true,
+     "why": "member",
+     "op": "O1",
+     "min_pivots": null
+    }
+   ],
+   "trace": [
+    {
+     "round": 0,
+     "reviewed": 4,
+     "useful_cum": 3,
+     "requests_cum": 296
+    },
+    {
+     "round": 1,
+     "reviewed": 5,
+     "useful_cum": 7,
+     "requests_cum": 1013
+    },
+    {
+     "round": 2,
+     "reviewed": 5,
+     "useful_cum": 12,
+     "requests_cum": 1487
+    },
+    {
+     "round": 3,
+     "reviewed": 1,
+     "useful_cum": 13,
+     "requests_cum": 1868
+    },
+    {
+     "round": 4,
+     "reviewed": 5,
+     "useful_cum": 18,
+     "requests_cum": 2447
+    },
+    {
+     "round": 5,
+     "reviewed": 1,
+     "useful_cum": 19,
+     "requests_cum": 2854
+    },
+    {
+     "round": 6,
+     "reviewed": 0,
+     "useful_cum": 19,
+     "requests_cum": 3137
+    },
+    {
+     "round": 7,
+     "reviewed": 1,
+     "useful_cum": 20,
+     "requests_cum": 3587
+    }
+   ],
+   "errors": [],
+   "label": "main-investigation-platform-v9-suite-v7-adaptive-intelligence",
+   "noise_floor": false
+  },
+  {
+   "tree": "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07",
+   "seed": 203,
+   "scenario": "mirror_flood",
+   "difficulty": "hard",
+   "rounds": 8,
+   "hashseed": "0",
+   "seconds": 3.0,
+   "world": {
+    "useful_units": 47,
+    "by_min_pivots": {
+     "0": 1,
+     "1": 29,
+     "2": 10,
+     "3": 2,
+     "4": 1,
+     "unreachable": 4
+    },
+    "unknown_family": 10,
+    "returned": 2,
+    "operations": 10,
+    "mirrors": 570,
+    "main_known_r0": 13,
+    "domains_total_r0": 979
+   },
+   "metrics": {
+    "new_useful": 15,
+    "found_share": 0.349,
+    "reviewed": 17,
+    "precision": 0.882,
+    "multi_hop": 4,
+    "median_pivots": 1,
+    "unreachable_found": 0,
+    "operations": 7,
+    "unknown_family": 6,
+    "reappearances": 1,
+    "value": 60.0,
+    "pool_useful": 16,
+    "requests": {
+     "http": 406,
+     "dns": 2604,
+     "crtsh": 14,
+     "rdap": 92,
+     "feed": 17,
+     "page_search": 141,
+     "passive_dns": 22
+    },
+    "requests_total": 3296,
+    "queries_total": 177,
+    "requests_per_useful": 219.7,
+    "queries_per_useful": 11.8,
+    "repeated_queries": 34,
+    "dead_end_queries": 144,
+    "dead_end_dns": 2579,
+    "junk_fetches": 234,
+    "mirror_requests": 191,
+    "rel_total": 3,
+    "rel_false_cross_op": 0,
+    "rel_non_scam": 0,
+    "rel_same_op": 3,
+    "rel_note": "",
+    "first_useful_round": 0,
+    "first_useful_requests": 289,
+    "skip_reasons": {
+     "mirror": 2
+    },
+    "outcomes": {
+     "wallet_evidence": 7,
+     "meaningful_evidence": 2
+    },
+    "engine_errors": 0
+   },
+   "useful_domains": [
+    "corvidiax.pro",
+    "corvilin.net",
+    "domaska.app",
+    "earnilyonor.top",
+    "fyradia.xyz",
+    "heliolinx.cc",
+    "ilyoska.cc",
+    "kairodiapro.co",
+    "kestarapro.net",
+    "lyralinx.sbs",
+    "marlemenexchange.cc",
+    "marlevo.com",
+    "nuvoviax.com",
+    "praxska.app",
+    "selapex.xyz"
+   ],
+   "pool_useful": [
+    "corvidiax.pro",
+    "corvilin.net",
+    "domaska.app",
+    "earnilyonor.top",
+    "elvosto.pro",
+    "fyradia.xyz",
+    "heliolinx.cc",
+    "ilyoska.cc",
+    "kairodiapro.co",
+    "kestarapro.net",
+    "lyralinx.sbs",
+    "marlemenexchange.cc",
+    "marlevo.com",
+    "nuvoviax.com",
+    "praxska.app",
+    "selapex.xyz"
+   ],
+   "verdicts": [
+    {
+     "r": 0,
+     "domain": "domaska.app",
+     "useful": true,
+     "why": "member",
+     "op": "O9",
+     "min_pivots": 2
+    },
+    {
+     "r": 0,
+     "domain": "ilyorel6.live",
+     "useful": false,
+     "why": "mirror",
+     "op": "M0",
+     "min_pivots": 1
+    },
+    {
+     "r": 0,
+     "domain": "heliolinx.cc",
+     "useful": true,
+     "why": "member",
+     "op": "O7",
+     "min_pivots": 1
+    },
+    {
+     "r": 0,
+     "domain": "praxska.app",
+     "useful": true,
+     "why": "member",
+     "op": "O9",
+     "min_pivots": 2
+    },
+    {
+     "r": 1,
+     "domain": "fyrapex82.pro",
+     "useful": false,
+     "why": "mirror",
+     "op": "M1",
+     "min_pivots": 1
+    },
+    {
+     "r": 1,
+     "domain": "lyralinx.sbs",
+     "useful": true,
+     "why": "member",
+     "op": "O7",
+     "min_pivots": 1
+    },
+    {
+     "r": 1,
+     "domain": "marlemenexchange.cc",
+     "useful": true,
+     "why": "member",
+     "op": "O9",
+     "min_pivots": 1
+    },
+    {
+     "r": 3,
+     "domain": "marlevo.com",
+     "useful": true,
+     "why": "member",
+     "op": "O8",
+     "min_pivots": 1
+    },
+    {
+     "r": 4,
+     "domain": "nuvoviax.com",
+     "useful": true,
+     "why": "member",
+     "op": "O8",
+     "min_pivots": 2
+    },
+    {
+     "r": 4,
+     "domain": "corvilin.net",
+     "useful": true,
+     "why": "member",
+     "op": "O2",
+     "min_pivots": 1
+    },
+    {
+     "r": 5,
+     "domain": "ilyoska.cc",
+     "useful": true,
+     "why": "member",
+     "op": "O9",
+     "min_pivots": 2
+    },
+    {
+     "r": 6,
+     "domain": "earnilyonor.top",
+     "useful": true,
+     "why": "member",
+     "op": "O1",
+     "min_pivots": 1
+    },
+    {
+     "r": 7,
+     "domain": "kairodiapro.co",
+     "useful": true,
+     "why": "member",
+     "op": "O1",
+     "min_pivots": 1
+    },
+    {
+     "r": 7,
+     "domain": "fyradia.xyz",
+     "useful": true,
+     "why": "returned",
+     "op": "O0",
+     "min_pivots": 1
+    },
+    {
+     "r": 7,
+     "domain": "kestarapro.net",
+     "useful": true,
+     "why": "member",
+     "op": "O0",
+     "min_pivots": 1
+    },
+    {
+     "r": 7,
+     "domain": "corvidiax.pro",
+     "useful": true,
+     "why": "member",
+     "op": "O6",
+     "min_pivots": 1
+    },
+    {
+     "r": 7,
+     "domain": "selapex.xyz",
+     "useful": true,
+     "why": "member",
+     "op": "O6",
+     "min_pivots": 1
+    }
+   ],
+   "trace": [
+    {
+     "round": 0,
+     "reviewed": 4,
+     "useful_cum": 3,
+     "requests_cum": 289
+    },
+    {
+     "round": 1,
+     "reviewed": 3,
+     "useful_cum": 5,
+     "requests_cum": 1059
+    },
+    {
+     "round": 2,
+     "reviewed": 0,
+     "useful_cum": 5,
+     "requests_cum": 1456
+    },
+    {
+     "round": 3,
+     "reviewed": 1,
+     "useful_cum": 6,
+     "requests_cum": 1651
+    },
+    {
+     "round": 4,
+     "reviewed": 2,
+     "useful_cum": 8,
+     "requests_cum": 2156
+    },
+    {
+     "round": 5,
+     "reviewed": 1,
+     "useful_cum": 9,
+     "requests_cum": 2489
+    },
+    {
+     "round": 6,
+     "reviewed": 1,
+     "useful_cum": 10,
+     "requests_cum": 2783
+    },
+    {
+     "round": 7,
+     "reviewed": 5,
+     "useful_cum": 15,
+     "requests_cum": 3296
+    }
+   ],
+   "errors": [],
+   "label": "main-investigation-platform-v9-suite-v7-adaptive-intelligence",
+   "noise_floor": false
+  },
+  {
+   "tree": "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07",
+   "seed": 203,
+   "scenario": "collapse",
+   "difficulty": "hard",
+   "rounds": 8,
+   "hashseed": "0",
+   "seconds": 2.2,
+   "world": {
+    "useful_units": 45,
+    "by_min_pivots": {
+     "1": 18,
+     "2": 12,
+     "3": 4,
+     "4": 1,
+     "unreachable": 10
+    },
+    "unknown_family": 9,
+    "returned": 1,
+    "operations": 10,
+    "mirrors": 150,
+    "main_known_r0": 11,
+    "domains_total_r0": 788
+   },
+   "metrics": {
+    "new_useful": 8,
+    "found_share": 0.229,
+    "reviewed": 10,
+    "precision": 0.8,
+    "multi_hop": 2,
+    "median_pivots": 1,
+    "unreachable_found": 0,
+    "operations": 4,
+    "unknown_family": 0,
+    "reappearances": 1,
+    "value": 22.9,
+    "pool_useful": 8,
+    "requests": {
+     "http": 374,
+     "dns": 2634,
+     "crtsh": 14,
+     "rdap": 59,
+     "feed": 17,
+     "page_search": 85,
+     "passive_dns": 10
+    },
+    "requests_total": 3193,
+    "queries_total": 109,
+    "requests_per_useful": 399.1,
+    "queries_per_useful": 13.6,
+    "repeated_queries": 9,
+    "dead_end_queries": 89,
+    "dead_end_dns": 2609,
+    "junk_fetches": 266,
+    "mirror_requests": 128,
+    "rel_total": 92,
+    "rel_false_cross_op": 0,
+    "rel_non_scam": 0,
+    "rel_same_op": 92,
+    "rel_note": "",
+    "first_useful_round": 0,
+    "first_useful_requests": 299,
+    "skip_reasons": {
+     "mirror": 2
+    },
+    "outcomes": {
+     "low_evidence": 3,
+     "wallet_evidence": 5
+    },
+    "engine_errors": 0
+   },
+   "useful_domains": [
+    "cyrapex-global.bond",
+    "ferrovia.icu",
+    "ganodor2.shop",
+    "kestadorearn.org",
+    "nexadiaex.pro",
+    "nexadiax.pro",
+    "quilopexex.icu",
+    "talvoskapro.sbs"
+   ],
+   "pool_useful": [
+    "cyrapex-global.bond",
+    "ferrovia.icu",
+    "ganodor2.shop",
+    "kestadorearn.org",
+    "nexadiaex.pro",
+    "nexadiax.pro",
+    "quilopexex.icu",
+    "talvoskapro.sbs"
+   ],
+   "verdicts": [
+    {
+     "r": 0,
+     "domain": "cyrapex-global.bond",
+     "useful": true,
+     "why": "chain_anchor",
+     "op": "O6",
+     "min_pivots": 1
+    },
+    {
+     "r": 0,
+     "domain": "praxvo108.club",
+     "useful": false,
+     "why": "mirror",
+     "op": "M0",
+     "min_pivots": 1
+    },
+    {
+     "r": 1,
+     "domain": "praxvo22.co",
+     "useful": false,
+     "why": "mirror",
+     "op": "M0",
+     "min_pivots": 1
+    },
+    {
+     "r": 1,
+     "domain": "talvoskapro.sbs",
+     "useful": true,
+     "why": "chain1",
+     "op": "O6",
+     "min_pivots": 2
+    },
+    {
+     "r": 1,
+     "domain": "nexadiax.pro",
+     "useful": true,
+     "why": "member",
+     "op": "O0",
+     "min_pivots": 1
+    },
+    {
+     "r": 2,
+     "domain": "kestadorearn.org",
+     "useful": true,
+     "why": "member",
+     "op": "O7",
+     "min_pivots": 1
+    },
+    {
+     "r": 2,
+     "domain": "nexadiaex.pro",
+     "useful": true,
+     "why": "member",
+     "op": "O0",
+     "min_pivots": 1
+    },
+    {
+     "r": 3,
+     "domain": "ganodor2.shop",
+     "useful": true,
+     "why": "member",
+     "op": "O7",
+     "min_pivots": 2
+    },
+    {
+     "r": 4,
+     "domain": "ferrovia.icu",
+     "useful": true,
+     "why": "member",
+     "op": "O2",
+     "min_pivots": 1
+    },
+    {
+     "r": 5,
+     "domain": "quilopexex.icu",
+     "useful": true,
+     "why": "returned",
+     "op": "O2",
+     "min_pivots": 1
+    }
+   ],
+   "trace": [
+    {
+     "round": 0,
+     "reviewed": 2,
+     "useful_cum": 1,
+     "requests_cum": 299
+    },
+    {
+     "round": 1,
+     "reviewed": 3,
+     "useful_cum": 3,
+     "requests_cum": 1047
+    },
+    {
+     "round": 2,
+     "reviewed": 2,
+     "useful_cum": 5,
+     "requests_cum": 1466
+    },
+    {
+     "round": 3,
+     "reviewed": 1,
+     "useful_cum": 6,
+     "requests_cum": 1832
+    },
+    {
+     "round": 4,
+     "reviewed": 1,
+     "useful_cum": 7,
+     "requests_cum": 2304
+    },
+    {
+     "round": 5,
+     "reviewed": 1,
+     "useful_cum": 8,
+     "requests_cum": 2608
+    },
+    {
+     "round": 6,
+     "reviewed": 0,
+     "useful_cum": 8,
+     "requests_cum": 2841
+    },
+    {
+     "round": 7,
+     "reviewed": 0,
+     "useful_cum": 8,
+     "requests_cum": 3193
+    }
+   ],
+   "errors": [],
+   "label": "main-investigation-platform-v9-suite-v7-adaptive-intelligence",
+   "noise_floor": false
+  },
+  {
+   "tree": "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07",
+   "seed": 203,
+   "scenario": "migration",
+   "difficulty": "hard",
+   "rounds": 8,
+   "hashseed": "0",
+   "seconds": 4.1,
+   "world": {
+    "useful_units": 55,
+    "by_min_pivots": {
+     "0": 1,
+     "1": 28,
+     "2": 13,
+     "3": 5,
+     "4": 1,
+     "unreachable": 7
+    },
+    "unknown_family": 10,
+    "returned": 5,
+    "operations": 11,
+    "mirrors": 150,
+    "main_known_r0": 9,
+    "domains_total_r0": 833
+   },
+   "metrics": {
+    "new_useful": 20,
+    "found_share": 0.417,
+    "reviewed": 21,
+    "precision": 0.952,
+    "multi_hop": 8,
+    "median_pivots": 1,
+    "unreachable_found": 0,
+    "operations": 9,
+    "unknown_family": 2,
+    "reappearances": 0,
+    "value": 58.3,
+    "pool_useful": 20,
+    "requests": {
+     "http": 477,
+     "dns": 2855,
+     "crtsh": 13,
+     "rdap": 103,
+     "feed": 18,
+     "page_search": 169,
+     "passive_dns": 20
+    },
+    "requests_total": 3655,
+    "queries_total": 202,
+    "requests_per_useful": 182.8,
+    "queries_per_useful": 10.1,
+    "repeated_queries": 42,
+    "dead_end_queries": 172,
+    "dead_end_dns": 2831,
+    "junk_fetches": 278,
+    "mirror_requests": 238,
+    "rel_total": 73,
+    "rel_false_cross_op": 0,
+    "rel_non_scam": 0,
+    "rel_same_op": 73,
+    "rel_note": "",
+    "first_useful_round": 0,
+    "first_useful_requests": 284,
+    "skip_reasons": {
+     "mirror": 1
+    },
+    "outcomes": {
+     "wallet_evidence": 14,
+     "investigation_completed": 2,
+     "low_evidence": 1,
+     "meaningful_evidence": 1
+    },
+    "engine_errors": 0
+   },
+   "useful_domains": [
+    "cyrasto-pro.io",
+    "cyrasto.app",
+    "cyrastoex.club",
+    "cyratonex.lat",
+    "domador2.vip",
+    "domamen1.org",
+    "elvoton-global.icu",
+    "exchangecorviqua.top",
+    "kestalixx.sbs",
+    "kestanor.shop",
+    "lumodiapro.vip",
+    "lumopex.app",
+    "nuvoqua4.pro",
+    "opraskapro.co",
+    "orbilinx.lat",
+    "selaviax.co",
+    "talvodiax.shop",
+    "zenilin.xyz",
+    "zenilin2.top",
+    "zeniviapro.icu"
+   ],
+   "pool_useful": [
+    "cyrasto-pro.io",
+    "cyrasto.app",
+    "cyrastoex.club",
+    "cyratonex.lat",
+    "domador2.vip",
+    "domamen1.org",
+    "elvoton-global.icu",
+    "exchangecorviqua.top",
+    "kestalixx.sbs",
+    "kestanor.shop",
+    "lumodiapro.vip",
+    "lumopex.app",
+    "nuvoqua4.pro",
+    "opraskapro.co",
+    "orbilinx.lat",
+    "selaviax.co",
+    "talvodiax.shop",
+    "zenilin.xyz",
+    "zenilin2.top",
+    "zeniviapro.icu"
+   ],
+   "verdicts": [
+    {
+     "r": 0,
+     "domain": "elvoton-global.icu",
+     "useful": true,
+     "why": "member",
+     "op": "O1",
+     "min_pivots": 1
+    },
+    {
+     "r": 0,
+     "domain": "talvodiax.shop",
+     "useful": true,
+     "why": "member",
+     "op": "O5",
+     "min_pivots": 1
+    },
+    {
+     "r": 0,
+     "domain": "cyratonex.lat",
+     "useful": true,
+     "why": "chain_anchor",
+     "op": "O4",
+     "min_pivots": 1
+    },
+    {
+     "r": 0,
+     "domain": "nuvoqua4.pro",
+     "useful": true,
+     "why": "mirror",
+     "op": "M0",
+     "min_pivots": 2
+    },
+    {
+     "r": 1,
+     "domain": "zenilin.xyz",
+     "useful": true,
+     "why": "member",
+     "op": "O8",
+     "min_pivots": 1
+    },
+    {
+     "r": 1,
+     "domain": "nuvoqua49.org",
+     "useful": false,
+     "why": "mirror",
+     "op": "M0",
+     "min_pivots": 2
+    },
+    {
+     "r": 1,
+     "domain": "zenilin2.top",
+     "useful": true,
+     "why": "member",
+     "op": "O8",
+     "min_pivots": 2
+    },
+    {
+     "r": 1,
+     "domain": "kestalixx.sbs",
+     "useful": true,
+     "why": "chain1",
+     "op": "O4",
+     "min_pivots": 2
+    },
+    {
+     "r": 1,
+     "domain": "cyrastoex.club",
+     "useful": true,
+     "why": "chain_anchor",
+     "op": "O6",
+     "min_pivots": 2
+    },
+    {
+     "r": 2,
+     "domain": "domador2.vip",
+     "useful": true,
+     "why": "member",
+     "op": "O2",
+     "min_pivots": 1
+    },
+    {
+     "r": 2,
+     "domain": "cyrasto.app",
+     "useful": true,
+     "why": "member",
+     "op": "O6",
+     "min_pivots": 2
+    },
+    {
+     "r": 2,
+     "domain": "kestanor.shop",
+     "useful": true,
+     "why": "member",
+     "op": "O7",
+     "min_pivots": 2
+    },
+    {
+     "r": 2,
+     "domain": "cyrasto-pro.io",
+     "useful": true,
+     "why": "member",
+     "op": "O6",
+     "min_pivots": 3
+    },
+    {
+     "r": 3,
+     "domain": "orbilinx.lat",
+     "useful": true,
+     "why": "member",
+     "op": "O5",
+     "min_pivots": 1
+    },
+    {
+     "r": 3,
+     "domain": "lumodiapro.vip",
+     "useful": true,
+     "why": "member",
+     "op": "O3",
+     "min_pivots": 1
+    },
+    {
+     "r": 4,
+     "domain": "selaviax.co",
+     "useful": true,
+     "why": "member",
+     "op": "O6",
+     "min_pivots": 1
+    },
+    {
+     "r": 4,
+     "domain": "zeniviapro.icu",
+     "useful": true,
+     "why": "member",
+     "op": "O1",
+     "min_pivots": 1
+    },
+    {
+     "r": 4,
+     "domain": "exchangecorviqua.top",
+     "useful": true,
+     "why": "member",
+     "op": "O1",
+     "min_pivots": 1
+    },
+    {
+     "r": 5,
+     "domain": "domamen1.org",
+     "useful": true,
+     "why": "member",
+     "op": "O4",
+     "min_pivots": 1
+    },
+    {
+     "r": 6,
+     "domain": "lumopex.app",
+     "useful": true,
+     "why": "member",
+     "op": "O1",
+     "min_pivots": 1
+    },
+    {
+     "r": 6,
+     "domain": "opraskapro.co",
+     "useful": true,
+     "why": "member",
+     "op": "O6",
+     "min_pivots": 2
+    }
+   ],
+   "trace": [
+    {
+     "round": 0,
+     "reviewed": 4,
+     "useful_cum": 4,
+     "requests_cum": 284
+    },
+    {
+     "round": 1,
+     "reviewed": 5,
+     "useful_cum": 8,
+     "requests_cum": 1065
+    },
+    {
+     "round": 2,
+     "reviewed": 4,
+     "useful_cum": 12,
+     "requests_cum": 1458
+    },
+    {
+     "round": 3,
+     "reviewed": 2,
+     "useful_cum": 14,
+     "requests_cum": 1930
+    },
+    {
+     "round": 4,
+     "reviewed": 3,
+     "useful_cum": 17,
+     "requests_cum": 2563
+    },
+    {
+     "round": 5,
+     "reviewed": 1,
+     "useful_cum": 18,
+     "requests_cum": 2903
+    },
+    {
+     "round": 6,
+     "reviewed": 2,
+     "useful_cum": 20,
+     "requests_cum": 3192
+    },
+    {
+     "round": 7,
+     "reviewed": 0,
+     "useful_cum": 20,
+     "requests_cum": 3655
+    }
+   ],
+   "errors": [],
+   "label": "main-investigation-platform-v9-suite-v7-adaptive-intelligence",
+   "noise_floor": false
+  },
+  {
+   "tree": "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07",
+   "seed": 307,
+   "scenario": "mixed",
+   "difficulty": "hard",
+   "rounds": 8,
+   "hashseed": "0",
+   "seconds": 3.3,
+   "world": {
+    "useful_units": 50,
+    "by_min_pivots": {
+     "0": 1,
+     "1": 26,
+     "2": 15,
+     "3": 3,
+     "unreachable": 5
+    },
+    "unknown_family": 8,
+    "returned": 2,
+    "operations": 10,
+    "mirrors": 150,
+    "main_known_r0": 8,
+    "domains_total_r0": 721
+   },
+   "metrics": {
+    "new_useful": 17,
+    "found_share": 0.378,
+    "reviewed": 18,
+    "precision": 0.944,
+    "multi_hop": 8,
+    "median_pivots": 2,
+    "unreachable_found": 1,
+    "operations": 9,
+    "unknown_family": 4,
+    "reappearances": 0,
+    "value": 53.6,
+    "pool_useful": 17,
+    "requests": {
+     "http": 258,
+     "dns": 2218,
+     "crtsh": 5,
+     "rdap": 63,
+     "feed": 16,
+     "page_search": 170,
+     "passive_dns": 22
+    },
+    "requests_total": 2752,
+    "queries_total": 197,
+    "requests_per_useful": 161.9,
+    "queries_per_useful": 11.6,
+    "repeated_queries": 36,
+    "dead_end_queries": 172,
+    "dead_end_dns": 2202,
+    "junk_fetches": 128,
+    "mirror_requests": 95,
+    "rel_total": 37,
+    "rel_false_cross_op": 0,
+    "rel_non_scam": 0,
+    "rel_same_op": 37,
+    "rel_note": "",
+    "first_useful_round": 0,
+    "first_useful_requests": 270,
+    "skip_reasons": {
+     "mirror": 1
+    },
+    "outcomes": {
+     "wallet_evidence": 12,
+     "meaningful_evidence": 3,
+     "low_evidence": 2
+    },
+    "engine_errors": 0
+   },
+   "useful_domains": [
+    "ferrovoex.lat",
+    "fyramen-vip.icu",
+    "fyramenfx.icu",
+    "ganoviafx.io",
+    "heliolix.club",
+    "ilyovo1.cfd",
+    "ilyovo3.cc",
+    "kairostoex.live",
+    "kairostoex2.live",
+    "kestalix.homes",
+    "lumolin1.shop",
+    "marlelin-vip.xyz",
+    "marlelix.top",
+    "nuvovia-vip.cfd",
+    "praxpex1.icu",
+    "selaton.top",
+    "sorinrelpro.shop"
+   ],
+   "pool_useful": [
+    "ferrovoex.lat",
+    "fyramen-vip.icu",
+    "fyramenfx.icu",
+    "ganoviafx.io",
+    "heliolix.club",
+    "ilyovo1.cfd",
+    "ilyovo3.cc",
+    "kairostoex.live",
+    "kairostoex2.live",
+    "kestalix.homes",
+    "lumolin1.shop",
+    "marlelin-vip.xyz",
+    "marlelix.top",
+    "nuvovia-vip.cfd",
+    "praxpex1.icu",
+    "selaton.top",
+    "sorinrelpro.shop"
+   ],
+   "verdicts": [
+    {
+     "r": 0,
+     "domain": "lyranor2.bond",
+     "useful": false,
+     "why": "mirror",
+     "op": "M0",
+     "min_pivots": 1
+    },
+    {
+     "r": 0,
+     "domain": "kairostoex.live",
+     "useful": true,
+     "why": "member",
+     "op": "O5",
+     "min_pivots": 1
+    },
+    {
+     "r": 0,
+     "domain": "nuvovia-vip.cfd",
+     "useful": true,
+     "why": "member",
+     "op": "O7",
+     "min_pivots": 2
+    },
+    {
+     "r": 0,
+     "domain": "ganoviafx.io",
+     "useful": true,
+     "why": "member",
+     "op": "O4",
+     "min_pivots": 2
+    },
+    {
+     "r": 1,
+     "domain": "ilyovo1.cfd",
+     "useful": true,
+     "why": "member",
+     "op": "O9",
+     "min_pivots": 2
+    },
+    {
+     "r": 1,
+     "domain": "fyramenfx.icu",
+     "useful": true,
+     "why": "member",
+     "op": "O8",
+     "min_pivots": 1
+    },
+    {
+     "r": 1,
+     "domain": "fyramen-vip.icu",
+     "useful": true,
+     "why": "member",
+     "op": "O8",
+     "min_pivots": 2
+    },
+    {
+     "r": 3,
+     "domain": "marlelix.top",
+     "useful": true,
+     "why": "member",
+     "op": "O5",
+     "min_pivots": 1
+    },
+    {
+     "r": 3,
+     "domain": "ferrovoex.lat",
+     "useful": true,
+     "why": "member",
+     "op": "O6",
+     "min_pivots": 2
+    },
+    {
+     "r": 3,
+     "domain": "ilyovo3.cc",
+     "useful": true,
+     "why": "member",
+     "op": "O9",
+     "min_pivots": 1
+    },
+    {
+     "r": 3,
+     "domain": "selaton.top",
+     "useful": true,
+     "why": "member",
+     "op": "O1",
+     "min_pivots": 1
+    },
+    {
+     "r": 3,
+     "domain": "kairostoex2.live",
+     "useful": true,
+     "why": "member",
+     "op": "O5",
+     "min_pivots": 1
+    },
+    {
+     "r": 4,
+     "domain": "lumolin1.shop",
+     "useful": true,
+     "why": "member",
+     "op": "O1",
+     "min_pivots": 2
+    },
+    {
+     "r": 4,
+     "domain": "praxpex1.icu",
+     "useful": true,
+     "why": "member",
+     "op": "O0",
+     "min_pivots": null
+    },
+    {
+     "r": 4,
+     "domain": "marlelin-vip.xyz",
+     "useful": true,
+     "why": "member",
+     "op": "O6",
+     "min_pivots": 2
+    },
+    {
+     "r": 4,
+     "domain": "sorinrelpro.shop",
+     "useful": true,
+     "why": "member",
+     "op": "O3",
+     "min_pivots": 1
+    },
+    {
+     "r": 4,
+     "domain": "heliolix.club",
+     "useful": true,
+     "why": "member",
+     "op": "O6",
+     "min_pivots": 2
+    },
+    {
+     "r": 5,
+     "domain": "kestalix.homes",
+     "useful": true,
+     "why": "member",
+     "op": "O1",
+     "min_pivots": 1
+    }
+   ],
+   "trace": [
+    {
+     "round": 0,
+     "reviewed": 4,
+     "useful_cum": 3,
+     "requests_cum": 270
+    },
+    {
+     "round": 1,
+     "reviewed": 3,
+     "useful_cum": 6,
+     "requests_cum": 769
+    },
+    {
+     "round": 2,
+     "reviewed": 0,
+     "useful_cum": 6,
+     "requests_cum": 1104
+    },
+    {
+     "round": 3,
+     "reviewed": 5,
+     "useful_cum": 11,
+     "requests_cum": 1256
+    },
+    {
+     "round": 4,
+     "reviewed": 5,
+     "useful_cum": 16,
+     "requests_cum": 1708
+    },
+    {
+     "round": 5,
+     "reviewed": 1,
+     "useful_cum": 17,
+     "requests_cum": 2085
+    },
+    {
+     "round": 6,
+     "reviewed": 0,
+     "useful_cum": 17,
+     "requests_cum": 2389
+    },
+    {
+     "round": 7,
+     "reviewed": 0,
+     "useful_cum": 17,
+     "requests_cum": 2752
+    }
+   ],
+   "errors": [],
+   "label": "main-investigation-platform-v9-suite-v7-adaptive-intelligence",
+   "noise_floor": false
+  },
+  {
+   "tree": "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07",
+   "seed": 203,
+   "scenario": "dark_family",
+   "difficulty": "hard",
+   "rounds": 8,
+   "hashseed": "0",
+   "seconds": 4.6,
+   "world": {
+    "useful_units": 66,
+    "by_min_pivots": {
+     "0": 1,
+     "1": 37,
+     "2": 18,
+     "3": 5,
+     "4": 1,
+     "unreachable": 4
+    },
+    "unknown_family": 21,
+    "returned": 2,
+    "operations": 12,
+    "mirrors": 150,
+    "main_known_r0": 13,
+    "domains_total_r0": 791
+   },
+   "metrics": {
+    "new_useful": 30,
+    "found_share": 0.484,
+    "reviewed": 32,
+    "precision": 0.938,
+    "multi_hop": 8,
+    "median_pivots": 1,
+    "unreachable_found": 0,
+    "operations": 10,
+    "unknown_family": 7,
+    "reappearances": 2,
+    "value": 95.3,
+    "pool_useful": 31,
+    "requests": {
+     "http": 402,
+     "dns": 2782,
+     "crtsh": 12,
+     "rdap": 81,
+     "feed": 18,
+     "page_search": 218,
+     "passive_dns": 30
+    },
+    "requests_total": 3543,
+    "queries_total": 260,
+    "requests_per_useful": 118.1,
+    "queries_per_useful": 8.7,
+    "repeated_queries": 44,
+    "dead_end_queries": 216,
+    "dead_end_dns": 2766,
+    "junk_fetches": 222,
+    "mirror_requests": 94,
+    "rel_total": 54,
+    "rel_false_cross_op": 0,
+    "rel_non_scam": 0,
+    "rel_same_op": 54,
+    "rel_note": "",
+    "first_useful_round": 0,
+    "first_useful_requests": 301,
+    "skip_reasons": {
+     "mirror": 2
+    },
+    "outcomes": {
+     "wallet_evidence": 15,
+     "meaningful_evidence": 2,
+     "low_evidence": 3
+    },
+    "engine_errors": 0
+   },
+   "useful_domains": [
+    "corvira-h5.shop",
+    "corvira.io",
+    "corvirax.shop",
+    "fyralixex.cc",
+    "fyrarapro.pro",
+    "ganoqua.io",
+    "hexanor3.io",
+    "hexanorex.co",
+    "ilyostopro.top",
+    "jorvolin1.net",
+    "jorvolinx.cfd",
+    "kaironorx.app",
+    "kestapexex.shop",
+    "lumovo.cfd",
+    "marleviax.cfd",
+    "orbipex-vip.app",
+    "orbipex3.live",
+    "pelosto.live",
+    "praxvo-pro.sbs",
+    "rivasto-global.icu",
+    "rivastofx.icu",
+    "selarelpro.cfd",
+    "talvorapro.sbs",
+    "tavinor-global.vip",
+    "tavinor-vip2.vip",
+    "tavipex.shop",
+    "tavipexfx.cc",
+    "ulmovia3.pro",
+    "ulmoviax.pro",
+    "zenimenfx.cfd"
+   ],
+   "pool_useful": [
+    "corvira-h5.shop",
+    "corvira.io",
+    "corvirax.shop",
+    "fyralixex.cc",
+    "fyrarapro.pro",
+    "ganoqua.io",
+    "hexanor3.io",
+    "hexanorex.co",
+    "ilyostopro.top",
+    "jorvolin1.net",
+    "jorvolinx.cfd",
+    "kaironorx.app",
+    "kestapexex.shop",
+    "lumovo.cfd",
+    "marleviax.cfd",
+    "orbipex-vip.app",
+    "orbipex3.live",
+    "pelosto.live",
+    "praxskax.cc",
+    "praxvo-pro.sbs",
+    "rivasto-global.icu",
+    "rivastofx.icu",
+    "selarelpro.cfd",
+    "talvorapro.sbs",
+    "tavinor-global.vip",
+    "tavinor-vip2.vip",
+    "tavipex.shop",
+    "tavipexfx.cc",
+    "ulmovia3.pro",
+    "ulmoviax.pro",
+    "zenimenfx.cfd"
+   ],
+   "verdicts": [
+    {
+     "r": 0,
+     "domain": "hexanorex.co",
+     "useful": true,
+     "why": "member",
+     "op": "O2",
+     "min_pivots": 1
+    },
+    {
+     "r": 0,
+     "domain": "praxvo-pro.sbs",
+     "useful": true,
+     "why": "member",
+     "op": "O4",
+     "min_pivots": 1
+    },
+    {
+     "r": 0,
+     "domain": "lumoqua22.homes",
+     "useful": false,
+     "why": "mirror",
+     "op": "M0",
+     "min_pivots": 1
+    },
+    {
+     "r": 0,
+     "domain": "ulmoviax.pro",
+     "useful": true,
+     "why": "member",
+     "op": "O8",
+     "min_pivots": 1
+    },
+    {
+     "r": 1,
+     "domain": "orbipex3.live",
+     "useful": true,
+     "why": "member",
+     "op": "O6",
+     "min_pivots": 1
+    },
+    {
+     "r": 1,
+     "domain": "pelosto.live",
+     "useful": true,
+     "why": "member",
+     "op": "O3",
+     "min_pivots": 1
+    },
+    {
+     "r": 1,
+     "domain": "fyrarapro.pro",
+     "useful": true,
+     "why": "member",
+     "op": "O1",
+     "min_pivots": 1
+    },
+    {
+     "r": 1,
+     "domain": "lumoqua81.vip",
+     "useful": false,
+     "why": "mirror",
+     "op": "M0",
+     "min_pivots": 1
+    },
+    {
+     "r": 1,
+     "domain": "hexanor3.io",
+     "useful": true,
+     "why": "member",
+     "op": "O2",
+     "min_pivots": 1
+    },
+    {
+     "r": 2,
+     "domain": "ganoqua.io",
+     "useful": true,
+     "why": "chain1",
+     "op": "O7",
+     "min_pivots": 1
+    },
+    {
+     "r": 2,
+     "domain": "orbipex-vip.app",
+     "useful": true,
+     "why": "member",
+     "op": "O6",
+     "min_pivots": 1
+    },
+    {
+     "r": 2,
+     "domain": "zenimenfx.cfd",
+     "useful": true,
+     "why": "chain_anchor",
+     "op": "O7",
+     "min_pivots": 1
+    },
+    {
+     "r": 2,
+     "domain": "ulmovia3.pro",
+     "useful": true,
+     "why": "member",
+     "op": "O8",
+     "min_pivots": 2
+    },
+    {
+     "r": 2,
+     "domain": "jorvolin1.net",
+     "useful": true,
+     "why": "member",
+     "op": "O9",
+     "min_pivots": 1
+    },
+    {
+     "r": 3,
+     "domain": "lumovo.cfd",
+     "useful": true,
+     "why": "chain2",
+     "op": "O7",
+     "min_pivots": 2
+    },
+    {
+     "r": 3,
+     "domain": "selarelpro.cfd",
+     "useful": true,
+     "why": "chain3",
+     "op": "O7",
+     "min_pivots": 3
+    },
+    {
+     "r": 3,
+     "domain": "marleviax.cfd",
+     "useful": true,
+     "why": "member",
+     "op": "O7",
+     "min_pivots": 1
+    },
+    {
+     "r": 3,
+     "domain": "jorvolinx.cfd",
+     "useful": true,
+     "why": "member",
+     "op": "O9",
+     "min_pivots": 2
+    },
+    {
+     "r": 4,
+     "domain": "talvorapro.sbs",
+     "useful": true,
+     "why": "member",
+     "op": "O4",
+     "min_pivots": 1
+    },
+    {
+     "r": 5,
+     "domain": "corvirax.shop",
+     "useful": true,
+     "why": "member",
+     "op": "O0",
+     "min_pivots": 1
+    },
+    {
+     "r": 5,
+     "domain": "corvira-h5.shop",
+     "useful": true,
+     "why": "member",
+     "op": "O0",
+     "min_pivots": 0
+    },
+    {
+     "r": 5,
+     "domain": "corvira.io",
+     "useful": true,
+     "why": "member",
+     "op": "O0",
+     "min_pivots": 1
+    },
+    {
+     "r": 5,
+     "domain": "kaironorx.app",
+     "useful": true,
+     "why": "member",
+     "op": "O0",
+     "min_pivots": 1
+    },
+    {
+     "r": 6,
+     "domain": "tavipex.shop",
+     "useful": true,
+     "why": "member",
+     "op": "O1",
+     "min_pivots": 1
+    },
+    {
+     "r": 6,
+     "domain": "rivastofx.icu",
+     "useful": true,
+     "why": "member",
+     "op": "O11",
+     "min_pivots": 3
+    },
+    {
+     "r": 6,
+     "domain": "rivasto-global.icu",
+     "useful": true,
+     "why": "member",
+     "op": "O11",
+     "min_pivots": 2
+    },
+    {
+     "r": 6,
+     "domain": "kestapexex.shop",
+     "useful": true,
+     "why": "member",
+     "op": "O11",
+     "min_pivots": 1
+    },
+    {
+     "r": 7,
+     "domain": "tavinor-vip2.vip",
+     "useful": true,
+     "why": "member",
+     "op": "O3",
+     "min_pivots": 2
+    },
+    {
+     "r": 7,
+     "domain": "tavipexfx.cc",
+     "useful": true,
+     "why": "returned",
+     "op": "O1",
+     "min_pivots": 1
+    },
+    {
+     "r": 7,
+     "domain": "tavinor-global.vip",
+     "useful": true,
+     "why": "member",
+     "op": "O3",
+     "min_pivots": 2
+    },
+    {
+     "r": 7,
+     "domain": "fyralixex.cc",
+     "useful": true,
+     "why": "member",
+     "op": "O4",
+     "min_pivots": 1
+    },
+    {
+     "r": 7,
+     "domain": "ilyostopro.top",
+     "useful": true,
+     "why": "returned",
+     "op": "O2",
+     "min_pivots": 1
+    }
+   ],
+   "trace": [
+    {
+     "round": 0,
+     "reviewed": 4,
+     "useful_cum": 3,
+     "requests_cum": 301
+    },
+    {
+     "round": 1,
+     "reviewed": 5,
+     "useful_cum": 7,
+     "requests_cum": 945
+    },
+    {
+     "round": 2,
+     "reviewed": 5,
+     "useful_cum": 12,
+     "requests_cum": 1407
+    },
+    {
+     "round": 3,
+     "reviewed": 4,
+     "useful_cum": 16,
+     "requests_cum": 1789
+    },
+    {
+     "round": 4,
+     "reviewed": 1,
+     "useful_cum": 17,
+     "requests_cum": 2317
+    },
+    {
+     "round": 5,
+     "reviewed": 4,
+     "useful_cum": 21,
+     "requests_cum": 2601
+    },
+    {
+     "round": 6,
+     "reviewed": 4,
+     "useful_cum": 25,
+     "requests_cum": 2917
+    },
+    {
+     "round": 7,
+     "reviewed": 5,
+     "useful_cum": 30,
+     "requests_cum": 3543
+    }
+   ],
+   "errors": [],
+   "label": "main-investigation-platform-v9-suite-v7-adaptive-intelligence",
+   "noise_floor": false
+  },
+  {
+   "tree": "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07",
+   "seed": 307,
+   "scenario": "cert_blackout",
+   "difficulty": "hard",
+   "rounds": 8,
+   "hashseed": "0",
+   "seconds": 4.9,
+   "world": {
+    "useful_units": 51,
+    "by_min_pivots": {
+     "0": 1,
+     "1": 30,
+     "2": 12,
+     "3": 4,
+     "4": 1,
+     "unreachable": 3
+    },
+    "unknown_family": 9,
+    "returned": 3,
+    "operations": 11,
+    "mirrors": 150,
+    "main_known_r0": 10,
+    "domains_total_r0": 723
+   },
+   "metrics": {
+    "new_useful": 25,
+    "found_share": 0.521,
+    "reviewed": 25,
+    "precision": 1.0,
+    "multi_hop": 5,
+    "median_pivots": 1,
+    "unreachable_found": 0,
+    "operations": 10,
+    "unknown_family": 2,
+    "reappearances": 2,
+    "value": 88.6,
+    "pool_useful": 25,
+    "requests": {
+     "http": 402,
+     "dns": 2666,
+     "crtsh": 2,
+     "rdap": 110,
+     "feed": 18,
+     "page_search": 198,
+     "passive_dns": 24
+    },
+    "requests_total": 3420,
+    "queries_total": 224,
+    "requests_per_useful": 136.8,
+    "queries_per_useful": 9.0,
+    "repeated_queries": 49,
+    "dead_end_queries": 190,
+    "dead_end_dns": 2646,
+    "junk_fetches": 192,
+    "mirror_requests": 245,
+    "rel_total": 238,
+    "rel_false_cross_op": 0,
+    "rel_non_scam": 0,
+    "rel_same_op": 238,
+    "rel_note": "",
+    "first_useful_round": 0,
+    "first_useful_requests": 250,
+    "skip_reasons": {},
+    "outcomes": {
+     "wallet_evidence": 15,
+     "meaningful_evidence": 4,
+     "low_evidence": 2
+    },
+    "engine_errors": 0
+   },
+   "useful_domains": [
+    "corvipex.cc",
+    "cyradiax.homes",
+    "cyravia.com",
+    "dexovia.shop",
+    "domadiapro.icu",
+    "ferromen-vip.co",
+    "ferromen.bond",
+    "ferromenfx.vip",
+    "fyradia1.shop",
+    "fyraskapro.cc",
+    "fyrasto-h5.xyz",
+    "fyravia.club",
+    "ganodia.shop",
+    "ganostox.club",
+    "jorvodiaex.club",
+    "lumodiapro.app",
+    "oprarel-global.cc",
+    "oprarelx.vip",
+    "orbiska18.club",
+    "sorinqua.cc",
+    "talvotonx.xyz",
+    "vantador.club",
+    "vantalin1.com",
+    "vantaska.club",
+    "vantaskax.io"
+   ],
+   "pool_useful": [
+    "corvipex.cc",
+    "cyradiax.homes",
+    "cyravia.com",
+    "dexovia.shop",
+    "domadiapro.icu",
+    "ferromen-vip.co",
+    "ferromen.bond",
+    "ferromenfx.vip",
+    "fyradia1.shop",
+    "fyraskapro.cc",
+    "fyrasto-h5.xyz",
+    "fyravia.club",
+    "ganodia.shop",
+    "ganostox.club",
+    "jorvodiaex.club",
+    "lumodiapro.app",
+    "oprarel-global.cc",
+    "oprarelx.vip",
+    "orbiska18.club",
+    "sorinqua.cc",
+    "talvotonx.xyz",
+    "vantador.club",
+    "vantalin1.com",
+    "vantaska.club",
+    "vantaskax.io"
+   ],
+   "verdicts": [
+    {
+     "r": 0,
+     "domain": "ferromenfx.vip",
+     "useful": true,
+     "why": "member",
+     "op": "O4",
+     "min_pivots": 1
+    },
+    {
+     "r": 0,
+     "domain": "orbiska18.club",
+     "useful": true,
+     "why": "mirror",
+     "op": "M0",
+     "min_pivots": 1
+    },
+    {
+     "r": 0,
+     "domain": "cyravia.com",
+     "useful": true,
+     "why": "member",
+     "op": "O7",
+     "min_pivots": 1
+    },
+    {
+     "r": 0,
+     "domain": "fyradia1.shop",
+     "useful": true,
+     "why": "chain_anchor",
+     "op": "O5",
+     "min_pivots": 2
+    },
+    {
+     "r": 0,
+     "domain": "fyravia.club",
+     "useful": true,
+     "why": "member",
+     "op": "O2",
+     "min_pivots": 1
+    },
+    {
+     "r": 1,
+     "domain": "ganostox.club",
+     "useful": true,
+     "why": "member",
+     "op": "O8",
+     "min_pivots": 1
+    },
+    {
+     "r": 1,
+     "domain": "ferromen.bond",
+     "useful": true,
+     "why": "member",
+     "op": "O4",
+     "min_pivots": 1
+    },
+    {
+     "r": 2,
+     "domain": "lumodiapro.app",
+     "useful": true,
+     "why": "member",
+     "op": "O9",
+     "min_pivots": 2
+    },
+    {
+     "r": 2,
+     "domain": "cyradiax.homes",
+     "useful": true,
+     "why": "member",
+     "op": "O7",
+     "min_pivots": 1
+    },
+    {
+     "r": 2,
+     "domain": "corvipex.cc",
+     "useful": true,
+     "why": "member",
+     "op": "O0",
+     "min_pivots": 1
+    },
+    {
+     "r": 2,
+     "domain": "talvotonx.xyz",
+     "useful": true,
+     "why": "member",
+     "op": "O2",
+     "min_pivots": 1
+    },
+    {
+     "r": 2,
+     "domain": "ferromen-vip.co",
+     "useful": true,
+     "why": "member",
+     "op": "O4",
+     "min_pivots": 1
+    },
+    {
+     "r": 3,
+     "domain": "domadiapro.icu",
+     "useful": true,
+     "why": "chain2",
+     "op": "O5",
+     "min_pivots": 3
+    },
+    {
+     "r": 3,
+     "domain": "ganodia.shop",
+     "useful": true,
+     "why": "member",
+     "op": "O7",
+     "min_pivots": 1
+    },
+    {
+     "r": 3,
+     "domain": "vantador.club",
+     "useful": true,
+     "why": "chain3",
+     "op": "O5",
+     "min_pivots": 4
+    },
+    {
+     "r": 3,
+     "domain": "jorvodiaex.club",
+     "useful": true,
+     "why": "member",
+     "op": "O2",
+     "min_pivots": 1
+    },
+    {
+     "r": 3,
+     "domain": "dexovia.shop",
+     "useful": true,
+     "why": "chain1",
+     "op": "O5",
+     "min_pivots": 2
+    },
+    {
+     "r": 4,
+     "domain": "oprarelx.vip",
+     "useful": true,
+     "why": "returned",
+     "op": "O3",
+     "min_pivots": 1
+    },
+    {
+     "r": 4,
+     "domain": "vantaskax.io",
+     "useful": true,
+     "why": "member",
+     "op": "O1",
+     "min_pivots": 1
+    },
+    {
+     "r": 4,
+     "domain": "vantalin1.com",
+     "useful": true,
+     "why": "member",
+     "op": "O7",
+     "min_pivots": 1
+    },
+    {
+     "r": 5,
+     "domain": "oprarel-global.cc",
+     "useful": true,
+     "why": "returned",
+     "op": "O3",
+     "min_pivots": 1
+    },
+    {
+     "r": 6,
+     "domain": "sorinqua.cc",
+     "useful": true,
+     "why": "member",
+     "op": "O0",
+     "min_pivots": 1
+    },
+    {
+     "r": 6,
+     "domain": "fyraskapro.cc",
+     "useful": true,
+     "why": "member",
+     "op": "O0",
+     "min_pivots": 1
+    },
+    {
+     "r": 7,
+     "domain": "vantaska.club",
+     "useful": true,
+     "why": "member",
+     "op": "O1",
+     "min_pivots": 1
+    },
+    {
+     "r": 7,
+     "domain": "fyrasto-h5.xyz",
+     "useful": true,
+     "why": "member",
+     "op": "O2",
+     "min_pivots": 1
+    }
+   ],
+   "trace": [
+    {
+     "round": 0,
+     "reviewed": 5,
+     "useful_cum": 5,
+     "requests_cum": 250
+    },
+    {
+     "round": 1,
+     "reviewed": 2,
+     "useful_cum": 7,
+     "requests_cum": 975
+    },
+    {
+     "round": 2,
+     "reviewed": 5,
+     "useful_cum": 12,
+     "requests_cum": 1484
+    },
+    {
+     "round": 3,
+     "reviewed": 5,
+     "useful_cum": 17,
+     "requests_cum": 1893
+    },
+    {
+     "round": 4,
+     "reviewed": 3,
+     "useful_cum": 20,
+     "requests_cum": 2454
+    },
+    {
+     "round": 5,
+     "reviewed": 1,
+     "useful_cum": 21,
+     "requests_cum": 2779
+    },
+    {
+     "round": 6,
+     "reviewed": 2,
+     "useful_cum": 23,
+     "requests_cum": 3013
+    },
+    {
+     "round": 7,
+     "reviewed": 2,
+     "useful_cum": 25,
+     "requests_cum": 3420
+    }
+   ],
+   "errors": [],
+   "label": "main-investigation-platform-v9-suite-v7-adaptive-intelligence",
+   "noise_floor": false
+  },
+  {
+   "tree": "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07",
+   "seed": 307,
+   "scenario": "cdn_maze",
+   "difficulty": "hard",
+   "rounds": 8,
+   "hashseed": "0",
+   "seconds": 3.7,
+   "world": {
+    "useful_units": 61,
+    "by_min_pivots": {
+     "0": 1,
+     "1": 30,
+     "2": 16,
+     "3": 4,
+     "4": 1,
+     "5+": 1,
+     "unreachable": 8
+    },
+    "unknown_family": 10,
+    "returned": 4,
+    "operations": 10,
+    "mirrors": 150,
+    "main_known_r0": 10,
+    "domains_total_r0": 720
+   },
+   "metrics": {
+    "new_useful": 21,
+    "found_share": 0.396,
+    "reviewed": 22,
+    "precision": 0.955,
+    "multi_hop": 3,
+    "median_pivots": 1,
+    "unreachable_found": 1,
+    "operations": 10,
+    "unknown_family": 3,
+    "reappearances": 3,
+    "value": 78.9,
+    "pool_useful": 21,
+    "requests": {
+     "http": 236,
+     "dns": 2372,
+     "crtsh": 5,
+     "rdap": 64,
+     "feed": 17,
+     "page_search": 169,
+     "passive_dns": 4
+    },
+    "requests_total": 2867,
+    "queries_total": 178,
+    "requests_per_useful": 136.5,
+    "queries_per_useful": 8.5,
+    "repeated_queries": 46,
+    "dead_end_queries": 154,
+    "dead_end_dns": 2351,
+    "junk_fetches": 118,
+    "mirror_requests": 80,
+    "rel_total": 31,
+    "rel_false_cross_op": 0,
+    "rel_non_scam": 0,
+    "rel_same_op": 31,
+    "rel_note": "",
+    "first_useful_round": 0,
+    "first_useful_requests": 243,
+    "skip_reasons": {
+     "mirror": 1
+    },
+    "outcomes": {
+     "low_evidence": 2,
+     "wallet_evidence": 16,
+     "meaningful_evidence": 1
+    },
+    "engine_errors": 0
+   },
+   "useful_domains": [
+    "astravia2.xyz",
+    "cyraqua.live",
+    "domadia-app.com",
+    "elvoskax.bond",
+    "hexapex-app.net",
+    "jorvovo.xyz",
+    "lyravo2.live",
+    "nuvomen-vip.com",
+    "nuvomenex.live",
+    "opradia-app.lat",
+    "opramenex.pro",
+    "opravia.lat",
+    "opravia1.cfd",
+    "orbinor.com",
+    "orbinorfx.lat",
+    "pelovia.sbs",
+    "praxpex1.icu",
+    "praxpex2.icu",
+    "selavo-app.homes",
+    "tavilinx.vip",
+    "zenipexx.lat"
+   ],
+   "pool_useful": [
+    "astravia2.xyz",
+    "cyraqua.live",
+    "domadia-app.com",
+    "elvoskax.bond",
+    "hexapex-app.net",
+    "jorvovo.xyz",
+    "lyravo2.live",
+    "nuvomen-vip.com",
+    "nuvomenex.live",
+    "opradia-app.lat",
+    "opramenex.pro",
+    "opravia.lat",
+    "opravia1.cfd",
+    "orbinor.com",
+    "orbinorfx.lat",
+    "pelovia.sbs",
+    "praxpex1.icu",
+    "praxpex2.icu",
+    "selavo-app.homes",
+    "tavilinx.vip",
+    "zenipexx.lat"
+   ],
+   "verdicts": [
+    {
+     "r": 0,
+     "domain": "quiloqua62.icu",
+     "useful": false,
+     "why": "mirror",
+     "op": "M0",
+     "min_pivots": 1
+    },
+    {
+     "r": 0,
+     "domain": "orbinor.com",
+     "useful": true,
+     "why": "member",
+     "op": "O5",
+     "min_pivots": 1
+    },
+    {
+     "r": 1,
+     "domain": "opravia1.cfd",
+     "useful": true,
+     "why": "member",
+     "op": "O9",
+     "min_pivots": 2
+    },
+    {
+     "r": 1,
+     "domain": "opravia.lat",
+     "useful": true,
+     "why": "member",
+     "op": "O9",
+     "min_pivots": 3
+    },
+    {
+     "r": 1,
+     "domain": "lyravo2.live",
+     "useful": true,
+     "why": "member",
+     "op": "O0",
+     "min_pivots": 1
+    },
+    {
+     "r": 1,
+     "domain": "orbinorfx.lat",
+     "useful": true,
+     "why": "member",
+     "op": "O5",
+     "min_pivots": 1
+    },
+    {
+     "r": 1,
+     "domain": "nuvomenex.live",
+     "useful": true,
+     "why": "member",
+     "op": "O6",
+     "min_pivots": 1
+    },
+    {
+     "r": 2,
+     "domain": "pelovia.sbs",
+     "useful": true,
+     "why": "member",
+     "op": "O4",
+     "min_pivots": 1
+    },
+    {
+     "r": 2,
+     "domain": "astravia2.xyz",
+     "useful": true,
+     "why": "member",
+     "op": "O7",
+     "min_pivots": 1
+    },
+    {
+     "r": 2,
+     "domain": "jorvovo.xyz",
+     "useful": true,
+     "why": "member",
+     "op": "O7",
+     "min_pivots": 1
+    },
+    {
+     "r": 2,
+     "domain": "nuvomen-vip.com",
+     "useful": true,
+     "why": "member",
+     "op": "O6",
+     "min_pivots": 1
+    },
+    {
+     "r": 3,
+     "domain": "domadia-app.com",
+     "useful": true,
+     "why": "member",
+     "op": "O8",
+     "min_pivots": 2
+    },
+    {
+     "r": 3,
+     "domain": "praxpex1.icu",
+     "useful": true,
+     "why": "member",
+     "op": "O3",
+     "min_pivots": 1
+    },
+    {
+     "r": 3,
+     "domain": "praxpex2.icu",
+     "useful": true,
+     "why": "member",
+     "op": "O3",
+     "min_pivots": 1
+    },
+    {
+     "r": 4,
+     "domain": "selavo-app.homes",
+     "useful": true,
+     "why": "member",
+     "op": "O0",
+     "min_pivots": 1
+    },
+    {
+     "r": 4,
+     "domain": "elvoskax.bond",
+     "useful": true,
+     "why": "member",
+     "op": "O5",
+     "min_pivots": 1
+    },
+    {
+     "r": 4,
+     "domain": "opramenex.pro",
+     "useful": true,
+     "why": "member",
+     "op": "O2",
+     "min_pivots": 1
+    },
+    {
+     "r": 4,
+     "domain": "tavilinx.vip",
+     "useful": true,
+     "why": "chain1",
+     "op": "O2",
+     "min_pivots": 1
+    },
+    {
+     "r": 5,
+     "domain": "opradia-app.lat",
+     "useful": true,
+     "why": "returned",
+     "op": "O0",
+     "min_pivots": 1
+    },
+    {
+     "r": 5,
+     "domain": "cyraqua.live",
+     "useful": true,
+     "why": "returned",
+     "op": "O0",
+     "min_pivots": 1
+    },
+    {
+     "r": 7,
+     "domain": "zenipexx.lat",
+     "useful": true,
+     "why": "member",
+     "op": "O6",
+     "min_pivots": null
+    },
+    {
+     "r": 7,
+     "domain": "hexapex-app.net",
+     "useful": true,
+     "why": "returned",
+     "op": "O1",
+     "min_pivots": 1
+    }
+   ],
+   "trace": [
+    {
+     "round": 0,
+     "reviewed": 2,
+     "useful_cum": 1,
+     "requests_cum": 243
+    },
+    {
+     "round": 1,
+     "reviewed": 5,
+     "useful_cum": 6,
+     "requests_cum": 766
+    },
+    {
+     "round": 2,
+     "reviewed": 4,
+     "useful_cum": 10,
+     "requests_cum": 1125
+    },
+    {
+     "round": 3,
+     "reviewed": 3,
+     "useful_cum": 13,
+     "requests_cum": 1470
+    },
+    {
+     "round": 4,
+     "reviewed": 4,
+     "useful_cum": 17,
+     "requests_cum": 1941
+    },
+    {
+     "round": 5,
+     "reviewed": 2,
+     "useful_cum": 19,
+     "requests_cum": 2253
+    },
+    {
+     "round": 6,
+     "reviewed": 0,
+     "useful_cum": 19,
+     "requests_cum": 2599
+    },
+    {
+     "round": 7,
+     "reviewed": 2,
+     "useful_cum": 21,
+     "requests_cum": 2867
+    }
+   ],
+   "errors": [],
+   "label": "main-investigation-platform-v9-suite-v7-adaptive-intelligence",
+   "noise_floor": false
+  },
+  {
+   "tree": "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07",
+   "seed": 307,
+   "scenario": "copycat",
+   "difficulty": "hard",
+   "rounds": 8,
+   "hashseed": "0",
+   "seconds": 5.5,
+   "world": {
+    "useful_units": 57,
+    "by_min_pivots": {
+     "1": 33,
+     "2": 16,
+     "3": 1,
+     "unreachable": 7
+    },
+    "unknown_family": 10,
+    "returned": 3,
+    "operations": 12,
+    "mirrors": 150,
+    "main_known_r0": 18,
+    "domains_total_r0": 735
+   },
+   "metrics": {
+    "new_useful": 33,
+    "found_share": 0.66,
+    "reviewed": 35,
+    "precision": 0.943,
+    "multi_hop": 9,
+    "median_pivots": 1,
+    "unreachable_found": 4,
+    "operations": 12,
+    "unknown_family": 2,
+    "reappearances": 3,
+    "value": 89.9,
+    "pool_useful": 34,
+    "requests": {
+     "http": 327,
+     "dns": 2547,
+     "crtsh": 6,
+     "rdap": 88,
+     "feed": 17,
+     "page_search": 204,
+     "passive_dns": 25
+    },
+    "requests_total": 3214,
+    "queries_total": 235,
+    "requests_per_useful": 97.4,
+    "queries_per_useful": 7.1,
+    "repeated_queries": 36,
+    "dead_end_queries": 211,
+    "dead_end_dns": 2524,
+    "junk_fetches": 154,
+    "mirror_requests": 88,
+    "rel_total": 14,
+    "rel_false_cross_op": 0,
+    "rel_non_scam": 0,
+    "rel_same_op": 14,
+    "rel_note": "",
+    "first_useful_round": 1,
+    "first_useful_requests": 730,
+    "skip_reasons": {
+     "mirror": 2
+    },
+    "outcomes": {
+     "wallet_evidence": 16,
+     "dead_site": 1,
+     "meaningful_evidence": 1,
+     "low_evidence": 5
+    },
+    "engine_errors": 0
+   },
+   "useful_domains": [
+    "astravo1.lat",
+    "astravox.xyz",
+    "bravavo-vip.sbs",
+    "corviton.net",
+    "dexolixpro.bond",
+    "dexoska1.lat",
+    "dexoska3.icu",
+    "domavo.vip",
+    "earnbravavo.top",
+    "elvovo.co",
+    "ferrora-h5.cc",
+    "ferrora-h52.cc",
+    "fyravia-pro.club",
+    "hexadorpro.club",
+    "hexaskaex.shop",
+    "lyrador1.pro",
+    "lyralix-pro.cfd",
+    "marlequax.shop",
+    "nuvolinfx.com",
+    "orbiton-app.io",
+    "orbitonex.shop",
+    "peloton.pro",
+    "praxlix.icu",
+    "praxlixx.pro",
+    "praxvia-app.pro",
+    "praxvia-pro.bond",
+    "selamen.bond",
+    "sorinsto1.app",
+    "talvoton.homes",
+    "ulmomenx.homes",
+    "ulmovia-global.co",
+    "ulmovia1.homes",
+    "ulmovia2.cc"
+   ],
+   "pool_useful": [
+    "astratonx.pro",
+    "astravo1.lat",
+    "astravox.xyz",
+    "bravavo-vip.sbs",
+    "corviton.net",
+    "dexolixpro.bond",
+    "dexoska1.lat",
+    "dexoska3.icu",
+    "domavo.vip",
+    "earnbravavo.top",
+    "elvovo.co",
+    "ferrora-h5.cc",
+    "ferrora-h52.cc",
+    "fyravia-pro.club",
+    "hexadorpro.club",
+    "hexaskaex.shop",
+    "lyrador1.pro",
+    "lyralix-pro.cfd",
+    "marlequax.shop",
+    "nuvolinfx.com",
+    "orbiton-app.io",
+    "orbitonex.shop",
+    "peloton.pro",
+    "praxlix.icu",
+    "praxlixx.pro",
+    "praxvia-app.pro",
+    "praxvia-pro.bond",
+    "selamen.bond",
+    "sorinsto1.app",
+    "talvoton.homes",
+    "ulmomenx.homes",
+    "ulmovia-global.co",
+    "ulmovia1.homes",
+    "ulmovia2.cc"
+   ],
+   "verdicts": [
+    {
+     "r": 0,
+     "domain": "corvidia33.cfd",
+     "useful": false,
+     "why": "mirror",
+     "op": "M0",
+     "min_pivots": 1
+    },
+    {
+     "r": 1,
+     "domain": "fyravia-pro.club",
+     "useful": true,
+     "why": "member",
+     "op": "O1",
+     "min_pivots": 1
+    },
+    {
+     "r": 1,
+     "domain": "earnbravavo.top",
+     "useful": true,
+     "why": "member",
+     "op": "O4",
+     "min_pivots": 1
+    },
+    {
+     "r": 1,
+     "domain": "bravavo-vip.sbs",
+     "useful": true,
+     "why": "member",
+     "op": "O4",
+     "min_pivots": 1
+    },
+    {
+     "r": 1,
+     "domain": "corvidia7.co",
+     "useful": false,
+     "why": "mirror",
+     "op": "M0",
+     "min_pivots": 1
+    },
+    {
+     "r": 1,
+     "domain": "ulmovia2.cc",
+     "useful": true,
+     "why": "member",
+     "op": "O9",
+     "min_pivots": 1
+    },
+    {
+     "r": 2,
+     "domain": "praxvia-app.pro",
+     "useful": true,
+     "why": "member",
+     "op": "O4",
+     "min_pivots": 1
+    },
+    {
+     "r": 2,
+     "domain": "ulmovia1.homes",
+     "useful": true,
+     "why": "member",
+     "op": "O9",
+     "min_pivots": 1
+    },
+    {
+     "r": 2,
+     "domain": "ulmovia-global.co",
+     "useful": true,
+     "why": "member",
+     "op": "O9",
+     "min_pivots": 1
+    },
+    {
+     "r": 2,
+     "domain": "selamen.bond",
+     "useful": true,
+     "why": "member",
+     "op": "O7",
+     "min_pivots": 2
+    },
+    {
+     "r": 2,
+     "domain": "orbitonex.shop",
+     "useful": true,
+     "why": "member",
+     "op": "O8",
+     "min_pivots": null
+    },
+    {
+     "r": 3,
+     "domain": "orbiton-app.io",
+     "useful": true,
+     "why": "member",
+     "op": "O8",
+     "min_pivots": null
+    },
+    {
+     "r": 3,
+     "domain": "hexaskaex.shop",
+     "useful": true,
+     "why": "member",
+     "op": "O7",
+     "min_pivots": 2
+    },
+    {
+     "r": 3,
+     "domain": "lyrador1.pro",
+     "useful": true,
+     "why": "member",
+     "op": "O11",
+     "min_pivots": 1
+    },
+    {
+     "r": 3,
+     "domain": "nuvolinfx.com",
+     "useful": true,
+     "why": "member",
+     "op": "O10",
+     "min_pivots": 1
+    },
+    {
+     "r": 4,
+     "domain": "peloton.pro",
+     "useful": true,
+     "why": "returned",
+     "op": "O4",
+     "min_pivots": 1
+    },
+    {
+     "r": 4,
+     "domain": "praxvia-pro.bond",
+     "useful": true,
+     "why": "member",
+     "op": "O4",
+     "min_pivots": 2
+    },
+    {
+     "r": 4,
+     "domain": "praxlixx.pro",
+     "useful": true,
+     "why": "member",
+     "op": "O0",
+     "min_pivots": 2
+    },
+    {
+     "r": 4,
+     "domain": "ferrora-h5.cc",
+     "useful": true,
+     "why": "member",
+     "op": "O5",
+     "min_pivots": 2
+    },
+    {
+     "r": 4,
+     "domain": "dexoska1.lat",
+     "useful": true,
+     "why": "member",
+     "op": "O3",
+     "min_pivots": 1
+    },
+    {
+     "r": 5,
+     "domain": "dexolixpro.bond",
+     "useful": true,
+     "why": "returned",
+     "op": "O4",
+     "min_pivots": 1
+    },
+    {
+     "r": 5,
+     "domain": "marlequax.shop",
+     "useful": true,
+     "why": "returned",
+     "op": "O2",
+     "min_pivots": 1
+    },
+    {
+     "r": 5,
+     "domain": "sorinsto1.app",
+     "useful": true,
+     "why": "member",
+     "op": "O2",
+     "min_pivots": 1
+    },
+    {
+     "r": 5,
+     "domain": "elvovo.co",
+     "useful": true,
+     "why": "member",
+     "op": "O9",
+     "min_pivots": 2
+    },
+    {
+     "r": 5,
+     "domain": "ulmomenx.homes",
+     "useful": true,
+     "why": "member",
+     "op": "O2",
+     "min_pivots": 2
+    },
+    {
+     "r": 6,
+     "domain": "astravo1.lat",
+     "useful": true,
+     "why": "member",
+     "op": "O1",
+     "min_pivots": 1
+    },
+    {
+     "r": 6,
+     "domain": "lyralix-pro.cfd",
+     "useful": true,
+     "why": "member",
+     "op": "O9",
+     "min_pivots": 1
+    },
+    {
+     "r": 6,
+     "domain": "talvoton.homes",
+     "useful": true,
+     "why": "member",
+     "op": "O1",
+     "min_pivots": null
+    },
+    {
+     "r": 6,
+     "domain": "astravox.xyz",
+     "useful": true,
+     "why": "member",
+     "op": "O1",
+     "min_pivots": 1
+    },
+    {
+     "r": 6,
+     "domain": "domavo.vip",
+     "useful": true,
+     "why": "member",
+     "op": "O8",
+     "min_pivots": null
+    },
+    {
+     "r": 7,
+     "domain": "corviton.net",
+     "useful": true,
+     "why": "member",
+     "op": "O5",
+     "min_pivots": 1
+    },
+    {
+     "r": 7,
+     "domain": "ferrora-h52.cc",
+     "useful": true,
+     "why": "member",
+     "op": "O5",
+     "min_pivots": 2
+    },
+    {
+     "r": 7,
+     "domain": "dexoska3.icu",
+     "useful": true,
+     "why": "member",
+     "op": "O3",
+     "min_pivots": 1
+    },
+    {
+     "r": 7,
+     "domain": "hexadorpro.club",
+     "useful": true,
+     "why": "member",
+     "op": "O6",
+     "min_pivots": 1
+    },
+    {
+     "r": 7,
+     "domain": "praxlix.icu",
+     "useful": true,
+     "why": "member",
+     "op": "O0",
+     "min_pivots": 2
+    }
+   ],
+   "trace": [
+    {
+     "round": 0,
+     "reviewed": 1,
+     "useful_cum": 0,
+     "requests_cum": 273
+    },
+    {
+     "round": 1,
+     "reviewed": 5,
+     "useful_cum": 4,
+     "requests_cum": 730
+    },
+    {
+     "round": 2,
+     "reviewed": 5,
+     "useful_cum": 9,
+     "requests_cum": 1164
+    },
+    {
+     "round": 3,
+     "reviewed": 4,
+     "useful_cum": 13,
+     "requests_cum": 1520
+    },
+    {
+     "round": 4,
+     "reviewed": 5,
+     "useful_cum": 18,
+     "requests_cum": 2028
+    },
+    {
+     "round": 5,
+     "reviewed": 5,
+     "useful_cum": 23,
+     "requests_cum": 2372
+    },
+    {
+     "round": 6,
+     "reviewed": 5,
+     "useful_cum": 28,
+     "requests_cum": 2708
+    },
+    {
+     "round": 7,
+     "reviewed": 5,
+     "useful_cum": 33,
+     "requests_cum": 3214
+    }
+   ],
+   "errors": [],
+   "label": "main-investigation-platform-v9-suite-v7-adaptive-intelligence",
+   "noise_floor": false
+  },
+  {
+   "tree": "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07",
+   "seed": 307,
+   "scenario": "migration",
+   "difficulty": "hard",
+   "rounds": 8,
+   "hashseed": "0",
+   "seconds": 4.7,
+   "world": {
+    "useful_units": 56,
+    "by_min_pivots": {
+     "1": 30,
+     "2": 15,
+     "3": 2,
+     "4": 2,
+     "5+": 1,
+     "unreachable": 6
+    },
+    "unknown_family": 5,
+    "returned": 6,
+    "operations": 10,
+    "mirrors": 150,
+    "main_known_r0": 9,
+    "domains_total_r0": 677
+   },
+   "metrics": {
+    "new_useful": 33,
+    "found_share": 0.66,
+    "reviewed": 33,
+    "precision": 1.0,
+    "multi_hop": 9,
+    "median_pivots": 1,
+    "unreachable_found": 1,
+    "operations": 9,
+    "unknown_family": 0,
+    "reappearances": 4,
+    "value": 102.3,
+    "pool_useful": 33,
+    "requests": {
+     "http": 239,
+     "dns": 2432,
+     "crtsh": 5,
+     "rdap": 71,
+     "feed": 18,
+     "page_search": 221,
+     "passive_dns": 18
+    },
+    "requests_total": 3004,
+    "queries_total": 244,
+    "requests_per_useful": 91.0,
+    "queries_per_useful": 7.4,
+    "repeated_queries": 58,
+    "dead_end_queries": 216,
+    "dead_end_dns": 2412,
+    "junk_fetches": 103,
+    "mirror_requests": 86,
+    "rel_total": 38,
+    "rel_false_cross_op": 0,
+    "rel_non_scam": 0,
+    "rel_same_op": 38,
+    "rel_note": "",
+    "first_useful_round": 0,
+    "first_useful_requests": 253,
+    "skip_reasons": {},
+    "outcomes": {
+     "wallet_evidence": 21,
+     "low_evidence": 1,
+     "meaningful_evidence": 1
+    },
+    "engine_errors": 0
+   },
+   "useful_domains": [
+    "astrapex1.cfd",
+    "corvilin.homes",
+    "cyraquapro.icu",
+    "elvolixpro.icu",
+    "elvopex.live",
+    "elvora1.cfd",
+    "fyravo2.org",
+    "hexalinpro.shop",
+    "hexanor4.top",
+    "hexanorfx.shop",
+    "hexaskafx.homes",
+    "ilyomen3.vip",
+    "lumodor-h5.org",
+    "lumodor.cc",
+    "lumodor.org",
+    "lumodor1.org",
+    "marlediaex.top",
+    "marlediaex2.top",
+    "movidor-global.lat",
+    "movisto.homes",
+    "nexavia.live",
+    "nuvonor1.io",
+    "orbivia.icu",
+    "praxrax.icu",
+    "rivarelpro.xyz",
+    "seladia1.live",
+    "selalin.vip",
+    "selarapro.live",
+    "selaska69.cc",
+    "talvoqua.icu",
+    "tavilix.live",
+    "tavivo.homes",
+    "vantaska-global.homes"
+   ],
+   "pool_useful": [
+    "astrapex1.cfd",
+    "corvilin.homes",
+    "cyraquapro.icu",
+    "elvolixpro.icu",
+    "elvopex.live",
+    "elvora1.cfd",
+    "fyravo2.org",
+    "hexalinpro.shop",
+    "hexanor4.top",
+    "hexanorfx.shop",
+    "hexaskafx.homes",
+    "ilyomen3.vip",
+    "lumodor-h5.org",
+    "lumodor.cc",
+    "lumodor.org",
+    "lumodor1.org",
+    "marlediaex.top",
+    "marlediaex2.top",
+    "movidor-global.lat",
+    "movisto.homes",
+    "nexavia.live",
+    "nuvonor1.io",
+    "orbivia.icu",
+    "praxrax.icu",
+    "rivarelpro.xyz",
+    "seladia1.live",
+    "selalin.vip",
+    "selarapro.live",
+    "selaska69.cc",
+    "talvoqua.icu",
+    "tavilix.live",
+    "tavivo.homes",
+    "vantaska-global.homes"
+   ],
+   "verdicts": [
+    {
+     "r": 0,
+     "domain": "nuvonor1.io",
+     "useful": true,
+     "why": "member",
+     "op": "O4",
+     "min_pivots": 1
+    },
+    {
+     "r": 0,
+     "domain": "selaska69.cc",
+     "useful": true,
+     "why": "mirror",
+     "op": "M0",
+     "min_pivots": 1
+    },
+    {
+     "r": 0,
+     "domain": "seladia1.live",
+     "useful": true,
+     "why": "chain_anchor",
+     "op": "O7",
+     "min_pivots": 1
+    },
+    {
+     "r": 0,
+     "domain": "praxrax.icu",
+     "useful": true,
+     "why": "member",
+     "op": "O1",
+     "min_pivots": 1
+    },
+    {
+     "r": 1,
+     "domain": "movisto.homes",
+     "useful": true,
+     "why": "member",
+     "op": "O0",
+     "min_pivots": 1
+    },
+    {
+     "r": 1,
+     "domain": "vantaska-global.homes",
+     "useful": true,
+     "why": "member",
+     "op": "O0",
+     "min_pivots": 1
+    },
+    {
+     "r": 1,
+     "domain": "corvilin.homes",
+     "useful": true,
+     "why": "member",
+     "op": "O3",
+     "min_pivots": 1
+    },
+    {
+     "r": 1,
+     "domain": "talvoqua.icu",
+     "useful": true,
+     "why": "chain1",
+     "op": "O3",
+     "min_pivots": 1
+    },
+    {
+     "r": 1,
+     "domain": "nexavia.live",
+     "useful": true,
+     "why": "chain1",
+     "op": "O7",
+     "min_pivots": 2
+    },
+    {
+     "r": 2,
+     "domain": "hexanorfx.shop",
+     "useful": true,
+     "why": "member",
+     "op": "O1",
+     "min_pivots": 1
+    },
+    {
+     "r": 2,
+     "domain": "selarapro.live",
+     "useful": true,
+     "why": "chain2",
+     "op": "O7",
+     "min_pivots": 3
+    },
+    {
+     "r": 2,
+     "domain": "ilyomen3.vip",
+     "useful": true,
+     "why": "member",
+     "op": "O5",
+     "min_pivots": 1
+    },
+    {
+     "r": 2,
+     "domain": "hexaskafx.homes",
+     "useful": true,
+     "why": "member",
+     "op": "O6",
+     "min_pivots": 1
+    },
+    {
+     "r": 2,
+     "domain": "elvolixpro.icu",
+     "useful": true,
+     "why": "chain2",
+     "op": "O3",
+     "min_pivots": 2
+    },
+    {
+     "r": 3,
+     "domain": "cyraquapro.icu",
+     "useful": true,
+     "why": "chain3",
+     "op": "O3",
+     "min_pivots": 3
+    },
+    {
+     "r": 3,
+     "domain": "hexanor4.top",
+     "useful": true,
+     "why": "member",
+     "op": "O1",
+     "min_pivots": 1
+    },
+    {
+     "r": 3,
+     "domain": "selalin.vip",
+     "useful": true,
+     "why": "chain3",
+     "op": "O7",
+     "min_pivots": 4
+    },
+    {
+     "r": 3,
+     "domain": "tavivo.homes",
+     "useful": true,
+     "why": "chain4",
+     "op": "O3",
+     "min_pivots": 4
+    },
+    {
+     "r": 4,
+     "domain": "marlediaex2.top",
+     "useful": true,
+     "why": "member",
+     "op": "O7",
+     "min_pivots": 1
+    },
+    {
+     "r": 4,
+     "domain": "movidor-global.lat",
+     "useful": true,
+     "why": "member",
+     "op": "O0",
+     "min_pivots": 1
+    },
+    {
+     "r": 4,
+     "domain": "orbivia.icu",
+     "useful": true,
+     "why": "member",
+     "op": "O3",
+     "min_pivots": 1
+    },
+    {
+     "r": 4,
+     "domain": "marlediaex.top",
+     "useful": true,
+     "why": "member",
+     "op": "O7",
+     "min_pivots": 1
+    },
+    {
+     "r": 5,
+     "domain": "fyravo2.org",
+     "useful": true,
+     "why": "returned",
+     "op": "O1",
+     "min_pivots": 1
+    },
+    {
+     "r": 5,
+     "domain": "rivarelpro.xyz",
+     "useful": true,
+     "why": "returned",
+     "op": "O3",
+     "min_pivots": 1
+    },
+    {
+     "r": 5,
+     "domain": "lumodor.cc",
+     "useful": true,
+     "why": "returned",
+     "op": "O2",
+     "min_pivots": 1
+    },
+    {
+     "r": 6,
+     "domain": "lumodor1.org",
+     "useful": true,
+     "why": "member",
+     "op": "O2",
+     "min_pivots": 2
+    },
+    {
+     "r": 6,
+     "domain": "elvora1.cfd",
+     "useful": true,
+     "why": "returned",
+     "op": "O0",
+     "min_pivots": 1
+    },
+    {
+     "r": 6,
+     "domain": "lumodor.org",
+     "useful": true,
+     "why": "member",
+     "op": "O2",
+     "min_pivots": 2
+    },
+    {
+     "r": 7,
+     "domain": "astrapex1.cfd",
+     "useful": true,
+     "why": "member",
+     "op": "O6",
+     "min_pivots": 1
+    },
+    {
+     "r": 7,
+     "domain": "hexalinpro.shop",
+     "useful": true,
+     "why": "member",
+     "op": "O6",
+     "min_pivots": 1
+    },
+    {
+     "r": 7,
+     "domain": "tavilix.live",
+     "useful": true,
+     "why": "member",
+     "op": "O7",
+     "min_pivots": 1
+    },
+    {
+     "r": 7,
+     "domain": "elvopex.live",
+     "useful": true,
+     "why": "member",
+     "op": "O3",
+     "min_pivots": null
+    },
+    {
+     "r": 7,
+     "domain": "lumodor-h5.org",
+     "useful": true,
+     "why": "member",
+     "op": "O2",
+     "min_pivots": 2
+    }
+   ],
+   "trace": [
+    {
+     "round": 0,
+     "reviewed": 4,
+     "useful_cum": 4,
+     "requests_cum": 253
+    },
+    {
+     "round": 1,
+     "reviewed": 5,
+     "useful_cum": 9,
+     "requests_cum": 773
+    },
+    {
+     "round": 2,
+     "reviewed": 5,
+     "useful_cum": 14,
+     "requests_cum": 1163
+    },
+    {
+     "round": 3,
+     "reviewed": 4,
+     "useful_cum": 18,
+     "requests_cum": 1541
+    },
+    {
+     "round": 4,
+     "reviewed": 4,
+     "useful_cum": 22,
+     "requests_cum": 1986
+    },
+    {
+     "round": 5,
+     "reviewed": 3,
+     "useful_cum": 25,
+     "requests_cum": 2287
+    },
+    {
+     "round": 6,
+     "reviewed": 3,
+     "useful_cum": 28,
+     "requests_cum": 2588
+    },
+    {
+     "round": 7,
+     "reviewed": 5,
+     "useful_cum": 33,
+     "requests_cum": 3004
+    }
+   ],
+   "errors": [],
+   "label": "main-investigation-platform-v9-suite-v7-adaptive-intelligence",
+   "noise_floor": false
+  },
+  {
+   "tree": "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07",
+   "seed": 307,
+   "scenario": "mirror_flood",
+   "difficulty": "hard",
+   "rounds": 8,
+   "hashseed": "0",
+   "seconds": 4.4,
+   "world": {
+    "useful_units": 56,
+    "by_min_pivots": {
+     "0": 1,
+     "1": 31,
+     "2": 12,
+     "3": 5,
+     "4": 1,
+     "5+": 2,
+     "unreachable": 4
+    },
+    "unknown_family": 12,
+    "returned": 4,
+    "operations": 10,
+    "mirrors": 570,
+    "main_known_r0": 12,
+    "domains_total_r0": 870
+   },
+   "metrics": {
+    "new_useful": 26,
+    "found_share": 0.5,
+    "reviewed": 28,
+    "precision": 0.929,
+    "multi_hop": 13,
+    "median_pivots": 2,
+    "unreachable_found": 0,
+    "operations": 8,
+    "unknown_family": 7,
+    "reappearances": 1,
+    "value": 73.7,
+    "pool_useful": 26,
+    "requests": {
+     "http": 357,
+     "dns": 2519,
+     "crtsh": 5,
+     "rdap": 106,
+     "feed": 18,
+     "page_search": 182,
+     "passive_dns": 18
+    },
+    "requests_total": 3205,
+    "queries_total": 205,
+    "requests_per_useful": 123.3,
+    "queries_per_useful": 7.9,
+    "repeated_queries": 38,
+    "dead_end_queries": 169,
+    "dead_end_dns": 2491,
+    "junk_fetches": 157,
+    "mirror_requests": 208,
+    "rel_total": 5,
+    "rel_false_cross_op": 0,
+    "rel_non_scam": 0,
+    "rel_same_op": 5,
+    "rel_note": "",
+    "first_useful_round": 0,
+    "first_useful_requests": 273,
+    "skip_reasons": {
+     "mirror": 2
+    },
+    "outcomes": {
+     "wallet_evidence": 17,
+     "dead_site": 1,
+     "meaningful_evidence": 2,
+     "low_evidence": 1
+    },
+    "engine_errors": 0
+   },
+   "useful_domains": [
+    "astrador.pro",
+    "bravaqua.club",
+    "corvirel-vip.icu",
+    "corvirelwallet.app",
+    "domaton-app.lat",
+    "ganoqua.io",
+    "helioqua.sbs",
+    "heliostox.lat",
+    "hexapex.bond",
+    "hexapexfx.bond",
+    "ilyodia1.bond",
+    "ilyonor.bond",
+    "jorvomen.icu",
+    "lumodiapro.icu",
+    "lumolixx.co",
+    "marlevo.bond",
+    "nexavia.sbs",
+    "profitlumopex.cfd",
+    "rivador-pro.pro",
+    "selaskax.pro",
+    "sorindia-app.vip",
+    "sorindia1.sbs",
+    "vantadia2.pro",
+    "vantapex.io",
+    "zenilix-global.cfd",
+    "zenilixx.icu"
+   ],
+   "pool_useful": [
+    "astrador.pro",
+    "bravaqua.club",
+    "corvirel-vip.icu",
+    "corvirelwallet.app",
+    "domaton-app.lat",
+    "ganoqua.io",
+    "helioqua.sbs",
+    "heliostox.lat",
+    "hexapex.bond",
+    "hexapexfx.bond",
+    "ilyodia1.bond",
+    "ilyonor.bond",
+    "jorvomen.icu",
+    "lumodiapro.icu",
+    "lumolixx.co",
+    "marlevo.bond",
+    "nexavia.sbs",
+    "profitlumopex.cfd",
+    "rivador-pro.pro",
+    "selaskax.pro",
+    "sorindia-app.vip",
+    "sorindia1.sbs",
+    "vantadia2.pro",
+    "vantapex.io",
+    "zenilix-global.cfd",
+    "zenilixx.icu"
+   ],
+   "verdicts": [
+    {
+     "r": 0,
+     "domain": "marlelin33.shop",
+     "useful": false,
+     "why": "mirror",
+     "op": "M0",
+     "min_pivots": 1
+    },
+    {
+     "r": 0,
+     "domain": "corvirel-vip.icu",
+     "useful": true,
+     "why": "member",
+     "op": "O4",
+     "min_pivots": 1
+    },
+    {
+     "r": 0,
+     "domain": "zenilixx.icu",
+     "useful": true,
+     "why": "member",
+     "op": "O8",
+     "min_pivots": 2
+    },
+    {
+     "r": 0,
+     "domain": "selaskax.pro",
+     "useful": true,
+     "why": "member",
+     "op": "O0",
+     "min_pivots": 1
+    },
+    {
+     "r": 1,
+     "domain": "nexavia.sbs",
+     "useful": true,
+     "why": "chain2",
+     "op": "O0",
+     "min_pivots": 2
+    },
+    {
+     "r": 1,
+     "domain": "hexapex.bond",
+     "useful": true,
+     "why": "member",
+     "op": "O9",
+     "min_pivots": 2
+    },
+    {
+     "r": 1,
+     "domain": "hexapexfx.bond",
+     "useful": true,
+     "why": "member",
+     "op": "O9",
+     "min_pivots": 2
+    },
+    {
+     "r": 1,
+     "domain": "corvirelwallet.app",
+     "useful": true,
+     "why": "member",
+     "op": "O4",
+     "min_pivots": 1
+    },
+    {
+     "r": 1,
+     "domain": "fyranor47.cfd",
+     "useful": false,
+     "why": "mirror",
+     "op": "M1",
+     "min_pivots": 1
+    },
+    {
+     "r": 2,
+     "domain": "lumodiapro.icu",
+     "useful": true,
+     "why": "chain1",
+     "op": "O5",
+     "min_pivots": 3
+    },
+    {
+     "r": 2,
+     "domain": "domaton-app.lat",
+     "useful": true,
+     "why": "chain_anchor",
+     "op": "O5",
+     "min_pivots": 2
+    },
+    {
+     "r": 2,
+     "domain": "helioqua.sbs",
+     "useful": true,
+     "why": "chain3",
+     "op": "O0",
+     "min_pivots": 3
+    },
+    {
+     "r": 2,
+     "domain": "zenilix-global.cfd",
+     "useful": true,
+     "why": "member",
+     "op": "O8",
+     "min_pivots": 2
+    },
+    {
+     "r": 2,
+     "domain": "vantapex.io",
+     "useful": true,
+     "why": "chain1",
+     "op": "O0",
+     "min_pivots": 1
+    },
+    {
+     "r": 3,
+     "domain": "heliostox.lat",
+     "useful": true,
+     "why": "chain2",
+     "op": "O5",
+     "min_pivots": 4
+    },
+    {
+     "r": 3,
+     "domain": "astrador.pro",
+     "useful": true,
+     "why": "member",
+     "op": "O0",
+     "min_pivots": 1
+    },
+    {
+     "r": 3,
+     "domain": "jorvomen.icu",
+     "useful": true,
+     "why": "member",
+     "op": "O3",
+     "min_pivots": 1
+    },
+    {
+     "r": 3,
+     "domain": "rivador-pro.pro",
+     "useful": true,
+     "why": "member",
+     "op": "O3",
+     "min_pivots": 1
+    },
+    {
+     "r": 4,
+     "domain": "ganoqua.io",
+     "useful": true,
+     "why": "member",
+     "op": "O3",
+     "min_pivots": 1
+    },
+    {
+     "r": 4,
+     "domain": "marlevo.bond",
+     "useful": true,
+     "why": "member",
+     "op": "O1",
+     "min_pivots": 1
+    },
+    {
+     "r": 4,
+     "domain": "lumolixx.co",
+     "useful": true,
+     "why": "member",
+     "op": "O2",
+     "min_pivots": 1
+    },
+    {
+     "r": 5,
+     "domain": "vantadia2.pro",
+     "useful": true,
+     "why": "member",
+     "op": "O9",
+     "min_pivots": 2
+    },
+    {
+     "r": 5,
+     "domain": "bravaqua.club",
+     "useful": true,
+     "why": "member",
+     "op": "O8",
+     "min_pivots": 2
+    },
+    {
+     "r": 6,
+     "domain": "ilyodia1.bond",
+     "useful": true,
+     "why": "member",
+     "op": "O0",
+     "min_pivots": 1
+    },
+    {
+     "r": 7,
+     "domain": "profitlumopex.cfd",
+     "useful": true,
+     "why": "member",
+     "op": "O8",
+     "min_pivots": 1
+    },
+    {
+     "r": 7,
+     "domain": "sorindia-app.vip",
+     "useful": true,
+     "why": "returned",
+     "op": "O2",
+     "min_pivots": 2
+    },
+    {
+     "r": 7,
+     "domain": "sorindia1.sbs",
+     "useful": true,
+     "why": "member",
+     "op": "O2",
+     "min_pivots": 1
+    },
+    {
+     "r": 7,
+     "domain": "ilyonor.bond",
+     "useful": true,
+     "why": "member",
+     "op": "O0",
+     "min_pivots": 2
+    }
+   ],
+   "trace": [
+    {
+     "round": 0,
+     "reviewed": 4,
+     "useful_cum": 3,
+     "requests_cum": 273
+    },
+    {
+     "round": 1,
+     "reviewed": 5,
+     "useful_cum": 7,
+     "requests_cum": 857
+    },
+    {
+     "round": 2,
+     "reviewed": 5,
+     "useful_cum": 12,
+     "requests_cum": 1351
+    },
+    {
+     "round": 3,
+     "reviewed": 4,
+     "useful_cum": 16,
+     "requests_cum": 1683
+    },
+    {
+     "round": 4,
+     "reviewed": 3,
+     "useful_cum": 19,
+     "requests_cum": 2165
+    },
+    {
+     "round": 5,
+     "reviewed": 2,
+     "useful_cum": 21,
+     "requests_cum": 2477
+    },
+    {
+     "round": 6,
+     "reviewed": 1,
+     "useful_cum": 22,
+     "requests_cum": 2787
+    },
+    {
+     "round": 7,
+     "reviewed": 4,
+     "useful_cum": 26,
+     "requests_cum": 3205
+    }
+   ],
+   "errors": [],
+   "label": "main-investigation-platform-v9-suite-v7-adaptive-intelligence",
+   "noise_floor": false
+  },
+  {
+   "tree": "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07",
+   "seed": 307,
+   "scenario": "collapse",
+   "difficulty": "hard",
+   "rounds": 8,
+   "hashseed": "0",
+   "seconds": 3.2,
+   "world": {
+    "useful_units": 49,
+    "by_min_pivots": {
+     "0": 2,
+     "1": 31,
+     "2": 7,
+     "3": 1,
+     "4": 2,
+     "unreachable": 6
+    },
+    "unknown_family": 9,
+    "returned": 2,
+    "operations": 10,
+    "mirrors": 150,
+    "main_known_r0": 13,
+    "domains_total_r0": 723
+   },
+   "metrics": {
+    "new_useful": 15,
+    "found_share": 0.349,
+    "reviewed": 16,
+    "precision": 0.938,
+    "multi_hop": 1,
+    "median_pivots": 1,
+    "unreachable_found": 1,
+    "operations": 7,
+    "unknown_family": 0,
+    "reappearances": 0,
+    "value": 35.7,
+    "pool_useful": 15,
+    "requests": {
+     "http": 309,
+     "dns": 2351,
+     "crtsh": 5,
+     "rdap": 59,
+     "feed": 16,
+     "page_search": 133,
+     "passive_dns": 20
+    },
+    "requests_total": 2893,
+    "queries_total": 158,
+    "requests_per_useful": 192.9,
+    "queries_per_useful": 10.5,
+    "repeated_queries": 28,
+    "dead_end_queries": 132,
+    "dead_end_dns": 2328,
+    "junk_fetches": 203,
+    "mirror_requests": 68,
+    "rel_total": 32,
+    "rel_false_cross_op": 0,
+    "rel_non_scam": 0,
+    "rel_same_op": 32,
+    "rel_note": "",
+    "first_useful_round": 1,
+    "first_useful_requests": 644,
+    "skip_reasons": {
+     "mirror": 1
+    },
+    "outcomes": {
+     "wallet_evidence": 9,
+     "low_evidence": 4,
+     "meaningful_evidence": 1
+    },
+    "engine_errors": 0
+   },
+   "useful_domains": [
+    "elvoviax.net",
+    "ilyora.live",
+    "lyralix3.app",
+    "lyralixex.app",
+    "marledor.live",
+    "marledor4.net",
+    "marledorx.net",
+    "praxton-pro.com",
+    "praxvox.app",
+    "rivasto.sbs",
+    "rivasto2.icu",
+    "sorinlixx.co",
+    "ulmorel.cfd",
+    "ulmorelfx.cfd",
+    "zeniton.cc"
+   ],
+   "pool_useful": [
+    "elvoviax.net",
+    "ilyora.live",
+    "lyralix3.app",
+    "lyralixex.app",
+    "marledor.live",
+    "marledor4.net",
+    "marledorx.net",
+    "praxton-pro.com",
+    "praxvox.app",
+    "rivasto.sbs",
+    "rivasto2.icu",
+    "sorinlixx.co",
+    "ulmorel.cfd",
+    "ulmorelfx.cfd",
+    "zeniton.cc"
+   ],
+   "verdicts": [
+    {
+     "r": 0,
+     "domain": "fyrasto129.xyz",
+     "useful": false,
+     "why": "mirror",
+     "op": "M0",
+     "min_pivots": 1
+    },
+    {
+     "r": 1,
+     "domain": "ulmorelfx.cfd",
+     "useful": true,
+     "why": "member",
+     "op": "O2",
+     "min_pivots": 1
+    },
+    {
+     "r": 1,
+     "domain": "rivasto.sbs",
+     "useful": true,
+     "why": "member",
+     "op": "O4",
+     "min_pivots": 1
+    },
+    {
+     "r": 1,
+     "domain": "praxvox.app",
+     "useful": true,
+     "why": "member",
+     "op": "O5",
+     "min_pivots": 1
+    },
+    {
+     "r": 1,
+     "domain": "lyralixex.app",
+     "useful": true,
+     "why": "member",
+     "op": "O5",
+     "min_pivots": 1
+    },
+    {
+     "r": 1,
+     "domain": "ulmorel.cfd",
+     "useful": true,
+     "why": "member",
+     "op": "O2",
+     "min_pivots": 1
+    },
+    {
+     "r": 2,
+     "domain": "ilyora.live",
+     "useful": true,
+     "why": "member",
+     "op": "O0",
+     "min_pivots": 1
+    },
+    {
+     "r": 2,
+     "domain": "rivasto2.icu",
+     "useful": true,
+     "why": "member",
+     "op": "O4",
+     "min_pivots": 2
+    },
+    {
+     "r": 2,
+     "domain": "marledor.live",
+     "useful": true,
+     "why": "member",
+     "op": "O0",
+     "min_pivots": 1
+    },
+    {
+     "r": 2,
+     "domain": "zeniton.cc",
+     "useful": true,
+     "why": "member",
+     "op": "O6",
+     "min_pivots": 1
+    },
+    {
+     "r": 2,
+     "domain": "sorinlixx.co",
+     "useful": true,
+     "why": "member",
+     "op": "O7",
+     "min_pivots": 1
+    },
+    {
+     "r": 3,
+     "domain": "lyralix3.app",
+     "useful": true,
+     "why": "member",
+     "op": "O5",
+     "min_pivots": 1
+    },
+    {
+     "r": 3,
+     "domain": "marledor4.net",
+     "useful": true,
+     "why": "member",
+     "op": "O0",
+     "min_pivots": 1
+    },
+    {
+     "r": 4,
+     "domain": "marledorx.net",
+     "useful": true,
+     "why": "member",
+     "op": "O0",
+     "min_pivots": 1
+    },
+    {
+     "r": 4,
+     "domain": "elvoviax.net",
+     "useful": true,
+     "why": "member",
+     "op": "O3",
+     "min_pivots": 1
+    },
+    {
+     "r": 5,
+     "domain": "praxton-pro.com",
+     "useful": true,
+     "why": "member",
+     "op": "O3",
+     "min_pivots": null
+    }
+   ],
+   "trace": [
+    {
+     "round": 0,
+     "reviewed": 1,
+     "useful_cum": 0,
+     "requests_cum": 253
+    },
+    {
+     "round": 1,
+     "reviewed": 5,
+     "useful_cum": 5,
+     "requests_cum": 644
+    },
+    {
+     "round": 2,
+     "reviewed": 5,
+     "useful_cum": 10,
+     "requests_cum": 1059
+    },
+    {
+     "round": 3,
+     "reviewed": 2,
+     "useful_cum": 12,
+     "requests_cum": 1422
+    },
+    {
+     "round": 4,
+     "reviewed": 2,
+     "useful_cum": 14,
+     "requests_cum": 1897
+    },
+    {
+     "round": 5,
+     "reviewed": 1,
+     "useful_cum": 15,
+     "requests_cum": 2207
+    },
+    {
+     "round": 6,
+     "reviewed": 0,
+     "useful_cum": 15,
+     "requests_cum": 2533
+    },
+    {
+     "round": 7,
+     "reviewed": 0,
+     "useful_cum": 15,
+     "requests_cum": 2893
+    }
+   ],
+   "errors": [],
+   "label": "main-investigation-platform-v9-suite-v7-adaptive-intelligence",
+   "noise_floor": false
+  },
+  {
+   "tree": "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07",
+   "seed": 101,
+   "scenario": "mixed",
+   "difficulty": "hard",
+   "rounds": 8,
+   "hashseed": "1",
+   "seconds": 3.0,
+   "world": {
+    "useful_units": 54,
+    "by_min_pivots": {
+     "1": 22,
+     "2": 12,
+     "3": 3,
+     "4": 2,
+     "5+": 3,
+     "unreachable": 12
+    },
+    "unknown_family": 9,
+    "returned": 3,
+    "operations": 10,
+    "mirrors": 150,
+    "main_known_r0": 8,
+    "domains_total_r0": 751
+   },
+   "metrics": {
+    "new_useful": 19,
+    "found_share": 0.452,
+    "reviewed": 20,
+    "precision": 0.95,
+    "multi_hop": 6,
+    "median_pivots": 1,
+    "unreachable_found": 3,
+    "operations": 7,
+    "unknown_family": 7,
+    "reappearances": 0,
+    "value": 49.9,
+    "pool_useful": 20,
+    "requests": {
+     "http": 253,
+     "dns": 2238,
+     "crtsh": 9,
+     "rdap": 59,
+     "feed": 16,
+     "page_search": 124,
+     "passive_dns": 15
+    },
+    "requests_total": 2714,
+    "queries_total": 148,
+    "requests_per_useful": 142.8,
+    "queries_per_useful": 7.8,
+    "repeated_queries": 28,
+    "dead_end_queries": 126,
+    "dead_end_dns": 2220,
+    "junk_fetches": 136,
+    "mirror_requests": 92,
+    "rel_total": 68,
+    "rel_false_cross_op": 0,
+    "rel_non_scam": 0,
+    "rel_same_op": 68,
+    "rel_note": "",
+    "first_useful_round": 0,
+    "first_useful_requests": 287,
+    "skip_reasons": {
+     "mirror": 1
+    },
+    "outcomes": {
+     "low_evidence": 3,
+     "wallet_evidence": 9,
+     "investigation_completed": 2
+    },
+    "engine_errors": 0
+   },
+   "useful_domains": [
+    "bravapex.cc",
+    "bravaton-pro.cfd",
+    "dexorel.sbs",
+    "dexorel1.sbs",
+    "fyraviapro.cfd",
+    "ganopexpro.net",
+    "heliovia-app.vip",
+    "nuvorel.lat",
+    "opranor.vip",
+    "oprarel.xyz",
+    "peloqua.live",
+    "praxmen.live",
+    "rivarapro.net",
+    "sorinpexmining.cfd",
+    "talvonor-pro.net",
+    "vantastopro.io",
+    "vantaton-pro.icu",
+    "walletjorvovia.io",
+    "zenilix.com"
+   ],
+   "pool_useful": [
+    "bravapex.cc",
+    "bravaton-pro.cfd",
+    "dexorel.sbs",
+    "dexorel1.sbs",
+    "fyraviapro.cfd",
+    "ganopexpro.net",
+    "heliovia-app.vip",
+    "nuvorel.lat",
+    "opranor.vip",
+    "oprarel.xyz",
+    "peloqua.live",
+    "praxmen.live",
+    "rivarapro.net",
+    "sorinpexmining.cfd",
+    "talvonor-pro.net",
+    "tavivo-global.icu",
+    "vantastopro.io",
+    "vantaton-pro.icu",
+    "walletjorvovia.io",
+    "zenilix.com"
+   ],
+   "verdicts": [
+    {
+     "r": 0,
+     "domain": "rivarapro.net",
+     "useful": true,
+     "why": "member",
+     "op": "O9",
+     "min_pivots": 2
+    },
+    {
+     "r": 0,
+     "domain": "oprarel.xyz",
+     "useful": true,
+     "why": "member",
+     "op": "O4",
+     "min_pivots": 2
+    },
+    {
+     "r": 0,
+     "domain": "rivaton2.cfd",
+     "useful": false,
+     "why": "mirror",
+     "op": "M0",
+     "min_pivots": 1
+    },
+    {
+     "r": 0,
+     "domain": "dexorel.sbs",
+     "useful": true,
+     "why": "member",
+     "op": "O3",
+     "min_pivots": 1
+    },
+    {
+     "r": 1,
+     "domain": "talvonor-pro.net",
+     "useful": true,
+     "why": "member",
+     "op": "O9",
+     "min_pivots": 1
+    },
+    {
+     "r": 1,
+     "domain": "dexorel1.sbs",
+     "useful": true,
+     "why": "member",
+     "op": "O3",
+     "min_pivots": 1
+    },
+    {
+     "r": 1,
+     "domain": "peloqua.live",
+     "useful": true,
+     "why": "member",
+     "op": "O8",
+     "min_pivots": 2
+    },
+    {
+     "r": 1,
+     "domain": "fyraviapro.cfd",
+     "useful": true,
+     "why": "member",
+     "op": "O1",
+     "min_pivots": 1
+    },
+    {
+     "r": 2,
+     "domain": "zenilix.com",
+     "useful": true,
+     "why": "member",
+     "op": "O9",
+     "min_pivots": 2
+    },
+    {
+     "r": 3,
+     "domain": "opranor.vip",
+     "useful": true,
+     "why": "member",
+     "op": "O5",
+     "min_pivots": 1
+    },
+    {
+     "r": 3,
+     "domain": "walletjorvovia.io",
+     "useful": true,
+     "why": "member",
+     "op": "O0",
+     "min_pivots": 1
+    },
+    {
+     "r": 3,
+     "domain": "nuvorel.lat",
+     "useful": true,
+     "why": "member",
+     "op": "O0",
+     "min_pivots": 1
+    },
+    {
+     "r": 4,
+     "domain": "vantaton-pro.icu",
+     "useful": true,
+     "why": "member",
+     "op": "O3",
+     "min_pivots": 2
+    },
+    {
+     "r": 4,
+     "domain": "heliovia-app.vip",
+     "useful": true,
+     "why": "member",
+     "op": "O5",
+     "min_pivots": 1
+    },
+    {
+     "r": 4,
+     "domain": "bravapex.cc",
+     "useful": true,
+     "why": "member",
+     "op": "O4",
+     "min_pivots": null
+    },
+    {
+     "r": 7,
+     "domain": "ganopexpro.net",
+     "useful": true,
+     "why": "member",
+     "op": "O3",
+     "min_pivots": 1
+    },
+    {
+     "r": 7,
+     "domain": "praxmen.live",
+     "useful": true,
+     "why": "member",
+     "op": "O0",
+     "min_pivots": null
+    },
+    {
+     "r": 7,
+     "domain": "bravaton-pro.cfd",
+     "useful": true,
+     "why": "member",
+     "op": "O9",
+     "min_pivots": null
+    },
+    {
+     "r": 7,
+     "domain": "sorinpexmining.cfd",
+     "useful": true,
+     "why": "member",
+     "op": "O8",
+     "min_pivots": 1
+    },
+    {
+     "r": 7,
+     "domain": "vantastopro.io",
+     "useful": true,
+     "why": "member",
+     "op": "O8",
+     "min_pivots": 2
+    }
+   ],
+   "trace": [
+    {
+     "round": 0,
+     "reviewed": 4,
+     "useful_cum": 3,
+     "requests_cum": 287
+    },
+    {
+     "round": 1,
+     "reviewed": 4,
+     "useful_cum": 7,
+     "requests_cum": 801
+    },
+    {
+     "round": 2,
+     "reviewed": 1,
+     "useful_cum": 8,
+     "requests_cum": 1201
+    },
+    {
+     "round": 3,
+     "reviewed": 3,
+     "useful_cum": 11,
+     "requests_cum": 1477
+    },
+    {
+     "round": 4,
+     "reviewed": 3,
+     "useful_cum": 14,
+     "requests_cum": 1921
+    },
+    {
+     "round": 5,
+     "reviewed": 0,
+     "useful_cum": 14,
+     "requests_cum": 2236
+    },
+    {
+     "round": 6,
+     "reviewed": 0,
+     "useful_cum": 14,
+     "requests_cum": 2344
+    },
+    {
+     "round": 7,
+     "reviewed": 5,
+     "useful_cum": 19,
+     "requests_cum": 2714
+    }
+   ],
+   "errors": [],
+   "label": "main-investigation-platform-v9-suite-v7-adaptive-intelligence",
+   "noise_floor": true
+  },
+  {
+   "tree": "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07",
+   "seed": 307,
+   "scenario": "dark_family",
+   "difficulty": "hard",
+   "rounds": 8,
+   "hashseed": "0",
+   "seconds": 4.8,
+   "world": {
+    "useful_units": 60,
+    "by_min_pivots": {
+     "1": 27,
+     "2": 24,
+     "3": 4,
+     "unreachable": 5
+    },
+    "unknown_family": 21,
+    "returned": 3,
+    "operations": 13,
+    "mirrors": 150,
+    "main_known_r0": 10,
+    "domains_total_r0": 717
+   },
+   "metrics": {
+    "new_useful": 31,
+    "found_share": 0.564,
+    "reviewed": 32,
+    "precision": 0.969,
+    "multi_hop": 14,
+    "median_pivots": 1,
+    "unreachable_found": 2,
+    "operations": 11,
+    "unknown_family": 9,
+    "reappearances": 2,
+    "value": 101.3,
+    "pool_useful": 31,
+    "requests": {
+     "http": 345,
+     "dns": 2634,
+     "crtsh": 5,
+     "rdap": 71,
+     "feed": 18,
+     "page_search": 214,
+     "passive_dns": 29
+    },
+    "requests_total": 3316,
+    "queries_total": 248,
+    "requests_per_useful": 107.0,
+    "queries_per_useful": 8.0,
+    "repeated_queries": 43,
+    "dead_end_queries": 218,
+    "dead_end_dns": 2610,
+    "junk_fetches": 219,
+    "mirror_requests": 60,
+    "rel_total": 6,
+    "rel_false_cross_op": 0,
+    "rel_non_scam": 0,
+    "rel_same_op": 6,
+    "rel_note": "",
+    "first_useful_round": 0,
+    "first_useful_requests": 258,
+    "skip_reasons": {
+     "mirror": 1
+    },
+    "outcomes": {
+     "wallet_evidence": 18,
+     "low_evidence": 4,
+     "investigation_completed": 1,
+     "meaningful_evidence": 2
+    },
+    "engine_errors": 0
+   },
+   "useful_domains": [
+    "earnmovimen.xyz",
+    "elvolix.org",
+    "elvopex.org",
+    "fyrapex.top",
+    "fyrapexx.top",
+    "helioqua.co",
+    "hexanor-h5.live",
+    "hexanor.top",
+    "ilyolix-global.icu",
+    "ilyopex-vip.vip",
+    "jorvolin.app",
+    "jorvovo.top",
+    "kaironorpro.homes",
+    "lyraska.net",
+    "nexaquapro.co",
+    "nexasto.cc",
+    "nuvolin.club",
+    "opralin.co",
+    "orbimen.net",
+    "orbipexyield.net",
+    "orbivia.net",
+    "quilodorex.net",
+    "quilovia.homes",
+    "rivadiapro.net",
+    "seladiaex.vip",
+    "ulmoqua-pro.club",
+    "walletfyradia.net",
+    "zenidor-app.xyz",
+    "zenidor-pro.live",
+    "zenidorex.xyz",
+    "zenira-app.net"
+   ],
+   "pool_useful": [
+    "earnmovimen.xyz",
+    "elvolix.org",
+    "elvopex.org",
+    "fyrapex.top",
+    "fyrapexx.top",
+    "helioqua.co",
+    "hexanor-h5.live",
+    "hexanor.top",
+    "ilyolix-global.icu",
+    "ilyopex-vip.vip",
+    "jorvolin.app",
+    "jorvovo.top",
+    "kaironorpro.homes",
+    "lyraska.net",
+    "nexaquapro.co",
+    "nexasto.cc",
+    "nuvolin.club",
+    "opralin.co",
+    "orbimen.net",
+    "orbipexyield.net",
+    "orbivia.net",
+    "quilodorex.net",
+    "quilovia.homes",
+    "rivadiapro.net",
+    "seladiaex.vip",
+    "ulmoqua-pro.club",
+    "walletfyradia.net",
+    "zenidor-app.xyz",
+    "zenidor-pro.live",
+    "zenidorex.xyz",
+    "zenira-app.net"
+   ],
+   "verdicts": [
+    {
+     "r": 0,
+     "domain": "lyramen57.cfd",
+     "useful": false,
+     "why": "mirror",
+     "op": "M0",
+     "min_pivots": 1
+    },
+    {
+     "r": 0,
+     "domain": "kaironorpro.homes",
+     "useful": true,
+     "why": "member",
+     "op": "O8",
+     "min_pivots": 2
+    },
+    {
+     "r": 0,
+     "domain": "nexaquapro.co",
+     "useful": true,
+     "why": "chain_anchor",
+     "op": "O4",
+     "min_pivots": 1
+    },
+    {
+     "r": 0,
+     "domain": "elvopex.org",
+     "useful": true,
+     "why": "member",
+     "op": "O3",
+     "min_pivots": 1
+    },
+    {
+     "r": 0,
+     "domain": "hexanor.top",
+     "useful": true,
+     "why": "member",
+     "op": "O7",
+     "min_pivots": 1
+    },
+    {
+     "r": 1,
+     "domain": "orbivia.net",
+     "useful": true,
+     "why": "chain1",
+     "op": "O1",
+     "min_pivots": 1
+    },
+    {
+     "r": 1,
+     "domain": "helioqua.co",
+     "useful": true,
+     "why": "chain1",
+     "op": "O4",
+     "min_pivots": 2
+    },
+    {
+     "r": 1,
+     "domain": "jorvovo.top",
+     "useful": true,
+     "why": "member",
+     "op": "O9",
+     "min_pivots": 2
+    },
+    {
+     "r": 1,
+     "domain": "walletfyradia.net",
+     "useful": true,
+     "why": "member",
+     "op": "O8",
+     "min_pivots": 1
+    },
+    {
+     "r": 2,
+     "domain": "fyrapexx.top",
+     "useful": true,
+     "why": "member",
+     "op": "O10",
+     "min_pivots": 2
+    },
+    {
+     "r": 2,
+     "domain": "zenira-app.net",
+     "useful": true,
+     "why": "member",
+     "op": "O6",
+     "min_pivots": 2
+    },
+    {
+     "r": 2,
+     "domain": "fyrapex.top",
+     "useful": true,
+     "why": "member",
+     "op": "O10",
+     "min_pivots": 2
+    },
+    {
+     "r": 2,
+     "domain": "earnmovimen.xyz",
+     "useful": true,
+     "why": "member",
+     "op": "O10",
+     "min_pivots": 1
+    },
+    {
+     "r": 2,
+     "domain": "lyraska.net",
+     "useful": true,
+     "why": "chain2",
+     "op": "O1",
+     "min_pivots": 2
+    },
+    {
+     "r": 3,
+     "domain": "rivadiapro.net",
+     "useful": true,
+     "why": "chain3",
+     "op": "O1",
+     "min_pivots": 3
+    },
+    {
+     "r": 3,
+     "domain": "jorvolin.app",
+     "useful": true,
+     "why": "member",
+     "op": "O5",
+     "min_pivots": 1
+    },
+    {
+     "r": 3,
+     "domain": "hexanor-h5.live",
+     "useful": true,
+     "why": "member",
+     "op": "O7",
+     "min_pivots": 1
+    },
+    {
+     "r": 3,
+     "domain": "elvolix.org",
+     "useful": true,
+     "why": "member",
+     "op": "O6",
+     "min_pivots": 2
+    },
+    {
+     "r": 3,
+     "domain": "ulmoqua-pro.club",
+     "useful": true,
+     "why": "member",
+     "op": "O10",
+     "min_pivots": 1
+    },
+    {
+     "r": 4,
+     "domain": "seladiaex.vip",
+     "useful": true,
+     "why": "returned",
+     "op": "O2",
+     "min_pivots": 1
+    },
+    {
+     "r": 4,
+     "domain": "orbimen.net",
+     "useful": true,
+     "why": "member",
+     "op": "O2",
+     "min_pivots": 1
+    },
+    {
+     "r": 4,
+     "domain": "quilovia.homes",
+     "useful": true,
+     "why": "member",
+     "op": "O6",
+     "min_pivots": 2
+    },
+    {
+     "r": 4,
+     "domain": "orbipexyield.net",
+     "useful": true,
+     "why": "member",
+     "op": "O3",
+     "min_pivots": 1
+    },
+    {
+     "r": 5,
+     "domain": "zenidorex.xyz",
+     "useful": true,
+     "why": "member",
+     "op": "O0",
+     "min_pivots": 1
+    },
+    {
+     "r": 5,
+     "domain": "zenidor-pro.live",
+     "useful": true,
+     "why": "member",
+     "op": "O0",
+     "min_pivots": 1
+    },
+    {
+     "r": 5,
+     "domain": "zenidor-app.xyz",
+     "useful": true,
+     "why": "member",
+     "op": "O0",
+     "min_pivots": 2
+    },
+    {
+     "r": 5,
+     "domain": "nuvolin.club",
+     "useful": true,
+     "why": "member",
+     "op": "O10",
+     "min_pivots": null
+    },
+    {
+     "r": 6,
+     "domain": "ilyopex-vip.vip",
+     "useful": true,
+     "why": "member",
+     "op": "O3",
+     "min_pivots": null
+    },
+    {
+     "r": 6,
+     "domain": "opralin.co",
+     "useful": true,
+     "why": "member",
+     "op": "O4",
+     "min_pivots": 2
+    },
+    {
+     "r": 6,
+     "domain": "quilodorex.net",
+     "useful": true,
+     "why": "member",
+     "op": "O9",
+     "min_pivots": 2
+    },
+    {
+     "r": 7,
+     "domain": "nexasto.cc",
+     "useful": true,
+     "why": "returned",
+     "op": "O1",
+     "min_pivots": 1
+    },
+    {
+     "r": 7,
+     "domain": "ilyolix-global.icu",
+     "useful": true,
+     "why": "member",
+     "op": "O4",
+     "min_pivots": 2
+    }
+   ],
+   "trace": [
+    {
+     "round": 0,
+     "reviewed": 5,
+     "useful_cum": 4,
+     "requests_cum": 258
+    },
+    {
+     "round": 1,
+     "reviewed": 4,
+     "useful_cum": 8,
+     "requests_cum": 759
+    },
+    {
+     "round": 2,
+     "reviewed": 5,
+     "useful_cum": 13,
+     "requests_cum": 1158
+    },
+    {
+     "round": 3,
+     "reviewed": 5,
+     "useful_cum": 18,
+     "requests_cum": 1552
+    },
+    {
+     "round": 4,
+     "reviewed": 4,
+     "useful_cum": 22,
+     "requests_cum": 2155
+    },
+    {
+     "round": 5,
+     "reviewed": 4,
+     "useful_cum": 26,
+     "requests_cum": 2494
+    },
+    {
+     "round": 6,
+     "reviewed": 3,
+     "useful_cum": 29,
+     "requests_cum": 2821
+    },
+    {
+     "round": 7,
+     "reviewed": 2,
+     "useful_cum": 31,
+     "requests_cum": 3316
+    }
+   ],
+   "errors": [],
+   "label": "main-investigation-platform-v9-suite-v7-adaptive-intelligence",
+   "noise_floor": false
+  },
+  {
+   "tree": "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/integrations/site-finder-v07",
+   "seed": 101,
+   "scenario": "mixed",
+   "difficulty": "hard",
+   "rounds": 8,
+   "hashseed": "2",
+   "seconds": 3.6,
+   "world": {
+    "useful_units": 54,
+    "by_min_pivots": {
+     "1": 22,
+     "2": 12,
+     "3": 3,
+     "4": 2,
+     "5+": 3,
+     "unreachable": 12
+    },
+    "unknown_family": 9,
+    "returned": 3,
+    "operations": 10,
+    "mirrors": 150,
+    "main_known_r0": 8,
+    "domains_total_r0": 751
+   },
+   "metrics": {
+    "new_useful": 19,
+    "found_share": 0.452,
+    "reviewed": 20,
+    "precision": 0.95,
+    "multi_hop": 6,
+    "median_pivots": 1,
+    "unreachable_found": 3,
+    "operations": 7,
+    "unknown_family": 7,
+    "reappearances": 0,
+    "value": 49.9,
+    "pool_useful": 20,
+    "requests": {
+     "http": 253,
+     "dns": 2238,
+     "crtsh": 9,
+     "rdap": 59,
+     "feed": 16,
+     "page_search": 124,
+     "passive_dns": 15
+    },
+    "requests_total": 2714,
+    "queries_total": 148,
+    "requests_per_useful": 142.8,
+    "queries_per_useful": 7.8,
+    "repeated_queries": 28,
+    "dead_end_queries": 126,
+    "dead_end_dns": 2220,
+    "junk_fetches": 136,
+    "mirror_requests": 92,
+    "rel_total": 68,
+    "rel_false_cross_op": 0,
+    "rel_non_scam": 0,
+    "rel_same_op": 68,
+    "rel_note": "",
+    "first_useful_round": 0,
+    "first_useful_requests": 287,
+    "skip_reasons": {
+     "mirror": 1
+    },
+    "outcomes": {
+     "low_evidence": 3,
+     "wallet_evidence": 9,
+     "investigation_completed": 2
+    },
+    "engine_errors": 0
+   },
+   "useful_domains": [
+    "bravapex.cc",
+    "bravaton-pro.cfd",
+    "dexorel.sbs",
+    "dexorel1.sbs",
+    "fyraviapro.cfd",
+    "ganopexpro.net",
+    "heliovia-app.vip",
+    "nuvorel.lat",
+    "opranor.vip",
+    "oprarel.xyz",
+    "peloqua.live",
+    "praxmen.live",
+    "rivarapro.net",
+    "sorinpexmining.cfd",
+    "talvonor-pro.net",
+    "vantastopro.io",
+    "vantaton-pro.icu",
+    "walletjorvovia.io",
+    "zenilix.com"
+   ],
+   "pool_useful": [
+    "bravapex.cc",
+    "bravaton-pro.cfd",
+    "dexorel.sbs",
+    "dexorel1.sbs",
+    "fyraviapro.cfd",
+    "ganopexpro.net",
+    "heliovia-app.vip",
+    "nuvorel.lat",
+    "opranor.vip",
+    "oprarel.xyz",
+    "peloqua.live",
+    "praxmen.live",
+    "rivarapro.net",
+    "sorinpexmining.cfd",
+    "talvonor-pro.net",
+    "tavivo-global.icu",
+    "vantastopro.io",
+    "vantaton-pro.icu",
+    "walletjorvovia.io",
+    "zenilix.com"
+   ],
+   "verdicts": [
+    {
+     "r": 0,
+     "domain": "rivarapro.net",
+     "useful": true,
+     "why": "member",
+     "op": "O9",
+     "min_pivots": 2
+    },
+    {
+     "r": 0,
+     "domain": "oprarel.xyz",
+     "useful": true,
+     "why": "member",
+     "op": "O4",
+     "min_pivots": 2
+    },
+    {
+     "r": 0,
+     "domain": "rivaton2.cfd",
+     "useful": false,
+     "why": "mirror",
+     "op": "M0",
+     "min_pivots": 1
+    },
+    {
+     "r": 0,
+     "domain": "dexorel.sbs",
+     "useful": true,
+     "why": "member",
+     "op": "O3",
+     "min_pivots": 1
+    },
+    {
+     "r": 1,
+     "domain": "talvonor-pro.net",
+     "useful": true,
+     "why": "member",
+     "op": "O9",
+     "min_pivots": 1
+    },
+    {
+     "r": 1,
+     "domain": "dexorel1.sbs",
+     "useful": true,
+     "why": "member",
+     "op": "O3",
+     "min_pivots": 1
+    },
+    {
+     "r": 1,
+     "domain": "peloqua.live",
+     "useful": true,
+     "why": "member",
+     "op": "O8",
+     "min_pivots": 2
+    },
+    {
+     "r": 1,
+     "domain": "fyraviapro.cfd",
+     "useful": true,
+     "why": "member",
+     "op": "O1",
+     "min_pivots": 1
+    },
+    {
+     "r": 2,
+     "domain": "zenilix.com",
+     "useful": true,
+     "why": "member",
+     "op": "O9",
+     "min_pivots": 2
+    },
+    {
+     "r": 3,
+     "domain": "opranor.vip",
+     "useful": true,
+     "why": "member",
+     "op": "O5",
+     "min_pivots": 1
+    },
+    {
+     "r": 3,
+     "domain": "walletjorvovia.io",
+     "useful": true,
+     "why": "member",
+     "op": "O0",
+     "min_pivots": 1
+    },
+    {
+     "r": 3,
+     "domain": "nuvorel.lat",
+     "useful": true,
+     "why": "member",
+     "op": "O0",
+     "min_pivots": 1
+    },
+    {
+     "r": 4,
+     "domain": "vantaton-pro.icu",
+     "useful": true,
+     "why": "member",
+     "op": "O3",
+     "min_pivots": 2
+    },
+    {
+     "r": 4,
+     "domain": "heliovia-app.vip",
+     "useful": true,
+     "why": "member",
+     "op": "O5",
+     "min_pivots": 1
+    },
+    {
+     "r": 4,
+     "domain": "bravapex.cc",
+     "useful": true,
+     "why": "member",
+     "op": "O4",
+     "min_pivots": null
+    },
+    {
+     "r": 7,
+     "domain": "ganopexpro.net",
+     "useful": true,
+     "why": "member",
+     "op": "O3",
+     "min_pivots": 1
+    },
+    {
+     "r": 7,
+     "domain": "praxmen.live",
+     "useful": true,
+     "why": "member",
+     "op": "O0",
+     "min_pivots": null
+    },
+    {
+     "r": 7,
+     "domain": "bravaton-pro.cfd",
+     "useful": true,
+     "why": "member",
+     "op": "O9",
+     "min_pivots": null
+    },
+    {
+     "r": 7,
+     "domain": "sorinpexmining.cfd",
+     "useful": true,
+     "why": "member",
+     "op": "O8",
+     "min_pivots": 1
+    },
+    {
+     "r": 7,
+     "domain": "vantastopro.io",
+     "useful": true,
+     "why": "member",
+     "op": "O8",
+     "min_pivots": 2
+    }
+   ],
+   "trace": [
+    {
+     "round": 0,
+     "reviewed": 4,
+     "useful_cum": 3,
+     "requests_cum": 287
+    },
+    {
+     "round": 1,
+     "reviewed": 4,
+     "useful_cum": 7,
+     "requests_cum": 801
+    },
+    {
+     "round": 2,
+     "reviewed": 1,
+     "useful_cum": 8,
+     "requests_cum": 1201
+    },
+    {
+     "round": 3,
+     "reviewed": 3,
+     "useful_cum": 11,
+     "requests_cum": 1477
+    },
+    {
+     "round": 4,
+     "reviewed": 3,
+     "useful_cum": 14,
+     "requests_cum": 1921
+    },
+    {
+     "round": 5,
+     "reviewed": 0,
+     "useful_cum": 14,
+     "requests_cum": 2236
+    },
+    {
+     "round": 6,
+     "reviewed": 0,
+     "useful_cum": 14,
+     "requests_cum": 2344
+    },
+    {
+     "round": 7,
+     "reviewed": 5,
+     "useful_cum": 19,
+     "requests_cum": 2714
+    }
+   ],
+   "errors": [],
+   "label": "main-investigation-platform-v9-suite-v7-adaptive-intelligence",
+   "noise_floor": true
+  }
+ ]
+}

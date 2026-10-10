@@ -1,0 +1,195 @@
+pursuit bench: 100 runs, trees=['v2.1', 'v3'], seeds=[1, 2, 3, 4, 5, 6], scenarios=['mixed', 'cert_blackout', 'cdn_maze', 'copycat', 'migration', 'mirror_flood', 'collapse', 'dark_family'], rounds=10, difficulty=brutal, jobs=2
+  [v2.1] seed 1 mixed         hash=0 useful=13 prec=0.93 req= 3497     6s
+  [v3] seed 1 mixed         hash=0 useful=14 prec=0.93 req= 3571     9s
+  [v2.1] seed 1 cert_blackout hash=0 useful= 5 prec=1.00 req= 2051     3s
+  [v2.1] seed 1 cdn_maze      hash=0 useful= 4 prec=0.27 req= 3067     8s
+  [v3] seed 1 cert_blackout hash=0 useful=22 prec=1.00 req= 3487    14s
+  [v2.1] seed 1 copycat       hash=0 useful= 4 prec=0.80 req= 2747     4s
+  [v3] seed 1 cdn_maze      hash=0 useful=13 prec=1.00 req= 3509     9s
+  [v2.1] seed 1 migration     hash=0 useful=11 prec=0.92 req= 3171     5s
+  [v3] seed 1 copycat       hash=0 useful=14 prec=0.88 req= 3476     9s
+  [v3] seed 1 migration     hash=0 useful=17 prec=0.94 req= 3759    10s
+  [v2.1] seed 1 mirror_flood  hash=0 useful= 0 prec=0.00 req= 3322    14s
+  [v3] seed 1 mirror_flood  hash=0 useful= 5 prec=0.71 req= 2997    10s
+  [v2.1] seed 1 collapse      hash=0 useful= 3 prec=0.75 req= 2245     4s
+  [v3] seed 1 collapse      hash=0 useful= 6 prec=0.86 req= 2952     8s
+  [v2.1] seed 1 dark_family   hash=0 useful=11 prec=0.92 req= 3108     8s
+  [v2.1] seed 2 mixed         hash=0 useful=12 prec=1.00 req= 2654     7s
+  [v3] seed 1 dark_family   hash=0 useful=26 prec=0.96 req= 4156    20s
+  [v3] seed 2 mixed         hash=0 useful=15 prec=1.00 req= 3402    12s
+  [v2.1] seed 2 cert_blackout hash=0 useful=11 prec=0.92 req= 2405     6s
+  [v2.1] seed 2 cdn_maze      hash=0 useful= 7 prec=0.88 req= 2284     6s
+  [v3] seed 2 cert_blackout hash=0 useful=16 prec=0.94 req= 3640    12s
+  [v2.1] seed 2 copycat       hash=0 useful= 6 prec=0.86 req= 2390     5s
+  [v3] seed 2 cdn_maze      hash=0 useful=19 prec=0.95 req= 3651    15s
+  [v2.1] seed 2 migration     hash=0 useful= 5 prec=0.83 req= 2478     5s
+  [v3] seed 2 copycat       hash=0 useful=29 prec=0.94 req= 3945    20s
+  [v2.1] seed 2 mirror_flood  hash=0 useful= 3 prec=0.60 req= 2614     7s
+  [v3] seed 2 migration     hash=0 useful=15 prec=0.94 req= 3720    16s
+  [v2.1] seed 2 collapse      hash=0 useful= 5 prec=0.83 req= 2028     4s
+  [v3] seed 2 mirror_flood  hash=0 useful=14 prec=0.82 req= 3706    16s
+  [v3] seed 2 collapse      hash=0 useful=17 prec=0.94 req= 3091    12s
+  [v2.1] seed 2 dark_family   hash=0 useful= 4 prec=0.80 req= 2344     5s
+  [v2.1] seed 3 mixed         hash=0 useful= 1 prec=0.50 req= 1778     4s
+  [v3] seed 2 dark_family   hash=0 useful=12 prec=0.92 req= 3293    11s
+  [v2.1] seed 3 cert_blackout hash=0 useful= 8 prec=0.89 req= 2167     4s
+  [v3] seed 3 mixed         hash=0 useful= 6 prec=0.86 req= 2602     9s
+  [v2.1] seed 3 cdn_maze      hash=0 useful= 1 prec=0.50 req= 1704     3s
+  [v3] seed 3 cert_blackout hash=0 useful=20 prec=0.95 req= 3253    14s
+  [v3] seed 3 cdn_maze      hash=0 useful=10 prec=0.91 req= 2887     9s
+  [v2.1] seed 3 copycat       hash=0 useful= 2 prec=0.67 req= 1801     3s
+  [v2.1] seed 3 migration     hash=0 useful= 4 prec=0.80 req= 2299     5s
+  [v3] seed 3 copycat       hash=0 useful=20 prec=0.95 req= 3467    14s
+  [v3] seed 3 migration     hash=0 useful=11 prec=0.92 req= 3016    11s
+  [v2.1] seed 3 mirror_flood  hash=0 useful= 4 prec=0.67 req= 2305     8s
+  [v2.1] seed 3 collapse      hash=0 useful= 5 prec=0.83 req= 2088     4s
+  [v3] seed 3 mirror_flood  hash=0 useful= 8 prec=0.80 req= 2886    12s
+  [v2.1] seed 3 dark_family   hash=0 useful= 7 prec=0.88 req= 2186     5s
+  [v3] seed 3 collapse      hash=0 useful=20 prec=0.95 req= 3352    14s
+  [v2.1] seed 4 mixed         hash=0 useful= 7 prec=0.88 req= 3208     6s
+  [v3] seed 3 dark_family   hash=0 useful=10 prec=0.91 req= 2932    10s
+  [v2.1] seed 4 cert_blackout hash=0 useful=10 prec=0.91 req= 2616     5s
+  [v3] seed 4 mixed         hash=0 useful=19 prec=0.95 req= 3689    14s
+  [v3] seed 4 cert_blackout hash=0 useful=17 prec=0.94 req= 3386    13s
+  [v2.1] seed 4 cdn_maze      hash=0 useful= 8 prec=1.00 req= 2751     6s
+  [v2.1] seed 4 copycat       hash=0 useful= 2 prec=0.67 req= 2174     3s
+  [v3] seed 4 cdn_maze      hash=0 useful=14 prec=1.00 req= 3227     9s
+  [v2.1] seed 4 migration     hash=0 useful= 6 prec=0.86 req= 2674     4s
+  [v3] seed 4 copycat       hash=0 useful=20 prec=0.95 req= 3775    11s
+  [v3] seed 4 migration     hash=0 useful= 9 prec=0.90 req= 2910     7s
+  [v2.1] seed 4 mirror_flood  hash=0 useful= 9 prec=0.75 req= 3833     8s
+  [v3] seed 4 mirror_flood  hash=0 useful=10 prec=0.77 req= 3303    11s
+  [v2.1] seed 4 collapse      hash=0 useful= 3 prec=0.19 req= 3213     9s
+  [v2.1] seed 4 dark_family   hash=0 useful= 6 prec=0.86 req= 2571     4s
+  [v3] seed 4 collapse      hash=0 useful=18 prec=0.95 req= 3391    10s
+  [v2.1] seed 5 mixed         hash=0 useful= 1 prec=0.50 req= 1743     3s
+  [v3] seed 4 dark_family   hash=0 useful=16 prec=0.94 req= 3235    12s
+  [v3] seed 5 mixed         hash=0 useful= 7 prec=0.88 req= 2836     8s
+  [v2.1] seed 5 cert_blackout hash=0 useful= 7 prec=0.88 req= 2352     5s
+  [v2.1] seed 5 cdn_maze      hash=0 useful= 5 prec=0.83 req= 2145     4s
+  [v3] seed 5 cert_blackout hash=0 useful=12 prec=0.92 req= 3323    11s
+  [v2.1] seed 5 copycat       hash=0 useful= 5 prec=0.83 req= 2374     5s
+  [v3] seed 5 cdn_maze      hash=0 useful=14 prec=0.93 req= 2928    10s
+  [v2.1] seed 5 migration     hash=0 useful= 5 prec=0.83 req= 2269     4s
+  [v3] seed 5 copycat       hash=0 useful= 5 prec=0.83 req= 2642     8s
+  [v2.1] seed 5 mirror_flood  hash=0 useful= 4 prec=0.57 req= 2231     6s
+  [v3] seed 5 migration     hash=0 useful=18 prec=0.95 req= 3417    12s
+  [v2.1] seed 5 collapse      hash=0 useful= 4 prec=0.80 req= 2061     4s
+  [v3] seed 5 mirror_flood  hash=0 useful=10 prec=0.83 req= 3124    12s
+  [v2.1] seed 5 dark_family   hash=0 useful= 3 prec=0.75 req= 2089     3s
+  [v3] seed 5 collapse      hash=0 useful=14 prec=0.93 req= 3097     8s
+  [v2.1] seed 6 mixed         hash=0 useful= 5 prec=0.83 req= 2588     5s
+  [v3] seed 5 dark_family   hash=0 useful=25 prec=0.96 req= 3636    13s
+  [v3] seed 6 mixed         hash=0 useful=17 prec=0.94 req= 3458     8s
+  [v2.1] seed 6 cert_blackout hash=0 useful= 7 prec=0.88 req= 2211     3s
+  [v2.1] seed 6 cdn_maze      hash=0 useful= 5 prec=0.83 req= 2756     4s
+  [v3] seed 6 cert_blackout hash=0 useful=13 prec=0.93 req= 2817     6s
+  [v2.1] seed 6 copycat       hash=0 useful= 5 prec=0.83 req= 2371     3s
+  [v3] seed 6 cdn_maze      hash=0 useful=12 prec=0.92 req= 3677     8s
+  [v3] seed 6 copycat       hash=0 useful=10 prec=0.91 req= 2980     6s
+  [v2.1] seed 6 migration     hash=0 useful= 6 prec=0.86 req= 2850     4s
+  [v3] seed 6 migration     hash=0 useful=21 prec=0.95 req= 3874    10s
+  [v2.1] seed 6 mirror_flood  hash=0 useful= 4 prec=0.11 req= 3440    11s
+  [v2.1] seed 6 collapse      hash=0 useful= 4 prec=0.67 req= 2597     3s
+  [v3] seed 6 mirror_flood  hash=0 useful=11 prec=0.85 req= 3690     9s
+  [v3] seed 6 collapse      hash=0 useful=15 prec=0.94 req= 3577     8s
+  [v2.1] seed 6 dark_family   hash=0 useful=11 prec=0.92 req= 3173     5s
+  [v2.1] seed 1 mixed         hash=1 useful=13 prec=0.93 req= 3497     6s
+  [v2.1] seed 1 mixed         hash=2 useful=13 prec=0.93 req= 3497     6s
+  [v3] seed 6 dark_family   hash=0 useful=31 prec=0.94 req= 4390    14s
+  [v3] seed 1 mixed         hash=1 useful=14 prec=0.93 req= 3571     8s
+  [v3] seed 1 mixed         hash=2 useful=14 prec=0.93 req= 3571     8s
+
+================ WORLD (ground truth; identical for every tree) ================
+scenario        units  reach      pivots dist (0/1/2/3/4/5+/unreach)  unkfam  return  mirrors  known0
+mixed             326    263                    6/138/68/23/14/14/63      27      17     1350      50
+cert_blackout     345    268                    5/154/66/20/12/11/77      39      20     1350      59
+cdn_maze          391    321                    6/142/94/29/28/22/70      55      15     1350      60
+copycat           386    321                     4/196/79/26/11/5/65      47      20     1350      62
+migration         363    319                    6/204/62/23/14/10/44      36      36     1350      60
+mirror_flood      331    252                     3/134/75/21/12/7/79      36      20     5130      78
+collapse          344    267                     6/149/68/26/12/6/77      35      20     1350      59
+dark_family       404    319                     4/181/94/23/11/6/85     120      19     1350      56
+
+================ TREE v2.1: means per run ================
+
+                  useful    found%      pool      prec  multihop    medpiv       ops    unkfam    return     value  requests   req/use     q/use     deadQ   repeatQ mirrorReq   junkGET  falseRel      1stR    1stReq
+mixed                6.5       15%       6.5      0.77       0.8       1.0       4.0       0.3       0.2      20.6      2578       831      16.4        53        25        82       206       1.0       1.8       724
+cert_blackout        8.0       18%       8.0      0.91       1.2       1.0       5.7       1.3       0.0      22.3      2300       302       6.6        45        21        48       102       0.5       0.3       279
+cdn_maze             5.0        9%       5.0      0.72       1.7       1.2       3.5       1.5       0.0      13.5      2451       687      13.2        46        22       154       154       0.3       1.2       532
+copycat              4.0        8%       4.0      0.78       0.0       1.0       2.5       0.2       0.0      12.5      2310       670      15.4        46        22        75       164       2.0       1.0       500
+migration            6.2       12%       6.2      0.85       0.8       1.0       3.2       1.0       0.2      17.7      2624       456      11.5        57        29        99       191       0.2       0.8       517
+mirror_flood         4.0       10%       4.0      0.45       0.2       1.0       3.2       0.7       0.0      12.1      2958       658      14.8        49        18       459       202       0.7       1.0       658
+collapse             4.0        9%       4.0      0.68       0.2       1.0       2.7       0.5       0.0      12.2      2372       634      16.0        50        22       124       167       1.0       1.0       546
+dark_family          7.0       13%       7.0      0.85       1.3       1.0       4.7       2.7       0.0      21.9      2578       432      11.4        62        30        81       190       0.3       1.0       523
+ALL (mean)           5.6       12%       5.6      0.75       0.8       1.0       3.7       1.0       0.0      16.6      2521       582      13.1        51        24       140       172       0.8       1.0       532
+totals: useful=268 of 2330 reachable units (12%), value=797.8, requests=121023, engine errors=0, mean run time=5s
+
+================ TREE v3: means per run ================
+
+                  useful    found%      pool      prec  multihop    medpiv       ops    unkfam    return     value  requests   req/use     q/use     deadQ   repeatQ mirrorReq   junkGET  falseRel      1stR    1stReq
+mixed               13.0       30%      13.0      0.93       3.3       1.0       6.5       1.0       0.3      40.7      3260       286      13.8       140        29        95       201       0.0       0.0       285
+cert_blackout       16.7       38%      16.7      0.95       4.5       1.0       7.8       2.2       0.3      48.9      3318       207      11.8       162        42        65       158       0.0       0.0       262
+cdn_maze            13.7       26%      13.7      0.95       5.3       1.3       7.3       3.2       0.8      41.2      3313       249      12.4       143        38       110       180       0.0       0.0       286
+copycat             16.3       32%      16.3      0.91       4.5       1.0       8.0       1.8       0.7      51.4      3381       262      14.0       170        44       106       212       0.0       0.0       288
+migration           15.2       29%      15.2      0.93       2.0       1.0       6.8       1.3       1.3      51.1      3449       240      12.7       160        36       142       206       0.0       0.2       342
+mirror_flood         9.7       23%       9.7      0.80       1.7       1.0       5.2       1.5       1.0      27.6      3284       367      18.4       138        30       242       185       0.0       0.7       544
+collapse            15.0       34%      15.0      0.93       4.2       1.2       7.0       1.3       1.0      46.8      3243       248      14.3       164        41        50       197       0.0       0.2       346
+dark_family         20.0       38%      20.0      0.94       5.8       1.0       9.5       6.0       0.5      61.7      3607       203      11.6       192        39        89       241       0.0       0.3       401
+ALL (mean)          14.9       31%      14.9      0.92       3.9       1.1       7.3       2.3       0.8      46.2      3357       258      13.6       159        37       112       197       0.0       0.2       344
+totals: useful=717 of 2330 reachable units (31%), value=2216.1, requests=161132, engine errors=0, mean run time=11s
+
+================ UNIQUE DISCOVERIES (same seed & scenario) ================
+reviewed-useful only found by v2.1: 63   only by v3: 512
+eligible-pool useful only in v2.1: 63   only in v3: 512
+  mixed          reviewed v2.1:9 v3:48   pool v2.1:9 v3:48
+  cert_blackout  reviewed v2.1:12 v3:64   pool v2.1:12 v3:64
+  cdn_maze       reviewed v2.1:5 v3:57   pool v2.1:5 v3:57
+  copycat        reviewed v2.1:7 v3:81   pool v2.1:7 v3:81
+  migration      reviewed v2.1:8 v3:62   pool v2.1:8 v3:62
+  mirror_flood   reviewed v2.1:6 v3:40   pool v2.1:6 v3:40
+  collapse       reviewed v2.1:6 v3:72   pool v2.1:6 v3:72
+  dark_family    reviewed v2.1:10 v3:88   pool v2.1:10 v3:88
+
+================ WINS / LOSSES (per scenario, beyond noise floor) ================
+mixed          v2.1 better: deadQ 53.00 vs 140.17, repeatQ 24.83 vs 29.17, mirrorReq 81.83 vs 94.67
+               v3 better: useful 6.50 vs 13.00, found% 0.15 vs 0.30, pool 6.50 vs 13.00, prec 0.77 vs 0.93, multihop 0.83 vs 3.33, ops 4.00 vs 6.50, unkfam 0.33 vs 1.00, return 0.17 vs 0.33, value 20.63 vs 40.68, req/use 831.18 vs 286.38, q/use 16.37 vs 13.82, junkGET 206.17 vs 201.33, falseRel 1.00 vs 0.00, 1stR 1.83 vs 0.00, 1stReq 723.50 vs 284.67
+cert_blackout  v2.1 better: q/use 6.57 vs 11.75, deadQ 44.67 vs 162.50, repeatQ 21.33 vs 42.17, mirrorReq 48.00 vs 65.33, junkGET 101.50 vs 157.50
+               v3 better: useful 8.00 vs 16.67, found% 0.18 vs 0.38, pool 8.00 vs 16.67, prec 0.91 vs 0.95, multihop 1.17 vs 4.50, ops 5.67 vs 7.83, unkfam 1.33 vs 2.17, return 0.00 vs 0.33, value 22.35 vs 48.85, req/use 302.20 vs 206.92, falseRel 0.50 vs 0.00, 1stR 0.33 vs 0.00, 1stReq 278.83 vs 262.17
+cdn_maze       v2.1 better: deadQ 46.50 vs 142.67, repeatQ 22.00 vs 38.00, junkGET 154.00 vs 179.50
+               v3 better: useful 5.00 vs 13.67, found% 0.09 vs 0.26, pool 5.00 vs 13.67, prec 0.72 vs 0.95, multihop 1.67 vs 5.33, ops 3.50 vs 7.33, unkfam 1.50 vs 3.17, return 0.00 vs 0.83, value 13.55 vs 41.23, req/use 686.87 vs 249.47, q/use 13.20 vs 12.42, mirrorReq 154.00 vs 109.67, falseRel 0.33 vs 0.00, 1stR 1.17 vs 0.00, 1stReq 531.67 vs 285.50
+copycat        v2.1 better: deadQ 46.00 vs 170.00, repeatQ 22.33 vs 43.83, mirrorReq 75.00 vs 106.00, junkGET 163.50 vs 211.83
+               v3 better: useful 4.00 vs 16.33, found% 0.08 vs 0.32, pool 4.00 vs 16.33, prec 0.78 vs 0.91, multihop 0.00 vs 4.50, ops 2.50 vs 8.00, unkfam 0.17 vs 1.83, return 0.00 vs 0.67, value 12.45 vs 51.43, req/use 670.27 vs 262.13, q/use 15.38 vs 13.98, falseRel 2.00 vs 0.00, 1stR 1.00 vs 0.00, 1stReq 500.00 vs 288.50
+migration      v2.1 better: q/use 11.53 vs 12.65, deadQ 56.67 vs 160.00, repeatQ 29.17 vs 35.50, mirrorReq 99.17 vs 142.33, junkGET 191.17 vs 205.50
+               v3 better: useful 6.17 vs 15.17, found% 0.12 vs 0.29, pool 6.17 vs 15.17, prec 0.85 vs 0.93, multihop 0.83 vs 2.00, ops 3.17 vs 6.83, unkfam 1.00 vs 1.33, return 0.17 vs 1.33, value 17.70 vs 51.15, req/use 455.53 vs 240.15, falseRel 0.17 vs 0.00, 1stR 0.83 vs 0.17, 1stReq 517.17 vs 342.00
+mirror_flood   v2.1 better: q/use 14.80 vs 18.37, deadQ 49.00 vs 138.33, repeatQ 18.50 vs 30.50
+               v3 better: useful 4.00 vs 9.67, found% 0.10 vs 0.23, pool 4.00 vs 9.67, prec 0.45 vs 0.80, multihop 0.17 vs 1.67, ops 3.17 vs 5.17, unkfam 0.67 vs 1.50, return 0.00 vs 1.00, value 12.13 vs 27.58, req/use 658.24 vs 367.18, mirrorReq 459.17 vs 241.83, junkGET 202.17 vs 185.33, falseRel 0.67 vs 0.00, 1stR 1.00 vs 0.67, 1stReq 657.60 vs 543.50
+collapse       v2.1 better: deadQ 49.67 vs 164.17, repeatQ 21.67 vs 41.17, junkGET 166.67 vs 197.17
+               v3 better: useful 4.00 vs 15.00, found% 0.09 vs 0.34, pool 4.00 vs 15.00, prec 0.68 vs 0.93, multihop 0.17 vs 4.17, ops 2.67 vs 7.00, unkfam 0.50 vs 1.33, return 0.00 vs 1.00, value 12.25 vs 46.75, req/use 634.48 vs 248.25, q/use 16.02 vs 14.28, mirrorReq 123.50 vs 50.50, falseRel 1.00 vs 0.00, 1stR 1.00 vs 0.17, 1stReq 545.67 vs 346.17
+dark_family    v2.1 better: q/use 11.38 vs 11.57, deadQ 62.00 vs 192.00, repeatQ 29.67 vs 38.83, mirrorReq 80.67 vs 88.67, junkGET 189.67 vs 241.33
+               v3 better: useful 7.00 vs 20.00, found% 0.13 vs 0.38, pool 7.00 vs 20.00, prec 0.85 vs 0.94, multihop 1.33 vs 5.83, ops 4.67 vs 9.50, unkfam 2.67 vs 6.00, return 0.00 vs 0.50, value 21.90 vs 61.67, req/use 432.35 vs 202.77, falseRel 0.33 vs 0.00, 1stR 1.00 vs 0.33, 1stReq 523.17 vs 400.83
+
+================ NOISE FLOOR (same tree, same seed, different PYTHONHASHSEED) ================
+  new_useful               values=[[13, 13, 13], [14, 14, 14]]  max |diff|=0
+  found_share              values=[[0.325, 0.325, 0.325], [0.35, 0.35, 0.35]]  max |diff|=0.0
+  pool_useful              values=[[13, 13, 13], [14, 14, 14]]  max |diff|=0
+  precision                values=[[0.929, 0.929, 0.929], [0.933, 0.933, 0.933]]  max |diff|=0.0
+  multi_hop                values=[[1, 1, 1], [1, 1, 1]]  max |diff|=0
+  median_pivots            values=[[1, 1, 1], [1, 1, 1]]  max |diff|=0
+  operations               values=[[6, 6, 6], [7, 7, 7]]  max |diff|=0
+  unknown_family           values=[[1, 1, 1], [1, 1, 1]]  max |diff|=0
+  reappearances            values=[[0, 0, 0], [1, 1, 1]]  max |diff|=0
+  value                    values=[[44.6, 44.6, 44.6], [52.3, 52.3, 52.3]]  max |diff|=0.0
+  requests_total           values=[[3497, 3497, 3497], [3571, 3571, 3571]]  max |diff|=0
+  requests_per_useful      values=[[269.0, 269.0, 269.0], [255.1, 255.1, 255.1]]  max |diff|=0.0
+  queries_per_useful       values=[[7.8, 7.8, 7.8], [11.6, 11.6, 11.6]]  max |diff|=0.0
+  dead_end_queries         values=[[83, 83, 83], [139, 139, 139]]  max |diff|=0
+  repeated_queries         values=[[41, 41, 41], [22, 22, 22]]  max |diff|=0
+  mirror_requests          values=[[80, 80, 80], [112, 112, 112]]  max |diff|=0
+  junk_fetches             values=[[414, 414, 414], [347, 347, 347]]  max |diff|=0
+  rel_false_cross_op       values=[[4, 4, 4], [0, 0, 0]]  max |diff|=0
+  first_useful_round       values=[[1, 1, 1], [0, 0, 0]]  max |diff|=0
+  first_useful_requests    values=[[822, 822, 822], [296, 296, 296]]  max |diff|=0
+
+wall time 425s
+wrote final/brutal.json

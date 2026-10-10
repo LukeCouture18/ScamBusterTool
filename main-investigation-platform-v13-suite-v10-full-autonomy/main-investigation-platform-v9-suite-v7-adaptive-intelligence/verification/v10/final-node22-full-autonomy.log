@@ -1,0 +1,480 @@
+
+=== full-autonomy (9 steps) ===
+--- full-autonomy 1/9: node --experimental-sqlite --import tsx tests/autonomy-migration.mjs
+(node:14619) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+[
+  'all populated v8 rows preserved by additive 0020',
+  '0020 replay idempotent',
+  'additive v10 tables applied before running current source',
+  'old investigation resumes without duplicate',
+  'old report and source provenance remain exact after continuation',
+  'used-state restart and operator view',
+  'fresh install through 0020'
+]
+--- full-autonomy 2/9: node --experimental-sqlite --import tsx tests/autonomy-scientific-integration.mjs
+(node:14687) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+{"ok":true,"scenarios":4}
+--- full-autonomy 3/9: node --experimental-sqlite --import tsx tests/autonomy-decision-benchmark.mjs
+{
+ "states": 42,
+ "summary": {
+  "v7-exploit": {
+   "states": 42,
+   "optimal_choice_rate": 0.524,
+   "near_optimal_rate": 0.548,
+   "mean_regret": 0.425,
+   "total_regret": 17.851
+  },
+  "v7": {
+   "states": 42,
+   "optimal_choice_rate": 0.548,
+   "near_optimal_rate": 0.571,
+   "mean_regret": 0.432,
+   "total_regret": 18.133
+  },
+  "v6": {
+   "states": 42,
+   "optimal_choice_rate": 0.048,
+   "near_optimal_rate": 0.048,
+   "mean_regret": 2.077,
+   "total_regret": 87.235
+  },
+  "v8": {
+   "states": 42,
+   "optimal_choice_rate": 0.738,
+   "near_optimal_rate": 0.762,
+   "mean_regret": 0.195,
+   "total_regret": 8.172
+  },
+  "v9": {
+   "states": 42,
+   "optimal_choice_rate": 0.595,
+   "near_optimal_rate": 0.619,
+   "mean_regret": 0.3,
+   "total_regret": 12.596
+  },
+  "cheapest": {
+   "states": 42,
+   "optimal_choice_rate": 0.381,
+   "near_optimal_rate": 0.405,
+   "mean_regret": 0.939,
+   "total_regret": 39.422
+  },
+  "random": {
+   "states": 42,
+   "optimal_choice_rate": 0.262,
+   "near_optimal_rate": 0.262,
+   "mean_regret": 0.981,
+   "total_regret": 41.182
+  },
+  "confirmation": {
+   "states": 42,
+   "optimal_choice_rate": 0.452,
+   "near_optimal_rate": 0.452,
+   "mean_regret": 0.434,
+   "total_regret": 18.247
+  }
+ },
+ "by_type": {
+  "useful_vs_saturated_finder_branch": {
+   "v7-exploit": "0/5 regret 5.898",
+   "v7": "0/5 regret 5.898",
+   "v6": "0/5 regret 18.409",
+   "v8": "5/5 regret 0",
+   "v9": "0/5 regret 5.898",
+   "cheapest": "0/5 regret 5.898",
+   "random": "1/5 regret 7.493",
+   "confirmation": "5/5 regret 0"
+  },
+  "generic_template_vs_discriminating_wallet": {
+   "v7-exploit": "3/5 regret 1.859",
+   "v7": "3/5 regret 1.859",
+   "v6": "1/5 regret 4.921",
+   "v8": "3/5 regret 1.859",
+   "v9": "3/5 regret 1.859",
+   "cheapest": "3/5 regret 1.859",
+   "random": "2/5 regret 3.714",
+   "confirmation": "3/5 regret 3.01"
+  },
+  "new_contradiction_vs_confirmation": {
+   "v7-exploit": "3/5 regret 0.112",
+   "v7": "4/5 regret 0.012",
+   "v6": "0/5 regret 2.493",
+   "v8": "3/5 regret 0.112",
+   "v9": "3/5 regret 0.112",
+   "cheapest": "3/5 regret 0.112",
+   "random": "1/5 regret 0.992",
+   "confirmation": "0/5 regret 1.468"
+  },
+  "replacement_hunt_vs_exhausted_artifact": {
+   "v7-exploit": "0/5 regret 6.446",
+   "v7": "0/5 regret 6.446",
+   "v6": "0/5 regret 13.76",
+   "v8": "3/5 regret 1.191",
+   "v9": "3/5 regret 1.191",
+   "cheapest": "0/5 regret 6.446",
+   "random": "1/5 regret 9.649",
+   "confirmation": "1/5 regret 3.938"
+  },
+  "novel_exploration_opportunity": {
+   "v7-exploit": "5/5 regret 0",
+   "v7": "5/5 regret 0",
+   "v6": "0/5 regret 2.726",
+   "v8": "5/5 regret 0",
+   "v9": "5/5 regret 0",
+   "cheapest": "5/5 regret 0",
+   "random": "2/5 regret 1.95",
+   "confirmation": "0/5 regret 2.746"
+  },
+  "two_competing_operations": {
+   "v7-exploit": "3/5 regret 1.83",
+   "v7": "3/5 regret 2.212",
+   "v6": "0/5 regret 14.536",
+   "v8": "3/5 regret 1.83",
+   "v9": "3/5 regret 1.83",
+   "cheapest": "2/5 regret 3.788",
+   "random": "0/5 regret 6.752",
+   "confirmation": "3/5 regret 1.83"
+  },
+  "time_sensitive_disappearing_site": {
+   "v7-exploit": "2/5 regret 0.787",
+   "v7": "2/5 regret 0.787",
+   "v6": "0/5 regret 7.264",
+   "v8": "3/5 regret 2.261",
+   "v9": "2/5 regret 0.787",
+   "cheapest": "2/5 regret 0.787",
+   "random": "0/5 regret 5.23",
+   "confirmation": "2/5 regret 3.36"
+  },
+  "expensive_high_value_vs_cheap_low_value": {
+   "v7-exploit": "4/5 regret 0.919",
+   "v7": "4/5 regret 0.919",
+   "v6": "0/5 regret 22.15",
+   "v8": "4/5 regret 0.919",
+   "v9": "4/5 regret 0.919",
+   "cheapest": "0/5 regret 19.556",
+   "random": "2/5 regret 5.402",
+   "confirmation": "4/5 regret 0.919"
+  },
+  "provider_retry_vs_unrelated_expansion": {
+   "v7-exploit": "1/1 regret 0",
+   "v7": "1/1 regret 0",
+   "v6": "1/1 regret 0",
+   "v8": "1/1 regret 0",
+   "v9": "1/1 regret 0",
+   "cheapest": "1/1 regret 0",
+   "random": "1/1 regret 0",
+   "confirmation": "1/1 regret 0"
+  },
+  "report_blocker_vs_low_value_correlation": {
+   "v7-exploit": "1/1 regret 0",
+   "v7": "1/1 regret 0",
+   "v6": "0/1 regret 0.976",
+   "v8": "1/1 regret 0",
+   "v9": "1/1 regret 0",
+   "cheapest": "0/1 regret 0.976",
+   "random": "1/1 regret 0",
+   "confirmation": "0/1 regret 0.976"
+  }
+ }
+}
+--- full-autonomy 4/9: node --experimental-sqlite --import tsx tests/autonomy-independent-holdout.mjs
+{
+  "v6": {
+    "states": 36,
+    "optimal_choice_rate": 0,
+    "near_optimal_rate": 0,
+    "mean_regret": 4.85675
+  },
+  "v7": {
+    "states": 36,
+    "optimal_choice_rate": 0.05555555555555555,
+    "near_optimal_rate": 0.08333333333333333,
+    "mean_regret": 2.040972222222222
+  },
+  "v8": {
+    "states": 36,
+    "optimal_choice_rate": 0,
+    "near_optimal_rate": 0.027777777777777776,
+    "mean_regret": 1.957333333333333
+  },
+  "v9": {
+    "states": 36,
+    "optimal_choice_rate": 0.05555555555555555,
+    "near_optimal_rate": 0.08333333333333333,
+    "mean_regret": 1.9532500000000002
+  },
+  "cheapest": {
+    "states": 36,
+    "optimal_choice_rate": 0,
+    "near_optimal_rate": 0,
+    "mean_regret": 4.527750000000001
+  },
+  "random": {
+    "states": 36,
+    "optimal_choice_rate": 0.027777777777777776,
+    "near_optimal_rate": 0.027777777777777776,
+    "mean_regret": 3.368555555555555
+  },
+  "confirmation": {
+    "states": 36,
+    "optimal_choice_rate": 0.16666666666666666,
+    "near_optimal_rate": 0.16666666666666666,
+    "mean_regret": 1.7056944444444446
+  }
+}
+--- full-autonomy 5/9: node --experimental-sqlite --import tsx tests/autonomy-crash.mjs
+(node:14740) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+PASS before site investigation
+PASS after site investigation
+PASS before wallet observation ingestion
+PASS after wallet observation ingestion
+PASS before candidate deduplication
+PASS after candidate deduplication
+PASS before validation scheduling
+PASS after validation scheduling
+PASS before Wallet Investigator completion
+PASS after Wallet Investigator completion
+PASS before provider retry
+PASS after provider retry
+PASS before operation update
+PASS after operation update
+PASS before report rebuild
+PASS after report rebuild
+PASS before exact approval
+PASS after exact approval
+PASS before submission handoff
+PASS after submission handoff
+PASS before lost confirmation
+PASS after lost confirmation
+PASS before Finder hunt handoff
+PASS after Finder hunt handoff
+PASS before Hunter update
+PASS after Hunter update
+PASS before queue reconciliation
+PASS after queue reconciliation
+PASS before scientific revision
+PASS after scientific revision
+--- full-autonomy 6/9: node --experimental-sqlite --import tsx tests/autonomy-stress.mjs
+(node:16074) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+{"ok":true,"rows":{"entities":10000,"relationships":50100,"evidence":5000,"investigations":300,"autonomy_states":300,"operations":25,"projected_edges":50100,"v7_history":{"decisions":10000,"components":144000,"tests":10000,"costs":100000,"outcomes":30000,"lineage":20000,"gaps":5000,"gap_history":20000},"scientific_hypotheses":5100,"scientific_predictions":5100,"scientific_contradictions":5000,"scientific_history":30100,"new_v7_decisions_during_run":39,"new_v7_tests_during_run":4},"timings":[{"name":"load_10000_entities_50100_relationships_5000_evidence","ms":1319.3},{"name":"load_v7_history","ms":1641.28},{"name":"load_scientific_history","ms":199.7},{"name":"director_projection_tick","ms":3226.78},{"name":"director_projection_tick","ms":2282.7},{"name":"director_projection_tick","ms":2187.53},{"name":"director_projection_tick","ms":1889.66},{"name":"director_projection_tick","ms":2578.45},{"name":"director_projection_tick","ms":2268.44},{"name":"director_projection_tick","ms":3006.76},{"name":"director_projection_tick","ms":2216.71},{"name":"director_projection_tick","ms":2516.22},{"name":"director_projection_tick","ms":2948.23},{"name":"director_projection_tick","ms":4331.88},{"name":"director_projection_tick","ms":3605.05},{"name":"director_projection_tick","ms":5260.42},{"name":"adaptive_portfolio_decision_tick_8_operations","ms":5052.78},{"name":"adaptive_portfolio_decision_tick_8_operations","ms":3837.9},{"name":"adaptive_portfolio_decision_tick_8_operations","ms":2799.86},{"name":"adaptive_portfolio_decision_tick_8_operations","ms":2096.87},{"name":"adaptive_unchanged_parked_tick","ms":2095.76},{"name":"v6_policy_tick_8_operations_same_state","ms":2443.35},{"name":"v6_policy_tick_8_operations_same_state","ms":2529.58},{"name":"adaptive_operation_view","ms":32.65},{"name":"adaptive_operation_view_with_efficiency","ms":111.09},{"name":"adaptive_portfolio_efficiency","ms":687.72},{"name":"briefing_and_graph_first_page","ms":17.99},{"name":"scientific_cached_default_briefing","ms":4.19},{"name":"scientific_advanced_bounded_view","ms":3.53},{"name":"v9_dashboard","ms":3.29},{"name":"v9_investigation_default","ms":4.73},{"name":"v9_wallet_default","ms":12.85},{"name":"v9_queue_classification","ms":1.63},{"name":"v9_director_tick","ms":19.55},{"name":"v9_queue_reconciliation","ms":3775.03},{"name":"unchanged_scientific_read","ms":4.98},{"name":"unchanged_scientific_read","ms":2.97},{"name":"unchanged_scientific_read","ms":3.09},{"name":"unchanged_scientific_read","ms":3.04},{"name":"unchanged_scientific_read","ms":3.23}],"decision_latency_ms":[5052.78,3837.9,2799.86,2096.87],"v6_policy_tick_ms":[2443.35,2529.58],"memory":{"rss_before_bytes":171749376,"rss_after_bytes":276373504,"peak_rss_kb":274808},"database":{"before_bytes":2297856,"before_scientific_history_bytes":89038848,"after_fixture_and_history_bytes":100134912,"after_bytes":176459776,"growth_bytes":174161920,"growth_during_run_bytes":76324864,"quiet_read_growth_bytes":0,"quiet_scientific_history_growth":0,"page_usage_before":[{"name":"adaptive_decision_components","bytes":16580608},{"name":"sqlite_autoindex_adaptive_decision_components_1","bytes":8867840},{"name":"relationships","bytes":8224768},{"name":"adaptive_costs","bytes":5926912},{"name":"scientific_history","bytes":3969024},{"name":"adaptive_outcomes","bytes":3731456},{"name":"relationship_evidence","bytes":3575808},{"name":"sqlite_autoindex_adaptive_costs_1","bytes":2478080},{"name":"adaptive_tests","bytes":2420736},{"name":"adaptive_outcome_family","bytes":2396160},{"name":"adaptive_decisions","bytes":1953792},{"name":"adaptive_lineage","bytes":1859584},{"name":"idx_relationships_source_record","bytes":1835008},{"name":"sqlite_autoindex_scientific_history_2","bytes":1650688},{"name":"scientific_history_scope","bytes":1617920},{"name":"adaptive_gap_history","bytes":1585152},{"name":"idx_relationship_evidence_link","bytes":1396736},{"name":"sqlite_autoindex_adaptive_outcomes_1","bytes":1376256},{"name":"operation_relationship_target","bytes":1273856},{"name":"operation_relationship_source","bytes":1273856},{"name":"investigation_entities","bytes":1245184},{"name":"entities","bytes":1232896},{"name":"idx_relationships_endpoints","bytes":1155072},{"name":"adaptive_gap_history_time","bytes":1097728},{"name":"evidence","bytes":1007616},{"name":"sqlite_autoindex_relationships_1","bytes":946176},{"name":"sqlite_autoindex_adaptive_lineage_2","bytes":946176},{"name":"sqlite_autoindex_relationship_evidence_1","bytes":901120},{"name":"sqlite_autoindex_adaptive_gap_history_2","bytes":851968},{"name":"adaptive_gaps","bytes":851968},{"name":"scientific_predictions","bytes":823296},{"name":"hunter_operation_members","bytes":802816},{"name":"scientific_hypotheses","bytes":794624},{"name":"adaptive_test_family","bytes":704512},{"name":"sqlite_autoindex_scientific_history_1","bytes":684032},{"name":"scientific_contradictions","bytes":663552},{"name":"adaptive_test_scope","bytes":659456},{"name":"sqlite_autoindex_adaptive_tests_3","bytes":573440},{"name":"adaptive_lineage_ref","bytes":507904},{"name":"sqlite_autoindex_hunter_operation_members_1","bytes":491520},{"name":"adaptive_decision_status","bytes":479232},{"name":"adaptive_outcome_test","bytes":462848},{"name":"idx_investigation_entities_link","bytes":446464},{"name":"idx_hunter_members_key","bytes":425984},{"name":"idx_entities_type_key","bytes":425984},{"name":"sqlite_autoindex_adaptive_gap_history_1","bytes":376832},{"name":"sqlite_autoindex_adaptive_lineage_1","bytes":356352},{"name":"sqlite_autoindex_scientific_predictions_2","bytes":352256},{"name":"sqlite_autoindex_adaptive_decisions_2","bytes":344064},{"name":"adaptive_decision_scope","bytes":286720},{"name":"idx_entities_investigation_type","bytes":229376},{"name":"idx_evidence_source_record","bytes":204800},{"name":"scientific_conflict_status","bytes":196608},{"name":"evidence_investigation_recent","bytes":196608},{"name":"sqlite_autoindex_scientific_hypotheses_1","bytes":188416},{"name":"adaptive_gap_status","bytes":176128},{"name":"sqlite_autoindex_investigation_entities_1","bytes":167936},{"name":"adaptive_gap_family","bytes":167936},{"name":"sqlite_autoindex_entities_1","bytes":159744},{"name":"sqlite_autoindex_adaptive_tests_2","bytes":159744},{"name":"sqlite_autoindex_adaptive_tests_1","bytes":159744},{"name":"sqlite_autoindex_adaptive_gaps_1","bytes":159744},{"name":"sqlite_autoindex_adaptive_decisions_1","bytes":159744},{"name":"idx_investigation_entities_entity","bytes":159744},{"name":"sqlite_schema","bytes":147456},{"name":"sqlite_autoindex_scientific_contradictions_1","bytes":118784},{"name":"adaptive_test_work","bytes":94208},{"name":"adaptive_test_job","bytes":94208},{"name":"sqlite_autoindex_scientific_predictions_1","bytes":86016},{"name":"sqlite_autoindex_evidence_1","bytes":86016},{"name":"idx_evidence_entity","bytes":81920},{"name":"autonomy_investigations","bytes":61440},{"name":"idx_evidence_sha256","bytes":49152},{"name":"investigations","bytes":40960},{"name":"autonomy_due","bytes":16384},{"name":"sqlite_autoindex_investigations_1","bytes":12288},{"name":"sqlite_autoindex_autonomy_investigations_1","bytes":12288},{"name":"idx_investigations_external_id","bytes":12288},{"name":"hunter_operations","bytes":12288},{"name":"work_target_terminal","bytes":4096},{"name":"work_items","bytes":4096},{"name":"work_item_events","bytes":4096},{"name":"wallet_observations","bytes":4096},{"name":"wallet_observation_domain","bytes":4096},{"name":"wallet_discovery_stats","bytes":4096},{"name":"wallet_candidates","bytes":4096},{"name":"wallet_candidate_address_proof","bytes":4096},{"name":"strategy_experiments","bytes":4096},{"name":"sqlite_sequence","bytes":4096},{"name":"sqlite_autoindex_work_items_1","bytes":4096},{"name":"sqlite_autoindex_work_item_events_1","bytes":4096},{"name":"sqlite_autoindex_wallet_observations_1","bytes":4096},{"name":"sqlite_autoindex_wallet_discovery_stats_1","bytes":4096},{"name":"sqlite_autoindex_wallet_candidates_2","bytes":4096},{"name":"sqlite_autoindex_wallet_candidates_1","bytes":4096},{"name":"sqlite_autoindex_strategy_experiments_1","bytes":4096},{"name":"sqlite_autoindex_site_triage_2","bytes":4096},{"name":"sqlite_autoindex_site_triage_1","bytes":4096},{"name":"sqlite_autoindex_simulations_1","bytes":4096},{"name":"sqlite_autoindex_scientific_sets_1","bytes":4096},{"name":"sqlite_autoindex_scientific_reservations_1","bytes":4096},{"name":"sqlite_autoindex_scientific_plans_1","bytes":4096},{"name":"sqlite_autoindex_scientific_observations_1","bytes":4096},{"name":"sqlite_autoindex_scientific_matches_1","bytes":4096},{"name":"sqlite_autoindex_scientific_commonality_1","bytes":4096},{"name":"sqlite_autoindex_scientific_briefings_1","bytes":4096},{"name":"sqlite_autoindex_scientific_branches_1","bytes":4096},{"name":"sqlite_autoindex_scientific_boundaries_1","bytes":4096},{"name":"sqlite_autoindex_scheduler_ticks_1","bytes":4096},{"name":"sqlite_autoindex_review_queue_1","bytes":4096},{"name":"sqlite_autoindex_resolved_observations_2","bytes":4096},{"name":"sqlite_autoindex_resolved_observations_1","bytes":4096},{"name":"sqlite_autoindex_report_contents_1","bytes":4096},{"name":"sqlite_autoindex_report_candidates_1","bytes":4096},{"name":"sqlite_autoindex_relationship_versions_1","bytes":4096},{"name":"sqlite_autoindex_rate_limit_windows_1","bytes":4096},{"name":"sqlite_autoindex_planner_decisions_2","bytes":4096},{"name":"sqlite_autoindex_planner_decisions_1","bytes":4096},{"name":"sqlite_autoindex_pipeline_stages_1","bytes":4096},{"name":"sqlite_autoindex_ops_state_1","bytes":4096},{"name":"sqlite_autoindex_ops_notifications_1","bytes":4096},{"name":"sqlite_autoindex_ops_artifacts_1","bytes":4096},{"name":"sqlite_autoindex_opportunities_1","bytes":4096},{"name":"sqlite_autoindex_operator_commands_1","bytes":4096},{"name":"sqlite_autoindex_operation_state_1","bytes":4096},{"name":"sqlite_autoindex_operation_hypotheses_1","bytes":4096},{"name":"sqlite_autoindex_operation_hunts_2","bytes":4096},{"name":"sqlite_autoindex_operation_hunts_1","bytes":4096},{"name":"sqlite_autoindex_operation_history_2","bytes":4096},{"name":"sqlite_autoindex_operation_history_1","bytes":4096},{"name":"sqlite_autoindex_operation_facets_1","bytes":4096},{"name":"sqlite_autoindex_operation_entities_1","bytes":4096},{"name":"sqlite_autoindex_operation_edges_1","bytes":4096},{"name":"sqlite_autoindex_operation_decisions_1","bytes":4096},{"name":"sqlite_autoindex_operation_contradictions_1","bytes":4096},{"name":"sqlite_autoindex_operation_aliases_1","bytes":4096},{"name":"sqlite_autoindex_observations_1","bytes":4096},{"name":"sqlite_autoindex_observation_versions_1","bytes":4096},{"name":"sqlite_autoindex_notifications_1","bytes":4096},{"name":"sqlite_autoindex_notes_1","bytes":4096},{"name":"sqlite_autoindex_monitoring_targets_2","bytes":4096},{"name":"sqlite_autoindex_monitoring_targets_1","bytes":4096},{"name":"sqlite_autoindex_monitoring_snapshots_2","bytes":4096},{"name":"sqlite_autoindex_monitoring_snapshots_1","bytes":4096},{"name":"sqlite_autoindex_module_registry_1","bytes":4096},{"name":"sqlite_autoindex_module_metrics_2","bytes":4096},{"name":"sqlite_autoindex_module_metrics_1","bytes":4096},{"name":"sqlite_autoindex_module_event_inbox_2","bytes":4096},{"name":"sqlite_autoindex_module_event_inbox_1","bytes":4096},{"name":"sqlite_autoindex_module_destinations_1","bytes":4096},{"name":"sqlite_autoindex_module_activity_1","bytes":4096},{"name":"sqlite_autoindex_model_invocations_1","bytes":4096},{"name":"sqlite_autoindex_mission_resources_1","bytes":4096},{"name":"sqlite_autoindex_mission_reservations_1","bytes":4096},{"name":"sqlite_autoindex_mission_opportunities_3","bytes":4096},{"name":"sqlite_autoindex_mission_opportunities_2","bytes":4096},{"name":"sqlite_autoindex_mission_opportunities_1","bytes":4096},{"name":"sqlite_autoindex_mission_history_2","bytes":4096},{"name":"sqlite_autoindex_mission_history_1","bytes":4096},{"name":"sqlite_autoindex_memory_facts_1","bytes":4096},{"name":"sqlite_autoindex_jobs_1","bytes":4096},{"name":"sqlite_autoindex_job_events_1","bytes":4096},{"name":"sqlite_autoindex_job_event_links_1","bytes":4096},{"name":"sqlite_autoindex_job_dependencies_1","bytes":4096},{"name":"sqlite_autoindex_investigation_timeline_1","bytes":4096},{"name":"sqlite_autoindex_investigation_state_history_1","bytes":4096},{"name":"sqlite_autoindex_investigation_state_1","bytes":4096},{"name":"sqlite_autoindex_investigation_pipelines_1","bytes":4096},{"name":"sqlite_autoindex_investigation_observations_1","bytes":4096},{"name":"sqlite_autoindex_investigation_links_2","bytes":4096},{"name":"sqlite_autoindex_investigation_links_1","bytes":4096},{"name":"sqlite_autoindex_investigation_budgets_1","bytes":4096},{"name":"sqlite_autoindex_intel_reasoning_links_1","bytes":4096},{"name":"sqlite_autoindex_intel_nodes_1","bytes":4096},{"name":"sqlite_autoindex_intel_edges_1","bytes":4096},{"name":"sqlite_autoindex_ingestion_batches_1","bytes":4096},{"name":"sqlite_autoindex_inbox_settings_1","bytes":4096},{"name":"sqlite_autoindex_inbox_candidates_1","bytes":4096},{"name":"sqlite_autoindex_hypotheses_1","bytes":4096},{"name":"sqlite_autoindex_hunter_requests_1","bytes":4096},{"name":"sqlite_autoindex_hunter_proposals_1","bytes":4096},{"name":"sqlite_autoindex_hunter_operations_1","bytes":4096},{"name":"sqlite_autoindex_human_checkpoints_1","bytes":4096},{"name":"sqlite_autoindex_health_checks_1","bytes":4096},{"name":"sqlite_autoindex_findings_1","bytes":4096},{"name":"sqlite_autoindex_finder_hunts_1","bytes":4096},{"name":"sqlite_autoindex_experiment_assignments_1","bytes":4096},{"name":"sqlite_autoindex_experience_1","bytes":4096},{"name":"sqlite_autoindex_expansion_candidates_2","bytes":4096},{"name":"sqlite_autoindex_expansion_candidates_1","bytes":4096},{"name":"sqlite_autoindex_evidence_versions_1","bytes":4096},{"name":"sqlite_autoindex_evidence_quality_1","bytes":4096},{"name":"sqlite_autoindex_evidence_gaps_1","bytes":4096},{"name":"sqlite_autoindex_event_store_1","bytes":4096},{"name":"sqlite_autoindex_event_deliveries_1","bytes":4096},{"name":"sqlite_autoindex_event_dead_letters_1","bytes":4096},{"name":"sqlite_autoindex_entity_snapshots_1","bytes":4096},{"name":"sqlite_autoindex_entity_facets_1","bytes":4096},{"name":"sqlite_autoindex_entity_changes_1","bytes":4096},{"name":"sqlite_autoindex_entity_analysis_state_1","bytes":4096},{"name":"sqlite_autoindex_entity_aliases_1","bytes":4096},{"name":"sqlite_autoindex_discovery_paths_1","bytes":4096},{"name":"sqlite_autoindex_discovery_feedback_2","bytes":4096},{"name":"sqlite_autoindex_discovery_feedback_1","bytes":4096},{"name":"sqlite_autoindex_director_retries_1","bytes":4096},{"name":"sqlite_autoindex_director_resources_1","bytes":4096},{"name":"sqlite_autoindex_director_reservations_1","bytes":4096},{"name":"sqlite_autoindex_director_provider_health_1","bytes":4096},{"name":"sqlite_autoindex_director_objectives_1","bytes":4096},{"name":"sqlite_autoindex_director_investigations_1","bytes":4096},{"name":"sqlite_autoindex_director_actions_2","bytes":4096},{"name":"sqlite_autoindex_director_actions_1","bytes":4096},{"name":"sqlite_autoindex_dead_letters_1","bytes":4096},{"name":"sqlite_autoindex_cross_investigation_overlaps_2","bytes":4096},{"name":"sqlite_autoindex_cross_investigation_overlaps_1","bytes":4096},{"name":"sqlite_autoindex_contradictions_1","bytes":4096},{"name":"sqlite_autoindex_confidence_records_1","bytes":4096},{"name":"sqlite_autoindex_campaigns_1","bytes":4096},{"name":"sqlite_autoindex_campaign_meta_1","bytes":4096},{"name":"sqlite_autoindex_campaign_members_1","bytes":4096},{"name":"sqlite_autoindex_campaign_lineage_1","bytes":4096},{"name":"sqlite_autoindex_campaign_edges_1","bytes":4096},{"name":"sqlite_autoindex_campaign_costs_1","bytes":4096},{"name":"sqlite_autoindex_campaign_artifacts_1","bytes":4096},{"name":"sqlite_autoindex_budget_limits_1","bytes":4096},{"name":"sqlite_autoindex_budget_ledger_1","bytes":4096},{"name":"sqlite_autoindex_autonomy_searches_2","bytes":4096},{"name":"sqlite_autoindex_autonomy_searches_1","bytes":4096},{"name":"sqlite_autoindex_autonomy_report_claims_3","bytes":4096},{"name":"sqlite_autoindex_autonomy_report_claims_2","bytes":4096},{"name":"sqlite_autoindex_autonomy_report_claims_1","bytes":4096},{"name":"sqlite_autoindex_autonomy_history_2","bytes":4096},{"name":"sqlite_autoindex_autonomy_history_1","bytes":4096},{"name":"sqlite_autoindex_autonomy_checkpoints_1","bytes":4096},{"name":"sqlite_autoindex_autonomy_candidate_claims_2","bytes":4096},{"name":"sqlite_autoindex_autonomy_candidate_claims_1","bytes":4096},{"name":"sqlite_autoindex_autonomous_missions_3","bytes":4096},{"name":"sqlite_autoindex_autonomous_missions_2","bytes":4096},{"name":"sqlite_autoindex_autonomous_missions_1","bytes":4096},{"name":"sqlite_autoindex_automation_rules_1","bytes":4096},{"name":"sqlite_autoindex_automation_profiles_1","bytes":4096},{"name":"sqlite_autoindex_audit_log_1","bytes":4096},{"name":"sqlite_autoindex_approval_gates_2","bytes":4096},{"name":"sqlite_autoindex_approval_gates_1","bytes":4096},{"name":"sqlite_autoindex_analyst_conclusions_1","bytes":4096},{"name":"sqlite_autoindex_ai_decisions_1","bytes":4096},{"name":"sqlite_autoindex_agent_steps_1","bytes":4096},{"name":"sqlite_autoindex_agent_settings_1","bytes":4096},{"name":"sqlite_autoindex_agent_runs_1","bytes":4096},{"name":"sqlite_autoindex_agent_model_calls_1","bytes":4096},{"name":"sqlite_autoindex_agent_inferences_1","bytes":4096},{"name":"sqlite_autoindex_adaptive_scope_state_1","bytes":4096},{"name":"sqlite_autoindex_adaptive_saturation_1","bytes":4096},{"name":"sqlite_autoindex_adaptive_portfolio_1","bytes":4096},{"name":"sqlite_autoindex_adaptive_parking_1","bytes":4096},{"name":"sqlite_autoindex_adaptive_budget_adjustments_2","bytes":4096},{"name":"sqlite_autoindex_adaptive_budget_adjustments_1","bytes":4096},{"name":"site_triage","bytes":4096},{"name":"simulations","bytes":4096},{"name":"scientific_sets","bytes":4096},{"name":"scientific_reservations","bytes":4096},{"name":"scientific_plans","bytes":4096},{"name":"scientific_observations","bytes":4096},{"name":"scientific_observation_scope","bytes":4096},{"name":"scientific_matches","bytes":4096},{"name":"scientific_commonality","bytes":4096},{"name":"scientific_briefings","bytes":4096},{"name":"scientific_branches","bytes":4096},{"name":"scientific_boundaries","bytes":4096},{"name":"scheduler_ticks","bytes":4096},{"name":"review_queue","bytes":4096},{"name":"resolved_observations","bytes":4096},{"name":"report_contents","bytes":4096},{"name":"report_candidates","bytes":4096},{"name":"relationship_versions","bytes":4096},{"name":"rate_limit_windows","bytes":4096},{"name":"planner_decisions","bytes":4096},{"name":"pipeline_stages","bytes":4096},{"name":"ops_state","bytes":4096},{"name":"ops_notifications","bytes":4096},{"name":"ops_artifacts","bytes":4096},{"name":"opportunities","bytes":4096},{"name":"operator_commands","bytes":4096},{"name":"operation_state_queue","bytes":4096},{"name":"operation_state","bytes":4096},{"name":"operation_hypotheses","bytes":4096},{"name":"operation_hunts","bytes":4096},{"name":"operation_hunt_status","bytes":4096},{"name":"operation_history_time","bytes":4096},{"name":"operation_history","bytes":4096},{"name":"operation_facets","bytes":4096},{"name":"operation_entity_lookup","bytes":4096},{"name":"operation_entities","bytes":4096},{"name":"operation_edges","bytes":4096},{"name":"operation_edge_target","bytes":4096},{"name":"operation_edge_source","bytes":4096},{"name":"operation_edge_independence","bytes":4096},{"name":"operation_decisions","bytes":4096},{"name":"operation_contradictions","bytes":4096},{"name":"operation_aliases","bytes":4096},{"name":"observations","bytes":4096},{"name":"observation_versions","bytes":4096},{"name":"notifications","bytes":4096},{"name":"notes","bytes":4096},{"name":"monitoring_targets","bytes":4096},{"name":"monitoring_snapshots","bytes":4096},{"name":"module_registry","bytes":4096},{"name":"module_metrics","bytes":4096},{"name":"module_event_inbox","bytes":4096},{"name":"module_destinations","bytes":4096},{"name":"module_activity","bytes":4096},{"name":"model_invocations","bytes":4096},{"name":"mission_resources","bytes":4096},{"name":"mission_reservations","bytes":4096},{"name":"mission_opportunity_pending","bytes":4096},{"name":"mission_opportunities","bytes":4096},{"name":"mission_history","bytes":4096},{"name":"mission_fair_tick","bytes":4096},{"name":"mission_cost_root","bytes":4096},{"name":"memory_facts","bytes":4096},{"name":"jobs_target_proof","bytes":4096},{"name":"jobs","bytes":4096},{"name":"job_events","bytes":4096},{"name":"job_event_links","bytes":4096},{"name":"job_dependencies","bytes":4096},{"name":"investigation_timeline","bytes":4096},{"name":"investigation_state_history","bytes":4096},{"name":"investigation_state","bytes":4096},{"name":"investigation_pipelines","bytes":4096},{"name":"investigation_observations","bytes":4096},{"name":"investigation_links","bytes":4096},{"name":"investigation_budgets","bytes":4096},{"name":"intel_reasoning_links","bytes":4096},{"name":"intel_nodes","bytes":4096},{"name":"intel_edges","bytes":4096},{"name":"ingestion_batches","bytes":4096},{"name":"inbox_supply_lock","bytes":4096},{"name":"inbox_settings","bytes":4096},{"name":"inbox_decisions","bytes":4096},{"name":"inbox_candidates","bytes":4096},{"name":"idx_work_items_queue","bytes":4096},{"name":"idx_work_items_fingerprint","bytes":4096},{"name":"idx_work_items_campaign","bytes":4096},{"name":"idx_work_item_events_item","bytes":4096},{"name":"idx_wallet_observations_page","bytes":4096},{"name":"idx_wallet_observations_candidate","bytes":4096},{"name":"idx_wallet_candidates_status","bytes":4096},{"name":"idx_timeline_pipeline_time","bytes":4096},{"name":"idx_timeline_investigation_time","bytes":4096},{"name":"idx_state_history_inv","bytes":4096},{"name":"idx_site_triage_entity","bytes":4096},{"name":"idx_scheduler_ticks_started","bytes":4096},{"name":"idx_review_queue_status_priority","bytes":4096},{"name":"idx_report_contents_investigation","bytes":4096},{"name":"idx_relationship_versions_hash","bytes":4096},{"name":"idx_planner_decisions_once","bytes":4096},{"name":"idx_planner_decisions_inv","bytes":4096},{"name":"idx_pipelines_investigation_status","bytes":4096},{"name":"idx_pipeline_stages_key","bytes":4096},{"name":"idx_ops_notifications_open","bytes":4096},{"name":"idx_ops_artifacts_created","bytes":4096},{"name":"idx_opportunities_queue","bytes":4096},{"name":"idx_opportunities_fingerprint","bytes":4096},{"name":"idx_observations_source_type_record","bytes":4096},{"name":"idx_observations_entity","bytes":4096},{"name":"idx_observation_versions_hash","bytes":4096},{"name":"idx_observation_versions_entity","bytes":4096},{"name":"idx_notifications_unread","bytes":4096},{"name":"idx_notes_source_record","bytes":4096},{"name":"idx_monitoring_due","bytes":4096},{"name":"idx_module_metrics_window","bytes":4096},{"name":"idx_module_event_inbox_pending","bytes":4096},{"name":"idx_module_activity_source_time","bytes":4096},{"name":"idx_module_activity_source_record","bytes":4096},{"name":"idx_model_invocations_provider","bytes":4096},{"name":"idx_memory_facts_unique","bytes":4096},{"name":"idx_memory_facts_subject","bytes":4096},{"name":"idx_jobs_trigger_event","bytes":4096},{"name":"idx_jobs_pipeline_stage","bytes":4096},{"name":"idx_jobs_investigation","bytes":4096},{"name":"idx_jobs_freshness_key","bytes":4096},{"name":"idx_jobs_dedupe_key","bytes":4096},{"name":"idx_jobs_claim","bytes":4096},{"name":"idx_jobs_approval_claim","bytes":4096},{"name":"idx_job_events_job","bytes":4096},{"name":"idx_job_event_links_once","bytes":4096},{"name":"idx_job_event_links_event","bytes":4096},{"name":"idx_job_dependencies_parent","bytes":4096},{"name":"idx_investigation_observations_source","bytes":4096},{"name":"idx_intel_reasoning_unique","bytes":4096},{"name":"idx_intel_nodes_key","bytes":4096},{"name":"idx_intel_edges_unique","bytes":4096},{"name":"idx_intel_edges_src","bytes":4096},{"name":"idx_intel_edges_dst","bytes":4096},{"name":"idx_ingestion_batches_source_batch","bytes":4096},{"name":"idx_inbox_decisions_id","bytes":4096},{"name":"idx_inbox_candidates_queue","bytes":4096},{"name":"idx_inbox_candidates_domain","bytes":4096},{"name":"idx_inbox_candidates_decided","bytes":4096},{"name":"idx_inbox_candidates_cluster","bytes":4096},{"name":"idx_hypotheses_test","bytes":4096},{"name":"idx_hunter_requests_key","bytes":4096},{"name":"idx_hunter_proposals_key","bytes":4096},{"name":"idx_hunter_operations_external","bytes":4096},{"name":"idx_hunter_operations_campaign","bytes":4096},{"name":"idx_human_checkpoints_open","bytes":4096},{"name":"idx_health_checks_component","bytes":4096},{"name":"idx_findings_source_record","bytes":4096},{"name":"idx_finder_outcomes_id","bytes":4096},{"name":"idx_finder_outcomes_domain","bytes":4096},{"name":"idx_finder_hunts_state","bytes":4096},{"name":"idx_feedback_push","bytes":4096},{"name":"idx_experiment_assignments_subject","bytes":4096},{"name":"idx_experience_source","bytes":4096},{"name":"idx_experience_action","bytes":4096},{"name":"idx_evidence_versions_hash","bytes":4096},{"name":"idx_evidence_gaps_unique","bytes":4096},{"name":"idx_evidence_gaps_status","bytes":4096},{"name":"idx_event_store_investigation","bytes":4096},{"name":"idx_event_store_event_id","bytes":4096},{"name":"idx_event_store_dispatch","bytes":4096},{"name":"idx_event_store_correlation","bytes":4096},{"name":"idx_event_deliveries_once","bytes":4096},{"name":"idx_event_deliveries_dispatch","bytes":4096},{"name":"idx_event_dead_letters_open","bytes":4096},{"name":"idx_entity_snapshots_subject","bytes":4096},{"name":"idx_entity_changes_subject","bytes":4096},{"name":"idx_entity_aliases_identity","bytes":4096},{"name":"idx_entity_aliases_entity","bytes":4096},{"name":"idx_discovery_paths_source_record","bytes":4096},{"name":"idx_director_actions_pending","bytes":4096},{"name":"idx_dead_letters_module_unresolved","bytes":4096},{"name":"idx_contradictions_fingerprint","bytes":4096},{"name":"idx_confidence_subject","bytes":4096},{"name":"idx_campaigns_due","bytes":4096},{"name":"idx_campaign_meta_work_item","bytes":4096},{"name":"idx_campaign_members_investigation","bytes":4096},{"name":"idx_campaign_members_domain","bytes":4096},{"name":"idx_campaign_lineage_campaign","bytes":4096},{"name":"idx_campaign_edges_unique","bytes":4096},{"name":"idx_campaign_edges_campaign","bytes":4096},{"name":"idx_campaign_costs_ref","bytes":4096},{"name":"idx_campaign_artifacts_campaign","bytes":4096},{"name":"idx_budget_ledger_ref","bytes":4096},{"name":"idx_budget_ledger_day","bytes":4096},{"name":"idx_automation_rules_trigger","bytes":4096},{"name":"idx_audit_log_resource","bytes":4096},{"name":"idx_audit_log_actor_time","bytes":4096},{"name":"idx_ai_decisions_subject","bytes":4096},{"name":"idx_agent_steps_no","bytes":4096},{"name":"idx_agent_steps_job","bytes":4096},{"name":"idx_agent_steps_investigation","bytes":4096},{"name":"idx_agent_steps_fingerprint","bytes":4096},{"name":"idx_agent_runs_due","bytes":4096},{"name":"idx_agent_runs_active","bytes":4096},{"name":"idx_agent_model_calls_run","bytes":4096},{"name":"idx_agent_inferences_investigation","bytes":4096},{"name":"hypotheses","bytes":4096},{"name":"hunter_requests","bytes":4096},{"name":"hunter_proposals","bytes":4096},{"name":"human_checkpoints","bytes":4096},{"name":"health_checks","bytes":4096},{"name":"findings","bytes":4096},{"name":"finder_outcomes","bytes":4096},{"name":"finder_hunts","bytes":4096},{"name":"experiment_assignments","bytes":4096},{"name":"experience","bytes":4096},{"name":"expansion_candidates","bytes":4096},{"name":"evidence_versions","bytes":4096},{"name":"evidence_quality","bytes":4096},{"name":"evidence_gaps","bytes":4096},{"name":"event_store","bytes":4096},{"name":"event_deliveries","bytes":4096},{"name":"event_dead_letters","bytes":4096},{"name":"entity_snapshots","bytes":4096},{"name":"entity_facets","bytes":4096},{"name":"entity_changes","bytes":4096},{"name":"entity_analysis_state","bytes":4096},{"name":"entity_aliases","bytes":4096},{"name":"discovery_paths","bytes":4096},{"name":"discovery_feedback","bytes":4096},{"name":"director_retries","bytes":4096},{"name":"director_resources","bytes":4096},{"name":"director_reservations","bytes":4096},{"name":"director_provider_health","bytes":4096},{"name":"director_objectives","bytes":4096},{"name":"director_investigations","bytes":4096},{"name":"director_actions","bytes":4096},{"name":"dead_letters","bytes":4096},{"name":"cross_investigation_overlaps","bytes":4096},{"name":"contradictions","bytes":4096},{"name":"confidence_records","bytes":4096},{"name":"campaigns","bytes":4096},{"name":"campaign_meta","bytes":4096},{"name":"campaign_members","bytes":4096},{"name":"campaign_lineage","bytes":4096},{"name":"campaign_edges","bytes":4096},{"name":"campaign_costs","bytes":4096},{"name":"campaign_artifacts","bytes":4096},{"name":"budget_limits","bytes":4096},{"name":"budget_ledger","bytes":4096},{"name":"autonomy_searches","bytes":4096},{"name":"autonomy_search_due","bytes":4096},{"name":"autonomy_report_claims","bytes":4096},{"name":"autonomy_history","bytes":4096},{"name":"autonomy_checkpoints","bytes":4096},{"name":"autonomy_candidate_claims","bytes":4096},{"name":"autonomy_attention","bytes":4096},{"name":"autonomous_missions","bytes":4096},{"name":"automation_rules","bytes":4096},{"name":"automation_profiles","bytes":4096},{"name":"audit_log","bytes":4096},{"name":"approval_gates","bytes":4096},{"name":"analyst_conclusions","bytes":4096},{"name":"ai_decisions","bytes":4096},{"name":"agent_steps","bytes":4096},{"name":"agent_settings","bytes":4096},{"name":"agent_runs","bytes":4096},{"name":"agent_model_calls","bytes":4096},{"name":"agent_inferences","bytes":4096},{"name":"adaptive_scope_state","bytes":4096},{"name":"adaptive_saturation","bytes":4096},{"name":"adaptive_portfolio_time","bytes":4096},{"name":"adaptive_portfolio","bytes":4096},{"name":"adaptive_parking","bytes":4096},{"name":"adaptive_budget_adjustments","bytes":4096}],"page_usage_after":[{"name":"operation_history","bytes":20574208},{"name":"adaptive_decision_components","bytes":17612800},{"name":"operation_edges","bytes":12038144},{"name":"sqlite_autoindex_adaptive_decision_components_1","bytes":9564160},{"name":"relationships","bytes":8224768},{"name":"adaptive_costs","bytes":5931008},{"name":"sqlite_autoindex_operation_history_2","bytes":5775360},{"name":"operation_history_time","bytes":5722112},{"name":"operation_edge_independence","bytes":4501504},{"name":"adaptive_gap_history","bytes":4362240},{"name":"sqlite_autoindex_operation_history_1","bytes":4169728},{"name":"scientific_history","bytes":4018176},{"name":"adaptive_outcomes","bytes":3731456},{"name":"relationship_evidence","bytes":3575808},{"name":"adaptive_gaps","bytes":2768896},{"name":"sqlite_autoindex_adaptive_costs_1","bytes":2486272},{"name":"adaptive_tests","bytes":2428928},{"name":"adaptive_outcome_family","bytes":2396160},{"name":"operation_edge_source","bytes":2232320},{"name":"operation_edge_target","bytes":2228224},{"name":"scientific_hypotheses","bytes":2072576},{"name":"adaptive_decisions","bytes":2072576},{"name":"adaptive_lineage","bytes":1863680},{"name":"scientific_observations","bytes":1851392},{"name":"idx_relationships_source_record","bytes":1835008},{"name":"sqlite_autoindex_scientific_history_2","bytes":1662976},{"name":"sqlite_autoindex_adaptive_gap_history_2","bytes":1617920},{"name":"scientific_history_scope","bytes":1617920},{"name":"scientific_commonality","bytes":1581056},{"name":"adaptive_gap_history_time","bytes":1470464},{"name":"idx_relationship_evidence_link","bytes":1396736},{"name":"sqlite_autoindex_adaptive_outcomes_1","bytes":1376256},{"name":"operation_relationship_target","bytes":1273856},{"name":"operation_relationship_source","bytes":1273856},{"name":"sqlite_autoindex_operation_edges_1","bytes":1253376},{"name":"investigation_entities","bytes":1245184},{"name":"entities","bytes":1232896},{"name":"idx_relationships_endpoints","bytes":1155072},{"name":"evidence","bytes":1007616},{"name":"sqlite_autoindex_adaptive_gap_history_1","bytes":970752},{"name":"sqlite_autoindex_adaptive_lineage_2","bytes":950272},{"name":"sqlite_autoindex_relationships_1","bytes":946176},{"name":"sqlite_autoindex_relationship_evidence_1","bytes":901120},{"name":"scientific_predictions","bytes":864256},{"name":"hunter_operation_members","bytes":802816},{"name":"operation_entities","bytes":770048},{"name":"sqlite_autoindex_scientific_history_1","bytes":704512},{"name":"adaptive_test_family","bytes":704512},{"name":"scientific_contradictions","bytes":663552},{"name":"adaptive_test_scope","bytes":659456},{"name":"sqlite_autoindex_adaptive_tests_3","bytes":573440},{"name":"adaptive_lineage_ref","bytes":507904},{"name":"sqlite_autoindex_scientific_observations_1","bytes":499712},{"name":"sqlite_autoindex_hunter_operation_members_1","bytes":491520},{"name":"adaptive_decision_status","bytes":479232},{"name":"adaptive_outcome_test","bytes":462848},{"name":"idx_investigation_entities_link","bytes":446464},{"name":"idx_hunter_members_key","bytes":425984},{"name":"idx_entities_type_key","bytes":425984},{"name":"adaptive_saturation","bytes":421888},{"name":"scientific_briefings","bytes":385024},{"name":"sqlite_autoindex_scientific_predictions_2","bytes":356352},{"name":"sqlite_autoindex_scientific_commonality_1","bytes":356352},{"name":"sqlite_autoindex_adaptive_lineage_1","bytes":356352},{"name":"sqlite_autoindex_adaptive_decisions_2","bytes":352256},{"name":"scientific_observation_scope","bytes":327680},{"name":"scientific_branches","bytes":319488},{"name":"operation_entity_lookup","bytes":319488},{"name":"sqlite_autoindex_adaptive_gaps_1","bytes":299008},{"name":"adaptive_gap_status","bytes":299008},{"name":"adaptive_decision_scope","bytes":290816},{"name":"adaptive_gap_family","bytes":253952},{"name":"idx_entities_investigation_type","bytes":229376},{"name":"sqlite_autoindex_operation_entities_1","bytes":225280},{"name":"idx_evidence_source_record","bytes":204800},{"name":"sqlite_autoindex_adaptive_saturation_1","bytes":196608},{"name":"scientific_conflict_status","bytes":196608},{"name":"evidence_investigation_recent","bytes":196608},{"name":"sqlite_autoindex_scientific_hypotheses_1","bytes":188416},{"name":"sqlite_autoindex_investigation_entities_1","bytes":167936},{"name":"scientific_plans","bytes":167936},{"name":"sqlite_autoindex_adaptive_decisions_1","bytes":163840},{"name":"sqlite_autoindex_entities_1","bytes":159744},{"name":"sqlite_autoindex_adaptive_tests_2","bytes":159744},{"name":"sqlite_autoindex_adaptive_tests_1","bytes":159744},{"name":"idx_investigation_entities_entity","bytes":159744},{"name":"sqlite_schema","bytes":147456},{"name":"sqlite_autoindex_scientific_contradictions_1","bytes":118784},{"name":"sqlite_autoindex_scientific_predictions_1","bytes":98304},{"name":"adaptive_test_work","bytes":94208},{"name":"adaptive_test_job","bytes":94208},{"name":"sqlite_autoindex_evidence_1","bytes":86016},{"name":"idx_evidence_entity","bytes":81920},{"name":"sqlite_autoindex_scientific_branches_1","bytes":73728},{"name":"autonomy_investigations","bytes":69632},{"name":"idx_evidence_sha256","bytes":49152},{"name":"intel_edges","bytes":45056},{"name":"investigations","bytes":40960},{"name":"director_objectives","bytes":40960},{"name":"intel_nodes","bytes":36864},{"name":"idx_intel_edges_unique","bytes":28672},{"name":"work_items","bytes":24576},{"name":"confidence_records","bytes":24576},{"name":"evidence_gaps","bytes":20480},{"name":"autonomous_missions","bytes":20480},{"name":"work_item_events","bytes":16384},{"name":"sqlite_autoindex_intel_nodes_1","bytes":16384},{"name":"autonomy_due","bytes":16384},{"name":"adaptive_scope_state","bytes":16384},{"name":"sqlite_autoindex_investigations_1","bytes":12288},{"name":"sqlite_autoindex_intel_edges_1","bytes":12288},{"name":"sqlite_autoindex_director_objectives_1","bytes":12288},{"name":"sqlite_autoindex_confidence_records_1","bytes":12288},{"name":"sqlite_autoindex_autonomy_investigations_1","bytes":12288},{"name":"scientific_sets","bytes":12288},{"name":"operation_state","bytes":12288},{"name":"investigation_timeline","bytes":12288},{"name":"idx_investigations_external_id","bytes":12288},{"name":"idx_intel_nodes_key","bytes":12288},{"name":"idx_intel_edges_src","bytes":12288},{"name":"idx_intel_edges_dst","bytes":12288},{"name":"idx_confidence_subject","bytes":12288},{"name":"hunter_operations","bytes":12288},{"name":"autonomy_history","bytes":12288},{"name":"work_target_terminal","bytes":4096},{"name":"wallet_observations","bytes":4096},{"name":"wallet_observation_domain","bytes":4096},{"name":"wallet_discovery_stats","bytes":4096},{"name":"wallet_candidates","bytes":4096},{"name":"wallet_candidate_address_proof","bytes":4096},{"name":"strategy_experiments","bytes":4096},{"name":"sqlite_sequence","bytes":4096},{"name":"sqlite_autoindex_work_items_1","bytes":4096},{"name":"sqlite_autoindex_work_item_events_1","bytes":4096},{"name":"sqlite_autoindex_wallet_observations_1","bytes":4096},{"name":"sqlite_autoindex_wallet_discovery_stats_1","bytes":4096},{"name":"sqlite_autoindex_wallet_candidates_2","bytes":4096},{"name":"sqlite_autoindex_wallet_candidates_1","bytes":4096},{"name":"sqlite_autoindex_strategy_experiments_1","bytes":4096},{"name":"sqlite_autoindex_site_triage_2","bytes":4096},{"name":"sqlite_autoindex_site_triage_1","bytes":4096},{"name":"sqlite_autoindex_simulations_1","bytes":4096},{"name":"sqlite_autoindex_scientific_sets_1","bytes":4096},{"name":"sqlite_autoindex_scientific_reservations_1","bytes":4096},{"name":"sqlite_autoindex_scientific_plans_1","bytes":4096},{"name":"sqlite_autoindex_scientific_matches_1","bytes":4096},{"name":"sqlite_autoindex_scientific_briefings_1","bytes":4096},{"name":"sqlite_autoindex_scientific_boundaries_1","bytes":4096},{"name":"sqlite_autoindex_scheduler_ticks_1","bytes":4096},{"name":"sqlite_autoindex_review_queue_1","bytes":4096},{"name":"sqlite_autoindex_resolved_observations_2","bytes":4096},{"name":"sqlite_autoindex_resolved_observations_1","bytes":4096},{"name":"sqlite_autoindex_report_contents_1","bytes":4096},{"name":"sqlite_autoindex_report_candidates_1","bytes":4096},{"name":"sqlite_autoindex_relationship_versions_1","bytes":4096},{"name":"sqlite_autoindex_rate_limit_windows_1","bytes":4096},{"name":"sqlite_autoindex_planner_decisions_2","bytes":4096},{"name":"sqlite_autoindex_planner_decisions_1","bytes":4096},{"name":"sqlite_autoindex_pipeline_stages_1","bytes":4096},{"name":"sqlite_autoindex_ops_state_1","bytes":4096},{"name":"sqlite_autoindex_ops_notifications_1","bytes":4096},{"name":"sqlite_autoindex_ops_artifacts_1","bytes":4096},{"name":"sqlite_autoindex_opportunities_1","bytes":4096},{"name":"sqlite_autoindex_operator_commands_1","bytes":4096},{"name":"sqlite_autoindex_operation_state_1","bytes":4096},{"name":"sqlite_autoindex_operation_hypotheses_1","bytes":4096},{"name":"sqlite_autoindex_operation_hunts_2","bytes":4096},{"name":"sqlite_autoindex_operation_hunts_1","bytes":4096},{"name":"sqlite_autoindex_operation_facets_1","bytes":4096},{"name":"sqlite_autoindex_operation_decisions_1","bytes":4096},{"name":"sqlite_autoindex_operation_contradictions_1","bytes":4096},{"name":"sqlite_autoindex_operation_aliases_1","bytes":4096},{"name":"sqlite_autoindex_observations_1","bytes":4096},{"name":"sqlite_autoindex_observation_versions_1","bytes":4096},{"name":"sqlite_autoindex_notifications_1","bytes":4096},{"name":"sqlite_autoindex_notes_1","bytes":4096},{"name":"sqlite_autoindex_monitoring_targets_2","bytes":4096},{"name":"sqlite_autoindex_monitoring_targets_1","bytes":4096},{"name":"sqlite_autoindex_monitoring_snapshots_2","bytes":4096},{"name":"sqlite_autoindex_monitoring_snapshots_1","bytes":4096},{"name":"sqlite_autoindex_module_registry_1","bytes":4096},{"name":"sqlite_autoindex_module_metrics_2","bytes":4096},{"name":"sqlite_autoindex_module_metrics_1","bytes":4096},{"name":"sqlite_autoindex_module_event_inbox_2","bytes":4096},{"name":"sqlite_autoindex_module_event_inbox_1","bytes":4096},{"name":"sqlite_autoindex_module_destinations_1","bytes":4096},{"name":"sqlite_autoindex_module_activity_1","bytes":4096},{"name":"sqlite_autoindex_model_invocations_1","bytes":4096},{"name":"sqlite_autoindex_mission_resources_1","bytes":4096},{"name":"sqlite_autoindex_mission_reservations_1","bytes":4096},{"name":"sqlite_autoindex_mission_opportunities_3","bytes":4096},{"name":"sqlite_autoindex_mission_opportunities_2","bytes":4096},{"name":"sqlite_autoindex_mission_opportunities_1","bytes":4096},{"name":"sqlite_autoindex_mission_history_2","bytes":4096},{"name":"sqlite_autoindex_mission_history_1","bytes":4096},{"name":"sqlite_autoindex_memory_facts_1","bytes":4096},{"name":"sqlite_autoindex_jobs_1","bytes":4096},{"name":"sqlite_autoindex_job_events_1","bytes":4096},{"name":"sqlite_autoindex_job_event_links_1","bytes":4096},{"name":"sqlite_autoindex_job_dependencies_1","bytes":4096},{"name":"sqlite_autoindex_investigation_timeline_1","bytes":4096},{"name":"sqlite_autoindex_investigation_state_history_1","bytes":4096},{"name":"sqlite_autoindex_investigation_state_1","bytes":4096},{"name":"sqlite_autoindex_investigation_pipelines_1","bytes":4096},{"name":"sqlite_autoindex_investigation_observations_1","bytes":4096},{"name":"sqlite_autoindex_investigation_links_2","bytes":4096},{"name":"sqlite_autoindex_investigation_links_1","bytes":4096},{"name":"sqlite_autoindex_investigation_budgets_1","bytes":4096},{"name":"sqlite_autoindex_intel_reasoning_links_1","bytes":4096},{"name":"sqlite_autoindex_ingestion_batches_1","bytes":4096},{"name":"sqlite_autoindex_inbox_settings_1","bytes":4096},{"name":"sqlite_autoindex_inbox_candidates_1","bytes":4096},{"name":"sqlite_autoindex_hypotheses_1","bytes":4096},{"name":"sqlite_autoindex_hunter_requests_1","bytes":4096},{"name":"sqlite_autoindex_hunter_proposals_1","bytes":4096},{"name":"sqlite_autoindex_hunter_operations_1","bytes":4096},{"name":"sqlite_autoindex_human_checkpoints_1","bytes":4096},{"name":"sqlite_autoindex_health_checks_1","bytes":4096},{"name":"sqlite_autoindex_findings_1","bytes":4096},{"name":"sqlite_autoindex_finder_hunts_1","bytes":4096},{"name":"sqlite_autoindex_experiment_assignments_1","bytes":4096},{"name":"sqlite_autoindex_experience_1","bytes":4096},{"name":"sqlite_autoindex_expansion_candidates_2","bytes":4096},{"name":"sqlite_autoindex_expansion_candidates_1","bytes":4096},{"name":"sqlite_autoindex_evidence_versions_1","bytes":4096},{"name":"sqlite_autoindex_evidence_quality_1","bytes":4096},{"name":"sqlite_autoindex_evidence_gaps_1","bytes":4096},{"name":"sqlite_autoindex_event_store_1","bytes":4096},{"name":"sqlite_autoindex_event_deliveries_1","bytes":4096},{"name":"sqlite_autoindex_event_dead_letters_1","bytes":4096},{"name":"sqlite_autoindex_entity_snapshots_1","bytes":4096},{"name":"sqlite_autoindex_entity_facets_1","bytes":4096},{"name":"sqlite_autoindex_entity_changes_1","bytes":4096},{"name":"sqlite_autoindex_entity_analysis_state_1","bytes":4096},{"name":"sqlite_autoindex_entity_aliases_1","bytes":4096},{"name":"sqlite_autoindex_discovery_paths_1","bytes":4096},{"name":"sqlite_autoindex_discovery_feedback_2","bytes":4096},{"name":"sqlite_autoindex_discovery_feedback_1","bytes":4096},{"name":"sqlite_autoindex_director_retries_1","bytes":4096},{"name":"sqlite_autoindex_director_resources_1","bytes":4096},{"name":"sqlite_autoindex_director_reservations_1","bytes":4096},{"name":"sqlite_autoindex_director_provider_health_1","bytes":4096},{"name":"sqlite_autoindex_director_investigations_1","bytes":4096},{"name":"sqlite_autoindex_director_actions_2","bytes":4096},{"name":"sqlite_autoindex_director_actions_1","bytes":4096},{"name":"sqlite_autoindex_dead_letters_1","bytes":4096},{"name":"sqlite_autoindex_cross_investigation_overlaps_2","bytes":4096},{"name":"sqlite_autoindex_cross_investigation_overlaps_1","bytes":4096},{"name":"sqlite_autoindex_contradictions_1","bytes":4096},{"name":"sqlite_autoindex_campaigns_1","bytes":4096},{"name":"sqlite_autoindex_campaign_meta_1","bytes":4096},{"name":"sqlite_autoindex_campaign_members_1","bytes":4096},{"name":"sqlite_autoindex_campaign_lineage_1","bytes":4096},{"name":"sqlite_autoindex_campaign_edges_1","bytes":4096},{"name":"sqlite_autoindex_campaign_costs_1","bytes":4096},{"name":"sqlite_autoindex_campaign_artifacts_1","bytes":4096},{"name":"sqlite_autoindex_budget_limits_1","bytes":4096},{"name":"sqlite_autoindex_budget_ledger_1","bytes":4096},{"name":"sqlite_autoindex_autonomy_searches_2","bytes":4096},{"name":"sqlite_autoindex_autonomy_searches_1","bytes":4096},{"name":"sqlite_autoindex_autonomy_report_claims_3","bytes":4096},{"name":"sqlite_autoindex_autonomy_report_claims_2","bytes":4096},{"name":"sqlite_autoindex_autonomy_report_claims_1","bytes":4096},{"name":"sqlite_autoindex_autonomy_history_2","bytes":4096},{"name":"sqlite_autoindex_autonomy_history_1","bytes":4096},{"name":"sqlite_autoindex_autonomy_checkpoints_1","bytes":4096},{"name":"sqlite_autoindex_autonomy_candidate_claims_2","bytes":4096},{"name":"sqlite_autoindex_autonomy_candidate_claims_1","bytes":4096},{"name":"sqlite_autoindex_autonomous_missions_3","bytes":4096},{"name":"sqlite_autoindex_autonomous_missions_2","bytes":4096},{"name":"sqlite_autoindex_autonomous_missions_1","bytes":4096},{"name":"sqlite_autoindex_automation_rules_1","bytes":4096},{"name":"sqlite_autoindex_automation_profiles_1","bytes":4096},{"name":"sqlite_autoindex_audit_log_1","bytes":4096},{"name":"sqlite_autoindex_approval_gates_2","bytes":4096},{"name":"sqlite_autoindex_approval_gates_1","bytes":4096},{"name":"sqlite_autoindex_analyst_conclusions_1","bytes":4096},{"name":"sqlite_autoindex_ai_decisions_1","bytes":4096},{"name":"sqlite_autoindex_agent_steps_1","bytes":4096},{"name":"sqlite_autoindex_agent_settings_1","bytes":4096},{"name":"sqlite_autoindex_agent_runs_1","bytes":4096},{"name":"sqlite_autoindex_agent_model_calls_1","bytes":4096},{"name":"sqlite_autoindex_agent_inferences_1","bytes":4096},{"name":"sqlite_autoindex_adaptive_scope_state_1","bytes":4096},{"name":"sqlite_autoindex_adaptive_portfolio_1","bytes":4096},{"name":"sqlite_autoindex_adaptive_parking_1","bytes":4096},{"name":"sqlite_autoindex_adaptive_budget_adjustments_2","bytes":4096},{"name":"sqlite_autoindex_adaptive_budget_adjustments_1","bytes":4096},{"name":"site_triage","bytes":4096},{"name":"simulations","bytes":4096},{"name":"scientific_reservations","bytes":4096},{"name":"scientific_matches","bytes":4096},{"name":"scientific_boundaries","bytes":4096},{"name":"scheduler_ticks","bytes":4096},{"name":"review_queue","bytes":4096},{"name":"resolved_observations","bytes":4096},{"name":"report_contents","bytes":4096},{"name":"report_candidates","bytes":4096},{"name":"relationship_versions","bytes":4096},{"name":"rate_limit_windows","bytes":4096},{"name":"planner_decisions","bytes":4096},{"name":"pipeline_stages","bytes":4096},{"name":"ops_state","bytes":4096},{"name":"ops_notifications","bytes":4096},{"name":"ops_artifacts","bytes":4096},{"name":"opportunities","bytes":4096},{"name":"operator_commands","bytes":4096},{"name":"operation_state_queue","bytes":4096},{"name":"operation_hypotheses","bytes":4096},{"name":"operation_hunts","bytes":4096},{"name":"operation_hunt_status","bytes":4096},{"name":"operation_facets","bytes":4096},{"name":"operation_decisions","bytes":4096},{"name":"operation_contradictions","bytes":4096},{"name":"operation_aliases","bytes":4096},{"name":"observations","bytes":4096},{"name":"observation_versions","bytes":4096},{"name":"notifications","bytes":4096},{"name":"notes","bytes":4096},{"name":"monitoring_targets","bytes":4096},{"name":"monitoring_snapshots","bytes":4096},{"name":"module_registry","bytes":4096},{"name":"module_metrics","bytes":4096},{"name":"module_event_inbox","bytes":4096},{"name":"module_destinations","bytes":4096},{"name":"module_activity","bytes":4096},{"name":"model_invocations","bytes":4096},{"name":"mission_resources","bytes":4096},{"name":"mission_reservations","bytes":4096},{"name":"mission_opportunity_pending","bytes":4096},{"name":"mission_opportunities","bytes":4096},{"name":"mission_history","bytes":4096},{"name":"mission_fair_tick","bytes":4096},{"name":"mission_cost_root","bytes":4096},{"name":"memory_facts","bytes":4096},{"name":"jobs_target_proof","bytes":4096},{"name":"jobs","bytes":4096},{"name":"job_events","bytes":4096},{"name":"job_event_links","bytes":4096},{"name":"job_dependencies","bytes":4096},{"name":"investigation_state_history","bytes":4096},{"name":"investigation_state","bytes":4096},{"name":"investigation_pipelines","bytes":4096},{"name":"investigation_observations","bytes":4096},{"name":"investigation_links","bytes":4096},{"name":"investigation_budgets","bytes":4096},{"name":"intel_reasoning_links","bytes":4096},{"name":"ingestion_batches","bytes":4096},{"name":"inbox_supply_lock","bytes":4096},{"name":"inbox_settings","bytes":4096},{"name":"inbox_decisions","bytes":4096},{"name":"inbox_candidates","bytes":4096},{"name":"idx_work_items_queue","bytes":4096},{"name":"idx_work_items_fingerprint","bytes":4096},{"name":"idx_work_items_campaign","bytes":4096},{"name":"idx_work_item_events_item","bytes":4096},{"name":"idx_wallet_observations_page","bytes":4096},{"name":"idx_wallet_observations_candidate","bytes":4096},{"name":"idx_wallet_candidates_status","bytes":4096},{"name":"idx_timeline_pipeline_time","bytes":4096},{"name":"idx_timeline_investigation_time","bytes":4096},{"name":"idx_state_history_inv","bytes":4096},{"name":"idx_site_triage_entity","bytes":4096},{"name":"idx_scheduler_ticks_started","bytes":4096},{"name":"idx_review_queue_status_priority","bytes":4096},{"name":"idx_report_contents_investigation","bytes":4096},{"name":"idx_relationship_versions_hash","bytes":4096},{"name":"idx_planner_decisions_once","bytes":4096},{"name":"idx_planner_decisions_inv","bytes":4096},{"name":"idx_pipelines_investigation_status","bytes":4096},{"name":"idx_pipeline_stages_key","bytes":4096},{"name":"idx_ops_notifications_open","bytes":4096},{"name":"idx_ops_artifacts_created","bytes":4096},{"name":"idx_opportunities_queue","bytes":4096},{"name":"idx_opportunities_fingerprint","bytes":4096},{"name":"idx_observations_source_type_record","bytes":4096},{"name":"idx_observations_entity","bytes":4096},{"name":"idx_observation_versions_hash","bytes":4096},{"name":"idx_observation_versions_entity","bytes":4096},{"name":"idx_notifications_unread","bytes":4096},{"name":"idx_notes_source_record","bytes":4096},{"name":"idx_monitoring_due","bytes":4096},{"name":"idx_module_metrics_window","bytes":4096},{"name":"idx_module_event_inbox_pending","bytes":4096},{"name":"idx_module_activity_source_time","bytes":4096},{"name":"idx_module_activity_source_record","bytes":4096},{"name":"idx_model_invocations_provider","bytes":4096},{"name":"idx_memory_facts_unique","bytes":4096},{"name":"idx_memory_facts_subject","bytes":4096},{"name":"idx_jobs_trigger_event","bytes":4096},{"name":"idx_jobs_pipeline_stage","bytes":4096},{"name":"idx_jobs_investigation","bytes":4096},{"name":"idx_jobs_freshness_key","bytes":4096},{"name":"idx_jobs_dedupe_key","bytes":4096},{"name":"idx_jobs_claim","bytes":4096},{"name":"idx_jobs_approval_claim","bytes":4096},{"name":"idx_job_events_job","bytes":4096},{"name":"idx_job_event_links_once","bytes":4096},{"name":"idx_job_event_links_event","bytes":4096},{"name":"idx_job_dependencies_parent","bytes":4096},{"name":"idx_investigation_observations_source","bytes":4096},{"name":"idx_intel_reasoning_unique","bytes":4096},{"name":"idx_ingestion_batches_source_batch","bytes":4096},{"name":"idx_inbox_decisions_id","bytes":4096},{"name":"idx_inbox_candidates_queue","bytes":4096},{"name":"idx_inbox_candidates_domain","bytes":4096},{"name":"idx_inbox_candidates_decided","bytes":4096},{"name":"idx_inbox_candidates_cluster","bytes":4096},{"name":"idx_hypotheses_test","bytes":4096},{"name":"idx_hunter_requests_key","bytes":4096},{"name":"idx_hunter_proposals_key","bytes":4096},{"name":"idx_hunter_operations_external","bytes":4096},{"name":"idx_hunter_operations_campaign","bytes":4096},{"name":"idx_human_checkpoints_open","bytes":4096},{"name":"idx_health_checks_component","bytes":4096},{"name":"idx_findings_source_record","bytes":4096},{"name":"idx_finder_outcomes_id","bytes":4096},{"name":"idx_finder_outcomes_domain","bytes":4096},{"name":"idx_finder_hunts_state","bytes":4096},{"name":"idx_feedback_push","bytes":4096},{"name":"idx_experiment_assignments_subject","bytes":4096},{"name":"idx_experience_source","bytes":4096},{"name":"idx_experience_action","bytes":4096},{"name":"idx_evidence_versions_hash","bytes":4096},{"name":"idx_evidence_gaps_unique","bytes":4096},{"name":"idx_evidence_gaps_status","bytes":4096},{"name":"idx_event_store_investigation","bytes":4096},{"name":"idx_event_store_event_id","bytes":4096},{"name":"idx_event_store_dispatch","bytes":4096},{"name":"idx_event_store_correlation","bytes":4096},{"name":"idx_event_deliveries_once","bytes":4096},{"name":"idx_event_deliveries_dispatch","bytes":4096},{"name":"idx_event_dead_letters_open","bytes":4096},{"name":"idx_entity_snapshots_subject","bytes":4096},{"name":"idx_entity_changes_subject","bytes":4096},{"name":"idx_entity_aliases_identity","bytes":4096},{"name":"idx_entity_aliases_entity","bytes":4096},{"name":"idx_discovery_paths_source_record","bytes":4096},{"name":"idx_director_actions_pending","bytes":4096},{"name":"idx_dead_letters_module_unresolved","bytes":4096},{"name":"idx_contradictions_fingerprint","bytes":4096},{"name":"idx_campaigns_due","bytes":4096},{"name":"idx_campaign_meta_work_item","bytes":4096},{"name":"idx_campaign_members_investigation","bytes":4096},{"name":"idx_campaign_members_domain","bytes":4096},{"name":"idx_campaign_lineage_campaign","bytes":4096},{"name":"idx_campaign_edges_unique","bytes":4096},{"name":"idx_campaign_edges_campaign","bytes":4096},{"name":"idx_campaign_costs_ref","bytes":4096},{"name":"idx_campaign_artifacts_campaign","bytes":4096},{"name":"idx_budget_ledger_ref","bytes":4096},{"name":"idx_budget_ledger_day","bytes":4096},{"name":"idx_automation_rules_trigger","bytes":4096},{"name":"idx_audit_log_resource","bytes":4096},{"name":"idx_audit_log_actor_time","bytes":4096},{"name":"idx_ai_decisions_subject","bytes":4096},{"name":"idx_agent_steps_no","bytes":4096},{"name":"idx_agent_steps_job","bytes":4096},{"name":"idx_agent_steps_investigation","bytes":4096},{"name":"idx_agent_steps_fingerprint","bytes":4096},{"name":"idx_agent_runs_due","bytes":4096},{"name":"idx_agent_runs_active","bytes":4096},{"name":"idx_agent_model_calls_run","bytes":4096},{"name":"idx_agent_inferences_investigation","bytes":4096},{"name":"hypotheses","bytes":4096},{"name":"hunter_requests","bytes":4096},{"name":"hunter_proposals","bytes":4096},{"name":"human_checkpoints","bytes":4096},{"name":"health_checks","bytes":4096},{"name":"findings","bytes":4096},{"name":"finder_outcomes","bytes":4096},{"name":"finder_hunts","bytes":4096},{"name":"experiment_assignments","bytes":4096},{"name":"experience","bytes":4096},{"name":"expansion_candidates","bytes":4096},{"name":"evidence_versions","bytes":4096},{"name":"evidence_quality","bytes":4096},{"name":"event_store","bytes":4096},{"name":"event_deliveries","bytes":4096},{"name":"event_dead_letters","bytes":4096},{"name":"entity_snapshots","bytes":4096},{"name":"entity_facets","bytes":4096},{"name":"entity_changes","bytes":4096},{"name":"entity_analysis_state","bytes":4096},{"name":"entity_aliases","bytes":4096},{"name":"discovery_paths","bytes":4096},{"name":"discovery_feedback","bytes":4096},{"name":"director_retries","bytes":4096},{"name":"director_resources","bytes":4096},{"name":"director_reservations","bytes":4096},{"name":"director_provider_health","bytes":4096},{"name":"director_investigations","bytes":4096},{"name":"director_actions","bytes":4096},{"name":"dead_letters","bytes":4096},{"name":"cross_investigation_overlaps","bytes":4096},{"name":"contradictions","bytes":4096},{"name":"campaigns","bytes":4096},{"name":"campaign_meta","bytes":4096},{"name":"campaign_members","bytes":4096},{"name":"campaign_lineage","bytes":4096},{"name":"campaign_edges","bytes":4096},{"name":"campaign_costs","bytes":4096},{"name":"campaign_artifacts","bytes":4096},{"name":"budget_limits","bytes":4096},{"name":"budget_ledger","bytes":4096},{"name":"autonomy_searches","bytes":4096},{"name":"autonomy_search_due","bytes":4096},{"name":"autonomy_report_claims","bytes":4096},{"name":"autonomy_checkpoints","bytes":4096},{"name":"autonomy_candidate_claims","bytes":4096},{"name":"autonomy_attention","bytes":4096},{"name":"automation_rules","bytes":4096},{"name":"automation_profiles","bytes":4096},{"name":"audit_log","bytes":4096},{"name":"approval_gates","bytes":4096},{"name":"analyst_conclusions","bytes":4096},{"name":"ai_decisions","bytes":4096},{"name":"agent_steps","bytes":4096},{"name":"agent_settings","bytes":4096},{"name":"agent_runs","bytes":4096},{"name":"agent_model_calls","bytes":4096},{"name":"agent_inferences","bytes":4096},{"name":"adaptive_portfolio_time","bytes":4096},{"name":"adaptive_portfolio","bytes":4096},{"name":"adaptive_parking","bytes":4096},{"name":"adaptive_budget_adjustments","bytes":4096}]},"scope":"Local file-backed SQLite through the D1 double and the real Main API routes; not a remote D1 service-level measurement."}
+--- full-autonomy 7/9: node --experimental-sqlite --import tsx tests/autonomy-v9.mjs
+(node:16112) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+[Database] Initialized new database at /tmp/autonomy-v9-ry935o/wallet/data/wallet_investigator.sqlite
+[Migrations] Applying migration v1: 001_initial_schema...
+[Migrations] Applying migration v2: 002_indexes_and_views...
+[Migrations] Migration status: 2 applied. Current schema version: v2
+[MainPlatformV6] Initialized integration module 'wallet_investigator' with capabilities: [
+  'blockchain-analysis',
+  'wallet-validation',
+  'counterparty-discovery',
+  'fund-flow-analysis',
+  'controlled-wallet-expansion'
+]
+PASS {"scenario":"public","related_discovery":null,"state":"Submitted","human_actions":2,"human_action_events":[{"action":"Investigate Site"},{"action":"Approve & Submit"}],"manual_tool_transitions":0,"deposit_recall":1,"deposit_precision":1,"validated_wallets":1,"automatic_reports":1,"jobs":1,"total_jobs_after_submission":2,"time_to_readiness_ms":1745,"duplicate_jobs":0,"duplicate_reports":0,"unnecessary_questions":0}
+PASS {"scenario":"login","related_discovery":null,"state":"Submitted","human_actions":3,"human_action_events":[{"action":"Investigate Site"},{"action":"normal site interaction","control":"Sign in normally"},{"action":"Approve & Submit"}],"manual_tool_transitions":0,"deposit_recall":1,"deposit_precision":1,"validated_wallets":1,"automatic_reports":1,"jobs":2,"total_jobs_after_submission":3,"time_to_readiness_ms":1376,"duplicate_jobs":0,"duplicate_reports":0,"unnecessary_questions":0}
+PASS {"scenario":"modal","related_discovery":null,"state":"Submitted","human_actions":3,"human_action_events":[{"action":"Investigate Site"},{"action":"normal site interaction","control":"Open deposit"},{"action":"Approve & Submit"}],"manual_tool_transitions":0,"deposit_recall":1,"deposit_precision":1,"validated_wallets":1,"automatic_reports":1,"jobs":1,"total_jobs_after_submission":2,"time_to_readiness_ms":1398,"duplicate_jobs":0,"duplicate_reports":0,"unnecessary_questions":0}
+PASS {"scenario":"qr","related_discovery":null,"state":"Submitted","human_actions":2,"human_action_events":[{"action":"Investigate Site"},{"action":"Approve & Submit"}],"manual_tool_transitions":0,"deposit_recall":1,"deposit_precision":1,"validated_wallets":1,"automatic_reports":1,"jobs":1,"total_jobs_after_submission":2,"time_to_readiness_ms":1442,"duplicate_jobs":0,"duplicate_reports":0,"unnecessary_questions":0}
+PASS {"scenario":"dynamic","related_discovery":null,"state":"Submitted","human_actions":3,"human_action_events":[{"action":"Investigate Site"},{"action":"normal site interaction","control":"Show account details"},{"action":"Approve & Submit"}],"manual_tool_transitions":0,"deposit_recall":1,"deposit_precision":1,"validated_wallets":1,"automatic_reports":1,"jobs":1,"total_jobs_after_submission":2,"time_to_readiness_ms":1353,"duplicate_jobs":0,"duplicate_reports":0,"unnecessary_questions":0}
+PASS {"scenario":"decoys","related_discovery":null,"state":"Submitted","human_actions":2,"human_action_events":[{"action":"Investigate Site"},{"action":"Approve & Submit"}],"manual_tool_transitions":0,"deposit_recall":1,"deposit_precision":1,"validated_wallets":1,"automatic_reports":1,"jobs":5,"total_jobs_after_submission":6,"time_to_readiness_ms":1548,"duplicate_jobs":0,"duplicate_reports":0,"unnecessary_questions":0}
+PASS {"scenario":"ambiguous","related_discovery":null,"state":"Needs you","human_actions":1,"human_action_events":[{"action":"Investigate Site"}],"manual_tool_transitions":0,"deposit_recall":null,"deposit_precision":1,"validated_wallets":0,"automatic_reports":0,"jobs":1,"total_jobs_after_submission":1,"time_to_readiness_ms":244,"duplicate_jobs":0,"duplicate_reports":0,"unnecessary_questions":0}
+[ProviderManager] Provider V9FixtureChain failed: Fixture provider unavailable. Attempting failover...
+PASS {"scenario":"outage","related_discovery":null,"state":"Submitted","human_actions":2,"human_action_events":[{"action":"Investigate Site"},{"action":"Approve & Submit"}],"manual_tool_transitions":0,"deposit_recall":1,"deposit_precision":1,"validated_wallets":1,"automatic_reports":1,"jobs":2,"total_jobs_after_submission":3,"time_to_readiness_ms":2513,"duplicate_jobs":0,"duplicate_reports":0,"unnecessary_questions":0}
+PASS {"scenario":"browser-restart","related_discovery":null,"state":"Submitted","human_actions":2,"human_action_events":[{"action":"Investigate Site"},{"action":"Approve & Submit"}],"manual_tool_transitions":0,"deposit_recall":1,"deposit_precision":1,"validated_wallets":1,"automatic_reports":1,"jobs":1,"total_jobs_after_submission":2,"time_to_readiness_ms":1443,"duplicate_jobs":0,"duplicate_reports":0,"unnecessary_questions":0}
+PASS {"scenario":"main-restart","related_discovery":null,"state":"Submitted","human_actions":2,"human_action_events":[{"action":"Investigate Site"},{"action":"Approve & Submit"}],"manual_tool_transitions":0,"deposit_recall":1,"deposit_precision":1,"validated_wallets":1,"automatic_reports":1,"jobs":1,"total_jobs_after_submission":2,"time_to_readiness_ms":2993,"duplicate_jobs":0,"duplicate_reports":0,"unnecessary_questions":0}
+PASS {"scenario":"wallet-change","related_discovery":null,"state":"Submitted","human_actions":2,"human_action_events":[{"action":"Investigate Site"},{"action":"Approve & Submit"}],"manual_tool_transitions":0,"deposit_recall":1,"deposit_precision":1,"validated_wallets":2,"automatic_reports":1,"jobs":2,"total_jobs_after_submission":3,"time_to_readiness_ms":2832,"duplicate_jobs":0,"duplicate_reports":0,"unnecessary_questions":0}
+PASS {"scenario":"related","related_discovery":{"domain":"v9-related-next.example","source":"real Finder public discovery"},"state":"Submitted","human_actions":2,"human_action_events":[{"action":"Investigate Site"},{"action":"Approve & Submit"}],"manual_tool_transitions":0,"deposit_recall":1,"deposit_precision":1,"validated_wallets":1,"automatic_reports":1,"jobs":2,"total_jobs_after_submission":3,"time_to_readiness_ms":6004,"duplicate_jobs":0,"duplicate_reports":0,"unnecessary_questions":0}
+PASS {"scenario":"no-wallet","related_discovery":null,"state":"Parked","human_actions":1,"human_action_events":[{"action":"Investigate Site"}],"manual_tool_transitions":0,"deposit_recall":null,"deposit_precision":null,"validated_wallets":0,"automatic_reports":0,"jobs":0,"total_jobs_after_submission":0,"time_to_readiness_ms":199,"duplicate_jobs":0,"duplicate_reports":0,"unnecessary_questions":0}
+PASS {"scenario":"unsafe","related_discovery":null,"state":"Parked","human_actions":1,"human_action_events":[{"action":"Investigate Site"}],"manual_tool_transitions":0,"deposit_recall":null,"deposit_precision":null,"validated_wallets":0,"automatic_reports":0,"jobs":1,"total_jobs_after_submission":1,"time_to_readiness_ms":352,"duplicate_jobs":0,"duplicate_reports":0,"unnecessary_questions":0}
+{"ok":true,"scenarios":[{"scenario":"public","related_discovery":null,"state":"Submitted","human_actions":2,"human_action_events":[{"action":"Investigate Site"},{"action":"Approve & Submit"}],"manual_tool_transitions":0,"deposit_recall":1,"deposit_precision":1,"validated_wallets":1,"automatic_reports":1,"jobs":1,"total_jobs_after_submission":2,"time_to_readiness_ms":1745,"duplicate_jobs":0,"duplicate_reports":0,"unnecessary_questions":0},{"scenario":"login","related_discovery":null,"state":"Submitted","human_actions":3,"human_action_events":[{"action":"Investigate Site"},{"action":"normal site interaction","control":"Sign in normally"},{"action":"Approve & Submit"}],"manual_tool_transitions":0,"deposit_recall":1,"deposit_precision":1,"validated_wallets":1,"automatic_reports":1,"jobs":2,"total_jobs_after_submission":3,"time_to_readiness_ms":1376,"duplicate_jobs":0,"duplicate_reports":0,"unnecessary_questions":0},{"scenario":"modal","related_discovery":null,"state":"Submitted","human_actions":3,"human_action_events":[{"action":"Investigate Site"},{"action":"normal site interaction","control":"Open deposit"},{"action":"Approve & Submit"}],"manual_tool_transitions":0,"deposit_recall":1,"deposit_precision":1,"validated_wallets":1,"automatic_reports":1,"jobs":1,"total_jobs_after_submission":2,"time_to_readiness_ms":1398,"duplicate_jobs":0,"duplicate_reports":0,"unnecessary_questions":0},{"scenario":"qr","related_discovery":null,"state":"Submitted","human_actions":2,"human_action_events":[{"action":"Investigate Site"},{"action":"Approve & Submit"}],"manual_tool_transitions":0,"deposit_recall":1,"deposit_precision":1,"validated_wallets":1,"automatic_reports":1,"jobs":1,"total_jobs_after_submission":2,"time_to_readiness_ms":1442,"duplicate_jobs":0,"duplicate_reports":0,"unnecessary_questions":0},{"scenario":"dynamic","related_discovery":null,"state":"Submitted","human_actions":3,"human_action_events":[{"action":"Investigate Site"},{"action":"normal site interaction","control":"Show account details"},{"action":"Approve & Submit"}],"manual_tool_transitions":0,"deposit_recall":1,"deposit_precision":1,"validated_wallets":1,"automatic_reports":1,"jobs":1,"total_jobs_after_submission":2,"time_to_readiness_ms":1353,"duplicate_jobs":0,"duplicate_reports":0,"unnecessary_questions":0},{"scenario":"decoys","related_discovery":null,"state":"Submitted","human_actions":2,"human_action_events":[{"action":"Investigate Site"},{"action":"Approve & Submit"}],"manual_tool_transitions":0,"deposit_recall":1,"deposit_precision":1,"validated_wallets":1,"automatic_reports":1,"jobs":5,"total_jobs_after_submission":6,"time_to_readiness_ms":1548,"duplicate_jobs":0,"duplicate_reports":0,"unnecessary_questions":0},{"scenario":"ambiguous","related_discovery":null,"state":"Needs you","human_actions":1,"human_action_events":[{"action":"Investigate Site"}],"manual_tool_transitions":0,"deposit_recall":null,"deposit_precision":1,"validated_wallets":0,"automatic_reports":0,"jobs":1,"total_jobs_after_submission":1,"time_to_readiness_ms":244,"duplicate_jobs":0,"duplicate_reports":0,"unnecessary_questions":0},{"scenario":"outage","related_discovery":null,"state":"Submitted","human_actions":2,"human_action_events":[{"action":"Investigate Site"},{"action":"Approve & Submit"}],"manual_tool_transitions":0,"deposit_recall":1,"deposit_precision":1,"validated_wallets":1,"automatic_reports":1,"jobs":2,"total_jobs_after_submission":3,"time_to_readiness_ms":2513,"duplicate_jobs":0,"duplicate_reports":0,"unnecessary_questions":0},{"scenario":"browser-restart","related_discovery":null,"state":"Submitted","human_actions":2,"human_action_events":[{"action":"Investigate Site"},{"action":"Approve & Submit"}],"manual_tool_transitions":0,"deposit_recall":1,"deposit_precision":1,"validated_wallets":1,"automatic_reports":1,"jobs":1,"total_jobs_after_submission":2,"time_to_readiness_ms":1443,"duplicate_jobs":0,"duplicate_reports":0,"unnecessary_questions":0},{"scenario":"main-restart","related_discovery":null,"state":"Submitted","human_actions":2,"human_action_events":[{"action":"Investigate Site"},{"action":"Approve & Submit"}],"manual_tool_transitions":0,"deposit_recall":1,"deposit_precision":1,"validated_wallets":1,"automatic_reports":1,"jobs":1,"total_jobs_after_submission":2,"time_to_readiness_ms":2993,"duplicate_jobs":0,"duplicate_reports":0,"unnecessary_questions":0},{"scenario":"wallet-change","related_discovery":null,"state":"Submitted","human_actions":2,"human_action_events":[{"action":"Investigate Site"},{"action":"Approve & Submit"}],"manual_tool_transitions":0,"deposit_recall":1,"deposit_precision":1,"validated_wallets":2,"automatic_reports":1,"jobs":2,"total_jobs_after_submission":3,"time_to_readiness_ms":2832,"duplicate_jobs":0,"duplicate_reports":0,"unnecessary_questions":0},{"scenario":"related","related_discovery":{"domain":"v9-related-next.example","source":"real Finder public discovery"},"state":"Submitted","human_actions":2,"human_action_events":[{"action":"Investigate Site"},{"action":"Approve & Submit"}],"manual_tool_transitions":0,"deposit_recall":1,"deposit_precision":1,"validated_wallets":1,"automatic_reports":1,"jobs":2,"total_jobs_after_submission":3,"time_to_readiness_ms":6004,"duplicate_jobs":0,"duplicate_reports":0,"unnecessary_questions":0},{"scenario":"no-wallet","related_discovery":null,"state":"Parked","human_actions":1,"human_action_events":[{"action":"Investigate Site"}],"manual_tool_transitions":0,"deposit_recall":null,"deposit_precision":null,"validated_wallets":0,"automatic_reports":0,"jobs":0,"total_jobs_after_submission":0,"time_to_readiness_ms":199,"duplicate_jobs":0,"duplicate_reports":0,"unnecessary_questions":0},{"scenario":"unsafe","related_discovery":null,"state":"Parked","human_actions":1,"human_action_events":[{"action":"Investigate Site"}],"manual_tool_transitions":0,"deposit_recall":null,"deposit_precision":null,"validated_wallets":0,"automatic_reports":0,"jobs":1,"total_jobs_after_submission":1,"time_to_readiness_ms":352,"duplicate_jobs":0,"duplicate_reports":0,"unnecessary_questions":0}],"submissions":11,"provider_adapter_calls":13,"module_trace":[{"cmd":"investigator","ran":false,"sites":[],"evidence":0,"requests":[]},{"cmd":"finder","ran":{"claimed":true,"job_id":"373cfb85-7bb8-4bf1-9d6d-b3198fbb18c0","job_type":"DISCOVER_SITES","ran":true,"v2":{"ran":true,"cycle":1,"round":1,"sources":["ct_learned","cert_siblings","ct_terms"],"delivered":0,"delivered_domains":[],"new_unique":0,"new_infrastructure":0,"novel_ecosystems":0,"duplicate_sightings":0,"new_site_rate":0,"duplicate_rate":0,"near_duplicate_new":0,"near_duplicate_rate":0,"useful_new_site_rate_cumulative":0,"source_novelty":{"ct_learned":0,"cert_siblings":0,"ct_terms":0},"rediscovered":[],"aged":0,"ecosystem_suppressed_total":0,"watch":{"checked":0,"changed":0,"changes":[],"dns_used":0},"probed":0,"budget":{"limits":{"http":120,"dns":600,"crtsh":12,"rdap":60},"used":{"http":0,"dns":0,"crtsh":12,"rdap":0}},"recovered_interrupted":0,"saturated":true}},"sync":{"sent":0,"duplicates":0,"failed":0,"rejected":0,"passes":1,"still_pending":0,"note":"0 batch(es) sent over 1 pass(es); 0 still queued."},"requests":["https://crt.sh/?q=%25defi%25&output=json","https://crt.sh/?q=%25claim%25&output=json","https://crt.sh/?q=%25airdrop%25&output=json","https://crt.sh/?q=%25exchange%25&output=json","https://crt.sh/?q=%25bit%25&output=json","https://crt.sh/?q=%25arbitrage%25&output=json","https://crt.sh/?q=%25yield%25&output=json","https://crt.sh/?q=%25fx%25&output=json","https://crt.sh/?q=%25crypto%25&output=json","https://crt.sh/?q=%25profit%25&output=json","https://crt.sh/?q=%25coin%25&output=json","https://crt.sh/?q=%25h5%25&output=json"],"costs":{"http":0,"dns":0,"crtsh":12,"rdap":0,"feed":0},"candidates":[]},{"cmd":"investigator","ran":false,"sites":[],"evidence":0,"requests":[]},{"cmd":"finder","ran":{"claimed":true,"job_id":"0a2683b1-d4ec-4ae5-a9a2-1a063724f88a","job_type":"FIND_RELATED_SITES","ran":true,"v2":{"seed":"v9-related.example","round":2,"delivered":1,"campaign_key":"v2:round:2:v9-related.example","new_candidates":["v9-related-next.example"],"hunt":"campaign:v9-related.example","meter":{"limits":{"http":40,"dns":40,"crtsh":4,"rdap":6},"used":{"http":4,"dns":24,"crtsh":4,"rdap":2}}}},"sync":{"sent":1,"duplicates":0,"failed":0,"rejected":0,"passes":2,"still_pending":0,"note":"1 batch(es) sent over 2 pass(es); 0 still queued."},"requests":["https://urlscan.io/api/v1/search/?q=page.title%3A%22Asset+Recovery%22&size=100","https://urlscan.io/api/v1/search/?q=page.title%3A%22USDT+Mining%22&size=100","https://urlscan.io/api/v1/search/?q=page.title%3A%22Cloud+Mining%22&size=100","https://urlscan.io/api/v1/search/?q=page.title%3A%22Crypto+Recovery%22&size=100","https://urlscan.io/api/v1/search/?q=page.title%3A%22Daily+Profit%22&size=100","https://urlscan.io/api/v1/search/?q=page.title%3A%22Buy+%26+Sell+Crypto%22&size=100","https://urlscan.io/api/v1/search/?q=page.title%3A%22Arbitrage%22&size=100","https://urlscan.io/api/v1/search/?q=page.title%3A%22AI+Trading%22&size=100","https://urlscan.io/api/v1/search/?q=page.title%3A%22Liquidity+Mining%22&size=100","https://crt.sh/?q=v9-related.example&output=json","dns://v9-related1.example","dns://v9-related2.example","dns://v9-related3.example","dns://v9-related5.example","dns://v9-related8.example","dns://v9-related24.example","dns://v9-related88.example","dns://v9-related-app.example","dns://v9-related-pro.example","dns://v9-related-vip.example","dns://v9-related-global.example","dns://myv9-related.example","dns://gov9-related.example","dns://v9-related.com","dns://v9-related.net","dns://v9-related.top","dns://v9-related.xyz","dns://v9-related.vip","dns://v9-related.app","dns://v9-related.cc","https://crt.sh/?q=%25v9-related%25&output=json","https://crt.sh/?q=v9-related.example&output=json","https://crt.sh/?q=%25v9-related%25&output=json","dns://v9-related.example","https://v9-related.example/","https://rdap.org/domain/v9-related.example","https://v9-related.example/favicon.ico","dns://v9-related-next.example","https://v9-related-next.example/","https://rdap.org/domain/v9-related-next.example","https://v9-related-next.example/favicon.ico"],"costs":{"http":4,"dns":22,"crtsh":4,"rdap":2,"feed":0,"page_search":9},"candidates":[{"domain":"v9-related.example","status":"suppressed","p":0.9606,"gate":null,"suppressed":"mirror of v9-related-next.example (same build or cluster, no new wallet)","keys":[["contact","v9support"],["dom","dom:18d10bf0b258aac3"],["ip","104.21.12.34"],["simhash","030e531f51e47bb4"],["title","account payment information"],["tmpl","f1f99402c7faf393eac6"],["wallet","0xb0B7BeC5cCD3dAE1e8EFF6fD040b121920272E35"]]},{"domain":"v9-related-next.example","status":"ready","p":0.9649,"gate":null,"suppressed":null,"keys":[["contact","v9support"],["dom","dom:91da5fde3fa3756b"],["ip","104.21.12.34"],["simhash","020e515f13e07324"],["title","account payment information"],["tmpl","ff2b14f78fcf1202efcc"],["wallet","0xb0B7BeC5cCD3dAE1e8EFF6fD040b121920272E35"]]}]},{"cmd":"investigator","ran":false,"sites":[],"evidence":0,"requests":[]},{"cmd":"finder","ran":{"claimed":false,"reason":"No work waiting."},"sync":{"sent":0,"duplicates":0,"failed":0,"rejected":0,"passes":1,"still_pending":0,"note":"0 batch(es) sent over 1 pass(es); 0 still queued."},"requests":[],"costs":{"http":0,"dns":0,"crtsh":0,"rdap":0,"feed":0},"candidates":[{"domain":"v9-related.example","status":"suppressed","p":0.9606,"gate":null,"suppressed":"mirror of v9-related-next.example (same build or cluster, no new wallet)","keys":[["contact","v9support"],["dom","dom:18d10bf0b258aac3"],["ip","104.21.12.34"],["simhash","030e531f51e47bb4"],["title","account payment information"],["tmpl","f1f99402c7faf393eac6"],["wallet","0xb0B7BeC5cCD3dAE1e8EFF6fD040b121920272E35"]]},{"domain":"v9-related-next.example","status":"ready","p":0.9649,"gate":null,"suppressed":null,"keys":[["contact","v9support"],["dom","dom:91da5fde3fa3756b"],["ip","104.21.12.34"],["simhash","020e515f13e07324"],["title","account payment information"],["tmpl","ff2b14f78fcf1202efcc"],["wallet","0xb0B7BeC5cCD3dAE1e8EFF6fD040b121920272E35"]]}]},{"cmd":"investigator","ran":false,"sites":[],"evidence":0,"requests":[]},{"cmd":"finder","ran":{"claimed":false,"reason":"No work waiting."},"sync":{"sent":0,"duplicates":0,"failed":0,"rejected":0,"passes":1,"still_pending":0,"note":"0 batch(es) sent over 1 pass(es); 0 still queued."},"requests":[],"costs":{"http":0,"dns":0,"crtsh":0,"rdap":0,"feed":0},"candidates":[{"domain":"v9-related.example","status":"suppressed","p":0.9606,"gate":null,"suppressed":"mirror of v9-related-next.example (same build or cluster, no new wallet)","keys":[["contact","v9support"],["dom","dom:18d10bf0b258aac3"],["ip","104.21.12.34"],["simhash","030e531f51e47bb4"],["title","account payment information"],["tmpl","f1f99402c7faf393eac6"],["wallet","0xb0B7BeC5cCD3dAE1e8EFF6fD040b121920272E35"]]},{"domain":"v9-related-next.example","status":"ready","p":0.9649,"gate":null,"suppressed":null,"keys":[["contact","v9support"],["dom","dom:91da5fde3fa3756b"],["ip","104.21.12.34"],["simhash","020e515f13e07324"],["title","account payment information"],["tmpl","ff2b14f78fcf1202efcc"],["wallet","0xb0B7BeC5cCD3dAE1e8EFF6fD040b121920272E35"]]}]},{"cmd":"investigator","ran":false,"sites":[],"evidence":0,"requests":[]},{"cmd":"finder","ran":{"claimed":false,"reason":"No work waiting."},"sync":{"sent":0,"duplicates":0,"failed":0,"rejected":0,"passes":1,"still_pending":0,"note":"0 batch(es) sent over 1 pass(es); 0 still queued."},"requests":[],"costs":{"http":0,"dns":0,"crtsh":0,"rdap":0,"feed":0},"candidates":[{"domain":"v9-related.example","status":"suppressed","p":0.9606,"gate":null,"suppressed":"mirror of v9-related-next.example (same build or cluster, no new wallet)","keys":[["contact","v9support"],["dom","dom:18d10bf0b258aac3"],["ip","104.21.12.34"],["simhash","030e531f51e47bb4"],["title","account payment information"],["tmpl","f1f99402c7faf393eac6"],["wallet","0xb0B7BeC5cCD3dAE1e8EFF6fD040b121920272E35"]]},{"domain":"v9-related-next.example","status":"ready","p":0.9649,"gate":null,"suppressed":null,"keys":[["contact","v9support"],["dom","dom:91da5fde3fa3756b"],["ip","104.21.12.34"],["simhash","020e515f13e07324"],["title","account payment information"],["tmpl","ff2b14f78fcf1202efcc"],["wallet","0xb0B7BeC5cCD3dAE1e8EFF6fD040b121920272E35"]]}]},{"cmd":"investigator","ran":false,"sites":[],"evidence":0,"requests":[]},{"cmd":"finder","ran":{"claimed":false,"reason":"No work waiting."},"sync":{"sent":0,"duplicates":0,"failed":0,"rejected":0,"passes":1,"still_pending":0,"note":"0 batch(es) sent over 1 pass(es); 0 still queued."},"requests":[],"costs":{"http":0,"dns":0,"crtsh":0,"rdap":0,"feed":0},"candidates":[{"domain":"v9-related.example","status":"suppressed","p":0.9606,"gate":null,"suppressed":"mirror of v9-related-next.example (same build or cluster, no new wallet)","keys":[["contact","v9support"],["dom","dom:18d10bf0b258aac3"],["ip","104.21.12.34"],["simhash","030e531f51e47bb4"],["title","account payment information"],["tmpl","f1f99402c7faf393eac6"],["wallet","0xb0B7BeC5cCD3dAE1e8EFF6fD040b121920272E35"]]},{"domain":"v9-related-next.example","status":"ready","p":0.9649,"gate":null,"suppressed":null,"keys":[["contact","v9support"],["dom","dom:91da5fde3fa3756b"],["ip","104.21.12.34"],["simhash","020e515f13e07324"],["title","account payment information"],["tmpl","ff2b14f78fcf1202efcc"],["wallet","0xb0B7BeC5cCD3dAE1e8EFF6fD040b121920272E35"]]}]}],"rendered_scope":"Rendered real content.js with Chrome message transport shim; installed extension lifecycle not exercised.","metric_limits":"Fixture browser interactions are individually counted. API acknowledgement replays, independent rate-limit windows, clock acceleration and automatic scheduler/worker steps are not human actions. Timing excludes shared browser fixture preparation; no live-provider accuracy claim."}
+--- full-autonomy 8/9: SCIENTIFIC_HELD_OUT=1 ADAPTIVE_SEEDS=101,203,307,409,503,607,709,811 node --import tsx tests/autonomy-decision-benchmark.mjs
+{
+ "states": 64,
+ "summary": {
+  "v7-exploit": {
+   "states": 64,
+   "optimal_choice_rate": 0.625,
+   "near_optimal_rate": 0.672,
+   "mean_regret": 0.244,
+   "total_regret": 15.617
+  },
+  "v7": {
+   "states": 64,
+   "optimal_choice_rate": 0.625,
+   "near_optimal_rate": 0.672,
+   "mean_regret": 0.271,
+   "total_regret": 17.325
+  },
+  "v6": {
+   "states": 64,
+   "optimal_choice_rate": 0.031,
+   "near_optimal_rate": 0.031,
+   "mean_regret": 2.16,
+   "total_regret": 138.241
+  },
+  "v8": {
+   "states": 64,
+   "optimal_choice_rate": 0.578,
+   "near_optimal_rate": 0.625,
+   "mean_regret": 0.261,
+   "total_regret": 16.717
+  },
+  "v9": {
+   "states": 64,
+   "optimal_choice_rate": 0.688,
+   "near_optimal_rate": 0.734,
+   "mean_regret": 0.176,
+   "total_regret": 11.264
+  },
+  "cheapest": {
+   "states": 64,
+   "optimal_choice_rate": 0.438,
+   "near_optimal_rate": 0.484,
+   "mean_regret": 0.805,
+   "total_regret": 51.491
+  },
+  "random": {
+   "states": 64,
+   "optimal_choice_rate": 0.359,
+   "near_optimal_rate": 0.359,
+   "mean_regret": 0.895,
+   "total_regret": 57.262
+  },
+  "confirmation": {
+   "states": 64,
+   "optimal_choice_rate": 0.391,
+   "near_optimal_rate": 0.391,
+   "mean_regret": 0.41,
+   "total_regret": 26.21
+  }
+ },
+ "by_type": {
+  "useful_vs_saturated_finder_branch": {
+   "v7-exploit": "5/8 regret 4.304",
+   "v7": "5/8 regret 4.304",
+   "v6": "0/8 regret 33.231",
+   "v8": "2/8 regret 4.819",
+   "v9": "5/8 regret 4.304",
+   "cheapest": "5/8 regret 4.304",
+   "random": "1/8 regret 13.217",
+   "confirmation": "2/8 regret 4.819"
+  },
+  "generic_template_vs_discriminating_wallet": {
+   "v7-exploit": "4/8 regret 0.753",
+   "v7": "4/8 regret 0.753",
+   "v6": "2/8 regret 5.506",
+   "v8": "4/8 regret 0.753",
+   "v9": "4/8 regret 0.753",
+   "cheapest": "4/8 regret 0.753",
+   "random": "4/8 regret 3.329",
+   "confirmation": "6/8 regret 1.861"
+  },
+  "new_contradiction_vs_confirmation": {
+   "v7-exploit": "4/8 regret 1.302",
+   "v7": "4/8 regret 1.302",
+   "v6": "0/8 regret 5.423",
+   "v8": "4/8 regret 1.302",
+   "v9": "4/8 regret 1.302",
+   "cheapest": "4/8 regret 1.302",
+   "random": "3/8 regret 2.098",
+   "confirmation": "0/8 regret 4.074"
+  },
+  "replacement_hunt_vs_exhausted_artifact": {
+   "v7-exploit": "2/8 regret 4.66",
+   "v7": "4/8 regret 4.311",
+   "v6": "0/8 regret 17.07",
+   "v8": "6/8 regret 0.307",
+   "v9": "6/8 regret 0.307",
+   "cheapest": "2/8 regret 4.66",
+   "random": "1/8 regret 10.964",
+   "confirmation": "2/8 regret 3.039"
+  },
+  "novel_exploration_opportunity": {
+   "v7-exploit": "8/8 regret 0",
+   "v7": "8/8 regret 0",
+   "v6": "0/8 regret 5.067",
+   "v8": "8/8 regret 0",
+   "v9": "8/8 regret 0",
+   "cheapest": "8/8 regret 0",
+   "random": "5/8 regret 1.5",
+   "confirmation": "0/8 regret 5.099"
+  },
+  "two_competing_operations": {
+   "v7-exploit": "7/8 regret 0.926",
+   "v7": "6/8 regret 1.569",
+   "v6": "0/8 regret 24.097",
+   "v8": "7/8 regret 0.926",
+   "v9": "7/8 regret 0.926",
+   "cheapest": "0/8 regret 7.757",
+   "random": "4/8 regret 6.078",
+   "confirmation": "7/8 regret 0.926"
+  },
+  "time_sensitive_disappearing_site": {
+   "v7-exploit": "5/8 regret 2.41",
+   "v7": "5/8 regret 2.41",
+   "v6": "0/8 regret 14.318",
+   "v8": "1/8 regret 7.348",
+   "v9": "5/8 regret 2.41",
+   "cheapest": "5/8 regret 2.41",
+   "random": "4/8 regret 4.731",
+   "confirmation": "3/8 regret 5.13"
+  },
+  "expensive_high_value_vs_cheap_low_value": {
+   "v7-exploit": "5/8 regret 1.262",
+   "v7": "4/8 regret 2.676",
+   "v6": "0/8 regret 33.529",
+   "v8": "5/8 regret 1.262",
+   "v9": "5/8 regret 1.262",
+   "cheapest": "0/8 regret 30.305",
+   "random": "1/8 regret 15.345",
+   "confirmation": "5/8 regret 1.262"
+  }
+ }
+}
+--- full-autonomy 9/9: [integrations/wallet-investigator] node --import tsx --test tests/blockscout-v9.test.ts tests/esplora-v9.test.ts
+TAP version 13
+# Subtest: bounded explicit-chain native and ERC-20 records, cursor, no global completeness or key leakage
+ok 1 - bounded explicit-chain native and ERC-20 records, cursor, no global completeness or key leakage
+  ---
+  duration_ms: 24.866821
+  type: 'test'
+  ...
+# Subtest: unavailable endpoint is failure, partial endpoint failure preserves observed records
+ok 2 - unavailable endpoint is failure, partial endpoint failure preserves observed records
+  ---
+  duration_ms: 2.707796
+  type: 'test'
+  ...
+# Subtest: copied pages deduplicate; malformed, unrelated and NFT rows cannot become deposits
+ok 3 - copied pages deduplicate; malformed, unrelated and NFT rows cannot become deposits
+  ---
+  duration_ms: 1.420238
+  type: 'test'
+  ...
+# Subtest: confirmed Bitcoin facts preserve UTXOs and scope, fixed GET-only endpoint
+ok 4 - confirmed Bitcoin facts preserve UTXOs and scope, fixed GET-only endpoint
+  ---
+  duration_ms: 29.526493
+  type: 'test'
+  ...
+# Subtest: finite pages and copies deduplicate, malformed sums and HTTP failure cannot become history
+ok 5 - finite pages and copies deduplicate, malformed sums and HTTP failure cannot become history
+  ---
+  duration_ms: 3.250053
+  type: 'test'
+  ...
+1..5
+# tests 5
+# suites 0
+# pass 5
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 350.581046
+PASS full-autonomy: 9/9 steps passed

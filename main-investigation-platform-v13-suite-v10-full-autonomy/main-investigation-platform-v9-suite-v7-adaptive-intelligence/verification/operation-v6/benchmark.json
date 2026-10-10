@@ -1,0 +1,27 @@
+{
+  "ok": true,
+  "corpus_operations": 3,
+  "authoritative_fixture_relationships": 122,
+  "true_evidence_relationships_recovered": 122,
+  "false_factual_relationships": 0,
+  "unsupported_ownership_claims": 0,
+  "hypotheses": 6,
+  "challenged_hypotheses": 1,
+  "hypotheses_rejected_by_contradiction": 0,
+  "split_correctness": true,
+  "reappearance_detection": true,
+  "human_actions": 2,
+  "time_to_model_ms": 2839.169645,
+  "passed": [
+    "three labeled operation records and misleading shared kit/CDN",
+    "late challenge, replacement domain, wallet change, wave and reappearance retained",
+    "accidental association split survives Hunter replay without provenance loss",
+    "110 redundant overlaps retain one independent unit; common counterparty is not ownership",
+    "used-state restart and identical snapshot replay preserve memory"
+  ],
+  "limitations": [
+    "Fixture graph and Hunter snapshots are supplied inputs, not an end-to-end discovery run.",
+    "Challenged means unlikely in supplied Hunter verdict; no definitive rejection is invented.",
+    "This corpus does not measure autonomous multi-operation inference accuracy or provider outages."
+  ]
+}

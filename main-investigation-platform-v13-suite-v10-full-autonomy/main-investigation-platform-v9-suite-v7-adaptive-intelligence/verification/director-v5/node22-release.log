@@ -1,0 +1,59 @@
+(node:5) [UNDICI-EHPA] Warning: EnvHttpProxyAgent is experimental, expect them to change at any time.
+(Use `node --trace-warnings ...` to show where the warning was created)
+
+=== director (4 steps) ===
+--- director 1/4: node --test tests/director-migration.test.mjs
+(node:13) [UNDICI-EHPA] Warning: EnvHttpProxyAgent is experimental, expect them to change at any time.
+(Use `node --trace-warnings ...` to show where the warning was created)
+TAP version 13
+# (node:20) [UNDICI-EHPA] Warning: EnvHttpProxyAgent is experimental, expect them to change at any time.
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# (node:20) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# Subtest: populated v4 migration and rollback retain candidates, observations, evidence and approval hashes
+ok 1 - populated v4 migration and rollback retain candidates, observations, evidence and approval hashes
+  ---
+  duration_ms: 30.592241
+  type: 'test'
+  ...
+1..1
+# tests 1
+# suites 0
+# pass 1
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 112.542745
+--- director 2/4: node --experimental-sqlite --import tsx --import file:///workspace/scratch/b4f855937e46/main/tests/lib/sqljs-fallback.mjs tests/director-acceptance.mjs
+(node:28) [UNDICI-EHPA] Warning: EnvHttpProxyAgent is experimental, expect them to change at any time.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:28) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(node:28) [UNDICI-EHPA] Warning: EnvHttpProxyAgent is experimental, expect them to change at any time.
+(Use `node --trace-warnings ...` to show where the warning was created)
+{"ok":true,"checks":["durable one-action loop and restart without duplicate public jobs","global resource reservation atomically refuses work across module paths","partial v4 analysis adopted; backoff and refresh identity survive restart","concurrent director ticks create one action and one job","uncertain submission is parked after a lost worker lease","exhausted global budget prevents a new public investigation","shared CDN/template never becomes a director ownership relationship"]}
+--- director 3/4: node --experimental-sqlite --import tsx --import file:///workspace/scratch/b4f855937e46/main/tests/lib/sqljs-fallback.mjs tests/director-provider-recovery.mjs
+(node:67) [UNDICI-EHPA] Warning: EnvHttpProxyAgent is experimental, expect them to change at any time.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:67) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(node:67) [UNDICI-EHPA] Warning: EnvHttpProxyAgent is experimental, expect them to change at any time.
+(Use `node --trace-warnings ...` to show where the warning was created)
+[Database] Initialized new database at /tmp/director-provider-dMHgQq/wallet/data/wallet_investigator.sqlite
+[Migrations] Applying migration v1: 001_initial_schema...
+[Migrations] Applying migration v2: 002_indexes_and_views...
+[Migrations] Migration status: 2 applied. Current schema version: v2
+[MainPlatformV6] Initialized integration module 'wallet_investigator' with capabilities: [
+  'blockchain-analysis',
+  'wallet-validation',
+  'counterparty-discovery',
+  'fund-flow-analysis',
+  'controlled-wallet-expansion'
+]
+{"ok":true,"provider_calls":2,"retry_attempts":1,"restart":true,"cache_bypassed":true,"report_rebuilt":true,"stale_hash_rejected":true,"changed_network_revalidated_without_guessing":true}
+--- director 4/4: node --experimental-sqlite --import tsx --import file:///workspace/scratch/b4f855937e46/main/tests/lib/sqljs-fallback.mjs tests/director-adversarial.mjs
+(node:106) [UNDICI-EHPA] Warning: EnvHttpProxyAgent is experimental, expect them to change at any time.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:106) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(node:106) [UNDICI-EHPA] Warning: EnvHttpProxyAgent is experimental, expect them to change at any time.
+(Use `node --trace-warnings ...` to show where the warning was created)
+{"ok":true,"checks":["flapping provider: three fresh retries, no storm, safe recovery during MFA checkpoint","login: unrelated DNS cannot resume; new authenticated browser evidence can","shared CDN and example text do not establish ownership or a confirmed wallet","nested secret fields rejected before ingestion"]}
+PASS director

@@ -1,0 +1,108 @@
+{
+  "ok": true,
+  "rows": {
+    "entities": 10000,
+    "relationships": 50100,
+    "evidence": 5000,
+    "investigations": 300,
+    "operations": 25,
+    "projected_edges": 50100
+  },
+  "timings": [
+    {
+      "name": "load_10000_entities_50100_relationships",
+      "ms": 563.91
+    },
+    {
+      "name": "director_projection_tick",
+      "ms": 2344.27
+    },
+    {
+      "name": "director_projection_tick",
+      "ms": 2373.97
+    },
+    {
+      "name": "director_projection_tick",
+      "ms": 2171.44
+    },
+    {
+      "name": "director_projection_tick",
+      "ms": 2127
+    },
+    {
+      "name": "director_projection_tick",
+      "ms": 2115.07
+    },
+    {
+      "name": "director_projection_tick",
+      "ms": 2000.97
+    },
+    {
+      "name": "director_projection_tick",
+      "ms": 2094.87
+    },
+    {
+      "name": "director_projection_tick",
+      "ms": 2222.76
+    },
+    {
+      "name": "director_projection_tick",
+      "ms": 2186.53
+    },
+    {
+      "name": "director_projection_tick",
+      "ms": 2216.74
+    },
+    {
+      "name": "director_projection_tick",
+      "ms": 2244.59
+    },
+    {
+      "name": "director_projection_tick",
+      "ms": 2319.57
+    },
+    {
+      "name": "director_projection_tick",
+      "ms": 4239.51
+    },
+    {
+      "name": "briefing_and_graph_first_page",
+      "ms": 15.33
+    },
+    {
+      "name": "paginated_graph_query",
+      "ms": 12.81
+    },
+    {
+      "name": "wallet_view",
+      "ms": 30.45
+    },
+    {
+      "name": "edge_explanation",
+      "ms": 2.84
+    },
+    {
+      "name": "event_processing_10_wakeups",
+      "ms": 281.72
+    },
+    {
+      "name": "idle_portfolio_tick",
+      "ms": 2482.92
+    }
+  ],
+  "memory": {
+    "rss_before_bytes": 179789824,
+    "rss_after_bytes": 425328640,
+    "peak_rss_kb": 415440
+  },
+  "database": {
+    "before_bytes": 2297856,
+    "after_bytes": 99299328,
+    "growth_bytes": 97001472
+  },
+  "limits": {
+    "graph_page": 100,
+    "entity_page": 200,
+    "timeline_page": 100
+  }
+}

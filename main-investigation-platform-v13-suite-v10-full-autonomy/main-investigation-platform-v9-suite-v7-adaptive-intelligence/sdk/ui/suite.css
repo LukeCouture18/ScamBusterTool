@@ -1,0 +1,209 @@
+/*
+ * Main Investigation Platform — shared visual language (canonical copy).
+ *
+ * One set of design tokens and framework-free component classes used by Main and by every
+ * tool's own screens (Site Finder, Site Investigator, Wallet Investigator, Form Submitter,
+ * Wallet Logger extension, Operation Hunter). Edit THIS file, then run
+ *     node scripts/sync-ui-tokens.mjs
+ * which copies it into each tool; tests/ui-tokens.test.mjs fails if a copy drifts.
+ *
+ * Tokens are CSS custom properties prefixed --mip-; classes are prefixed mip-. Nothing here
+ * resets or restyles bare elements outside `.mip`, so it is safe to add to an existing page.
+ */
+:root {
+  --mip-bg: #080c16;
+  --mip-bg-glow: radial-gradient(circle at 58% -20%, #12213b 0, transparent 30%);
+  --mip-surface: #0e1624;
+  --mip-surface-2: #101827;
+  --mip-surface-3: #141d2c;
+  --mip-sidebar: rgba(8, 13, 24, .94);
+  --mip-border: #1e2b3e;
+  --mip-border-strong: #2a3a54;
+  --mip-text: #eef3fb;
+  --mip-text-2: #bfcce0;
+  --mip-muted: #8492a9;
+  --mip-faint: #66758d;
+  --mip-blue: #69a7fa;
+  --mip-blue-strong: #5f9cf6;
+  --mip-blue-bg: #16243b;
+  --mip-green: #48d3a0;
+  --mip-green-bg: #10281f;
+  --mip-amber: #f2b45a;
+  --mip-amber-bg: #2a2111;
+  --mip-red: #f36c77;
+  --mip-red-bg: #2c1419;
+  --mip-violet: #a78bfa;
+  --mip-radius: 10px;
+  --mip-radius-sm: 7px;
+  --mip-shadow: 0 8px 22px rgba(0, 0, 0, .28);
+  --mip-font: "Inter", "Segoe UI", Arial, sans-serif;
+  --mip-mono: "Cascadia Code", "SFMono-Regular", Consolas, monospace;
+}
+
+.mip { color: var(--mip-text); font-family: var(--mip-font); font-size: 14px; line-height: 1.45; }
+.mip-body { margin: 0; min-height: 100vh; background: var(--mip-bg-glow), var(--mip-bg); color: var(--mip-text); font-family: var(--mip-font); }
+.mip *, .mip *::before, .mip *::after { box-sizing: border-box; }
+.mip a { color: inherit; }
+.mip code, .mip .mip-mono { font-family: var(--mip-mono); font-size: 12px; overflow-wrap: anywhere; }
+
+/* ---------------------------------------------------------------- shell */
+.mip-shell { min-height: 100vh; display: grid; grid-template-columns: 244px minmax(0, 1fr); }
+.mip-side { position: fixed; inset: 0 auto 0 0; width: 244px; border-right: 1px solid #1c2739; background: var(--mip-sidebar); backdrop-filter: blur(18px); padding: 22px 14px; display: flex; flex-direction: column; z-index: 20; }
+.mip-brand { display: flex; align-items: center; gap: 11px; padding: 0 9px 22px; border-bottom: 1px solid #1b2638; font-weight: 800; font-size: 15px; letter-spacing: .06em; text-decoration: none; }
+.mip-brand small { display: block; color: #71809a; font-size: 10px; font-weight: 600; letter-spacing: .025em; margin-top: 2px; }
+.mip-brand-mark { display: grid; place-items: center; width: 36px; height: 36px; border: 1px solid #37649b; border-radius: 9px; color: #71afff; background: linear-gradient(145deg, #192c48, #0b1424); }
+.mip-nav { display: flex; flex-direction: column; gap: 4px; padding-top: 18px; }
+.mip-nav-label { margin: 0; padding: 0 12px 8px; font-size: 11px; font-weight: 800; color: var(--mip-faint); letter-spacing: .12em; text-transform: uppercase; }
+.mip-nav a { min-height: 42px; display: flex; align-items: center; gap: 12px; padding: 0 12px; border-radius: 8px; color: #8290a6; font-size: 14px; font-weight: 600; text-decoration: none; }
+.mip-nav a:hover { color: #dfe8f7; background: #111a29; }
+.mip-nav a.active, .mip-nav a[aria-current="page"] { color: #eaf3ff; background: linear-gradient(90deg, #173253, #12233b); box-shadow: inset 3px 0 #64a5fc; }
+.mip-nav a.active svg { color: var(--mip-blue); }
+.mip-nav .mip-count { margin-left: auto; min-width: 20px; padding: 1px 6px; border-radius: 10px; background: var(--mip-amber-bg); color: var(--mip-amber); font-size: 11px; font-weight: 800; text-align: center; font-style: normal; }
+.mip-side-bottom { margin-top: auto; display: grid; gap: 4px; }
+.mip-main { grid-column: 2; min-width: 0; }
+.mip-top { height: 62px; position: sticky; top: 0; z-index: 10; padding: 0 30px; border-bottom: 1px solid #1d283a; background: rgba(8, 13, 23, .84); backdrop-filter: blur(16px); display: flex; align-items: center; justify-content: space-between; gap: 16px; color: #8190a7; font-size: 12px; }
+.mip-page { padding: 30px 30px 60px; max-width: 1400px; margin: 0 auto; }
+@media (max-width: 900px) {
+  /* Phones and narrow windows: the sidebar becomes a top strip of tools that scrolls sideways. */
+  .mip-shell { grid-template-columns: minmax(0, 1fr); }
+  .mip-side { position: sticky; top: 0; inset: auto; width: auto; flex-direction: row; align-items: center; gap: 6px; padding: 8px 12px; border-right: 0; border-bottom: 1px solid #1c2739; overflow-x: auto; scrollbar-width: none; }
+  .mip-brand { padding: 0 6px 0 0; border-bottom: 0; flex: none; }
+  .mip-brand > span:last-child { display: none; }
+  .mip-nav, .mip-side-bottom { flex-direction: row; flex-wrap: nowrap; gap: 2px; padding: 0; margin: 0; display: flex; flex: none; }
+  .mip-nav-label { display: none; }
+  .mip-nav a { min-height: 36px; padding: 0 10px; white-space: nowrap; font-size: 13px; }
+  .mip-nav a.active, .mip-nav a[aria-current="page"] { box-shadow: inset 0 -2px #64a5fc; }
+  .mip-main { grid-column: 1; }
+  .mip-top { position: static; height: auto; min-height: 52px; flex-wrap: wrap; padding: 10px 16px; }
+  .mip-top > * { min-width: 0; max-width: 100%; }
+  .mip-top > .mip-row { flex: 1 1 100%; }
+  .mip-top .ops-cmd { max-width: none; }
+  .mip-page { padding-left: 16px; padding-right: 16px; }
+}
+
+/* ---------------------------------------------------------------- headings */
+.mip-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 20px; margin-bottom: 20px; flex-wrap: wrap; }
+.mip-head h1 { margin: 4px 0 6px; font-size: clamp(24px, 3vw, 32px); line-height: 1.12; letter-spacing: -.03em; display: flex; align-items: center; gap: 12px; }
+.mip-head h1 svg { color: var(--mip-blue); }
+.mip-sub { color: var(--mip-muted); font-size: 14px; margin: 0; max-width: 760px; }
+.mip-eyebrow { margin: 0; font-size: 11px; font-weight: 800; color: var(--mip-faint); letter-spacing: .12em; text-transform: uppercase; }
+.mip h2 { font-size: 15px; margin: 0; letter-spacing: -.01em; }
+.mip h3 { font-size: 13px; margin: 0; color: var(--mip-text-2); }
+
+/* ---------------------------------------------------------------- surfaces */
+.mip-card { background: linear-gradient(145deg, var(--mip-surface-2), #0d1421); border: 1px solid var(--mip-border); border-radius: var(--mip-radius); padding: 18px; min-width: 0; }
+.mip-card-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 12px; }
+.mip-grid { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+.mip-grid.two { grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); }
+.mip-grid.list-detail { grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr); }
+.mip-grid.list-wide { grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); }
+.mip-grid > * { min-width: 0; }
+@media (max-width: 1000px) { .mip-grid.two, .mip-grid.list-detail, .mip-grid.list-wide { grid-template-columns: minmax(0, 1fr); } }
+.mip-stack { display: grid; gap: 14px; }
+.mip-row { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.mip-spread { display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
+.mip-list { display: grid; gap: 8px; margin: 0; padding: 0; list-style: none; }
+.mip-item > *, .mip-stack > * { min-width: 0; }
+.mip-item { display: grid; grid-template-columns: minmax(0, 1fr); gap: 6px; padding: 12px 14px; border: 1px solid var(--mip-border); border-radius: var(--mip-radius-sm); background: var(--mip-surface); }
+.mip-item.selected { border-color: #37649b; box-shadow: inset 3px 0 var(--mip-blue); }
+.mip-item-title { font-weight: 700; color: var(--mip-text); overflow-wrap: anywhere; }
+.mip-meta { color: var(--mip-muted); font-size: 12px; overflow-wrap: anywhere; }
+.mip-kv { display: grid; grid-template-columns: max-content 1fr; gap: 6px 14px; font-size: 13px; }
+.mip-kv dt { color: var(--mip-muted); }
+.mip-kv dd { margin: 0; overflow-wrap: anywhere; }
+.mip-divider { border: 0; border-top: 1px solid var(--mip-border); margin: 14px 0; }
+
+/* ---------------------------------------------------------------- stats */
+.mip-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px; }
+.mip-stat { padding: 12px 14px; border: 1px solid var(--mip-border); border-radius: var(--mip-radius-sm); background: var(--mip-surface); display: grid; gap: 2px; }
+.mip-stat span { color: var(--mip-muted); font-size: 12px; }
+.mip-stat strong { font-size: 22px; letter-spacing: -.02em; }
+.mip-stat.attention strong { color: var(--mip-amber); }
+
+/* ---------------------------------------------------------------- tool cards (home) */
+.mip-tools { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); }
+.mip-tool { display: grid; gap: 10px; align-content: start; padding: 18px; border: 1px solid var(--mip-border); border-radius: var(--mip-radius); background: linear-gradient(145deg, #111b2c, #0d1421); text-decoration: none; color: inherit; transition: border-color .15s, transform .15s; }
+.mip-tool:hover { border-color: #37649b; transform: translateY(-1px); }
+.mip-tool-icon { width: 40px; height: 40px; display: grid; place-items: center; border-radius: 9px; border: 1px solid #2c4a73; background: var(--mip-blue-bg); color: var(--mip-blue); }
+.mip-tool h2 { font-size: 16px; }
+.mip-tool p { margin: 0; color: var(--mip-muted); font-size: 13px; }
+.mip-tool-line { display: flex; justify-content: space-between; font-size: 13px; color: var(--mip-text-2); }
+.mip-tool-line b { color: var(--mip-text); }
+
+/* ---------------------------------------------------------------- pills, dots, basis */
+.mip-pill { display: inline-flex; align-items: center; gap: 5px; padding: 2px 8px; border-radius: 999px; border: 1px solid var(--mip-border-strong); color: var(--mip-text-2); font-size: 11px; font-weight: 700; white-space: nowrap; }
+.mip-pill.ok { color: var(--mip-green); border-color: #24523f; background: var(--mip-green-bg); }
+.mip-pill.warn { color: var(--mip-amber); border-color: #5a4520; background: var(--mip-amber-bg); }
+.mip-pill.bad { color: var(--mip-red); border-color: #5b2a31; background: var(--mip-red-bg); }
+.mip-pill.info { color: var(--mip-blue); border-color: #2c4a73; background: var(--mip-blue-bg); }
+.mip-pill.dim { color: var(--mip-faint); }
+.mip-dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; background: var(--mip-faint); flex: none; }
+.mip-dot.online { background: var(--mip-green); box-shadow: 0 0 0 4px #48d3a017; }
+.mip-dot.offline { background: var(--mip-amber); }
+.mip-dot.not_connected { background: #3a4659; }
+.mip-basis { display: inline-flex; align-items: center; gap: 5px; padding: 1px 7px; border-radius: 5px; font-size: 11px; font-weight: 700; border: 1px solid; }
+.mip-basis.observed { color: var(--mip-green); border-color: #24523f; }
+.mip-basis.analysis { color: var(--mip-blue); border-color: #2c4a73; }
+.mip-basis.person { color: var(--mip-violet); border-color: #463a73; }
+
+/* ---------------------------------------------------------------- buttons, inputs */
+.mip-btn { height: 34px; display: inline-flex; align-items: center; gap: 8px; padding: 0 13px; border-radius: var(--mip-radius-sm); border: 1px solid var(--mip-border-strong); background: var(--mip-surface-3); color: var(--mip-text); font: inherit; font-size: 13px; font-weight: 700; cursor: pointer; text-decoration: none; white-space: nowrap; }
+.mip-btn:hover { border-color: #37649b; }
+.mip-btn:disabled { opacity: .5; cursor: default; }
+.mip-btn.primary { background: var(--mip-blue); border-color: var(--mip-blue); color: #071223; box-shadow: 0 8px 22px #377cd82b; }
+.mip-btn.good { background: var(--mip-green-bg); border-color: #24523f; color: var(--mip-green); }
+.mip-btn.ghost { background: transparent; }
+.mip-btn.small { height: 28px; padding: 0 10px; font-size: 12px; }
+.mip-input { height: 36px; padding: 0 12px; border-radius: var(--mip-radius-sm); border: 1px solid var(--mip-border-strong); background: var(--mip-surface); color: var(--mip-text); font: inherit; min-width: 0; }
+.mip-input:focus, .mip-btn:focus-visible, .mip-nav a:focus-visible, .mip-tabs button:focus-visible { outline: 2px solid var(--mip-blue); outline-offset: 2px; }
+
+/* ---------------------------------------------------------------- tabs */
+.mip-tabs { display: flex; gap: 4px; border-bottom: 1px solid var(--mip-border); margin-bottom: 18px; overflow-x: auto; }
+.mip-tabs button, .mip-tabs a { background: none; border: 0; border-bottom: 2px solid transparent; color: var(--mip-muted); padding: 10px 14px; font: inherit; font-weight: 700; font-size: 13px; cursor: pointer; white-space: nowrap; text-decoration: none; }
+.mip-tabs .active, .mip-tabs [aria-selected="true"] { color: var(--mip-text); border-bottom-color: var(--mip-blue); }
+.mip-tabs em { margin-left: 6px; font-style: normal; color: var(--mip-faint); font-size: 11px; }
+
+/* ---------------------------------------------------------------- disclosure, notes, empty, loading */
+.mip-why { border: 1px solid var(--mip-border); border-radius: var(--mip-radius-sm); background: var(--mip-surface); }
+.mip-why > summary { cursor: pointer; padding: 8px 12px; color: var(--mip-blue); font-weight: 700; font-size: 12px; list-style: none; }
+.mip-why > summary::-webkit-details-marker { display: none; }
+.mip-why > summary::before { content: "▸ "; }
+.mip-why[open] > summary::before { content: "▾ "; }
+.mip-why > div { padding: 0 12px 12px; display: grid; gap: 8px; font-size: 13px; color: var(--mip-text-2); }
+.mip-note { padding: 12px 14px; border-radius: var(--mip-radius-sm); border: 1px solid #2c4a73; background: #0f1b2e; color: var(--mip-text-2); font-size: 13px; }
+.mip-note.caution { border-color: #5a4520; background: #1c1709; }
+.mip-note.error { border-color: #5b2a31; background: var(--mip-red-bg); color: #f7c3c8; }
+.mip-empty { margin: 0; padding: 22px; text-align: center; color: var(--mip-muted); border: 1px dashed var(--mip-border-strong); border-radius: var(--mip-radius-sm); }
+.mip-skeleton { height: 14px; border-radius: 6px; background: linear-gradient(90deg, #121b2a, #1a2638, #121b2a); background-size: 200% 100%; animation: mip-shimmer 1.2s infinite; }
+@keyframes mip-shimmer { from { background-position: 200% 0; } to { background-position: -200% 0; } }
+.mip-toast { position: fixed; right: 20px; bottom: 20px; z-index: 50; max-width: 420px; padding: 12px 16px; border-radius: var(--mip-radius-sm); border: 1px solid #2c4a73; background: #0f1b2e; box-shadow: var(--mip-shadow); font-size: 13px; }
+.mip-toast.error { border-color: #5b2a31; background: var(--mip-red-bg); }
+
+/* ---------------------------------------------------------------- tables */
+.mip-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.mip-table th { text-align: left; color: var(--mip-faint); font-size: 11px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; padding: 8px 10px; border-bottom: 1px solid var(--mip-border); }
+.mip-table td { padding: 10px; border-bottom: 1px solid #172131; vertical-align: top; overflow-wrap: anywhere; }
+.mip-table tr:hover td { background: #0f1827; }
+.mip-table-wrap { overflow-x: auto; }
+
+/* ---------------------------------------------------------------- context bar */
+.mip-context { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; min-width: 0; }
+.mip-chip { display: inline-flex; align-items: center; gap: 6px; max-width: 280px; padding: 4px 6px 4px 10px; border-radius: 999px; border: 1px solid #2c4a73; background: var(--mip-blue-bg); color: var(--mip-text); font-size: 12px; font-weight: 600; text-decoration: none; }
+.mip-chip span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.mip-chip button { border: 0; background: none; color: var(--mip-muted); cursor: pointer; padding: 0 2px; font-size: 14px; line-height: 1; }
+.mip-chip small { color: var(--mip-muted); font-weight: 700; text-transform: uppercase; font-size: 9px; letter-spacing: .08em; }
+
+/* ---------------------------------------------------------------- steps (workflow ribbons) */
+.mip-steps { display: flex; gap: 6px; flex-wrap: wrap; align-items: center; font-size: 12px; color: var(--mip-muted); }
+.mip-steps span { padding: 3px 9px; border-radius: 999px; border: 1px solid var(--mip-border); }
+.mip-steps span.done { color: var(--mip-green); border-color: #24523f; }
+.mip-steps span.now { color: var(--mip-text); border-color: #37649b; background: var(--mip-blue-bg); }
+
+/* v9 shared form/disclosure patterns, including nested advanced screens. */
+.mip-field {display:grid;gap:6px;min-width:0;max-width:100%;color:var(--mip-text-2);}
+.mip-field input {width:100%;min-width:0;height:36px;padding:0 12px;border:1px solid var(--mip-border-strong);border-radius:var(--mip-radius-sm);background:var(--mip-surface);color:var(--mip-text);font:inherit;}
+.mip-page .mip-page {padding:20px 0;}
+.mip-head h1,.mip-address,.mip-item strong {overflow-wrap:anywhere;}
+.mip details>summary {cursor:pointer;color:var(--mip-blue);padding:10px 0;font-weight:600;}
+.mip-field input:focus-visible,.mip summary:focus-visible {outline:2px solid var(--mip-blue);outline-offset:2px;}
+.mip-btn {max-width:100%;}

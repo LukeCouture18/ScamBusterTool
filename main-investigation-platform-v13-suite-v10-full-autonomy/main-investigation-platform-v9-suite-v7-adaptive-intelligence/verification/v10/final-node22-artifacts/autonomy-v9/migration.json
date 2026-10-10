@@ -1,0 +1,13 @@
+{
+  "ok": true,
+  "checks": [
+    "all populated v8 rows preserved by additive 0020",
+    "0020 replay idempotent",
+    "additive v10 tables applied before running current source",
+    "old investigation resumes without duplicate",
+    "old report and source provenance remain exact after continuation",
+    "used-state restart and operator view",
+    "fresh install through 0020"
+  ],
+  "old_tables": 151
+}

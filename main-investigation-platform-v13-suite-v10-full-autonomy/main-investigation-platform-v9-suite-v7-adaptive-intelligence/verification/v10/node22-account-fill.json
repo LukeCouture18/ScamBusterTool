@@ -1,0 +1,67 @@
+{
+  "ok": true,
+  "scope": "Rendered Chromium DOM, production fill function; no installed extension or browser API isolation certification",
+  "cases": [
+    {
+      "case": "login",
+      "filled": 2,
+      "submissions": 0
+    },
+    {
+      "case": "signup",
+      "filled": 3,
+      "submissions": 0
+    },
+    {
+      "case": "code",
+      "filled": 1,
+      "submissions": 0
+    },
+    {
+      "case": "new-password-login",
+      "filled": 0,
+      "submissions": 0
+    },
+    {
+      "case": "duplicate-forms",
+      "filled": 0,
+      "submissions": 0
+    },
+    {
+      "case": "ambiguous-passwords",
+      "filled": 0,
+      "submissions": 0
+    },
+    {
+      "case": "disabled",
+      "filled": 0,
+      "submissions": 0
+    },
+    {
+      "case": "readonly",
+      "filled": 0,
+      "submissions": 0
+    },
+    {
+      "case": "hidden",
+      "filled": 0,
+      "submissions": 0
+    },
+    {
+      "case": "hidden-extra",
+      "filled": 2,
+      "submissions": 0
+    },
+    {
+      "case": "wrong-origin",
+      "filled": 0,
+      "submissions": 0
+    },
+    {
+      "case": "iframe",
+      "filled": 0,
+      "submissions": 0
+    }
+  ],
+  "page_errors": []
+}

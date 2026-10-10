@@ -1,0 +1,4 @@
+import {ZodError} from "zod";
+import {apiError,authError,authorizeModule,enforceRateLimit,readJsonBody} from "@/lib/platform";
+import {ingestLoggerWire} from "@/lib/logger-adapter";
+export async function POST(request:Request){try{await authorizeModule(request,"crypto_wallet_logger");await enforceRateLimit("crypto_wallet_logger",900);const result=await ingestLoggerWire(await readJsonBody(request));return Response.json(result,{status:result.status==="failed"?422:result.replayed?200:202});}catch(error){if(error instanceof ZodError||error instanceof Error&&["LOGGER_DOMAIN_INVALID","LOGGER_WALLET_INVALID","LOGGER_SECRET_FIELD_FORBIDDEN","LOGGER_PAYLOAD_DEPTH_EXCEEDED"].includes(error.message))return apiError(400,"VALIDATION_ERROR",error instanceof Error?error.message:"Invalid logger payload");return authError(error)??apiError(500,"LOGGER_COMPAT_ERROR",error instanceof Error?error.message:"Unable to receive logger event");}}

@@ -1,0 +1,86 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+
+> operation-hunter@2.0.0 test
+> node --disable-warning=ExperimentalWarning --import tsx --test tests/*.test.ts
+
+✔ API: legacy v0.x endpoints keep working on the v1.0 engine (2426.538646ms)
+✔ API: v1 endpoints — brief, graph, entity, report, export, findings actions, settings (1587.630653ms)
+✔ API: server-sent events stream changes (229.562974ms)
+✔ crt.sh rows: one observation per certificate, SAN co-certified domains linked (15.808339ms)
+✔ chain helpers: units, TRON address encoding, BTC flows, label kinds (20.796213ms)
+✔ HTML fingerprinting: structure survives text changes, variants stay similar (13.817105ms)
+✔ HTTP client caches, retries transient errors and reports hard failures (1223.289081ms)
+✔ live collectors parse real API formats (DNS, crt.sh, RDAP, RIPEstat, HackerTarget, urlscan, Blockscout) (89.739628ms)
+✔ failed sources are recorded, retried later, and never fabricate data (3611.758549ms)
+✔ offline mode: network collectors unavailable, leads report why (8.254864ms)
+✔ canonicalisation resolves the same indicator written different ways (10.077419ms)
+✔ type detection and wallet families (0.909839ms)
+✔ indicator extraction pulls wallets, trackers and handles out of page source (1.340336ms)
+✔ commodity infrastructure is recognised statically and from result volume (1.038743ms)
+✔ utility math (0.377147ms)
+✔ store: migrations, transactions roll back, backups, reopen keeps data (21.491349ms)
+✔ operations: create, seeds, auto type detection, codes are unique (9.155212ms)
+✔ ingest: one evidence per observation, dedupe, noisy-OR confidence, multi-source SUPPORTED (42.682356ms)
+✔ invalidation cascade and reinstatement recompute dependent relationships (16.00136ms)
+✔ planner: ranks leads, suppresses commodity infrastructure, explains itself (14.891831ms)
+✔ pursuit: durable best-first run respects budget, never repeats a pivot, logs plain-language hops (269.569043ms)
+✔ recovery: interrupted pivots are retried and running pursuits resume after restart (329.023949ms)
+✔ strategy learning: outcomes and analyst feedback move expected gain (7.058088ms)
+[analyzer] background analysis failed Error: statement has been finalized
+    at HunterStore.get (/workspace/scratch/0dbe5278a453/work/operation-hunter-v2.0/server/core/store.ts:77:28)
+    at HunterStore.getOperation (/workspace/scratch/0dbe5278a453/work/operation-hunter-v2.0/server/core/store.ts:226:20)
+    at loadOpData (/workspace/scratch/0dbe5278a453/work/operation-hunter-v2.0/server/analysis/data.ts:24:20)
+    at Analyzer.analyze (/workspace/scratch/0dbe5278a453/work/operation-hunter-v2.0/server/analysis/analyzer.ts:94:18)
+    at Timeout._onTimeout (/workspace/scratch/0dbe5278a453/work/operation-hunter-v2.0/server/analysis/analyzer.ts:62:18)
+    at listOnTimeout (node:internal/timers:635:17)
+    at process.processTimers (node:internal/timers:571:7) {
+  code: 'ERR_INVALID_STATE'
+}
+✔ integration: registers, heartbeats, syncs operations and survives Main outages (1432.996159ms)
+✔ integration: HUNT_OPERATION jobs create or attach operations and start a pursuit (102.634202ms)
+✔ integration: Main events trigger reappearance checks; inbox candidates and decisions close the loop (81.179936ms)
+✔ integration: bad credentials are reported with a hint and never crash the worker (13.669628ms)
+✔ real operation: autonomous pursuit through live collectors reconstructs the operation (444.057825ms)
+✖ joined: Main asks, Hunter reconstructs, Main acts on Hunter's proposals, both learn (4374.212079ms)
+✔ v0.4 JSON store migrates into SQLite: user data kept, simulated evidence quarantined, demo regenerated (54.539803ms)
+✔ a corrupt legacy file does not block startup (6.282017ms)
+✔ one seed grows into a reconstruction of the operation (1728.74209ms)
+✔ long-running watch: monitors catch the next deployment as a reappearance (1152.352175ms)
+✔ reappearance check scores candidates against the fingerprint (legacy features accepted) (941.283396ms)
+✔ dossier and classic bundle are complete and carry the boundaries (911.52024ms)
+✔ analyst actions: dismissing and acting on findings, manual hypotheses, evidence invalidation (925.049898ms)
+    perf: ingest 79 ms, full analysis 174 ms for 440 entities
+✔ restart mid-pursuit: the run resumes and the intelligence layer (branches, learner, model history, hunts) persists (1822.928937ms)
+✔ performance: a large operation (400 sites, ~3000 links) is analysed quickly and incrementally (261.787115ms)
+✔ living model: lifecycles, rotation status, wave forecast, competing explanations (1821.095204ms)
+✔ model history: versions with readable diffs; contradictions persisted and retired (1070.526818ms)
+✔ forecast: rhythm, windows and reserve domains (0.463076ms)
+✔ analyst verdicts correct membership immediately and calibrate factor weights (904.168063ms)
+✔ API: model, history, membership, facets, branches, next steps, hunts, contradictions, learner, governor (1086.378668ms)
+✔ migration: a v1.0 database opens in v2.0 with every operation intact and a living model (34.530551ms)
+✔ ground truth: adversarial world reconstructed without absorbing planted or look-alike sites (1429.335148ms)
+ℹ tests 45
+ℹ suites 0
+ℹ pass 44
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 10463.959206
+
+✖ failing tests:
+
+test at tests/main-joined.test.ts:1:6355
+✖ joined: Main asks, Hunter reconstructs, Main acts on Hunter's proposals, both learn (4374.212079ms)
+  AssertionError [ERR_ASSERTION]: candidates carry the investigation and the attribution boundary
+      at TestContext.<anonymous> (/workspace/scratch/0dbe5278a453/work/operation-hunter-v2.0/tests/main-joined.test.ts:202:12)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }

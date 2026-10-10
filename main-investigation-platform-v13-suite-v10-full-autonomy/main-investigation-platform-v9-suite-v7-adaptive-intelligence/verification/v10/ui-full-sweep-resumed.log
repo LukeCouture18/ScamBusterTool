@@ -1,0 +1,73 @@
+
+=== suite (1 step) ===
+--- suite 1/1: node --experimental-sqlite --disable-warning=ExperimentalWarning --import tsx --import file:///workspace/scratch/0dbe5278a453/v10-active/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/lib/sqljs-fallback.mjs tests/suite-workflow.mjs
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+[MainPlatformV6] Initialized integration module 'wallet_investigator' with capabilities: [
+  'blockchain-analysis',
+  'wallet-validation',
+  'counterparty-discovery',
+  'fund-flow-analysis',
+  'controlled-wallet-expansion'
+]
+[Database] Initialized new database at /tmp/mip-suite-tNH2k3/wallet-runtime/data/wallet_investigator.sqlite
+[Migrations] Applying migration v1: 001_initial_schema...
+[Migrations] Applying migration v2: 002_indexes_and_views...
+[Migrations] Migration status: 2 applied. Current schema version: v2
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+/workspace/scratch/0dbe5278a453/v10-active/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/ui-click-all.py:62: SyntaxWarning: invalid escape sequence '\s'
+  !!el.getAttribute('aria-current') || /(^|\s)(active|on|selected)(\s|$)/.test(el.className || '') ||
+SWEEP /advanced: 20 controls
+SWEEP /campaigns/5a208fee-1b21-4ae6-bddf-e479f9ccf526: 21 controls
+SWEEP /campaigns: 10 controls
+SWEEP /discovery: 13 controls
+SWEEP /finder: 28 controls
+SWEEP /hunter: 15 controls
+SWEEP /inbox: 10 controls
+SWEEP /integration: 9 controls
+SWEEP /integration/status: 9 controls
+SWEEP /intelligence: 46 controls
+SWEEP /investigations/5df6fb22-8c08-467a-9da6-b2e63f65bd27: 26 controls
+SWEEP /investigations: 17 controls
+SWEEP /logger: 14 controls
+SWEEP /operations/hunter%3Aop%3Asuite-1: 56 controls
+SWEEP /operations: 22 controls
+SWEEP /orchestration: 63 controls
+SWEEP /overview: 16 controls
+SWEEP /: 32 controls
+SWEEP /reports: 12 controls
+SWEEP /tasks: 13 controls
+SWEEP /wallets: 14 controls
+POST /api/v1/suite/actions 400 {"error":{"code":"VALIDATION_ERROR","message":"Invalid action.","details":[{"received":"made_up","code":"invalid_enum_value","options":["dead_or_parked","not_a_scam","duplicate","not_crypto","not_useful"],"path":["reason"],"message":"Invalid enum value. Expected 'dead_or_parked' | 'not_a_scam' | 'duplicate' | 'not_crypto' | 'not_useful', received 'made_up'"}]},"request_id":"41f8cb3f-e14b-45c8-814b-1867ffd126c0"}
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: interaction sweep (first start) found problems:
+  /finder :: select 'Skip reason': dead control: no request, no navigation and no change on the page
+  / :: a 'Candidate site: tessaro.icuParkedA required specialist is disconnected.': request failed: GET /api/v1/autonomy/search/f5f670b4-e020-4340-8b0e-fd1312905ae5: net::ERR_ABORTED
+  / :: a 'Candidate site: orrin.shopChecking related evidenceCheck useful public pivots wi': request failed: GET /api/v1/autonomy/search/f5f670b4-e020-4340-8b0e-fd1312905ae5: net::ERR_ABORTED
+  / :: a 'Candidate site: nexgate.proParkedWaiting for the module to reconnect': request failed: GET /api/v1/autonomy/search/f5f670b4-e020-4340-8b0e-fd1312905ae5: net::ERR_ABORTED
+  / :: a 'Confirmed report receiptform submitter': request failed: GET /api/v1/autonomy/search/f5f670b4-e020-4340-8b0e-fd1312905ae5: net::ERR_ABORTED
+  / :: a 'Counterparty Connection: 0x8888888888888888888888888888888888888888wallet invest': request failed: GET /api/v1/autonomy/search/f5f670b4-e020-4340-8b0e-fd1312905ae5: net::ERR_ABORTED
+  / :: a 'Counterparty Connection: 0x4444444444444444444444444444444444444444wallet invest': request failed: GET /api/v1/autonomy/search/f5f670b4-e020-4340-8b0e-fd1312905ae5: net::ERR_ABORTED
+  / :: a 'Connected Wallet Discovery: 0x3333333333333333333333333333333333333333wallet inv': request failed: GET /api/v1/autonomy/search/f5f670b4-e020-4340-8b0e-fd1312905ae5: net::ERR_ABORTED
+  / :: a 'Site FinderFind, review and investigate new sitesWaiting for your review0Found i': request failed: GET /api/v1/autonomy/search/f5f670b4-e020-4340-8b0e-fd1312905ae5: net::ERR_ABORTED
+  / :: a 'Wallet InvestigatorFollow the money behind a walletWallets known5Analysed1Being ': request failed: GET /api/v1/autonomy/search/f5f670b4-e020-4340-8b0e-fd1312905ae5: net::ERR_ABORTED
+  / :: a 'Form SubmitterApprove and submit reportsWaiting for your approval0In progress0Su': request failed: GET /api/v1/autonomy/search/f5f670b4-e020-4340-8b0e-fd1312905ae5: net::ERR_ABORTED
+  / :: a 'Operation HunterThe operation behind the sitesOperations reconstructed1Active or': request failed: GET /api/v1/autonomy/search/f5f670b4-e020-4340-8b0e-fd1312905ae5: net::ERR_ABORTED
+  /reports :: a 'Main Investigation Platform home': request failed: GET /api/v1/autonomy/search/f5f670b4-e020-4340-8b0e-fd1312905ae5: net::ERR_ABORTED
+    at sweep (/workspace/scratch/0dbe5278a453/v10-active/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/suite-workflow.mjs:275:16)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async <anonymous> (/workspace/scratch/0dbe5278a453/v10-active/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/suite-workflow.mjs:278:23) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.19.0
+FAIL suite: step 1/1 exited with 1: node --experimental-sqlite --disable-warning=ExperimentalWarning --import tsx --import file:///workspace/scratch/0dbe5278a453/v10-active/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/lib/sqljs-fallback.mjs tests/suite-workflow.mjs
+FAIL suite: 0/1 steps passed

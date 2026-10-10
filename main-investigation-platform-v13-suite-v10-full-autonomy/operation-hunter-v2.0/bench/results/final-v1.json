@@ -1,0 +1,2770 @@
+{
+  "at": "2026-09-24T16:16:43.350Z",
+  "budget": 90,
+  "seeds": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "diffs": [
+    0.3,
+    0.8
+  ],
+  "kinds": [
+    "domain",
+    "shared",
+    "wallet"
+  ],
+  "rows": [
+    {
+      "engine": "v1.0 · domain seed",
+      "runs": 16,
+      "precision": 0.603,
+      "recall": 0.65,
+      "f1": 0.552,
+      "falseAttributions": 6.625,
+      "plantedAbsorbed": 0,
+      "lookalikes": 0,
+      "operatorRecall": 0,
+      "treasury": 0,
+      "deposit": 0,
+      "feeCorrect": 1,
+      "pivots": 82.25,
+      "requests": 94,
+      "pivotsTo80": 99.938,
+      "reached80": 0.313,
+      "reappearance": 0.438,
+      "reappearanceFalse": 6.625,
+      "seconds": 0.443
+    },
+    {
+      "engine": "v1.0 · shared seed",
+      "runs": 16,
+      "precision": 0.948,
+      "recall": 0.213,
+      "f1": 0.274,
+      "falseAttributions": 0.75,
+      "plantedAbsorbed": 0,
+      "lookalikes": 0,
+      "operatorRecall": 0,
+      "treasury": 0,
+      "deposit": 0,
+      "feeCorrect": 1,
+      "pivots": 62.063,
+      "requests": 72.875,
+      "pivotsTo80": 82.781,
+      "reached80": 0.125,
+      "reappearance": 0.094,
+      "reappearanceFalse": 0.75,
+      "seconds": 0.26
+    },
+    {
+      "engine": "v1.0 · wallet seed",
+      "runs": 16,
+      "precision": 0,
+      "recall": 0,
+      "f1": 0,
+      "falseAttributions": 0,
+      "plantedAbsorbed": 0,
+      "lookalikes": 0,
+      "operatorRecall": 0,
+      "treasury": 1,
+      "deposit": 1,
+      "feeCorrect": 1,
+      "pivots": 59.5,
+      "requests": 266.688,
+      "pivotsTo80": 89.25,
+      "reached80": 0,
+      "reappearance": 0,
+      "reappearanceFalse": 0,
+      "seconds": 0.208
+    }
+  ],
+  "results": [
+    {
+      "engine": "v1.0",
+      "seed": 1,
+      "difficulty": 0.3,
+      "seedKind": "domain",
+      "precision": 0.438,
+      "recall": 0.7,
+      "f1": 0.538,
+      "falseAttribution": [
+        "photo-photo12.com",
+        "rx-store30.store",
+        "best-pills71.online",
+        "lawfirm-photo78.eu",
+        "meds-pills53.store",
+        "photo-petcare21.org",
+        "school-florist20.net",
+        "travel-florist63.com",
+        "yoga-florist87.org"
+      ],
+      "plantedAbsorbed": false,
+      "lookalikeAbsorbed": 0,
+      "operatorRecall": 0,
+      "treasuryFound": false,
+      "depositFound": false,
+      "feeCorrect": true,
+      "pivots": 90,
+      "requests": 101,
+      "curve": [
+        {
+          "pivots": 15,
+          "recall": 0.2,
+          "precision": 1
+        },
+        {
+          "pivots": 30,
+          "recall": 0.3,
+          "precision": 1
+        },
+        {
+          "pivots": 45,
+          "recall": 0.4,
+          "precision": 0.8
+        },
+        {
+          "pivots": 60,
+          "recall": 0.6,
+          "precision": 0.5
+        },
+        {
+          "pivots": 75,
+          "recall": 0.7,
+          "precision": 0.438
+        },
+        {
+          "pivots": 90,
+          "recall": 0.7,
+          "precision": 0.438
+        }
+      ],
+      "pivotsTo80": null,
+      "reappearanceDetected": 0,
+      "reappearanceTotal": 2,
+      "reappearanceFalse": 9,
+      "contradictions": 4,
+      "ms": 697
+    },
+    {
+      "engine": "v1.0",
+      "seed": 1,
+      "difficulty": 0.3,
+      "seedKind": "shared",
+      "precision": 1,
+      "recall": 0.1,
+      "f1": 0.182,
+      "falseAttribution": [],
+      "plantedAbsorbed": false,
+      "lookalikeAbsorbed": 0,
+      "operatorRecall": 0,
+      "treasuryFound": false,
+      "depositFound": false,
+      "feeCorrect": true,
+      "pivots": 90,
+      "requests": 104,
+      "curve": [
+        {
+          "pivots": 15,
+          "recall": 0.1,
+          "precision": 1
+        },
+        {
+          "pivots": 30,
+          "recall": 0.1,
+          "precision": 1
+        },
+        {
+          "pivots": 45,
+          "recall": 0.1,
+          "precision": 1
+        },
+        {
+          "pivots": 60,
+          "recall": 0.1,
+          "precision": 1
+        },
+        {
+          "pivots": 75,
+          "recall": 0.1,
+          "precision": 1
+        },
+        {
+          "pivots": 90,
+          "recall": 0.1,
+          "precision": 1
+        }
+      ],
+      "pivotsTo80": null,
+      "reappearanceDetected": 0,
+      "reappearanceTotal": 2,
+      "reappearanceFalse": 0,
+      "contradictions": 4,
+      "ms": 416
+    },
+    {
+      "engine": "v1.0",
+      "seed": 1,
+      "difficulty": 0.3,
+      "seedKind": "wallet",
+      "precision": 0,
+      "recall": 0,
+      "f1": 0,
+      "falseAttribution": [],
+      "plantedAbsorbed": false,
+      "lookalikeAbsorbed": 0,
+      "operatorRecall": 0,
+      "treasuryFound": true,
+      "depositFound": true,
+      "feeCorrect": true,
+      "pivots": 55,
+      "requests": 256,
+      "curve": [
+        {
+          "pivots": 15,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 30,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 45,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 55,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 55,
+          "recall": 0,
+          "precision": 0
+        }
+      ],
+      "pivotsTo80": null,
+      "reappearanceDetected": 0,
+      "reappearanceTotal": 2,
+      "reappearanceFalse": 0,
+      "contradictions": 1,
+      "ms": 176
+    },
+    {
+      "engine": "v1.0",
+      "seed": 1,
+      "difficulty": 0.8,
+      "seedKind": "domain",
+      "precision": 0.412,
+      "recall": 0.7,
+      "f1": 0.519,
+      "falseAttribution": [
+        "photo-photo12.com",
+        "rx-store30.store",
+        "best-pills71.online",
+        "lawfirm-florist17.net",
+        "lawfirm-photo78.eu",
+        "meds-pills53.store",
+        "photo-petcare21.org",
+        "school-florist20.net",
+        "travel-florist63.com",
+        "yoga-florist87.org"
+      ],
+      "plantedAbsorbed": false,
+      "lookalikeAbsorbed": 0,
+      "operatorRecall": 0,
+      "treasuryFound": false,
+      "depositFound": false,
+      "feeCorrect": true,
+      "pivots": 90,
+      "requests": 105,
+      "curve": [
+        {
+          "pivots": 15,
+          "recall": 0.2,
+          "precision": 1
+        },
+        {
+          "pivots": 30,
+          "recall": 0.3,
+          "precision": 1
+        },
+        {
+          "pivots": 45,
+          "recall": 0.4,
+          "precision": 0.571
+        },
+        {
+          "pivots": 60,
+          "recall": 0.5,
+          "precision": 0.385
+        },
+        {
+          "pivots": 75,
+          "recall": 0.7,
+          "precision": 0.412
+        },
+        {
+          "pivots": 90,
+          "recall": 0.7,
+          "precision": 0.412
+        }
+      ],
+      "pivotsTo80": null,
+      "reappearanceDetected": 0,
+      "reappearanceTotal": 2,
+      "reappearanceFalse": 10,
+      "contradictions": 4,
+      "ms": 459
+    },
+    {
+      "engine": "v1.0",
+      "seed": 1,
+      "difficulty": 0.8,
+      "seedKind": "shared",
+      "precision": 1,
+      "recall": 0.1,
+      "f1": 0.182,
+      "falseAttribution": [],
+      "plantedAbsorbed": false,
+      "lookalikeAbsorbed": 0,
+      "operatorRecall": 0,
+      "treasuryFound": false,
+      "depositFound": false,
+      "feeCorrect": true,
+      "pivots": 90,
+      "requests": 104,
+      "curve": [
+        {
+          "pivots": 15,
+          "recall": 0.1,
+          "precision": 1
+        },
+        {
+          "pivots": 30,
+          "recall": 0.1,
+          "precision": 1
+        },
+        {
+          "pivots": 45,
+          "recall": 0.1,
+          "precision": 1
+        },
+        {
+          "pivots": 60,
+          "recall": 0.1,
+          "precision": 1
+        },
+        {
+          "pivots": 75,
+          "recall": 0.1,
+          "precision": 1
+        },
+        {
+          "pivots": 90,
+          "recall": 0.1,
+          "precision": 1
+        }
+      ],
+      "pivotsTo80": null,
+      "reappearanceDetected": 0,
+      "reappearanceTotal": 2,
+      "reappearanceFalse": 0,
+      "contradictions": 4,
+      "ms": 320
+    },
+    {
+      "engine": "v1.0",
+      "seed": 1,
+      "difficulty": 0.8,
+      "seedKind": "wallet",
+      "precision": 0,
+      "recall": 0,
+      "f1": 0,
+      "falseAttribution": [],
+      "plantedAbsorbed": false,
+      "lookalikeAbsorbed": 0,
+      "operatorRecall": 0,
+      "treasuryFound": true,
+      "depositFound": true,
+      "feeCorrect": true,
+      "pivots": 55,
+      "requests": 256,
+      "curve": [
+        {
+          "pivots": 15,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 30,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 45,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 55,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 55,
+          "recall": 0,
+          "precision": 0
+        }
+      ],
+      "pivotsTo80": null,
+      "reappearanceDetected": 0,
+      "reappearanceTotal": 2,
+      "reappearanceFalse": 0,
+      "contradictions": 1,
+      "ms": 158
+    },
+    {
+      "engine": "v1.0",
+      "seed": 2,
+      "difficulty": 0.3,
+      "seedKind": "domain",
+      "precision": 0.462,
+      "recall": 0.6,
+      "f1": 0.522,
+      "falseAttribution": [
+        "cheap-pharma17.shop",
+        "yoga-garden67.net",
+        "bistro-plumbing41.net",
+        "meds-pharma29.shop",
+        "music-dental50.net",
+        "music-photo18.com",
+        "rx-pills90.online"
+      ],
+      "plantedAbsorbed": false,
+      "lookalikeAbsorbed": 0,
+      "operatorRecall": 0,
+      "treasuryFound": false,
+      "depositFound": false,
+      "feeCorrect": true,
+      "pivots": 90,
+      "requests": 100,
+      "curve": [
+        {
+          "pivots": 15,
+          "recall": 0.1,
+          "precision": 1
+        },
+        {
+          "pivots": 30,
+          "recall": 0.4,
+          "precision": 1
+        },
+        {
+          "pivots": 45,
+          "recall": 0.5,
+          "precision": 0.625
+        },
+        {
+          "pivots": 60,
+          "recall": 0.6,
+          "precision": 0.462
+        },
+        {
+          "pivots": 75,
+          "recall": 0.6,
+          "precision": 0.462
+        },
+        {
+          "pivots": 90,
+          "recall": 0.6,
+          "precision": 0.462
+        }
+      ],
+      "pivotsTo80": null,
+      "reappearanceDetected": 2,
+      "reappearanceTotal": 2,
+      "reappearanceFalse": 7,
+      "contradictions": 4,
+      "ms": 487
+    },
+    {
+      "engine": "v1.0",
+      "seed": 2,
+      "difficulty": 0.3,
+      "seedKind": "shared",
+      "precision": 1,
+      "recall": 0.2,
+      "f1": 0.333,
+      "falseAttribution": [],
+      "plantedAbsorbed": false,
+      "lookalikeAbsorbed": 0,
+      "operatorRecall": 0,
+      "treasuryFound": false,
+      "depositFound": false,
+      "feeCorrect": true,
+      "pivots": 84,
+      "requests": 98,
+      "curve": [
+        {
+          "pivots": 15,
+          "recall": 0.2,
+          "precision": 1
+        },
+        {
+          "pivots": 30,
+          "recall": 0.2,
+          "precision": 1
+        },
+        {
+          "pivots": 45,
+          "recall": 0.2,
+          "precision": 1
+        },
+        {
+          "pivots": 60,
+          "recall": 0.2,
+          "precision": 1
+        },
+        {
+          "pivots": 75,
+          "recall": 0.2,
+          "precision": 1
+        },
+        {
+          "pivots": 84,
+          "recall": 0.2,
+          "precision": 1
+        },
+        {
+          "pivots": 84,
+          "recall": 0.2,
+          "precision": 1
+        }
+      ],
+      "pivotsTo80": null,
+      "reappearanceDetected": 0,
+      "reappearanceTotal": 2,
+      "reappearanceFalse": 0,
+      "contradictions": 5,
+      "ms": 291
+    },
+    {
+      "engine": "v1.0",
+      "seed": 2,
+      "difficulty": 0.3,
+      "seedKind": "wallet",
+      "precision": 0,
+      "recall": 0,
+      "f1": 0,
+      "falseAttribution": [],
+      "plantedAbsorbed": false,
+      "lookalikeAbsorbed": 0,
+      "operatorRecall": 0,
+      "treasuryFound": true,
+      "depositFound": true,
+      "feeCorrect": true,
+      "pivots": 59,
+      "requests": 260,
+      "curve": [
+        {
+          "pivots": 15,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 30,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 42,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 57,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 59,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 59,
+          "recall": 0,
+          "precision": 0
+        }
+      ],
+      "pivotsTo80": null,
+      "reappearanceDetected": 0,
+      "reappearanceTotal": 2,
+      "reappearanceFalse": 0,
+      "contradictions": 1,
+      "ms": 211
+    },
+    {
+      "engine": "v1.0",
+      "seed": 2,
+      "difficulty": 0.8,
+      "seedKind": "domain",
+      "precision": 0.368,
+      "recall": 0.7,
+      "f1": 0.483,
+      "falseAttribution": [
+        "bakery-travel33.org",
+        "garden-garden53.eu",
+        "meds-pharma20.store",
+        "meds-store79.online",
+        "tutoring-music75.net",
+        "tutoring-tutoring82.eu",
+        "garden-petcare53.org",
+        "garden-plumbing6.net",
+        "meds-store23.online",
+        "music-music47.org",
+        "photo-tutoring4.com",
+        "tutoring-yoga46.net"
+      ],
+      "plantedAbsorbed": false,
+      "lookalikeAbsorbed": 0,
+      "operatorRecall": 0,
+      "treasuryFound": false,
+      "depositFound": false,
+      "feeCorrect": true,
+      "pivots": 90,
+      "requests": 102,
+      "curve": [
+        {
+          "pivots": 15,
+          "recall": 0.3,
+          "precision": 1
+        },
+        {
+          "pivots": 30,
+          "recall": 0.5,
+          "precision": 1
+        },
+        {
+          "pivots": 45,
+          "recall": 0.5,
+          "precision": 0.556
+        },
+        {
+          "pivots": 60,
+          "recall": 0.5,
+          "precision": 0.333
+        },
+        {
+          "pivots": 75,
+          "recall": 0.6,
+          "precision": 0.333
+        },
+        {
+          "pivots": 90,
+          "recall": 0.7,
+          "precision": 0.368
+        }
+      ],
+      "pivotsTo80": null,
+      "reappearanceDetected": 0,
+      "reappearanceTotal": 2,
+      "reappearanceFalse": 12,
+      "contradictions": 4,
+      "ms": 467
+    },
+    {
+      "engine": "v1.0",
+      "seed": 2,
+      "difficulty": 0.8,
+      "seedKind": "shared",
+      "precision": 1,
+      "recall": 0.1,
+      "f1": 0.182,
+      "falseAttribution": [],
+      "plantedAbsorbed": false,
+      "lookalikeAbsorbed": 0,
+      "operatorRecall": 0,
+      "treasuryFound": false,
+      "depositFound": false,
+      "feeCorrect": true,
+      "pivots": 5,
+      "requests": 6,
+      "curve": [
+        {
+          "pivots": 5,
+          "recall": 0.1,
+          "precision": 1
+        },
+        {
+          "pivots": 5,
+          "recall": 0.1,
+          "precision": 1
+        }
+      ],
+      "pivotsTo80": null,
+      "reappearanceDetected": 0,
+      "reappearanceTotal": 2,
+      "reappearanceFalse": 0,
+      "contradictions": 0,
+      "ms": 19
+    },
+    {
+      "engine": "v1.0",
+      "seed": 2,
+      "difficulty": 0.8,
+      "seedKind": "wallet",
+      "precision": 0,
+      "recall": 0,
+      "f1": 0,
+      "falseAttribution": [],
+      "plantedAbsorbed": false,
+      "lookalikeAbsorbed": 0,
+      "operatorRecall": 0,
+      "treasuryFound": true,
+      "depositFound": true,
+      "feeCorrect": true,
+      "pivots": 53,
+      "requests": 242,
+      "curve": [
+        {
+          "pivots": 15,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 30,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 45,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 53,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 53,
+          "recall": 0,
+          "precision": 0
+        }
+      ],
+      "pivotsTo80": null,
+      "reappearanceDetected": 0,
+      "reappearanceTotal": 2,
+      "reappearanceFalse": 0,
+      "contradictions": 1,
+      "ms": 181
+    },
+    {
+      "engine": "v1.0",
+      "seed": 3,
+      "difficulty": 0.3,
+      "seedKind": "domain",
+      "precision": 0.421,
+      "recall": 0.8,
+      "f1": 0.552,
+      "falseAttribution": [
+        "school-school16.org",
+        "school-bistro98.com",
+        "meds-store91.shop",
+        "photo-autoparts29.net",
+        "autoparts-autoparts88.net",
+        "bistro-music99.net",
+        "bistro-plumbing75.org",
+        "photo-lawfirm37.com",
+        "rx-pharma31.online",
+        "rx-pharma85.online",
+        "school-music16.org"
+      ],
+      "plantedAbsorbed": false,
+      "lookalikeAbsorbed": 0,
+      "operatorRecall": 0,
+      "treasuryFound": false,
+      "depositFound": false,
+      "feeCorrect": true,
+      "pivots": 90,
+      "requests": 107,
+      "curve": [
+        {
+          "pivots": 15,
+          "recall": 0.1,
+          "precision": 1
+        },
+        {
+          "pivots": 30,
+          "recall": 0.4,
+          "precision": 0.8
+        },
+        {
+          "pivots": 45,
+          "recall": 0.7,
+          "precision": 0.875
+        },
+        {
+          "pivots": 60,
+          "recall": 0.8,
+          "precision": 0.667
+        },
+        {
+          "pivots": 75,
+          "recall": 0.8,
+          "precision": 0.444
+        },
+        {
+          "pivots": 90,
+          "recall": 0.8,
+          "precision": 0.421
+        }
+      ],
+      "pivotsTo80": 60,
+      "reappearanceDetected": 1,
+      "reappearanceTotal": 2,
+      "reappearanceFalse": 11,
+      "contradictions": 4,
+      "ms": 504
+    },
+    {
+      "engine": "v1.0",
+      "seed": 3,
+      "difficulty": 0.3,
+      "seedKind": "shared",
+      "precision": 1,
+      "recall": 0.1,
+      "f1": 0.182,
+      "falseAttribution": [],
+      "plantedAbsorbed": false,
+      "lookalikeAbsorbed": 0,
+      "operatorRecall": 0,
+      "treasuryFound": false,
+      "depositFound": false,
+      "feeCorrect": true,
+      "pivots": 90,
+      "requests": 108,
+      "curve": [
+        {
+          "pivots": 15,
+          "recall": 0.1,
+          "precision": 1
+        },
+        {
+          "pivots": 30,
+          "recall": 0.1,
+          "precision": 1
+        },
+        {
+          "pivots": 45,
+          "recall": 0.1,
+          "precision": 1
+        },
+        {
+          "pivots": 60,
+          "recall": 0.1,
+          "precision": 1
+        },
+        {
+          "pivots": 75,
+          "recall": 0.1,
+          "precision": 1
+        },
+        {
+          "pivots": 87,
+          "recall": 0.1,
+          "precision": 1
+        },
+        {
+          "pivots": 90,
+          "recall": 0.1,
+          "precision": 1
+        }
+      ],
+      "pivotsTo80": null,
+      "reappearanceDetected": 0,
+      "reappearanceTotal": 2,
+      "reappearanceFalse": 0,
+      "contradictions": 4,
+      "ms": 359
+    },
+    {
+      "engine": "v1.0",
+      "seed": 3,
+      "difficulty": 0.3,
+      "seedKind": "wallet",
+      "precision": 0,
+      "recall": 0,
+      "f1": 0,
+      "falseAttribution": [],
+      "plantedAbsorbed": false,
+      "lookalikeAbsorbed": 0,
+      "operatorRecall": 0,
+      "treasuryFound": true,
+      "depositFound": true,
+      "feeCorrect": true,
+      "pivots": 65,
+      "requests": 284,
+      "curve": [
+        {
+          "pivots": 15,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 30,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 45,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 60,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 65,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 65,
+          "recall": 0,
+          "precision": 0
+        }
+      ],
+      "pivotsTo80": null,
+      "reappearanceDetected": 0,
+      "reappearanceTotal": 2,
+      "reappearanceFalse": 0,
+      "contradictions": 1,
+      "ms": 209
+    },
+    {
+      "engine": "v1.0",
+      "seed": 3,
+      "difficulty": 0.8,
+      "seedKind": "domain",
+      "precision": 0.318,
+      "recall": 0.7,
+      "f1": 0.438,
+      "falseAttribution": [
+        "garden-autoparts21.org",
+        "school-school16.org",
+        "school-bistro98.com",
+        "tutoring-bistro36.com",
+        "meds-store91.shop",
+        "photo-autoparts29.net",
+        "autoparts-autoparts88.net",
+        "bistro-music99.net",
+        "bistro-plumbing75.org",
+        "garden-dental49.org",
+        "petcare-bistro65.eu",
+        "photo-lawfirm37.com",
+        "rx-pharma31.online",
+        "rx-pharma85.online",
+        "school-music16.org"
+      ],
+      "plantedAbsorbed": false,
+      "lookalikeAbsorbed": 0,
+      "operatorRecall": 0,
+      "treasuryFound": false,
+      "depositFound": false,
+      "feeCorrect": true,
+      "pivots": 90,
+      "requests": 102,
+      "curve": [
+        {
+          "pivots": 15,
+          "recall": 0.1,
+          "precision": 1
+        },
+        {
+          "pivots": 30,
+          "recall": 0.3,
+          "precision": 0.75
+        },
+        {
+          "pivots": 45,
+          "recall": 0.5,
+          "precision": 0.833
+        },
+        {
+          "pivots": 60,
+          "recall": 0.7,
+          "precision": 0.5
+        },
+        {
+          "pivots": 75,
+          "recall": 0.7,
+          "precision": 0.368
+        },
+        {
+          "pivots": 90,
+          "recall": 0.7,
+          "precision": 0.318
+        }
+      ],
+      "pivotsTo80": null,
+      "reappearanceDetected": 1,
+      "reappearanceTotal": 2,
+      "reappearanceFalse": 15,
+      "contradictions": 3,
+      "ms": 435
+    },
+    {
+      "engine": "v1.0",
+      "seed": 3,
+      "difficulty": 0.8,
+      "seedKind": "shared",
+      "precision": 1,
+      "recall": 0.1,
+      "f1": 0.182,
+      "falseAttribution": [],
+      "plantedAbsorbed": false,
+      "lookalikeAbsorbed": 0,
+      "operatorRecall": 0,
+      "treasuryFound": false,
+      "depositFound": false,
+      "feeCorrect": true,
+      "pivots": 90,
+      "requests": 106,
+      "curve": [
+        {
+          "pivots": 15,
+          "recall": 0.1,
+          "precision": 1
+        },
+        {
+          "pivots": 30,
+          "recall": 0.1,
+          "precision": 1
+        },
+        {
+          "pivots": 45,
+          "recall": 0.1,
+          "precision": 1
+        },
+        {
+          "pivots": 60,
+          "recall": 0.1,
+          "precision": 1
+        },
+        {
+          "pivots": 75,
+          "recall": 0.1,
+          "precision": 1
+        },
+        {
+          "pivots": 90,
+          "recall": 0.1,
+          "precision": 1
+        }
+      ],
+      "pivotsTo80": null,
+      "reappearanceDetected": 0,
+      "reappearanceTotal": 2,
+      "reappearanceFalse": 0,
+      "contradictions": 4,
+      "ms": 353
+    },
+    {
+      "engine": "v1.0",
+      "seed": 3,
+      "difficulty": 0.8,
+      "seedKind": "wallet",
+      "precision": 0,
+      "recall": 0,
+      "f1": 0,
+      "falseAttribution": [],
+      "plantedAbsorbed": false,
+      "lookalikeAbsorbed": 0,
+      "operatorRecall": 0,
+      "treasuryFound": true,
+      "depositFound": true,
+      "feeCorrect": true,
+      "pivots": 65,
+      "requests": 284,
+      "curve": [
+        {
+          "pivots": 15,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 30,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 45,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 60,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 65,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 65,
+          "recall": 0,
+          "precision": 0
+        }
+      ],
+      "pivotsTo80": null,
+      "reappearanceDetected": 0,
+      "reappearanceTotal": 2,
+      "reappearanceFalse": 0,
+      "contradictions": 1,
+      "ms": 248
+    },
+    {
+      "engine": "v1.0",
+      "seed": 4,
+      "difficulty": 0.3,
+      "seedKind": "domain",
+      "precision": 0.571,
+      "recall": 0.8,
+      "f1": 0.667,
+      "falseAttribution": [
+        "cheap-pills90.shop",
+        "photo-garden98.eu",
+        "best-store53.online",
+        "meds-pills64.online",
+        "photo-petcare89.net",
+        "photo-photo17.eu"
+      ],
+      "plantedAbsorbed": false,
+      "lookalikeAbsorbed": 0,
+      "operatorRecall": 0,
+      "treasuryFound": false,
+      "depositFound": false,
+      "feeCorrect": true,
+      "pivots": 90,
+      "requests": 100,
+      "curve": [
+        {
+          "pivots": 15,
+          "recall": 0.2,
+          "precision": 1
+        },
+        {
+          "pivots": 30,
+          "recall": 0.4,
+          "precision": 1
+        },
+        {
+          "pivots": 45,
+          "recall": 0.5,
+          "precision": 0.714
+        },
+        {
+          "pivots": 60,
+          "recall": 0.7,
+          "precision": 0.538
+        },
+        {
+          "pivots": 75,
+          "recall": 0.8,
+          "precision": 0.571
+        },
+        {
+          "pivots": 90,
+          "recall": 0.8,
+          "precision": 0.571
+        }
+      ],
+      "pivotsTo80": 75,
+      "reappearanceDetected": 2,
+      "reappearanceTotal": 2,
+      "reappearanceFalse": 6,
+      "contradictions": 5,
+      "ms": 500
+    },
+    {
+      "engine": "v1.0",
+      "seed": 4,
+      "difficulty": 0.3,
+      "seedKind": "shared",
+      "precision": 1,
+      "recall": 0.1,
+      "f1": 0.182,
+      "falseAttribution": [],
+      "plantedAbsorbed": false,
+      "lookalikeAbsorbed": 0,
+      "operatorRecall": 0,
+      "treasuryFound": false,
+      "depositFound": false,
+      "feeCorrect": true,
+      "pivots": 4,
+      "requests": 4,
+      "curve": [
+        {
+          "pivots": 4,
+          "recall": 0.1,
+          "precision": 1
+        },
+        {
+          "pivots": 4,
+          "recall": 0.1,
+          "precision": 1
+        }
+      ],
+      "pivotsTo80": null,
+      "reappearanceDetected": 0,
+      "reappearanceTotal": 2,
+      "reappearanceFalse": 0,
+      "contradictions": 0,
+      "ms": 18
+    },
+    {
+      "engine": "v1.0",
+      "seed": 4,
+      "difficulty": 0.3,
+      "seedKind": "wallet",
+      "precision": 0,
+      "recall": 0,
+      "f1": 0,
+      "falseAttribution": [],
+      "plantedAbsorbed": false,
+      "lookalikeAbsorbed": 0,
+      "operatorRecall": 0,
+      "treasuryFound": true,
+      "depositFound": true,
+      "feeCorrect": true,
+      "pivots": 63,
+      "requests": 276,
+      "curve": [
+        {
+          "pivots": 15,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 30,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 45,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 60,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 63,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 63,
+          "recall": 0,
+          "precision": 0
+        }
+      ],
+      "pivotsTo80": null,
+      "reappearanceDetected": 0,
+      "reappearanceTotal": 2,
+      "reappearanceFalse": 0,
+      "contradictions": 1,
+      "ms": 236
+    },
+    {
+      "engine": "v1.0",
+      "seed": 4,
+      "difficulty": 0.8,
+      "seedKind": "domain",
+      "precision": 0.412,
+      "recall": 0.7,
+      "f1": 0.519,
+      "falseAttribution": [
+        "best-pills97.store",
+        "cheap-pills64.shop",
+        "cheap-store77.store",
+        "lawfirm-autoparts29.org",
+        "plumbing-florist26.net",
+        "bakery-dental51.eu",
+        "bistro-bistro78.com",
+        "music-autoparts24.org",
+        "music-garden45.net",
+        "plumbing-bakery79.com"
+      ],
+      "plantedAbsorbed": false,
+      "lookalikeAbsorbed": 0,
+      "operatorRecall": 0,
+      "treasuryFound": false,
+      "depositFound": false,
+      "feeCorrect": true,
+      "pivots": 90,
+      "requests": 100,
+      "curve": [
+        {
+          "pivots": 15,
+          "recall": 0.2,
+          "precision": 1
+        },
+        {
+          "pivots": 30,
+          "recall": 0.6,
+          "precision": 1
+        },
+        {
+          "pivots": 45,
+          "recall": 0.7,
+          "precision": 0.7
+        },
+        {
+          "pivots": 60,
+          "recall": 0.7,
+          "precision": 0.467
+        },
+        {
+          "pivots": 75,
+          "recall": 0.7,
+          "precision": 0.412
+        },
+        {
+          "pivots": 90,
+          "recall": 0.7,
+          "precision": 0.412
+        }
+      ],
+      "pivotsTo80": null,
+      "reappearanceDetected": 1,
+      "reappearanceTotal": 2,
+      "reappearanceFalse": 10,
+      "contradictions": 5,
+      "ms": 416
+    },
+    {
+      "engine": "v1.0",
+      "seed": 4,
+      "difficulty": 0.8,
+      "seedKind": "shared",
+      "precision": 1,
+      "recall": 0.2,
+      "f1": 0.333,
+      "falseAttribution": [],
+      "plantedAbsorbed": false,
+      "lookalikeAbsorbed": 0,
+      "operatorRecall": 0,
+      "treasuryFound": false,
+      "depositFound": false,
+      "feeCorrect": true,
+      "pivots": 90,
+      "requests": 104,
+      "curve": [
+        {
+          "pivots": 15,
+          "recall": 0.2,
+          "precision": 1
+        },
+        {
+          "pivots": 30,
+          "recall": 0.2,
+          "precision": 1
+        },
+        {
+          "pivots": 45,
+          "recall": 0.2,
+          "precision": 1
+        },
+        {
+          "pivots": 60,
+          "recall": 0.2,
+          "precision": 1
+        },
+        {
+          "pivots": 75,
+          "recall": 0.2,
+          "precision": 1
+        },
+        {
+          "pivots": 90,
+          "recall": 0.2,
+          "precision": 1
+        }
+      ],
+      "pivotsTo80": null,
+      "reappearanceDetected": 0,
+      "reappearanceTotal": 2,
+      "reappearanceFalse": 0,
+      "contradictions": 5,
+      "ms": 401
+    },
+    {
+      "engine": "v1.0",
+      "seed": 4,
+      "difficulty": 0.8,
+      "seedKind": "wallet",
+      "precision": 0,
+      "recall": 0,
+      "f1": 0,
+      "falseAttribution": [],
+      "plantedAbsorbed": false,
+      "lookalikeAbsorbed": 0,
+      "operatorRecall": 0,
+      "treasuryFound": true,
+      "depositFound": true,
+      "feeCorrect": true,
+      "pivots": 63,
+      "requests": 281,
+      "curve": [
+        {
+          "pivots": 15,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 30,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 45,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 60,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 63,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 63,
+          "recall": 0,
+          "precision": 0
+        }
+      ],
+      "pivotsTo80": null,
+      "reappearanceDetected": 0,
+      "reappearanceTotal": 2,
+      "reappearanceFalse": 0,
+      "contradictions": 1,
+      "ms": 221
+    },
+    {
+      "engine": "v1.0",
+      "seed": 5,
+      "difficulty": 0.3,
+      "seedKind": "domain",
+      "precision": 0.6,
+      "recall": 0.9,
+      "f1": 0.72,
+      "falseAttribution": [
+        "meds-pills71.shop",
+        "cheap-pills82.store",
+        "lawfirm-music83.org",
+        "plumbing-petcare58.com",
+        "rx-pharma17.online",
+        "travel-school86.eu"
+      ],
+      "plantedAbsorbed": false,
+      "lookalikeAbsorbed": 0,
+      "operatorRecall": 0,
+      "treasuryFound": false,
+      "depositFound": false,
+      "feeCorrect": true,
+      "pivots": 90,
+      "requests": 102,
+      "curve": [
+        {
+          "pivots": 15,
+          "recall": 0.3,
+          "precision": 1
+        },
+        {
+          "pivots": 30,
+          "recall": 0.4,
+          "precision": 1
+        },
+        {
+          "pivots": 45,
+          "recall": 0.8,
+          "precision": 0.727
+        },
+        {
+          "pivots": 60,
+          "recall": 0.9,
+          "precision": 0.6
+        },
+        {
+          "pivots": 75,
+          "recall": 0.9,
+          "precision": 0.6
+        },
+        {
+          "pivots": 90,
+          "recall": 0.9,
+          "precision": 0.6
+        }
+      ],
+      "pivotsTo80": 45,
+      "reappearanceDetected": 1,
+      "reappearanceTotal": 2,
+      "reappearanceFalse": 6,
+      "contradictions": 5,
+      "ms": 426
+    },
+    {
+      "engine": "v1.0",
+      "seed": 5,
+      "difficulty": 0.3,
+      "seedKind": "shared",
+      "precision": 0.6,
+      "recall": 0.9,
+      "f1": 0.72,
+      "falseAttribution": [
+        "meds-pills71.shop",
+        "cheap-pills82.store",
+        "lawfirm-music83.org",
+        "plumbing-petcare58.com",
+        "rx-pharma17.online",
+        "travel-school86.eu"
+      ],
+      "plantedAbsorbed": false,
+      "lookalikeAbsorbed": 0,
+      "operatorRecall": 0,
+      "treasuryFound": false,
+      "depositFound": false,
+      "feeCorrect": true,
+      "pivots": 90,
+      "requests": 102,
+      "curve": [
+        {
+          "pivots": 15,
+          "recall": 0.3,
+          "precision": 1
+        },
+        {
+          "pivots": 30,
+          "recall": 0.4,
+          "precision": 1
+        },
+        {
+          "pivots": 45,
+          "recall": 0.8,
+          "precision": 0.727
+        },
+        {
+          "pivots": 60,
+          "recall": 0.9,
+          "precision": 0.6
+        },
+        {
+          "pivots": 75,
+          "recall": 0.9,
+          "precision": 0.6
+        },
+        {
+          "pivots": 90,
+          "recall": 0.9,
+          "precision": 0.6
+        }
+      ],
+      "pivotsTo80": 45,
+      "reappearanceDetected": 1,
+      "reappearanceTotal": 2,
+      "reappearanceFalse": 6,
+      "contradictions": 5,
+      "ms": 417
+    },
+    {
+      "engine": "v1.0",
+      "seed": 5,
+      "difficulty": 0.3,
+      "seedKind": "wallet",
+      "precision": 0,
+      "recall": 0,
+      "f1": 0,
+      "falseAttribution": [],
+      "plantedAbsorbed": false,
+      "lookalikeAbsorbed": 0,
+      "operatorRecall": 0,
+      "treasuryFound": true,
+      "depositFound": true,
+      "feeCorrect": true,
+      "pivots": 63,
+      "requests": 281,
+      "curve": [
+        {
+          "pivots": 15,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 30,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 45,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 60,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 63,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 63,
+          "recall": 0,
+          "precision": 0
+        }
+      ],
+      "pivotsTo80": null,
+      "reappearanceDetected": 0,
+      "reappearanceTotal": 2,
+      "reappearanceFalse": 0,
+      "contradictions": 1,
+      "ms": 207
+    },
+    {
+      "engine": "v1.0",
+      "seed": 5,
+      "difficulty": 0.8,
+      "seedKind": "domain",
+      "precision": 0.5,
+      "recall": 0.9,
+      "f1": 0.643,
+      "falseAttribution": [
+        "cheap-store11.store",
+        "meds-pharma10.shop",
+        "rx-pharma11.store",
+        "bistro-dental43.org",
+        "florist-school5.org",
+        "lawfirm-autoparts84.org",
+        "lawfirm-bakery31.org",
+        "petcare-florist1.com",
+        "tutoring-travel29.com"
+      ],
+      "plantedAbsorbed": false,
+      "lookalikeAbsorbed": 0,
+      "operatorRecall": 0,
+      "treasuryFound": false,
+      "depositFound": false,
+      "feeCorrect": true,
+      "pivots": 90,
+      "requests": 103,
+      "curve": [
+        {
+          "pivots": 15,
+          "recall": 0.2,
+          "precision": 1
+        },
+        {
+          "pivots": 30,
+          "recall": 0.7,
+          "precision": 1
+        },
+        {
+          "pivots": 45,
+          "recall": 0.7,
+          "precision": 0.636
+        },
+        {
+          "pivots": 60,
+          "recall": 0.8,
+          "precision": 0.471
+        },
+        {
+          "pivots": 75,
+          "recall": 0.9,
+          "precision": 0.5
+        },
+        {
+          "pivots": 90,
+          "recall": 0.9,
+          "precision": 0.5
+        }
+      ],
+      "pivotsTo80": 60,
+      "reappearanceDetected": 0,
+      "reappearanceTotal": 2,
+      "reappearanceFalse": 9,
+      "contradictions": 5,
+      "ms": 569
+    },
+    {
+      "engine": "v1.0",
+      "seed": 5,
+      "difficulty": 0.8,
+      "seedKind": "shared",
+      "precision": 1,
+      "recall": 0.1,
+      "f1": 0.182,
+      "falseAttribution": [],
+      "plantedAbsorbed": false,
+      "lookalikeAbsorbed": 0,
+      "operatorRecall": 0,
+      "treasuryFound": false,
+      "depositFound": false,
+      "feeCorrect": true,
+      "pivots": 90,
+      "requests": 106,
+      "curve": [
+        {
+          "pivots": 15,
+          "recall": 0.1,
+          "precision": 1
+        },
+        {
+          "pivots": 30,
+          "recall": 0.1,
+          "precision": 1
+        },
+        {
+          "pivots": 45,
+          "recall": 0.1,
+          "precision": 1
+        },
+        {
+          "pivots": 60,
+          "recall": 0.1,
+          "precision": 1
+        },
+        {
+          "pivots": 75,
+          "recall": 0.1,
+          "precision": 1
+        },
+        {
+          "pivots": 84,
+          "recall": 0.1,
+          "precision": 1
+        },
+        {
+          "pivots": 90,
+          "recall": 0.1,
+          "precision": 1
+        }
+      ],
+      "pivotsTo80": null,
+      "reappearanceDetected": 0,
+      "reappearanceTotal": 2,
+      "reappearanceFalse": 0,
+      "contradictions": 4,
+      "ms": 457
+    },
+    {
+      "engine": "v1.0",
+      "seed": 5,
+      "difficulty": 0.8,
+      "seedKind": "wallet",
+      "precision": 0,
+      "recall": 0,
+      "f1": 0,
+      "falseAttribution": [],
+      "plantedAbsorbed": false,
+      "lookalikeAbsorbed": 0,
+      "operatorRecall": 0,
+      "treasuryFound": true,
+      "depositFound": true,
+      "feeCorrect": true,
+      "pivots": 59,
+      "requests": 260,
+      "curve": [
+        {
+          "pivots": 15,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 30,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 45,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 59,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 59,
+          "recall": 0,
+          "precision": 0
+        }
+      ],
+      "pivotsTo80": null,
+      "reappearanceDetected": 0,
+      "reappearanceTotal": 2,
+      "reappearanceFalse": 0,
+      "contradictions": 1,
+      "ms": 219
+    },
+    {
+      "engine": "v1.0",
+      "seed": 6,
+      "difficulty": 0.3,
+      "seedKind": "domain",
+      "precision": 0.583,
+      "recall": 0.7,
+      "f1": 0.636,
+      "falseAttribution": [
+        "best-pills66.store",
+        "florist-yoga3.com",
+        "cheap-pills23.online",
+        "lawfirm-school69.eu",
+        "rx-store51.shop"
+      ],
+      "plantedAbsorbed": false,
+      "lookalikeAbsorbed": 0,
+      "operatorRecall": 0,
+      "treasuryFound": false,
+      "depositFound": false,
+      "feeCorrect": true,
+      "pivots": 90,
+      "requests": 105,
+      "curve": [
+        {
+          "pivots": 15,
+          "recall": 0.2,
+          "precision": 1
+        },
+        {
+          "pivots": 30,
+          "recall": 0.6,
+          "precision": 1
+        },
+        {
+          "pivots": 45,
+          "recall": 0.7,
+          "precision": 0.7
+        },
+        {
+          "pivots": 60,
+          "recall": 0.7,
+          "precision": 0.583
+        },
+        {
+          "pivots": 75,
+          "recall": 0.7,
+          "precision": 0.583
+        },
+        {
+          "pivots": 90,
+          "recall": 0.7,
+          "precision": 0.583
+        }
+      ],
+      "pivotsTo80": null,
+      "reappearanceDetected": 1,
+      "reappearanceTotal": 2,
+      "reappearanceFalse": 5,
+      "contradictions": 5,
+      "ms": 531
+    },
+    {
+      "engine": "v1.0",
+      "seed": 6,
+      "difficulty": 0.3,
+      "seedKind": "shared",
+      "precision": 1,
+      "recall": 0.1,
+      "f1": 0.182,
+      "falseAttribution": [],
+      "plantedAbsorbed": false,
+      "lookalikeAbsorbed": 0,
+      "operatorRecall": 0,
+      "treasuryFound": false,
+      "depositFound": false,
+      "feeCorrect": true,
+      "pivots": 76,
+      "requests": 91,
+      "curve": [
+        {
+          "pivots": 15,
+          "recall": 0.1,
+          "precision": 1
+        },
+        {
+          "pivots": 30,
+          "recall": 0.1,
+          "precision": 1
+        },
+        {
+          "pivots": 45,
+          "recall": 0.1,
+          "precision": 1
+        },
+        {
+          "pivots": 60,
+          "recall": 0.1,
+          "precision": 1
+        },
+        {
+          "pivots": 75,
+          "recall": 0.1,
+          "precision": 1
+        },
+        {
+          "pivots": 76,
+          "recall": 0.1,
+          "precision": 1
+        },
+        {
+          "pivots": 76,
+          "recall": 0.1,
+          "precision": 1
+        }
+      ],
+      "pivotsTo80": null,
+      "reappearanceDetected": 0,
+      "reappearanceTotal": 2,
+      "reappearanceFalse": 0,
+      "contradictions": 4,
+      "ms": 383
+    },
+    {
+      "engine": "v1.0",
+      "seed": 6,
+      "difficulty": 0.3,
+      "seedKind": "wallet",
+      "precision": 0,
+      "recall": 0,
+      "f1": 0,
+      "falseAttribution": [],
+      "plantedAbsorbed": false,
+      "lookalikeAbsorbed": 0,
+      "operatorRecall": 0,
+      "treasuryFound": true,
+      "depositFound": true,
+      "feeCorrect": true,
+      "pivots": 63,
+      "requests": 282,
+      "curve": [
+        {
+          "pivots": 15,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 30,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 45,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 60,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 63,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 63,
+          "recall": 0,
+          "precision": 0
+        }
+      ],
+      "pivotsTo80": null,
+      "reappearanceDetected": 0,
+      "reappearanceTotal": 2,
+      "reappearanceFalse": 0,
+      "contradictions": 1,
+      "ms": 247
+    },
+    {
+      "engine": "v1.0",
+      "seed": 6,
+      "difficulty": 0.8,
+      "seedKind": "domain",
+      "precision": 1,
+      "recall": 0.6,
+      "f1": 0.75,
+      "falseAttribution": [],
+      "plantedAbsorbed": false,
+      "lookalikeAbsorbed": 0,
+      "operatorRecall": 0,
+      "treasuryFound": false,
+      "depositFound": false,
+      "feeCorrect": true,
+      "pivots": 90,
+      "requests": 100,
+      "curve": [
+        {
+          "pivots": 15,
+          "recall": 0.5,
+          "precision": 1
+        },
+        {
+          "pivots": 30,
+          "recall": 0.6,
+          "precision": 1
+        },
+        {
+          "pivots": 45,
+          "recall": 0.6,
+          "precision": 1
+        },
+        {
+          "pivots": 60,
+          "recall": 0.6,
+          "precision": 1
+        },
+        {
+          "pivots": 75,
+          "recall": 0.6,
+          "precision": 1
+        },
+        {
+          "pivots": 90,
+          "recall": 0.6,
+          "precision": 1
+        }
+      ],
+      "pivotsTo80": null,
+      "reappearanceDetected": 1,
+      "reappearanceTotal": 2,
+      "reappearanceFalse": 0,
+      "contradictions": 5,
+      "ms": 470
+    },
+    {
+      "engine": "v1.0",
+      "seed": 6,
+      "difficulty": 0.8,
+      "seedKind": "shared",
+      "precision": 1,
+      "recall": 0.1,
+      "f1": 0.182,
+      "falseAttribution": [],
+      "plantedAbsorbed": false,
+      "lookalikeAbsorbed": 0,
+      "operatorRecall": 0,
+      "treasuryFound": false,
+      "depositFound": false,
+      "feeCorrect": true,
+      "pivots": 24,
+      "requests": 30,
+      "curve": [
+        {
+          "pivots": 15,
+          "recall": 0.1,
+          "precision": 1
+        },
+        {
+          "pivots": 24,
+          "recall": 0.1,
+          "precision": 1
+        },
+        {
+          "pivots": 24,
+          "recall": 0.1,
+          "precision": 1
+        }
+      ],
+      "pivotsTo80": null,
+      "reappearanceDetected": 0,
+      "reappearanceTotal": 2,
+      "reappearanceFalse": 0,
+      "contradictions": 4,
+      "ms": 61
+    },
+    {
+      "engine": "v1.0",
+      "seed": 6,
+      "difficulty": 0.8,
+      "seedKind": "wallet",
+      "precision": 0,
+      "recall": 0,
+      "f1": 0,
+      "falseAttribution": [],
+      "plantedAbsorbed": false,
+      "lookalikeAbsorbed": 0,
+      "operatorRecall": 0,
+      "treasuryFound": true,
+      "depositFound": true,
+      "feeCorrect": true,
+      "pivots": 61,
+      "requests": 273,
+      "curve": [
+        {
+          "pivots": 15,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 30,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 45,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 60,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 61,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 61,
+          "recall": 0,
+          "precision": 0
+        }
+      ],
+      "pivotsTo80": null,
+      "reappearanceDetected": 0,
+      "reappearanceTotal": 2,
+      "reappearanceFalse": 0,
+      "contradictions": 1,
+      "ms": 246
+    },
+    {
+      "engine": "v1.0",
+      "seed": 7,
+      "difficulty": 0.3,
+      "seedKind": "domain",
+      "precision": 0.571,
+      "recall": 0.8,
+      "f1": 0.667,
+      "falseAttribution": [
+        "bistro-school67.com",
+        "meds-store93.online",
+        "meds-store99.shop",
+        "bakery-school36.eu",
+        "cheap-pharma61.shop",
+        "dental-bakery87.net"
+      ],
+      "plantedAbsorbed": false,
+      "lookalikeAbsorbed": 0,
+      "operatorRecall": 0,
+      "treasuryFound": false,
+      "depositFound": false,
+      "feeCorrect": true,
+      "pivots": 90,
+      "requests": 103,
+      "curve": [
+        {
+          "pivots": 15,
+          "recall": 0.2,
+          "precision": 1
+        },
+        {
+          "pivots": 30,
+          "recall": 0.5,
+          "precision": 1
+        },
+        {
+          "pivots": 45,
+          "recall": 0.6,
+          "precision": 0.5
+        },
+        {
+          "pivots": 60,
+          "recall": 0.8,
+          "precision": 0.571
+        },
+        {
+          "pivots": 75,
+          "recall": 0.8,
+          "precision": 0.571
+        },
+        {
+          "pivots": 90,
+          "recall": 0.8,
+          "precision": 0.571
+        }
+      ],
+      "pivotsTo80": 60,
+      "reappearanceDetected": 2,
+      "reappearanceTotal": 2,
+      "reappearanceFalse": 6,
+      "contradictions": 5,
+      "ms": 563
+    },
+    {
+      "engine": "v1.0",
+      "seed": 7,
+      "difficulty": 0.3,
+      "seedKind": "shared",
+      "precision": 0.571,
+      "recall": 0.8,
+      "f1": 0.667,
+      "falseAttribution": [
+        "bistro-school67.com",
+        "meds-store93.online",
+        "meds-store99.shop",
+        "bakery-school36.eu",
+        "cheap-pharma61.shop",
+        "dental-bakery87.net"
+      ],
+      "plantedAbsorbed": false,
+      "lookalikeAbsorbed": 0,
+      "operatorRecall": 0,
+      "treasuryFound": false,
+      "depositFound": false,
+      "feeCorrect": true,
+      "pivots": 90,
+      "requests": 103,
+      "curve": [
+        {
+          "pivots": 15,
+          "recall": 0.2,
+          "precision": 1
+        },
+        {
+          "pivots": 30,
+          "recall": 0.5,
+          "precision": 1
+        },
+        {
+          "pivots": 45,
+          "recall": 0.6,
+          "precision": 0.5
+        },
+        {
+          "pivots": 60,
+          "recall": 0.8,
+          "precision": 0.571
+        },
+        {
+          "pivots": 75,
+          "recall": 0.8,
+          "precision": 0.571
+        },
+        {
+          "pivots": 90,
+          "recall": 0.8,
+          "precision": 0.571
+        }
+      ],
+      "pivotsTo80": 60,
+      "reappearanceDetected": 2,
+      "reappearanceTotal": 2,
+      "reappearanceFalse": 6,
+      "contradictions": 5,
+      "ms": 444
+    },
+    {
+      "engine": "v1.0",
+      "seed": 7,
+      "difficulty": 0.3,
+      "seedKind": "wallet",
+      "precision": 0,
+      "recall": 0,
+      "f1": 0,
+      "falseAttribution": [],
+      "plantedAbsorbed": false,
+      "lookalikeAbsorbed": 0,
+      "operatorRecall": 0,
+      "treasuryFound": true,
+      "depositFound": true,
+      "feeCorrect": true,
+      "pivots": 57,
+      "requests": 258,
+      "curve": [
+        {
+          "pivots": 15,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 30,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 45,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 57,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 57,
+          "recall": 0,
+          "precision": 0
+        }
+      ],
+      "pivotsTo80": null,
+      "reappearanceDetected": 0,
+      "reappearanceTotal": 2,
+      "reappearanceFalse": 0,
+      "contradictions": 1,
+      "ms": 236
+    },
+    {
+      "engine": "v1.0",
+      "seed": 7,
+      "difficulty": 0.8,
+      "seedKind": "domain",
+      "precision": 1,
+      "recall": 0.2,
+      "f1": 0.333,
+      "falseAttribution": [],
+      "plantedAbsorbed": false,
+      "lookalikeAbsorbed": 0,
+      "operatorRecall": 0,
+      "treasuryFound": false,
+      "depositFound": false,
+      "feeCorrect": true,
+      "pivots": 32,
+      "requests": 40,
+      "curve": [
+        {
+          "pivots": 15,
+          "recall": 0.2,
+          "precision": 1
+        },
+        {
+          "pivots": 30,
+          "recall": 0.2,
+          "precision": 1
+        },
+        {
+          "pivots": 32,
+          "recall": 0.2,
+          "precision": 1
+        },
+        {
+          "pivots": 32,
+          "recall": 0.2,
+          "precision": 1
+        }
+      ],
+      "pivotsTo80": null,
+      "reappearanceDetected": 0,
+      "reappearanceTotal": 2,
+      "reappearanceFalse": 0,
+      "contradictions": 5,
+      "ms": 92
+    },
+    {
+      "engine": "v1.0",
+      "seed": 7,
+      "difficulty": 0.8,
+      "seedKind": "shared",
+      "precision": 1,
+      "recall": 0.2,
+      "f1": 0.333,
+      "falseAttribution": [],
+      "plantedAbsorbed": false,
+      "lookalikeAbsorbed": 0,
+      "operatorRecall": 0,
+      "treasuryFound": false,
+      "depositFound": false,
+      "feeCorrect": true,
+      "pivots": 32,
+      "requests": 40,
+      "curve": [
+        {
+          "pivots": 15,
+          "recall": 0.2,
+          "precision": 1
+        },
+        {
+          "pivots": 30,
+          "recall": 0.2,
+          "precision": 1
+        },
+        {
+          "pivots": 32,
+          "recall": 0.2,
+          "precision": 1
+        },
+        {
+          "pivots": 32,
+          "recall": 0.2,
+          "precision": 1
+        }
+      ],
+      "pivotsTo80": null,
+      "reappearanceDetected": 0,
+      "reappearanceTotal": 2,
+      "reappearanceFalse": 0,
+      "contradictions": 5,
+      "ms": 86
+    },
+    {
+      "engine": "v1.0",
+      "seed": 7,
+      "difficulty": 0.8,
+      "seedKind": "wallet",
+      "precision": 0,
+      "recall": 0,
+      "f1": 0,
+      "falseAttribution": [],
+      "plantedAbsorbed": false,
+      "lookalikeAbsorbed": 0,
+      "operatorRecall": 0,
+      "treasuryFound": true,
+      "depositFound": true,
+      "feeCorrect": true,
+      "pivots": 57,
+      "requests": 258,
+      "curve": [
+        {
+          "pivots": 15,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 30,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 45,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 57,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 57,
+          "recall": 0,
+          "precision": 0
+        }
+      ],
+      "pivotsTo80": null,
+      "reappearanceDetected": 0,
+      "reappearanceTotal": 2,
+      "reappearanceFalse": 0,
+      "contradictions": 1,
+      "ms": 162
+    },
+    {
+      "engine": "v1.0",
+      "seed": 8,
+      "difficulty": 0.3,
+      "seedKind": "domain",
+      "precision": 1,
+      "recall": 0.5,
+      "f1": 0.667,
+      "falseAttribution": [],
+      "plantedAbsorbed": false,
+      "lookalikeAbsorbed": 0,
+      "operatorRecall": 0,
+      "treasuryFound": false,
+      "depositFound": false,
+      "feeCorrect": true,
+      "pivots": 90,
+      "requests": 104,
+      "curve": [
+        {
+          "pivots": 15,
+          "recall": 0.4,
+          "precision": 1
+        },
+        {
+          "pivots": 30,
+          "recall": 0.5,
+          "precision": 1
+        },
+        {
+          "pivots": 45,
+          "recall": 0.5,
+          "precision": 1
+        },
+        {
+          "pivots": 60,
+          "recall": 0.5,
+          "precision": 1
+        },
+        {
+          "pivots": 75,
+          "recall": 0.5,
+          "precision": 1
+        },
+        {
+          "pivots": 90,
+          "recall": 0.5,
+          "precision": 1
+        }
+      ],
+      "pivotsTo80": null,
+      "reappearanceDetected": 2,
+      "reappearanceTotal": 2,
+      "reappearanceFalse": 0,
+      "contradictions": 4,
+      "ms": 409
+    },
+    {
+      "engine": "v1.0",
+      "seed": 8,
+      "difficulty": 0.3,
+      "seedKind": "shared",
+      "precision": 1,
+      "recall": 0.1,
+      "f1": 0.182,
+      "falseAttribution": [],
+      "plantedAbsorbed": false,
+      "lookalikeAbsorbed": 0,
+      "operatorRecall": 0,
+      "treasuryFound": false,
+      "depositFound": false,
+      "feeCorrect": true,
+      "pivots": 24,
+      "requests": 30,
+      "curve": [
+        {
+          "pivots": 15,
+          "recall": 0.1,
+          "precision": 1
+        },
+        {
+          "pivots": 24,
+          "recall": 0.1,
+          "precision": 1
+        },
+        {
+          "pivots": 24,
+          "recall": 0.1,
+          "precision": 1
+        }
+      ],
+      "pivotsTo80": null,
+      "reappearanceDetected": 0,
+      "reappearanceTotal": 2,
+      "reappearanceFalse": 0,
+      "contradictions": 4,
+      "ms": 67
+    },
+    {
+      "engine": "v1.0",
+      "seed": 8,
+      "difficulty": 0.3,
+      "seedKind": "wallet",
+      "precision": 0,
+      "recall": 0,
+      "f1": 0,
+      "falseAttribution": [],
+      "plantedAbsorbed": false,
+      "lookalikeAbsorbed": 0,
+      "operatorRecall": 0,
+      "treasuryFound": true,
+      "depositFound": true,
+      "feeCorrect": true,
+      "pivots": 57,
+      "requests": 258,
+      "curve": [
+        {
+          "pivots": 15,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 30,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 45,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 57,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 57,
+          "recall": 0,
+          "precision": 0
+        }
+      ],
+      "pivotsTo80": null,
+      "reappearanceDetected": 0,
+      "reappearanceTotal": 2,
+      "reappearanceFalse": 0,
+      "contradictions": 1,
+      "ms": 189
+    },
+    {
+      "engine": "v1.0",
+      "seed": 8,
+      "difficulty": 0.8,
+      "seedKind": "domain",
+      "precision": 1,
+      "recall": 0.1,
+      "f1": 0.182,
+      "falseAttribution": [],
+      "plantedAbsorbed": false,
+      "lookalikeAbsorbed": 0,
+      "operatorRecall": 0,
+      "treasuryFound": false,
+      "depositFound": false,
+      "feeCorrect": true,
+      "pivots": 24,
+      "requests": 30,
+      "curve": [
+        {
+          "pivots": 15,
+          "recall": 0.1,
+          "precision": 1
+        },
+        {
+          "pivots": 24,
+          "recall": 0.1,
+          "precision": 1
+        },
+        {
+          "pivots": 24,
+          "recall": 0.1,
+          "precision": 1
+        }
+      ],
+      "pivotsTo80": null,
+      "reappearanceDetected": 0,
+      "reappearanceTotal": 2,
+      "reappearanceFalse": 0,
+      "contradictions": 4,
+      "ms": 65
+    },
+    {
+      "engine": "v1.0",
+      "seed": 8,
+      "difficulty": 0.8,
+      "seedKind": "shared",
+      "precision": 1,
+      "recall": 0.1,
+      "f1": 0.182,
+      "falseAttribution": [],
+      "plantedAbsorbed": false,
+      "lookalikeAbsorbed": 0,
+      "operatorRecall": 0,
+      "treasuryFound": false,
+      "depositFound": false,
+      "feeCorrect": true,
+      "pivots": 24,
+      "requests": 30,
+      "curve": [
+        {
+          "pivots": 15,
+          "recall": 0.1,
+          "precision": 1
+        },
+        {
+          "pivots": 24,
+          "recall": 0.1,
+          "precision": 1
+        },
+        {
+          "pivots": 24,
+          "recall": 0.1,
+          "precision": 1
+        }
+      ],
+      "pivotsTo80": null,
+      "reappearanceDetected": 0,
+      "reappearanceTotal": 2,
+      "reappearanceFalse": 0,
+      "contradictions": 4,
+      "ms": 72
+    },
+    {
+      "engine": "v1.0",
+      "seed": 8,
+      "difficulty": 0.8,
+      "seedKind": "wallet",
+      "precision": 0,
+      "recall": 0,
+      "f1": 0,
+      "falseAttribution": [],
+      "plantedAbsorbed": false,
+      "lookalikeAbsorbed": 0,
+      "operatorRecall": 0,
+      "treasuryFound": true,
+      "depositFound": true,
+      "feeCorrect": true,
+      "pivots": 57,
+      "requests": 258,
+      "curve": [
+        {
+          "pivots": 15,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 30,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 45,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 57,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 57,
+          "recall": 0,
+          "precision": 0
+        }
+      ],
+      "pivotsTo80": null,
+      "reappearanceDetected": 0,
+      "reappearanceTotal": 2,
+      "reappearanceFalse": 0,
+      "contradictions": 1,
+      "ms": 174
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+PASS fresh install and populated v7 migration/replay preserve existing data
+PASS explicit competing sets include operation, kit, provider and unknown
+PASS plans and outcome interpretations commit before specialist handoff
+PASS new deterministic evidence rejects a false bounded prediction and resolves a real contradiction
+PASS provider disagreement preserves both sources and remains unresolved
+PASS deterministic scoped correction resolves evidence error without discarding the conflict
+PASS absence discipline requires a finite covered scope and keeps unavailable results inconclusive
+PASS five copied artifacts count as one upstream unit; independent categories remain separate
+PASS replay is exactly once and analytical projection creates no evidence or ownership relationships
+PASS default briefing contains analyst questions; raw IDs and ledgers require Advanced
+PASS bounded falsification reservations cannot exceed or extend total operation budgets
+{"ok":true,"checks":12,"passed":["fresh install and populated v7 migration/replay preserve existing data","explicit competing sets include operation, kit, provider and unknown","plans and outcome interpretations commit before specialist handoff","new deterministic evidence rejects a false bounded prediction and resolves a real contradiction","provider disagreement preserves both sources and remains unresolved","deterministic scoped correction resolves evidence error without discarding the conflict","absence discipline requires a finite covered scope and keeps unavailable results inconclusive","five copied artifacts count as one upstream unit; independent categories remain separate","replay is exactly once and analytical projection creates no evidence or ownership relationships","default briefing contains analyst questions; raw IDs and ledgers require Advanced","bounded falsification reservations cannot exceed or extend total operation budgets","used-state restart retains full revision and contradiction history"]}

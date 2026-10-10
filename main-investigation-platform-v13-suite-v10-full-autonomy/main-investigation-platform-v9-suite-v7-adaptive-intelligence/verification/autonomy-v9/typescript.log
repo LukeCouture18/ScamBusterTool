@@ -1,0 +1,4 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+components/suite/finder.tsx(50,81): error TS18048: 'c.discovery_quality' is possibly 'undefined'.
+components/suite/finder.tsx(50,115): error TS18048: 'c.discovery_quality' is possibly 'undefined'.
+components/suite/finder.tsx(50,192): error TS18048: 'c.discovery_quality' is possibly 'undefined'.

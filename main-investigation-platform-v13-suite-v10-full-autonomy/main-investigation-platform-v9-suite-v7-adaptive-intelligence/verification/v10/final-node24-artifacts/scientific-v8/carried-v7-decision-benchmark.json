@@ -1,0 +1,4343 @@
+{
+  "ok": true,
+  "partition": "carried exact v7 design cases",
+  "generated_at": "2026-10-04T17:55:18.818Z",
+  "seeds": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "states": 42,
+  "truth_isolation": {
+    "production_imports_of_benchmark_truth": 0
+  },
+  "method": {
+    "world": "Each alternative is executed in a cloned hidden world, the v7 exploitation policy continues for 3 ticks (identical continuation for every alternative), the shared pipeline finishes, and the result is scored with fixture truth: +1 hidden site, +0.8 validated true wallet, +0.6 linkage discriminated, +0.6 contradiction resolved, +1 report ready, -0.3 wrong-operation proposal, -0.004 per request.",
+    "table": "Investigation-level Director actions use explicit outcome tables (rationale in bench-adaptive/scenarios.mjs).",
+    "policies": {
+      "v7-exploit": "production v7 choose() without exploration",
+      "v8": "production scientificChoice on the identical eligible candidate pool",
+      "confirmation": "prefer related hunts and artifact searches over contradiction/temporal checks; no truth access",
+      "v7": "production v7 choose() with its bounded deterministic exploration",
+      "v6": "v6 operation policy (seed-only related hunt / Hunter after contradiction); v5 Director value/cost order for Director scenarios",
+      "cheapest": "cheapest available safe test",
+      "random": "deterministic pseudo-random available test"
+    }
+  },
+  "summary": {
+    "v7-exploit": {
+      "states": 42,
+      "optimal_choice_rate": 0.524,
+      "near_optimal_rate": 0.548,
+      "mean_regret": 0.425,
+      "total_regret": 17.851
+    },
+    "v7": {
+      "states": 42,
+      "optimal_choice_rate": 0.548,
+      "near_optimal_rate": 0.571,
+      "mean_regret": 0.432,
+      "total_regret": 18.133
+    },
+    "v6": {
+      "states": 42,
+      "optimal_choice_rate": 0.048,
+      "near_optimal_rate": 0.048,
+      "mean_regret": 2.077,
+      "total_regret": 87.235
+    },
+    "v8": {
+      "states": 42,
+      "optimal_choice_rate": 0.738,
+      "near_optimal_rate": 0.762,
+      "mean_regret": 0.195,
+      "total_regret": 8.172
+    },
+    "cheapest": {
+      "states": 42,
+      "optimal_choice_rate": 0.381,
+      "near_optimal_rate": 0.405,
+      "mean_regret": 0.939,
+      "total_regret": 39.422
+    },
+    "random": {
+      "states": 42,
+      "optimal_choice_rate": 0.262,
+      "near_optimal_rate": 0.262,
+      "mean_regret": 0.981,
+      "total_regret": 41.182
+    },
+    "confirmation": {
+      "states": 42,
+      "optimal_choice_rate": 0.452,
+      "near_optimal_rate": 0.452,
+      "mean_regret": 0.434,
+      "total_regret": 18.247
+    }
+  },
+  "by_type": {
+    "useful_vs_saturated_finder_branch": {
+      "v7-exploit": {
+        "states": 5,
+        "optimal": 0,
+        "regret": 5.898
+      },
+      "v7": {
+        "states": 5,
+        "optimal": 0,
+        "regret": 5.898
+      },
+      "v6": {
+        "states": 5,
+        "optimal": 0,
+        "regret": 18.409
+      },
+      "v8": {
+        "states": 5,
+        "optimal": 5,
+        "regret": 0
+      },
+      "cheapest": {
+        "states": 5,
+        "optimal": 0,
+        "regret": 5.898
+      },
+      "random": {
+        "states": 5,
+        "optimal": 1,
+        "regret": 7.493
+      },
+      "confirmation": {
+        "states": 5,
+        "optimal": 5,
+        "regret": 0
+      }
+    },
+    "generic_template_vs_discriminating_wallet": {
+      "v7-exploit": {
+        "states": 5,
+        "optimal": 3,
+        "regret": 1.859
+      },
+      "v7": {
+        "states": 5,
+        "optimal": 3,
+        "regret": 1.859
+      },
+      "v6": {
+        "states": 5,
+        "optimal": 1,
+        "regret": 4.921
+      },
+      "v8": {
+        "states": 5,
+        "optimal": 3,
+        "regret": 1.859
+      },
+      "cheapest": {
+        "states": 5,
+        "optimal": 3,
+        "regret": 1.859
+      },
+      "random": {
+        "states": 5,
+        "optimal": 2,
+        "regret": 3.714
+      },
+      "confirmation": {
+        "states": 5,
+        "optimal": 3,
+        "regret": 3.01
+      }
+    },
+    "new_contradiction_vs_confirmation": {
+      "v7-exploit": {
+        "states": 5,
+        "optimal": 3,
+        "regret": 0.112
+      },
+      "v7": {
+        "states": 5,
+        "optimal": 4,
+        "regret": 0.012
+      },
+      "v6": {
+        "states": 5,
+        "optimal": 0,
+        "regret": 2.493
+      },
+      "v8": {
+        "states": 5,
+        "optimal": 3,
+        "regret": 0.112
+      },
+      "cheapest": {
+        "states": 5,
+        "optimal": 3,
+        "regret": 0.112
+      },
+      "random": {
+        "states": 5,
+        "optimal": 1,
+        "regret": 0.992
+      },
+      "confirmation": {
+        "states": 5,
+        "optimal": 0,
+        "regret": 1.468
+      }
+    },
+    "replacement_hunt_vs_exhausted_artifact": {
+      "v7-exploit": {
+        "states": 5,
+        "optimal": 0,
+        "regret": 6.446
+      },
+      "v7": {
+        "states": 5,
+        "optimal": 0,
+        "regret": 6.446
+      },
+      "v6": {
+        "states": 5,
+        "optimal": 0,
+        "regret": 13.76
+      },
+      "v8": {
+        "states": 5,
+        "optimal": 3,
+        "regret": 1.191
+      },
+      "cheapest": {
+        "states": 5,
+        "optimal": 0,
+        "regret": 6.446
+      },
+      "random": {
+        "states": 5,
+        "optimal": 1,
+        "regret": 9.649
+      },
+      "confirmation": {
+        "states": 5,
+        "optimal": 1,
+        "regret": 3.938
+      }
+    },
+    "novel_exploration_opportunity": {
+      "v7-exploit": {
+        "states": 5,
+        "optimal": 5,
+        "regret": 0
+      },
+      "v7": {
+        "states": 5,
+        "optimal": 5,
+        "regret": 0
+      },
+      "v6": {
+        "states": 5,
+        "optimal": 0,
+        "regret": 2.726
+      },
+      "v8": {
+        "states": 5,
+        "optimal": 5,
+        "regret": 0
+      },
+      "cheapest": {
+        "states": 5,
+        "optimal": 5,
+        "regret": 0
+      },
+      "random": {
+        "states": 5,
+        "optimal": 2,
+        "regret": 1.95
+      },
+      "confirmation": {
+        "states": 5,
+        "optimal": 0,
+        "regret": 2.746
+      }
+    },
+    "two_competing_operations": {
+      "v7-exploit": {
+        "states": 5,
+        "optimal": 3,
+        "regret": 1.83
+      },
+      "v7": {
+        "states": 5,
+        "optimal": 3,
+        "regret": 2.212
+      },
+      "v6": {
+        "states": 5,
+        "optimal": 0,
+        "regret": 14.536
+      },
+      "v8": {
+        "states": 5,
+        "optimal": 3,
+        "regret": 1.83
+      },
+      "cheapest": {
+        "states": 5,
+        "optimal": 2,
+        "regret": 3.788
+      },
+      "random": {
+        "states": 5,
+        "optimal": 0,
+        "regret": 6.752
+      },
+      "confirmation": {
+        "states": 5,
+        "optimal": 3,
+        "regret": 1.83
+      }
+    },
+    "time_sensitive_disappearing_site": {
+      "v7-exploit": {
+        "states": 5,
+        "optimal": 2,
+        "regret": 0.787
+      },
+      "v7": {
+        "states": 5,
+        "optimal": 2,
+        "regret": 0.787
+      },
+      "v6": {
+        "states": 5,
+        "optimal": 0,
+        "regret": 7.264
+      },
+      "v8": {
+        "states": 5,
+        "optimal": 3,
+        "regret": 2.261
+      },
+      "cheapest": {
+        "states": 5,
+        "optimal": 2,
+        "regret": 0.787
+      },
+      "random": {
+        "states": 5,
+        "optimal": 0,
+        "regret": 5.23
+      },
+      "confirmation": {
+        "states": 5,
+        "optimal": 2,
+        "regret": 3.36
+      }
+    },
+    "expensive_high_value_vs_cheap_low_value": {
+      "v7-exploit": {
+        "states": 5,
+        "optimal": 4,
+        "regret": 0.919
+      },
+      "v7": {
+        "states": 5,
+        "optimal": 4,
+        "regret": 0.919
+      },
+      "v6": {
+        "states": 5,
+        "optimal": 0,
+        "regret": 22.15
+      },
+      "v8": {
+        "states": 5,
+        "optimal": 4,
+        "regret": 0.919
+      },
+      "cheapest": {
+        "states": 5,
+        "optimal": 0,
+        "regret": 19.556
+      },
+      "random": {
+        "states": 5,
+        "optimal": 2,
+        "regret": 5.402
+      },
+      "confirmation": {
+        "states": 5,
+        "optimal": 4,
+        "regret": 0.919
+      }
+    },
+    "provider_retry_vs_unrelated_expansion": {
+      "v7-exploit": {
+        "states": 1,
+        "optimal": 1,
+        "regret": 0
+      },
+      "v7": {
+        "states": 1,
+        "optimal": 1,
+        "regret": 0
+      },
+      "v6": {
+        "states": 1,
+        "optimal": 1,
+        "regret": 0
+      },
+      "v8": {
+        "states": 1,
+        "optimal": 1,
+        "regret": 0
+      },
+      "cheapest": {
+        "states": 1,
+        "optimal": 1,
+        "regret": 0
+      },
+      "random": {
+        "states": 1,
+        "optimal": 1,
+        "regret": 0
+      },
+      "confirmation": {
+        "states": 1,
+        "optimal": 1,
+        "regret": 0
+      }
+    },
+    "report_blocker_vs_low_value_correlation": {
+      "v7-exploit": {
+        "states": 1,
+        "optimal": 1,
+        "regret": 0
+      },
+      "v7": {
+        "states": 1,
+        "optimal": 1,
+        "regret": 0
+      },
+      "v6": {
+        "states": 1,
+        "optimal": 0,
+        "regret": 0.976
+      },
+      "v8": {
+        "states": 1,
+        "optimal": 1,
+        "regret": 0
+      },
+      "cheapest": {
+        "states": 1,
+        "optimal": 0,
+        "regret": 0.976
+      },
+      "random": {
+        "states": 1,
+        "optimal": 1,
+        "regret": 0
+      },
+      "confirmation": {
+        "states": 1,
+        "optimal": 0,
+        "regret": 0.976
+      }
+    }
+  },
+  "results": [
+    {
+      "type": "useful_vs_saturated_finder_branch",
+      "seed": 1,
+      "note": "Three seed-only related hunts were empty; a distinctive contact and analytics id were just recorded and never searched.",
+      "alternatives": [
+        {
+          "op": "S1",
+          "test": "PUBLIC_ARTIFACT_SEARCH",
+          "subject": "artifact:analytics:ga4:g-s1831",
+          "value": 3.261
+        },
+        {
+          "op": "S1",
+          "test": "PUBLIC_ARTIFACT_SEARCH",
+          "subject": "artifact:contact:s1_support",
+          "value": 5.089
+        },
+        {
+          "op": "S1",
+          "test": "PUBLIC_ARTIFACT_SEARCH",
+          "subject": "artifact:wallet:0xad7294fead7294fead7294fead7294fead7294fe",
+          "value": 1.761
+        },
+        {
+          "op": "S1",
+          "test": "RELATED_SITE_HUNT",
+          "subject": "scope:S1",
+          "value": 5.566
+        }
+      ],
+      "best": 5.566,
+      "policies": {
+        "v7-exploit": {
+          "choice": "S1:PUBLIC_ARTIFACT_SEARCH:artifact:analytics:ga4:g-s1831",
+          "value": 3.261,
+          "regret": 2.306,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "v7": {
+          "choice": "S1:PUBLIC_ARTIFACT_SEARCH:artifact:analytics:ga4:g-s1831",
+          "value": 3.261,
+          "regret": 2.306,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "v6": {
+          "choice": "S1:RELATED_SITE_HUNT:scope:S1",
+          "value": 1.208,
+          "regret": 4.358,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "v8": {
+          "choice": "S1:RELATED_SITE_HUNT:scope:S1",
+          "value": 5.566,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true,
+          "exploration": false
+        },
+        "cheapest": {
+          "choice": "S1:PUBLIC_ARTIFACT_SEARCH:artifact:analytics:ga4:g-s1831",
+          "value": 3.261,
+          "regret": 2.306,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "random": {
+          "choice": "S1:PUBLIC_ARTIFACT_SEARCH:artifact:contact:s1_support",
+          "value": 5.089,
+          "regret": 0.478,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "confirmation": {
+          "choice": "S1:RELATED_SITE_HUNT:scope:S1",
+          "value": 5.566,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true,
+          "exploration": false
+        }
+      }
+    },
+    {
+      "type": "useful_vs_saturated_finder_branch",
+      "seed": 2,
+      "note": "Three seed-only related hunts were empty; a distinctive contact and analytics id were just recorded and never searched.",
+      "alternatives": [
+        {
+          "op": "S2",
+          "test": "PUBLIC_ARTIFACT_SEARCH",
+          "subject": "artifact:analytics:ga4:g-s2522",
+          "value": 2.708
+        },
+        {
+          "op": "S2",
+          "test": "PUBLIC_ARTIFACT_SEARCH",
+          "subject": "artifact:contact:s2_support",
+          "value": 2.708
+        },
+        {
+          "op": "S2",
+          "test": "PUBLIC_ARTIFACT_SEARCH",
+          "subject": "artifact:wallet:0xb21ac041b21ac041b21ac041b21ac041b21ac041",
+          "value": 2.395
+        },
+        {
+          "op": "S2",
+          "test": "RELATED_SITE_HUNT",
+          "subject": "scope:S2",
+          "value": 3.756
+        }
+      ],
+      "best": 3.756,
+      "policies": {
+        "v7-exploit": {
+          "choice": "S2:PUBLIC_ARTIFACT_SEARCH:artifact:analytics:ga4:g-s2522",
+          "value": 2.708,
+          "regret": 1.048,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "v7": {
+          "choice": "S2:PUBLIC_ARTIFACT_SEARCH:artifact:analytics:ga4:g-s2522",
+          "value": 2.708,
+          "regret": 1.048,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "v6": {
+          "choice": "S2:RELATED_SITE_HUNT:scope:S2",
+          "value": 1.411,
+          "regret": 2.345,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "v8": {
+          "choice": "S2:RELATED_SITE_HUNT:scope:S2",
+          "value": 3.756,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true,
+          "exploration": false
+        },
+        "cheapest": {
+          "choice": "S2:PUBLIC_ARTIFACT_SEARCH:artifact:analytics:ga4:g-s2522",
+          "value": 2.708,
+          "regret": 1.048,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "random": {
+          "choice": "S2:PUBLIC_ARTIFACT_SEARCH:artifact:analytics:ga4:g-s2522",
+          "value": 2.708,
+          "regret": 1.048,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "confirmation": {
+          "choice": "S2:RELATED_SITE_HUNT:scope:S2",
+          "value": 3.756,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true,
+          "exploration": false
+        }
+      }
+    },
+    {
+      "type": "useful_vs_saturated_finder_branch",
+      "seed": 3,
+      "note": "Three seed-only related hunts were empty; a distinctive contact and analytics id were just recorded and never searched.",
+      "alternatives": [
+        {
+          "op": "S3",
+          "test": "PUBLIC_ARTIFACT_SEARCH",
+          "subject": "artifact:analytics:ga4:g-s3625",
+          "value": 5.268
+        },
+        {
+          "op": "S3",
+          "test": "PUBLIC_ARTIFACT_SEARCH",
+          "subject": "artifact:contact:s3_support",
+          "value": 5.566
+        },
+        {
+          "op": "S3",
+          "test": "PUBLIC_ARTIFACT_SEARCH",
+          "subject": "artifact:wallet:0x8001183c8001183c8001183c8001183c8001183c",
+          "value": 3.833
+        },
+        {
+          "op": "S3",
+          "test": "RELATED_SITE_HUNT",
+          "subject": "scope:S3",
+          "value": 5.76
+        }
+      ],
+      "best": 5.76,
+      "policies": {
+        "v7-exploit": {
+          "choice": "S3:PUBLIC_ARTIFACT_SEARCH:artifact:analytics:ga4:g-s3625",
+          "value": 5.268,
+          "regret": 0.492,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "v7": {
+          "choice": "S3:PUBLIC_ARTIFACT_SEARCH:artifact:analytics:ga4:g-s3625",
+          "value": 5.268,
+          "regret": 0.492,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "v6": {
+          "choice": "S3:RELATED_SITE_HUNT:scope:S3",
+          "value": 2.478,
+          "regret": 3.282,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "v8": {
+          "choice": "S3:RELATED_SITE_HUNT:scope:S3",
+          "value": 5.76,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true,
+          "exploration": false
+        },
+        "cheapest": {
+          "choice": "S3:PUBLIC_ARTIFACT_SEARCH:artifact:analytics:ga4:g-s3625",
+          "value": 5.268,
+          "regret": 0.492,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "random": {
+          "choice": "S3:RELATED_SITE_HUNT:scope:S3",
+          "value": 5.76,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true,
+          "exploration": false
+        },
+        "confirmation": {
+          "choice": "S3:RELATED_SITE_HUNT:scope:S3",
+          "value": 5.76,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true,
+          "exploration": false
+        }
+      }
+    },
+    {
+      "type": "useful_vs_saturated_finder_branch",
+      "seed": 4,
+      "note": "Three seed-only related hunts were empty; a distinctive contact and analytics id were just recorded and never searched.",
+      "alternatives": [
+        {
+          "op": "S4",
+          "test": "PUBLIC_ARTIFACT_SEARCH",
+          "subject": "artifact:analytics:ga4:g-s4143",
+          "value": 5.877
+        },
+        {
+          "op": "S4",
+          "test": "PUBLIC_ARTIFACT_SEARCH",
+          "subject": "artifact:contact:s4_support",
+          "value": 6.389
+        },
+        {
+          "op": "S4",
+          "test": "PUBLIC_ARTIFACT_SEARCH",
+          "subject": "artifact:wallet:0x7c2e46a77c2e46a77c2e46a77c2e46a77c2e46a7",
+          "value": 3.905
+        },
+        {
+          "op": "S4",
+          "test": "RELATED_SITE_HUNT",
+          "subject": "scope:S4",
+          "value": 7.03
+        }
+      ],
+      "best": 7.03,
+      "policies": {
+        "v7-exploit": {
+          "choice": "S4:PUBLIC_ARTIFACT_SEARCH:artifact:analytics:ga4:g-s4143",
+          "value": 5.877,
+          "regret": 1.153,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "v7": {
+          "choice": "S4:PUBLIC_ARTIFACT_SEARCH:artifact:analytics:ga4:g-s4143",
+          "value": 5.877,
+          "regret": 1.153,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "v6": {
+          "choice": "S4:RELATED_SITE_HUNT:scope:S4",
+          "value": 2.92,
+          "regret": 4.11,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "v8": {
+          "choice": "S4:RELATED_SITE_HUNT:scope:S4",
+          "value": 7.03,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true,
+          "exploration": false
+        },
+        "cheapest": {
+          "choice": "S4:PUBLIC_ARTIFACT_SEARCH:artifact:analytics:ga4:g-s4143",
+          "value": 5.877,
+          "regret": 1.153,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "random": {
+          "choice": "S4:PUBLIC_ARTIFACT_SEARCH:artifact:wallet:0x7c2e46a77c2e46a77c2e46a77c2e46a77c2e46a7",
+          "value": 3.905,
+          "regret": 3.126,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "confirmation": {
+          "choice": "S4:RELATED_SITE_HUNT:scope:S4",
+          "value": 7.03,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true,
+          "exploration": false
+        }
+      }
+    },
+    {
+      "type": "useful_vs_saturated_finder_branch",
+      "seed": 5,
+      "note": "Three seed-only related hunts were empty; a distinctive contact and analytics id were just recorded and never searched.",
+      "alternatives": [
+        {
+          "op": "S5",
+          "test": "PUBLIC_ARTIFACT_SEARCH",
+          "subject": "artifact:analytics:ga4:g-s5246",
+          "value": 6.131
+        },
+        {
+          "op": "S5",
+          "test": "PUBLIC_ARTIFACT_SEARCH",
+          "subject": "artifact:contact:s5_support",
+          "value": 4.189
+        },
+        {
+          "op": "S5",
+          "test": "PUBLIC_ARTIFACT_SEARCH",
+          "subject": "artifact:wallet:0xcff43b2acff43b2acff43b2acff43b2acff43b2a",
+          "value": 4.049
+        },
+        {
+          "op": "S5",
+          "test": "RELATED_SITE_HUNT",
+          "subject": "scope:S5",
+          "value": 7.03
+        }
+      ],
+      "best": 7.03,
+      "policies": {
+        "v7-exploit": {
+          "choice": "S5:PUBLIC_ARTIFACT_SEARCH:artifact:analytics:ga4:g-s5246",
+          "value": 6.131,
+          "regret": 0.899,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "v7": {
+          "choice": "S5:PUBLIC_ARTIFACT_SEARCH:artifact:analytics:ga4:g-s5246",
+          "value": 6.131,
+          "regret": 0.899,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "v6": {
+          "choice": "S5:RELATED_SITE_HUNT:scope:S5",
+          "value": 2.716,
+          "regret": 4.314,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "v8": {
+          "choice": "S5:RELATED_SITE_HUNT:scope:S5",
+          "value": 7.03,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true,
+          "exploration": false
+        },
+        "cheapest": {
+          "choice": "S5:PUBLIC_ARTIFACT_SEARCH:artifact:analytics:ga4:g-s5246",
+          "value": 6.131,
+          "regret": 0.899,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "random": {
+          "choice": "S5:PUBLIC_ARTIFACT_SEARCH:artifact:contact:s5_support",
+          "value": 4.189,
+          "regret": 2.841,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "confirmation": {
+          "choice": "S5:RELATED_SITE_HUNT:scope:S5",
+          "value": 7.03,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true,
+          "exploration": false
+        }
+      }
+    },
+    {
+      "type": "generic_template_vs_discriminating_wallet",
+      "seed": 1,
+      "note": "Linkage question open; contact/analytics already searched; options include a generic template-variant search and a validated deposit-wallet reuse search.",
+      "alternatives": [
+        {
+          "op": "T1",
+          "test": "HUNTER_HYPOTHESIS_TEST",
+          "subject": "hunter:T1",
+          "value": 3.948
+        },
+        {
+          "op": "T1",
+          "test": "HUNTER_HYPOTHESIS_TEST",
+          "subject": "hunter:T1",
+          "value": 3.948
+        },
+        {
+          "op": "T1",
+          "test": "PUBLIC_ARTIFACT_SEARCH",
+          "subject": "artifact:wallet:0x08d0c65b08d0c65b08d0c65b08d0c65b08d0c65b",
+          "value": 4.137
+        },
+        {
+          "op": "T1",
+          "test": "RELATED_SITE_HUNT",
+          "subject": "scope:T1",
+          "value": 4.821
+        }
+      ],
+      "best": 4.821,
+      "policies": {
+        "v7-exploit": {
+          "choice": "T1:PUBLIC_ARTIFACT_SEARCH:artifact:wallet:0x08d0c65b08d0c65b08d0c65b08d0c65b08d0c65b",
+          "value": 4.137,
+          "regret": 0.684,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "v7": {
+          "choice": "T1:PUBLIC_ARTIFACT_SEARCH:artifact:wallet:0x08d0c65b08d0c65b08d0c65b08d0c65b08d0c65b",
+          "value": 4.137,
+          "regret": 0.684,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "v6": {
+          "choice": "T1:RELATED_SITE_HUNT:scope:T1",
+          "value": 4.073,
+          "regret": 0.748,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "v8": {
+          "choice": "T1:PUBLIC_ARTIFACT_SEARCH:artifact:wallet:0x08d0c65b08d0c65b08d0c65b08d0c65b08d0c65b",
+          "value": 4.137,
+          "regret": 0.684,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "cheapest": {
+          "choice": "T1:PUBLIC_ARTIFACT_SEARCH:artifact:wallet:0x08d0c65b08d0c65b08d0c65b08d0c65b08d0c65b",
+          "value": 4.137,
+          "regret": 0.684,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "random": {
+          "choice": "T1:PUBLIC_ARTIFACT_SEARCH:artifact:wallet:0x08d0c65b08d0c65b08d0c65b08d0c65b08d0c65b",
+          "value": 4.137,
+          "regret": 0.684,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "confirmation": {
+          "choice": "T1:RELATED_SITE_HUNT:scope:T1",
+          "value": 4.821,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true,
+          "exploration": false
+        }
+      }
+    },
+    {
+      "type": "generic_template_vs_discriminating_wallet",
+      "seed": 2,
+      "note": "Linkage question open; contact/analytics already searched; options include a generic template-variant search and a validated deposit-wallet reuse search.",
+      "alternatives": [
+        {
+          "op": "T2",
+          "test": "HUNTER_HYPOTHESIS_TEST",
+          "subject": "hunter:T2",
+          "value": 2.466
+        },
+        {
+          "op": "T2",
+          "test": "HUNTER_HYPOTHESIS_TEST",
+          "subject": "hunter:T2",
+          "value": 2.466
+        },
+        {
+          "op": "T2",
+          "test": "PUBLIC_ARTIFACT_SEARCH",
+          "subject": "artifact:wallet:0xe1cf975ce1cf975ce1cf975ce1cf975ce1cf975c",
+          "value": 2.654
+        },
+        {
+          "op": "T2",
+          "test": "RELATED_SITE_HUNT",
+          "subject": "scope:T2",
+          "value": 2.654
+        }
+      ],
+      "best": 2.654,
+      "policies": {
+        "v7-exploit": {
+          "choice": "T2:PUBLIC_ARTIFACT_SEARCH:artifact:wallet:0xe1cf975ce1cf975ce1cf975ce1cf975ce1cf975c",
+          "value": 2.654,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true,
+          "exploration": false
+        },
+        "v7": {
+          "choice": "T2:PUBLIC_ARTIFACT_SEARCH:artifact:wallet:0xe1cf975ce1cf975ce1cf975ce1cf975ce1cf975c",
+          "value": 2.654,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true,
+          "exploration": false
+        },
+        "v6": {
+          "choice": "T2:RELATED_SITE_HUNT:scope:T2",
+          "value": 2.658,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true,
+          "exploration": false
+        },
+        "v8": {
+          "choice": "T2:PUBLIC_ARTIFACT_SEARCH:artifact:wallet:0xe1cf975ce1cf975ce1cf975ce1cf975ce1cf975c",
+          "value": 2.654,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true,
+          "exploration": false
+        },
+        "cheapest": {
+          "choice": "T2:PUBLIC_ARTIFACT_SEARCH:artifact:wallet:0xe1cf975ce1cf975ce1cf975ce1cf975ce1cf975c",
+          "value": 2.654,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true,
+          "exploration": false
+        },
+        "random": {
+          "choice": "T2:RELATED_SITE_HUNT:scope:T2",
+          "value": 2.654,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true,
+          "exploration": false
+        },
+        "confirmation": {
+          "choice": "T2:RELATED_SITE_HUNT:scope:T2",
+          "value": 2.654,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true,
+          "exploration": false
+        }
+      }
+    },
+    {
+      "type": "generic_template_vs_discriminating_wallet",
+      "seed": 3,
+      "note": "Linkage question open; contact/analytics already searched; options include a generic template-variant search and a validated deposit-wallet reuse search.",
+      "alternatives": [
+        {
+          "op": "T3",
+          "test": "HUNTER_HYPOTHESIS_TEST",
+          "subject": "hunter:T3",
+          "value": 3.221
+        },
+        {
+          "op": "T3",
+          "test": "HUNTER_HYPOTHESIS_TEST",
+          "subject": "hunter:T3",
+          "value": 3.221
+        },
+        {
+          "op": "T3",
+          "test": "PUBLIC_ARTIFACT_SEARCH",
+          "subject": "artifact:wallet:0x84c87be184c87be184c87be184c87be184c87be1",
+          "value": 3.34
+        },
+        {
+          "op": "T3",
+          "test": "RELATED_SITE_HUNT",
+          "subject": "scope:T3",
+          "value": 4.515
+        }
+      ],
+      "best": 4.515,
+      "policies": {
+        "v7-exploit": {
+          "choice": "T3:PUBLIC_ARTIFACT_SEARCH:artifact:wallet:0x84c87be184c87be184c87be184c87be184c87be1",
+          "value": 3.34,
+          "regret": 1.175,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "v7": {
+          "choice": "T3:PUBLIC_ARTIFACT_SEARCH:artifact:wallet:0x84c87be184c87be184c87be184c87be184c87be1",
+          "value": 3.34,
+          "regret": 1.175,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "v6": {
+          "choice": "T3:RELATED_SITE_HUNT:scope:T3",
+          "value": 3.344,
+          "regret": 1.171,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "v8": {
+          "choice": "T3:PUBLIC_ARTIFACT_SEARCH:artifact:wallet:0x84c87be184c87be184c87be184c87be184c87be1",
+          "value": 3.34,
+          "regret": 1.175,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "cheapest": {
+          "choice": "T3:PUBLIC_ARTIFACT_SEARCH:artifact:wallet:0x84c87be184c87be184c87be184c87be184c87be1",
+          "value": 3.34,
+          "regret": 1.175,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "random": {
+          "choice": "T3:HUNTER_HYPOTHESIS_TEST:hunter:T3",
+          "value": 3.221,
+          "regret": 1.295,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "confirmation": {
+          "choice": "T3:RELATED_SITE_HUNT:scope:T3",
+          "value": 4.515,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true,
+          "exploration": false
+        }
+      }
+    },
+    {
+      "type": "generic_template_vs_discriminating_wallet",
+      "seed": 4,
+      "note": "Linkage question open; contact/analytics already searched; options include a generic template-variant search and a validated deposit-wallet reuse search.",
+      "alternatives": [
+        {
+          "op": "T4",
+          "test": "HUNTER_HYPOTHESIS_TEST",
+          "subject": "hunter:T4",
+          "value": 3.02
+        },
+        {
+          "op": "T4",
+          "test": "HUNTER_HYPOTHESIS_TEST",
+          "subject": "hunter:T4",
+          "value": 3.02
+        },
+        {
+          "op": "T4",
+          "test": "PUBLIC_ARTIFACT_SEARCH",
+          "subject": "artifact:wallet:0x22a12d4a22a12d4a22a12d4a22a12d4a22a12d4a",
+          "value": 4.755
+        },
+        {
+          "op": "T4",
+          "test": "RELATED_SITE_HUNT",
+          "subject": "scope:T4",
+          "value": 3.289
+        }
+      ],
+      "best": 4.755,
+      "policies": {
+        "v7-exploit": {
+          "choice": "T4:PUBLIC_ARTIFACT_SEARCH:artifact:wallet:0x22a12d4a22a12d4a22a12d4a22a12d4a22a12d4a",
+          "value": 4.755,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true,
+          "exploration": false
+        },
+        "v7": {
+          "choice": "T4:PUBLIC_ARTIFACT_SEARCH:artifact:wallet:0x22a12d4a22a12d4a22a12d4a22a12d4a22a12d4a",
+          "value": 4.755,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true,
+          "exploration": false
+        },
+        "v6": {
+          "choice": "T4:RELATED_SITE_HUNT:scope:T4",
+          "value": 3.293,
+          "regret": 1.462,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "v8": {
+          "choice": "T4:PUBLIC_ARTIFACT_SEARCH:artifact:wallet:0x22a12d4a22a12d4a22a12d4a22a12d4a22a12d4a",
+          "value": 4.755,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true,
+          "exploration": false
+        },
+        "cheapest": {
+          "choice": "T4:PUBLIC_ARTIFACT_SEARCH:artifact:wallet:0x22a12d4a22a12d4a22a12d4a22a12d4a22a12d4a",
+          "value": 4.755,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true,
+          "exploration": false
+        },
+        "random": {
+          "choice": "T4:HUNTER_HYPOTHESIS_TEST:hunter:T4",
+          "value": 3.02,
+          "regret": 1.735,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "confirmation": {
+          "choice": "T4:RELATED_SITE_HUNT:scope:T4",
+          "value": 3.289,
+          "regret": 1.466,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        }
+      }
+    },
+    {
+      "type": "generic_template_vs_discriminating_wallet",
+      "seed": 5,
+      "note": "Linkage question open; contact/analytics already searched; options include a generic template-variant search and a validated deposit-wallet reuse search.",
+      "alternatives": [
+        {
+          "op": "T5",
+          "test": "HUNTER_HYPOTHESIS_TEST",
+          "subject": "hunter:T5",
+          "value": 3.02
+        },
+        {
+          "op": "T5",
+          "test": "HUNTER_HYPOTHESIS_TEST",
+          "subject": "hunter:T5",
+          "value": 3.02
+        },
+        {
+          "op": "T5",
+          "test": "PUBLIC_ARTIFACT_SEARCH",
+          "subject": "artifact:wallet:0x4edc02474edc02474edc02474edc02474edc0247",
+          "value": 4.755
+        },
+        {
+          "op": "T5",
+          "test": "RELATED_SITE_HUNT",
+          "subject": "scope:T5",
+          "value": 3.211
+        }
+      ],
+      "best": 4.755,
+      "policies": {
+        "v7-exploit": {
+          "choice": "T5:PUBLIC_ARTIFACT_SEARCH:artifact:wallet:0x4edc02474edc02474edc02474edc02474edc0247",
+          "value": 4.755,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true,
+          "exploration": false
+        },
+        "v7": {
+          "choice": "T5:PUBLIC_ARTIFACT_SEARCH:artifact:wallet:0x4edc02474edc02474edc02474edc02474edc0247",
+          "value": 4.755,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true,
+          "exploration": false
+        },
+        "v6": {
+          "choice": "T5:RELATED_SITE_HUNT:scope:T5",
+          "value": 3.215,
+          "regret": 1.54,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "v8": {
+          "choice": "T5:PUBLIC_ARTIFACT_SEARCH:artifact:wallet:0x4edc02474edc02474edc02474edc02474edc0247",
+          "value": 4.755,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true,
+          "exploration": false
+        },
+        "cheapest": {
+          "choice": "T5:PUBLIC_ARTIFACT_SEARCH:artifact:wallet:0x4edc02474edc02474edc02474edc02474edc0247",
+          "value": 4.755,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true,
+          "exploration": false
+        },
+        "random": {
+          "choice": "T5:PUBLIC_ARTIFACT_SEARCH:artifact:wallet:0x4edc02474edc02474edc02474edc02474edc0247",
+          "value": 4.755,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true,
+          "exploration": false
+        },
+        "confirmation": {
+          "choice": "T5:RELATED_SITE_HUNT:scope:T5",
+          "value": 3.211,
+          "regret": 1.544,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        }
+      }
+    },
+    {
+      "type": "new_contradiction_vs_confirmation",
+      "seed": 1,
+      "note": "A new contradiction (two support contacts present one wallet) has new evidence since Hunter last looked; every site is already known (confirmation-seeking hunts can only re-find the kit).",
+      "alternatives": [
+        {
+          "op": "D1",
+          "test": "HUNTER_HYPOTHESIS_TEST",
+          "subject": "hunter:D1",
+          "value": 0.508
+        },
+        {
+          "op": "D1",
+          "test": "HUNTER_HYPOTHESIS_TEST",
+          "subject": "hunter:D1",
+          "value": 0.508
+        },
+        {
+          "op": "D1",
+          "test": "HUNTER_HYPOTHESIS_TEST",
+          "subject": "hunter:D1",
+          "value": 0.508
+        },
+        {
+          "op": "D1",
+          "test": "RELATED_SITE_HUNT",
+          "subject": "scope:D1",
+          "value": 0.184
+        },
+        {
+          "op": "D1",
+          "test": "RELATED_SITE_HUNT",
+          "subject": "template:D1",
+          "value": 0.52
+        }
+      ],
+      "best": 0.52,
+      "policies": {
+        "v7-exploit": {
+          "choice": "D1:HUNTER_HYPOTHESIS_TEST:hunter:D1",
+          "value": 0.508,
+          "regret": 0.012,
+          "optimal": false,
+          "near_optimal": true,
+          "exploration": false
+        },
+        "v7": {
+          "choice": "D1:HUNTER_HYPOTHESIS_TEST:hunter:D1",
+          "value": 0.508,
+          "regret": 0.012,
+          "optimal": false,
+          "near_optimal": true,
+          "exploration": false
+        },
+        "v6": {
+          "choice": "D1:RELATED_SITE_HUNT:scope:D1",
+          "value": -0.072,
+          "regret": 0.592,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "v8": {
+          "choice": "D1:HUNTER_HYPOTHESIS_TEST:hunter:D1",
+          "value": 0.508,
+          "regret": 0.012,
+          "optimal": false,
+          "near_optimal": true,
+          "exploration": false
+        },
+        "cheapest": {
+          "choice": "D1:HUNTER_HYPOTHESIS_TEST:hunter:D1",
+          "value": 0.508,
+          "regret": 0.012,
+          "optimal": false,
+          "near_optimal": true,
+          "exploration": false
+        },
+        "random": {
+          "choice": "D1:RELATED_SITE_HUNT:scope:D1",
+          "value": 0.184,
+          "regret": 0.336,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "confirmation": {
+          "choice": "D1:RELATED_SITE_HUNT:scope:D1",
+          "value": 0.184,
+          "regret": 0.336,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        }
+      }
+    },
+    {
+      "type": "new_contradiction_vs_confirmation",
+      "seed": 2,
+      "note": "A new contradiction (two support contacts present one wallet) has new evidence since Hunter last looked; every site is already known (confirmation-seeking hunts can only re-find the kit).",
+      "alternatives": [
+        {
+          "op": "D2",
+          "test": "HUNTER_HYPOTHESIS_TEST",
+          "subject": "hunter:D2",
+          "value": 0.508
+        },
+        {
+          "op": "D2",
+          "test": "HUNTER_HYPOTHESIS_TEST",
+          "subject": "hunter:D2",
+          "value": 0.508
+        },
+        {
+          "op": "D2",
+          "test": "HUNTER_HYPOTHESIS_TEST",
+          "subject": "hunter:D2",
+          "value": 0.508
+        },
+        {
+          "op": "D2",
+          "test": "RELATED_SITE_HUNT",
+          "subject": "scope:D2",
+          "value": 0.184
+        },
+        {
+          "op": "D2",
+          "test": "RELATED_SITE_HUNT",
+          "subject": "template:D2",
+          "value": 0.188
+        }
+      ],
+      "best": 0.508,
+      "policies": {
+        "v7-exploit": {
+          "choice": "D2:HUNTER_HYPOTHESIS_TEST:hunter:D2",
+          "value": 0.508,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true,
+          "exploration": false
+        },
+        "v7": {
+          "choice": "D2:HUNTER_HYPOTHESIS_TEST:hunter:D2",
+          "value": 0.508,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true,
+          "exploration": false
+        },
+        "v6": {
+          "choice": "D2:RELATED_SITE_HUNT:scope:D2",
+          "value": -0.072,
+          "regret": 0.58,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "v8": {
+          "choice": "D2:HUNTER_HYPOTHESIS_TEST:hunter:D2",
+          "value": 0.508,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true,
+          "exploration": false
+        },
+        "cheapest": {
+          "choice": "D2:HUNTER_HYPOTHESIS_TEST:hunter:D2",
+          "value": 0.508,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true,
+          "exploration": false
+        },
+        "random": {
+          "choice": "D2:RELATED_SITE_HUNT:scope:D2",
+          "value": 0.184,
+          "regret": 0.324,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "confirmation": {
+          "choice": "D2:RELATED_SITE_HUNT:scope:D2",
+          "value": 0.184,
+          "regret": 0.324,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        }
+      }
+    },
+    {
+      "type": "new_contradiction_vs_confirmation",
+      "seed": 3,
+      "note": "A new contradiction (two support contacts present one wallet) has new evidence since Hunter last looked; every site is already known (confirmation-seeking hunts can only re-find the kit).",
+      "alternatives": [
+        {
+          "op": "D3",
+          "test": "HUNTER_HYPOTHESIS_TEST",
+          "subject": "hunter:D3",
+          "value": 0.42
+        },
+        {
+          "op": "D3",
+          "test": "HUNTER_HYPOTHESIS_TEST",
+          "subject": "hunter:D3",
+          "value": 0.42
+        },
+        {
+          "op": "D3",
+          "test": "HUNTER_HYPOTHESIS_TEST",
+          "subject": "hunter:D3",
+          "value": 0.42
+        },
+        {
+          "op": "D3",
+          "test": "RELATED_SITE_HUNT",
+          "subject": "scope:D3",
+          "value": 0.184
+        },
+        {
+          "op": "D3",
+          "test": "RELATED_SITE_HUNT",
+          "subject": "template:D3",
+          "value": 0.188
+        }
+      ],
+      "best": 0.42,
+      "policies": {
+        "v7-exploit": {
+          "choice": "D3:HUNTER_HYPOTHESIS_TEST:hunter:D3",
+          "value": 0.42,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true,
+          "exploration": false
+        },
+        "v7": {
+          "choice": "D3:HUNTER_HYPOTHESIS_TEST:hunter:D3",
+          "value": 0.42,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true,
+          "exploration": false
+        },
+        "v6": {
+          "choice": "D3:RELATED_SITE_HUNT:scope:D3",
+          "value": 0.013,
+          "regret": 0.407,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "v8": {
+          "choice": "D3:HUNTER_HYPOTHESIS_TEST:hunter:D3",
+          "value": 0.42,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true,
+          "exploration": false
+        },
+        "cheapest": {
+          "choice": "D3:HUNTER_HYPOTHESIS_TEST:hunter:D3",
+          "value": 0.42,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true,
+          "exploration": false
+        },
+        "random": {
+          "choice": "D3:HUNTER_HYPOTHESIS_TEST:hunter:D3",
+          "value": 0.42,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true,
+          "exploration": false
+        },
+        "confirmation": {
+          "choice": "D3:RELATED_SITE_HUNT:scope:D3",
+          "value": 0.184,
+          "regret": 0.236,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        }
+      }
+    },
+    {
+      "type": "new_contradiction_vs_confirmation",
+      "seed": 4,
+      "note": "A new contradiction (two support contacts present one wallet) has new evidence since Hunter last looked; every site is already known (confirmation-seeking hunts can only re-find the kit).",
+      "alternatives": [
+        {
+          "op": "D4",
+          "test": "HUNTER_HYPOTHESIS_TEST",
+          "subject": "hunter:D4",
+          "value": 0.42
+        },
+        {
+          "op": "D4",
+          "test": "HUNTER_HYPOTHESIS_TEST",
+          "subject": "hunter:D4",
+          "value": 0.42
+        },
+        {
+          "op": "D4",
+          "test": "HUNTER_HYPOTHESIS_TEST",
+          "subject": "hunter:D4",
+          "value": 0.42
+        },
+        {
+          "op": "D4",
+          "test": "RELATED_SITE_HUNT",
+          "subject": "scope:D4",
+          "value": 0.184
+        },
+        {
+          "op": "D4",
+          "test": "RELATED_SITE_HUNT",
+          "subject": "template:D4",
+          "value": 0.52
+        }
+      ],
+      "best": 0.52,
+      "policies": {
+        "v7-exploit": {
+          "choice": "D4:HUNTER_HYPOTHESIS_TEST:hunter:D4",
+          "value": 0.42,
+          "regret": 0.1,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "v7": {
+          "choice": "D4:RELATED_SITE_HUNT:template:D4",
+          "value": 0.52,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true,
+          "exploration": true
+        },
+        "v6": {
+          "choice": "D4:RELATED_SITE_HUNT:scope:D4",
+          "value": 0.013,
+          "regret": 0.507,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "v8": {
+          "choice": "D4:HUNTER_HYPOTHESIS_TEST:hunter:D4",
+          "value": 0.42,
+          "regret": 0.1,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "cheapest": {
+          "choice": "D4:HUNTER_HYPOTHESIS_TEST:hunter:D4",
+          "value": 0.42,
+          "regret": 0.1,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "random": {
+          "choice": "D4:HUNTER_HYPOTHESIS_TEST:hunter:D4",
+          "value": 0.42,
+          "regret": 0.1,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "confirmation": {
+          "choice": "D4:RELATED_SITE_HUNT:scope:D4",
+          "value": 0.184,
+          "regret": 0.336,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        }
+      }
+    },
+    {
+      "type": "new_contradiction_vs_confirmation",
+      "seed": 5,
+      "note": "A new contradiction (two support contacts present one wallet) has new evidence since Hunter last looked; every site is already known (confirmation-seeking hunts can only re-find the kit).",
+      "alternatives": [
+        {
+          "op": "D5",
+          "test": "HUNTER_HYPOTHESIS_TEST",
+          "subject": "hunter:D5",
+          "value": 0.42
+        },
+        {
+          "op": "D5",
+          "test": "HUNTER_HYPOTHESIS_TEST",
+          "subject": "hunter:D5",
+          "value": 0.42
+        },
+        {
+          "op": "D5",
+          "test": "HUNTER_HYPOTHESIS_TEST",
+          "subject": "hunter:D5",
+          "value": 0.42
+        },
+        {
+          "op": "D5",
+          "test": "RELATED_SITE_HUNT",
+          "subject": "scope:D5",
+          "value": 0.184
+        },
+        {
+          "op": "D5",
+          "test": "RELATED_SITE_HUNT",
+          "subject": "template:D5",
+          "value": 0.188
+        }
+      ],
+      "best": 0.42,
+      "policies": {
+        "v7-exploit": {
+          "choice": "D5:HUNTER_HYPOTHESIS_TEST:hunter:D5",
+          "value": 0.42,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true,
+          "exploration": false
+        },
+        "v7": {
+          "choice": "D5:HUNTER_HYPOTHESIS_TEST:hunter:D5",
+          "value": 0.42,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true,
+          "exploration": false
+        },
+        "v6": {
+          "choice": "D5:RELATED_SITE_HUNT:scope:D5",
+          "value": 0.013,
+          "regret": 0.407,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "v8": {
+          "choice": "D5:HUNTER_HYPOTHESIS_TEST:hunter:D5",
+          "value": 0.42,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true,
+          "exploration": false
+        },
+        "cheapest": {
+          "choice": "D5:HUNTER_HYPOTHESIS_TEST:hunter:D5",
+          "value": 0.42,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true,
+          "exploration": false
+        },
+        "random": {
+          "choice": "D5:RELATED_SITE_HUNT:template:D5",
+          "value": 0.188,
+          "regret": 0.232,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "confirmation": {
+          "choice": "D5:RELATED_SITE_HUNT:scope:D5",
+          "value": 0.184,
+          "regret": 0.236,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        }
+      }
+    },
+    {
+      "type": "replacement_hunt_vs_exhausted_artifact",
+      "seed": 1,
+      "note": "A member site disappeared and its replacement is live; the historical contact artifact was already searched.",
+      "alternatives": [
+        {
+          "op": "R1",
+          "test": "HUNTER_HYPOTHESIS_TEST",
+          "subject": "hunter:R1",
+          "value": 0.572
+        },
+        {
+          "op": "R1",
+          "test": "HUNTER_HYPOTHESIS_TEST",
+          "subject": "hunter:R1",
+          "value": 0.572
+        },
+        {
+          "op": "R1",
+          "test": "PUBLIC_ARTIFACT_SEARCH",
+          "subject": "artifact:analytics:ga4:g-r1782",
+          "value": 0.412
+        },
+        {
+          "op": "R1",
+          "test": "PUBLIC_ARTIFACT_SEARCH",
+          "subject": "artifact:wallet:0x5a42f0fa5a42f0fa5a42f0fa5a42f0fa5a42f0fa",
+          "value": 0.412
+        },
+        {
+          "op": "R1",
+          "test": "PUBLIC_ARTIFACT_SEARCH",
+          "subject": "artifact:wallet:0x5b42f28d5b42f28d5b42f28d5b42f28d5b42f28d",
+          "value": 1.772
+        },
+        {
+          "op": "R1",
+          "test": "RELATED_SITE_HUNT",
+          "subject": "scope:R1",
+          "value": 0.412
+        },
+        {
+          "op": "R1",
+          "test": "RELATED_SITE_HUNT",
+          "subject": "template:R1",
+          "value": 3.772
+        },
+        {
+          "op": "R1",
+          "test": "REPLACEMENT_SITE_HUNT",
+          "subject": "site:r11zl-1.example",
+          "value": 2.704
+        }
+      ],
+      "best": 3.772,
+      "policies": {
+        "v7-exploit": {
+          "choice": "R1:PUBLIC_ARTIFACT_SEARCH:artifact:analytics:ga4:g-r1782",
+          "value": 0.412,
+          "regret": 3.359,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "v7": {
+          "choice": "R1:PUBLIC_ARTIFACT_SEARCH:artifact:analytics:ga4:g-r1782",
+          "value": 0.412,
+          "regret": 3.359,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "v6": {
+          "choice": "R1:RELATED_SITE_HUNT:scope:R1",
+          "value": -0.008,
+          "regret": 3.78,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "v8": {
+          "choice": "R1:REPLACEMENT_SITE_HUNT:site:r11zl-1.example",
+          "value": 2.704,
+          "regret": 1.068,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "cheapest": {
+          "choice": "R1:PUBLIC_ARTIFACT_SEARCH:artifact:analytics:ga4:g-r1782",
+          "value": 0.412,
+          "regret": 3.359,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "random": {
+          "choice": "R1:PUBLIC_ARTIFACT_SEARCH:artifact:wallet:0x5a42f0fa5a42f0fa5a42f0fa5a42f0fa5a42f0fa",
+          "value": 0.412,
+          "regret": 3.359,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "confirmation": {
+          "choice": "R1:RELATED_SITE_HUNT:scope:R1",
+          "value": 0.412,
+          "regret": 3.359,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        }
+      }
+    },
+    {
+      "type": "replacement_hunt_vs_exhausted_artifact",
+      "seed": 2,
+      "note": "A member site disappeared and its replacement is live; the historical contact artifact was already searched.",
+      "alternatives": [
+        {
+          "op": "R2",
+          "test": "HUNTER_HYPOTHESIS_TEST",
+          "subject": "hunter:R2",
+          "value": 3.422
+        },
+        {
+          "op": "R2",
+          "test": "HUNTER_HYPOTHESIS_TEST",
+          "subject": "hunter:R2",
+          "value": 3.422
+        },
+        {
+          "op": "R2",
+          "test": "PUBLIC_ARTIFACT_SEARCH",
+          "subject": "artifact:analytics:ga4:g-r294",
+          "value": 3.649
+        },
+        {
+          "op": "R2",
+          "test": "PUBLIC_ARTIFACT_SEARCH",
+          "subject": "artifact:wallet:0xd6c2a03ad6c2a03ad6c2a03ad6c2a03ad6c2a03a",
+          "value": 2.838
+        },
+        {
+          "op": "R2",
+          "test": "PUBLIC_ARTIFACT_SEARCH",
+          "subject": "artifact:wallet:0xd7c2a1cdd7c2a1cdd7c2a1cdd7c2a1cdd7c2a1cd",
+          "value": 2.838
+        },
+        {
+          "op": "R2",
+          "test": "RELATED_SITE_HUNT",
+          "subject": "scope:R2",
+          "value": 3.649
+        },
+        {
+          "op": "R2",
+          "test": "RELATED_SITE_HUNT",
+          "subject": "template:R2",
+          "value": 3.088
+        },
+        {
+          "op": "R2",
+          "test": "REPLACEMENT_SITE_HUNT",
+          "subject": "site:r22n0-1.example",
+          "value": 3.738
+        }
+      ],
+      "best": 3.738,
+      "policies": {
+        "v7-exploit": {
+          "choice": "R2:PUBLIC_ARTIFACT_SEARCH:artifact:analytics:ga4:g-r294",
+          "value": 3.649,
+          "regret": 0.089,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "v7": {
+          "choice": "R2:PUBLIC_ARTIFACT_SEARCH:artifact:analytics:ga4:g-r294",
+          "value": 3.649,
+          "regret": 0.089,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "v6": {
+          "choice": "R2:RELATED_SITE_HUNT:scope:R2",
+          "value": 2.842,
+          "regret": 0.897,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "v8": {
+          "choice": "R2:REPLACEMENT_SITE_HUNT:site:r22n0-1.example",
+          "value": 3.738,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true,
+          "exploration": false
+        },
+        "cheapest": {
+          "choice": "R2:PUBLIC_ARTIFACT_SEARCH:artifact:analytics:ga4:g-r294",
+          "value": 3.649,
+          "regret": 0.089,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "random": {
+          "choice": "R2:RELATED_SITE_HUNT:template:R2",
+          "value": 3.088,
+          "regret": 0.65,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "confirmation": {
+          "choice": "R2:RELATED_SITE_HUNT:scope:R2",
+          "value": 3.649,
+          "regret": 0.089,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        }
+      }
+    },
+    {
+      "type": "replacement_hunt_vs_exhausted_artifact",
+      "seed": 3,
+      "note": "A member site disappeared and its replacement is live; the historical contact artifact was already searched.",
+      "alternatives": [
+        {
+          "op": "R3",
+          "test": "HUNTER_HYPOTHESIS_TEST",
+          "subject": "hunter:R3",
+          "value": 1.644
+        },
+        {
+          "op": "R3",
+          "test": "HUNTER_HYPOTHESIS_TEST",
+          "subject": "hunter:R3",
+          "value": 1.644
+        },
+        {
+          "op": "R3",
+          "test": "PUBLIC_ARTIFACT_SEARCH",
+          "subject": "artifact:analytics:ga4:g-r3988",
+          "value": 3.437
+        },
+        {
+          "op": "R3",
+          "test": "PUBLIC_ARTIFACT_SEARCH",
+          "subject": "artifact:wallet:0x0ea304a40ea304a40ea304a40ea304a40ea304a4",
+          "value": 3.437
+        },
+        {
+          "op": "R3",
+          "test": "PUBLIC_ARTIFACT_SEARCH",
+          "subject": "artifact:wallet:0x0fa306370fa306370fa306370fa306370fa30637",
+          "value": 1.06
+        },
+        {
+          "op": "R3",
+          "test": "RELATED_SITE_HUNT",
+          "subject": "scope:R3",
+          "value": 5.135
+        },
+        {
+          "op": "R3",
+          "test": "RELATED_SITE_HUNT",
+          "subject": "template:R3",
+          "value": 2.377
+        },
+        {
+          "op": "R3",
+          "test": "REPLACEMENT_SITE_HUNT",
+          "subject": "site:r37fn-1.example",
+          "value": 5.135
+        }
+      ],
+      "best": 5.135,
+      "policies": {
+        "v7-exploit": {
+          "choice": "R3:PUBLIC_ARTIFACT_SEARCH:artifact:analytics:ga4:g-r3988",
+          "value": 3.437,
+          "regret": 1.698,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "v7": {
+          "choice": "R3:PUBLIC_ARTIFACT_SEARCH:artifact:analytics:ga4:g-r3988",
+          "value": 3.437,
+          "regret": 1.698,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "v6": {
+          "choice": "R3:RELATED_SITE_HUNT:scope:R3",
+          "value": 1.064,
+          "regret": 4.071,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "v8": {
+          "choice": "R3:REPLACEMENT_SITE_HUNT:site:r37fn-1.example",
+          "value": 5.135,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true,
+          "exploration": false
+        },
+        "cheapest": {
+          "choice": "R3:PUBLIC_ARTIFACT_SEARCH:artifact:analytics:ga4:g-r3988",
+          "value": 3.437,
+          "regret": 1.698,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "random": {
+          "choice": "R3:HUNTER_HYPOTHESIS_TEST:hunter:R3",
+          "value": 1.644,
+          "regret": 3.491,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "confirmation": {
+          "choice": "R3:RELATED_SITE_HUNT:scope:R3",
+          "value": 5.135,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true,
+          "exploration": false
+        }
+      }
+    },
+    {
+      "type": "replacement_hunt_vs_exhausted_artifact",
+      "seed": 4,
+      "note": "A member site disappeared and its replacement is live; the historical contact artifact was already searched.",
+      "alternatives": [
+        {
+          "op": "R4",
+          "test": "HUNTER_HYPOTHESIS_TEST",
+          "subject": "hunter:R4",
+          "value": 2.935
+        },
+        {
+          "op": "R4",
+          "test": "HUNTER_HYPOTHESIS_TEST",
+          "subject": "hunter:R4",
+          "value": 2.935
+        },
+        {
+          "op": "R4",
+          "test": "PUBLIC_ARTIFACT_SEARCH",
+          "subject": "artifact:analytics:ga4:g-r4473",
+          "value": 2.705
+        },
+        {
+          "op": "R4",
+          "test": "PUBLIC_ARTIFACT_SEARCH",
+          "subject": "artifact:wallet:0x15f040cc15f040cc15f040cc15f040cc15f040cc",
+          "value": 2.351
+        },
+        {
+          "op": "R4",
+          "test": "PUBLIC_ARTIFACT_SEARCH",
+          "subject": "artifact:wallet:0x16f0425f16f0425f16f0425f16f0425f16f0425f",
+          "value": 1.749
+        },
+        {
+          "op": "R4",
+          "test": "RELATED_SITE_HUNT",
+          "subject": "scope:R4",
+          "value": 3.516
+        },
+        {
+          "op": "R4",
+          "test": "RELATED_SITE_HUNT",
+          "subject": "template:R4",
+          "value": 3.898
+        },
+        {
+          "op": "R4",
+          "test": "REPLACEMENT_SITE_HUNT",
+          "subject": "site:r45ri-1.example",
+          "value": 3.776
+        }
+      ],
+      "best": 3.898,
+      "policies": {
+        "v7-exploit": {
+          "choice": "R4:PUBLIC_ARTIFACT_SEARCH:artifact:analytics:ga4:g-r4473",
+          "value": 2.705,
+          "regret": 1.193,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "v7": {
+          "choice": "R4:PUBLIC_ARTIFACT_SEARCH:artifact:analytics:ga4:g-r4473",
+          "value": 2.705,
+          "regret": 1.193,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "v6": {
+          "choice": "R4:RELATED_SITE_HUNT:scope:R4",
+          "value": 2.355,
+          "regret": 1.543,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "v8": {
+          "choice": "R4:REPLACEMENT_SITE_HUNT:site:r45ri-1.example",
+          "value": 3.776,
+          "regret": 0.123,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "cheapest": {
+          "choice": "R4:PUBLIC_ARTIFACT_SEARCH:artifact:analytics:ga4:g-r4473",
+          "value": 2.705,
+          "regret": 1.193,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "random": {
+          "choice": "R4:PUBLIC_ARTIFACT_SEARCH:artifact:wallet:0x16f0425f16f0425f16f0425f16f0425f16f0425f",
+          "value": 1.749,
+          "regret": 2.149,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "confirmation": {
+          "choice": "R4:RELATED_SITE_HUNT:scope:R4",
+          "value": 3.516,
+          "regret": 0.383,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        }
+      }
+    },
+    {
+      "type": "replacement_hunt_vs_exhausted_artifact",
+      "seed": 5,
+      "note": "A member site disappeared and its replacement is live; the historical contact artifact was already searched.",
+      "alternatives": [
+        {
+          "op": "R5",
+          "test": "HUNTER_HYPOTHESIS_TEST",
+          "subject": "hunter:R5",
+          "value": 3.296
+        },
+        {
+          "op": "R5",
+          "test": "HUNTER_HYPOTHESIS_TEST",
+          "subject": "hunter:R5",
+          "value": 3.296
+        },
+        {
+          "op": "R5",
+          "test": "PUBLIC_ARTIFACT_SEARCH",
+          "subject": "artifact:analytics:ga4:g-r5370",
+          "value": 6.078
+        },
+        {
+          "op": "R5",
+          "test": "PUBLIC_ARTIFACT_SEARCH",
+          "subject": "artifact:wallet:0xb7e923beb7e923beb7e923beb7e923beb7e923be",
+          "value": 3.834
+        },
+        {
+          "op": "R5",
+          "test": "PUBLIC_ARTIFACT_SEARCH",
+          "subject": "artifact:wallet:0xb8e92551b8e92551b8e92551b8e92551b8e92551",
+          "value": 3.833
+        },
+        {
+          "op": "R5",
+          "test": "RELATED_SITE_HUNT",
+          "subject": "scope:R5",
+          "value": 6.078
+        },
+        {
+          "op": "R5",
+          "test": "RELATED_SITE_HUNT",
+          "subject": "template:R5",
+          "value": 4.286
+        },
+        {
+          "op": "R5",
+          "test": "REPLACEMENT_SITE_HUNT",
+          "subject": "site:r52zh-1.example",
+          "value": 6.185
+        }
+      ],
+      "best": 6.185,
+      "policies": {
+        "v7-exploit": {
+          "choice": "R5:PUBLIC_ARTIFACT_SEARCH:artifact:analytics:ga4:g-r5370",
+          "value": 6.078,
+          "regret": 0.107,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "v7": {
+          "choice": "R5:PUBLIC_ARTIFACT_SEARCH:artifact:analytics:ga4:g-r5370",
+          "value": 6.078,
+          "regret": 0.107,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "v6": {
+          "choice": "R5:RELATED_SITE_HUNT:scope:R5",
+          "value": 2.716,
+          "regret": 3.469,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "v8": {
+          "choice": "R5:REPLACEMENT_SITE_HUNT:site:r52zh-1.example",
+          "value": 6.185,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true,
+          "exploration": false
+        },
+        "cheapest": {
+          "choice": "R5:PUBLIC_ARTIFACT_SEARCH:artifact:analytics:ga4:g-r5370",
+          "value": 6.078,
+          "regret": 0.107,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "random": {
+          "choice": "R5:REPLACEMENT_SITE_HUNT:site:r52zh-1.example",
+          "value": 6.185,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true,
+          "exploration": false
+        },
+        "confirmation": {
+          "choice": "R5:RELATED_SITE_HUNT:scope:R5",
+          "value": 6.078,
+          "regret": 0.107,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        }
+      }
+    },
+    {
+      "type": "novel_exploration_opportunity",
+      "seed": 1,
+      "note": "Familiar test families have poor recorded yield; an under-tested temporal re-check addresses a recorded public change.",
+      "alternatives": [
+        {
+          "op": "N1",
+          "test": "RELATED_SITE_HUNT",
+          "subject": "scope:N1",
+          "value": 1.079
+        },
+        {
+          "op": "N1",
+          "test": "TEMPORAL_RECHECK",
+          "subject": "site:n165m-0.example",
+          "value": 1.681
+        }
+      ],
+      "best": 1.681,
+      "policies": {
+        "v7-exploit": {
+          "choice": "N1:TEMPORAL_RECHECK:site:n165m-0.example",
+          "value": 1.681,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true,
+          "exploration": false
+        },
+        "v7": {
+          "choice": "N1:TEMPORAL_RECHECK:site:n165m-0.example",
+          "value": 1.681,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true,
+          "exploration": false
+        },
+        "v6": {
+          "choice": "N1:RELATED_SITE_HUNT:scope:N1",
+          "value": 1.083,
+          "regret": 0.598,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "v8": {
+          "choice": "N1:TEMPORAL_RECHECK:site:n165m-0.example",
+          "value": 1.681,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true,
+          "exploration": false
+        },
+        "cheapest": {
+          "choice": "N1:TEMPORAL_RECHECK:site:n165m-0.example",
+          "value": 1.681,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true,
+          "exploration": false
+        },
+        "random": {
+          "choice": "N1:RELATED_SITE_HUNT:scope:N1",
+          "value": 1.079,
+          "regret": 0.602,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "confirmation": {
+          "choice": "N1:RELATED_SITE_HUNT:scope:N1",
+          "value": 1.079,
+          "regret": 0.602,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        }
+      }
+    },
+    {
+      "type": "novel_exploration_opportunity",
+      "seed": 2,
+      "note": "Familiar test families have poor recorded yield; an under-tested temporal re-check addresses a recorded public change.",
+      "alternatives": [
+        {
+          "op": "N2",
+          "test": "RELATED_SITE_HUNT",
+          "subject": "scope:N2",
+          "value": 0.31
+        },
+        {
+          "op": "N2",
+          "test": "TEMPORAL_RECHECK",
+          "subject": "site:n2737-0.example",
+          "value": 0.69
+        }
+      ],
+      "best": 0.69,
+      "policies": {
+        "v7-exploit": {
+          "choice": "N2:TEMPORAL_RECHECK:site:n2737-0.example",
+          "value": 0.69,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true,
+          "exploration": false
+        },
+        "v7": {
+          "choice": "N2:TEMPORAL_RECHECK:site:n2737-0.example",
+          "value": 0.69,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true,
+          "exploration": false
+        },
+        "v6": {
+          "choice": "N2:RELATED_SITE_HUNT:scope:N2",
+          "value": 0.314,
+          "regret": 0.376,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "v8": {
+          "choice": "N2:TEMPORAL_RECHECK:site:n2737-0.example",
+          "value": 0.69,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true,
+          "exploration": false
+        },
+        "cheapest": {
+          "choice": "N2:TEMPORAL_RECHECK:site:n2737-0.example",
+          "value": 0.69,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true,
+          "exploration": false
+        },
+        "random": {
+          "choice": "N2:TEMPORAL_RECHECK:site:n2737-0.example",
+          "value": 0.69,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true,
+          "exploration": false
+        },
+        "confirmation": {
+          "choice": "N2:RELATED_SITE_HUNT:scope:N2",
+          "value": 0.31,
+          "regret": 0.38,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        }
+      }
+    },
+    {
+      "type": "novel_exploration_opportunity",
+      "seed": 3,
+      "note": "Familiar test families have poor recorded yield; an under-tested temporal re-check addresses a recorded public change.",
+      "alternatives": [
+        {
+          "op": "N3",
+          "test": "RELATED_SITE_HUNT",
+          "subject": "scope:N3",
+          "value": 2.73
+        },
+        {
+          "op": "N3",
+          "test": "TEMPORAL_RECHECK",
+          "subject": "site:n3458-0.example",
+          "value": 3.404
+        }
+      ],
+      "best": 3.404,
+      "policies": {
+        "v7-exploit": {
+          "choice": "N3:TEMPORAL_RECHECK:site:n3458-0.example",
+          "value": 3.404,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true,
+          "exploration": false
+        },
+        "v7": {
+          "choice": "N3:TEMPORAL_RECHECK:site:n3458-0.example",
+          "value": 3.404,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true,
+          "exploration": false
+        },
+        "v6": {
+          "choice": "N3:RELATED_SITE_HUNT:scope:N3",
+          "value": 2.734,
+          "regret": 0.67,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "v8": {
+          "choice": "N3:TEMPORAL_RECHECK:site:n3458-0.example",
+          "value": 3.404,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true,
+          "exploration": false
+        },
+        "cheapest": {
+          "choice": "N3:TEMPORAL_RECHECK:site:n3458-0.example",
+          "value": 3.404,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true,
+          "exploration": false
+        },
+        "random": {
+          "choice": "N3:RELATED_SITE_HUNT:scope:N3",
+          "value": 2.73,
+          "regret": 0.674,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "confirmation": {
+          "choice": "N3:RELATED_SITE_HUNT:scope:N3",
+          "value": 2.73,
+          "regret": 0.674,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        }
+      }
+    },
+    {
+      "type": "novel_exploration_opportunity",
+      "seed": 4,
+      "note": "Familiar test families have poor recorded yield; an under-tested temporal re-check addresses a recorded public change.",
+      "alternatives": [
+        {
+          "op": "N4",
+          "test": "RELATED_SITE_HUNT",
+          "subject": "scope:N4",
+          "value": 2.73
+        },
+        {
+          "op": "N4",
+          "test": "TEMPORAL_RECHECK",
+          "subject": "site:n41st-0.example",
+          "value": 3.146
+        }
+      ],
+      "best": 3.146,
+      "policies": {
+        "v7-exploit": {
+          "choice": "N4:TEMPORAL_RECHECK:site:n41st-0.example",
+          "value": 3.146,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true,
+          "exploration": false
+        },
+        "v7": {
+          "choice": "N4:TEMPORAL_RECHECK:site:n41st-0.example",
+          "value": 3.146,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true,
+          "exploration": false
+        },
+        "v6": {
+          "choice": "N4:RELATED_SITE_HUNT:scope:N4",
+          "value": 2.734,
+          "regret": 0.412,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "v8": {
+          "choice": "N4:TEMPORAL_RECHECK:site:n41st-0.example",
+          "value": 3.146,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true,
+          "exploration": false
+        },
+        "cheapest": {
+          "choice": "N4:TEMPORAL_RECHECK:site:n41st-0.example",
+          "value": 3.146,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true,
+          "exploration": false
+        },
+        "random": {
+          "choice": "N4:TEMPORAL_RECHECK:site:n41st-0.example",
+          "value": 3.146,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true,
+          "exploration": false
+        },
+        "confirmation": {
+          "choice": "N4:RELATED_SITE_HUNT:scope:N4",
+          "value": 2.73,
+          "regret": 0.416,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        }
+      }
+    },
+    {
+      "type": "novel_exploration_opportunity",
+      "seed": 5,
+      "note": "Familiar test families have poor recorded yield; an under-tested temporal re-check addresses a recorded public change.",
+      "alternatives": [
+        {
+          "op": "N5",
+          "test": "RELATED_SITE_HUNT",
+          "subject": "scope:N5",
+          "value": 1.806
+        },
+        {
+          "op": "N5",
+          "test": "TEMPORAL_RECHECK",
+          "subject": "site:n555q-0.example",
+          "value": 2.48
+        }
+      ],
+      "best": 2.48,
+      "policies": {
+        "v7-exploit": {
+          "choice": "N5:TEMPORAL_RECHECK:site:n555q-0.example",
+          "value": 2.48,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true,
+          "exploration": false
+        },
+        "v7": {
+          "choice": "N5:TEMPORAL_RECHECK:site:n555q-0.example",
+          "value": 2.48,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true,
+          "exploration": false
+        },
+        "v6": {
+          "choice": "N5:RELATED_SITE_HUNT:scope:N5",
+          "value": 1.81,
+          "regret": 0.67,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "v8": {
+          "choice": "N5:TEMPORAL_RECHECK:site:n555q-0.example",
+          "value": 2.48,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true,
+          "exploration": false
+        },
+        "cheapest": {
+          "choice": "N5:TEMPORAL_RECHECK:site:n555q-0.example",
+          "value": 2.48,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true,
+          "exploration": false
+        },
+        "random": {
+          "choice": "N5:RELATED_SITE_HUNT:scope:N5",
+          "value": 1.806,
+          "regret": 0.674,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "confirmation": {
+          "choice": "N5:RELATED_SITE_HUNT:scope:N5",
+          "value": 1.806,
+          "regret": 0.674,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        }
+      }
+    },
+    {
+      "type": "two_competing_operations",
+      "seed": 1,
+      "note": "One slot: operation X has fresh distinctive artifacts; operation Y is saturated.",
+      "alternatives": [
+        {
+          "op": "X1",
+          "test": "PUBLIC_ARTIFACT_SEARCH",
+          "subject": "artifact:analytics:ga4:g-x1899",
+          "value": 5.747
+        },
+        {
+          "op": "X1",
+          "test": "PUBLIC_ARTIFACT_SEARCH",
+          "subject": "artifact:contact:x1_support",
+          "value": 6.064
+        },
+        {
+          "op": "X1",
+          "test": "PUBLIC_ARTIFACT_SEARCH",
+          "subject": "artifact:wallet:0xd9e401a7d9e401a7d9e401a7d9e401a7d9e401a7",
+          "value": 4.917
+        },
+        {
+          "op": "X1",
+          "test": "RELATED_SITE_HUNT",
+          "subject": "scope:X1",
+          "value": 7.055
+        },
+        {
+          "op": "Y1",
+          "test": "RELATED_SITE_HUNT",
+          "subject": "scope:Y1",
+          "value": 5.128
+        }
+      ],
+      "best": 7.055,
+      "policies": {
+        "v7-exploit": {
+          "choice": "X1:RELATED_SITE_HUNT:scope:X1",
+          "value": 7.055,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true,
+          "exploration": false
+        },
+        "v7": {
+          "choice": "X1:PUBLIC_ARTIFACT_SEARCH:artifact:analytics:ga4:g-x1899",
+          "value": 5.747,
+          "regret": 1.308,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": true
+        },
+        "v6": {
+          "choice": "X1:RELATED_SITE_HUNT:scope:X1",
+          "value": 4.303,
+          "regret": 2.753,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "v8": {
+          "choice": "X1:RELATED_SITE_HUNT:scope:X1",
+          "value": 7.055,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true,
+          "exploration": false
+        },
+        "cheapest": {
+          "choice": "X1:PUBLIC_ARTIFACT_SEARCH:artifact:analytics:ga4:g-x1899",
+          "value": 5.747,
+          "regret": 1.308,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "random": {
+          "choice": "X1:PUBLIC_ARTIFACT_SEARCH:artifact:wallet:0xd9e401a7d9e401a7d9e401a7d9e401a7d9e401a7",
+          "value": 4.917,
+          "regret": 2.138,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "confirmation": {
+          "choice": "X1:RELATED_SITE_HUNT:scope:X1",
+          "value": 7.055,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true,
+          "exploration": false
+        }
+      }
+    },
+    {
+      "type": "two_competing_operations",
+      "seed": 2,
+      "note": "One slot: operation X has fresh distinctive artifacts; operation Y is saturated.",
+      "alternatives": [
+        {
+          "op": "X2",
+          "test": "PUBLIC_ARTIFACT_SEARCH",
+          "subject": "artifact:analytics:ga4:g-x2796",
+          "value": 8.151
+        },
+        {
+          "op": "X2",
+          "test": "PUBLIC_ARTIFACT_SEARCH",
+          "subject": "artifact:contact:x2_support",
+          "value": 7.78
+        },
+        {
+          "op": "X2",
+          "test": "PUBLIC_ARTIFACT_SEARCH",
+          "subject": "artifact:wallet:0x0038796800387968003879680038796800387968",
+          "value": 7.214
+        },
+        {
+          "op": "X2",
+          "test": "RELATED_SITE_HUNT",
+          "subject": "scope:X2",
+          "value": 7.247
+        },
+        {
+          "op": "Y2",
+          "test": "RELATED_SITE_HUNT",
+          "subject": "scope:Y2",
+          "value": 4.481
+        }
+      ],
+      "best": 8.151,
+      "policies": {
+        "v7-exploit": {
+          "choice": "X2:RELATED_SITE_HUNT:scope:X2",
+          "value": 7.247,
+          "regret": 0.904,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "v7": {
+          "choice": "X2:RELATED_SITE_HUNT:scope:X2",
+          "value": 7.247,
+          "regret": 0.904,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "v6": {
+          "choice": "X2:RELATED_SITE_HUNT:scope:X2",
+          "value": 5.042,
+          "regret": 3.109,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "v8": {
+          "choice": "X2:RELATED_SITE_HUNT:scope:X2",
+          "value": 7.247,
+          "regret": 0.904,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "cheapest": {
+          "choice": "X2:PUBLIC_ARTIFACT_SEARCH:artifact:analytics:ga4:g-x2796",
+          "value": 8.151,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true,
+          "exploration": false
+        },
+        "random": {
+          "choice": "X2:RELATED_SITE_HUNT:scope:X2",
+          "value": 7.247,
+          "regret": 0.904,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "confirmation": {
+          "choice": "X2:RELATED_SITE_HUNT:scope:X2",
+          "value": 7.247,
+          "regret": 0.904,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        }
+      }
+    },
+    {
+      "type": "two_competing_operations",
+      "seed": 3,
+      "note": "One slot: operation X has fresh distinctive artifacts; operation Y is saturated.",
+      "alternatives": [
+        {
+          "op": "X3",
+          "test": "PUBLIC_ARTIFACT_SEARCH",
+          "subject": "artifact:analytics:ga4:g-x3693",
+          "value": 6.713
+        },
+        {
+          "op": "X3",
+          "test": "PUBLIC_ARTIFACT_SEARCH",
+          "subject": "artifact:contact:x3_support",
+          "value": 7.921
+        },
+        {
+          "op": "X3",
+          "test": "PUBLIC_ARTIFACT_SEARCH",
+          "subject": "artifact:wallet:0xb22a487db22a487db22a487db22a487db22a487d",
+          "value": 5.579
+        },
+        {
+          "op": "X3",
+          "test": "RELATED_SITE_HUNT",
+          "subject": "scope:X3",
+          "value": 8.485
+        },
+        {
+          "op": "Y3",
+          "test": "RELATED_SITE_HUNT",
+          "subject": "scope:Y3",
+          "value": 5.962
+        }
+      ],
+      "best": 8.485,
+      "policies": {
+        "v7-exploit": {
+          "choice": "X3:RELATED_SITE_HUNT:scope:X3",
+          "value": 8.485,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true,
+          "exploration": false
+        },
+        "v7": {
+          "choice": "X3:RELATED_SITE_HUNT:scope:X3",
+          "value": 8.485,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true,
+          "exploration": false
+        },
+        "v6": {
+          "choice": "X3:RELATED_SITE_HUNT:scope:X3",
+          "value": 4.964,
+          "regret": 3.521,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "v8": {
+          "choice": "X3:RELATED_SITE_HUNT:scope:X3",
+          "value": 8.485,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true,
+          "exploration": false
+        },
+        "cheapest": {
+          "choice": "X3:PUBLIC_ARTIFACT_SEARCH:artifact:analytics:ga4:g-x3693",
+          "value": 6.713,
+          "regret": 1.772,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "random": {
+          "choice": "X3:PUBLIC_ARTIFACT_SEARCH:artifact:analytics:ga4:g-x3693",
+          "value": 6.713,
+          "regret": 1.772,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "confirmation": {
+          "choice": "X3:RELATED_SITE_HUNT:scope:X3",
+          "value": 8.485,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true,
+          "exploration": false
+        }
+      }
+    },
+    {
+      "type": "two_competing_operations",
+      "seed": 4,
+      "note": "One slot: operation X has fresh distinctive artifacts; operation Y is saturated.",
+      "alternatives": [
+        {
+          "op": "X4",
+          "test": "PUBLIC_ARTIFACT_SEARCH",
+          "subject": "artifact:analytics:ga4:g-x4590",
+          "value": 8.484
+        },
+        {
+          "op": "X4",
+          "test": "PUBLIC_ARTIFACT_SEARCH",
+          "subject": "artifact:contact:x4_support",
+          "value": 7.335
+        },
+        {
+          "op": "X4",
+          "test": "PUBLIC_ARTIFACT_SEARCH",
+          "subject": "artifact:wallet:0x0b284ffe0b284ffe0b284ffe0b284ffe0b284ffe",
+          "value": 6.779
+        },
+        {
+          "op": "X4",
+          "test": "RELATED_SITE_HUNT",
+          "subject": "scope:X4",
+          "value": 7.557
+        },
+        {
+          "op": "Y4",
+          "test": "RELATED_SITE_HUNT",
+          "subject": "scope:Y4",
+          "value": 5.471
+        }
+      ],
+      "best": 8.484,
+      "policies": {
+        "v7-exploit": {
+          "choice": "X4:RELATED_SITE_HUNT:scope:X4",
+          "value": 7.557,
+          "regret": 0.926,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "v7": {
+          "choice": "X4:PUBLIC_ARTIFACT_SEARCH:artifact:analytics:ga4:g-x4590",
+          "value": 8.484,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true,
+          "exploration": true
+        },
+        "v6": {
+          "choice": "X4:RELATED_SITE_HUNT:scope:X4",
+          "value": 6.032,
+          "regret": 2.451,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "v8": {
+          "choice": "X4:RELATED_SITE_HUNT:scope:X4",
+          "value": 7.557,
+          "regret": 0.926,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "cheapest": {
+          "choice": "X4:PUBLIC_ARTIFACT_SEARCH:artifact:analytics:ga4:g-x4590",
+          "value": 8.484,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true,
+          "exploration": false
+        },
+        "random": {
+          "choice": "X4:PUBLIC_ARTIFACT_SEARCH:artifact:contact:x4_support",
+          "value": 7.335,
+          "regret": 1.148,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "confirmation": {
+          "choice": "X4:RELATED_SITE_HUNT:scope:X4",
+          "value": 7.557,
+          "regret": 0.926,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        }
+      }
+    },
+    {
+      "type": "two_competing_operations",
+      "seed": 5,
+      "note": "One slot: operation X has fresh distinctive artifacts; operation Y is saturated.",
+      "alternatives": [
+        {
+          "op": "X5",
+          "test": "PUBLIC_ARTIFACT_SEARCH",
+          "subject": "artifact:analytics:ga4:g-x5487",
+          "value": 5.378
+        },
+        {
+          "op": "X5",
+          "test": "PUBLIC_ARTIFACT_SEARCH",
+          "subject": "artifact:contact:x5_support",
+          "value": 4.741
+        },
+        {
+          "op": "X5",
+          "test": "PUBLIC_ARTIFACT_SEARCH",
+          "subject": "artifact:wallet:0x873334bb873334bb873334bb873334bb873334bb",
+          "value": 5.297
+        },
+        {
+          "op": "X5",
+          "test": "RELATED_SITE_HUNT",
+          "subject": "scope:X5",
+          "value": 6.086
+        },
+        {
+          "op": "Y5",
+          "test": "RELATED_SITE_HUNT",
+          "subject": "scope:Y5",
+          "value": 3.753
+        }
+      ],
+      "best": 6.086,
+      "policies": {
+        "v7-exploit": {
+          "choice": "X5:RELATED_SITE_HUNT:scope:X5",
+          "value": 6.086,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true,
+          "exploration": false
+        },
+        "v7": {
+          "choice": "X5:RELATED_SITE_HUNT:scope:X5",
+          "value": 6.086,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true,
+          "exploration": false
+        },
+        "v6": {
+          "choice": "X5:RELATED_SITE_HUNT:scope:X5",
+          "value": 3.385,
+          "regret": 2.702,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "v8": {
+          "choice": "X5:RELATED_SITE_HUNT:scope:X5",
+          "value": 6.086,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true,
+          "exploration": false
+        },
+        "cheapest": {
+          "choice": "X5:PUBLIC_ARTIFACT_SEARCH:artifact:analytics:ga4:g-x5487",
+          "value": 5.378,
+          "regret": 0.708,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "random": {
+          "choice": "X5:PUBLIC_ARTIFACT_SEARCH:artifact:wallet:0x873334bb873334bb873334bb873334bb873334bb",
+          "value": 5.297,
+          "regret": 0.79,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "confirmation": {
+          "choice": "X5:RELATED_SITE_HUNT:scope:X5",
+          "value": 6.086,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true,
+          "exploration": false
+        }
+      }
+    },
+    {
+      "type": "time_sensitive_disappearing_site",
+      "seed": 1,
+      "note": "A proposed member site is flapping (returned after going dark) and has never been inspected; it disappears next tick.",
+      "alternatives": [
+        {
+          "op": "Q1",
+          "test": "PUBLIC_ARTIFACT_SEARCH",
+          "subject": "artifact:analytics:ga4:g-q1568",
+          "value": 3.593
+        },
+        {
+          "op": "Q1",
+          "test": "PUBLIC_ARTIFACT_SEARCH",
+          "subject": "artifact:wallet:0x06ec7a1006ec7a1006ec7a1006ec7a1006ec7a10",
+          "value": 1.914
+        },
+        {
+          "op": "Q1",
+          "test": "PUBLIC_SITE_INSPECTION",
+          "subject": "site:q12ky-1.example",
+          "value": 3.454
+        },
+        {
+          "op": "Q1",
+          "test": "RELATED_SITE_HUNT",
+          "subject": "scope:Q1",
+          "value": 3.593
+        }
+      ],
+      "best": 3.593,
+      "policies": {
+        "v7-exploit": {
+          "choice": "Q1:PUBLIC_SITE_INSPECTION:site:q12ky-1.example",
+          "value": 3.454,
+          "regret": 0.138,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "v7": {
+          "choice": "Q1:PUBLIC_SITE_INSPECTION:site:q12ky-1.example",
+          "value": 3.454,
+          "regret": 0.138,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "v6": {
+          "choice": "Q1:RELATED_SITE_HUNT:scope:Q1",
+          "value": 1.918,
+          "regret": 1.674,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "v8": {
+          "choice": "Q1:PUBLIC_ARTIFACT_SEARCH:artifact:analytics:ga4:g-q1568",
+          "value": 3.593,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true,
+          "exploration": false
+        },
+        "cheapest": {
+          "choice": "Q1:PUBLIC_SITE_INSPECTION:site:q12ky-1.example",
+          "value": 3.454,
+          "regret": 0.138,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "random": {
+          "choice": "Q1:PUBLIC_ARTIFACT_SEARCH:artifact:wallet:0x06ec7a1006ec7a1006ec7a1006ec7a1006ec7a10",
+          "value": 1.914,
+          "regret": 1.678,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "confirmation": {
+          "choice": "Q1:RELATED_SITE_HUNT:scope:Q1",
+          "value": 3.593,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true,
+          "exploration": false
+        }
+      }
+    },
+    {
+      "type": "time_sensitive_disappearing_site",
+      "seed": 2,
+      "note": "A proposed member site is flapping (returned after going dark) and has never been inspected; it disappears next tick.",
+      "alternatives": [
+        {
+          "op": "Q2",
+          "test": "PUBLIC_ARTIFACT_SEARCH",
+          "subject": "artifact:analytics:ga4:g-q2671",
+          "value": 2.181
+        },
+        {
+          "op": "Q2",
+          "test": "PUBLIC_ARTIFACT_SEARCH",
+          "subject": "artifact:wallet:0x53f1a7cf53f1a7cf53f1a7cf53f1a7cf53f1a7cf",
+          "value": 3.54
+        },
+        {
+          "op": "Q2",
+          "test": "PUBLIC_SITE_INSPECTION",
+          "subject": "site:q21rf-1.example",
+          "value": 3.082
+        },
+        {
+          "op": "Q2",
+          "test": "RELATED_SITE_HUNT",
+          "subject": "scope:Q2",
+          "value": 2.181
+        }
+      ],
+      "best": 3.54,
+      "policies": {
+        "v7-exploit": {
+          "choice": "Q2:PUBLIC_SITE_INSPECTION:site:q21rf-1.example",
+          "value": 3.082,
+          "regret": 0.457,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "v7": {
+          "choice": "Q2:PUBLIC_SITE_INSPECTION:site:q21rf-1.example",
+          "value": 3.082,
+          "regret": 0.457,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "v6": {
+          "choice": "Q2:RELATED_SITE_HUNT:scope:Q2",
+          "value": 1.716,
+          "regret": 1.824,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "v8": {
+          "choice": "Q2:PUBLIC_ARTIFACT_SEARCH:artifact:analytics:ga4:g-q2671",
+          "value": 2.181,
+          "regret": 1.359,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "cheapest": {
+          "choice": "Q2:PUBLIC_SITE_INSPECTION:site:q21rf-1.example",
+          "value": 3.082,
+          "regret": 0.457,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "random": {
+          "choice": "Q2:PUBLIC_ARTIFACT_SEARCH:artifact:analytics:ga4:g-q2671",
+          "value": 2.181,
+          "regret": 1.359,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "confirmation": {
+          "choice": "Q2:RELATED_SITE_HUNT:scope:Q2",
+          "value": 2.181,
+          "regret": 1.359,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        }
+      }
+    },
+    {
+      "type": "time_sensitive_disappearing_site",
+      "seed": 3,
+      "note": "A proposed member site is flapping (returned after going dark) and has never been inspected; it disappears next tick.",
+      "alternatives": [
+        {
+          "op": "Q3",
+          "test": "PUBLIC_ARTIFACT_SEARCH",
+          "subject": "artifact:analytics:ga4:g-q3774",
+          "value": 1.988
+        },
+        {
+          "op": "Q3",
+          "test": "PUBLIC_ARTIFACT_SEARCH",
+          "subject": "artifact:wallet:0xa7b79c52a7b79c52a7b79c52a7b79c52a7b79c52",
+          "value": 1.432
+        },
+        {
+          "op": "Q3",
+          "test": "PUBLIC_SITE_INSPECTION",
+          "subject": "site:q356k-1.example",
+          "value": 3.087
+        },
+        {
+          "op": "Q3",
+          "test": "RELATED_SITE_HUNT",
+          "subject": "scope:Q3",
+          "value": 1.988
+        }
+      ],
+      "best": 3.087,
+      "policies": {
+        "v7-exploit": {
+          "choice": "Q3:PUBLIC_SITE_INSPECTION:site:q356k-1.example",
+          "value": 3.087,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true,
+          "exploration": false
+        },
+        "v7": {
+          "choice": "Q3:PUBLIC_SITE_INSPECTION:site:q356k-1.example",
+          "value": 3.087,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true,
+          "exploration": false
+        },
+        "v6": {
+          "choice": "Q3:RELATED_SITE_HUNT:scope:Q3",
+          "value": 1.436,
+          "regret": 1.651,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "v8": {
+          "choice": "Q3:PUBLIC_SITE_INSPECTION:site:q356k-1.example",
+          "value": 3.087,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true,
+          "exploration": false
+        },
+        "cheapest": {
+          "choice": "Q3:PUBLIC_SITE_INSPECTION:site:q356k-1.example",
+          "value": 3.087,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true,
+          "exploration": false
+        },
+        "random": {
+          "choice": "Q3:RELATED_SITE_HUNT:scope:Q3",
+          "value": 1.988,
+          "regret": 1.099,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "confirmation": {
+          "choice": "Q3:RELATED_SITE_HUNT:scope:Q3",
+          "value": 1.988,
+          "regret": 1.099,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        }
+      }
+    },
+    {
+      "type": "time_sensitive_disappearing_site",
+      "seed": 4,
+      "note": "A proposed member site is flapping (returned after going dark) and has never been inspected; it disappears next tick.",
+      "alternatives": [
+        {
+          "op": "Q4",
+          "test": "PUBLIC_ARTIFACT_SEARCH",
+          "subject": "artifact:analytics:ga4:g-q453",
+          "value": 3.646
+        },
+        {
+          "op": "Q4",
+          "test": "PUBLIC_ARTIFACT_SEARCH",
+          "subject": "artifact:wallet:0x89de216989de216989de216989de216989de2169",
+          "value": 3.54
+        },
+        {
+          "op": "Q4",
+          "test": "PUBLIC_SITE_INSPECTION",
+          "subject": "site:q45j1-1.example",
+          "value": 3.454
+        },
+        {
+          "op": "Q4",
+          "test": "RELATED_SITE_HUNT",
+          "subject": "scope:Q4",
+          "value": 3.646
+        }
+      ],
+      "best": 3.646,
+      "policies": {
+        "v7-exploit": {
+          "choice": "Q4:PUBLIC_SITE_INSPECTION:site:q45j1-1.example",
+          "value": 3.454,
+          "regret": 0.192,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "v7": {
+          "choice": "Q4:PUBLIC_SITE_INSPECTION:site:q45j1-1.example",
+          "value": 3.454,
+          "regret": 0.192,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "v6": {
+          "choice": "Q4:RELATED_SITE_HUNT:scope:Q4",
+          "value": 2.556,
+          "regret": 1.091,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "v8": {
+          "choice": "Q4:PUBLIC_ARTIFACT_SEARCH:artifact:analytics:ga4:g-q453",
+          "value": 3.646,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true,
+          "exploration": false
+        },
+        "cheapest": {
+          "choice": "Q4:PUBLIC_SITE_INSPECTION:site:q45j1-1.example",
+          "value": 3.454,
+          "regret": 0.192,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "random": {
+          "choice": "Q4:PUBLIC_SITE_INSPECTION:site:q45j1-1.example",
+          "value": 3.454,
+          "regret": 0.192,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "confirmation": {
+          "choice": "Q4:RELATED_SITE_HUNT:scope:Q4",
+          "value": 3.646,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true,
+          "exploration": false
+        }
+      }
+    },
+    {
+      "type": "time_sensitive_disappearing_site",
+      "seed": 5,
+      "note": "A proposed member site is flapping (returned after going dark) and has never been inspected; it disappears next tick.",
+      "alternatives": [
+        {
+          "op": "Q5",
+          "test": "PUBLIC_ARTIFACT_SEARCH",
+          "subject": "artifact:analytics:ga4:g-q5156",
+          "value": 1.624
+        },
+        {
+          "op": "Q5",
+          "test": "PUBLIC_ARTIFACT_SEARCH",
+          "subject": "artifact:wallet:0x06e56f4406e56f4406e56f4406e56f4406e56f44",
+          "value": 1.624
+        },
+        {
+          "op": "Q5",
+          "test": "PUBLIC_SITE_INSPECTION",
+          "subject": "site:q51d2-1.example",
+          "value": 2.526
+        },
+        {
+          "op": "Q5",
+          "test": "RELATED_SITE_HUNT",
+          "subject": "scope:Q5",
+          "value": 1.624
+        }
+      ],
+      "best": 2.526,
+      "policies": {
+        "v7-exploit": {
+          "choice": "Q5:PUBLIC_SITE_INSPECTION:site:q51d2-1.example",
+          "value": 2.526,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true,
+          "exploration": false
+        },
+        "v7": {
+          "choice": "Q5:PUBLIC_SITE_INSPECTION:site:q51d2-1.example",
+          "value": 2.526,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true,
+          "exploration": false
+        },
+        "v6": {
+          "choice": "Q5:RELATED_SITE_HUNT:scope:Q5",
+          "value": 1.502,
+          "regret": 1.024,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "v8": {
+          "choice": "Q5:PUBLIC_ARTIFACT_SEARCH:artifact:analytics:ga4:g-q5156",
+          "value": 1.624,
+          "regret": 0.902,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "cheapest": {
+          "choice": "Q5:PUBLIC_SITE_INSPECTION:site:q51d2-1.example",
+          "value": 2.526,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true,
+          "exploration": false
+        },
+        "random": {
+          "choice": "Q5:PUBLIC_ARTIFACT_SEARCH:artifact:wallet:0x06e56f4406e56f4406e56f4406e56f4406e56f44",
+          "value": 1.624,
+          "regret": 0.902,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "confirmation": {
+          "choice": "Q5:RELATED_SITE_HUNT:scope:Q5",
+          "value": 1.624,
+          "regret": 0.902,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        }
+      }
+    },
+    {
+      "type": "expensive_high_value_vs_cheap_low_value",
+      "seed": 1,
+      "note": "A cheap re-check of a cosmetically changed page versus a more expensive search for an unsearched distinctive contact.",
+      "alternatives": [
+        {
+          "op": "E1",
+          "test": "PUBLIC_ARTIFACT_SEARCH",
+          "subject": "artifact:analytics:ga4:g-e1157",
+          "value": 6.564
+        },
+        {
+          "op": "E1",
+          "test": "PUBLIC_ARTIFACT_SEARCH",
+          "subject": "artifact:contact:e1_support",
+          "value": 7.078
+        },
+        {
+          "op": "E1",
+          "test": "PUBLIC_ARTIFACT_SEARCH",
+          "subject": "artifact:wallet:0x1ffb5c1c1ffb5c1c1ffb5c1c1ffb5c1c1ffb5c1c",
+          "value": 5.261
+        },
+        {
+          "op": "E1",
+          "test": "RELATED_SITE_HUNT",
+          "subject": "scope:E1",
+          "value": 7.954
+        },
+        {
+          "op": "E1",
+          "test": "TEMPORAL_RECHECK",
+          "subject": "site:e14qx-0.example",
+          "value": 3.808
+        }
+      ],
+      "best": 7.954,
+      "policies": {
+        "v7-exploit": {
+          "choice": "E1:RELATED_SITE_HUNT:scope:E1",
+          "value": 7.954,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true,
+          "exploration": false
+        },
+        "v7": {
+          "choice": "E1:RELATED_SITE_HUNT:scope:E1",
+          "value": 7.954,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true,
+          "exploration": false
+        },
+        "v6": {
+          "choice": "E1:RELATED_SITE_HUNT:scope:E1",
+          "value": 3.289,
+          "regret": 4.665,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "v8": {
+          "choice": "E1:RELATED_SITE_HUNT:scope:E1",
+          "value": 7.954,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true,
+          "exploration": false
+        },
+        "cheapest": {
+          "choice": "E1:TEMPORAL_RECHECK:site:e14qx-0.example",
+          "value": 3.808,
+          "regret": 4.146,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "random": {
+          "choice": "E1:TEMPORAL_RECHECK:site:e14qx-0.example",
+          "value": 3.808,
+          "regret": 4.146,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "confirmation": {
+          "choice": "E1:RELATED_SITE_HUNT:scope:E1",
+          "value": 7.954,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true,
+          "exploration": false
+        }
+      }
+    },
+    {
+      "type": "expensive_high_value_vs_cheap_low_value",
+      "seed": 2,
+      "note": "A cheap re-check of a cosmetically changed page versus a more expensive search for an unsearched distinctive contact.",
+      "alternatives": [
+        {
+          "op": "E2",
+          "test": "PUBLIC_ARTIFACT_SEARCH",
+          "subject": "artifact:analytics:ga4:g-e2260",
+          "value": 6.521
+        },
+        {
+          "op": "E2",
+          "test": "PUBLIC_ARTIFACT_SEARCH",
+          "subject": "artifact:contact:e2_support",
+          "value": 4.64
+        },
+        {
+          "op": "E2",
+          "test": "PUBLIC_ARTIFACT_SEARCH",
+          "subject": "artifact:wallet:0x46fc8b1b46fc8b1b46fc8b1b46fc8b1b46fc8b1b",
+          "value": 4.64
+        },
+        {
+          "op": "E2",
+          "test": "RELATED_SITE_HUNT",
+          "subject": "scope:E2",
+          "value": 7.026
+        },
+        {
+          "op": "E2",
+          "test": "TEMPORAL_RECHECK",
+          "subject": "site:e22tg-0.example",
+          "value": 3.451
+        }
+      ],
+      "best": 7.026,
+      "policies": {
+        "v7-exploit": {
+          "choice": "E2:RELATED_SITE_HUNT:scope:E2",
+          "value": 7.026,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true,
+          "exploration": false
+        },
+        "v7": {
+          "choice": "E2:RELATED_SITE_HUNT:scope:E2",
+          "value": 7.026,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true,
+          "exploration": false
+        },
+        "v6": {
+          "choice": "E2:RELATED_SITE_HUNT:scope:E2",
+          "value": 2.93,
+          "regret": 4.096,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "v8": {
+          "choice": "E2:RELATED_SITE_HUNT:scope:E2",
+          "value": 7.026,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true,
+          "exploration": false
+        },
+        "cheapest": {
+          "choice": "E2:TEMPORAL_RECHECK:site:e22tg-0.example",
+          "value": 3.451,
+          "regret": 3.575,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "random": {
+          "choice": "E2:PUBLIC_ARTIFACT_SEARCH:artifact:analytics:ga4:g-e2260",
+          "value": 6.521,
+          "regret": 0.505,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "confirmation": {
+          "choice": "E2:RELATED_SITE_HUNT:scope:E2",
+          "value": 7.026,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true,
+          "exploration": false
+        }
+      }
+    },
+    {
+      "type": "expensive_high_value_vs_cheap_low_value",
+      "seed": 3,
+      "note": "A cheap re-check of a cosmetically changed page versus a more expensive search for an unsearched distinctive contact.",
+      "alternatives": [
+        {
+          "op": "E3",
+          "test": "PUBLIC_ARTIFACT_SEARCH",
+          "subject": "artifact:analytics:ga4:g-e3363",
+          "value": 7.114
+        },
+        {
+          "op": "E3",
+          "test": "PUBLIC_ARTIFACT_SEARCH",
+          "subject": "artifact:contact:e3_support",
+          "value": 7.82
+        },
+        {
+          "op": "E3",
+          "test": "PUBLIC_ARTIFACT_SEARCH",
+          "subject": "artifact:wallet:0xc0c67e5ec0c67e5ec0c67e5ec0c67e5ec0c67e5e",
+          "value": 5.185
+        },
+        {
+          "op": "E3",
+          "test": "RELATED_SITE_HUNT",
+          "subject": "scope:E3",
+          "value": 6.901
+        },
+        {
+          "op": "E3",
+          "test": "TEMPORAL_RECHECK",
+          "subject": "site:e34hn-0.example",
+          "value": 3.326
+        }
+      ],
+      "best": 7.82,
+      "policies": {
+        "v7-exploit": {
+          "choice": "E3:RELATED_SITE_HUNT:scope:E3",
+          "value": 6.901,
+          "regret": 0.919,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "v7": {
+          "choice": "E3:RELATED_SITE_HUNT:scope:E3",
+          "value": 6.901,
+          "regret": 0.919,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "v6": {
+          "choice": "E3:RELATED_SITE_HUNT:scope:E3",
+          "value": 3.285,
+          "regret": 4.535,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "v8": {
+          "choice": "E3:RELATED_SITE_HUNT:scope:E3",
+          "value": 6.901,
+          "regret": 0.919,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "cheapest": {
+          "choice": "E3:TEMPORAL_RECHECK:site:e34hn-0.example",
+          "value": 3.326,
+          "regret": 4.494,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "random": {
+          "choice": "E3:PUBLIC_ARTIFACT_SEARCH:artifact:contact:e3_support",
+          "value": 7.82,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true,
+          "exploration": false
+        },
+        "confirmation": {
+          "choice": "E3:RELATED_SITE_HUNT:scope:E3",
+          "value": 6.901,
+          "regret": 0.919,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        }
+      }
+    },
+    {
+      "type": "expensive_high_value_vs_cheap_low_value",
+      "seed": 4,
+      "note": "A cheap re-check of a cosmetically changed page versus a more expensive search for an unsearched distinctive contact.",
+      "alternatives": [
+        {
+          "op": "E4",
+          "test": "PUBLIC_ARTIFACT_SEARCH",
+          "subject": "artifact:analytics:ga4:g-e4466",
+          "value": 6.459
+        },
+        {
+          "op": "E4",
+          "test": "PUBLIC_ARTIFACT_SEARCH",
+          "subject": "artifact:contact:e4_support",
+          "value": 7.078
+        },
+        {
+          "op": "E4",
+          "test": "PUBLIC_ARTIFACT_SEARCH",
+          "subject": "artifact:wallet:0xe7c7ad5de7c7ad5de7c7ad5de7c7ad5de7c7ad5d",
+          "value": 4.262
+        },
+        {
+          "op": "E4",
+          "test": "RELATED_SITE_HUNT",
+          "subject": "scope:E4",
+          "value": 7.829
+        },
+        {
+          "op": "E4",
+          "test": "TEMPORAL_RECHECK",
+          "subject": "site:e45f2-0.example",
+          "value": 3.683
+        }
+      ],
+      "best": 7.829,
+      "policies": {
+        "v7-exploit": {
+          "choice": "E4:RELATED_SITE_HUNT:scope:E4",
+          "value": 7.829,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true,
+          "exploration": false
+        },
+        "v7": {
+          "choice": "E4:RELATED_SITE_HUNT:scope:E4",
+          "value": 7.829,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true,
+          "exploration": false
+        },
+        "v6": {
+          "choice": "E4:RELATED_SITE_HUNT:scope:E4",
+          "value": 2.907,
+          "regret": 4.922,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "v8": {
+          "choice": "E4:RELATED_SITE_HUNT:scope:E4",
+          "value": 7.829,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true,
+          "exploration": false
+        },
+        "cheapest": {
+          "choice": "E4:TEMPORAL_RECHECK:site:e45f2-0.example",
+          "value": 3.683,
+          "regret": 4.146,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "random": {
+          "choice": "E4:RELATED_SITE_HUNT:scope:E4",
+          "value": 7.829,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true,
+          "exploration": false
+        },
+        "confirmation": {
+          "choice": "E4:RELATED_SITE_HUNT:scope:E4",
+          "value": 7.829,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true,
+          "exploration": false
+        }
+      }
+    },
+    {
+      "type": "expensive_high_value_vs_cheap_low_value",
+      "seed": 5,
+      "note": "A cheap re-check of a cosmetically changed page versus a more expensive search for an unsearched distinctive contact.",
+      "alternatives": [
+        {
+          "op": "E5",
+          "test": "PUBLIC_ARTIFACT_SEARCH",
+          "subject": "artifact:analytics:ga4:g-e5569",
+          "value": 5.531
+        },
+        {
+          "op": "E5",
+          "test": "PUBLIC_ARTIFACT_SEARCH",
+          "subject": "artifact:contact:e5_support",
+          "value": 5.531
+        },
+        {
+          "op": "E5",
+          "test": "PUBLIC_ARTIFACT_SEARCH",
+          "subject": "artifact:wallet:0xc27c38c8c27c38c8c27c38c8c27c38c8c27c38c8",
+          "value": 5.761
+        },
+        {
+          "op": "E5",
+          "test": "RELATED_SITE_HUNT",
+          "subject": "scope:E5",
+          "value": 6.282
+        },
+        {
+          "op": "E5",
+          "test": "TEMPORAL_RECHECK",
+          "subject": "site:e5225-0.example",
+          "value": 3.088
+        }
+      ],
+      "best": 6.282,
+      "policies": {
+        "v7-exploit": {
+          "choice": "E5:RELATED_SITE_HUNT:scope:E5",
+          "value": 6.282,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true,
+          "exploration": false
+        },
+        "v7": {
+          "choice": "E5:RELATED_SITE_HUNT:scope:E5",
+          "value": 6.282,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true,
+          "exploration": false
+        },
+        "v6": {
+          "choice": "E5:RELATED_SITE_HUNT:scope:E5",
+          "value": 2.35,
+          "regret": 3.932,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "v8": {
+          "choice": "E5:RELATED_SITE_HUNT:scope:E5",
+          "value": 6.282,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true,
+          "exploration": false
+        },
+        "cheapest": {
+          "choice": "E5:TEMPORAL_RECHECK:site:e5225-0.example",
+          "value": 3.088,
+          "regret": 3.195,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "random": {
+          "choice": "E5:PUBLIC_ARTIFACT_SEARCH:artifact:analytics:ga4:g-e5569",
+          "value": 5.531,
+          "regret": 0.751,
+          "optimal": false,
+          "near_optimal": false,
+          "exploration": false
+        },
+        "confirmation": {
+          "choice": "E5:RELATED_SITE_HUNT:scope:E5",
+          "value": 6.282,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true,
+          "exploration": false
+        }
+      }
+    },
+    {
+      "type": "provider_retry_vs_unrelated_expansion",
+      "truth": {
+        "provider_retry": 0.976,
+        "find_related": 0
+      },
+      "policies": {
+        "v7-exploit": {
+          "choice": "provider_retry",
+          "value": 0.976,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true
+        },
+        "v7": {
+          "choice": "provider_retry",
+          "value": 0.976,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true
+        },
+        "v9": {
+          "choice": "provider_retry",
+          "value": 0.976,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true,
+          "note": "v9 keeps the investigation Director value function"
+        },
+        "v8": {
+          "choice": "provider_retry",
+          "value": 0.976,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true,
+          "note": "v8 preserves the v7 investigation Director for these cases"
+        },
+        "v6": {
+          "choice": "provider_retry",
+          "value": 0.976,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true,
+          "note": "v5 Director value/cost order (v6 kept it)"
+        },
+        "cheapest": {
+          "choice": "provider_retry",
+          "value": 0.976,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true
+        },
+        "confirmation": {
+          "choice": "provider_retry",
+          "value": 0.976,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true,
+          "note": "Existing value/cost Director for table cases"
+        },
+        "random": {
+          "choice": "provider_retry",
+          "value": 0.976,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true
+        }
+      }
+    },
+    {
+      "type": "report_blocker_vs_low_value_correlation",
+      "truth": {
+        "provider_retry": 0.976,
+        "correlate_wallet": 0
+      },
+      "policies": {
+        "v7-exploit": {
+          "choice": "provider_retry",
+          "value": 0.976,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true
+        },
+        "v7": {
+          "choice": "provider_retry",
+          "value": 0.976,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true
+        },
+        "v9": {
+          "choice": "provider_retry",
+          "value": 0.976,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true,
+          "note": "v9 keeps the investigation Director value function"
+        },
+        "v8": {
+          "choice": "provider_retry",
+          "value": 0.976,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true,
+          "note": "v8 preserves the v7 investigation Director for these cases"
+        },
+        "v6": {
+          "choice": "correlate_wallet",
+          "value": 0,
+          "regret": 0.976,
+          "optimal": false,
+          "near_optimal": false,
+          "note": "v5 Director value/cost order (v6 kept it)"
+        },
+        "cheapest": {
+          "choice": "correlate_wallet",
+          "value": 0,
+          "regret": 0.976,
+          "optimal": false,
+          "near_optimal": false
+        },
+        "confirmation": {
+          "choice": "correlate_wallet",
+          "value": 0,
+          "regret": 0.976,
+          "optimal": false,
+          "near_optimal": false,
+          "note": "Existing value/cost Director for table cases"
+        },
+        "random": {
+          "choice": "provider_retry",
+          "value": 0.976,
+          "regret": 0,
+          "optimal": true,
+          "near_optimal": true
+        }
+      }
+    }
+  ],
+  "elapsed_ms": 685
+}

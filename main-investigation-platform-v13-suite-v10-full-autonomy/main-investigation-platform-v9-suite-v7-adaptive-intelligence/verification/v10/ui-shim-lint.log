@@ -1,0 +1,7 @@
+
+/workspace/scratch/0dbe5278a453/v10-active/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/ui/next-shim.tsx
+  23:67  warning  '_p' is defined but never used  @typescript-eslint/no-unused-vars
+  23:79  warning  '_s' is defined but never used  @typescript-eslint/no-unused-vars
+
+✖ 2 problems (0 errors, 2 warnings)
+

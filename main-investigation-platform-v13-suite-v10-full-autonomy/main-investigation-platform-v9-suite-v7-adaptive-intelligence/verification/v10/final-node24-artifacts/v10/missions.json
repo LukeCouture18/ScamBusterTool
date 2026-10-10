@@ -1,0 +1,17 @@
+{
+  "ok": true,
+  "checks": [
+    "root lease",
+    "bounded four-site saturation",
+    "generic-correlation rejection",
+    "no analyst votes",
+    "lineage",
+    "separate per-site evidence",
+    "atomic shared budget and no orphan charge",
+    "stable history",
+    "replay guard",
+    "graceful restart",
+    "reserved-child recovery"
+  ],
+  "scope": "Actual Main source/routes over SQLite fixture; real process termination and full golden workflows still pending."
+}

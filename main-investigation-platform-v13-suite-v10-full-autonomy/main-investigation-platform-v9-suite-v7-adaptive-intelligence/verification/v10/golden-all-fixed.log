@@ -1,0 +1,30 @@
+[Database] Initialized new database at /tmp/autonomy-v10-4TM712/wallet/data/wallet_investigator.sqlite
+[Migrations] Applying migration v1: 001_initial_schema...
+[Migrations] Applying migration v2: 002_indexes_and_views...
+[Migrations] Migration status: 2 applied. Current schema version: v2
+[MainPlatformV6] Initialized integration module 'wallet_investigator' with capabilities: [
+  'blockchain-analysis',
+  'wallet-validation',
+  'counterparty-discovery',
+  'fund-flow-analysis',
+  'controlled-wallet-expansion'
+]
+PASS {"scenario":"public","related_discovery":null,"state":"Submitted","human_actions":2,"human_action_events":[{"action":"Start Investigation"},{"action":"Approve & Submit"}],"manual_tool_transitions":0,"deposit_recall":1,"deposit_precision":1,"validated_wallets":1,"automatic_reports":1,"jobs":4,"total_jobs_after_submission":5,"time_to_readiness_ms":6238,"duplicate_jobs":0,"duplicate_reports":0,"unnecessary_questions":0}
+PASS {"scenario":"login","related_discovery":null,"state":"Submitted","human_actions":6,"human_action_events":[{"action":"Start Investigation"},{"action":"explicit Fill Login","automatic_submission":false},{"action":"normal site interaction","control":"Sign in normally"},{"action":"explicit Fill Code","automatic_submission":false},{"action":"normal site verification","automatic_submission":false},{"action":"Approve & Submit"}],"manual_tool_transitions":0,"deposit_recall":1,"deposit_precision":1,"validated_wallets":1,"automatic_reports":1,"jobs":4,"total_jobs_after_submission":5,"time_to_readiness_ms":4234,"duplicate_jobs":0,"duplicate_reports":0,"unnecessary_questions":0}
+PASS {"scenario":"modal","related_discovery":null,"state":"Submitted","human_actions":3,"human_action_events":[{"action":"Start Investigation"},{"action":"normal site interaction","control":"Open deposit"},{"action":"Approve & Submit"}],"manual_tool_transitions":0,"deposit_recall":1,"deposit_precision":1,"validated_wallets":1,"automatic_reports":1,"jobs":4,"total_jobs_after_submission":5,"time_to_readiness_ms":4920,"duplicate_jobs":0,"duplicate_reports":0,"unnecessary_questions":0}
+PASS {"scenario":"qr","related_discovery":null,"state":"Submitted","human_actions":2,"human_action_events":[{"action":"Start Investigation"},{"action":"Approve & Submit"}],"manual_tool_transitions":0,"deposit_recall":1,"deposit_precision":1,"validated_wallets":1,"automatic_reports":1,"jobs":4,"total_jobs_after_submission":5,"time_to_readiness_ms":4410,"duplicate_jobs":0,"duplicate_reports":0,"unnecessary_questions":0}
+AssertionError [ERR_ASSERTION]: {"id":"golden-start-dynamic","state":"Finding site","candidate_id":null,"investigation_id":null,"assessment":{},"generation":1,"reason":"discovery already queued","deadline_at":"2026-10-04T16:19:58.451Z","workspace_url":null}
++ actual - expected
+
++ 'Finding site'
+- 'Investigating'
+
+    at <anonymous> (/workspace/scratch/0dbe5278a453/v10-active/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/v10-golden.mjs:60:81)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: 'Finding site',
+  expected: 'Investigating',
+  operator: 'strictEqual',
+  diff: 'simple'
+}

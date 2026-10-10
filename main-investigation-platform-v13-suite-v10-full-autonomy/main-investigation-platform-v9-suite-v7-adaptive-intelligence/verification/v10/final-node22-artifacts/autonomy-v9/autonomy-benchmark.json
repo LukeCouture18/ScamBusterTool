@@ -1,0 +1,1070 @@
+{
+  "ok": true,
+  "scenarios": [
+    {
+      "scenario": "public",
+      "related_discovery": null,
+      "state": "Submitted",
+      "human_actions": 2,
+      "human_action_events": [
+        {
+          "action": "Investigate Site"
+        },
+        {
+          "action": "Approve & Submit"
+        }
+      ],
+      "manual_tool_transitions": 0,
+      "deposit_recall": 1,
+      "deposit_precision": 1,
+      "validated_wallets": 1,
+      "automatic_reports": 1,
+      "jobs": 1,
+      "total_jobs_after_submission": 2,
+      "time_to_readiness_ms": 1745,
+      "duplicate_jobs": 0,
+      "duplicate_reports": 0,
+      "unnecessary_questions": 0
+    },
+    {
+      "scenario": "login",
+      "related_discovery": null,
+      "state": "Submitted",
+      "human_actions": 3,
+      "human_action_events": [
+        {
+          "action": "Investigate Site"
+        },
+        {
+          "action": "normal site interaction",
+          "control": "Sign in normally"
+        },
+        {
+          "action": "Approve & Submit"
+        }
+      ],
+      "manual_tool_transitions": 0,
+      "deposit_recall": 1,
+      "deposit_precision": 1,
+      "validated_wallets": 1,
+      "automatic_reports": 1,
+      "jobs": 2,
+      "total_jobs_after_submission": 3,
+      "time_to_readiness_ms": 1376,
+      "duplicate_jobs": 0,
+      "duplicate_reports": 0,
+      "unnecessary_questions": 0
+    },
+    {
+      "scenario": "modal",
+      "related_discovery": null,
+      "state": "Submitted",
+      "human_actions": 3,
+      "human_action_events": [
+        {
+          "action": "Investigate Site"
+        },
+        {
+          "action": "normal site interaction",
+          "control": "Open deposit"
+        },
+        {
+          "action": "Approve & Submit"
+        }
+      ],
+      "manual_tool_transitions": 0,
+      "deposit_recall": 1,
+      "deposit_precision": 1,
+      "validated_wallets": 1,
+      "automatic_reports": 1,
+      "jobs": 1,
+      "total_jobs_after_submission": 2,
+      "time_to_readiness_ms": 1398,
+      "duplicate_jobs": 0,
+      "duplicate_reports": 0,
+      "unnecessary_questions": 0
+    },
+    {
+      "scenario": "qr",
+      "related_discovery": null,
+      "state": "Submitted",
+      "human_actions": 2,
+      "human_action_events": [
+        {
+          "action": "Investigate Site"
+        },
+        {
+          "action": "Approve & Submit"
+        }
+      ],
+      "manual_tool_transitions": 0,
+      "deposit_recall": 1,
+      "deposit_precision": 1,
+      "validated_wallets": 1,
+      "automatic_reports": 1,
+      "jobs": 1,
+      "total_jobs_after_submission": 2,
+      "time_to_readiness_ms": 1442,
+      "duplicate_jobs": 0,
+      "duplicate_reports": 0,
+      "unnecessary_questions": 0
+    },
+    {
+      "scenario": "dynamic",
+      "related_discovery": null,
+      "state": "Submitted",
+      "human_actions": 3,
+      "human_action_events": [
+        {
+          "action": "Investigate Site"
+        },
+        {
+          "action": "normal site interaction",
+          "control": "Show account details"
+        },
+        {
+          "action": "Approve & Submit"
+        }
+      ],
+      "manual_tool_transitions": 0,
+      "deposit_recall": 1,
+      "deposit_precision": 1,
+      "validated_wallets": 1,
+      "automatic_reports": 1,
+      "jobs": 1,
+      "total_jobs_after_submission": 2,
+      "time_to_readiness_ms": 1353,
+      "duplicate_jobs": 0,
+      "duplicate_reports": 0,
+      "unnecessary_questions": 0
+    },
+    {
+      "scenario": "decoys",
+      "related_discovery": null,
+      "state": "Submitted",
+      "human_actions": 2,
+      "human_action_events": [
+        {
+          "action": "Investigate Site"
+        },
+        {
+          "action": "Approve & Submit"
+        }
+      ],
+      "manual_tool_transitions": 0,
+      "deposit_recall": 1,
+      "deposit_precision": 1,
+      "validated_wallets": 1,
+      "automatic_reports": 1,
+      "jobs": 5,
+      "total_jobs_after_submission": 6,
+      "time_to_readiness_ms": 1548,
+      "duplicate_jobs": 0,
+      "duplicate_reports": 0,
+      "unnecessary_questions": 0
+    },
+    {
+      "scenario": "ambiguous",
+      "related_discovery": null,
+      "state": "Needs you",
+      "human_actions": 1,
+      "human_action_events": [
+        {
+          "action": "Investigate Site"
+        }
+      ],
+      "manual_tool_transitions": 0,
+      "deposit_recall": null,
+      "deposit_precision": 1,
+      "validated_wallets": 0,
+      "automatic_reports": 0,
+      "jobs": 1,
+      "total_jobs_after_submission": 1,
+      "time_to_readiness_ms": 244,
+      "duplicate_jobs": 0,
+      "duplicate_reports": 0,
+      "unnecessary_questions": 0
+    },
+    {
+      "scenario": "outage",
+      "related_discovery": null,
+      "state": "Submitted",
+      "human_actions": 2,
+      "human_action_events": [
+        {
+          "action": "Investigate Site"
+        },
+        {
+          "action": "Approve & Submit"
+        }
+      ],
+      "manual_tool_transitions": 0,
+      "deposit_recall": 1,
+      "deposit_precision": 1,
+      "validated_wallets": 1,
+      "automatic_reports": 1,
+      "jobs": 2,
+      "total_jobs_after_submission": 3,
+      "time_to_readiness_ms": 2513,
+      "duplicate_jobs": 0,
+      "duplicate_reports": 0,
+      "unnecessary_questions": 0
+    },
+    {
+      "scenario": "browser-restart",
+      "related_discovery": null,
+      "state": "Submitted",
+      "human_actions": 2,
+      "human_action_events": [
+        {
+          "action": "Investigate Site"
+        },
+        {
+          "action": "Approve & Submit"
+        }
+      ],
+      "manual_tool_transitions": 0,
+      "deposit_recall": 1,
+      "deposit_precision": 1,
+      "validated_wallets": 1,
+      "automatic_reports": 1,
+      "jobs": 1,
+      "total_jobs_after_submission": 2,
+      "time_to_readiness_ms": 1443,
+      "duplicate_jobs": 0,
+      "duplicate_reports": 0,
+      "unnecessary_questions": 0
+    },
+    {
+      "scenario": "main-restart",
+      "related_discovery": null,
+      "state": "Submitted",
+      "human_actions": 2,
+      "human_action_events": [
+        {
+          "action": "Investigate Site"
+        },
+        {
+          "action": "Approve & Submit"
+        }
+      ],
+      "manual_tool_transitions": 0,
+      "deposit_recall": 1,
+      "deposit_precision": 1,
+      "validated_wallets": 1,
+      "automatic_reports": 1,
+      "jobs": 1,
+      "total_jobs_after_submission": 2,
+      "time_to_readiness_ms": 2993,
+      "duplicate_jobs": 0,
+      "duplicate_reports": 0,
+      "unnecessary_questions": 0
+    },
+    {
+      "scenario": "wallet-change",
+      "related_discovery": null,
+      "state": "Submitted",
+      "human_actions": 2,
+      "human_action_events": [
+        {
+          "action": "Investigate Site"
+        },
+        {
+          "action": "Approve & Submit"
+        }
+      ],
+      "manual_tool_transitions": 0,
+      "deposit_recall": 1,
+      "deposit_precision": 1,
+      "validated_wallets": 2,
+      "automatic_reports": 1,
+      "jobs": 2,
+      "total_jobs_after_submission": 3,
+      "time_to_readiness_ms": 2832,
+      "duplicate_jobs": 0,
+      "duplicate_reports": 0,
+      "unnecessary_questions": 0
+    },
+    {
+      "scenario": "related",
+      "related_discovery": {
+        "domain": "v9-related-next.example",
+        "source": "real Finder public discovery"
+      },
+      "state": "Submitted",
+      "human_actions": 2,
+      "human_action_events": [
+        {
+          "action": "Investigate Site"
+        },
+        {
+          "action": "Approve & Submit"
+        }
+      ],
+      "manual_tool_transitions": 0,
+      "deposit_recall": 1,
+      "deposit_precision": 1,
+      "validated_wallets": 1,
+      "automatic_reports": 1,
+      "jobs": 2,
+      "total_jobs_after_submission": 3,
+      "time_to_readiness_ms": 6004,
+      "duplicate_jobs": 0,
+      "duplicate_reports": 0,
+      "unnecessary_questions": 0
+    },
+    {
+      "scenario": "no-wallet",
+      "related_discovery": null,
+      "state": "Parked",
+      "human_actions": 1,
+      "human_action_events": [
+        {
+          "action": "Investigate Site"
+        }
+      ],
+      "manual_tool_transitions": 0,
+      "deposit_recall": null,
+      "deposit_precision": null,
+      "validated_wallets": 0,
+      "automatic_reports": 0,
+      "jobs": 0,
+      "total_jobs_after_submission": 0,
+      "time_to_readiness_ms": 199,
+      "duplicate_jobs": 0,
+      "duplicate_reports": 0,
+      "unnecessary_questions": 0
+    },
+    {
+      "scenario": "unsafe",
+      "related_discovery": null,
+      "state": "Parked",
+      "human_actions": 1,
+      "human_action_events": [
+        {
+          "action": "Investigate Site"
+        }
+      ],
+      "manual_tool_transitions": 0,
+      "deposit_recall": null,
+      "deposit_precision": null,
+      "validated_wallets": 0,
+      "automatic_reports": 0,
+      "jobs": 1,
+      "total_jobs_after_submission": 1,
+      "time_to_readiness_ms": 352,
+      "duplicate_jobs": 0,
+      "duplicate_reports": 0,
+      "unnecessary_questions": 0
+    }
+  ],
+  "submissions": 11,
+  "provider_adapter_calls": 13,
+  "module_trace": [
+    {
+      "cmd": "investigator",
+      "ran": false,
+      "sites": [],
+      "evidence": 0,
+      "requests": []
+    },
+    {
+      "cmd": "finder",
+      "ran": {
+        "claimed": true,
+        "job_id": "373cfb85-7bb8-4bf1-9d6d-b3198fbb18c0",
+        "job_type": "DISCOVER_SITES",
+        "ran": true,
+        "v2": {
+          "ran": true,
+          "cycle": 1,
+          "round": 1,
+          "sources": [
+            "ct_learned",
+            "cert_siblings",
+            "ct_terms"
+          ],
+          "delivered": 0,
+          "delivered_domains": [],
+          "new_unique": 0,
+          "new_infrastructure": 0,
+          "novel_ecosystems": 0,
+          "duplicate_sightings": 0,
+          "new_site_rate": 0,
+          "duplicate_rate": 0,
+          "near_duplicate_new": 0,
+          "near_duplicate_rate": 0,
+          "useful_new_site_rate_cumulative": 0,
+          "source_novelty": {
+            "ct_learned": 0,
+            "cert_siblings": 0,
+            "ct_terms": 0
+          },
+          "rediscovered": [],
+          "aged": 0,
+          "ecosystem_suppressed_total": 0,
+          "watch": {
+            "checked": 0,
+            "changed": 0,
+            "changes": [],
+            "dns_used": 0
+          },
+          "probed": 0,
+          "budget": {
+            "limits": {
+              "http": 120,
+              "dns": 600,
+              "crtsh": 12,
+              "rdap": 60
+            },
+            "used": {
+              "http": 0,
+              "dns": 0,
+              "crtsh": 12,
+              "rdap": 0
+            }
+          },
+          "recovered_interrupted": 0,
+          "saturated": true
+        }
+      },
+      "sync": {
+        "sent": 0,
+        "duplicates": 0,
+        "failed": 0,
+        "rejected": 0,
+        "passes": 1,
+        "still_pending": 0,
+        "note": "0 batch(es) sent over 1 pass(es); 0 still queued."
+      },
+      "requests": [
+        "https://crt.sh/?q=%25defi%25&output=json",
+        "https://crt.sh/?q=%25claim%25&output=json",
+        "https://crt.sh/?q=%25airdrop%25&output=json",
+        "https://crt.sh/?q=%25exchange%25&output=json",
+        "https://crt.sh/?q=%25bit%25&output=json",
+        "https://crt.sh/?q=%25arbitrage%25&output=json",
+        "https://crt.sh/?q=%25yield%25&output=json",
+        "https://crt.sh/?q=%25fx%25&output=json",
+        "https://crt.sh/?q=%25crypto%25&output=json",
+        "https://crt.sh/?q=%25profit%25&output=json",
+        "https://crt.sh/?q=%25coin%25&output=json",
+        "https://crt.sh/?q=%25h5%25&output=json"
+      ],
+      "costs": {
+        "http": 0,
+        "dns": 0,
+        "crtsh": 12,
+        "rdap": 0,
+        "feed": 0
+      },
+      "candidates": []
+    },
+    {
+      "cmd": "investigator",
+      "ran": false,
+      "sites": [],
+      "evidence": 0,
+      "requests": []
+    },
+    {
+      "cmd": "finder",
+      "ran": {
+        "claimed": true,
+        "job_id": "0a2683b1-d4ec-4ae5-a9a2-1a063724f88a",
+        "job_type": "FIND_RELATED_SITES",
+        "ran": true,
+        "v2": {
+          "seed": "v9-related.example",
+          "round": 2,
+          "delivered": 1,
+          "campaign_key": "v2:round:2:v9-related.example",
+          "new_candidates": [
+            "v9-related-next.example"
+          ],
+          "hunt": "campaign:v9-related.example",
+          "meter": {
+            "limits": {
+              "http": 40,
+              "dns": 40,
+              "crtsh": 4,
+              "rdap": 6
+            },
+            "used": {
+              "http": 4,
+              "dns": 24,
+              "crtsh": 4,
+              "rdap": 2
+            }
+          }
+        }
+      },
+      "sync": {
+        "sent": 1,
+        "duplicates": 0,
+        "failed": 0,
+        "rejected": 0,
+        "passes": 2,
+        "still_pending": 0,
+        "note": "1 batch(es) sent over 2 pass(es); 0 still queued."
+      },
+      "requests": [
+        "https://urlscan.io/api/v1/search/?q=page.title%3A%22Asset+Recovery%22&size=100",
+        "https://urlscan.io/api/v1/search/?q=page.title%3A%22USDT+Mining%22&size=100",
+        "https://urlscan.io/api/v1/search/?q=page.title%3A%22Cloud+Mining%22&size=100",
+        "https://urlscan.io/api/v1/search/?q=page.title%3A%22Crypto+Recovery%22&size=100",
+        "https://urlscan.io/api/v1/search/?q=page.title%3A%22Daily+Profit%22&size=100",
+        "https://urlscan.io/api/v1/search/?q=page.title%3A%22Buy+%26+Sell+Crypto%22&size=100",
+        "https://urlscan.io/api/v1/search/?q=page.title%3A%22Arbitrage%22&size=100",
+        "https://urlscan.io/api/v1/search/?q=page.title%3A%22AI+Trading%22&size=100",
+        "https://urlscan.io/api/v1/search/?q=page.title%3A%22Liquidity+Mining%22&size=100",
+        "https://crt.sh/?q=v9-related.example&output=json",
+        "dns://v9-related1.example",
+        "dns://v9-related2.example",
+        "dns://v9-related3.example",
+        "dns://v9-related5.example",
+        "dns://v9-related8.example",
+        "dns://v9-related24.example",
+        "dns://v9-related88.example",
+        "dns://v9-related-app.example",
+        "dns://v9-related-pro.example",
+        "dns://v9-related-vip.example",
+        "dns://v9-related-global.example",
+        "dns://myv9-related.example",
+        "dns://gov9-related.example",
+        "dns://v9-related.com",
+        "dns://v9-related.net",
+        "dns://v9-related.top",
+        "dns://v9-related.xyz",
+        "dns://v9-related.vip",
+        "dns://v9-related.app",
+        "dns://v9-related.cc",
+        "https://crt.sh/?q=%25v9-related%25&output=json",
+        "https://crt.sh/?q=v9-related.example&output=json",
+        "https://crt.sh/?q=%25v9-related%25&output=json",
+        "dns://v9-related.example",
+        "https://v9-related.example/",
+        "https://rdap.org/domain/v9-related.example",
+        "https://v9-related.example/favicon.ico",
+        "dns://v9-related-next.example",
+        "https://v9-related-next.example/",
+        "https://rdap.org/domain/v9-related-next.example",
+        "https://v9-related-next.example/favicon.ico"
+      ],
+      "costs": {
+        "http": 4,
+        "dns": 22,
+        "crtsh": 4,
+        "rdap": 2,
+        "feed": 0,
+        "page_search": 9
+      },
+      "candidates": [
+        {
+          "domain": "v9-related.example",
+          "status": "suppressed",
+          "p": 0.9606,
+          "gate": null,
+          "suppressed": "mirror of v9-related-next.example (same build or cluster, no new wallet)",
+          "keys": [
+            [
+              "contact",
+              "v9support"
+            ],
+            [
+              "dom",
+              "dom:18d10bf0b258aac3"
+            ],
+            [
+              "ip",
+              "104.21.12.34"
+            ],
+            [
+              "simhash",
+              "030e531f51e47bb4"
+            ],
+            [
+              "title",
+              "account payment information"
+            ],
+            [
+              "tmpl",
+              "f1f99402c7faf393eac6"
+            ],
+            [
+              "wallet",
+              "0xb0B7BeC5cCD3dAE1e8EFF6fD040b121920272E35"
+            ]
+          ]
+        },
+        {
+          "domain": "v9-related-next.example",
+          "status": "ready",
+          "p": 0.9649,
+          "gate": null,
+          "suppressed": null,
+          "keys": [
+            [
+              "contact",
+              "v9support"
+            ],
+            [
+              "dom",
+              "dom:91da5fde3fa3756b"
+            ],
+            [
+              "ip",
+              "104.21.12.34"
+            ],
+            [
+              "simhash",
+              "020e515f13e07324"
+            ],
+            [
+              "title",
+              "account payment information"
+            ],
+            [
+              "tmpl",
+              "ff2b14f78fcf1202efcc"
+            ],
+            [
+              "wallet",
+              "0xb0B7BeC5cCD3dAE1e8EFF6fD040b121920272E35"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "cmd": "investigator",
+      "ran": false,
+      "sites": [],
+      "evidence": 0,
+      "requests": []
+    },
+    {
+      "cmd": "finder",
+      "ran": {
+        "claimed": false,
+        "reason": "No work waiting."
+      },
+      "sync": {
+        "sent": 0,
+        "duplicates": 0,
+        "failed": 0,
+        "rejected": 0,
+        "passes": 1,
+        "still_pending": 0,
+        "note": "0 batch(es) sent over 1 pass(es); 0 still queued."
+      },
+      "requests": [],
+      "costs": {
+        "http": 0,
+        "dns": 0,
+        "crtsh": 0,
+        "rdap": 0,
+        "feed": 0
+      },
+      "candidates": [
+        {
+          "domain": "v9-related.example",
+          "status": "suppressed",
+          "p": 0.9606,
+          "gate": null,
+          "suppressed": "mirror of v9-related-next.example (same build or cluster, no new wallet)",
+          "keys": [
+            [
+              "contact",
+              "v9support"
+            ],
+            [
+              "dom",
+              "dom:18d10bf0b258aac3"
+            ],
+            [
+              "ip",
+              "104.21.12.34"
+            ],
+            [
+              "simhash",
+              "030e531f51e47bb4"
+            ],
+            [
+              "title",
+              "account payment information"
+            ],
+            [
+              "tmpl",
+              "f1f99402c7faf393eac6"
+            ],
+            [
+              "wallet",
+              "0xb0B7BeC5cCD3dAE1e8EFF6fD040b121920272E35"
+            ]
+          ]
+        },
+        {
+          "domain": "v9-related-next.example",
+          "status": "ready",
+          "p": 0.9649,
+          "gate": null,
+          "suppressed": null,
+          "keys": [
+            [
+              "contact",
+              "v9support"
+            ],
+            [
+              "dom",
+              "dom:91da5fde3fa3756b"
+            ],
+            [
+              "ip",
+              "104.21.12.34"
+            ],
+            [
+              "simhash",
+              "020e515f13e07324"
+            ],
+            [
+              "title",
+              "account payment information"
+            ],
+            [
+              "tmpl",
+              "ff2b14f78fcf1202efcc"
+            ],
+            [
+              "wallet",
+              "0xb0B7BeC5cCD3dAE1e8EFF6fD040b121920272E35"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "cmd": "investigator",
+      "ran": false,
+      "sites": [],
+      "evidence": 0,
+      "requests": []
+    },
+    {
+      "cmd": "finder",
+      "ran": {
+        "claimed": false,
+        "reason": "No work waiting."
+      },
+      "sync": {
+        "sent": 0,
+        "duplicates": 0,
+        "failed": 0,
+        "rejected": 0,
+        "passes": 1,
+        "still_pending": 0,
+        "note": "0 batch(es) sent over 1 pass(es); 0 still queued."
+      },
+      "requests": [],
+      "costs": {
+        "http": 0,
+        "dns": 0,
+        "crtsh": 0,
+        "rdap": 0,
+        "feed": 0
+      },
+      "candidates": [
+        {
+          "domain": "v9-related.example",
+          "status": "suppressed",
+          "p": 0.9606,
+          "gate": null,
+          "suppressed": "mirror of v9-related-next.example (same build or cluster, no new wallet)",
+          "keys": [
+            [
+              "contact",
+              "v9support"
+            ],
+            [
+              "dom",
+              "dom:18d10bf0b258aac3"
+            ],
+            [
+              "ip",
+              "104.21.12.34"
+            ],
+            [
+              "simhash",
+              "030e531f51e47bb4"
+            ],
+            [
+              "title",
+              "account payment information"
+            ],
+            [
+              "tmpl",
+              "f1f99402c7faf393eac6"
+            ],
+            [
+              "wallet",
+              "0xb0B7BeC5cCD3dAE1e8EFF6fD040b121920272E35"
+            ]
+          ]
+        },
+        {
+          "domain": "v9-related-next.example",
+          "status": "ready",
+          "p": 0.9649,
+          "gate": null,
+          "suppressed": null,
+          "keys": [
+            [
+              "contact",
+              "v9support"
+            ],
+            [
+              "dom",
+              "dom:91da5fde3fa3756b"
+            ],
+            [
+              "ip",
+              "104.21.12.34"
+            ],
+            [
+              "simhash",
+              "020e515f13e07324"
+            ],
+            [
+              "title",
+              "account payment information"
+            ],
+            [
+              "tmpl",
+              "ff2b14f78fcf1202efcc"
+            ],
+            [
+              "wallet",
+              "0xb0B7BeC5cCD3dAE1e8EFF6fD040b121920272E35"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "cmd": "investigator",
+      "ran": false,
+      "sites": [],
+      "evidence": 0,
+      "requests": []
+    },
+    {
+      "cmd": "finder",
+      "ran": {
+        "claimed": false,
+        "reason": "No work waiting."
+      },
+      "sync": {
+        "sent": 0,
+        "duplicates": 0,
+        "failed": 0,
+        "rejected": 0,
+        "passes": 1,
+        "still_pending": 0,
+        "note": "0 batch(es) sent over 1 pass(es); 0 still queued."
+      },
+      "requests": [],
+      "costs": {
+        "http": 0,
+        "dns": 0,
+        "crtsh": 0,
+        "rdap": 0,
+        "feed": 0
+      },
+      "candidates": [
+        {
+          "domain": "v9-related.example",
+          "status": "suppressed",
+          "p": 0.9606,
+          "gate": null,
+          "suppressed": "mirror of v9-related-next.example (same build or cluster, no new wallet)",
+          "keys": [
+            [
+              "contact",
+              "v9support"
+            ],
+            [
+              "dom",
+              "dom:18d10bf0b258aac3"
+            ],
+            [
+              "ip",
+              "104.21.12.34"
+            ],
+            [
+              "simhash",
+              "030e531f51e47bb4"
+            ],
+            [
+              "title",
+              "account payment information"
+            ],
+            [
+              "tmpl",
+              "f1f99402c7faf393eac6"
+            ],
+            [
+              "wallet",
+              "0xb0B7BeC5cCD3dAE1e8EFF6fD040b121920272E35"
+            ]
+          ]
+        },
+        {
+          "domain": "v9-related-next.example",
+          "status": "ready",
+          "p": 0.9649,
+          "gate": null,
+          "suppressed": null,
+          "keys": [
+            [
+              "contact",
+              "v9support"
+            ],
+            [
+              "dom",
+              "dom:91da5fde3fa3756b"
+            ],
+            [
+              "ip",
+              "104.21.12.34"
+            ],
+            [
+              "simhash",
+              "020e515f13e07324"
+            ],
+            [
+              "title",
+              "account payment information"
+            ],
+            [
+              "tmpl",
+              "ff2b14f78fcf1202efcc"
+            ],
+            [
+              "wallet",
+              "0xb0B7BeC5cCD3dAE1e8EFF6fD040b121920272E35"
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "cmd": "investigator",
+      "ran": false,
+      "sites": [],
+      "evidence": 0,
+      "requests": []
+    },
+    {
+      "cmd": "finder",
+      "ran": {
+        "claimed": false,
+        "reason": "No work waiting."
+      },
+      "sync": {
+        "sent": 0,
+        "duplicates": 0,
+        "failed": 0,
+        "rejected": 0,
+        "passes": 1,
+        "still_pending": 0,
+        "note": "0 batch(es) sent over 1 pass(es); 0 still queued."
+      },
+      "requests": [],
+      "costs": {
+        "http": 0,
+        "dns": 0,
+        "crtsh": 0,
+        "rdap": 0,
+        "feed": 0
+      },
+      "candidates": [
+        {
+          "domain": "v9-related.example",
+          "status": "suppressed",
+          "p": 0.9606,
+          "gate": null,
+          "suppressed": "mirror of v9-related-next.example (same build or cluster, no new wallet)",
+          "keys": [
+            [
+              "contact",
+              "v9support"
+            ],
+            [
+              "dom",
+              "dom:18d10bf0b258aac3"
+            ],
+            [
+              "ip",
+              "104.21.12.34"
+            ],
+            [
+              "simhash",
+              "030e531f51e47bb4"
+            ],
+            [
+              "title",
+              "account payment information"
+            ],
+            [
+              "tmpl",
+              "f1f99402c7faf393eac6"
+            ],
+            [
+              "wallet",
+              "0xb0B7BeC5cCD3dAE1e8EFF6fD040b121920272E35"
+            ]
+          ]
+        },
+        {
+          "domain": "v9-related-next.example",
+          "status": "ready",
+          "p": 0.9649,
+          "gate": null,
+          "suppressed": null,
+          "keys": [
+            [
+              "contact",
+              "v9support"
+            ],
+            [
+              "dom",
+              "dom:91da5fde3fa3756b"
+            ],
+            [
+              "ip",
+              "104.21.12.34"
+            ],
+            [
+              "simhash",
+              "020e515f13e07324"
+            ],
+            [
+              "title",
+              "account payment information"
+            ],
+            [
+              "tmpl",
+              "ff2b14f78fcf1202efcc"
+            ],
+            [
+              "wallet",
+              "0xb0B7BeC5cCD3dAE1e8EFF6fD040b121920272E35"
+            ]
+          ]
+        }
+      ]
+    }
+  ],
+  "rendered_scope": "Rendered real content.js with Chrome message transport shim; installed extension lifecycle not exercised.",
+  "metric_limits": "Fixture browser interactions are individually counted. API acknowledgement replays, independent rate-limit windows, clock acceleration and automatic scheduler/worker steps are not human actions. Timing excludes shared browser fixture preparation; no live-provider accuracy claim."
+}

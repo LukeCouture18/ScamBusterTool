@@ -1,0 +1,513 @@
+{
+ "rows": [
+  {
+   "seed": 101,
+   "v2": {
+    "mode": "v2",
+    "rounds": [
+     {
+      "round": 0,
+      "surfaced": 12,
+      "useful": 12,
+      "precision": 1.0,
+      "evidence": 33,
+      "actions": 46,
+      "human": 0,
+      "wasted": 1
+     },
+     {
+      "round": 1,
+      "surfaced": 14,
+      "useful": 14,
+      "precision": 1.0,
+      "evidence": 38,
+      "actions": 52,
+      "human": 0,
+      "wasted": 0
+     },
+     {
+      "round": 2,
+      "surfaced": 20,
+      "useful": 20,
+      "precision": 1.0,
+      "evidence": 62,
+      "actions": 82,
+      "human": 0,
+      "wasted": 0
+     },
+     {
+      "round": 3,
+      "surfaced": 14,
+      "useful": 14,
+      "precision": 1.0,
+      "evidence": 38,
+      "actions": 53,
+      "human": 0,
+      "wasted": 1
+     },
+     {
+      "round": 4,
+      "surfaced": 12,
+      "useful": 12,
+      "precision": 1.0,
+      "evidence": 32,
+      "actions": 46,
+      "human": 0,
+      "wasted": 2
+     },
+     {
+      "round": 5,
+      "surfaced": 17,
+      "useful": 17,
+      "precision": 1.0,
+      "evidence": 42,
+      "actions": 60,
+      "human": 0,
+      "wasted": 1
+     }
+    ],
+    "totals": {
+     "surfaced": 89,
+     "useful": 89,
+     "duplicates": 0,
+     "investigations": 89,
+     "wasted": 5,
+     "evidence": 245,
+     "actions": 339,
+     "human": 0,
+     "success_actions": 329,
+     "successes": 84
+    }
+   },
+   "v3": {
+    "mode": "v3",
+    "rounds": [
+     {
+      "round": 0,
+      "surfaced": 12,
+      "useful": 12,
+      "precision": 1.0,
+      "evidence": 30,
+      "actions": 42,
+      "human": 0,
+      "wasted": 1
+     },
+     {
+      "round": 1,
+      "surfaced": 19,
+      "useful": 19,
+      "precision": 1.0,
+      "evidence": 48,
+      "actions": 67,
+      "human": 0,
+      "wasted": 0
+     },
+     {
+      "round": 2,
+      "surfaced": 18,
+      "useful": 18,
+      "precision": 1.0,
+      "evidence": 52,
+      "actions": 70,
+      "human": 0,
+      "wasted": 0
+     },
+     {
+      "round": 3,
+      "surfaced": 12,
+      "useful": 12,
+      "precision": 1.0,
+      "evidence": 31,
+      "actions": 43,
+      "human": 0,
+      "wasted": 1
+     },
+     {
+      "round": 4,
+      "surfaced": 13,
+      "useful": 13,
+      "precision": 1.0,
+      "evidence": 29,
+      "actions": 42,
+      "human": 0,
+      "wasted": 2
+     },
+     {
+      "round": 5,
+      "surfaced": 13,
+      "useful": 13,
+      "precision": 1.0,
+      "evidence": 32,
+      "actions": 45,
+      "human": 0,
+      "wasted": 1
+     }
+    ],
+    "totals": {
+     "surfaced": 87,
+     "useful": 87,
+     "duplicates": 0,
+     "investigations": 87,
+     "wasted": 5,
+     "evidence": 222,
+     "actions": 309,
+     "human": 0,
+     "success_actions": 304,
+     "successes": 82
+    }
+   }
+  },
+  {
+   "seed": 202,
+   "v2": {
+    "mode": "v2",
+    "rounds": [
+     {
+      "round": 0,
+      "surfaced": 19,
+      "useful": 19,
+      "precision": 1.0,
+      "evidence": 55,
+      "actions": 74,
+      "human": 0,
+      "wasted": 0
+     },
+     {
+      "round": 1,
+      "surfaced": 17,
+      "useful": 17,
+      "precision": 1.0,
+      "evidence": 42,
+      "actions": 60,
+      "human": 0,
+      "wasted": 1
+     },
+     {
+      "round": 2,
+      "surfaced": 16,
+      "useful": 16,
+      "precision": 1.0,
+      "evidence": 39,
+      "actions": 57,
+      "human": 0,
+      "wasted": 2
+     },
+     {
+      "round": 3,
+      "surfaced": 17,
+      "useful": 15,
+      "precision": 0.882,
+      "evidence": 42,
+      "actions": 60,
+      "human": 0,
+      "wasted": 1
+     },
+     {
+      "round": 4,
+      "surfaced": 15,
+      "useful": 14,
+      "precision": 0.933,
+      "evidence": 39,
+      "actions": 54,
+      "human": 0,
+      "wasted": 0
+     },
+     {
+      "round": 5,
+      "surfaced": 16,
+      "useful": 16,
+      "precision": 1.0,
+      "evidence": 46,
+      "actions": 62,
+      "human": 0,
+      "wasted": 0
+     }
+    ],
+    "totals": {
+     "surfaced": 100,
+     "useful": 97,
+     "duplicates": 3,
+     "investigations": 100,
+     "wasted": 4,
+     "evidence": 263,
+     "actions": 367,
+     "human": 0,
+     "success_actions": 359,
+     "successes": 96
+    }
+   },
+   "v3": {
+    "mode": "v3",
+    "rounds": [
+     {
+      "round": 0,
+      "surfaced": 19,
+      "useful": 19,
+      "precision": 1.0,
+      "evidence": 50,
+      "actions": 69,
+      "human": 0,
+      "wasted": 0
+     },
+     {
+      "round": 1,
+      "surfaced": 20,
+      "useful": 20,
+      "precision": 1.0,
+      "evidence": 49,
+      "actions": 69,
+      "human": 0,
+      "wasted": 1
+     },
+     {
+      "round": 2,
+      "surfaced": 12,
+      "useful": 12,
+      "precision": 1.0,
+      "evidence": 27,
+      "actions": 39,
+      "human": 0,
+      "wasted": 2
+     },
+     {
+      "round": 3,
+      "surfaced": 18,
+      "useful": 17,
+      "precision": 0.944,
+      "evidence": 39,
+      "actions": 56,
+      "human": 0,
+      "wasted": 1
+     },
+     {
+      "round": 4,
+      "surfaced": 15,
+      "useful": 14,
+      "precision": 0.933,
+      "evidence": 37,
+      "actions": 51,
+      "human": 0,
+      "wasted": 0
+     },
+     {
+      "round": 5,
+      "surfaced": 15,
+      "useful": 15,
+      "precision": 1.0,
+      "evidence": 41,
+      "actions": 56,
+      "human": 0,
+      "wasted": 0
+     }
+    ],
+    "totals": {
+     "surfaced": 99,
+     "useful": 97,
+     "duplicates": 2,
+     "investigations": 97,
+     "wasted": 4,
+     "evidence": 243,
+     "actions": 340,
+     "human": 0,
+     "success_actions": 336,
+     "successes": 93
+    }
+   }
+  },
+  {
+   "seed": 303,
+   "v2": {
+    "mode": "v2",
+    "rounds": [
+     {
+      "round": 0,
+      "surfaced": 13,
+      "useful": 13,
+      "precision": 1.0,
+      "evidence": 29,
+      "actions": 45,
+      "human": 0,
+      "wasted": 3
+     },
+     {
+      "round": 1,
+      "surfaced": 15,
+      "useful": 15,
+      "precision": 1.0,
+      "evidence": 38,
+      "actions": 54,
+      "human": 0,
+      "wasted": 1
+     },
+     {
+      "round": 2,
+      "surfaced": 20,
+      "useful": 19,
+      "precision": 0.95,
+      "evidence": 51,
+      "actions": 72,
+      "human": 0,
+      "wasted": 1
+     },
+     {
+      "round": 3,
+      "surfaced": 20,
+      "useful": 20,
+      "precision": 1.0,
+      "evidence": 53,
+      "actions": 75,
+      "human": 0,
+      "wasted": 2
+     },
+     {
+      "round": 4,
+      "surfaced": 20,
+      "useful": 20,
+      "precision": 1.0,
+      "evidence": 53,
+      "actions": 75,
+      "human": 0,
+      "wasted": 2
+     },
+     {
+      "round": 5,
+      "surfaced": 10,
+      "useful": 10,
+      "precision": 1.0,
+      "evidence": 26,
+      "actions": 37,
+      "human": 0,
+      "wasted": 1
+     }
+    ],
+    "totals": {
+     "surfaced": 98,
+     "useful": 97,
+     "duplicates": 1,
+     "investigations": 98,
+     "wasted": 10,
+     "evidence": 250,
+     "actions": 358,
+     "human": 0,
+     "success_actions": 338,
+     "successes": 88
+    }
+   },
+   "v3": {
+    "mode": "v3",
+    "rounds": [
+     {
+      "round": 0,
+      "surfaced": 13,
+      "useful": 13,
+      "precision": 1.0,
+      "evidence": 27,
+      "actions": 40,
+      "human": 0,
+      "wasted": 3
+     },
+     {
+      "round": 1,
+      "surfaced": 18,
+      "useful": 18,
+      "precision": 1.0,
+      "evidence": 41,
+      "actions": 59,
+      "human": 0,
+      "wasted": 2
+     },
+     {
+      "round": 2,
+      "surfaced": 20,
+      "useful": 20,
+      "precision": 1.0,
+      "evidence": 45,
+      "actions": 65,
+      "human": 0,
+      "wasted": 2
+     },
+     {
+      "round": 3,
+      "surfaced": 18,
+      "useful": 18,
+      "precision": 1.0,
+      "evidence": 46,
+      "actions": 64,
+      "human": 0,
+      "wasted": 1
+     },
+     {
+      "round": 4,
+      "surfaced": 15,
+      "useful": 15,
+      "precision": 1.0,
+      "evidence": 42,
+      "actions": 57,
+      "human": 0,
+      "wasted": 0
+     },
+     {
+      "round": 5,
+      "surfaced": 15,
+      "useful": 15,
+      "precision": 1.0,
+      "evidence": 33,
+      "actions": 48,
+      "human": 0,
+      "wasted": 2
+     }
+    ],
+    "totals": {
+     "surfaced": 99,
+     "useful": 99,
+     "duplicates": 0,
+     "investigations": 99,
+     "wasted": 10,
+     "evidence": 234,
+     "actions": 333,
+     "human": 0,
+     "success_actions": 323,
+     "successes": 89
+    }
+   }
+  }
+ ],
+ "summary": {
+  "v2": {
+   "surfaced": 287,
+   "candidate_usefulness": 0.986,
+   "useful_evidence_yield": 2.641,
+   "duplicate_rate": 0.014,
+   "wasted_investigation_rate": 0.066,
+   "actions_per_success": 3.83,
+   "human_interventions": 0
+  },
+  "v3": {
+   "surfaced": 285,
+   "candidate_usefulness": 0.993,
+   "useful_evidence_yield": 2.453,
+   "duplicate_rate": 0.007,
+   "wasted_investigation_rate": 0.067,
+   "actions_per_success": 3.65,
+   "human_interventions": 0
+  },
+  "strategy_precision_trend": {
+   "v2": [
+    1.0,
+    1.0,
+    0.982,
+    0.961,
+    0.979,
+    1.0
+   ],
+   "v3": [
+    1.0,
+    1.0,
+    1.0,
+    0.979,
+    0.977,
+    1.0
+   ]
+  }
+ }
+}

@@ -1,0 +1,11 @@
+✔ bounded explicit-chain native and ERC-20 records, cursor, no global completeness or key leakage (5.512911ms)
+✔ unavailable endpoint is failure, partial endpoint failure preserves observed records (1.496964ms)
+✔ copied pages deduplicate; malformed, unrelated and NFT rows cannot become deposits (0.625732ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 3
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 255.687465

@@ -1,0 +1,35 @@
+
+=== suite (1 step) ===
+--- suite 1/1: node --experimental-sqlite --disable-warning=ExperimentalWarning --import tsx --import file:///workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/lib/sqljs-fallback.mjs tests/suite-workflow.mjs
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+[MainPlatformV6] Initialized integration module 'wallet_investigator' with capabilities: [
+  'blockchain-analysis',
+  'wallet-validation',
+  'counterparty-discovery',
+  'fund-flow-analysis',
+  'controlled-wallet-expansion'
+]
+[Database] Initialized new database at /tmp/mip-suite-iuhOY5/wallet-runtime/data/wallet_investigator.sqlite
+[Migrations] Applying migration v1: 001_initial_schema...
+[Migrations] Applying migration v2: 002_indexes_and_views...
+[Migrations] Migration status: 2 applied. Current schema version: v2
+POST /api/v1/suite/actions 400 {"error":{"code":"VALIDATION_ERROR","message":"Invalid action.","details":[{"received":"made_up","code":"invalid_enum_value","options":["dead_or_parked","not_a_scam","duplicate","not_crypto","not_useful"],"path":["reason"],"message":"Invalid enum value. Expected 'dead_or_parked' | 'not_a_scam' | 'duplicate' | 'not_crypto' | 'not_useful', received 'made_up'"}]},"request_id":"563f9e1d-de84-4509-9a48-beb2c1429a9c"}
+/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/suite-workflow.mjs:244
+      child.on('close', code => code === 0 ? resolve(o) : reject(new Error(`browser check exited ${code}:\n${o.slice(-3000)}\n${e.slice(-3000)}`)));
+                                                                 ^
+
+Error: browser check exited 1:
+
+Traceback (most recent call last):
+  File "/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/suite-ui-browser.py", line 226, in <module>
+    raise AssertionError(f"sideways scroll at phone width on {path}: {wide}px; {culprits}")
+AssertionError: sideways scroll at phone width on /: 68px; ['nav.mip-nav right=880', 'a. right=534', 'svg.[object SVGAnimatedString] right=410', 'rect.[object SVGAnimatedString] right=407', 'span. right=524', 'a. right=701', 'svg.[object SVGAnimatedString] right=563', 'rect.[object SVGAnimatedString] right=560']
+
+    at ChildProcess.<anonymous> (/workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/suite-workflow.mjs:244:66)
+    at ChildProcess.emit (node:events:509:28)
+    at maybeClose (node:internal/child_process:1141:16)
+    at ChildProcess._handle.onexit (node:internal/child_process:306:5)
+
+Node.js v24.19.0
+FAIL suite: step 1/1 exited with 1: node --experimental-sqlite --disable-warning=ExperimentalWarning --import tsx --import file:///workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/lib/sqljs-fallback.mjs tests/suite-workflow.mjs
+FAIL suite: 0/1 steps passed

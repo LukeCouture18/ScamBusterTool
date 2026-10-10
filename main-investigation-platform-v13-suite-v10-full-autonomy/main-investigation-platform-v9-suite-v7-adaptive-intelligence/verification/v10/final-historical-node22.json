@@ -1,0 +1,127 @@
+{
+  "runtime": "v22.18.0",
+  "source_identity": "fd4a22501e5e0c758fb35bde01a166132772f7988852a0668d1deba76391fe88",
+  "results": [
+    {
+      "group": "migration-matrix",
+      "exit_code": 0,
+      "seconds": 0.49,
+      "log": "final-node22-migration-matrix.log"
+    },
+    {
+      "group": "autonomy-v10",
+      "exit_code": 0,
+      "seconds": 305.14,
+      "log": "final-node22-autonomy-v10.log"
+    },
+    {
+      "group": "unit",
+      "exit_code": 0,
+      "seconds": 8.1,
+      "log": "final-node22-unit.log"
+    },
+    {
+      "group": "director",
+      "exit_code": 0,
+      "seconds": 21.13,
+      "log": "final-node22-director.log"
+    },
+    {
+      "group": "loops",
+      "exit_code": 0,
+      "seconds": 10.37,
+      "log": "final-node22-loops.log"
+    },
+    {
+      "group": "integration:v6",
+      "exit_code": 0,
+      "seconds": 3.75,
+      "log": "final-node22-integration-v6.log"
+    },
+    {
+      "group": "v2",
+      "exit_code": 0,
+      "seconds": 13.19,
+      "log": "final-node22-v2.log"
+    },
+    {
+      "group": "v3",
+      "exit_code": 0,
+      "seconds": 3.64,
+      "log": "final-node22-v3.log"
+    },
+    {
+      "group": "v4",
+      "exit_code": 0,
+      "seconds": 12.54,
+      "log": "final-node22-v4.log"
+    },
+    {
+      "group": "v5",
+      "exit_code": 0,
+      "seconds": 16.05,
+      "log": "final-node22-v5.log"
+    },
+    {
+      "group": "joined:hunter",
+      "exit_code": 0,
+      "seconds": 19.3,
+      "log": "final-node22-joined-hunter.log"
+    },
+    {
+      "group": "joined:v61",
+      "exit_code": 0,
+      "seconds": 26.54,
+      "log": "final-node22-joined-v61.log"
+    },
+    {
+      "group": "five-modules",
+      "exit_code": 0,
+      "seconds": 3.29,
+      "log": "final-node22-five-modules.log"
+    },
+    {
+      "group": "startup:modules",
+      "exit_code": 0,
+      "seconds": 11.91,
+      "log": "final-node22-startup-modules.log"
+    },
+    {
+      "group": "site-finder",
+      "exit_code": 0,
+      "seconds": 398.46,
+      "log": "final-node22-site-finder.log"
+    },
+    {
+      "group": "wallet-pipeline",
+      "exit_code": 1,
+      "seconds": 123.25,
+      "log": "final-node22-wallet-pipeline.log"
+    },
+    {
+      "group": "operation-intelligence",
+      "exit_code": 0,
+      "seconds": 207.08,
+      "log": "final-node22-operation-intelligence.log"
+    },
+    {
+      "group": "adaptive-intelligence",
+      "exit_code": 0,
+      "seconds": 341.76,
+      "log": "final-node22-adaptive-intelligence.log"
+    },
+    {
+      "group": "scientific-intelligence",
+      "exit_code": 0,
+      "seconds": 280.49,
+      "log": "final-node22-scientific-intelligence.log"
+    },
+    {
+      "group": "full-autonomy",
+      "exit_code": 0,
+      "seconds": 324.05,
+      "log": "final-node22-full-autonomy.log"
+    }
+  ],
+  "complete": true
+}

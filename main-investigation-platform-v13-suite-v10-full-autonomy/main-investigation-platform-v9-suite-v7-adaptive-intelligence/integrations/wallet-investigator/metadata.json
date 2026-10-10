@@ -1,0 +1,6 @@
+{
+  "name": "Wallet Investigator v1.0",
+  "description": "Defensive, read-only cryptocurrency investigation and fund-flow analysis platform for investigating suspected scam websites and tracking blockchain counterparties.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

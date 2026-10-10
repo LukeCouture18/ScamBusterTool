@@ -1,0 +1,26 @@
+Cumulative Node 22 release gate across an execution environment restart.
+Original 18 groups: all-node22-final.log
+Resumed scientific group: node22-scientific-resumed.log
+Resumed autonomy group: node22-autonomy-resumed.log
+The original process was interrupted by the environment going offline; this is not a claim of one uninterrupted run.
+
+PASS unit
+PASS migration-matrix
+PASS suite
+PASS loops
+PASS integration:v6
+PASS v2
+PASS v3
+PASS v4
+PASS v5
+PASS joined:hunter
+PASS joined:v61
+PASS five-modules
+PASS startup:modules
+PASS site-finder
+FAIL wallet-pipeline
+PASS director
+PASS operation-intelligence
+PASS adaptive-intelligence
+PASS scientific-intelligence
+PASS full-autonomy

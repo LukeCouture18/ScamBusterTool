@@ -1,0 +1,2873 @@
+{
+  "at": "2026-09-24T16:16:28.456Z",
+  "budget": 90,
+  "seeds": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "diffs": [
+    0.3,
+    0.8
+  ],
+  "kinds": [
+    "domain",
+    "shared",
+    "wallet"
+  ],
+  "rows": [
+    {
+      "engine": "v2.0 · domain seed",
+      "runs": 16,
+      "precision": 1,
+      "recall": 0.781,
+      "f1": 0.856,
+      "falseAttributions": 0,
+      "plantedAbsorbed": 0,
+      "lookalikes": 0,
+      "operatorRecall": 0.938,
+      "treasury": 1,
+      "deposit": 0.813,
+      "feeCorrect": 1,
+      "pivots": 90,
+      "requests": 174.313,
+      "pivotsTo80": 74.063,
+      "reached80": 0.688,
+      "reappearance": 0.938,
+      "reappearanceFalse": 0,
+      "seconds": 1.701
+    },
+    {
+      "engine": "v2.0 · shared seed",
+      "runs": 16,
+      "precision": 1,
+      "recall": 0.6,
+      "f1": 0.677,
+      "falseAttributions": 0,
+      "plantedAbsorbed": 0,
+      "lookalikes": 0,
+      "operatorRecall": 0.688,
+      "treasury": 0.875,
+      "deposit": 0.875,
+      "feeCorrect": 1,
+      "pivots": 79.438,
+      "requests": 172.125,
+      "pivotsTo80": 74.156,
+      "reached80": 0.563,
+      "reappearance": 0.688,
+      "reappearanceFalse": 0,
+      "seconds": 1.313
+    },
+    {
+      "engine": "v2.0 · wallet seed",
+      "runs": 16,
+      "precision": 0,
+      "recall": 0,
+      "f1": 0,
+      "falseAttributions": 0,
+      "plantedAbsorbed": 0,
+      "lookalikes": 0,
+      "operatorRecall": 0,
+      "treasury": 1,
+      "deposit": 1,
+      "feeCorrect": 1,
+      "pivots": 59.5,
+      "requests": 246,
+      "pivotsTo80": 89.25,
+      "reached80": 0,
+      "reappearance": 0,
+      "reappearanceFalse": 0,
+      "seconds": 0.306
+    }
+  ],
+  "results": [
+    {
+      "engine": "v2.0",
+      "seed": 1,
+      "difficulty": 0.3,
+      "seedKind": "domain",
+      "precision": 1,
+      "recall": 0.9,
+      "f1": 0.947,
+      "falseAttribution": [],
+      "plantedAbsorbed": false,
+      "lookalikeAbsorbed": 0,
+      "operatorRecall": 1,
+      "treasuryFound": true,
+      "depositFound": true,
+      "feeCorrect": true,
+      "pivots": 90,
+      "requests": 168,
+      "curve": [
+        {
+          "pivots": 15,
+          "recall": 0.4,
+          "precision": 1
+        },
+        {
+          "pivots": 30,
+          "recall": 0.7,
+          "precision": 1
+        },
+        {
+          "pivots": 45,
+          "recall": 0.8,
+          "precision": 1
+        },
+        {
+          "pivots": 60,
+          "recall": 0.9,
+          "precision": 1
+        },
+        {
+          "pivots": 75,
+          "recall": 0.9,
+          "precision": 1
+        },
+        {
+          "pivots": 90,
+          "recall": 0.9,
+          "precision": 1
+        }
+      ],
+      "pivotsTo80": 45,
+      "reappearanceDetected": 2,
+      "reappearanceTotal": 2,
+      "reappearanceFalse": 0,
+      "contradictions": 7,
+      "ms": 2678
+    },
+    {
+      "engine": "v2.0",
+      "seed": 1,
+      "difficulty": 0.3,
+      "seedKind": "shared",
+      "precision": 1,
+      "recall": 0.9,
+      "f1": 0.947,
+      "falseAttribution": [],
+      "plantedAbsorbed": false,
+      "lookalikeAbsorbed": 0,
+      "operatorRecall": 1,
+      "treasuryFound": true,
+      "depositFound": true,
+      "feeCorrect": true,
+      "pivots": 90,
+      "requests": 166,
+      "curve": [
+        {
+          "pivots": 15,
+          "recall": 0.3,
+          "precision": 1
+        },
+        {
+          "pivots": 30,
+          "recall": 0.3,
+          "precision": 1
+        },
+        {
+          "pivots": 45,
+          "recall": 0.6,
+          "precision": 1
+        },
+        {
+          "pivots": 60,
+          "recall": 0.9,
+          "precision": 1
+        },
+        {
+          "pivots": 75,
+          "recall": 0.9,
+          "precision": 1
+        },
+        {
+          "pivots": 90,
+          "recall": 0.9,
+          "precision": 1
+        }
+      ],
+      "pivotsTo80": 60,
+      "reappearanceDetected": 2,
+      "reappearanceTotal": 2,
+      "reappearanceFalse": 0,
+      "contradictions": 6,
+      "ms": 2482
+    },
+    {
+      "engine": "v2.0",
+      "seed": 1,
+      "difficulty": 0.3,
+      "seedKind": "wallet",
+      "precision": 0,
+      "recall": 0,
+      "f1": 0,
+      "falseAttribution": [],
+      "plantedAbsorbed": false,
+      "lookalikeAbsorbed": 0,
+      "operatorRecall": 0,
+      "treasuryFound": true,
+      "depositFound": true,
+      "feeCorrect": true,
+      "pivots": 55,
+      "requests": 228,
+      "curve": [
+        {
+          "pivots": 15,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 24,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 36,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 45,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 54,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 55,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 55,
+          "recall": 0,
+          "precision": 0
+        }
+      ],
+      "pivotsTo80": null,
+      "reappearanceDetected": 0,
+      "reappearanceTotal": 2,
+      "reappearanceFalse": 0,
+      "contradictions": 1,
+      "ms": 291
+    },
+    {
+      "engine": "v2.0",
+      "seed": 1,
+      "difficulty": 0.8,
+      "seedKind": "domain",
+      "precision": 1,
+      "recall": 0.9,
+      "f1": 0.947,
+      "falseAttribution": [],
+      "plantedAbsorbed": false,
+      "lookalikeAbsorbed": 0,
+      "operatorRecall": 1,
+      "treasuryFound": true,
+      "depositFound": true,
+      "feeCorrect": true,
+      "pivots": 90,
+      "requests": 164,
+      "curve": [
+        {
+          "pivots": 15,
+          "recall": 0.4,
+          "precision": 1
+        },
+        {
+          "pivots": 30,
+          "recall": 0.6,
+          "precision": 1
+        },
+        {
+          "pivots": 45,
+          "recall": 0.6,
+          "precision": 1
+        },
+        {
+          "pivots": 60,
+          "recall": 0.9,
+          "precision": 1
+        },
+        {
+          "pivots": 75,
+          "recall": 0.9,
+          "precision": 1
+        },
+        {
+          "pivots": 90,
+          "recall": 0.9,
+          "precision": 1
+        }
+      ],
+      "pivotsTo80": 60,
+      "reappearanceDetected": 2,
+      "reappearanceTotal": 2,
+      "reappearanceFalse": 0,
+      "contradictions": 6,
+      "ms": 1959
+    },
+    {
+      "engine": "v2.0",
+      "seed": 1,
+      "difficulty": 0.8,
+      "seedKind": "shared",
+      "precision": 1,
+      "recall": 0.8,
+      "f1": 0.889,
+      "falseAttribution": [],
+      "plantedAbsorbed": false,
+      "lookalikeAbsorbed": 0,
+      "operatorRecall": 1,
+      "treasuryFound": true,
+      "depositFound": true,
+      "feeCorrect": true,
+      "pivots": 90,
+      "requests": 159,
+      "curve": [
+        {
+          "pivots": 15,
+          "recall": 0.3,
+          "precision": 1
+        },
+        {
+          "pivots": 30,
+          "recall": 0.3,
+          "precision": 1
+        },
+        {
+          "pivots": 45,
+          "recall": 0.5,
+          "precision": 1
+        },
+        {
+          "pivots": 60,
+          "recall": 0.7,
+          "precision": 1
+        },
+        {
+          "pivots": 75,
+          "recall": 0.7,
+          "precision": 1
+        },
+        {
+          "pivots": 90,
+          "recall": 0.8,
+          "precision": 1
+        }
+      ],
+      "pivotsTo80": 90,
+      "reappearanceDetected": 2,
+      "reappearanceTotal": 2,
+      "reappearanceFalse": 0,
+      "contradictions": 6,
+      "ms": 1534
+    },
+    {
+      "engine": "v2.0",
+      "seed": 1,
+      "difficulty": 0.8,
+      "seedKind": "wallet",
+      "precision": 0,
+      "recall": 0,
+      "f1": 0,
+      "falseAttribution": [],
+      "plantedAbsorbed": false,
+      "lookalikeAbsorbed": 0,
+      "operatorRecall": 0,
+      "treasuryFound": true,
+      "depositFound": true,
+      "feeCorrect": true,
+      "pivots": 55,
+      "requests": 228,
+      "curve": [
+        {
+          "pivots": 15,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 27,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 36,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 45,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 54,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 55,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 55,
+          "recall": 0,
+          "precision": 0
+        }
+      ],
+      "pivotsTo80": null,
+      "reappearanceDetected": 0,
+      "reappearanceTotal": 2,
+      "reappearanceFalse": 0,
+      "contradictions": 1,
+      "ms": 224
+    },
+    {
+      "engine": "v2.0",
+      "seed": 2,
+      "difficulty": 0.3,
+      "seedKind": "domain",
+      "precision": 1,
+      "recall": 0.9,
+      "f1": 0.947,
+      "falseAttribution": [],
+      "plantedAbsorbed": false,
+      "lookalikeAbsorbed": 0,
+      "operatorRecall": 1,
+      "treasuryFound": true,
+      "depositFound": true,
+      "feeCorrect": true,
+      "pivots": 90,
+      "requests": 180,
+      "curve": [
+        {
+          "pivots": 15,
+          "recall": 0.3,
+          "precision": 1
+        },
+        {
+          "pivots": 30,
+          "recall": 0.7,
+          "precision": 1
+        },
+        {
+          "pivots": 45,
+          "recall": 0.8,
+          "precision": 1
+        },
+        {
+          "pivots": 60,
+          "recall": 0.9,
+          "precision": 1
+        },
+        {
+          "pivots": 75,
+          "recall": 0.9,
+          "precision": 1
+        },
+        {
+          "pivots": 90,
+          "recall": 0.9,
+          "precision": 1
+        }
+      ],
+      "pivotsTo80": 45,
+      "reappearanceDetected": 2,
+      "reappearanceTotal": 2,
+      "reappearanceFalse": 0,
+      "contradictions": 5,
+      "ms": 1795
+    },
+    {
+      "engine": "v2.0",
+      "seed": 2,
+      "difficulty": 0.3,
+      "seedKind": "shared",
+      "precision": 1,
+      "recall": 0.9,
+      "f1": 0.947,
+      "falseAttribution": [],
+      "plantedAbsorbed": false,
+      "lookalikeAbsorbed": 0,
+      "operatorRecall": 1,
+      "treasuryFound": true,
+      "depositFound": true,
+      "feeCorrect": true,
+      "pivots": 90,
+      "requests": 178,
+      "curve": [
+        {
+          "pivots": 15,
+          "recall": 0.3,
+          "precision": 1
+        },
+        {
+          "pivots": 30,
+          "recall": 0.6,
+          "precision": 1
+        },
+        {
+          "pivots": 45,
+          "recall": 0.8,
+          "precision": 1
+        },
+        {
+          "pivots": 60,
+          "recall": 0.9,
+          "precision": 1
+        },
+        {
+          "pivots": 75,
+          "recall": 0.9,
+          "precision": 1
+        },
+        {
+          "pivots": 90,
+          "recall": 0.9,
+          "precision": 1
+        }
+      ],
+      "pivotsTo80": 45,
+      "reappearanceDetected": 2,
+      "reappearanceTotal": 2,
+      "reappearanceFalse": 0,
+      "contradictions": 6,
+      "ms": 1755
+    },
+    {
+      "engine": "v2.0",
+      "seed": 2,
+      "difficulty": 0.3,
+      "seedKind": "wallet",
+      "precision": 0,
+      "recall": 0,
+      "f1": 0,
+      "falseAttribution": [],
+      "plantedAbsorbed": false,
+      "lookalikeAbsorbed": 0,
+      "operatorRecall": 0,
+      "treasuryFound": true,
+      "depositFound": true,
+      "feeCorrect": true,
+      "pivots": 59,
+      "requests": 244,
+      "curve": [
+        {
+          "pivots": 15,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 30,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 39,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 48,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 57,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 59,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 59,
+          "recall": 0,
+          "precision": 0
+        }
+      ],
+      "pivotsTo80": null,
+      "reappearanceDetected": 0,
+      "reappearanceTotal": 2,
+      "reappearanceFalse": 0,
+      "contradictions": 1,
+      "ms": 298
+    },
+    {
+      "engine": "v2.0",
+      "seed": 2,
+      "difficulty": 0.8,
+      "seedKind": "domain",
+      "precision": 1,
+      "recall": 0.7,
+      "f1": 0.824,
+      "falseAttribution": [],
+      "plantedAbsorbed": false,
+      "lookalikeAbsorbed": 0,
+      "operatorRecall": 1,
+      "treasuryFound": true,
+      "depositFound": false,
+      "feeCorrect": true,
+      "pivots": 90,
+      "requests": 136,
+      "curve": [
+        {
+          "pivots": 15,
+          "recall": 0.1,
+          "precision": 1
+        },
+        {
+          "pivots": 30,
+          "recall": 0.6,
+          "precision": 1
+        },
+        {
+          "pivots": 45,
+          "recall": 0.7,
+          "precision": 1
+        },
+        {
+          "pivots": 60,
+          "recall": 0.7,
+          "precision": 1
+        },
+        {
+          "pivots": 75,
+          "recall": 0.7,
+          "precision": 1
+        },
+        {
+          "pivots": 90,
+          "recall": 0.7,
+          "precision": 1
+        }
+      ],
+      "pivotsTo80": null,
+      "reappearanceDetected": 2,
+      "reappearanceTotal": 2,
+      "reappearanceFalse": 0,
+      "contradictions": 5,
+      "ms": 1621
+    },
+    {
+      "engine": "v2.0",
+      "seed": 2,
+      "difficulty": 0.8,
+      "seedKind": "shared",
+      "precision": 1,
+      "recall": 0.1,
+      "f1": 0.182,
+      "falseAttribution": [],
+      "plantedAbsorbed": false,
+      "lookalikeAbsorbed": 0,
+      "operatorRecall": 0,
+      "treasuryFound": false,
+      "depositFound": false,
+      "feeCorrect": true,
+      "pivots": 6,
+      "requests": 7,
+      "curve": [
+        {
+          "pivots": 6,
+          "recall": 0.1,
+          "precision": 1
+        },
+        {
+          "pivots": 6,
+          "recall": 0.1,
+          "precision": 1
+        }
+      ],
+      "pivotsTo80": null,
+      "reappearanceDetected": 0,
+      "reappearanceTotal": 2,
+      "reappearanceFalse": 0,
+      "contradictions": 0,
+      "ms": 39
+    },
+    {
+      "engine": "v2.0",
+      "seed": 2,
+      "difficulty": 0.8,
+      "seedKind": "wallet",
+      "precision": 0,
+      "recall": 0,
+      "f1": 0,
+      "falseAttribution": [],
+      "plantedAbsorbed": false,
+      "lookalikeAbsorbed": 0,
+      "operatorRecall": 0,
+      "treasuryFound": true,
+      "depositFound": true,
+      "feeCorrect": true,
+      "pivots": 53,
+      "requests": 220,
+      "curve": [
+        {
+          "pivots": 15,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 24,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 36,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 45,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 53,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 53,
+          "recall": 0,
+          "precision": 0
+        }
+      ],
+      "pivotsTo80": null,
+      "reappearanceDetected": 0,
+      "reappearanceTotal": 2,
+      "reappearanceFalse": 0,
+      "contradictions": 1,
+      "ms": 395
+    },
+    {
+      "engine": "v2.0",
+      "seed": 3,
+      "difficulty": 0.3,
+      "seedKind": "domain",
+      "precision": 1,
+      "recall": 0.9,
+      "f1": 0.947,
+      "falseAttribution": [],
+      "plantedAbsorbed": false,
+      "lookalikeAbsorbed": 0,
+      "operatorRecall": 1,
+      "treasuryFound": true,
+      "depositFound": true,
+      "feeCorrect": true,
+      "pivots": 90,
+      "requests": 171,
+      "curve": [
+        {
+          "pivots": 15,
+          "recall": 0.5,
+          "precision": 1
+        },
+        {
+          "pivots": 30,
+          "recall": 0.8,
+          "precision": 1
+        },
+        {
+          "pivots": 45,
+          "recall": 0.9,
+          "precision": 1
+        },
+        {
+          "pivots": 60,
+          "recall": 0.9,
+          "precision": 1
+        },
+        {
+          "pivots": 75,
+          "recall": 0.9,
+          "precision": 1
+        },
+        {
+          "pivots": 90,
+          "recall": 0.9,
+          "precision": 1
+        }
+      ],
+      "pivotsTo80": 30,
+      "reappearanceDetected": 2,
+      "reappearanceTotal": 2,
+      "reappearanceFalse": 0,
+      "contradictions": 6,
+      "ms": 2595
+    },
+    {
+      "engine": "v2.0",
+      "seed": 3,
+      "difficulty": 0.3,
+      "seedKind": "shared",
+      "precision": 1,
+      "recall": 0.8,
+      "f1": 0.889,
+      "falseAttribution": [],
+      "plantedAbsorbed": false,
+      "lookalikeAbsorbed": 0,
+      "operatorRecall": 1,
+      "treasuryFound": true,
+      "depositFound": true,
+      "feeCorrect": true,
+      "pivots": 90,
+      "requests": 180,
+      "curve": [
+        {
+          "pivots": 15,
+          "recall": 0.3,
+          "precision": 1
+        },
+        {
+          "pivots": 30,
+          "recall": 0.3,
+          "precision": 1
+        },
+        {
+          "pivots": 45,
+          "recall": 0.8,
+          "precision": 1
+        },
+        {
+          "pivots": 60,
+          "recall": 0.8,
+          "precision": 1
+        },
+        {
+          "pivots": 75,
+          "recall": 0.8,
+          "precision": 1
+        },
+        {
+          "pivots": 90,
+          "recall": 0.8,
+          "precision": 1
+        }
+      ],
+      "pivotsTo80": 45,
+      "reappearanceDetected": 2,
+      "reappearanceTotal": 2,
+      "reappearanceFalse": 0,
+      "contradictions": 6,
+      "ms": 2085
+    },
+    {
+      "engine": "v2.0",
+      "seed": 3,
+      "difficulty": 0.3,
+      "seedKind": "wallet",
+      "precision": 0,
+      "recall": 0,
+      "f1": 0,
+      "falseAttribution": [],
+      "plantedAbsorbed": false,
+      "lookalikeAbsorbed": 0,
+      "operatorRecall": 0,
+      "treasuryFound": true,
+      "depositFound": true,
+      "feeCorrect": true,
+      "pivots": 65,
+      "requests": 268,
+      "curve": [
+        {
+          "pivots": 15,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 24,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 36,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 45,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 54,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 63,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 65,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 65,
+          "recall": 0,
+          "precision": 0
+        }
+      ],
+      "pivotsTo80": null,
+      "reappearanceDetected": 0,
+      "reappearanceTotal": 2,
+      "reappearanceFalse": 0,
+      "contradictions": 1,
+      "ms": 313
+    },
+    {
+      "engine": "v2.0",
+      "seed": 3,
+      "difficulty": 0.8,
+      "seedKind": "domain",
+      "precision": 1,
+      "recall": 0.9,
+      "f1": 0.947,
+      "falseAttribution": [],
+      "plantedAbsorbed": false,
+      "lookalikeAbsorbed": 0,
+      "operatorRecall": 1,
+      "treasuryFound": true,
+      "depositFound": true,
+      "feeCorrect": true,
+      "pivots": 90,
+      "requests": 160,
+      "curve": [
+        {
+          "pivots": 15,
+          "recall": 0.3,
+          "precision": 1
+        },
+        {
+          "pivots": 30,
+          "recall": 0.6,
+          "precision": 1
+        },
+        {
+          "pivots": 45,
+          "recall": 0.9,
+          "precision": 1
+        },
+        {
+          "pivots": 60,
+          "recall": 0.9,
+          "precision": 1
+        },
+        {
+          "pivots": 75,
+          "recall": 0.9,
+          "precision": 1
+        },
+        {
+          "pivots": 90,
+          "recall": 0.9,
+          "precision": 1
+        }
+      ],
+      "pivotsTo80": 45,
+      "reappearanceDetected": 2,
+      "reappearanceTotal": 2,
+      "reappearanceFalse": 0,
+      "contradictions": 6,
+      "ms": 1963
+    },
+    {
+      "engine": "v2.0",
+      "seed": 3,
+      "difficulty": 0.8,
+      "seedKind": "shared",
+      "precision": 1,
+      "recall": 0.7,
+      "f1": 0.824,
+      "falseAttribution": [],
+      "plantedAbsorbed": false,
+      "lookalikeAbsorbed": 0,
+      "operatorRecall": 1,
+      "treasuryFound": true,
+      "depositFound": true,
+      "feeCorrect": true,
+      "pivots": 90,
+      "requests": 155,
+      "curve": [
+        {
+          "pivots": 15,
+          "recall": 0.3,
+          "precision": 1
+        },
+        {
+          "pivots": 30,
+          "recall": 0.4,
+          "precision": 1
+        },
+        {
+          "pivots": 45,
+          "recall": 0.7,
+          "precision": 1
+        },
+        {
+          "pivots": 60,
+          "recall": 0.7,
+          "precision": 1
+        },
+        {
+          "pivots": 75,
+          "recall": 0.7,
+          "precision": 1
+        },
+        {
+          "pivots": 90,
+          "recall": 0.7,
+          "precision": 1
+        }
+      ],
+      "pivotsTo80": null,
+      "reappearanceDetected": 2,
+      "reappearanceTotal": 2,
+      "reappearanceFalse": 0,
+      "contradictions": 6,
+      "ms": 1781
+    },
+    {
+      "engine": "v2.0",
+      "seed": 3,
+      "difficulty": 0.8,
+      "seedKind": "wallet",
+      "precision": 0,
+      "recall": 0,
+      "f1": 0,
+      "falseAttribution": [],
+      "plantedAbsorbed": false,
+      "lookalikeAbsorbed": 0,
+      "operatorRecall": 0,
+      "treasuryFound": true,
+      "depositFound": true,
+      "feeCorrect": true,
+      "pivots": 65,
+      "requests": 268,
+      "curve": [
+        {
+          "pivots": 15,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 24,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 36,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 45,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 54,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 63,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 65,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 65,
+          "recall": 0,
+          "precision": 0
+        }
+      ],
+      "pivotsTo80": null,
+      "reappearanceDetected": 0,
+      "reappearanceTotal": 2,
+      "reappearanceFalse": 0,
+      "contradictions": 1,
+      "ms": 318
+    },
+    {
+      "engine": "v2.0",
+      "seed": 4,
+      "difficulty": 0.3,
+      "seedKind": "domain",
+      "precision": 1,
+      "recall": 0.8,
+      "f1": 0.889,
+      "falseAttribution": [],
+      "plantedAbsorbed": false,
+      "lookalikeAbsorbed": 0,
+      "operatorRecall": 1,
+      "treasuryFound": true,
+      "depositFound": true,
+      "feeCorrect": true,
+      "pivots": 90,
+      "requests": 172,
+      "curve": [
+        {
+          "pivots": 15,
+          "recall": 0.2,
+          "precision": 1
+        },
+        {
+          "pivots": 30,
+          "recall": 0.4,
+          "precision": 1
+        },
+        {
+          "pivots": 45,
+          "recall": 0.8,
+          "precision": 1
+        },
+        {
+          "pivots": 60,
+          "recall": 0.8,
+          "precision": 1
+        },
+        {
+          "pivots": 75,
+          "recall": 0.8,
+          "precision": 1
+        },
+        {
+          "pivots": 90,
+          "recall": 0.8,
+          "precision": 1
+        }
+      ],
+      "pivotsTo80": 45,
+      "reappearanceDetected": 2,
+      "reappearanceTotal": 2,
+      "reappearanceFalse": 0,
+      "contradictions": 6,
+      "ms": 1765
+    },
+    {
+      "engine": "v2.0",
+      "seed": 4,
+      "difficulty": 0.3,
+      "seedKind": "shared",
+      "precision": 1,
+      "recall": 0.1,
+      "f1": 0.182,
+      "falseAttribution": [],
+      "plantedAbsorbed": false,
+      "lookalikeAbsorbed": 0,
+      "operatorRecall": 0,
+      "treasuryFound": false,
+      "depositFound": false,
+      "feeCorrect": true,
+      "pivots": 5,
+      "requests": 5,
+      "curve": [
+        {
+          "pivots": 5,
+          "recall": 0.1,
+          "precision": 1
+        },
+        {
+          "pivots": 5,
+          "recall": 0.1,
+          "precision": 1
+        }
+      ],
+      "pivotsTo80": null,
+      "reappearanceDetected": 0,
+      "reappearanceTotal": 2,
+      "reappearanceFalse": 0,
+      "contradictions": 0,
+      "ms": 27
+    },
+    {
+      "engine": "v2.0",
+      "seed": 4,
+      "difficulty": 0.3,
+      "seedKind": "wallet",
+      "precision": 0,
+      "recall": 0,
+      "f1": 0,
+      "falseAttribution": [],
+      "plantedAbsorbed": false,
+      "lookalikeAbsorbed": 0,
+      "operatorRecall": 0,
+      "treasuryFound": true,
+      "depositFound": true,
+      "feeCorrect": true,
+      "pivots": 63,
+      "requests": 260,
+      "curve": [
+        {
+          "pivots": 15,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 24,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 39,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 48,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 57,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 63,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 63,
+          "recall": 0,
+          "precision": 0
+        }
+      ],
+      "pivotsTo80": null,
+      "reappearanceDetected": 0,
+      "reappearanceTotal": 2,
+      "reappearanceFalse": 0,
+      "contradictions": 1,
+      "ms": 351
+    },
+    {
+      "engine": "v2.0",
+      "seed": 4,
+      "difficulty": 0.8,
+      "seedKind": "domain",
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "falseAttribution": [],
+      "plantedAbsorbed": false,
+      "lookalikeAbsorbed": 0,
+      "operatorRecall": 1,
+      "treasuryFound": true,
+      "depositFound": true,
+      "feeCorrect": true,
+      "pivots": 90,
+      "requests": 161,
+      "curve": [
+        {
+          "pivots": 15,
+          "recall": 0.2,
+          "precision": 1
+        },
+        {
+          "pivots": 30,
+          "recall": 0.5,
+          "precision": 1
+        },
+        {
+          "pivots": 45,
+          "recall": 0.8,
+          "precision": 1
+        },
+        {
+          "pivots": 60,
+          "recall": 1,
+          "precision": 1
+        },
+        {
+          "pivots": 75,
+          "recall": 1,
+          "precision": 1
+        },
+        {
+          "pivots": 90,
+          "recall": 1,
+          "precision": 1
+        }
+      ],
+      "pivotsTo80": 45,
+      "reappearanceDetected": 2,
+      "reappearanceTotal": 2,
+      "reappearanceFalse": 0,
+      "contradictions": 4,
+      "ms": 1542
+    },
+    {
+      "engine": "v2.0",
+      "seed": 4,
+      "difficulty": 0.8,
+      "seedKind": "shared",
+      "precision": 1,
+      "recall": 1,
+      "f1": 1,
+      "falseAttribution": [],
+      "plantedAbsorbed": false,
+      "lookalikeAbsorbed": 0,
+      "operatorRecall": 1,
+      "treasuryFound": true,
+      "depositFound": true,
+      "feeCorrect": true,
+      "pivots": 90,
+      "requests": 157,
+      "curve": [
+        {
+          "pivots": 15,
+          "recall": 0.2,
+          "precision": 1
+        },
+        {
+          "pivots": 30,
+          "recall": 0.5,
+          "precision": 1
+        },
+        {
+          "pivots": 45,
+          "recall": 0.8,
+          "precision": 1
+        },
+        {
+          "pivots": 60,
+          "recall": 0.8,
+          "precision": 1
+        },
+        {
+          "pivots": 75,
+          "recall": 0.8,
+          "precision": 1
+        },
+        {
+          "pivots": 90,
+          "recall": 1,
+          "precision": 1
+        }
+      ],
+      "pivotsTo80": 45,
+      "reappearanceDetected": 2,
+      "reappearanceTotal": 2,
+      "reappearanceFalse": 0,
+      "contradictions": 6,
+      "ms": 1727
+    },
+    {
+      "engine": "v2.0",
+      "seed": 4,
+      "difficulty": 0.8,
+      "seedKind": "wallet",
+      "precision": 0,
+      "recall": 0,
+      "f1": 0,
+      "falseAttribution": [],
+      "plantedAbsorbed": false,
+      "lookalikeAbsorbed": 0,
+      "operatorRecall": 0,
+      "treasuryFound": true,
+      "depositFound": true,
+      "feeCorrect": true,
+      "pivots": 63,
+      "requests": 260,
+      "curve": [
+        {
+          "pivots": 15,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 27,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 36,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 45,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 54,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 63,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 63,
+          "recall": 0,
+          "precision": 0
+        }
+      ],
+      "pivotsTo80": null,
+      "reappearanceDetected": 0,
+      "reappearanceTotal": 2,
+      "reappearanceFalse": 0,
+      "contradictions": 1,
+      "ms": 331
+    },
+    {
+      "engine": "v2.0",
+      "seed": 5,
+      "difficulty": 0.3,
+      "seedKind": "domain",
+      "precision": 1,
+      "recall": 0.9,
+      "f1": 0.947,
+      "falseAttribution": [],
+      "plantedAbsorbed": false,
+      "lookalikeAbsorbed": 0,
+      "operatorRecall": 1,
+      "treasuryFound": true,
+      "depositFound": true,
+      "feeCorrect": true,
+      "pivots": 90,
+      "requests": 178,
+      "curve": [
+        {
+          "pivots": 15,
+          "recall": 0.4,
+          "precision": 1
+        },
+        {
+          "pivots": 30,
+          "recall": 0.7,
+          "precision": 1
+        },
+        {
+          "pivots": 45,
+          "recall": 0.8,
+          "precision": 1
+        },
+        {
+          "pivots": 60,
+          "recall": 0.9,
+          "precision": 1
+        },
+        {
+          "pivots": 75,
+          "recall": 0.9,
+          "precision": 1
+        },
+        {
+          "pivots": 90,
+          "recall": 0.9,
+          "precision": 1
+        }
+      ],
+      "pivotsTo80": 45,
+      "reappearanceDetected": 2,
+      "reappearanceTotal": 2,
+      "reappearanceFalse": 0,
+      "contradictions": 6,
+      "ms": 1832
+    },
+    {
+      "engine": "v2.0",
+      "seed": 5,
+      "difficulty": 0.3,
+      "seedKind": "shared",
+      "precision": 1,
+      "recall": 0.9,
+      "f1": 0.947,
+      "falseAttribution": [],
+      "plantedAbsorbed": false,
+      "lookalikeAbsorbed": 0,
+      "operatorRecall": 1,
+      "treasuryFound": true,
+      "depositFound": true,
+      "feeCorrect": true,
+      "pivots": 90,
+      "requests": 178,
+      "curve": [
+        {
+          "pivots": 15,
+          "recall": 0.4,
+          "precision": 1
+        },
+        {
+          "pivots": 30,
+          "recall": 0.7,
+          "precision": 1
+        },
+        {
+          "pivots": 45,
+          "recall": 0.8,
+          "precision": 1
+        },
+        {
+          "pivots": 60,
+          "recall": 0.9,
+          "precision": 1
+        },
+        {
+          "pivots": 75,
+          "recall": 0.9,
+          "precision": 1
+        },
+        {
+          "pivots": 90,
+          "recall": 0.9,
+          "precision": 1
+        }
+      ],
+      "pivotsTo80": 45,
+      "reappearanceDetected": 2,
+      "reappearanceTotal": 2,
+      "reappearanceFalse": 0,
+      "contradictions": 6,
+      "ms": 1863
+    },
+    {
+      "engine": "v2.0",
+      "seed": 5,
+      "difficulty": 0.3,
+      "seedKind": "wallet",
+      "precision": 0,
+      "recall": 0,
+      "f1": 0,
+      "falseAttribution": [],
+      "plantedAbsorbed": false,
+      "lookalikeAbsorbed": 0,
+      "operatorRecall": 0,
+      "treasuryFound": true,
+      "depositFound": true,
+      "feeCorrect": true,
+      "pivots": 63,
+      "requests": 260,
+      "curve": [
+        {
+          "pivots": 15,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 27,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 36,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 45,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 54,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 63,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 63,
+          "recall": 0,
+          "precision": 0
+        }
+      ],
+      "pivotsTo80": null,
+      "reappearanceDetected": 0,
+      "reappearanceTotal": 2,
+      "reappearanceFalse": 0,
+      "contradictions": 1,
+      "ms": 373
+    },
+    {
+      "engine": "v2.0",
+      "seed": 5,
+      "difficulty": 0.8,
+      "seedKind": "domain",
+      "precision": 1,
+      "recall": 0.9,
+      "f1": 0.947,
+      "falseAttribution": [],
+      "plantedAbsorbed": false,
+      "lookalikeAbsorbed": 0,
+      "operatorRecall": 1,
+      "treasuryFound": true,
+      "depositFound": true,
+      "feeCorrect": true,
+      "pivots": 90,
+      "requests": 169,
+      "curve": [
+        {
+          "pivots": 15,
+          "recall": 0.2,
+          "precision": 1
+        },
+        {
+          "pivots": 30,
+          "recall": 0.6,
+          "precision": 1
+        },
+        {
+          "pivots": 45,
+          "recall": 0.9,
+          "precision": 1
+        },
+        {
+          "pivots": 60,
+          "recall": 0.9,
+          "precision": 1
+        },
+        {
+          "pivots": 75,
+          "recall": 0.9,
+          "precision": 1
+        },
+        {
+          "pivots": 90,
+          "recall": 0.9,
+          "precision": 1
+        }
+      ],
+      "pivotsTo80": 45,
+      "reappearanceDetected": 2,
+      "reappearanceTotal": 2,
+      "reappearanceFalse": 0,
+      "contradictions": 6,
+      "ms": 1836
+    },
+    {
+      "engine": "v2.0",
+      "seed": 5,
+      "difficulty": 0.8,
+      "seedKind": "shared",
+      "precision": 1,
+      "recall": 0.9,
+      "f1": 0.947,
+      "falseAttribution": [],
+      "plantedAbsorbed": false,
+      "lookalikeAbsorbed": 0,
+      "operatorRecall": 1,
+      "treasuryFound": true,
+      "depositFound": true,
+      "feeCorrect": true,
+      "pivots": 90,
+      "requests": 163,
+      "curve": [
+        {
+          "pivots": 15,
+          "recall": 0.3,
+          "precision": 1
+        },
+        {
+          "pivots": 30,
+          "recall": 0.3,
+          "precision": 1
+        },
+        {
+          "pivots": 45,
+          "recall": 0.9,
+          "precision": 1
+        },
+        {
+          "pivots": 60,
+          "recall": 0.9,
+          "precision": 1
+        },
+        {
+          "pivots": 75,
+          "recall": 0.9,
+          "precision": 1
+        },
+        {
+          "pivots": 90,
+          "recall": 0.9,
+          "precision": 1
+        }
+      ],
+      "pivotsTo80": 45,
+      "reappearanceDetected": 2,
+      "reappearanceTotal": 2,
+      "reappearanceFalse": 0,
+      "contradictions": 6,
+      "ms": 1549
+    },
+    {
+      "engine": "v2.0",
+      "seed": 5,
+      "difficulty": 0.8,
+      "seedKind": "wallet",
+      "precision": 0,
+      "recall": 0,
+      "f1": 0,
+      "falseAttribution": [],
+      "plantedAbsorbed": false,
+      "lookalikeAbsorbed": 0,
+      "operatorRecall": 0,
+      "treasuryFound": true,
+      "depositFound": true,
+      "feeCorrect": true,
+      "pivots": 59,
+      "requests": 244,
+      "curve": [
+        {
+          "pivots": 15,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 27,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 36,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 45,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 54,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 59,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 59,
+          "recall": 0,
+          "precision": 0
+        }
+      ],
+      "pivotsTo80": null,
+      "reappearanceDetected": 0,
+      "reappearanceTotal": 2,
+      "reappearanceFalse": 0,
+      "contradictions": 1,
+      "ms": 391
+    },
+    {
+      "engine": "v2.0",
+      "seed": 6,
+      "difficulty": 0.3,
+      "seedKind": "domain",
+      "precision": 1,
+      "recall": 0.8,
+      "f1": 0.889,
+      "falseAttribution": [],
+      "plantedAbsorbed": false,
+      "lookalikeAbsorbed": 0,
+      "operatorRecall": 1,
+      "treasuryFound": true,
+      "depositFound": true,
+      "feeCorrect": true,
+      "pivots": 90,
+      "requests": 169,
+      "curve": [
+        {
+          "pivots": 15,
+          "recall": 0.3,
+          "precision": 1
+        },
+        {
+          "pivots": 30,
+          "recall": 0.5,
+          "precision": 1
+        },
+        {
+          "pivots": 45,
+          "recall": 0.8,
+          "precision": 1
+        },
+        {
+          "pivots": 60,
+          "recall": 0.8,
+          "precision": 1
+        },
+        {
+          "pivots": 75,
+          "recall": 0.8,
+          "precision": 1
+        },
+        {
+          "pivots": 90,
+          "recall": 0.8,
+          "precision": 1
+        }
+      ],
+      "pivotsTo80": 45,
+      "reappearanceDetected": 2,
+      "reappearanceTotal": 2,
+      "reappearanceFalse": 0,
+      "contradictions": 5,
+      "ms": 1359
+    },
+    {
+      "engine": "v2.0",
+      "seed": 6,
+      "difficulty": 0.3,
+      "seedKind": "shared",
+      "precision": 1,
+      "recall": 0.8,
+      "f1": 0.889,
+      "falseAttribution": [],
+      "plantedAbsorbed": false,
+      "lookalikeAbsorbed": 0,
+      "operatorRecall": 1,
+      "treasuryFound": true,
+      "depositFound": true,
+      "feeCorrect": true,
+      "pivots": 90,
+      "requests": 167,
+      "curve": [
+        {
+          "pivots": 15,
+          "recall": 0.3,
+          "precision": 1
+        },
+        {
+          "pivots": 30,
+          "recall": 0.3,
+          "precision": 1
+        },
+        {
+          "pivots": 45,
+          "recall": 0.5,
+          "precision": 1
+        },
+        {
+          "pivots": 60,
+          "recall": 0.8,
+          "precision": 1
+        },
+        {
+          "pivots": 75,
+          "recall": 0.8,
+          "precision": 1
+        },
+        {
+          "pivots": 90,
+          "recall": 0.8,
+          "precision": 1
+        }
+      ],
+      "pivotsTo80": 60,
+      "reappearanceDetected": 2,
+      "reappearanceTotal": 2,
+      "reappearanceFalse": 0,
+      "contradictions": 5,
+      "ms": 1490
+    },
+    {
+      "engine": "v2.0",
+      "seed": 6,
+      "difficulty": 0.3,
+      "seedKind": "wallet",
+      "precision": 0,
+      "recall": 0,
+      "f1": 0,
+      "falseAttribution": [],
+      "plantedAbsorbed": false,
+      "lookalikeAbsorbed": 0,
+      "operatorRecall": 0,
+      "treasuryFound": true,
+      "depositFound": true,
+      "feeCorrect": true,
+      "pivots": 63,
+      "requests": 260,
+      "curve": [
+        {
+          "pivots": 15,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 30,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 39,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 48,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 57,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 63,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 63,
+          "recall": 0,
+          "precision": 0
+        }
+      ],
+      "pivotsTo80": null,
+      "reappearanceDetected": 0,
+      "reappearanceTotal": 2,
+      "reappearanceFalse": 0,
+      "contradictions": 1,
+      "ms": 279
+    },
+    {
+      "engine": "v2.0",
+      "seed": 6,
+      "difficulty": 0.8,
+      "seedKind": "domain",
+      "precision": 1,
+      "recall": 0.7,
+      "f1": 0.824,
+      "falseAttribution": [],
+      "plantedAbsorbed": false,
+      "lookalikeAbsorbed": 0,
+      "operatorRecall": 1,
+      "treasuryFound": true,
+      "depositFound": false,
+      "feeCorrect": true,
+      "pivots": 90,
+      "requests": 131,
+      "curve": [
+        {
+          "pivots": 15,
+          "recall": 0.1,
+          "precision": 1
+        },
+        {
+          "pivots": 30,
+          "recall": 0.6,
+          "precision": 1
+        },
+        {
+          "pivots": 45,
+          "recall": 0.7,
+          "precision": 1
+        },
+        {
+          "pivots": 60,
+          "recall": 0.7,
+          "precision": 1
+        },
+        {
+          "pivots": 75,
+          "recall": 0.7,
+          "precision": 1
+        },
+        {
+          "pivots": 90,
+          "recall": 0.7,
+          "precision": 1
+        }
+      ],
+      "pivotsTo80": null,
+      "reappearanceDetected": 2,
+      "reappearanceTotal": 2,
+      "reappearanceFalse": 0,
+      "contradictions": 5,
+      "ms": 1459
+    },
+    {
+      "engine": "v2.0",
+      "seed": 6,
+      "difficulty": 0.8,
+      "seedKind": "shared",
+      "precision": 1,
+      "recall": 0.1,
+      "f1": 0.182,
+      "falseAttribution": [],
+      "plantedAbsorbed": false,
+      "lookalikeAbsorbed": 0,
+      "operatorRecall": 0,
+      "treasuryFound": true,
+      "depositFound": true,
+      "feeCorrect": true,
+      "pivots": 90,
+      "requests": 280,
+      "curve": [
+        {
+          "pivots": 15,
+          "recall": 0.1,
+          "precision": 1
+        },
+        {
+          "pivots": 30,
+          "recall": 0.1,
+          "precision": 1
+        },
+        {
+          "pivots": 45,
+          "recall": 0.1,
+          "precision": 1
+        },
+        {
+          "pivots": 54,
+          "recall": 0.1,
+          "precision": 1
+        },
+        {
+          "pivots": 63,
+          "recall": 0.1,
+          "precision": 1
+        },
+        {
+          "pivots": 72,
+          "recall": 0.1,
+          "precision": 1
+        },
+        {
+          "pivots": 81,
+          "recall": 0.1,
+          "precision": 1
+        },
+        {
+          "pivots": 90,
+          "recall": 0.1,
+          "precision": 1
+        }
+      ],
+      "pivotsTo80": null,
+      "reappearanceDetected": 0,
+      "reappearanceTotal": 2,
+      "reappearanceFalse": 0,
+      "contradictions": 3,
+      "ms": 600
+    },
+    {
+      "engine": "v2.0",
+      "seed": 6,
+      "difficulty": 0.8,
+      "seedKind": "wallet",
+      "precision": 0,
+      "recall": 0,
+      "f1": 0,
+      "falseAttribution": [],
+      "plantedAbsorbed": false,
+      "lookalikeAbsorbed": 0,
+      "operatorRecall": 0,
+      "treasuryFound": true,
+      "depositFound": true,
+      "feeCorrect": true,
+      "pivots": 61,
+      "requests": 252,
+      "curve": [
+        {
+          "pivots": 15,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 24,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 36,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 45,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 54,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 61,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 61,
+          "recall": 0,
+          "precision": 0
+        }
+      ],
+      "pivotsTo80": null,
+      "reappearanceDetected": 0,
+      "reappearanceTotal": 2,
+      "reappearanceFalse": 0,
+      "contradictions": 1,
+      "ms": 222
+    },
+    {
+      "engine": "v2.0",
+      "seed": 7,
+      "difficulty": 0.3,
+      "seedKind": "domain",
+      "precision": 1,
+      "recall": 0.8,
+      "f1": 0.889,
+      "falseAttribution": [],
+      "plantedAbsorbed": false,
+      "lookalikeAbsorbed": 0,
+      "operatorRecall": 1,
+      "treasuryFound": true,
+      "depositFound": true,
+      "feeCorrect": true,
+      "pivots": 90,
+      "requests": 178,
+      "curve": [
+        {
+          "pivots": 15,
+          "recall": 0.3,
+          "precision": 1
+        },
+        {
+          "pivots": 30,
+          "recall": 0.6,
+          "precision": 1
+        },
+        {
+          "pivots": 45,
+          "recall": 0.7,
+          "precision": 1
+        },
+        {
+          "pivots": 60,
+          "recall": 0.8,
+          "precision": 1
+        },
+        {
+          "pivots": 75,
+          "recall": 0.8,
+          "precision": 1
+        },
+        {
+          "pivots": 90,
+          "recall": 0.8,
+          "precision": 1
+        }
+      ],
+      "pivotsTo80": 60,
+      "reappearanceDetected": 2,
+      "reappearanceTotal": 2,
+      "reappearanceFalse": 0,
+      "contradictions": 6,
+      "ms": 1529
+    },
+    {
+      "engine": "v2.0",
+      "seed": 7,
+      "difficulty": 0.3,
+      "seedKind": "shared",
+      "precision": 1,
+      "recall": 0.8,
+      "f1": 0.889,
+      "falseAttribution": [],
+      "plantedAbsorbed": false,
+      "lookalikeAbsorbed": 0,
+      "operatorRecall": 1,
+      "treasuryFound": true,
+      "depositFound": true,
+      "feeCorrect": true,
+      "pivots": 90,
+      "requests": 178,
+      "curve": [
+        {
+          "pivots": 15,
+          "recall": 0.3,
+          "precision": 1
+        },
+        {
+          "pivots": 30,
+          "recall": 0.6,
+          "precision": 1
+        },
+        {
+          "pivots": 45,
+          "recall": 0.7,
+          "precision": 1
+        },
+        {
+          "pivots": 60,
+          "recall": 0.8,
+          "precision": 1
+        },
+        {
+          "pivots": 75,
+          "recall": 0.8,
+          "precision": 1
+        },
+        {
+          "pivots": 90,
+          "recall": 0.8,
+          "precision": 1
+        }
+      ],
+      "pivotsTo80": 60,
+      "reappearanceDetected": 2,
+      "reappearanceTotal": 2,
+      "reappearanceFalse": 0,
+      "contradictions": 6,
+      "ms": 1414
+    },
+    {
+      "engine": "v2.0",
+      "seed": 7,
+      "difficulty": 0.3,
+      "seedKind": "wallet",
+      "precision": 0,
+      "recall": 0,
+      "f1": 0,
+      "falseAttribution": [],
+      "plantedAbsorbed": false,
+      "lookalikeAbsorbed": 0,
+      "operatorRecall": 0,
+      "treasuryFound": true,
+      "depositFound": true,
+      "feeCorrect": true,
+      "pivots": 57,
+      "requests": 236,
+      "curve": [
+        {
+          "pivots": 15,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 27,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 36,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 45,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 54,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 57,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 57,
+          "recall": 0,
+          "precision": 0
+        }
+      ],
+      "pivotsTo80": null,
+      "reappearanceDetected": 0,
+      "reappearanceTotal": 2,
+      "reappearanceFalse": 0,
+      "contradictions": 1,
+      "ms": 273
+    },
+    {
+      "engine": "v2.0",
+      "seed": 7,
+      "difficulty": 0.8,
+      "seedKind": "domain",
+      "precision": 1,
+      "recall": 0.6,
+      "f1": 0.75,
+      "falseAttribution": [],
+      "plantedAbsorbed": false,
+      "lookalikeAbsorbed": 0,
+      "operatorRecall": 1,
+      "treasuryFound": true,
+      "depositFound": true,
+      "feeCorrect": true,
+      "pivots": 90,
+      "requests": 251,
+      "curve": [
+        {
+          "pivots": 15,
+          "recall": 0.3,
+          "precision": 1
+        },
+        {
+          "pivots": 30,
+          "recall": 0.3,
+          "precision": 1
+        },
+        {
+          "pivots": 45,
+          "recall": 0.6,
+          "precision": 1
+        },
+        {
+          "pivots": 60,
+          "recall": 0.6,
+          "precision": 1
+        },
+        {
+          "pivots": 69,
+          "recall": 0.6,
+          "precision": 1
+        },
+        {
+          "pivots": 78,
+          "recall": 0.6,
+          "precision": 1
+        },
+        {
+          "pivots": 90,
+          "recall": 0.6,
+          "precision": 1
+        }
+      ],
+      "pivotsTo80": null,
+      "reappearanceDetected": 2,
+      "reappearanceTotal": 2,
+      "reappearanceFalse": 0,
+      "contradictions": 6,
+      "ms": 1170
+    },
+    {
+      "engine": "v2.0",
+      "seed": 7,
+      "difficulty": 0.8,
+      "seedKind": "shared",
+      "precision": 1,
+      "recall": 0.6,
+      "f1": 0.75,
+      "falseAttribution": [],
+      "plantedAbsorbed": false,
+      "lookalikeAbsorbed": 0,
+      "operatorRecall": 1,
+      "treasuryFound": true,
+      "depositFound": true,
+      "feeCorrect": true,
+      "pivots": 90,
+      "requests": 251,
+      "curve": [
+        {
+          "pivots": 15,
+          "recall": 0.3,
+          "precision": 1
+        },
+        {
+          "pivots": 30,
+          "recall": 0.3,
+          "precision": 1
+        },
+        {
+          "pivots": 45,
+          "recall": 0.6,
+          "precision": 1
+        },
+        {
+          "pivots": 60,
+          "recall": 0.6,
+          "precision": 1
+        },
+        {
+          "pivots": 69,
+          "recall": 0.6,
+          "precision": 1
+        },
+        {
+          "pivots": 78,
+          "recall": 0.6,
+          "precision": 1
+        },
+        {
+          "pivots": 90,
+          "recall": 0.6,
+          "precision": 1
+        }
+      ],
+      "pivotsTo80": null,
+      "reappearanceDetected": 2,
+      "reappearanceTotal": 2,
+      "reappearanceFalse": 0,
+      "contradictions": 6,
+      "ms": 1352
+    },
+    {
+      "engine": "v2.0",
+      "seed": 7,
+      "difficulty": 0.8,
+      "seedKind": "wallet",
+      "precision": 0,
+      "recall": 0,
+      "f1": 0,
+      "falseAttribution": [],
+      "plantedAbsorbed": false,
+      "lookalikeAbsorbed": 0,
+      "operatorRecall": 0,
+      "treasuryFound": true,
+      "depositFound": true,
+      "feeCorrect": true,
+      "pivots": 57,
+      "requests": 236,
+      "curve": [
+        {
+          "pivots": 15,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 30,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 39,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 48,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 57,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 57,
+          "recall": 0,
+          "precision": 0
+        }
+      ],
+      "pivotsTo80": null,
+      "reappearanceDetected": 0,
+      "reappearanceTotal": 2,
+      "reappearanceFalse": 0,
+      "contradictions": 1,
+      "ms": 325
+    },
+    {
+      "engine": "v2.0",
+      "seed": 8,
+      "difficulty": 0.3,
+      "seedKind": "domain",
+      "precision": 1,
+      "recall": 0.7,
+      "f1": 0.824,
+      "falseAttribution": [],
+      "plantedAbsorbed": false,
+      "lookalikeAbsorbed": 0,
+      "operatorRecall": 1,
+      "treasuryFound": true,
+      "depositFound": false,
+      "feeCorrect": true,
+      "pivots": 90,
+      "requests": 136,
+      "curve": [
+        {
+          "pivots": 15,
+          "recall": 0.1,
+          "precision": 1
+        },
+        {
+          "pivots": 30,
+          "recall": 0.6,
+          "precision": 1
+        },
+        {
+          "pivots": 45,
+          "recall": 0.7,
+          "precision": 1
+        },
+        {
+          "pivots": 60,
+          "recall": 0.7,
+          "precision": 1
+        },
+        {
+          "pivots": 75,
+          "recall": 0.7,
+          "precision": 1
+        },
+        {
+          "pivots": 90,
+          "recall": 0.7,
+          "precision": 1
+        }
+      ],
+      "pivotsTo80": null,
+      "reappearanceDetected": 2,
+      "reappearanceTotal": 2,
+      "reappearanceFalse": 0,
+      "contradictions": 6,
+      "ms": 1377
+    },
+    {
+      "engine": "v2.0",
+      "seed": 8,
+      "difficulty": 0.3,
+      "seedKind": "shared",
+      "precision": 1,
+      "recall": 0.1,
+      "f1": 0.182,
+      "falseAttribution": [],
+      "plantedAbsorbed": false,
+      "lookalikeAbsorbed": 0,
+      "operatorRecall": 0,
+      "treasuryFound": true,
+      "depositFound": true,
+      "feeCorrect": true,
+      "pivots": 90,
+      "requests": 265,
+      "curve": [
+        {
+          "pivots": 15,
+          "recall": 0.1,
+          "precision": 1
+        },
+        {
+          "pivots": 30,
+          "recall": 0.1,
+          "precision": 1
+        },
+        {
+          "pivots": 39,
+          "recall": 0.1,
+          "precision": 1
+        },
+        {
+          "pivots": 51,
+          "recall": 0.1,
+          "precision": 1
+        },
+        {
+          "pivots": 60,
+          "recall": 0.1,
+          "precision": 1
+        },
+        {
+          "pivots": 69,
+          "recall": 0.1,
+          "precision": 1
+        },
+        {
+          "pivots": 78,
+          "recall": 0.1,
+          "precision": 1
+        },
+        {
+          "pivots": 87,
+          "recall": 0.1,
+          "precision": 1
+        },
+        {
+          "pivots": 90,
+          "recall": 0.1,
+          "precision": 1
+        }
+      ],
+      "pivotsTo80": null,
+      "reappearanceDetected": 0,
+      "reappearanceTotal": 2,
+      "reappearanceFalse": 0,
+      "contradictions": 3,
+      "ms": 687
+    },
+    {
+      "engine": "v2.0",
+      "seed": 8,
+      "difficulty": 0.3,
+      "seedKind": "wallet",
+      "precision": 0,
+      "recall": 0,
+      "f1": 0,
+      "falseAttribution": [],
+      "plantedAbsorbed": false,
+      "lookalikeAbsorbed": 0,
+      "operatorRecall": 0,
+      "treasuryFound": true,
+      "depositFound": true,
+      "feeCorrect": true,
+      "pivots": 57,
+      "requests": 236,
+      "curve": [
+        {
+          "pivots": 15,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 24,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 36,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 45,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 54,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 57,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 57,
+          "recall": 0,
+          "precision": 0
+        }
+      ],
+      "pivotsTo80": null,
+      "reappearanceDetected": 0,
+      "reappearanceTotal": 2,
+      "reappearanceFalse": 0,
+      "contradictions": 1,
+      "ms": 286
+    },
+    {
+      "engine": "v2.0",
+      "seed": 8,
+      "difficulty": 0.8,
+      "seedKind": "domain",
+      "precision": 1,
+      "recall": 0.1,
+      "f1": 0.182,
+      "falseAttribution": [],
+      "plantedAbsorbed": false,
+      "lookalikeAbsorbed": 0,
+      "operatorRecall": 0,
+      "treasuryFound": true,
+      "depositFound": true,
+      "feeCorrect": true,
+      "pivots": 90,
+      "requests": 265,
+      "curve": [
+        {
+          "pivots": 15,
+          "recall": 0.1,
+          "precision": 1
+        },
+        {
+          "pivots": 30,
+          "recall": 0.1,
+          "precision": 1
+        },
+        {
+          "pivots": 45,
+          "recall": 0.1,
+          "precision": 1
+        },
+        {
+          "pivots": 54,
+          "recall": 0.1,
+          "precision": 1
+        },
+        {
+          "pivots": 63,
+          "recall": 0.1,
+          "precision": 1
+        },
+        {
+          "pivots": 72,
+          "recall": 0.1,
+          "precision": 1
+        },
+        {
+          "pivots": 81,
+          "recall": 0.1,
+          "precision": 1
+        },
+        {
+          "pivots": 90,
+          "recall": 0.1,
+          "precision": 1
+        }
+      ],
+      "pivotsTo80": null,
+      "reappearanceDetected": 0,
+      "reappearanceTotal": 2,
+      "reappearanceFalse": 0,
+      "contradictions": 3,
+      "ms": 742
+    },
+    {
+      "engine": "v2.0",
+      "seed": 8,
+      "difficulty": 0.8,
+      "seedKind": "shared",
+      "precision": 1,
+      "recall": 0.1,
+      "f1": 0.182,
+      "falseAttribution": [],
+      "plantedAbsorbed": false,
+      "lookalikeAbsorbed": 0,
+      "operatorRecall": 0,
+      "treasuryFound": true,
+      "depositFound": true,
+      "feeCorrect": true,
+      "pivots": 90,
+      "requests": 265,
+      "curve": [
+        {
+          "pivots": 15,
+          "recall": 0.1,
+          "precision": 1
+        },
+        {
+          "pivots": 30,
+          "recall": 0.1,
+          "precision": 1
+        },
+        {
+          "pivots": 45,
+          "recall": 0.1,
+          "precision": 1
+        },
+        {
+          "pivots": 54,
+          "recall": 0.1,
+          "precision": 1
+        },
+        {
+          "pivots": 63,
+          "recall": 0.1,
+          "precision": 1
+        },
+        {
+          "pivots": 72,
+          "recall": 0.1,
+          "precision": 1
+        },
+        {
+          "pivots": 81,
+          "recall": 0.1,
+          "precision": 1
+        },
+        {
+          "pivots": 90,
+          "recall": 0.1,
+          "precision": 1
+        }
+      ],
+      "pivotsTo80": null,
+      "reappearanceDetected": 0,
+      "reappearanceTotal": 2,
+      "reappearanceFalse": 0,
+      "contradictions": 3,
+      "ms": 615
+    },
+    {
+      "engine": "v2.0",
+      "seed": 8,
+      "difficulty": 0.8,
+      "seedKind": "wallet",
+      "precision": 0,
+      "recall": 0,
+      "f1": 0,
+      "falseAttribution": [],
+      "plantedAbsorbed": false,
+      "lookalikeAbsorbed": 0,
+      "operatorRecall": 0,
+      "treasuryFound": true,
+      "depositFound": true,
+      "feeCorrect": true,
+      "pivots": 57,
+      "requests": 236,
+      "curve": [
+        {
+          "pivots": 15,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 24,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 36,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 45,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 54,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 57,
+          "recall": 0,
+          "precision": 0
+        },
+        {
+          "pivots": 57,
+          "recall": 0,
+          "precision": 0
+        }
+      ],
+      "pivotsTo80": null,
+      "reappearanceDetected": 0,
+      "reappearanceTotal": 2,
+      "reappearanceFalse": 0,
+      "contradictions": 1,
+      "ms": 221
+    }
+  ]
+}

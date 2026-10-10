@@ -1,0 +1,9 @@
+main ready
+wallet ready
+form ready
+hunter ready
+finder ready
+site ready
+Local automatic maintenance enabled (15 seconds).
+Open http://127.0.0.1:8787 — Investigate Site. Ctrl+C stops the suite.
+Logger setup: Main URL http://127.0.0.1:8787; copy only the crypto_wallet_logger value from .dev.vars into the extension settings.

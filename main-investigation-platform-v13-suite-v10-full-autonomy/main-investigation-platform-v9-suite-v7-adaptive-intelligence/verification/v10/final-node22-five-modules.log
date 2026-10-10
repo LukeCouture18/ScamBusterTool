@@ -1,0 +1,79 @@
+
+=== five-modules (4 steps) ===
+--- five-modules 1/4: node tests/form-source-local.mjs
+{"ok":true,"real_module":true,"localhost_receiver":true,"verified":true,"unknown":true,"duplicate_blocked":true,"external_requests":0}
+--- five-modules 2/4: node tests/form-configured-local.mjs
+{"ok":true,"real_form_source":true,"configured_adapter":true,"synthetic_receiver":true,"submissions":1,"duplicate_blocked":true}
+--- five-modules 3/4: [integrations/wallet-investigator] WALLET_INVESTIGATOR_SYNTHETIC_FIXTURES=1 node --import tsx --import file:///workspace/scratch/0dbe5278a453/verification-runs/node22/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/lib/sqljs-fallback.mjs tests/run-all-tests.ts
+[MainPlatformV6] Initialized integration module 'wallet_investigator' with capabilities: [
+  'blockchain-analysis',
+  'wallet-validation',
+  'counterparty-discovery',
+  'fund-flow-analysis',
+  'controlled-wallet-expansion'
+]
+=== STARTING INVESTIGATION PLATFORM VERIFICATION TEST SUITE ===
+
+--- Suite 1: Address Validation & Network Resolution ---
+✅ PASS: EVM address is valid
+✅ PASS: Reported network honored for EVM
+✅ PASS: Explicit reported network resolves EVM ambiguity
+✅ PASS: EVM without reported network is format-valid
+✅ PASS: Detected network is evm_uncertain
+✅ PASS: EVM address triggers network ambiguity flag (cross-EVM)
+✅ PASS: BTC Bech32 address is valid
+✅ PASS: Detected network is bitcoin
+✅ PASS: BTC Bech32 has no network ambiguity
+✅ PASS: BTC Bech32 has valid checksum
+✅ PASS: TRON TRC20 address is valid
+✅ PASS: Detected network is tron
+✅ PASS: TRON address has valid base58 checksum
+✅ PASS: Solana base58 address is valid
+✅ PASS: Detected network is solana
+✅ PASS: Random string rejected as invalid
+✅ PASS: Random string flagged as invalid_format
+
+--- Suite 2: Base Unit Financial Math & Precision ---
+✅ PASS: 1.00000001 BTC is 100000001 satoshis
+✅ PASS: Displays exact decimal representation without float drift
+✅ PASS: 5 wei computed accurately
+✅ PASS: USDT 6 decimals base units accurate
+
+--- Suite 3: Database & Migration Schema ---
+[Database] Initialized new database at /tmp/wallet-verification-YWG7hc/data/wallet_investigator.sqlite
+[Migrations] Applying migration v1: 001_initial_schema...
+[Migrations] Applying migration v2: 002_indexes_and_views...
+[Migrations] Migration status: 2 applied. Current schema version: v2
+✅ PASS: Database schema initialized and wallets table exists
+✅ PASS: wallet_observations table exists for multi-site evidence
+
+--- Suite 4: Blockchain Provider Layer & Fallback ---
+✅ PASS: Provider retrieves Bitcoin wallet activity
+✅ PASS: Completeness caveat recorded
+✅ PASS: Transactions array returned
+✅ PASS: All configured blockchain provider tiers are registered
+
+--- Suite 5: Non-Pejorative Findings Engine ---
+✅ PASS: Findings generator returns structured finding array
+
+--- Suite 6: Main Platform v6 Canonical Protocol ---
+✅ PASS: Correct canonical module_id
+✅ PASS: Unregistered module is not falsely online
+✅ PASS: Main Platform advertises blockchain-analysis capability
+
+=== TEST VERIFICATION COMPLETE: 31 PASSED, 0 FAILED ===
+
+--- five-modules 4/4: [integrations/wallet-investigator] WALLET_INVESTIGATOR_SYNTHETIC_FIXTURES=1 node --import tsx --import file:///workspace/scratch/0dbe5278a453/verification-runs/node22/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/lib/sqljs-fallback.mjs tests/platform-worker-local.ts
+[MainPlatformV6] Initialized integration module 'wallet_investigator' with capabilities: [
+  'blockchain-analysis',
+  'wallet-validation',
+  'counterparty-discovery',
+  'fund-flow-analysis',
+  'controlled-wallet-expansion'
+]
+[Database] Initialized new database at /tmp/wallet-platform-fixture-Zgr3YN/data/wallet_investigator.sqlite
+[Migrations] Applying migration v1: 001_initial_schema...
+[Migrations] Applying migration v2: 002_indexes_and_views...
+[Migrations] Migration status: 2 applied. Current schema version: v2
+{"ok":true,"real_engine":true,"synthetic_provider":true,"transactions":4,"evidence":10,"counterparties":3}
+PASS five-modules: 4/4 steps passed

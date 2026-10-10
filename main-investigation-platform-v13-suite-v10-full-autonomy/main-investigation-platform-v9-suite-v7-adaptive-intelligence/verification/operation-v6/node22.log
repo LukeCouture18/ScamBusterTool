@@ -1,0 +1,25 @@
+(node:61) [UNDICI-EHPA] Warning: EnvHttpProxyAgent is experimental, expect them to change at any time.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:61) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(node:61) [UNDICI-EHPA] Warning: EnvHttpProxyAgent is experimental, expect them to change at any time.
+(Use `node --trace-warnings ...` to show where the warning was created)
+PASS canonical evidence graph, competing hypotheses and complete source lineage
+PASS hypothesis source clickthrough is scoped and malformed pagination is rejected
+PASS 100 weak correlations never become independent evidence or ownership
+PASS Hunter replay keeps one logical hypothesis and contradiction history
+PASS omitted contradictions and challenging evidence survive later snapshots
+PASS disappearance and reappearance are explicit temporal facts; old observations cannot undo them
+PASS pause projects evidence but does not create hunts
+PASS 50 real events and their replay coalesce to a dirty operation without hunt storms
+PASS event storms and concurrent evaluation create one bounded discriminating hunt
+PASS used-state Main restart preserves hypotheses, challenges, budgets and action identity
+PASS unfinished durable handoff recovers the exact work fingerprint
+PASS split is proposed without boundary mutation and stale review hashes are rejected
+PASS analyst-approved split is atomic, replay-safe and retains original provenance
+PASS Hunter replay cannot undo analyst boundaries
+PASS consolidation requires a reviewed decision, preserves aliases and rejects stale revisions
+PASS two competing reviewed boundary decisions cannot both mutate one revision
+PASS bounded hunt exhaustion parks without repeat work
+PASS duplicate evidence overlap suggests review without consolidating boundaries
+PASS populated v5 additive migration is replayable and rollback leaves prior data intact
+{"ok":true,"checks":19,"passed":["canonical evidence graph, competing hypotheses and complete source lineage","hypothesis source clickthrough is scoped and malformed pagination is rejected","100 weak correlations never become independent evidence or ownership","Hunter replay keeps one logical hypothesis and contradiction history","omitted contradictions and challenging evidence survive later snapshots","disappearance and reappearance are explicit temporal facts; old observations cannot undo them","pause projects evidence but does not create hunts","50 real events and their replay coalesce to a dirty operation without hunt storms","event storms and concurrent evaluation create one bounded discriminating hunt","used-state Main restart preserves hypotheses, challenges, budgets and action identity","unfinished durable handoff recovers the exact work fingerprint","split is proposed without boundary mutation and stale review hashes are rejected","analyst-approved split is atomic, replay-safe and retains original provenance","Hunter replay cannot undo analyst boundaries","consolidation requires a reviewed decision, preserves aliases and rejects stale revisions","two competing reviewed boundary decisions cannot both mutate one revision","bounded hunt exhaustion parks without repeat work","duplicate evidence overlap suggests review without consolidating boundaries","populated v5 additive migration is replayable and rollback leaves prior data intact"]}

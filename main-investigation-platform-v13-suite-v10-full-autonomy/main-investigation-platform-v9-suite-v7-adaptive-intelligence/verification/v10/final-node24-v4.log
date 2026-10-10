@@ -1,0 +1,29 @@
+
+=== v4 (2 steps) ===
+--- v4 1/2: node --experimental-sqlite tests/v4-campaign.mjs
+  PASS  A coordination: linked sites found, hub outranks 20 mirrors (20 suppressed), module evidence reprioritized late-riser 0.532 -> 0.775 (done), 4 real investigations each run once, provenance intact
+  PASS  B hypotheses: ip supported by a verified site, san disproved (unverifiable claim ignored), person's skip weakens the supported one
+  PASS  C reviewer: already-attempted work rejected with all six checks, no run or job created; model critique can only add rejections
+  PASS  D budgets: expansion stops at 2 investigations (BUDGET_EXHAUSTED), invalid budget refused, raise to 3 resumes exactly one more
+  PASS  E saturation: 2 unproductive ip pivot(s) ran, the rest were stopped as saturated
+  PASS  F checkpoint: login wall pauses one site, two others complete meanwhile, person's evidence resumes it
+  PASS  G restart: expired lease taken over, half-started investigation adopted without duplication, campaign completes
+  PASS  H providers: timeouts/garbage/truncated replies fall back safely and are costed; a model-free campaign completes
+  PASS  I adversarial: fake refs, contradicting target, bad capability, links, smuggled fields, forged edges/experience, non-offered and repeated choices and budget overruns all rejected
+  PASS  J learning: ai_self ignored (0.5), observed outcomes move the prior to 0.150 and stop at the floor
+
+All v4 campaign scenarios passed.
+--- v4 2/2: [integrations/site-finder-v07] python run_tests_standalone.py test_v4_context.py
+  PASS  test_v4_context.py::test_campaign_specific_learning_overrides_context_but_is_shrunk
+  PASS  test_v4_context.py::test_contextual_learning_changes_allocation
+  PASS  test_v4_context.py::test_diminishing_returns_reduce_effort_then_saturate
+  PASS  test_v4_context.py::test_downstream_credit_only_for_contextual_candidates
+  PASS  test_v4_context.py::test_exploration_is_bounded_but_active
+  PASS  test_v4_context.py::test_invalid_pivot_is_refused
+  PASS  test_v4_context.py::test_pivot_round_in_simulated_world
+  PASS  test_v4_context.py::test_saturated_pivot_returns_without_network
+
+============================================================
+Results: 8 passed, 0 failed
+============================================================
+PASS v4: 2/2 steps passed

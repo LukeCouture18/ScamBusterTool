@@ -1,0 +1,51 @@
+
+=== unit (1 step) ===
+--- unit 1/1: node --test tests/director-migration.test.mjs tests/domain.test.mjs tests/migration.test.mjs tests/security.test.mjs tests/sqljs-fallback.test.mjs tests/ui-tokens.test.mjs tests/v5-contract.test.mjs tests/v5-hunter.test.mjs tests/v5-migration.test.mjs tests/v6-contract.test.mjs tests/v6-migration.test.mjs tests/wallet-db-lifecycle.test.mjs tests/wallet-key-migration.test.mjs
+✔ populated v4 migration and rollback retain candidates, observations, evidence and approval hashes (64.004265ms)
+✔ domain resolution deduplicates equivalent sites (6.065929ms)
+✔ wallet and token identity is network scoped (0.229604ms)
+✔ job keys prevent active duplicate work (0.130959ms)
+✔ job transition policy rejects processing loops (0.140106ms)
+✔ retry backoff is exponential and capped (5.404736ms)
+✔ schema major versions are checked (0.210797ms)
+✔ a wallet key that already names its network is not prefixed twice (0.132594ms)
+✔ coordination migration is additive and includes operational tables (14.311658ms)
+✔ orchestrator migration preserves data and adds durable workflow state (4.712991ms)
+✔ v4 migration adds a durable event backbone without replacing v3 data (7.035329ms)
+✔ module credentials are isolated (0.907203ms)
+✔ authentication fails closed and legacy fallback is opt-in (0.939071ms)
+✔ with real sql.js installed the fallback registers nothing and the Wallet worker keeps PlatformWorker and startPlatformWorker (1224.37511ms)
+﹣ without sql.js the fallback still serves the node:sqlite stand-in and the worker still loads (1.147963ms) # the real sql.js is installed in this repository, so the stand-in path is not used here
+✔ each tool UI is in sync with the canonical tokens (8.047341ms)
+✔ the generated blocks only restyle: every tool keeps its own markup and variables (8.901116ms)
+✔ v5 migration adds triage, durable subscriptions and metrics without dropping v4 data (14.4582ms)
+✔ routing requires explicit promotion and does not infer wallet validity from confidence (5.126845ms)
+✔ both SDKs expose event delivery and metrics (13.548032ms)
+✔ migration 0012 is additive and required by the schema gate (59.976083ms)
+✔ migration 0014 (Site Finder hunts) is additive and required by the schema gate (35.244195ms)
+✔ migration 0015 (v4 wallet pipeline) is additive and required by the schema gate (69.652701ms)
+✔ contracts: module, job type and work kind (10.855314ms)
+✔ a Hunter snapshot is stored idempotently and its proposals become Main's own work (130.502334ms)
+✔ demo operations are mirrored for display but never create work (34.951156ms)
+✔ reconstruction: proposed only while Hunter is registered, routed as a HUNT_OPERATION job, judged by what it found (57.766006ms)
+✔ operator and module requests go through work items (56.139019ms)
+✔ v6 schema gate rejects an incomplete operation alias migration (46.045329ms)
+✔ v4 database upgrades to v5: every v4 record preserved, schema gate passes, v5 defaults seeded (82.736236ms)
+✔ an interrupted v5 upgrade rolls back and the platform refuses to start until it is applied (79.04176ms)
+✔ rollback to v4: v5 tables are additive, so v4 code reads a v5 database unchanged; dropping them restores the exact v4 schema (47.716824ms)
+✔ the server, SDK and machine readable event catalog agree (39.195405ms)
+✔ v6 contract includes all orchestration and evidence endpoints (0.63715ms)
+✔ v5 database upgrades to v6 without losing investigations and evidence (187.387923ms)
+✔ wallet database: clean start, restart with data, interrupted save and a damaged file (5725.857378ms)
+ℹ database size after interrupted saves: 4702208 bytes
+✔ the Wallet verification suite never touches integrations/wallet-investigator/data (1446.434172ms)
+✔ 0013 renames doubled wallet keys only when no correctly keyed twin exists (102.059638ms)
+ℹ tests 38
+ℹ suites 0
+ℹ pass 37
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 1
+ℹ todo 0
+ℹ duration_ms 7823.39687
+PASS unit: 1/1 steps passed

@@ -1,0 +1,17 @@
+{
+  "ok": true,
+  "results": [
+    {
+      "runtime": "v24.19.0",
+      "checked": 145,
+      "failures": [],
+      "seconds": 12.93
+    },
+    {
+      "runtime": "v22.18.0",
+      "checked": 145,
+      "failures": [],
+      "seconds": 4.08
+    }
+  ]
+}

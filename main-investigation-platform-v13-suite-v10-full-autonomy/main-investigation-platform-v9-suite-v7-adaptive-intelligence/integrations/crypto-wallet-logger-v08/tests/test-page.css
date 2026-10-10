@@ -1,0 +1,15 @@
+body { min-height:100vh; }
+main { max-width:920px; margin:0 auto; padding:28px; }
+header { display:flex; align-items:center; justify-content:space-between; gap:20px; }
+h1 { margin:0; } header p { margin:4px 0 0; color:var(--muted); }
+.summary { display:flex; justify-content:space-between; margin:22px 0 14px; padding:14px 16px; background:var(--panel); border:1px solid var(--border); border-radius:10px; }
+.results { display:grid; gap:8px; }
+.result { display:grid; grid-template-columns:24px 180px 1fr; gap:10px; align-items:start; padding:11px 13px; background:var(--panel); border:1px solid var(--border); border-radius:9px; }
+.result.pass { border-color:#206844; }.result.fail { border-color:#7f1d1d; }
+.icon { font-weight:800; color:var(--success); }.fail .icon { color:#f87171; }
+.detail { color:var(--muted); overflow-wrap:anywhere; }
+.fixture { margin-top:24px; padding:16px; border:1px dashed var(--border); border-radius:10px; }
+.fixture h2 { margin-top:0; font-size:16px; }
+.deposit-panel { display:flex; flex-direction:column; gap:5px; padding:12px; background:#0d1426; border-radius:8px; }
+.fixture input,.fixture select { min-width:300px; margin-left:8px; }
+.qr-code { display:block; width:128px; height:128px; margin-top:10px; border:6px solid white; background:repeating-conic-gradient(#111 0 25%,#fff 0 50%) 50%/18px 18px; }

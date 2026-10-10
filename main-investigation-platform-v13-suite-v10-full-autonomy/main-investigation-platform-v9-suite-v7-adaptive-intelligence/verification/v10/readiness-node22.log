@@ -1,0 +1,46 @@
+TAP version 13
+# Subtest: production schema readiness: ready
+ok 1 - production schema readiness: ready
+  ---
+  duration_ms: 208.948227
+  type: 'test'
+  ...
+# Subtest: production schema readiness: pending-once
+ok 2 - production schema readiness: pending-once
+  ---
+  duration_ms: 310.569743
+  type: 'test'
+  ...
+# Subtest: production schema readiness: permanently-pending
+ok 3 - production schema readiness: permanently-pending
+  ---
+  duration_ms: 297.198246
+  type: 'test'
+  ...
+# Subtest: production schema readiness: missing-table
+ok 4 - production schema readiness: missing-table
+  ---
+  duration_ms: 185.825574
+  type: 'test'
+  ...
+# Subtest: production schema readiness: migration-error
+ok 5 - production schema readiness: migration-error
+  ---
+  duration_ms: 124.334258
+  type: 'test'
+  ...
+# Subtest: production schema readiness: invalid-response
+ok 6 - production schema readiness: invalid-response
+  ---
+  duration_ms: 260.444729
+  type: 'test'
+  ...
+1..6
+# tests 6
+# suites 0
+# pass 6
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1539.509932

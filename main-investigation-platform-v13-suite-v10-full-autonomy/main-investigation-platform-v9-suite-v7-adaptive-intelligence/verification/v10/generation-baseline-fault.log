@@ -1,0 +1,20 @@
+PASS generation before
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: discovery generation must commit with its job
+
+3 !== 4
+
+    at file:///workspace/scratch/0dbe5278a453/verification-runs/node24/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/v10-crash-generation.mjs:34:10
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: 3,
+  expected: 4,
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v24.19.0

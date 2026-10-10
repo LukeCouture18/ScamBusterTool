@@ -1,0 +1,15 @@
+import { z } from "zod";
+import { apiError, assertModule, authError, authorizeModule, enforceRateLimit, getD1, json, readJsonBody } from "@/lib/platform";
+import { schemaCompatibility } from "@/lib/domain.mjs";
+import { replanDeferred } from "@/lib/planner";
+
+const schema = z.object({ module_version: z.string().min(1).max(80), schema_version: z.string().min(1).max(20), status: z.enum(["idle","running","error"]), capabilities: z.array(z.string().max(100)).max(50), current_job_id: z.string().uuid().nullable().optional(), error: z.string().max(1000).nullable().optional() }).strict();
+export async function POST(request: Request, context: { params: Promise<{ module: string }> }) {
+  try { const { module } = await context.params; if (!assertModule(module)) return apiError(404,"UNKNOWN_MODULE","Unknown module."); await authorizeModule(request,module); await enforceRateLimit(module); const body=schema.parse(await readJsonBody(request)); const compatibility=schemaCompatibility(body.schema_version); const db=getD1();
+    await db.prepare("INSERT INTO module_registry (module_name, connection_status, runtime_status, module_version, schema_version, capabilities, last_heartbeat_at, current_job_id, last_error) VALUES (?, 'connected', ?, ?, ?, ?, CURRENT_TIMESTAMP, ?, ?) ON CONFLICT(module_name) DO UPDATE SET connection_status='connected', runtime_status=excluded.runtime_status, module_version=excluded.module_version, schema_version=excluded.schema_version, capabilities=excluded.capabilities, last_heartbeat_at=CURRENT_TIMESTAMP, current_job_id=excluded.current_job_id, last_error=excluded.last_error, updated_at=CURRENT_TIMESTAMP").bind(module, compatibility.compatible ? body.status : "error", body.module_version, body.schema_version, json(body.capabilities), body.current_job_id ?? null, compatibility.compatible ? body.error ?? null : `Incompatible schema ${body.schema_version}; expected ${compatibility.supported}`).run();
+    if(body.current_job_id) await db.prepare("UPDATE jobs SET last_worker_heartbeat_at=CURRENT_TIMESTAMP,lease_expires_at=datetime('now','+5 minutes'),updated_at=CURRENT_TIMESTAMP WHERE id=? AND claimed_by_module=? AND status='running'").bind(body.current_job_id,module).run();
+    await db.prepare("UPDATE review_queue SET status='resolved',resolution='Module heartbeat restored',resolved_at=CURRENT_TIMESTAMP WHERE review_type='module_disconnect' AND status='open' AND json_extract(details,'$.module_name')=?").bind(module).run();
+    if(compatibility.compatible&&body.status!=="error")await replanDeferred(10);
+    return Response.json({ accepted:true, module, schema_compatible:compatibility.compatible, supported_schema:compatibility.supported, server_time:new Date().toISOString() }, { status:compatibility.compatible?200:409 });
+  } catch(error) { if(error instanceof z.ZodError) return apiError(400,"VALIDATION_ERROR","Invalid heartbeat.",error.issues); return authError(error) ?? apiError(500,"HEARTBEAT_ERROR",error instanceof Error?error.message:"Heartbeat failed"); }
+}

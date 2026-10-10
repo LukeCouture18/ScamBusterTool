@@ -1,0 +1,22 @@
+  PASS  A continuous operation: candidates become typed work, real investigations run once, outcomes are learned from observed results — 2 observed outcomes, 8 module jobs
+  PASS  B no duplicate scheduled work: concurrent ticks share one lease, fingerprints collapse re-proposals, one job per work item
+  PASS  C crash recovery: an interrupted tick is adopted without duplication; continuous discovery survives a restart
+  PASS  D prioritization changes with evidence: a sibling proving the same wallets raises duplicate probability; learned outcomes move priors — dup 0->0.7, prior 0.48->0.15
+  PASS  E temporal: unchanged observations create nothing; real changes create the right opportunities; disappearance cancels work — unchanged x10 -> 0 records
+  PASS  F evidence gaps drive actions; resolving a gap stops its work
+  PASS  G contradictions trigger review: disagreeing sources become a human task; resolution is recorded
+  PASS  H formation requires graph support; AI groupings must cite real edges; merge and split keep provenance and lineage — formed 80eb1ea8, merged 858b0d92 into 80eb1ea8
+  PASS  H2 split: a campaign whose sites form two unconnected groups splits; members, edges and lineage keep their provenance — split 1dd287f3 -> 337b2e3e (sy-1.test, sy-2.test)
+  PASS  I concurrent campaigns run through the scheduler without state leakage — A: BUDGET_EXHAUSTED, B: BUDGET_EXHAUSTED
+  PASS  J model routing: tiers per task, provider fallback, telemetry, budget refusal, and deterministic fallback without any model
+  PASS  K invalid AI actions and hallucinated evidence stay blocked
+  PASS  L budgets are enforced; over-budget work waits (deferred with a reason) and is never dropped
+  PASS  M human checkpoints: a login wall waits for a person, notifies once, and resumes automatically
+  PASS  N pause and resume: nothing new starts while paused; running work is still reconciled; resume continues
+  PASS  O experiments stay bounded: registered strategies only, ±20% ordering, population and budget caps
+  PASS  P replay and simulation cannot execute anything — fixture: 4 starts, stop at tick 3 (every remaining item is waiting for budget)
+  PASS  Q commands compile into typed intents and cannot bypass policy
+  PASS  R notifications are deduplicated, routine work is silent, failed work is kept and surfaced — 2 notifications over the scenario
+  PASS  S operator routes and read models: operations, queue, tasks, graph with filters, node detail, workspace, budgets, advanced
+
+All 20 v5 operations scenarios passed.

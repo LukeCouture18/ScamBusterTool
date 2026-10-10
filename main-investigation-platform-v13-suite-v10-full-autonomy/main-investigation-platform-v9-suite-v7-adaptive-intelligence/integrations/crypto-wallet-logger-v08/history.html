@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>CryptoWalletLogger Findings</title>
+  <link rel="stylesheet" href="ui.css">
+  <link rel="stylesheet" href="history.css">
+</head>
+<body>
+  <header class="page-header">
+    <div><h1>CryptoWalletLogger</h1><p>Websites and wallets collected while you browse.</p></div>
+    <div class="header-actions">
+      <details class="export-menu"><summary>Tools</summary><div>
+        <button id="openTests">Test detector</button>
+        <button id="exportCsv">Wallet CSV</button><button id="exportJson">Wallet JSON</button>
+        <button id="integrationCsv">Investigator CSV</button><button id="integrationJson">Investigator JSON</button>
+        <button id="backup">Complete backup</button><button id="restore">Restore backup</button>
+      </div></details>
+      <button id="clearAll" class="danger">Clear all</button>
+      <input id="restoreFile" type="file" accept="application/json,.json" hidden>
+    </div>
+  </header>
+  <section class="toolbar simple-toolbar">
+    <div class="view-tabs"><button data-view="websites" class="active">Websites</button><button data-view="wallets">Wallets</button></div>
+    <input id="search" type="search" placeholder="Search websites or wallets">
+    <select id="statusFilter"><option value="">All records</option><option value="new">NEW</option><option value="review">NEEDS REVIEW</option><option value="verified">VERIFIED</option></select>
+    <span id="summary" class="muted"></span>
+  </section>
+  <section class="sync-bar"><span id="syncState">Main Platform: not configured</span><button id="syncNow">Sync now</button><details><summary>Configure</summary><div class="sync-config"><input id="syncEndpoint" placeholder="Main Platform event endpoint"><input id="syncApiKey" type="password" placeholder="API key (optional)"><label><input id="syncEnabled" type="checkbox"> Enable automatic sync</label><button id="saveSync">Save</button><small>Only structured wallet, deposit-option, and evidence events are sent. Normal detection remains local.</small></div></details></section>
+  <main id="records"></main>
+  <script src="evidence-score.js"></script>
+  <script src="organization-store.js"></script>
+  <script src="integration-export.js"></script>
+  <script src="backup.js"></script>
+  <script src="history.js"></script>
+</body>
+</html>

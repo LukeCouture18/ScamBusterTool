@@ -1,0 +1,16 @@
+AssertionError [ERR_ASSERTION]: exact approval before injection must be reached  done
++ actual - expected
+
++ 'SIGTERM'
+- 'SIGKILL'
+      ^
+
+    at file:///workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/autonomy-crash.mjs:67:385
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: 'SIGTERM',
+  expected: 'SIGKILL',
+  operator: 'strictEqual',
+  diff: 'simple'
+}

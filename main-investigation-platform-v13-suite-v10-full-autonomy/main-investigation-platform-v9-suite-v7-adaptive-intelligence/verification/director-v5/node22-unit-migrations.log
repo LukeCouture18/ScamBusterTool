@@ -1,0 +1,266 @@
+(node:5) [UNDICI-EHPA] Warning: EnvHttpProxyAgent is experimental, expect them to change at any time.
+(Use `node --trace-warnings ...` to show where the warning was created)
+TAP version 13
+# (node:12) [UNDICI-EHPA] Warning: EnvHttpProxyAgent is experimental, expect them to change at any time.
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# (node:12) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# Subtest: populated v4 migration and rollback retain candidates, observations, evidence and approval hashes
+ok 1 - populated v4 migration and rollback retain candidates, observations, evidence and approval hashes
+  ---
+  duration_ms: 51.574242
+  type: 'test'
+  ...
+# (node:13) [UNDICI-EHPA] Warning: EnvHttpProxyAgent is experimental, expect them to change at any time.
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: domain resolution deduplicates equivalent sites
+ok 2 - domain resolution deduplicates equivalent sites
+  ---
+  duration_ms: 1.20059
+  type: 'test'
+  ...
+# Subtest: wallet and token identity is network scoped
+ok 3 - wallet and token identity is network scoped
+  ---
+  duration_ms: 0.219244
+  type: 'test'
+  ...
+# Subtest: job keys prevent active duplicate work
+ok 4 - job keys prevent active duplicate work
+  ---
+  duration_ms: 0.201439
+  type: 'test'
+  ...
+# Subtest: job transition policy rejects processing loops
+ok 5 - job transition policy rejects processing loops
+  ---
+  duration_ms: 0.140469
+  type: 'test'
+  ...
+# Subtest: retry backoff is exponential and capped
+ok 6 - retry backoff is exponential and capped
+  ---
+  duration_ms: 0.220094
+  type: 'test'
+  ...
+# Subtest: schema major versions are checked
+ok 7 - schema major versions are checked
+  ---
+  duration_ms: 0.123831
+  type: 'test'
+  ...
+# Subtest: a wallet key that already names its network is not prefixed twice
+ok 8 - a wallet key that already names its network is not prefixed twice
+  ---
+  duration_ms: 0.085082
+  type: 'test'
+  ...
+# (node:14) [UNDICI-EHPA] Warning: EnvHttpProxyAgent is experimental, expect them to change at any time.
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: coordination migration is additive and includes operational tables
+ok 9 - coordination migration is additive and includes operational tables
+  ---
+  duration_ms: 13.174622
+  type: 'test'
+  ...
+# Subtest: orchestrator migration preserves data and adds durable workflow state
+ok 10 - orchestrator migration preserves data and adds durable workflow state
+  ---
+  duration_ms: 8.171651
+  type: 'test'
+  ...
+# Subtest: v4 migration adds a durable event backbone without replacing v3 data
+ok 11 - v4 migration adds a durable event backbone without replacing v3 data
+  ---
+  duration_ms: 1.709365
+  type: 'test'
+  ...
+# (node:20) [UNDICI-EHPA] Warning: EnvHttpProxyAgent is experimental, expect them to change at any time.
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: module credentials are isolated
+ok 12 - module credentials are isolated
+  ---
+  duration_ms: 1.08663
+  type: 'test'
+  ...
+# Subtest: authentication fails closed and legacy fallback is opt-in
+ok 13 - authentication fails closed and legacy fallback is opt-in
+  ---
+  duration_ms: 0.545287
+  type: 'test'
+  ...
+# (node:26) [UNDICI-EHPA] Warning: EnvHttpProxyAgent is experimental, expect them to change at any time.
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: with real sql.js installed the fallback registers nothing and the Wallet worker keeps PlatformWorker and startPlatformWorker
+ok 14 - with real sql.js installed the fallback registers nothing and the Wallet worker keeps PlatformWorker and startPlatformWorker
+  ---
+  duration_ms: 825.641538
+  type: 'test'
+  ...
+# Subtest: without sql.js the fallback still serves the node:sqlite stand-in and the worker still loads
+ok 15 - without sql.js the fallback still serves the node:sqlite stand-in and the worker still loads # SKIP the real sql.js is installed in this repository, so the stand-in path is not used here
+  ---
+  duration_ms: 1.208341
+  type: 'test'
+  ...
+# (node:27) [UNDICI-EHPA] Warning: EnvHttpProxyAgent is experimental, expect them to change at any time.
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: each tool UI is in sync with the canonical tokens
+ok 16 - each tool UI is in sync with the canonical tokens
+  ---
+  duration_ms: 7.833504
+  type: 'test'
+  ...
+# Subtest: the generated blocks only restyle: every tool keeps its own markup and variables
+ok 17 - the generated blocks only restyle: every tool keeps its own markup and variables
+  ---
+  duration_ms: 2.187691
+  type: 'test'
+  ...
+# (node:28) [UNDICI-EHPA] Warning: EnvHttpProxyAgent is experimental, expect them to change at any time.
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: v5 migration adds triage, durable subscriptions and metrics without dropping v4 data
+ok 18 - v5 migration adds triage, durable subscriptions and metrics without dropping v4 data
+  ---
+  duration_ms: 6.973245
+  type: 'test'
+  ...
+# Subtest: routing requires explicit promotion and does not infer wallet validity from confidence
+ok 19 - routing requires explicit promotion and does not infer wallet validity from confidence
+  ---
+  duration_ms: 1.492578
+  type: 'test'
+  ...
+# Subtest: both SDKs expose event delivery and metrics
+ok 20 - both SDKs expose event delivery and metrics
+  ---
+  duration_ms: 2.115226
+  type: 'test'
+  ...
+# (node:76) [UNDICI-EHPA] Warning: EnvHttpProxyAgent is experimental, expect them to change at any time.
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# (node:76) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# Subtest: migration 0012 is additive and required by the schema gate
+ok 21 - migration 0012 is additive and required by the schema gate
+  ---
+  duration_ms: 30.436364
+  type: 'test'
+  ...
+# Subtest: migration 0014 (Site Finder hunts) is additive and required by the schema gate
+ok 22 - migration 0014 (Site Finder hunts) is additive and required by the schema gate
+  ---
+  duration_ms: 24.395704
+  type: 'test'
+  ...
+# Subtest: migration 0015 (v4 wallet pipeline) is additive and required by the schema gate
+ok 23 - migration 0015 (v4 wallet pipeline) is additive and required by the schema gate
+  ---
+  duration_ms: 27.995388
+  type: 'test'
+  ...
+# Subtest: contracts: module, job type and work kind
+ok 24 - contracts: module, job type and work kind
+  ---
+  duration_ms: 11.232916
+  type: 'test'
+  ...
+# Subtest: a Hunter snapshot is stored idempotently and its proposals become Main's own work
+ok 25 - a Hunter snapshot is stored idempotently and its proposals become Main's own work
+  ---
+  duration_ms: 64.488927
+  type: 'test'
+  ...
+# Subtest: demo operations are mirrored for display but never create work
+ok 26 - demo operations are mirrored for display but never create work
+  ---
+  duration_ms: 22.665779
+  type: 'test'
+  ...
+# Subtest: reconstruction: proposed only while Hunter is registered, routed as a HUNT_OPERATION job, judged by what it found
+ok 27 - reconstruction: proposed only while Hunter is registered, routed as a HUNT_OPERATION job, judged by what it found
+  ---
+  duration_ms: 49.265217
+  type: 'test'
+  ...
+# Subtest: operator and module requests go through work items
+ok 28 - operator and module requests go through work items
+  ---
+  duration_ms: 38.52278
+  type: 'test'
+  ...
+# (node:78) [UNDICI-EHPA] Warning: EnvHttpProxyAgent is experimental, expect them to change at any time.
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# (node:78) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# Subtest: v4 database upgrades to v5: every v4 record preserved, schema gate passes, v5 defaults seeded
+ok 29 - v4 database upgrades to v5: every v4 record preserved, schema gate passes, v5 defaults seeded
+  ---
+  duration_ms: 39.974907
+  type: 'test'
+  ...
+# Subtest: an interrupted v5 upgrade rolls back and the platform refuses to start until it is applied
+ok 30 - an interrupted v5 upgrade rolls back and the platform refuses to start until it is applied
+  ---
+  duration_ms: 27.615447
+  type: 'test'
+  ...
+# Subtest: rollback to v4: v5 tables are additive, so v4 code reads a v5 database unchanged; dropping them restores the exact v4 schema
+ok 31 - rollback to v4: v5 tables are additive, so v4 code reads a v5 database unchanged; dropping them restores the exact v4 schema
+  ---
+  duration_ms: 30.821558
+  type: 'test'
+  ...
+# (node:84) [UNDICI-EHPA] Warning: EnvHttpProxyAgent is experimental, expect them to change at any time.
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: the server, SDK and machine readable event catalog agree
+ok 32 - the server, SDK and machine readable event catalog agree
+  ---
+  duration_ms: 33.769915
+  type: 'test'
+  ...
+# Subtest: v6 contract includes all orchestration and evidence endpoints
+ok 33 - v6 contract includes all orchestration and evidence endpoints
+  ---
+  duration_ms: 0.727592
+  type: 'test'
+  ...
+# (node:101) [UNDICI-EHPA] Warning: EnvHttpProxyAgent is experimental, expect them to change at any time.
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# (node:101) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# Subtest: v5 database upgrades to v6 without losing investigations and evidence
+ok 34 - v5 database upgrades to v6 without losing investigations and evidence
+  ---
+  duration_ms: 74.88969
+  type: 'test'
+  ...
+# (node:102) [UNDICI-EHPA] Warning: EnvHttpProxyAgent is experimental, expect them to change at any time.
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# Subtest: wallet database: clean start, restart with data, interrupted save and a damaged file
+ok 35 - wallet database: clean start, restart with data, interrupted save and a damaged file
+  ---
+  duration_ms: 4235.661183
+  type: 'test'
+  ...
+# database size after interrupted saves: 5316608 bytes
+# Subtest: the Wallet verification suite never touches integrations/wallet-investigator/data
+ok 36 - the Wallet verification suite never touches integrations/wallet-investigator/data
+  ---
+  duration_ms: 712.096873
+  type: 'test'
+  ...
+# (node:123) [UNDICI-EHPA] Warning: EnvHttpProxyAgent is experimental, expect them to change at any time.
+# (Use `node --trace-warnings ...` to show where the warning was created)
+# (node:123) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+# Subtest: 0013 renames doubled wallet keys only when no correctly keyed twin exists
+ok 37 - 0013 renames doubled wallet keys only when no correctly keyed twin exists
+  ---
+  duration_ms: 90.115004
+  type: 'test'
+  ...
+1..37
+# tests 37
+# suites 0
+# pass 36
+# fail 0
+# cancelled 0
+# skipped 1
+# todo 0
+# duration_ms 5207.068127

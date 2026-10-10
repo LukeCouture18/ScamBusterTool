@@ -1,0 +1,44 @@
+{
+  "v6": {
+    "states": 36,
+    "optimal_choice_rate": 0,
+    "near_optimal_rate": 0,
+    "mean_regret": 4.85675
+  },
+  "v7": {
+    "states": 36,
+    "optimal_choice_rate": 0.05555555555555555,
+    "near_optimal_rate": 0.08333333333333333,
+    "mean_regret": 2.040972222222222
+  },
+  "v8": {
+    "states": 36,
+    "optimal_choice_rate": 0,
+    "near_optimal_rate": 0.027777777777777776,
+    "mean_regret": 1.957333333333333
+  },
+  "v9": {
+    "states": 36,
+    "optimal_choice_rate": 0.05555555555555555,
+    "near_optimal_rate": 0.08333333333333333,
+    "mean_regret": 1.9532500000000002
+  },
+  "cheapest": {
+    "states": 36,
+    "optimal_choice_rate": 0,
+    "near_optimal_rate": 0,
+    "mean_regret": 4.527750000000001
+  },
+  "random": {
+    "states": 36,
+    "optimal_choice_rate": 0.027777777777777776,
+    "near_optimal_rate": 0.027777777777777776,
+    "mean_regret": 3.368555555555555
+  },
+  "confirmation": {
+    "states": 36,
+    "optimal_choice_rate": 0.16666666666666666,
+    "near_optimal_rate": 0.16666666666666666,
+    "mean_regret": 1.7056944444444446
+  }
+}

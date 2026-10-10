@@ -1,0 +1,26 @@
+(node:5) ExperimentalWarning: SQLite is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+PASS fresh install and populated v7 migration/replay preserve existing data
+SQL execution failed SELECT
+   (SELECT COUNT(*) FROM operation_entities oe JOIN entities e ON e.id=oe.entity_id WHERE oe.operation_id=?1 AND oe.association<>'excluded' AND e.entity_type='site') sites,
+   (SELECT COUNT(*)||':'||COALESCE(MAX(c.updated_at),'') FROM wallet_candidates c WHERE c.investigation_id IN (SELECT ie.investigation_id FROM operation_entities oe JOIN investigation_entities ie ON ie.entity_id=oe.entity_id WHERE oe.operation_id=?1 AND oe.association<>'excluded')) wallets,
+   (SELECT COUNT(DISTINCT independence_key) FROM operation_edges WHERE operation_id=?1 AND evidence_ids<>'[]') evidence_units,
+   (SELECT COUNT(*) FROM operation_contradictions WHERE operation_id=?1 AND status='open') contradictions,
+   (SELECT COUNT(*) FROM operation_history WHERE operation_id=?1 AND kind='possible_deployment_wave') waves,
+   (SELECT revision FROM hunter_operations WHERE id=?1) hunter_revision,
+   (SELECT COUNT(*) FROM director_provider_health WHERE state='healthy') provider_healthy,
+   (SELECT COUNT(*) FROM human_checkpoints h WHERE h.status<>'open' AND h.investigation_id IN (SELECT ie.investigation_id FROM operation_entities oe JOIN investigation_entities ie ON ie.entity_id=oe.entity_id WHERE oe.operation_id=?1)) human_resolved,
+   (SELECT st.max_hunts-st.hunts+COALESCE((SELECT bonus FROM adaptive_scope_state WHERE scope_kind='operation' AND scope_id=?1),0) FROM operation_state st WHERE st.operation_id=?1) budget,
+   (SELECT COUNT(*) FROM adaptive_tests WHERE scope_kind='operation' AND scope_id=?1 AND status IN ('finished','failed')) finished_tests,
+   (SELECT COUNT(*) FROM evidence WHERE investigation_id IN (SELECT ie.investigation_id FROM operation_entities oe JOIN investigation_entities ie ON ie.entity_id=oe.entity_id WHERE oe.operation_id=?1 AND oe.association<>'excluded')) evidence_rows parameter count 1
+AssertionError [ERR_ASSERTION]: {"error":{"code":"OPERATION_ERROR","message":"column index out of range"},"request_id":"813633d9-8aa9-498d-8f56-f69fcabfba9c"}
+    at ok (file:///workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/scientific-intelligence.mjs:7:21)
+    at evaluate (file:///workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/scientific-intelligence.mjs:11:102)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async file:///workspace/scratch/0dbe5278a453/work/main-investigation-platform-v9-suite-v7-adaptive-intelligence/tests/scientific-intelligence.mjs:21:93 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '=='
+}

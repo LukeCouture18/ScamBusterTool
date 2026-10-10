@@ -1,0 +1,18 @@
+[
+  {
+    "node": "22",
+    "files": 147,
+    "failed": [],
+    "seconds": 3.84
+  },
+  {
+    "node": "24",
+    "files": 147,
+    "failed": [],
+    "seconds": 12.31
+  },
+  {
+    "python": 237,
+    "failed": []
+  }
+]

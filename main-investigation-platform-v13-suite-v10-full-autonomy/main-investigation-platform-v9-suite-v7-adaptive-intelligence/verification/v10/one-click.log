@@ -1,0 +1,4 @@
+PASS [
+  'generic correlation / copied and unknown origins / counter-evidence / forged wallet flag rejected',
+  'bounded search / concurrent supply / supported selection / no analyst vote / restart and site-start dedup / timeout park'
+]

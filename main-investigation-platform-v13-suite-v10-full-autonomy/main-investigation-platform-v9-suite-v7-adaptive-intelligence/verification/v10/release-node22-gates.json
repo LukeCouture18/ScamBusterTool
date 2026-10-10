@@ -1,0 +1,31 @@
+{
+  "node": "v22.18.0",
+  "source_identity": "3030959ef9a7802f60f392196cb8a5732f2f2ca46c37b24b16a850f6f7973abc",
+  "results": [
+    {
+      "gate": "unit",
+      "exit_code": 0,
+      "seconds": 8.96
+    },
+    {
+      "gate": "typescript",
+      "exit_code": 0,
+      "seconds": 4.36
+    },
+    {
+      "gate": "lint",
+      "exit_code": 0,
+      "seconds": 26.76
+    },
+    {
+      "gate": "build",
+      "exit_code": 0,
+      "seconds": 15.8
+    },
+    {
+      "gate": "production",
+      "exit_code": 0,
+      "seconds": 62.83
+    }
+  ]
+}

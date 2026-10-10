@@ -1,0 +1,34 @@
+✔ keccak-256 known digests (5.387875ms)
+✔ base58 / base58check encoders round-trip published addresses (0.646227ms)
+✔ segwit encoder reproduces BIP-173 / BIP-350 published addresses (0.690278ms)
+✔ EVM: EIP-55 published vectors are valid with checksum eip55_valid (3.363169ms)
+✔ EVM: wrong case of one letter fails EIP-55 → invalid (1.919185ms)
+✔ EVM: all-lower and all-upper are format-valid with checksum absent (0.289732ms)
+✔ EVM: wrong length and non-hex are invalid (0.278309ms)
+✔ EVM: no usable hint and several candidates → network_ambiguous (never guessed) (3.33409ms)
+✔ EVM: single candidate or a usable hint resolves the network (5.286131ms)
+✔ EVM: hint contradicting the family → network_ambiguous with a reason (1.841722ms)
+✔ Bitcoin: published base58 addresses are valid and case-preserved (1.010541ms)
+✔ Bitcoin: one changed character breaks base58check (1.679464ms)
+✔ Bitcoin: bech32 / bech32m (BIP-173 / BIP-350) (1.221597ms)
+✔ Bitcoin: bech32 vs bech32m mix-ups, broken checksums, bad lengths and mixed case are invalid (0.786395ms)
+✔ Litecoin: base58 0x30 / 0x32 / 0x05 and bech32 ltc (1.822434ms)
+✔ Dogecoin: base58 0x1e / 0x16 (0.373759ms)
+✔ TRON: base58check 0x41, case preserved; broken checksum and wrong length invalid (0.432291ms)
+✔ TRON address with hint bsc → network_ambiguous, address kept (0.23685ms)
+✔ XRP: ripple-alphabet base58check (0.33155ms)
+✔ Solana: base58 decoding to exactly 32 bytes (0.442893ms)
+✔ Recognisable but unsupported chains → unsupported (0.145542ms)
+✔ Garbage input is invalid; internal failure → unable_to_validate (0.324399ms)
+✔ Normalisation: EVM lower, bech32 lower, base58 case-preserved; whitespace trimmed (0.403127ms)
+✔ Network labels map to canonical names (0.121585ms)
+✔ Legacy adapter keeps the old result shape and status names (1.141714ms)
+✔ conflicting observed networks require review even when the strongest hint names one (0.194486ms)
+ℹ tests 26
+ℹ suites 0
+ℹ pass 26
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 339.715209

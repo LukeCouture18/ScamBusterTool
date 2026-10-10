@@ -1,0 +1,4428 @@
+{
+  "ok": true,
+  "rows": {
+    "entities": 10000,
+    "relationships": 50100,
+    "evidence": 5000,
+    "investigations": 300,
+    "autonomy_states": 300,
+    "operations": 25,
+    "projected_edges": 50100,
+    "v7_history": {
+      "decisions": 10000,
+      "components": 144000,
+      "tests": 10000,
+      "costs": 100000,
+      "outcomes": 30000,
+      "lineage": 20000,
+      "gaps": 5000,
+      "gap_history": 20000
+    },
+    "scientific_hypotheses": 5100,
+    "scientific_predictions": 5100,
+    "scientific_contradictions": 5000,
+    "scientific_history": 30100,
+    "new_v7_decisions_during_run": 39,
+    "new_v7_tests_during_run": 4
+  },
+  "timings": [
+    {
+      "name": "load_10000_entities_50100_relationships_5000_evidence",
+      "ms": 1319.3
+    },
+    {
+      "name": "load_v7_history",
+      "ms": 1641.28
+    },
+    {
+      "name": "load_scientific_history",
+      "ms": 199.7
+    },
+    {
+      "name": "director_projection_tick",
+      "ms": 3226.78
+    },
+    {
+      "name": "director_projection_tick",
+      "ms": 2282.7
+    },
+    {
+      "name": "director_projection_tick",
+      "ms": 2187.53
+    },
+    {
+      "name": "director_projection_tick",
+      "ms": 1889.66
+    },
+    {
+      "name": "director_projection_tick",
+      "ms": 2578.45
+    },
+    {
+      "name": "director_projection_tick",
+      "ms": 2268.44
+    },
+    {
+      "name": "director_projection_tick",
+      "ms": 3006.76
+    },
+    {
+      "name": "director_projection_tick",
+      "ms": 2216.71
+    },
+    {
+      "name": "director_projection_tick",
+      "ms": 2516.22
+    },
+    {
+      "name": "director_projection_tick",
+      "ms": 2948.23
+    },
+    {
+      "name": "director_projection_tick",
+      "ms": 4331.88
+    },
+    {
+      "name": "director_projection_tick",
+      "ms": 3605.05
+    },
+    {
+      "name": "director_projection_tick",
+      "ms": 5260.42
+    },
+    {
+      "name": "adaptive_portfolio_decision_tick_8_operations",
+      "ms": 5052.78
+    },
+    {
+      "name": "adaptive_portfolio_decision_tick_8_operations",
+      "ms": 3837.9
+    },
+    {
+      "name": "adaptive_portfolio_decision_tick_8_operations",
+      "ms": 2799.86
+    },
+    {
+      "name": "adaptive_portfolio_decision_tick_8_operations",
+      "ms": 2096.87
+    },
+    {
+      "name": "adaptive_unchanged_parked_tick",
+      "ms": 2095.76
+    },
+    {
+      "name": "v6_policy_tick_8_operations_same_state",
+      "ms": 2443.35
+    },
+    {
+      "name": "v6_policy_tick_8_operations_same_state",
+      "ms": 2529.58
+    },
+    {
+      "name": "adaptive_operation_view",
+      "ms": 32.65
+    },
+    {
+      "name": "adaptive_operation_view_with_efficiency",
+      "ms": 111.09
+    },
+    {
+      "name": "adaptive_portfolio_efficiency",
+      "ms": 687.72
+    },
+    {
+      "name": "briefing_and_graph_first_page",
+      "ms": 17.99
+    },
+    {
+      "name": "scientific_cached_default_briefing",
+      "ms": 4.19
+    },
+    {
+      "name": "scientific_advanced_bounded_view",
+      "ms": 3.53
+    },
+    {
+      "name": "v9_dashboard",
+      "ms": 3.29
+    },
+    {
+      "name": "v9_investigation_default",
+      "ms": 4.73
+    },
+    {
+      "name": "v9_wallet_default",
+      "ms": 12.85
+    },
+    {
+      "name": "v9_queue_classification",
+      "ms": 1.63
+    },
+    {
+      "name": "v9_director_tick",
+      "ms": 19.55
+    },
+    {
+      "name": "v9_queue_reconciliation",
+      "ms": 3775.03
+    },
+    {
+      "name": "unchanged_scientific_read",
+      "ms": 4.98
+    },
+    {
+      "name": "unchanged_scientific_read",
+      "ms": 2.97
+    },
+    {
+      "name": "unchanged_scientific_read",
+      "ms": 3.09
+    },
+    {
+      "name": "unchanged_scientific_read",
+      "ms": 3.04
+    },
+    {
+      "name": "unchanged_scientific_read",
+      "ms": 3.23
+    }
+  ],
+  "decision_latency_ms": [
+    5052.78,
+    3837.9,
+    2799.86,
+    2096.87
+  ],
+  "v6_policy_tick_ms": [
+    2443.35,
+    2529.58
+  ],
+  "memory": {
+    "rss_before_bytes": 171749376,
+    "rss_after_bytes": 276373504,
+    "peak_rss_kb": 274808
+  },
+  "database": {
+    "before_bytes": 2297856,
+    "before_scientific_history_bytes": 89038848,
+    "after_fixture_and_history_bytes": 100134912,
+    "after_bytes": 176459776,
+    "growth_bytes": 174161920,
+    "growth_during_run_bytes": 76324864,
+    "quiet_read_growth_bytes": 0,
+    "quiet_scientific_history_growth": 0,
+    "page_usage_before": [
+      {
+        "name": "adaptive_decision_components",
+        "bytes": 16580608
+      },
+      {
+        "name": "sqlite_autoindex_adaptive_decision_components_1",
+        "bytes": 8867840
+      },
+      {
+        "name": "relationships",
+        "bytes": 8224768
+      },
+      {
+        "name": "adaptive_costs",
+        "bytes": 5926912
+      },
+      {
+        "name": "scientific_history",
+        "bytes": 3969024
+      },
+      {
+        "name": "adaptive_outcomes",
+        "bytes": 3731456
+      },
+      {
+        "name": "relationship_evidence",
+        "bytes": 3575808
+      },
+      {
+        "name": "sqlite_autoindex_adaptive_costs_1",
+        "bytes": 2478080
+      },
+      {
+        "name": "adaptive_tests",
+        "bytes": 2420736
+      },
+      {
+        "name": "adaptive_outcome_family",
+        "bytes": 2396160
+      },
+      {
+        "name": "adaptive_decisions",
+        "bytes": 1953792
+      },
+      {
+        "name": "adaptive_lineage",
+        "bytes": 1859584
+      },
+      {
+        "name": "idx_relationships_source_record",
+        "bytes": 1835008
+      },
+      {
+        "name": "sqlite_autoindex_scientific_history_2",
+        "bytes": 1650688
+      },
+      {
+        "name": "scientific_history_scope",
+        "bytes": 1617920
+      },
+      {
+        "name": "adaptive_gap_history",
+        "bytes": 1585152
+      },
+      {
+        "name": "idx_relationship_evidence_link",
+        "bytes": 1396736
+      },
+      {
+        "name": "sqlite_autoindex_adaptive_outcomes_1",
+        "bytes": 1376256
+      },
+      {
+        "name": "operation_relationship_target",
+        "bytes": 1273856
+      },
+      {
+        "name": "operation_relationship_source",
+        "bytes": 1273856
+      },
+      {
+        "name": "investigation_entities",
+        "bytes": 1245184
+      },
+      {
+        "name": "entities",
+        "bytes": 1232896
+      },
+      {
+        "name": "idx_relationships_endpoints",
+        "bytes": 1155072
+      },
+      {
+        "name": "adaptive_gap_history_time",
+        "bytes": 1097728
+      },
+      {
+        "name": "evidence",
+        "bytes": 1007616
+      },
+      {
+        "name": "sqlite_autoindex_relationships_1",
+        "bytes": 946176
+      },
+      {
+        "name": "sqlite_autoindex_adaptive_lineage_2",
+        "bytes": 946176
+      },
+      {
+        "name": "sqlite_autoindex_relationship_evidence_1",
+        "bytes": 901120
+      },
+      {
+        "name": "sqlite_autoindex_adaptive_gap_history_2",
+        "bytes": 851968
+      },
+      {
+        "name": "adaptive_gaps",
+        "bytes": 851968
+      },
+      {
+        "name": "scientific_predictions",
+        "bytes": 823296
+      },
+      {
+        "name": "hunter_operation_members",
+        "bytes": 802816
+      },
+      {
+        "name": "scientific_hypotheses",
+        "bytes": 794624
+      },
+      {
+        "name": "adaptive_test_family",
+        "bytes": 704512
+      },
+      {
+        "name": "sqlite_autoindex_scientific_history_1",
+        "bytes": 684032
+      },
+      {
+        "name": "scientific_contradictions",
+        "bytes": 663552
+      },
+      {
+        "name": "adaptive_test_scope",
+        "bytes": 659456
+      },
+      {
+        "name": "sqlite_autoindex_adaptive_tests_3",
+        "bytes": 573440
+      },
+      {
+        "name": "adaptive_lineage_ref",
+        "bytes": 507904
+      },
+      {
+        "name": "sqlite_autoindex_hunter_operation_members_1",
+        "bytes": 491520
+      },
+      {
+        "name": "adaptive_decision_status",
+        "bytes": 479232
+      },
+      {
+        "name": "adaptive_outcome_test",
+        "bytes": 462848
+      },
+      {
+        "name": "idx_investigation_entities_link",
+        "bytes": 446464
+      },
+      {
+        "name": "idx_hunter_members_key",
+        "bytes": 425984
+      },
+      {
+        "name": "idx_entities_type_key",
+        "bytes": 425984
+      },
+      {
+        "name": "sqlite_autoindex_adaptive_gap_history_1",
+        "bytes": 376832
+      },
+      {
+        "name": "sqlite_autoindex_adaptive_lineage_1",
+        "bytes": 356352
+      },
+      {
+        "name": "sqlite_autoindex_scientific_predictions_2",
+        "bytes": 352256
+      },
+      {
+        "name": "sqlite_autoindex_adaptive_decisions_2",
+        "bytes": 344064
+      },
+      {
+        "name": "adaptive_decision_scope",
+        "bytes": 286720
+      },
+      {
+        "name": "idx_entities_investigation_type",
+        "bytes": 229376
+      },
+      {
+        "name": "idx_evidence_source_record",
+        "bytes": 204800
+      },
+      {
+        "name": "scientific_conflict_status",
+        "bytes": 196608
+      },
+      {
+        "name": "evidence_investigation_recent",
+        "bytes": 196608
+      },
+      {
+        "name": "sqlite_autoindex_scientific_hypotheses_1",
+        "bytes": 188416
+      },
+      {
+        "name": "adaptive_gap_status",
+        "bytes": 176128
+      },
+      {
+        "name": "sqlite_autoindex_investigation_entities_1",
+        "bytes": 167936
+      },
+      {
+        "name": "adaptive_gap_family",
+        "bytes": 167936
+      },
+      {
+        "name": "sqlite_autoindex_entities_1",
+        "bytes": 159744
+      },
+      {
+        "name": "sqlite_autoindex_adaptive_tests_2",
+        "bytes": 159744
+      },
+      {
+        "name": "sqlite_autoindex_adaptive_tests_1",
+        "bytes": 159744
+      },
+      {
+        "name": "sqlite_autoindex_adaptive_gaps_1",
+        "bytes": 159744
+      },
+      {
+        "name": "sqlite_autoindex_adaptive_decisions_1",
+        "bytes": 159744
+      },
+      {
+        "name": "idx_investigation_entities_entity",
+        "bytes": 159744
+      },
+      {
+        "name": "sqlite_schema",
+        "bytes": 147456
+      },
+      {
+        "name": "sqlite_autoindex_scientific_contradictions_1",
+        "bytes": 118784
+      },
+      {
+        "name": "adaptive_test_work",
+        "bytes": 94208
+      },
+      {
+        "name": "adaptive_test_job",
+        "bytes": 94208
+      },
+      {
+        "name": "sqlite_autoindex_scientific_predictions_1",
+        "bytes": 86016
+      },
+      {
+        "name": "sqlite_autoindex_evidence_1",
+        "bytes": 86016
+      },
+      {
+        "name": "idx_evidence_entity",
+        "bytes": 81920
+      },
+      {
+        "name": "autonomy_investigations",
+        "bytes": 61440
+      },
+      {
+        "name": "idx_evidence_sha256",
+        "bytes": 49152
+      },
+      {
+        "name": "investigations",
+        "bytes": 40960
+      },
+      {
+        "name": "autonomy_due",
+        "bytes": 16384
+      },
+      {
+        "name": "sqlite_autoindex_investigations_1",
+        "bytes": 12288
+      },
+      {
+        "name": "sqlite_autoindex_autonomy_investigations_1",
+        "bytes": 12288
+      },
+      {
+        "name": "idx_investigations_external_id",
+        "bytes": 12288
+      },
+      {
+        "name": "hunter_operations",
+        "bytes": 12288
+      },
+      {
+        "name": "work_target_terminal",
+        "bytes": 4096
+      },
+      {
+        "name": "work_items",
+        "bytes": 4096
+      },
+      {
+        "name": "work_item_events",
+        "bytes": 4096
+      },
+      {
+        "name": "wallet_observations",
+        "bytes": 4096
+      },
+      {
+        "name": "wallet_observation_domain",
+        "bytes": 4096
+      },
+      {
+        "name": "wallet_discovery_stats",
+        "bytes": 4096
+      },
+      {
+        "name": "wallet_candidates",
+        "bytes": 4096
+      },
+      {
+        "name": "wallet_candidate_address_proof",
+        "bytes": 4096
+      },
+      {
+        "name": "strategy_experiments",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_sequence",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_work_items_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_work_item_events_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_wallet_observations_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_wallet_discovery_stats_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_wallet_candidates_2",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_wallet_candidates_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_strategy_experiments_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_site_triage_2",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_site_triage_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_simulations_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_scientific_sets_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_scientific_reservations_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_scientific_plans_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_scientific_observations_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_scientific_matches_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_scientific_commonality_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_scientific_briefings_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_scientific_branches_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_scientific_boundaries_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_scheduler_ticks_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_review_queue_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_resolved_observations_2",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_resolved_observations_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_report_contents_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_report_candidates_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_relationship_versions_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_rate_limit_windows_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_planner_decisions_2",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_planner_decisions_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_pipeline_stages_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_ops_state_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_ops_notifications_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_ops_artifacts_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_opportunities_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_operator_commands_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_operation_state_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_operation_hypotheses_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_operation_hunts_2",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_operation_hunts_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_operation_history_2",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_operation_history_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_operation_facets_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_operation_entities_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_operation_edges_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_operation_decisions_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_operation_contradictions_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_operation_aliases_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_observations_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_observation_versions_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_notifications_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_notes_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_monitoring_targets_2",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_monitoring_targets_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_monitoring_snapshots_2",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_monitoring_snapshots_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_module_registry_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_module_metrics_2",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_module_metrics_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_module_event_inbox_2",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_module_event_inbox_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_module_destinations_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_module_activity_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_model_invocations_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_mission_resources_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_mission_reservations_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_mission_opportunities_3",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_mission_opportunities_2",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_mission_opportunities_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_mission_history_2",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_mission_history_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_memory_facts_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_jobs_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_job_events_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_job_event_links_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_job_dependencies_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_investigation_timeline_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_investigation_state_history_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_investigation_state_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_investigation_pipelines_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_investigation_observations_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_investigation_links_2",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_investigation_links_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_investigation_budgets_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_intel_reasoning_links_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_intel_nodes_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_intel_edges_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_ingestion_batches_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_inbox_settings_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_inbox_candidates_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_hypotheses_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_hunter_requests_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_hunter_proposals_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_hunter_operations_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_human_checkpoints_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_health_checks_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_findings_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_finder_hunts_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_experiment_assignments_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_experience_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_expansion_candidates_2",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_expansion_candidates_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_evidence_versions_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_evidence_quality_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_evidence_gaps_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_event_store_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_event_deliveries_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_event_dead_letters_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_entity_snapshots_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_entity_facets_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_entity_changes_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_entity_analysis_state_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_entity_aliases_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_discovery_paths_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_discovery_feedback_2",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_discovery_feedback_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_director_retries_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_director_resources_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_director_reservations_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_director_provider_health_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_director_objectives_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_director_investigations_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_director_actions_2",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_director_actions_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_dead_letters_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_cross_investigation_overlaps_2",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_cross_investigation_overlaps_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_contradictions_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_confidence_records_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_campaigns_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_campaign_meta_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_campaign_members_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_campaign_lineage_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_campaign_edges_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_campaign_costs_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_campaign_artifacts_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_budget_limits_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_budget_ledger_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_autonomy_searches_2",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_autonomy_searches_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_autonomy_report_claims_3",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_autonomy_report_claims_2",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_autonomy_report_claims_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_autonomy_history_2",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_autonomy_history_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_autonomy_checkpoints_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_autonomy_candidate_claims_2",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_autonomy_candidate_claims_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_autonomous_missions_3",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_autonomous_missions_2",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_autonomous_missions_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_automation_rules_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_automation_profiles_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_audit_log_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_approval_gates_2",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_approval_gates_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_analyst_conclusions_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_ai_decisions_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_agent_steps_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_agent_settings_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_agent_runs_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_agent_model_calls_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_agent_inferences_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_adaptive_scope_state_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_adaptive_saturation_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_adaptive_portfolio_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_adaptive_parking_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_adaptive_budget_adjustments_2",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_adaptive_budget_adjustments_1",
+        "bytes": 4096
+      },
+      {
+        "name": "site_triage",
+        "bytes": 4096
+      },
+      {
+        "name": "simulations",
+        "bytes": 4096
+      },
+      {
+        "name": "scientific_sets",
+        "bytes": 4096
+      },
+      {
+        "name": "scientific_reservations",
+        "bytes": 4096
+      },
+      {
+        "name": "scientific_plans",
+        "bytes": 4096
+      },
+      {
+        "name": "scientific_observations",
+        "bytes": 4096
+      },
+      {
+        "name": "scientific_observation_scope",
+        "bytes": 4096
+      },
+      {
+        "name": "scientific_matches",
+        "bytes": 4096
+      },
+      {
+        "name": "scientific_commonality",
+        "bytes": 4096
+      },
+      {
+        "name": "scientific_briefings",
+        "bytes": 4096
+      },
+      {
+        "name": "scientific_branches",
+        "bytes": 4096
+      },
+      {
+        "name": "scientific_boundaries",
+        "bytes": 4096
+      },
+      {
+        "name": "scheduler_ticks",
+        "bytes": 4096
+      },
+      {
+        "name": "review_queue",
+        "bytes": 4096
+      },
+      {
+        "name": "resolved_observations",
+        "bytes": 4096
+      },
+      {
+        "name": "report_contents",
+        "bytes": 4096
+      },
+      {
+        "name": "report_candidates",
+        "bytes": 4096
+      },
+      {
+        "name": "relationship_versions",
+        "bytes": 4096
+      },
+      {
+        "name": "rate_limit_windows",
+        "bytes": 4096
+      },
+      {
+        "name": "planner_decisions",
+        "bytes": 4096
+      },
+      {
+        "name": "pipeline_stages",
+        "bytes": 4096
+      },
+      {
+        "name": "ops_state",
+        "bytes": 4096
+      },
+      {
+        "name": "ops_notifications",
+        "bytes": 4096
+      },
+      {
+        "name": "ops_artifacts",
+        "bytes": 4096
+      },
+      {
+        "name": "opportunities",
+        "bytes": 4096
+      },
+      {
+        "name": "operator_commands",
+        "bytes": 4096
+      },
+      {
+        "name": "operation_state_queue",
+        "bytes": 4096
+      },
+      {
+        "name": "operation_state",
+        "bytes": 4096
+      },
+      {
+        "name": "operation_hypotheses",
+        "bytes": 4096
+      },
+      {
+        "name": "operation_hunts",
+        "bytes": 4096
+      },
+      {
+        "name": "operation_hunt_status",
+        "bytes": 4096
+      },
+      {
+        "name": "operation_history_time",
+        "bytes": 4096
+      },
+      {
+        "name": "operation_history",
+        "bytes": 4096
+      },
+      {
+        "name": "operation_facets",
+        "bytes": 4096
+      },
+      {
+        "name": "operation_entity_lookup",
+        "bytes": 4096
+      },
+      {
+        "name": "operation_entities",
+        "bytes": 4096
+      },
+      {
+        "name": "operation_edges",
+        "bytes": 4096
+      },
+      {
+        "name": "operation_edge_target",
+        "bytes": 4096
+      },
+      {
+        "name": "operation_edge_source",
+        "bytes": 4096
+      },
+      {
+        "name": "operation_edge_independence",
+        "bytes": 4096
+      },
+      {
+        "name": "operation_decisions",
+        "bytes": 4096
+      },
+      {
+        "name": "operation_contradictions",
+        "bytes": 4096
+      },
+      {
+        "name": "operation_aliases",
+        "bytes": 4096
+      },
+      {
+        "name": "observations",
+        "bytes": 4096
+      },
+      {
+        "name": "observation_versions",
+        "bytes": 4096
+      },
+      {
+        "name": "notifications",
+        "bytes": 4096
+      },
+      {
+        "name": "notes",
+        "bytes": 4096
+      },
+      {
+        "name": "monitoring_targets",
+        "bytes": 4096
+      },
+      {
+        "name": "monitoring_snapshots",
+        "bytes": 4096
+      },
+      {
+        "name": "module_registry",
+        "bytes": 4096
+      },
+      {
+        "name": "module_metrics",
+        "bytes": 4096
+      },
+      {
+        "name": "module_event_inbox",
+        "bytes": 4096
+      },
+      {
+        "name": "module_destinations",
+        "bytes": 4096
+      },
+      {
+        "name": "module_activity",
+        "bytes": 4096
+      },
+      {
+        "name": "model_invocations",
+        "bytes": 4096
+      },
+      {
+        "name": "mission_resources",
+        "bytes": 4096
+      },
+      {
+        "name": "mission_reservations",
+        "bytes": 4096
+      },
+      {
+        "name": "mission_opportunity_pending",
+        "bytes": 4096
+      },
+      {
+        "name": "mission_opportunities",
+        "bytes": 4096
+      },
+      {
+        "name": "mission_history",
+        "bytes": 4096
+      },
+      {
+        "name": "mission_fair_tick",
+        "bytes": 4096
+      },
+      {
+        "name": "mission_cost_root",
+        "bytes": 4096
+      },
+      {
+        "name": "memory_facts",
+        "bytes": 4096
+      },
+      {
+        "name": "jobs_target_proof",
+        "bytes": 4096
+      },
+      {
+        "name": "jobs",
+        "bytes": 4096
+      },
+      {
+        "name": "job_events",
+        "bytes": 4096
+      },
+      {
+        "name": "job_event_links",
+        "bytes": 4096
+      },
+      {
+        "name": "job_dependencies",
+        "bytes": 4096
+      },
+      {
+        "name": "investigation_timeline",
+        "bytes": 4096
+      },
+      {
+        "name": "investigation_state_history",
+        "bytes": 4096
+      },
+      {
+        "name": "investigation_state",
+        "bytes": 4096
+      },
+      {
+        "name": "investigation_pipelines",
+        "bytes": 4096
+      },
+      {
+        "name": "investigation_observations",
+        "bytes": 4096
+      },
+      {
+        "name": "investigation_links",
+        "bytes": 4096
+      },
+      {
+        "name": "investigation_budgets",
+        "bytes": 4096
+      },
+      {
+        "name": "intel_reasoning_links",
+        "bytes": 4096
+      },
+      {
+        "name": "intel_nodes",
+        "bytes": 4096
+      },
+      {
+        "name": "intel_edges",
+        "bytes": 4096
+      },
+      {
+        "name": "ingestion_batches",
+        "bytes": 4096
+      },
+      {
+        "name": "inbox_supply_lock",
+        "bytes": 4096
+      },
+      {
+        "name": "inbox_settings",
+        "bytes": 4096
+      },
+      {
+        "name": "inbox_decisions",
+        "bytes": 4096
+      },
+      {
+        "name": "inbox_candidates",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_work_items_queue",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_work_items_fingerprint",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_work_items_campaign",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_work_item_events_item",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_wallet_observations_page",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_wallet_observations_candidate",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_wallet_candidates_status",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_timeline_pipeline_time",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_timeline_investigation_time",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_state_history_inv",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_site_triage_entity",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_scheduler_ticks_started",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_review_queue_status_priority",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_report_contents_investigation",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_relationship_versions_hash",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_planner_decisions_once",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_planner_decisions_inv",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_pipelines_investigation_status",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_pipeline_stages_key",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_ops_notifications_open",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_ops_artifacts_created",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_opportunities_queue",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_opportunities_fingerprint",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_observations_source_type_record",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_observations_entity",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_observation_versions_hash",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_observation_versions_entity",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_notifications_unread",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_notes_source_record",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_monitoring_due",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_module_metrics_window",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_module_event_inbox_pending",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_module_activity_source_time",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_module_activity_source_record",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_model_invocations_provider",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_memory_facts_unique",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_memory_facts_subject",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_jobs_trigger_event",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_jobs_pipeline_stage",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_jobs_investigation",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_jobs_freshness_key",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_jobs_dedupe_key",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_jobs_claim",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_jobs_approval_claim",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_job_events_job",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_job_event_links_once",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_job_event_links_event",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_job_dependencies_parent",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_investigation_observations_source",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_intel_reasoning_unique",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_intel_nodes_key",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_intel_edges_unique",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_intel_edges_src",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_intel_edges_dst",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_ingestion_batches_source_batch",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_inbox_decisions_id",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_inbox_candidates_queue",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_inbox_candidates_domain",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_inbox_candidates_decided",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_inbox_candidates_cluster",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_hypotheses_test",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_hunter_requests_key",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_hunter_proposals_key",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_hunter_operations_external",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_hunter_operations_campaign",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_human_checkpoints_open",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_health_checks_component",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_findings_source_record",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_finder_outcomes_id",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_finder_outcomes_domain",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_finder_hunts_state",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_feedback_push",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_experiment_assignments_subject",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_experience_source",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_experience_action",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_evidence_versions_hash",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_evidence_gaps_unique",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_evidence_gaps_status",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_event_store_investigation",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_event_store_event_id",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_event_store_dispatch",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_event_store_correlation",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_event_deliveries_once",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_event_deliveries_dispatch",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_event_dead_letters_open",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_entity_snapshots_subject",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_entity_changes_subject",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_entity_aliases_identity",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_entity_aliases_entity",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_discovery_paths_source_record",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_director_actions_pending",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_dead_letters_module_unresolved",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_contradictions_fingerprint",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_confidence_subject",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_campaigns_due",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_campaign_meta_work_item",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_campaign_members_investigation",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_campaign_members_domain",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_campaign_lineage_campaign",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_campaign_edges_unique",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_campaign_edges_campaign",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_campaign_costs_ref",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_campaign_artifacts_campaign",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_budget_ledger_ref",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_budget_ledger_day",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_automation_rules_trigger",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_audit_log_resource",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_audit_log_actor_time",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_ai_decisions_subject",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_agent_steps_no",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_agent_steps_job",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_agent_steps_investigation",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_agent_steps_fingerprint",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_agent_runs_due",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_agent_runs_active",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_agent_model_calls_run",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_agent_inferences_investigation",
+        "bytes": 4096
+      },
+      {
+        "name": "hypotheses",
+        "bytes": 4096
+      },
+      {
+        "name": "hunter_requests",
+        "bytes": 4096
+      },
+      {
+        "name": "hunter_proposals",
+        "bytes": 4096
+      },
+      {
+        "name": "human_checkpoints",
+        "bytes": 4096
+      },
+      {
+        "name": "health_checks",
+        "bytes": 4096
+      },
+      {
+        "name": "findings",
+        "bytes": 4096
+      },
+      {
+        "name": "finder_outcomes",
+        "bytes": 4096
+      },
+      {
+        "name": "finder_hunts",
+        "bytes": 4096
+      },
+      {
+        "name": "experiment_assignments",
+        "bytes": 4096
+      },
+      {
+        "name": "experience",
+        "bytes": 4096
+      },
+      {
+        "name": "expansion_candidates",
+        "bytes": 4096
+      },
+      {
+        "name": "evidence_versions",
+        "bytes": 4096
+      },
+      {
+        "name": "evidence_quality",
+        "bytes": 4096
+      },
+      {
+        "name": "evidence_gaps",
+        "bytes": 4096
+      },
+      {
+        "name": "event_store",
+        "bytes": 4096
+      },
+      {
+        "name": "event_deliveries",
+        "bytes": 4096
+      },
+      {
+        "name": "event_dead_letters",
+        "bytes": 4096
+      },
+      {
+        "name": "entity_snapshots",
+        "bytes": 4096
+      },
+      {
+        "name": "entity_facets",
+        "bytes": 4096
+      },
+      {
+        "name": "entity_changes",
+        "bytes": 4096
+      },
+      {
+        "name": "entity_analysis_state",
+        "bytes": 4096
+      },
+      {
+        "name": "entity_aliases",
+        "bytes": 4096
+      },
+      {
+        "name": "discovery_paths",
+        "bytes": 4096
+      },
+      {
+        "name": "discovery_feedback",
+        "bytes": 4096
+      },
+      {
+        "name": "director_retries",
+        "bytes": 4096
+      },
+      {
+        "name": "director_resources",
+        "bytes": 4096
+      },
+      {
+        "name": "director_reservations",
+        "bytes": 4096
+      },
+      {
+        "name": "director_provider_health",
+        "bytes": 4096
+      },
+      {
+        "name": "director_objectives",
+        "bytes": 4096
+      },
+      {
+        "name": "director_investigations",
+        "bytes": 4096
+      },
+      {
+        "name": "director_actions",
+        "bytes": 4096
+      },
+      {
+        "name": "dead_letters",
+        "bytes": 4096
+      },
+      {
+        "name": "cross_investigation_overlaps",
+        "bytes": 4096
+      },
+      {
+        "name": "contradictions",
+        "bytes": 4096
+      },
+      {
+        "name": "confidence_records",
+        "bytes": 4096
+      },
+      {
+        "name": "campaigns",
+        "bytes": 4096
+      },
+      {
+        "name": "campaign_meta",
+        "bytes": 4096
+      },
+      {
+        "name": "campaign_members",
+        "bytes": 4096
+      },
+      {
+        "name": "campaign_lineage",
+        "bytes": 4096
+      },
+      {
+        "name": "campaign_edges",
+        "bytes": 4096
+      },
+      {
+        "name": "campaign_costs",
+        "bytes": 4096
+      },
+      {
+        "name": "campaign_artifacts",
+        "bytes": 4096
+      },
+      {
+        "name": "budget_limits",
+        "bytes": 4096
+      },
+      {
+        "name": "budget_ledger",
+        "bytes": 4096
+      },
+      {
+        "name": "autonomy_searches",
+        "bytes": 4096
+      },
+      {
+        "name": "autonomy_search_due",
+        "bytes": 4096
+      },
+      {
+        "name": "autonomy_report_claims",
+        "bytes": 4096
+      },
+      {
+        "name": "autonomy_history",
+        "bytes": 4096
+      },
+      {
+        "name": "autonomy_checkpoints",
+        "bytes": 4096
+      },
+      {
+        "name": "autonomy_candidate_claims",
+        "bytes": 4096
+      },
+      {
+        "name": "autonomy_attention",
+        "bytes": 4096
+      },
+      {
+        "name": "autonomous_missions",
+        "bytes": 4096
+      },
+      {
+        "name": "automation_rules",
+        "bytes": 4096
+      },
+      {
+        "name": "automation_profiles",
+        "bytes": 4096
+      },
+      {
+        "name": "audit_log",
+        "bytes": 4096
+      },
+      {
+        "name": "approval_gates",
+        "bytes": 4096
+      },
+      {
+        "name": "analyst_conclusions",
+        "bytes": 4096
+      },
+      {
+        "name": "ai_decisions",
+        "bytes": 4096
+      },
+      {
+        "name": "agent_steps",
+        "bytes": 4096
+      },
+      {
+        "name": "agent_settings",
+        "bytes": 4096
+      },
+      {
+        "name": "agent_runs",
+        "bytes": 4096
+      },
+      {
+        "name": "agent_model_calls",
+        "bytes": 4096
+      },
+      {
+        "name": "agent_inferences",
+        "bytes": 4096
+      },
+      {
+        "name": "adaptive_scope_state",
+        "bytes": 4096
+      },
+      {
+        "name": "adaptive_saturation",
+        "bytes": 4096
+      },
+      {
+        "name": "adaptive_portfolio_time",
+        "bytes": 4096
+      },
+      {
+        "name": "adaptive_portfolio",
+        "bytes": 4096
+      },
+      {
+        "name": "adaptive_parking",
+        "bytes": 4096
+      },
+      {
+        "name": "adaptive_budget_adjustments",
+        "bytes": 4096
+      }
+    ],
+    "page_usage_after": [
+      {
+        "name": "operation_history",
+        "bytes": 20574208
+      },
+      {
+        "name": "adaptive_decision_components",
+        "bytes": 17612800
+      },
+      {
+        "name": "operation_edges",
+        "bytes": 12038144
+      },
+      {
+        "name": "sqlite_autoindex_adaptive_decision_components_1",
+        "bytes": 9564160
+      },
+      {
+        "name": "relationships",
+        "bytes": 8224768
+      },
+      {
+        "name": "adaptive_costs",
+        "bytes": 5931008
+      },
+      {
+        "name": "sqlite_autoindex_operation_history_2",
+        "bytes": 5775360
+      },
+      {
+        "name": "operation_history_time",
+        "bytes": 5722112
+      },
+      {
+        "name": "operation_edge_independence",
+        "bytes": 4501504
+      },
+      {
+        "name": "adaptive_gap_history",
+        "bytes": 4362240
+      },
+      {
+        "name": "sqlite_autoindex_operation_history_1",
+        "bytes": 4169728
+      },
+      {
+        "name": "scientific_history",
+        "bytes": 4018176
+      },
+      {
+        "name": "adaptive_outcomes",
+        "bytes": 3731456
+      },
+      {
+        "name": "relationship_evidence",
+        "bytes": 3575808
+      },
+      {
+        "name": "adaptive_gaps",
+        "bytes": 2768896
+      },
+      {
+        "name": "sqlite_autoindex_adaptive_costs_1",
+        "bytes": 2486272
+      },
+      {
+        "name": "adaptive_tests",
+        "bytes": 2428928
+      },
+      {
+        "name": "adaptive_outcome_family",
+        "bytes": 2396160
+      },
+      {
+        "name": "operation_edge_source",
+        "bytes": 2232320
+      },
+      {
+        "name": "operation_edge_target",
+        "bytes": 2228224
+      },
+      {
+        "name": "scientific_hypotheses",
+        "bytes": 2072576
+      },
+      {
+        "name": "adaptive_decisions",
+        "bytes": 2072576
+      },
+      {
+        "name": "adaptive_lineage",
+        "bytes": 1863680
+      },
+      {
+        "name": "scientific_observations",
+        "bytes": 1851392
+      },
+      {
+        "name": "idx_relationships_source_record",
+        "bytes": 1835008
+      },
+      {
+        "name": "sqlite_autoindex_scientific_history_2",
+        "bytes": 1662976
+      },
+      {
+        "name": "sqlite_autoindex_adaptive_gap_history_2",
+        "bytes": 1617920
+      },
+      {
+        "name": "scientific_history_scope",
+        "bytes": 1617920
+      },
+      {
+        "name": "scientific_commonality",
+        "bytes": 1581056
+      },
+      {
+        "name": "adaptive_gap_history_time",
+        "bytes": 1470464
+      },
+      {
+        "name": "idx_relationship_evidence_link",
+        "bytes": 1396736
+      },
+      {
+        "name": "sqlite_autoindex_adaptive_outcomes_1",
+        "bytes": 1376256
+      },
+      {
+        "name": "operation_relationship_target",
+        "bytes": 1273856
+      },
+      {
+        "name": "operation_relationship_source",
+        "bytes": 1273856
+      },
+      {
+        "name": "sqlite_autoindex_operation_edges_1",
+        "bytes": 1253376
+      },
+      {
+        "name": "investigation_entities",
+        "bytes": 1245184
+      },
+      {
+        "name": "entities",
+        "bytes": 1232896
+      },
+      {
+        "name": "idx_relationships_endpoints",
+        "bytes": 1155072
+      },
+      {
+        "name": "evidence",
+        "bytes": 1007616
+      },
+      {
+        "name": "sqlite_autoindex_adaptive_gap_history_1",
+        "bytes": 970752
+      },
+      {
+        "name": "sqlite_autoindex_adaptive_lineage_2",
+        "bytes": 950272
+      },
+      {
+        "name": "sqlite_autoindex_relationships_1",
+        "bytes": 946176
+      },
+      {
+        "name": "sqlite_autoindex_relationship_evidence_1",
+        "bytes": 901120
+      },
+      {
+        "name": "scientific_predictions",
+        "bytes": 864256
+      },
+      {
+        "name": "hunter_operation_members",
+        "bytes": 802816
+      },
+      {
+        "name": "operation_entities",
+        "bytes": 770048
+      },
+      {
+        "name": "sqlite_autoindex_scientific_history_1",
+        "bytes": 704512
+      },
+      {
+        "name": "adaptive_test_family",
+        "bytes": 704512
+      },
+      {
+        "name": "scientific_contradictions",
+        "bytes": 663552
+      },
+      {
+        "name": "adaptive_test_scope",
+        "bytes": 659456
+      },
+      {
+        "name": "sqlite_autoindex_adaptive_tests_3",
+        "bytes": 573440
+      },
+      {
+        "name": "adaptive_lineage_ref",
+        "bytes": 507904
+      },
+      {
+        "name": "sqlite_autoindex_scientific_observations_1",
+        "bytes": 499712
+      },
+      {
+        "name": "sqlite_autoindex_hunter_operation_members_1",
+        "bytes": 491520
+      },
+      {
+        "name": "adaptive_decision_status",
+        "bytes": 479232
+      },
+      {
+        "name": "adaptive_outcome_test",
+        "bytes": 462848
+      },
+      {
+        "name": "idx_investigation_entities_link",
+        "bytes": 446464
+      },
+      {
+        "name": "idx_hunter_members_key",
+        "bytes": 425984
+      },
+      {
+        "name": "idx_entities_type_key",
+        "bytes": 425984
+      },
+      {
+        "name": "adaptive_saturation",
+        "bytes": 421888
+      },
+      {
+        "name": "scientific_briefings",
+        "bytes": 385024
+      },
+      {
+        "name": "sqlite_autoindex_scientific_predictions_2",
+        "bytes": 356352
+      },
+      {
+        "name": "sqlite_autoindex_scientific_commonality_1",
+        "bytes": 356352
+      },
+      {
+        "name": "sqlite_autoindex_adaptive_lineage_1",
+        "bytes": 356352
+      },
+      {
+        "name": "sqlite_autoindex_adaptive_decisions_2",
+        "bytes": 352256
+      },
+      {
+        "name": "scientific_observation_scope",
+        "bytes": 327680
+      },
+      {
+        "name": "scientific_branches",
+        "bytes": 319488
+      },
+      {
+        "name": "operation_entity_lookup",
+        "bytes": 319488
+      },
+      {
+        "name": "sqlite_autoindex_adaptive_gaps_1",
+        "bytes": 299008
+      },
+      {
+        "name": "adaptive_gap_status",
+        "bytes": 299008
+      },
+      {
+        "name": "adaptive_decision_scope",
+        "bytes": 290816
+      },
+      {
+        "name": "adaptive_gap_family",
+        "bytes": 253952
+      },
+      {
+        "name": "idx_entities_investigation_type",
+        "bytes": 229376
+      },
+      {
+        "name": "sqlite_autoindex_operation_entities_1",
+        "bytes": 225280
+      },
+      {
+        "name": "idx_evidence_source_record",
+        "bytes": 204800
+      },
+      {
+        "name": "sqlite_autoindex_adaptive_saturation_1",
+        "bytes": 196608
+      },
+      {
+        "name": "scientific_conflict_status",
+        "bytes": 196608
+      },
+      {
+        "name": "evidence_investigation_recent",
+        "bytes": 196608
+      },
+      {
+        "name": "sqlite_autoindex_scientific_hypotheses_1",
+        "bytes": 188416
+      },
+      {
+        "name": "sqlite_autoindex_investigation_entities_1",
+        "bytes": 167936
+      },
+      {
+        "name": "scientific_plans",
+        "bytes": 167936
+      },
+      {
+        "name": "sqlite_autoindex_adaptive_decisions_1",
+        "bytes": 163840
+      },
+      {
+        "name": "sqlite_autoindex_entities_1",
+        "bytes": 159744
+      },
+      {
+        "name": "sqlite_autoindex_adaptive_tests_2",
+        "bytes": 159744
+      },
+      {
+        "name": "sqlite_autoindex_adaptive_tests_1",
+        "bytes": 159744
+      },
+      {
+        "name": "idx_investigation_entities_entity",
+        "bytes": 159744
+      },
+      {
+        "name": "sqlite_schema",
+        "bytes": 147456
+      },
+      {
+        "name": "sqlite_autoindex_scientific_contradictions_1",
+        "bytes": 118784
+      },
+      {
+        "name": "sqlite_autoindex_scientific_predictions_1",
+        "bytes": 98304
+      },
+      {
+        "name": "adaptive_test_work",
+        "bytes": 94208
+      },
+      {
+        "name": "adaptive_test_job",
+        "bytes": 94208
+      },
+      {
+        "name": "sqlite_autoindex_evidence_1",
+        "bytes": 86016
+      },
+      {
+        "name": "idx_evidence_entity",
+        "bytes": 81920
+      },
+      {
+        "name": "sqlite_autoindex_scientific_branches_1",
+        "bytes": 73728
+      },
+      {
+        "name": "autonomy_investigations",
+        "bytes": 69632
+      },
+      {
+        "name": "idx_evidence_sha256",
+        "bytes": 49152
+      },
+      {
+        "name": "intel_edges",
+        "bytes": 45056
+      },
+      {
+        "name": "investigations",
+        "bytes": 40960
+      },
+      {
+        "name": "director_objectives",
+        "bytes": 40960
+      },
+      {
+        "name": "intel_nodes",
+        "bytes": 36864
+      },
+      {
+        "name": "idx_intel_edges_unique",
+        "bytes": 28672
+      },
+      {
+        "name": "work_items",
+        "bytes": 24576
+      },
+      {
+        "name": "confidence_records",
+        "bytes": 24576
+      },
+      {
+        "name": "evidence_gaps",
+        "bytes": 20480
+      },
+      {
+        "name": "autonomous_missions",
+        "bytes": 20480
+      },
+      {
+        "name": "work_item_events",
+        "bytes": 16384
+      },
+      {
+        "name": "sqlite_autoindex_intel_nodes_1",
+        "bytes": 16384
+      },
+      {
+        "name": "autonomy_due",
+        "bytes": 16384
+      },
+      {
+        "name": "adaptive_scope_state",
+        "bytes": 16384
+      },
+      {
+        "name": "sqlite_autoindex_investigations_1",
+        "bytes": 12288
+      },
+      {
+        "name": "sqlite_autoindex_intel_edges_1",
+        "bytes": 12288
+      },
+      {
+        "name": "sqlite_autoindex_director_objectives_1",
+        "bytes": 12288
+      },
+      {
+        "name": "sqlite_autoindex_confidence_records_1",
+        "bytes": 12288
+      },
+      {
+        "name": "sqlite_autoindex_autonomy_investigations_1",
+        "bytes": 12288
+      },
+      {
+        "name": "scientific_sets",
+        "bytes": 12288
+      },
+      {
+        "name": "operation_state",
+        "bytes": 12288
+      },
+      {
+        "name": "investigation_timeline",
+        "bytes": 12288
+      },
+      {
+        "name": "idx_investigations_external_id",
+        "bytes": 12288
+      },
+      {
+        "name": "idx_intel_nodes_key",
+        "bytes": 12288
+      },
+      {
+        "name": "idx_intel_edges_src",
+        "bytes": 12288
+      },
+      {
+        "name": "idx_intel_edges_dst",
+        "bytes": 12288
+      },
+      {
+        "name": "idx_confidence_subject",
+        "bytes": 12288
+      },
+      {
+        "name": "hunter_operations",
+        "bytes": 12288
+      },
+      {
+        "name": "autonomy_history",
+        "bytes": 12288
+      },
+      {
+        "name": "work_target_terminal",
+        "bytes": 4096
+      },
+      {
+        "name": "wallet_observations",
+        "bytes": 4096
+      },
+      {
+        "name": "wallet_observation_domain",
+        "bytes": 4096
+      },
+      {
+        "name": "wallet_discovery_stats",
+        "bytes": 4096
+      },
+      {
+        "name": "wallet_candidates",
+        "bytes": 4096
+      },
+      {
+        "name": "wallet_candidate_address_proof",
+        "bytes": 4096
+      },
+      {
+        "name": "strategy_experiments",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_sequence",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_work_items_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_work_item_events_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_wallet_observations_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_wallet_discovery_stats_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_wallet_candidates_2",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_wallet_candidates_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_strategy_experiments_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_site_triage_2",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_site_triage_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_simulations_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_scientific_sets_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_scientific_reservations_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_scientific_plans_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_scientific_matches_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_scientific_briefings_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_scientific_boundaries_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_scheduler_ticks_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_review_queue_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_resolved_observations_2",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_resolved_observations_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_report_contents_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_report_candidates_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_relationship_versions_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_rate_limit_windows_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_planner_decisions_2",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_planner_decisions_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_pipeline_stages_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_ops_state_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_ops_notifications_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_ops_artifacts_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_opportunities_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_operator_commands_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_operation_state_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_operation_hypotheses_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_operation_hunts_2",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_operation_hunts_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_operation_facets_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_operation_decisions_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_operation_contradictions_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_operation_aliases_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_observations_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_observation_versions_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_notifications_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_notes_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_monitoring_targets_2",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_monitoring_targets_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_monitoring_snapshots_2",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_monitoring_snapshots_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_module_registry_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_module_metrics_2",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_module_metrics_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_module_event_inbox_2",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_module_event_inbox_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_module_destinations_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_module_activity_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_model_invocations_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_mission_resources_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_mission_reservations_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_mission_opportunities_3",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_mission_opportunities_2",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_mission_opportunities_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_mission_history_2",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_mission_history_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_memory_facts_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_jobs_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_job_events_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_job_event_links_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_job_dependencies_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_investigation_timeline_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_investigation_state_history_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_investigation_state_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_investigation_pipelines_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_investigation_observations_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_investigation_links_2",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_investigation_links_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_investigation_budgets_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_intel_reasoning_links_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_ingestion_batches_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_inbox_settings_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_inbox_candidates_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_hypotheses_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_hunter_requests_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_hunter_proposals_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_hunter_operations_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_human_checkpoints_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_health_checks_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_findings_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_finder_hunts_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_experiment_assignments_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_experience_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_expansion_candidates_2",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_expansion_candidates_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_evidence_versions_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_evidence_quality_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_evidence_gaps_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_event_store_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_event_deliveries_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_event_dead_letters_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_entity_snapshots_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_entity_facets_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_entity_changes_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_entity_analysis_state_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_entity_aliases_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_discovery_paths_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_discovery_feedback_2",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_discovery_feedback_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_director_retries_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_director_resources_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_director_reservations_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_director_provider_health_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_director_investigations_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_director_actions_2",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_director_actions_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_dead_letters_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_cross_investigation_overlaps_2",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_cross_investigation_overlaps_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_contradictions_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_campaigns_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_campaign_meta_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_campaign_members_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_campaign_lineage_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_campaign_edges_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_campaign_costs_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_campaign_artifacts_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_budget_limits_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_budget_ledger_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_autonomy_searches_2",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_autonomy_searches_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_autonomy_report_claims_3",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_autonomy_report_claims_2",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_autonomy_report_claims_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_autonomy_history_2",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_autonomy_history_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_autonomy_checkpoints_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_autonomy_candidate_claims_2",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_autonomy_candidate_claims_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_autonomous_missions_3",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_autonomous_missions_2",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_autonomous_missions_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_automation_rules_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_automation_profiles_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_audit_log_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_approval_gates_2",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_approval_gates_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_analyst_conclusions_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_ai_decisions_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_agent_steps_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_agent_settings_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_agent_runs_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_agent_model_calls_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_agent_inferences_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_adaptive_scope_state_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_adaptive_portfolio_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_adaptive_parking_1",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_adaptive_budget_adjustments_2",
+        "bytes": 4096
+      },
+      {
+        "name": "sqlite_autoindex_adaptive_budget_adjustments_1",
+        "bytes": 4096
+      },
+      {
+        "name": "site_triage",
+        "bytes": 4096
+      },
+      {
+        "name": "simulations",
+        "bytes": 4096
+      },
+      {
+        "name": "scientific_reservations",
+        "bytes": 4096
+      },
+      {
+        "name": "scientific_matches",
+        "bytes": 4096
+      },
+      {
+        "name": "scientific_boundaries",
+        "bytes": 4096
+      },
+      {
+        "name": "scheduler_ticks",
+        "bytes": 4096
+      },
+      {
+        "name": "review_queue",
+        "bytes": 4096
+      },
+      {
+        "name": "resolved_observations",
+        "bytes": 4096
+      },
+      {
+        "name": "report_contents",
+        "bytes": 4096
+      },
+      {
+        "name": "report_candidates",
+        "bytes": 4096
+      },
+      {
+        "name": "relationship_versions",
+        "bytes": 4096
+      },
+      {
+        "name": "rate_limit_windows",
+        "bytes": 4096
+      },
+      {
+        "name": "planner_decisions",
+        "bytes": 4096
+      },
+      {
+        "name": "pipeline_stages",
+        "bytes": 4096
+      },
+      {
+        "name": "ops_state",
+        "bytes": 4096
+      },
+      {
+        "name": "ops_notifications",
+        "bytes": 4096
+      },
+      {
+        "name": "ops_artifacts",
+        "bytes": 4096
+      },
+      {
+        "name": "opportunities",
+        "bytes": 4096
+      },
+      {
+        "name": "operator_commands",
+        "bytes": 4096
+      },
+      {
+        "name": "operation_state_queue",
+        "bytes": 4096
+      },
+      {
+        "name": "operation_hypotheses",
+        "bytes": 4096
+      },
+      {
+        "name": "operation_hunts",
+        "bytes": 4096
+      },
+      {
+        "name": "operation_hunt_status",
+        "bytes": 4096
+      },
+      {
+        "name": "operation_facets",
+        "bytes": 4096
+      },
+      {
+        "name": "operation_decisions",
+        "bytes": 4096
+      },
+      {
+        "name": "operation_contradictions",
+        "bytes": 4096
+      },
+      {
+        "name": "operation_aliases",
+        "bytes": 4096
+      },
+      {
+        "name": "observations",
+        "bytes": 4096
+      },
+      {
+        "name": "observation_versions",
+        "bytes": 4096
+      },
+      {
+        "name": "notifications",
+        "bytes": 4096
+      },
+      {
+        "name": "notes",
+        "bytes": 4096
+      },
+      {
+        "name": "monitoring_targets",
+        "bytes": 4096
+      },
+      {
+        "name": "monitoring_snapshots",
+        "bytes": 4096
+      },
+      {
+        "name": "module_registry",
+        "bytes": 4096
+      },
+      {
+        "name": "module_metrics",
+        "bytes": 4096
+      },
+      {
+        "name": "module_event_inbox",
+        "bytes": 4096
+      },
+      {
+        "name": "module_destinations",
+        "bytes": 4096
+      },
+      {
+        "name": "module_activity",
+        "bytes": 4096
+      },
+      {
+        "name": "model_invocations",
+        "bytes": 4096
+      },
+      {
+        "name": "mission_resources",
+        "bytes": 4096
+      },
+      {
+        "name": "mission_reservations",
+        "bytes": 4096
+      },
+      {
+        "name": "mission_opportunity_pending",
+        "bytes": 4096
+      },
+      {
+        "name": "mission_opportunities",
+        "bytes": 4096
+      },
+      {
+        "name": "mission_history",
+        "bytes": 4096
+      },
+      {
+        "name": "mission_fair_tick",
+        "bytes": 4096
+      },
+      {
+        "name": "mission_cost_root",
+        "bytes": 4096
+      },
+      {
+        "name": "memory_facts",
+        "bytes": 4096
+      },
+      {
+        "name": "jobs_target_proof",
+        "bytes": 4096
+      },
+      {
+        "name": "jobs",
+        "bytes": 4096
+      },
+      {
+        "name": "job_events",
+        "bytes": 4096
+      },
+      {
+        "name": "job_event_links",
+        "bytes": 4096
+      },
+      {
+        "name": "job_dependencies",
+        "bytes": 4096
+      },
+      {
+        "name": "investigation_state_history",
+        "bytes": 4096
+      },
+      {
+        "name": "investigation_state",
+        "bytes": 4096
+      },
+      {
+        "name": "investigation_pipelines",
+        "bytes": 4096
+      },
+      {
+        "name": "investigation_observations",
+        "bytes": 4096
+      },
+      {
+        "name": "investigation_links",
+        "bytes": 4096
+      },
+      {
+        "name": "investigation_budgets",
+        "bytes": 4096
+      },
+      {
+        "name": "intel_reasoning_links",
+        "bytes": 4096
+      },
+      {
+        "name": "ingestion_batches",
+        "bytes": 4096
+      },
+      {
+        "name": "inbox_supply_lock",
+        "bytes": 4096
+      },
+      {
+        "name": "inbox_settings",
+        "bytes": 4096
+      },
+      {
+        "name": "inbox_decisions",
+        "bytes": 4096
+      },
+      {
+        "name": "inbox_candidates",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_work_items_queue",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_work_items_fingerprint",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_work_items_campaign",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_work_item_events_item",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_wallet_observations_page",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_wallet_observations_candidate",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_wallet_candidates_status",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_timeline_pipeline_time",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_timeline_investigation_time",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_state_history_inv",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_site_triage_entity",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_scheduler_ticks_started",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_review_queue_status_priority",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_report_contents_investigation",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_relationship_versions_hash",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_planner_decisions_once",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_planner_decisions_inv",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_pipelines_investigation_status",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_pipeline_stages_key",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_ops_notifications_open",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_ops_artifacts_created",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_opportunities_queue",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_opportunities_fingerprint",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_observations_source_type_record",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_observations_entity",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_observation_versions_hash",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_observation_versions_entity",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_notifications_unread",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_notes_source_record",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_monitoring_due",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_module_metrics_window",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_module_event_inbox_pending",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_module_activity_source_time",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_module_activity_source_record",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_model_invocations_provider",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_memory_facts_unique",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_memory_facts_subject",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_jobs_trigger_event",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_jobs_pipeline_stage",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_jobs_investigation",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_jobs_freshness_key",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_jobs_dedupe_key",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_jobs_claim",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_jobs_approval_claim",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_job_events_job",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_job_event_links_once",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_job_event_links_event",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_job_dependencies_parent",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_investigation_observations_source",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_intel_reasoning_unique",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_ingestion_batches_source_batch",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_inbox_decisions_id",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_inbox_candidates_queue",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_inbox_candidates_domain",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_inbox_candidates_decided",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_inbox_candidates_cluster",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_hypotheses_test",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_hunter_requests_key",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_hunter_proposals_key",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_hunter_operations_external",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_hunter_operations_campaign",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_human_checkpoints_open",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_health_checks_component",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_findings_source_record",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_finder_outcomes_id",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_finder_outcomes_domain",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_finder_hunts_state",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_feedback_push",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_experiment_assignments_subject",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_experience_source",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_experience_action",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_evidence_versions_hash",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_evidence_gaps_unique",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_evidence_gaps_status",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_event_store_investigation",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_event_store_event_id",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_event_store_dispatch",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_event_store_correlation",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_event_deliveries_once",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_event_deliveries_dispatch",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_event_dead_letters_open",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_entity_snapshots_subject",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_entity_changes_subject",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_entity_aliases_identity",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_entity_aliases_entity",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_discovery_paths_source_record",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_director_actions_pending",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_dead_letters_module_unresolved",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_contradictions_fingerprint",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_campaigns_due",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_campaign_meta_work_item",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_campaign_members_investigation",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_campaign_members_domain",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_campaign_lineage_campaign",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_campaign_edges_unique",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_campaign_edges_campaign",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_campaign_costs_ref",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_campaign_artifacts_campaign",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_budget_ledger_ref",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_budget_ledger_day",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_automation_rules_trigger",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_audit_log_resource",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_audit_log_actor_time",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_ai_decisions_subject",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_agent_steps_no",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_agent_steps_job",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_agent_steps_investigation",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_agent_steps_fingerprint",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_agent_runs_due",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_agent_runs_active",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_agent_model_calls_run",
+        "bytes": 4096
+      },
+      {
+        "name": "idx_agent_inferences_investigation",
+        "bytes": 4096
+      },
+      {
+        "name": "hypotheses",
+        "bytes": 4096
+      },
+      {
+        "name": "hunter_requests",
+        "bytes": 4096
+      },
+      {
+        "name": "hunter_proposals",
+        "bytes": 4096
+      },
+      {
+        "name": "human_checkpoints",
+        "bytes": 4096
+      },
+      {
+        "name": "health_checks",
+        "bytes": 4096
+      },
+      {
+        "name": "findings",
+        "bytes": 4096
+      },
+      {
+        "name": "finder_outcomes",
+        "bytes": 4096
+      },
+      {
+        "name": "finder_hunts",
+        "bytes": 4096
+      },
+      {
+        "name": "experiment_assignments",
+        "bytes": 4096
+      },
+      {
+        "name": "experience",
+        "bytes": 4096
+      },
+      {
+        "name": "expansion_candidates",
+        "bytes": 4096
+      },
+      {
+        "name": "evidence_versions",
+        "bytes": 4096
+      },
+      {
+        "name": "evidence_quality",
+        "bytes": 4096
+      },
+      {
+        "name": "event_store",
+        "bytes": 4096
+      },
+      {
+        "name": "event_deliveries",
+        "bytes": 4096
+      },
+      {
+        "name": "event_dead_letters",
+        "bytes": 4096
+      },
+      {
+        "name": "entity_snapshots",
+        "bytes": 4096
+      },
+      {
+        "name": "entity_facets",
+        "bytes": 4096
+      },
+      {
+        "name": "entity_changes",
+        "bytes": 4096
+      },
+      {
+        "name": "entity_analysis_state",
+        "bytes": 4096
+      },
+      {
+        "name": "entity_aliases",
+        "bytes": 4096
+      },
+      {
+        "name": "discovery_paths",
+        "bytes": 4096
+      },
+      {
+        "name": "discovery_feedback",
+        "bytes": 4096
+      },
+      {
+        "name": "director_retries",
+        "bytes": 4096
+      },
+      {
+        "name": "director_resources",
+        "bytes": 4096
+      },
+      {
+        "name": "director_reservations",
+        "bytes": 4096
+      },
+      {
+        "name": "director_provider_health",
+        "bytes": 4096
+      },
+      {
+        "name": "director_investigations",
+        "bytes": 4096
+      },
+      {
+        "name": "director_actions",
+        "bytes": 4096
+      },
+      {
+        "name": "dead_letters",
+        "bytes": 4096
+      },
+      {
+        "name": "cross_investigation_overlaps",
+        "bytes": 4096
+      },
+      {
+        "name": "contradictions",
+        "bytes": 4096
+      },
+      {
+        "name": "campaigns",
+        "bytes": 4096
+      },
+      {
+        "name": "campaign_meta",
+        "bytes": 4096
+      },
+      {
+        "name": "campaign_members",
+        "bytes": 4096
+      },
+      {
+        "name": "campaign_lineage",
+        "bytes": 4096
+      },
+      {
+        "name": "campaign_edges",
+        "bytes": 4096
+      },
+      {
+        "name": "campaign_costs",
+        "bytes": 4096
+      },
+      {
+        "name": "campaign_artifacts",
+        "bytes": 4096
+      },
+      {
+        "name": "budget_limits",
+        "bytes": 4096
+      },
+      {
+        "name": "budget_ledger",
+        "bytes": 4096
+      },
+      {
+        "name": "autonomy_searches",
+        "bytes": 4096
+      },
+      {
+        "name": "autonomy_search_due",
+        "bytes": 4096
+      },
+      {
+        "name": "autonomy_report_claims",
+        "bytes": 4096
+      },
+      {
+        "name": "autonomy_checkpoints",
+        "bytes": 4096
+      },
+      {
+        "name": "autonomy_candidate_claims",
+        "bytes": 4096
+      },
+      {
+        "name": "autonomy_attention",
+        "bytes": 4096
+      },
+      {
+        "name": "automation_rules",
+        "bytes": 4096
+      },
+      {
+        "name": "automation_profiles",
+        "bytes": 4096
+      },
+      {
+        "name": "audit_log",
+        "bytes": 4096
+      },
+      {
+        "name": "approval_gates",
+        "bytes": 4096
+      },
+      {
+        "name": "analyst_conclusions",
+        "bytes": 4096
+      },
+      {
+        "name": "ai_decisions",
+        "bytes": 4096
+      },
+      {
+        "name": "agent_steps",
+        "bytes": 4096
+      },
+      {
+        "name": "agent_settings",
+        "bytes": 4096
+      },
+      {
+        "name": "agent_runs",
+        "bytes": 4096
+      },
+      {
+        "name": "agent_model_calls",
+        "bytes": 4096
+      },
+      {
+        "name": "agent_inferences",
+        "bytes": 4096
+      },
+      {
+        "name": "adaptive_portfolio_time",
+        "bytes": 4096
+      },
+      {
+        "name": "adaptive_portfolio",
+        "bytes": 4096
+      },
+      {
+        "name": "adaptive_parking",
+        "bytes": 4096
+      },
+      {
+        "name": "adaptive_budget_adjustments",
+        "bytes": 4096
+      }
+    ]
+  },
+  "scope": "Local file-backed SQLite through the D1 double and the real Main API routes; not a remote D1 service-level measurement."
+}

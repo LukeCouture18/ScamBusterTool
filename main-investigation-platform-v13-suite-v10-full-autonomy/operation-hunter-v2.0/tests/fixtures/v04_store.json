@@ -1,0 +1,2443 @@
+{
+  "version": 4,
+  "operations": [
+    {
+      "id": "op-arctic-drainer",
+      "code": "OP-ARCTIC-DRAINER",
+      "name": "Operation Arctic Drainer Syndicate",
+      "targetType": "domain",
+      "initialSeed": "eth-recovery-claim.top",
+      "status": "ACTIVE_RECONSTRUCTION",
+      "summary": "Multi-stage crypto-drainer operation impersonating official asset recovery portals. Rotates bulletproof Seychelles/Moldova hosting, shares SSL wildcard SANs, deploys obfuscated CryptoDrainer-X v2.4 JavaScript kits, and settles stolen tokens through automated intermediary splitter contracts before consolidating into an aggregator treasury wallet.",
+      "establishedFacts": [
+        "Active domain frontends: claim-revoke-portal.link, claim-refund-portal.click, crypto-vault-airdrop.top, eth-support-verification.top",
+        "Bulletproof hosting endpoints: 185.193.127.44, 194.26.29.112",
+        "Scam-kit fingerprint verified: CryptoDrainer-X v2.4 (DOM: e79a9f24)",
+        "Financial settlement addresses: 0x71c8282929d0..., 0x3a4f891002ec..., TQn9Y2vKm98Zg2..., 0x918a24c0032e..., 0x8578b8aaf7b1..."
+      ],
+      "uncertainties": [
+        "Unverified relationship (CONTROLS_WALLET): TRON address was found inside an HTML comment. Highly likely to be generic boilerplate leftover from a leaked template repo rather than operator controlled wallet. [INVALIDATED: Evidence ev-7 was marked invalid: \"Confirmed template developer boilerplate, not operator wallet\"]",
+        "Competing theories unresolved: Single Syndicate Common Operator (Arctic Drainer Group) VS Syndicated Drainer-as-a-Service (DaaS) Customer Cluster VS Shared Bulletproof Hosting Co-Tenancy"
+      ],
+      "recentChanges": [
+        "Detected infrastructure rotation: Primary domain eth-recovery-claim.top shifted to claim-revoke-portal.link at 2026-09-22.",
+        "Reappearance alert: New domain claim-refund-portal.click surfaced matching DOM hash e79a9f24 and GA ID G-99X4K21Z at 2026-09-24.",
+        "Aggregator wallet forwarded 14.8 ETH to Railgun privacy contract."
+      ],
+      "evidenceGaps": [
+        "Reverse DNS enumeration on offshore nameserver cluster pending.",
+        "Exit-node tracing to privacy mixers / CEX off-ramps pending."
+      ],
+      "unresolvedQuestions": [
+        "Does the operator manage their own smart contract or subscribe to a Drainer-as-a-Service (DaaS) 20% cut syndicate?",
+        "Who controls the offshore FlyHosting subnet 185.193.127.0/24?"
+      ],
+      "recommendedNextSteps": [
+        "Query Certificate Transparency logs for all subdomains under claim-asset-portal.com.",
+        "Execute reverse-IP DNS query on 185.193.127.44 to identify sibling active phishing portals.",
+        "Trace token approvals and batch-transfer logs on contract 0x71c8282929d0092e02e82110c49281a94b810b82."
+      ],
+      "createdAt": "2026-09-10T03:53:40.114Z",
+      "updatedAt": "2026-09-24T03:53:43.646Z"
+    }
+  ],
+  "seeds": [
+    {
+      "id": "seed-1",
+      "operationId": "op-arctic-drainer",
+      "type": "domain",
+      "value": "eth-recovery-claim.top",
+      "label": "Initial Phishing Portal Seed",
+      "addedAt": "2026-09-10T03:53:40.114Z",
+      "status": "expanded",
+      "notes": "Reported in victim triage log from Discord phishing incident"
+    },
+    {
+      "id": "seed-2",
+      "operationId": "op-arctic-drainer",
+      "type": "wallet",
+      "value": "0x71c8282929d0092e02e82110c49281a94b810b82",
+      "label": "Intermediary Drainer Contract",
+      "addedAt": "2026-09-14T03:53:40.114Z",
+      "status": "expanded",
+      "notes": "Extracted from victim MetaMask approval transaction payload"
+    },
+    {
+      "operationId": "op-arctic-drainer",
+      "type": "domain",
+      "value": "crypto-vault-airdrop.top",
+      "label": "Newly Reported Phishing Seed",
+      "status": "expanded",
+      "id": "seed-2e988c53",
+      "addedAt": "2026-09-24T03:53:40.116Z"
+    }
+  ],
+  "evidence": [
+    {
+      "operationId": "op-arctic-drainer",
+      "source": "onchain_mempool_indexer",
+      "type": "financial_convergence_divergence_graph",
+      "timestamp": "2026-09-24T03:53:40.165Z",
+      "originalObservation": "Identified 2 convergence hubs (Splitter: 0x71c8..., Treasury: 0x3a4f...) and 2 divergence off-ramps (Mixer: 0x12d6..., CEX Deposit: 0x28c6...). Total volume: 48.65 ETH ($170,275 USD equiv) with Arbitrum L2 and Tron TRC-20 cross-chain flows.",
+      "rawData": {
+        "totalEth": 48.65,
+        "convergenceNodes": [
+          {
+            "walletAddress": "0x71c8282929d0092e02e82110c49281a94b810b82",
+            "incomingFlowsCount": 14,
+            "totalReceivedEth": 48.65,
+            "role": "SPLITTER_INTERMEDIARY"
+          },
+          {
+            "walletAddress": "0x3a4f891002ec7922d99f110c01a082b99f2010aa",
+            "incomingFlowsCount": 8,
+            "totalReceivedEth": 38.92,
+            "role": "TREASURY_AGGREGATOR"
+          }
+        ],
+        "divergenceNodes": [
+          {
+            "destinationAddress": "0x12d66f87a04a9e220743712ce6d9bb1b5616b8fc",
+            "outflowCount": 3,
+            "totalSentEth": 14.8,
+            "destinationType": "MIXER_RELAY"
+          },
+          {
+            "destinationAddress": "0x28c6c06298d514db089934071355e5743bf21d60",
+            "outflowCount": 4,
+            "totalSentEth": 12.4,
+            "destinationType": "CEX_DEPOSIT"
+          }
+        ],
+        "timingPatterns": "Automated sweep execution occurs within 90 to 180 seconds of victim permit2 approval transaction confirmation.",
+        "transactionsCount": 8,
+        "crossChainNetworks": [
+          "ethereum",
+          "arbitrum",
+          "tron"
+        ]
+      },
+      "provenance": "onchain_financial_analyzer_v0.4",
+      "confidence": 0.99,
+      "status": "valid",
+      "relatedEntityIds": [],
+      "id": "ev-6874e2aa",
+      "sha256Hash": "ebfeab4f72de5dc2925a66527e575ee6d6d2c594b31f4cfc73afd87d98a183dc"
+    },
+    {
+      "operationId": "op-arctic-drainer",
+      "source": "genome_engine",
+      "type": "scam_kit_genome_profile",
+      "timestamp": "2026-09-24T03:53:40.164Z",
+      "originalObservation": "Extracted Scam-Kit Genome: Family=CryptoDrainer-X Variant=v2.4-obfuscated DOM-Hash=e79a9f24a1b02948",
+      "rawData": {
+        "genomeId": "genome-1",
+        "kitFamily": "CryptoDrainer-X",
+        "domAstHash": "e79a9f24a1b02948",
+        "vendorVsOperatorAnalysis": {
+          "kitVendorIndicators": [
+            "Commercial kit developer telegram contact link (t.me/CryptoDrainerDev)",
+            "Standardized DaaS 20% royalty batch-routing logic in obfuscated loader",
+            "Obfuscation packer: StringArrayRotation + XOR masking"
+          ],
+          "operatorSpecificIndicators": [
+            "Embedded Google Analytics tracker G-99X4K21Z",
+            "Configured victim drain receiver wallet: 0x71c8282929d0092e02e82110c49281a94b810b82",
+            "Consolidated treasury aggregation wallet: 0x3a4f891002ec7922d99f110c01a082b99f2010aa",
+            "Custom landing page lures (crypto asset recovery, revoke permissions)"
+          ],
+          "attributionBoundary": "CRITICAL BOUNDARY: The kit vendor wrote and syndicated the software; the syndicate operator purchased and configured it. Finding the kit signature proves software reuse, not common criminal ownership, unless operator wallets or tracking IDs match."
+        }
+      },
+      "provenance": "genome_engine_ast_analyzer_v0.4",
+      "confidence": 0.98,
+      "status": "valid",
+      "relatedEntityIds": [],
+      "id": "ev-0c9362f1",
+      "sha256Hash": "4d3d72180dc60c12e53eb4931fa69f25ffe8a870894a3f50c4a15c673d33e845"
+    },
+    {
+      "operationId": "op-arctic-drainer",
+      "source": "onchain_indexer",
+      "type": "blockchain_outflow_trace",
+      "timestamp": "2026-09-24T03:53:40.145Z",
+      "originalObservation": "Traced second-hop transactions from master treasury: 14.8 ETH sent to Railgun mixer contract; 8.2 ETH deposited to Binance account 0x918a24c...",
+      "rawData": {
+        "treasury": "0x3a4f891002ec7922d99f110c01a082b99f2010aa",
+        "mixer": "0x8578b8aaf7b145d8950889f44a994749f8d72832 (Railgun Relay)",
+        "cexDeposit": "0x918a24c0032e18d99f0128919b48991a0823410"
+      },
+      "provenance": "Automated Ethereum Ledger Trace Worker",
+      "confidence": 0.99,
+      "status": "valid",
+      "relatedEntityIds": [
+        "ent-a95f653d",
+        "ent-34aaea26"
+      ],
+      "id": "ev-74fc7dc7",
+      "sha256Hash": "18d9531d0ab1f9c57699be69c00a51bcaa2c8c85318d432fd1aca394cea7540a"
+    },
+    {
+      "operationId": "op-arctic-drainer",
+      "source": "passive_dns",
+      "type": "reverse_ns_enumeration",
+      "timestamp": "2026-09-24T03:53:40.131Z",
+      "originalObservation": "Reverse NS enumeration on ns1.offshore-dns.is uncovered newly registered domain eth-support-verification.top",
+      "rawData": {
+        "nameserver": "ns1.offshore-dns.is",
+        "discoveredDomain": "eth-support-verification.top"
+      },
+      "provenance": "Automated Passive DNS Reverse Query Worker",
+      "confidence": 0.96,
+      "status": "valid",
+      "relatedEntityIds": [
+        "ent-d727f093",
+        "ent-ns-1"
+      ],
+      "id": "ev-49cda1dc",
+      "sha256Hash": "710702c1c74ca5995649c3343400701e6119acf13fe27a2c51dd90ef87543f74"
+    },
+    {
+      "operationId": "op-arctic-drainer",
+      "source": "js_deobfuscator",
+      "type": "web3_contract_target",
+      "timestamp": "2026-09-24T03:53:40.117Z",
+      "originalObservation": "Deobfuscated client JS reveals Web3 provider interaction directed to contract 0x71c8282929d0092e02e82110c49281a94b810b82",
+      "rawData": {
+        "domain": "crypto-vault-airdrop.top",
+        "contract": "0x71c8282929d0092e02e82110c49281a94b810b82"
+      },
+      "provenance": "Static JS AST Deobfuscator",
+      "confidence": 0.98,
+      "status": "valid",
+      "relatedEntityIds": [
+        "ent-82a8b373",
+        "ent-contract-1"
+      ],
+      "id": "ev-f773c065",
+      "sha256Hash": "876014d3b61c244a1d8176230c64483a4a6eb60eb9a48b65ac1f25aff205a921"
+    },
+    {
+      "operationId": "op-arctic-drainer",
+      "source": "html_parser",
+      "type": "tag_identifier",
+      "timestamp": "2026-09-24T03:53:40.117Z",
+      "originalObservation": "Found embedded analytics tag G-99X4K21Z in client scripts of crypto-vault-airdrop.top",
+      "rawData": {
+        "domain": "crypto-vault-airdrop.top",
+        "tag": "G-99X4K21Z"
+      },
+      "provenance": "HTML Tag & Tracker Extractor",
+      "confidence": 0.99,
+      "status": "valid",
+      "relatedEntityIds": [
+        "ent-82a8b373",
+        "ent-id-1"
+      ],
+      "id": "ev-88ba8d4c",
+      "sha256Hash": "7e27a99ec8f0037b0c80317b962a51e041f6ade4e1353a22eb842ae3f313e9b2"
+    },
+    {
+      "operationId": "op-arctic-drainer",
+      "source": "dom_fingerprint",
+      "type": "html_scam_kit",
+      "timestamp": "2026-09-24T03:53:40.117Z",
+      "originalObservation": "HTML DOM tree on crypto-vault-airdrop.top matched signature for CryptoDrainer-X v2.4 with DOM AST hash e79a9f24a1b02948",
+      "rawData": {
+        "kit": "CryptoDrainer-X v2.4",
+        "domHash": "e79a9f24a1b02948",
+        "domain": "crypto-vault-airdrop.top"
+      },
+      "provenance": "Automated Headless DOM Harvester",
+      "confidence": 0.99,
+      "status": "valid",
+      "relatedEntityIds": [
+        "ent-82a8b373",
+        "ent-template-1"
+      ],
+      "id": "ev-bdc31bbe",
+      "sha256Hash": "48bd40a149fd1fa2d7fe85a1a4430e790455814e9855a1e157a4105be1ebf5ba"
+    },
+    {
+      "operationId": "op-arctic-drainer",
+      "source": "cert_transparency",
+      "type": "ssl_san_discovery",
+      "timestamp": "2026-09-24T03:53:40.117Z",
+      "originalObservation": "SSL Certificate for crypto-vault-airdrop.top shares Subject Alternative Name *.claim-asset-portal.com",
+      "rawData": {
+        "certFingerprint": "SHA256:8eb8e14bd423f411ef37032b...",
+        "san": [
+          "*.claim-asset-portal.com",
+          "crypto-vault-airdrop.top"
+        ],
+        "issuer": "ZeroSSL"
+      },
+      "provenance": "Certificate Transparency Log Ingestion",
+      "confidence": 0.95,
+      "status": "valid",
+      "relatedEntityIds": [
+        "ent-82a8b373",
+        "ent-2150c056"
+      ],
+      "id": "ev-ac530333",
+      "sha256Hash": "8014d1098d494e5fcaab11dbeb78e71fd155436138b24d407c34f29732db6b06"
+    },
+    {
+      "operationId": "op-arctic-drainer",
+      "source": "passive_dns",
+      "type": "dns_resolution",
+      "timestamp": "2026-09-24T03:53:40.117Z",
+      "originalObservation": "Domain crypto-vault-airdrop.top resolved to A record 185.193.127.44 via NS ns1.offshore-dns.is",
+      "rawData": {
+        "domain": "crypto-vault-airdrop.top",
+        "ip": "185.193.127.44",
+        "nameserver": "ns1.offshore-dns.is",
+        "asn": "AS209588 (FlyHosting Ltd)"
+      },
+      "provenance": "Passive DNS Sensor Network Query",
+      "confidence": 0.98,
+      "status": "valid",
+      "relatedEntityIds": [
+        "ent-82a8b373",
+        "ent-ip-1",
+        "ent-ns-1"
+      ],
+      "id": "ev-2a816e73",
+      "sha256Hash": "92892fb98f7bccff8e412a6ba76b800f9408c3d5779a0bb8e12037766cd6d08a"
+    },
+    {
+      "id": "ev-1",
+      "operationId": "op-arctic-drainer",
+      "source": "passive_dns",
+      "type": "dns_a_record",
+      "timestamp": "2026-09-10T03:53:40.114Z",
+      "originalObservation": "eth-recovery-claim.top resolved to IP 185.193.127.44 with TTL 300 via ns1.offshore-dns.is",
+      "rawData": {
+        "domain": "eth-recovery-claim.top",
+        "ip": "185.193.127.44",
+        "nameserver": "ns1.offshore-dns.is"
+      },
+      "sha256Hash": "a101b0928f0923e...",
+      "provenance": "SecurityTrails Passive DNS API v2 query at intake",
+      "confidence": 0.98,
+      "status": "valid",
+      "relatedEntityIds": [
+        "ent-domain-1",
+        "ent-ip-1",
+        "ent-ns-1"
+      ]
+    },
+    {
+      "id": "ev-2",
+      "operationId": "op-arctic-drainer",
+      "source": "cert_transparency",
+      "type": "ssl_san",
+      "timestamp": "2026-09-10T03:53:40.114Z",
+      "originalObservation": "Certificate serial 0x4891a82910 issued by ZeroSSL covers SANs *.claim-asset-portal.com and eth-recovery-claim.top",
+      "rawData": {
+        "serial": "0x4891a82910",
+        "san": [
+          "*.claim-asset-portal.com",
+          "eth-recovery-claim.top"
+        ],
+        "issuer": "ZeroSSL"
+      },
+      "sha256Hash": "b202c1938f0923f...",
+      "provenance": "crt.sh Transparency Log monitor stream",
+      "confidence": 0.95,
+      "status": "valid",
+      "relatedEntityIds": [
+        "ent-domain-1",
+        "ent-cert-1"
+      ]
+    },
+    {
+      "id": "ev-3",
+      "operationId": "op-arctic-drainer",
+      "source": "dom_fingerprint",
+      "type": "html_scam_kit",
+      "timestamp": "2026-09-10T03:53:40.114Z",
+      "originalObservation": "Client HTML on eth-recovery-claim.top contains CryptoDrainer-X v2.4 signature with GA ID G-99X4K21Z and Telegram hook @arctic_drain_support",
+      "rawData": {
+        "kit": "CryptoDrainer-X v2.4",
+        "domHash": "e79a9f24",
+        "gaId": "G-99X4K21Z",
+        "tg": "@arctic_drain_support"
+      },
+      "sha256Hash": "c303d2948f0923g...",
+      "provenance": "Headless DOM analyzer capture worker",
+      "confidence": 0.99,
+      "status": "valid",
+      "relatedEntityIds": [
+        "ent-domain-1",
+        "ent-template-1",
+        "ent-id-1",
+        "ent-id-2"
+      ]
+    },
+    {
+      "id": "ev-4",
+      "operationId": "op-arctic-drainer",
+      "source": "onchain_indexer",
+      "type": "tx_drain_flow",
+      "timestamp": "2026-09-14T03:53:40.114Z",
+      "originalObservation": "Contract 0x71c8282929d0092e02e82110c49281a94b810b82 forwarded 18 transactions totaling 36.4 ETH directly to treasury 0x3a4f891002ec7922d99f110c01a082b99f2010aa",
+      "rawData": {
+        "from": "0x71c8282929d0092e02e82110c49281a94b810b82",
+        "to": "0x3a4f891002ec7922d99f110c01a082b99f2010aa",
+        "count": 18,
+        "totalEth": 36.4
+      },
+      "sha256Hash": "d404e3958f0923h...",
+      "provenance": "Ethereum JSON-RPC transfer event filter logs",
+      "confidence": 1,
+      "status": "valid",
+      "relatedEntityIds": [
+        "ent-contract-1",
+        "ent-wallet-1"
+      ]
+    },
+    {
+      "id": "ev-5",
+      "operationId": "op-arctic-drainer",
+      "source": "passive_dns",
+      "type": "rotation_dns",
+      "timestamp": "2026-09-18T03:53:40.114Z",
+      "originalObservation": "New domain claim-revoke-portal.link spun up on Alexhost IP 194.26.29.112 using identical nameserver ns1.offshore-dns.is",
+      "rawData": {
+        "domain": "claim-revoke-portal.link",
+        "ip": "194.26.29.112",
+        "ns": "ns1.offshore-dns.is"
+      },
+      "sha256Hash": "e505f4968f0923i...",
+      "provenance": "Passive DNS telemetry feed rotation detection",
+      "confidence": 0.92,
+      "status": "valid",
+      "relatedEntityIds": [
+        "ent-domain-2",
+        "ent-ip-2",
+        "ent-ns-1"
+      ]
+    },
+    {
+      "id": "ev-6",
+      "operationId": "op-arctic-drainer",
+      "source": "dom_fingerprint",
+      "type": "html_scam_kit",
+      "timestamp": "2026-09-18T03:53:40.114Z",
+      "originalObservation": "claim-revoke-portal.link DOM hash matches e79a9f24 identically; embedded contract points to 0x71c8282929d0092e02e82110c49281a94b810b82",
+      "rawData": {
+        "domain": "claim-revoke-portal.link",
+        "domHash": "e79a9f24",
+        "contract": "0x71c8282929d0092e02e82110c49281a94b810b82"
+      },
+      "sha256Hash": "f606a5978f0923j...",
+      "provenance": "DOM diff worker inspection snapshot",
+      "confidence": 0.98,
+      "status": "valid",
+      "relatedEntityIds": [
+        "ent-domain-2",
+        "ent-template-1",
+        "ent-contract-1"
+      ]
+    },
+    {
+      "id": "ev-7",
+      "operationId": "op-arctic-drainer",
+      "source": "manual_analyst",
+      "type": "html_source_audit",
+      "timestamp": "2026-09-10T03:53:40.114Z",
+      "originalObservation": "TRON address TQn9Y2vKm98Zg24L9xP1w610kLM99aQz was present in commented-out footer snippet in raw index.html",
+      "rawData": {
+        "address": "TQn9Y2vKm98Zg24L9xP1w610kLM99aQz",
+        "context": "<!-- donate: TQn9... -->"
+      },
+      "sha256Hash": "0707b6988f0923k...",
+      "provenance": "Analyst manual code review of archive.org snapshot",
+      "confidence": 0.45,
+      "status": "invalidated",
+      "relatedEntityIds": [
+        "ent-domain-1",
+        "ent-wallet-2"
+      ],
+      "invalidationReason": "Confirmed template developer boilerplate, not operator wallet"
+    }
+  ],
+  "entities": [
+    {
+      "id": "ent-domain-1",
+      "operationId": "op-arctic-drainer",
+      "type": "domain",
+      "value": "eth-recovery-claim.top",
+      "label": "eth-recovery-claim.top",
+      "metadata": {
+        "registrar": "NameSilo",
+        "registrarCountry": "US",
+        "status": "clientHold"
+      },
+      "firstSeen": "2026-09-10T03:53:40.114Z",
+      "lastSeen": "2026-09-18T03:53:40.114Z",
+      "isActive": false,
+      "isSeed": true
+    },
+    {
+      "id": "ent-domain-2",
+      "operationId": "op-arctic-drainer",
+      "type": "domain",
+      "value": "claim-revoke-portal.link",
+      "label": "claim-revoke-portal.link",
+      "metadata": {
+        "registrar": "Nicenic",
+        "registrarCountry": "HK",
+        "status": "active"
+      },
+      "firstSeen": "2026-09-18T03:53:40.114Z",
+      "lastSeen": "2026-09-24T03:53:40.114Z",
+      "isActive": true
+    },
+    {
+      "id": "ent-domain-3",
+      "operationId": "op-arctic-drainer",
+      "type": "domain",
+      "value": "claim-refund-portal.click",
+      "label": "claim-refund-portal.click",
+      "metadata": {
+        "registrar": "Regery",
+        "registrarCountry": "UA",
+        "status": "active"
+      },
+      "firstSeen": "2026-09-22T03:53:40.114Z",
+      "lastSeen": "2026-09-24T03:53:40.114Z",
+      "isActive": true
+    },
+    {
+      "id": "ent-ip-1",
+      "operationId": "op-arctic-drainer",
+      "type": "ip",
+      "value": "185.193.127.44",
+      "label": "185.193.127.44 (FlyHosting)",
+      "metadata": {
+        "country": "SC",
+        "city": "Victoria",
+        "isp": "FlyHosting Bulletproof",
+        "asn": "AS209588 (FlyHosting Ltd)"
+      },
+      "firstSeen": "2026-09-10T03:53:40.114Z",
+      "lastSeen": "2026-09-24T03:53:40.117Z",
+      "isActive": true
+    },
+    {
+      "id": "ent-ip-2",
+      "operationId": "op-arctic-drainer",
+      "type": "ip",
+      "value": "194.26.29.112",
+      "label": "194.26.29.112 (Alexhost)",
+      "metadata": {
+        "country": "MD",
+        "city": "Chisinau",
+        "isp": "Alexhost SRL"
+      },
+      "firstSeen": "2026-09-18T03:53:40.114Z",
+      "lastSeen": "2026-09-24T03:53:40.114Z",
+      "isActive": true
+    },
+    {
+      "id": "ent-asn-1",
+      "operationId": "op-arctic-drainer",
+      "type": "asn",
+      "value": "AS209588",
+      "label": "AS209588 (FlyHosting Ltd)",
+      "metadata": {
+        "reputation": "high_abuse_bulletproof"
+      },
+      "firstSeen": "2026-09-10T03:53:40.114Z",
+      "lastSeen": "2026-09-24T03:53:40.114Z",
+      "isActive": true
+    },
+    {
+      "id": "ent-ns-1",
+      "operationId": "op-arctic-drainer",
+      "type": "nameserver",
+      "value": "ns1.offshore-dns.is",
+      "label": "ns1.offshore-dns.is",
+      "metadata": {
+        "nameserverType": "bulletproof_anycast",
+        "type": "bulletproof_nameserver"
+      },
+      "firstSeen": "2026-09-10T03:53:40.114Z",
+      "lastSeen": "2026-09-24T03:53:40.117Z",
+      "isActive": true
+    },
+    {
+      "id": "ent-cert-1",
+      "operationId": "op-arctic-drainer",
+      "type": "certificate",
+      "value": "SHA256:7f42a9b910c41094ba490...",
+      "label": "ZeroSSL: *.claim-asset-portal.com",
+      "metadata": {
+        "san": [
+          "*.claim-asset-portal.com",
+          "eth-recovery-claim.top"
+        ],
+        "issuer": "ZeroSSL RSA Domain Secure CA"
+      },
+      "firstSeen": "2026-09-10T03:53:40.114Z",
+      "lastSeen": "2026-09-24T03:53:40.114Z",
+      "isActive": true
+    },
+    {
+      "id": "ent-template-1",
+      "operationId": "op-arctic-drainer",
+      "type": "template",
+      "value": "CryptoDrainer-X_v2.4",
+      "label": "CryptoDrainer-X v2.4 (DOM: e79a9f24)",
+      "metadata": {
+        "domHash": "e79a9f24a1b02948",
+        "scriptSignature": "eval(atob(\"c3VzcGVjdA...\"))",
+        "engine": "Web3Modal-Drainer-Hook"
+      },
+      "firstSeen": "2026-09-10T03:53:40.114Z",
+      "lastSeen": "2026-09-24T03:53:40.117Z",
+      "isActive": true
+    },
+    {
+      "id": "ent-id-1",
+      "operationId": "op-arctic-drainer",
+      "type": "identifier",
+      "value": "G-99X4K21Z",
+      "label": "Google Analytics: G-99X4K21Z",
+      "metadata": {
+        "trackingType": "GA4",
+        "provider": "Google Analytics 4"
+      },
+      "firstSeen": "2026-09-10T03:53:40.114Z",
+      "lastSeen": "2026-09-24T03:53:40.117Z",
+      "isActive": true
+    },
+    {
+      "id": "ent-id-2",
+      "operationId": "op-arctic-drainer",
+      "type": "identifier",
+      "value": "@arctic_drain_support",
+      "label": "Telegram: @arctic_drain_support",
+      "metadata": {
+        "platform": "Telegram",
+        "channelType": "bot_support"
+      },
+      "firstSeen": "2026-09-14T03:53:40.114Z",
+      "lastSeen": "2026-09-24T03:53:40.114Z",
+      "isActive": true
+    },
+    {
+      "id": "ent-contract-1",
+      "operationId": "op-arctic-drainer",
+      "type": "contract",
+      "value": "0x71c8282929d0092e02e82110c49281a94b810b82",
+      "label": "Intermediary Drainer Splitter (ETH)",
+      "metadata": {
+        "network": "Ethereum",
+        "compiler": "Solidity 0.8.20",
+        "verified": false,
+        "targetFunction": "transferFrom(address,address,uint256)"
+      },
+      "firstSeen": "2026-09-10T03:53:40.114Z",
+      "lastSeen": "2026-09-24T03:53:40.117Z",
+      "isActive": true,
+      "isSeed": true
+    },
+    {
+      "id": "ent-wallet-1",
+      "operationId": "op-arctic-drainer",
+      "type": "wallet",
+      "value": "0x3a4f891002ec7922d99f110c01a082b99f2010aa",
+      "label": "Primary Aggregator Treasury (ETH)",
+      "metadata": {
+        "network": "Ethereum",
+        "balanceEth": "42.84",
+        "totalStolenUsd": "$148,200"
+      },
+      "firstSeen": "2026-09-14T03:53:40.114Z",
+      "lastSeen": "2026-09-24T03:53:40.114Z",
+      "isActive": true
+    },
+    {
+      "id": "ent-wallet-2",
+      "operationId": "op-arctic-drainer",
+      "type": "wallet",
+      "value": "TQn9Y2vKm98Zg24L9xP1w610kLM99aQz",
+      "label": "Boilerplate Deposit Address (TRON)",
+      "metadata": {
+        "network": "TRON",
+        "balanceTrx": "0",
+        "note": "Possible decoy / template default"
+      },
+      "firstSeen": "2026-09-10T03:53:40.114Z",
+      "lastSeen": "2026-09-18T03:53:40.114Z",
+      "isActive": false
+    },
+    {
+      "id": "ent-82a8b373",
+      "operationId": "op-arctic-drainer",
+      "type": "domain",
+      "value": "crypto-vault-airdrop.top",
+      "label": "Newly Reported Phishing Seed",
+      "metadata": {
+        "seedSource": "analyst_pivot",
+        "registrar": "PrivacyProtect / Offshore",
+        "status": "active"
+      },
+      "firstSeen": "2026-09-24T03:53:40.116Z",
+      "lastSeen": "2026-09-24T03:53:40.117Z",
+      "isActive": true,
+      "isSeed": true
+    },
+    {
+      "operationId": "op-arctic-drainer",
+      "type": "certificate",
+      "value": "SHA256:8eb8e14bd423f411ef37032b...",
+      "label": "ZeroSSL: *.claim-asset-portal.com",
+      "metadata": {
+        "san": [
+          "*.claim-asset-portal.com",
+          "crypto-vault-airdrop.top"
+        ],
+        "issuer": "ZeroSSL RSA Domain Secure CA"
+      },
+      "firstSeen": "2026-09-24T03:53:40.117Z",
+      "lastSeen": "2026-09-24T03:53:40.117Z",
+      "isActive": true,
+      "id": "ent-2150c056"
+    },
+    {
+      "operationId": "op-arctic-drainer",
+      "type": "domain",
+      "value": "eth-support-verification.top",
+      "label": "eth-support-verification.top",
+      "metadata": {
+        "registrar": "NameSilo",
+        "discovery": "Reverse NS lookup",
+        "status": "standby"
+      },
+      "firstSeen": "2026-09-24T03:53:40.131Z",
+      "lastSeen": "2026-09-24T03:53:40.131Z",
+      "isActive": true,
+      "id": "ent-d727f093"
+    },
+    {
+      "operationId": "op-arctic-drainer",
+      "type": "wallet",
+      "value": "0x918a24c0032e18d99f0128919b48991a0823410",
+      "label": "Binance Hot Wallet Deposit (0x918a...)",
+      "metadata": {
+        "tag": "Binance Deposit Hop",
+        "kycPotential": "High"
+      },
+      "firstSeen": "2026-09-24T03:53:40.145Z",
+      "lastSeen": "2026-09-24T03:53:40.145Z",
+      "isActive": true,
+      "id": "ent-a95f653d"
+    },
+    {
+      "operationId": "op-arctic-drainer",
+      "type": "contract",
+      "value": "0x8578b8aaf7b145d8950889f44a994749f8d72832 (Railgun Relay)",
+      "label": "Railgun Privacy Contract Relay",
+      "metadata": {
+        "tag": "Privacy Pool",
+        "mixerType": "Zero-Knowledge Relay"
+      },
+      "firstSeen": "2026-09-24T03:53:40.145Z",
+      "lastSeen": "2026-09-24T03:53:40.145Z",
+      "isActive": true,
+      "id": "ent-34aaea26"
+    }
+  ],
+  "relationships": [
+    {
+      "id": "rel-1",
+      "operationId": "op-arctic-drainer",
+      "sourceEntityId": "ent-domain-1",
+      "targetEntityId": "ent-ip-1",
+      "type": "RESOLVES_TO",
+      "state": "OBSERVED",
+      "confidence": 0.98,
+      "reasoning": "Direct DNS A-record mapping verified through multiple vantage point resolvers.",
+      "evidenceIds": [
+        "ev-1"
+      ],
+      "firstObserved": "2026-09-10T03:53:40.114Z",
+      "lastObserved": "2026-09-18T03:53:40.114Z"
+    },
+    {
+      "id": "rel-2",
+      "operationId": "op-arctic-drainer",
+      "sourceEntityId": "ent-domain-1",
+      "targetEntityId": "ent-cert-1",
+      "type": "CERTIFIED_BY",
+      "state": "OBSERVED",
+      "confidence": 0.95,
+      "reasoning": "SSL Certificate SAN includes domain explicitly with shared serial.",
+      "evidenceIds": [
+        "ev-2"
+      ],
+      "firstObserved": "2026-09-10T03:53:40.114Z",
+      "lastObserved": "2026-09-24T03:53:40.114Z"
+    },
+    {
+      "id": "rel-3",
+      "operationId": "op-arctic-drainer",
+      "sourceEntityId": "ent-domain-1",
+      "targetEntityId": "ent-template-1",
+      "type": "EXECUTES_TEMPLATE",
+      "state": "SUPPORTED",
+      "confidence": 0.99,
+      "reasoning": "DOM structure, base64 payload, and CSS asset hashes match CryptoDrainer-X signature exactly.",
+      "evidenceIds": [
+        "ev-3"
+      ],
+      "firstObserved": "2026-09-10T03:53:40.114Z",
+      "lastObserved": "2026-09-18T03:53:40.114Z"
+    },
+    {
+      "id": "rel-4",
+      "operationId": "op-arctic-drainer",
+      "sourceEntityId": "ent-domain-1",
+      "targetEntityId": "ent-id-1",
+      "type": "USES_IDENTIFIER",
+      "state": "OBSERVED",
+      "confidence": 0.99,
+      "reasoning": "Google Analytics tag G-99X4K21Z embedded in page header.",
+      "evidenceIds": [
+        "ev-3"
+      ],
+      "firstObserved": "2026-09-10T03:53:40.114Z",
+      "lastObserved": "2026-09-18T03:53:40.114Z"
+    },
+    {
+      "id": "rel-5",
+      "operationId": "op-arctic-drainer",
+      "sourceEntityId": "ent-contract-1",
+      "targetEntityId": "ent-wallet-1",
+      "type": "FUNDS_TRANSFER",
+      "state": "SUPPORTED",
+      "confidence": 1,
+      "reasoning": "Cryptographic on-chain transaction records prove 18 direct bulk ETH transfers from drainer contract to treasury.",
+      "evidenceIds": [
+        "ev-4"
+      ],
+      "firstObserved": "2026-09-14T03:53:40.114Z",
+      "lastObserved": "2026-09-24T03:53:40.114Z"
+    },
+    {
+      "id": "rel-6",
+      "operationId": "op-arctic-drainer",
+      "sourceEntityId": "ent-domain-1",
+      "targetEntityId": "ent-domain-2",
+      "type": "ROTATED_TO",
+      "state": "CORRELATED",
+      "confidence": 0.92,
+      "reasoning": "After domain-1 was flagged on clientHold, domain-2 appeared with identical template, identical nameservers, and exact same drainer contract address.",
+      "evidenceIds": [
+        "ev-5",
+        "ev-6"
+      ],
+      "firstObserved": "2026-09-18T03:53:40.114Z",
+      "lastObserved": "2026-09-24T03:53:40.114Z"
+    },
+    {
+      "id": "rel-7",
+      "operationId": "op-arctic-drainer",
+      "sourceEntityId": "ent-domain-1",
+      "targetEntityId": "ent-wallet-2",
+      "type": "CONTROLS_WALLET",
+      "state": "CONTRADICTED",
+      "confidence": 0.05,
+      "reasoning": "TRON address was found inside an HTML comment. Highly likely to be generic boilerplate leftover from a leaked template repo rather than operator controlled wallet. [INVALIDATED: Evidence ev-7 was marked invalid: \"Confirmed template developer boilerplate, not operator wallet\"]",
+      "evidenceIds": [
+        "ev-7"
+      ],
+      "firstObserved": "2026-09-10T03:53:40.114Z",
+      "lastObserved": "2026-09-18T03:53:40.114Z",
+      "contradictingEvidenceIds": [
+        "ev-7"
+      ]
+    },
+    {
+      "operationId": "op-arctic-drainer",
+      "sourceEntityId": "ent-82a8b373",
+      "targetEntityId": "ent-ip-1",
+      "type": "RESOLVES_TO",
+      "state": "OBSERVED",
+      "confidence": 0.98,
+      "reasoning": "Authoritative DNS query returned A record 185.193.127.44",
+      "evidenceIds": [
+        "ev-2a816e73"
+      ],
+      "firstObserved": "2026-09-24T03:53:40.117Z",
+      "lastObserved": "2026-09-24T03:53:40.117Z",
+      "id": "rel-0cb295c4"
+    },
+    {
+      "operationId": "op-arctic-drainer",
+      "sourceEntityId": "ent-82a8b373",
+      "targetEntityId": "ent-2150c056",
+      "type": "CERTIFIED_BY",
+      "state": "OBSERVED",
+      "confidence": 0.95,
+      "reasoning": "Certificate presented on port 443 lists both host and wildcard SAN",
+      "evidenceIds": [
+        "ev-ac530333"
+      ],
+      "firstObserved": "2026-09-24T03:53:40.117Z",
+      "lastObserved": "2026-09-24T03:53:40.117Z",
+      "id": "rel-6ad77396"
+    },
+    {
+      "operationId": "op-arctic-drainer",
+      "sourceEntityId": "ent-82a8b373",
+      "targetEntityId": "ent-template-1",
+      "type": "EXECUTES_TEMPLATE",
+      "state": "SUPPORTED",
+      "confidence": 0.99,
+      "reasoning": "AST structure and JavaScript payload match known signature of CryptoDrainer-X v2.4",
+      "evidenceIds": [
+        "ev-bdc31bbe"
+      ],
+      "firstObserved": "2026-09-24T03:53:40.117Z",
+      "lastObserved": "2026-09-24T03:53:40.117Z",
+      "id": "rel-5bd8882a"
+    },
+    {
+      "operationId": "op-arctic-drainer",
+      "sourceEntityId": "ent-82a8b373",
+      "targetEntityId": "ent-id-1",
+      "type": "USES_IDENTIFIER",
+      "state": "OBSERVED",
+      "confidence": 0.99,
+      "reasoning": "Hardcoded Google Analytics tracking script detected in HTML source",
+      "evidenceIds": [
+        "ev-88ba8d4c"
+      ],
+      "firstObserved": "2026-09-24T03:53:40.117Z",
+      "lastObserved": "2026-09-24T03:53:40.117Z",
+      "id": "rel-826be9fc"
+    },
+    {
+      "operationId": "op-arctic-drainer",
+      "sourceEntityId": "ent-82a8b373",
+      "targetEntityId": "ent-contract-1",
+      "type": "CONTROLS_WALLET",
+      "state": "SUPPORTED",
+      "confidence": 0.98,
+      "reasoning": "Site actively executes approval and transfer transactions targeting contract 0x71c8282929d0092e02e82110c49281a94b810b82",
+      "evidenceIds": [
+        "ev-f773c065"
+      ],
+      "firstObserved": "2026-09-24T03:53:40.117Z",
+      "lastObserved": "2026-09-24T03:53:40.117Z",
+      "id": "rel-7ffdd63a"
+    },
+    {
+      "operationId": "op-arctic-drainer",
+      "sourceEntityId": "ent-d727f093",
+      "targetEntityId": "ent-ns-1",
+      "type": "SHARED_INFRASTRUCTURE",
+      "state": "OBSERVED",
+      "confidence": 0.96,
+      "reasoning": "Domain delegates authoritative DNS to ns1.offshore-dns.is",
+      "evidenceIds": [
+        "ev-49cda1dc"
+      ],
+      "firstObserved": "2026-09-24T03:53:40.131Z",
+      "lastObserved": "2026-09-24T03:53:40.131Z",
+      "id": "rel-51cd264e"
+    },
+    {
+      "operationId": "op-arctic-drainer",
+      "sourceEntityId": "ent-wallet-1",
+      "targetEntityId": "ent-34aaea26",
+      "type": "FUNDS_TRANSFER",
+      "state": "OBSERVED",
+      "confidence": 0.99,
+      "reasoning": "On-chain transaction forward to privacy mixer contract",
+      "evidenceIds": [
+        "ev-74fc7dc7"
+      ],
+      "firstObserved": "2026-09-24T03:53:40.145Z",
+      "lastObserved": "2026-09-24T03:53:40.145Z",
+      "id": "rel-92d34aeb"
+    },
+    {
+      "operationId": "op-arctic-drainer",
+      "sourceEntityId": "ent-wallet-1",
+      "targetEntityId": "ent-a95f653d",
+      "type": "FUNDS_TRANSFER",
+      "state": "SUPPORTED",
+      "confidence": 0.99,
+      "reasoning": "On-chain transaction deposit to centralized exchange hot wallet",
+      "evidenceIds": [
+        "ev-74fc7dc7"
+      ],
+      "firstObserved": "2026-09-24T03:53:40.145Z",
+      "lastObserved": "2026-09-24T03:53:40.145Z",
+      "id": "rel-8d15e38a"
+    }
+  ],
+  "hypotheses": [
+    {
+      "id": "hyp-1",
+      "operationId": "op-arctic-drainer",
+      "title": "Single Syndicate Common Operator (Arctic Drainer Group)",
+      "description": "Both eth-recovery-claim.top and claim-revoke-portal.link are directly owned and operated by the same organized threat group, maintaining unified control over infrastructure migration, DNS, and settlement wallets.",
+      "category": "COMMON_OPERATOR",
+      "status": "STRONGLY_SUPPORTED",
+      "confidenceScore": 0.99,
+      "supportingEvidenceIds": [
+        "ev-1",
+        "ev-3",
+        "ev-4",
+        "ev-5",
+        "ev-6"
+      ],
+      "contradictingEvidenceIds": [],
+      "supportingObservations": [
+        "Both portals route victim token approvals to the exact same contract (0x71c8...b82).",
+        "Identical nameservers (ns1.offshore-dns.is) reused during host rotation.",
+        "Identical Google Analytics tag G-99X4K21Z maintained across migrations.",
+        "Exact DOM hash match and custom @arctic_drain_support contact handle."
+      ],
+      "contradictingObservations": [],
+      "conditionsToStrengthen": [
+        "Discovery of registrar account or payment correlation linking NameSilo and Nicenic registrations.",
+        "Extraction of private admin keys or API tokens in server configs."
+      ],
+      "conditionsToWeaken": [
+        "Evidence that 0x71c8...b82 is an open public factory contract utilized by hundreds of distinct unrelated phishing gangs.",
+        "Public GitHub leak of the exact template including the G-99X4K21Z tag."
+      ],
+      "conditionsToResolve": [
+        "Proof that smart contract split includes a DaaS platform cut forwarding to an external operator."
+      ],
+      "competingHypothesisIds": [
+        "hyp-2",
+        "hyp-3"
+      ],
+      "aiGenerated": false,
+      "createdAt": "2026-09-10T03:53:40.114Z",
+      "updatedAt": "2026-09-24T03:53:43.646Z"
+    },
+    {
+      "id": "hyp-2",
+      "operationId": "op-arctic-drainer",
+      "title": "Syndicated Drainer-as-a-Service (DaaS) Customer Cluster",
+      "description": "The domains represent distinct independent cybercrime affiliates who both purchase turnkey phishing kit instances from a common DaaS vendor who provides the template and default contracts.",
+      "category": "SCAM_KIT_SYNDICATION",
+      "status": "CONTRADICTED",
+      "confidenceScore": 0.05,
+      "supportingEvidenceIds": [
+        "ev-3"
+      ],
+      "contradictingEvidenceIds": [
+        "ev-4",
+        "ev-6"
+      ],
+      "supportingObservations": [
+        "CryptoDrainer-X v2.4 kit is known to be traded on darknet forums."
+      ],
+      "contradictingObservations": [
+        "The exact same intermediate contract and final treasury wallet receive 100% of proceeds without standard 20% affiliate split events.",
+        "Domain rotation occurred within 4 hours of the first domain being taken down, showing coordinated continuity."
+      ],
+      "conditionsToStrengthen": [
+        "Identification of other unrelated campaigns sending proceeds to different wallets with the same template."
+      ],
+      "conditionsToWeaken": [
+        "Exclusive financial funneling to 0x3a4f... aggregator wallet."
+      ],
+      "conditionsToResolve": [
+        "Decompilation of contract payout logic."
+      ],
+      "competingHypothesisIds": [
+        "hyp-1"
+      ],
+      "aiGenerated": false,
+      "createdAt": "2026-09-14T03:53:40.114Z",
+      "updatedAt": "2026-09-24T03:53:43.647Z"
+    },
+    {
+      "id": "hyp-3",
+      "operationId": "op-arctic-drainer",
+      "title": "Shared Bulletproof Hosting Co-Tenancy",
+      "description": "The IP addresses (185.193.127.44 and 194.26.29.112) are general-purpose offshore proxy hosts, and any other domains observed on these IPs may be coincidental neighbor websites.",
+      "category": "SHARED_BULLETPROOF_HOSTING",
+      "status": "STRONGLY_SUPPORTED",
+      "confidenceScore": 0.84,
+      "supportingEvidenceIds": [
+        "ev-1",
+        "ev-5"
+      ],
+      "contradictingEvidenceIds": [],
+      "supportingObservations": [
+        "FlyHosting and Alexhost are commercial bulletproof providers hosting hundreds of unrelated grey/black hat services.",
+        "Passive DNS shows 80+ other active hostnames mapped to 185.193.127.44."
+      ],
+      "contradictingObservations": [
+        "The Arctic Drainer operation specifically migrated between these two distinct ASNs, maintaining identical nameserver setup."
+      ],
+      "conditionsToStrengthen": [
+        "Reverse IP enumeration showing e-commerce or gaming sites on the same IP."
+      ],
+      "conditionsToWeaken": [
+        "Finding that all other hostnames on 185.193.127.44 belong to the same wildcard cert."
+      ],
+      "conditionsToResolve": [
+        "Host server header fingerprinting or TLS handshake fingerprint comparison."
+      ],
+      "competingHypothesisIds": [
+        "hyp-1"
+      ],
+      "aiGenerated": false,
+      "createdAt": "2026-09-18T03:53:40.114Z",
+      "updatedAt": "2026-09-24T03:53:43.647Z"
+    }
+  ],
+  "leads": [
+    {
+      "id": "lead-1",
+      "operationId": "op-arctic-drainer",
+      "title": "Pivot on Nameserver ns1.offshore-dns.is for Associated Domains",
+      "description": "Enumerate other domain names utilizing this specific bulletproof nameserver authority to locate precursor or standby failover domains in the Arctic network.",
+      "targetType": "nameserver",
+      "targetValue": "ns1.offshore-dns.is",
+      "pivotType": "PASSIVE_DNS_REVERSE_NS",
+      "priorityScore": 92,
+      "reasoning": "Reused across both hosting migrations; high probability of discovering newly registered backup domains before deployment.",
+      "expectedInfoGain": 9,
+      "noveltyScore": 8,
+      "costEstimate": "low",
+      "status": "COMPLETED",
+      "relatedHypothesisIds": [
+        "hyp-1",
+        "hyp-3"
+      ],
+      "executionActionKey": "PIVOT_REVERSE_NS",
+      "createdAt": "2026-09-18T03:53:40.114Z"
+    },
+    {
+      "id": "lead-2",
+      "operationId": "op-arctic-drainer",
+      "title": "Analyze Outgoing Transactions from Treasury Wallet 0x3a4f...",
+      "description": "Trace hop transactions and mixer interactions from the consolidated aggregator address to identify exchange deposit addresses or fiat off-ramps.",
+      "targetType": "wallet",
+      "targetValue": "0x3a4f891002ec7922d99f110c01a082b99f2010aa",
+      "pivotType": "BLOCKCHAIN_TRACE_OUTFLOW",
+      "priorityScore": 88,
+      "reasoning": "Directly follows the money; high probability of identifying KYC exchange clusters or privacy pool exit points.",
+      "expectedInfoGain": 10,
+      "noveltyScore": 7,
+      "costEstimate": "medium",
+      "status": "COMPLETED",
+      "relatedHypothesisIds": [
+        "hyp-1"
+      ],
+      "executionActionKey": "TRACE_WALLET_OUTFLOW",
+      "createdAt": "2026-09-18T03:53:40.114Z"
+    },
+    {
+      "id": "lead-3",
+      "operationId": "op-arctic-drainer",
+      "title": "Certificate Transparency Search on *.claim-asset-portal.com",
+      "description": "Enumerate all subdomains and historical certificates sharing the same subject alternative name or ZeroSSL account thumbprint.",
+      "targetType": "certificate",
+      "targetValue": "*.claim-asset-portal.com",
+      "pivotType": "CERT_SAN_SUBDOMAIN_SEARCH",
+      "priorityScore": 79,
+      "reasoning": "Wildcard SAN indicates infrastructure intention for multiple dynamic phishing subdomains.",
+      "expectedInfoGain": 7,
+      "noveltyScore": 6,
+      "costEstimate": "low",
+      "status": "COMPLETED",
+      "relatedHypothesisIds": [
+        "hyp-1"
+      ],
+      "executionActionKey": "EXPAND_CERT_SANS",
+      "createdAt": "2026-09-14T03:53:40.114Z"
+    },
+    {
+      "id": "lead-4",
+      "operationId": "op-arctic-drainer",
+      "title": "Disregard TRON Commented Address (Dead End)",
+      "description": "Address TQn9Y2... has zero transactions, zero balance, and appears identically in generic GitHub template leaks. Avoid wasting investigative budget on this branch.",
+      "targetType": "wallet",
+      "targetValue": "TQn9Y2vKm98Zg24L9xP1w610kLM99aQz",
+      "pivotType": "BRANCH_EXHAUSTION",
+      "priorityScore": 12,
+      "reasoning": "Exhausted node: Low confidence, zero activity on-chain, confirmed template boilerplate artifact.",
+      "expectedInfoGain": 1,
+      "noveltyScore": 1,
+      "costEstimate": "high",
+      "status": "EXHAUSTED",
+      "relatedHypothesisIds": [],
+      "createdAt": "2026-09-18T03:53:40.114Z"
+    }
+  ],
+  "reappearanceFingerprints": [
+    {
+      "id": "fp-1",
+      "operationId": "op-arctic-drainer",
+      "signatureType": "template_dom_hash",
+      "signatureValue": "e79a9f24a1b02948",
+      "description": "CryptoDrainer-X v2.4 normalized DOM AST structure and element class hierarchy",
+      "activeWindow": "2026-Q1 to 2026-Q3",
+      "confidenceWeight": 0.95
+    },
+    {
+      "id": "fp-2",
+      "operationId": "op-arctic-drainer",
+      "signatureType": "tag_identifier",
+      "signatureValue": "G-99X4K21Z",
+      "description": "Google Analytics 4 Measurement ID reused across phishing campaign landing pages",
+      "activeWindow": "2026-03 to present",
+      "confidenceWeight": 0.98
+    },
+    {
+      "id": "fp-3",
+      "operationId": "op-arctic-drainer",
+      "signatureType": "nameserver_pair",
+      "signatureValue": "ns1.offshore-dns.is,ns2.offshore-dns.is",
+      "description": "Bulletproof offshore DNS delegation pair",
+      "activeWindow": "2026-01 to present",
+      "confidenceWeight": 0.7
+    },
+    {
+      "id": "fp-4",
+      "operationId": "op-arctic-drainer",
+      "signatureType": "wallet_settlement_cluster",
+      "signatureValue": "ETH_SPLIT_0x71c8_TO_0x3a4f",
+      "description": "Automated 100% forwarding route from contract 0x71c8... to treasury 0x3a4f...",
+      "activeWindow": "2026-03 to present",
+      "confidenceWeight": 1
+    }
+  ],
+  "reappearanceLeads": [
+    {
+      "operationId": "op-arctic-drainer",
+      "candidateValue": "claim-refund-portal.click",
+      "candidateType": "domain",
+      "matchedFingerprintIds": [
+        "fp-1",
+        "fp-2",
+        "fp-3"
+      ],
+      "overallSimilarityScore": 87,
+      "matchBreakdown": [
+        {
+          "fingerprintType": "template_dom_hash",
+          "expected": "e79a9f24a1b02948",
+          "observed": "e79a9f24a1b02948",
+          "similarity": 100
+        },
+        {
+          "fingerprintType": "tag_identifier",
+          "expected": "G-99X4K21Z",
+          "observed": "G-99X4K21Z",
+          "similarity": 100
+        },
+        {
+          "fingerprintType": "nameserver_pair",
+          "expected": "ns1.offshore-dns.is,ns2.offshore-dns.is",
+          "observed": "ns1.offshore-dns.is",
+          "similarity": 50
+        }
+      ],
+      "reasoning": "Strong operational fingerprint correlation: template_dom_hash, tag_identifier, nameserver_pair match previously cataloged Arctic Drainer signatures with 87% confidence.",
+      "status": "CONFIRMED_ROTATION",
+      "id": "reapp-cbbd6e65",
+      "detectedAt": "2026-09-24T03:53:40.135Z"
+    },
+    {
+      "id": "reapp-1",
+      "operationId": "op-arctic-drainer",
+      "candidateValue": "claim-refund-portal.click",
+      "candidateType": "domain",
+      "matchedFingerprintIds": [
+        "fp-1",
+        "fp-2",
+        "fp-3"
+      ],
+      "overallSimilarityScore": 94,
+      "matchBreakdown": [
+        {
+          "fingerprintType": "template_dom_hash",
+          "expected": "e79a9f24a1b02948",
+          "observed": "e79a9f24a1b02948",
+          "similarity": 100
+        },
+        {
+          "fingerprintType": "tag_identifier",
+          "expected": "G-99X4K21Z",
+          "observed": "G-99X4K21Z",
+          "similarity": 100
+        },
+        {
+          "fingerprintType": "nameserver_pair",
+          "expected": "ns1.offshore-dns.is",
+          "observed": "ns1.offshore-dns.is",
+          "similarity": 100
+        }
+      ],
+      "reasoning": "Candidate domain claim-refund-portal.click was registered 18 hours ago and matches DOM AST structure, Google Analytics ID, and nameserver delegation with 94% composite similarity. Highly probable active reappearance/rotation of the Arctic Drainer operation.",
+      "detectedAt": "2026-09-22T03:53:40.114Z",
+      "status": "OPEN"
+    }
+  ],
+  "monitoringProbes": [
+    {
+      "id": "probe-1",
+      "operationId": "op-arctic-drainer",
+      "targetType": "nameserver",
+      "targetValue": "ns1.offshore-dns.is",
+      "frequencyMinutes": 60,
+      "lastCheckedAt": "2026-09-24T03:53:40.114Z",
+      "status": "ACTIVE",
+      "matchesFound": 1,
+      "notes": "Monitors newly observed A records pointing to offshore-dns.is nameservers"
+    },
+    {
+      "id": "probe-2",
+      "operationId": "op-arctic-drainer",
+      "targetType": "tag_identifier",
+      "targetValue": "G-99X4K21Z",
+      "frequencyMinutes": 120,
+      "lastCheckedAt": "2026-09-24T03:53:40.114Z",
+      "status": "ACTIVE",
+      "matchesFound": 1,
+      "notes": "Public web scraper tracking active occurrences of G-99X4K21Z in HTML scripts"
+    },
+    {
+      "id": "probe-3",
+      "operationId": "op-arctic-drainer",
+      "targetType": "wallet",
+      "targetValue": "0x3a4f891002ec7922d99f110c01a082b99f2010aa",
+      "frequencyMinutes": 15,
+      "lastCheckedAt": "2026-09-24T03:53:40.114Z",
+      "status": "ACTIVE",
+      "matchesFound": 3,
+      "notes": "Ethereum mempool & block watcher for outflow sweeps"
+    }
+  ],
+  "pursuitStates": {
+    "op-arctic-drainer": {
+      "operationId": "op-arctic-drainer",
+      "status": "COMPLETED",
+      "currentHop": 2,
+      "pivotsExecuted": 6,
+      "config": {
+        "maxHops": 4,
+        "budgetTotal": 25,
+        "budgetRemaining": 19,
+        "concurrency": 2,
+        "minConfidenceThreshold": 0.35,
+        "avoidSaturation": true
+      },
+      "visitedEntityIds": [
+        "ent-domain-1",
+        "ent-domain-2",
+        "ent-domain-3",
+        "ent-ip-1",
+        "0x3a4f891002ec7922d99f110c01a082b99f2010aa",
+        "*.claim-asset-portal.com"
+      ],
+      "visitedPivotSignatures": [
+        "PASSIVE_DNS:eth-recovery-claim.top",
+        "CERT_TRANSPARENCY:eth-recovery-claim.top",
+        "DOM_AST_HASH:eth-recovery-claim.top",
+        "HTML_TRACKER_TAG:eth-recovery-claim.top",
+        "BLOCKCHAIN_TRACE_OUTFLOW:0x3a4f891002ec7922d99f110c01a082b99f2010aa",
+        "CERT_SAN_SUBDOMAIN_SEARCH:*.claim-asset-portal.com"
+      ],
+      "abandonedBranches": [],
+      "logs": [
+        {
+          "id": "hop-log-830996ed",
+          "hopNumber": 2,
+          "timestamp": "2026-09-24T03:53:43.645Z",
+          "pivotType": "CERT_SAN_SUBDOMAIN_SEARCH",
+          "sourceEntityValue": "*.claim-asset-portal.com",
+          "actionSummary": "Executed pivot CERT_SAN_SUBDOMAIN_SEARCH targeting *.claim-asset-portal.com.",
+          "simpleExplanation": "Analyzed *.claim-asset-portal.com for secondary infrastructure links.",
+          "whyItMatters": "Corroborates existing findings and tests for operational co-tenancy.",
+          "discoveredEntitiesCount": 0,
+          "newEvidenceCount": 0,
+          "branchStatus": "ABANDONED_DEAD_END",
+          "confidence": 0.95
+        },
+        {
+          "id": "hop-log-904f7b9e",
+          "hopNumber": 1,
+          "timestamp": "2026-09-24T03:53:40.145Z",
+          "pivotType": "BLOCKCHAIN_TRACE_OUTFLOW",
+          "sourceEntityValue": "0x3a4f891002ec7922d99f110c01a082b99f2010aa",
+          "actionSummary": "Traced treasury wallet outflows into Railgun privacy mixer contract and Binance exchange deposit address.",
+          "simpleExplanation": "We followed the stolen cryptocurrency out of the main thief wallet and found where they tried to cash it out at Binance.",
+          "whyItMatters": "A deposit into a centralized exchange means there is a user account with identity records (KYC) that law enforcement can subpoena.",
+          "discoveredEntitiesCount": 2,
+          "newEvidenceCount": 1,
+          "branchStatus": "EXPANDED",
+          "confidence": 0.99
+        },
+        {
+          "id": "log-1",
+          "hopNumber": 1,
+          "timestamp": "2026-09-14T03:53:40.114Z",
+          "pivotType": "PASSIVE_DNS",
+          "sourceEntityValue": "eth-recovery-claim.top",
+          "actionSummary": "Resolved primary domain to A record 185.193.127.44 and nameserver ns1.offshore-dns.is",
+          "simpleExplanation": "Looked up where the scam domain is hosted and who manages its domain records.",
+          "whyItMatters": "Reveals bulletproof hosting in the Seychelles and private offshore DNS often shared across phishing domains.",
+          "discoveredEntitiesCount": 2,
+          "newEvidenceCount": 1,
+          "branchStatus": "EXPANDED",
+          "confidence": 0.98
+        },
+        {
+          "id": "log-2",
+          "hopNumber": 1,
+          "timestamp": "2026-09-18T03:53:40.114Z",
+          "pivotType": "DOM_AST_HASH",
+          "sourceEntityValue": "eth-recovery-claim.top",
+          "actionSummary": "Extracted JavaScript AST fingerprint and detected CryptoDrainer-X v2.4 signature",
+          "simpleExplanation": "Fingerprinted the scam code used on the website.",
+          "whyItMatters": "Links this frontend to a known turnkey crypto-drainer kit used by specific threat actor groups.",
+          "discoveredEntitiesCount": 1,
+          "newEvidenceCount": 1,
+          "branchStatus": "EXPANDED",
+          "confidence": 0.99
+        }
+      ],
+      "lastActiveAt": "2026-09-24T03:53:43.645Z"
+    }
+  },
+  "strategyStats": {
+    "PASSIVE_DNS": {
+      "pivotType": "PASSIVE_DNS",
+      "sourceCategory": "DNS",
+      "attempts": 12,
+      "successes": 11,
+      "usefulEvidenceYield": 18,
+      "contradictionCount": 0,
+      "avgConfidence": 0.96,
+      "utilityScore": 92
+    },
+    "CERT_TRANSPARENCY": {
+      "pivotType": "CERT_TRANSPARENCY",
+      "sourceCategory": "SSL",
+      "attempts": 8,
+      "successes": 7,
+      "usefulEvidenceYield": 14,
+      "contradictionCount": 0,
+      "avgConfidence": 0.94,
+      "utilityScore": 89
+    },
+    "DOM_AST_HASH": {
+      "pivotType": "DOM_AST_HASH",
+      "sourceCategory": "HTML_JS",
+      "attempts": 9,
+      "successes": 9,
+      "usefulEvidenceYield": 15,
+      "contradictionCount": 0,
+      "avgConfidence": 0.98,
+      "utilityScore": 95
+    },
+    "REVERSE_NS": {
+      "pivotType": "REVERSE_NS",
+      "sourceCategory": "DNS",
+      "attempts": 7,
+      "successes": 6,
+      "usefulEvidenceYield": 12,
+      "contradictionCount": 0,
+      "avgConfidence": 0.93,
+      "utilityScore": 85
+    },
+    "ONCHAIN_TOKEN_TRACE": {
+      "pivotType": "ONCHAIN_TOKEN_TRACE",
+      "sourceCategory": "BLOCKCHAIN",
+      "attempts": 15,
+      "successes": 14,
+      "usefulEvidenceYield": 27,
+      "contradictionCount": 0,
+      "avgConfidence": 0.99,
+      "utilityScore": 93
+    },
+    "HTML_TRACKER_TAG": {
+      "pivotType": "HTML_TRACKER_TAG",
+      "sourceCategory": "TRACKERS",
+      "attempts": 7,
+      "successes": 6,
+      "usefulEvidenceYield": 8,
+      "contradictionCount": 0,
+      "avgConfidence": 0.92,
+      "utilityScore": 84
+    }
+  },
+  "clusters": [
+    {
+      "id": "cluster-host-op-arc",
+      "operationId": "op-arctic-drainer",
+      "name": "Offshore Bulletproof Hosting & DNS Cluster",
+      "category": "HOSTING_INFRASTRUCTURE",
+      "description": "4 hosting infrastructure nodes (IPs, ASNs, authoritative nameservers) serving 5 active or standby phishing domains.",
+      "entityIds": [
+        "ent-ip-1",
+        "ent-ip-2",
+        "ent-asn-1",
+        "ent-ns-1",
+        "ent-domain-1",
+        "ent-domain-2",
+        "ent-82a8b373",
+        "ent-d727f093"
+      ],
+      "confidence": 0.95,
+      "reasoning": "Shared Autonomous Systems, private nameserver pairs, and co-located subnets observed across domain resolutions."
+    },
+    {
+      "id": "cluster-template-op-arc",
+      "operationId": "op-arctic-drainer",
+      "name": "CryptoDrainer-X Scam-Kit Deployment Family",
+      "category": "TEMPLATE_FAMILY",
+      "description": "Phishing frontends executing identical DOM AST tree hierarchies and Web3Modal provider interceptors.",
+      "entityIds": [
+        "ent-template-1",
+        "ent-id-1",
+        "ent-id-2",
+        "ent-domain-1",
+        "ent-domain-2",
+        "ent-82a8b373"
+      ],
+      "confidence": 0.98,
+      "reasoning": "Normalized DOM hash signatures and embedded tracking script identifiers match known scam-kit distribution repo."
+    },
+    {
+      "id": "cluster-fin-op-arc",
+      "operationId": "op-arctic-drainer",
+      "name": "On-Chain Fund Settlement & Laundering Pipeline",
+      "category": "FINANCIAL_PIPELINE",
+      "description": "5 on-chain contract addresses and treasury wallets participating in victim asset sweeps and mixer hops.",
+      "entityIds": [
+        "ent-contract-1",
+        "ent-wallet-1",
+        "ent-wallet-2",
+        "ent-a95f653d",
+        "ent-34aaea26"
+      ],
+      "confidence": 0.99,
+      "reasoning": "Automated 100% sweep transfers verified through on-chain Ethereum transaction logs."
+    }
+  ],
+  "bridges": [
+    {
+      "id": "bridge-ent-ns-1",
+      "operationId": "op-arctic-drainer",
+      "title": "Authoritative Nameserver Bridge (ns1.offshore-dns.is)",
+      "entityId": "ent-ns-1",
+      "entityValue": "ns1.offshore-dns.is",
+      "entityType": "nameserver",
+      "connectedClusters": [
+        "cluster-host-op-arc"
+      ],
+      "bridgeSignificance": "Controls DNS zone records for 1 domains across the operational infrastructure.",
+      "riskAssessment": "Critical choke point: authoritative registrar revocation or sinkhole disables all affiliated campaigns simultaneously."
+    },
+    {
+      "id": "bridge-ent-contract-1",
+      "operationId": "op-arctic-drainer",
+      "title": "Intermediary Splitter Contract (0x71c82829...)",
+      "entityId": "ent-contract-1",
+      "entityValue": "0x71c8282929d0092e02e82110c49281a94b810b82",
+      "entityType": "contract",
+      "connectedClusters": [
+        "cluster-fin-op-arc"
+      ],
+      "bridgeSignificance": "Deobfuscated JavaScript target acting as the programmatic bridge between web frontends and the blockchain.",
+      "riskAssessment": "Smart contract approvals can be revoked on-chain to protect remaining victim allowances."
+    },
+    {
+      "id": "bridge-ent-wallet-1",
+      "operationId": "op-arctic-drainer",
+      "title": "Consolidated Master Treasury (0x3a4f8910...)",
+      "entityId": "ent-wallet-1",
+      "entityValue": "0x3a4f891002ec7922d99f110c01a082b99f2010aa",
+      "entityType": "wallet",
+      "connectedClusters": [
+        "cluster-fin-op-arc"
+      ],
+      "bridgeSignificance": "Consolidates stolen tokens from multiple independent phishing frontends and contracts.",
+      "riskAssessment": "High-value nexus for forensic attribution; outgoing transactions reveal KYC-regulated off-ramps."
+    },
+    {
+      "id": "bridge-ent-34aaea26",
+      "operationId": "op-arctic-drainer",
+      "title": "Intermediary Splitter Contract (0x8578b8aa...)",
+      "entityId": "ent-34aaea26",
+      "entityValue": "0x8578b8aaf7b145d8950889f44a994749f8d72832 (Railgun Relay)",
+      "entityType": "contract",
+      "connectedClusters": [
+        "cluster-fin-op-arc"
+      ],
+      "bridgeSignificance": "Deobfuscated JavaScript target acting as the programmatic bridge between web frontends and the blockchain.",
+      "riskAssessment": "Smart contract approvals can be revoked on-chain to protect remaining victim allowances."
+    }
+  ],
+  "scamKitGenomes": [
+    {
+      "id": "genome-1",
+      "operationId": "op-arctic-drainer",
+      "kitFamily": "CryptoDrainer-X",
+      "variantVersion": "v2.4-obfuscated",
+      "domAstHash": "e79a9f24a1b02948",
+      "faviconMurmurHash": "339182901",
+      "assetSignatures": [
+        "assets/vendor.bundle.min.js?v=2.4.1",
+        "static/css/connect-modal.e79a.css",
+        "svg/generic-crypto-logo-sprite.svg"
+      ],
+      "web3ProvidersDetected": [
+        "WalletConnect-v2",
+        "MetaMaskInjected",
+        "CoinbaseSDK",
+        "TrustWalletExtension"
+      ],
+      "apiEndpointFingerprints": [
+        "/api/v1/telemetry/heartbeat",
+        "/socket.io/?drainer_session="
+      ],
+      "depositInterfaceStyle": "batch-permit2-drain",
+      "vendorVsOperatorAnalysis": {
+        "kitVendorIndicators": [
+          "Commercial kit developer telegram contact link (t.me/CryptoDrainerDev)",
+          "Standardized DaaS 20% royalty batch-routing logic in obfuscated loader",
+          "Obfuscation packer: StringArrayRotation + XOR masking"
+        ],
+        "operatorSpecificIndicators": [
+          "Embedded Google Analytics tracker G-99X4K21Z",
+          "Configured victim drain receiver wallet: 0x71c8282929d0092e02e82110c49281a94b810b82",
+          "Consolidated treasury aggregation wallet: 0x3a4f891002ec7922d99f110c01a082b99f2010aa",
+          "Custom landing page lures (crypto asset recovery, revoke permissions)"
+        ],
+        "attributionBoundary": "CRITICAL BOUNDARY: The kit vendor wrote and syndicated the software; the syndicate operator purchased and configured it. Finding the kit signature proves software reuse, not common criminal ownership, unless operator wallets or tracking IDs match."
+      },
+      "firstSeen": "2026-09-10T03:53:40.114Z",
+      "lastSeen": "2026-09-24T03:53:40.163Z"
+    }
+  ],
+  "financialAnalyses": {
+    "op-arctic-drainer": {
+      "id": "fin-op-arctic-drainer",
+      "operationId": "op-arctic-drainer",
+      "monitoredWallets": [
+        "0x71c8282929d0092e02e82110c49281a94b810b82",
+        "0x3a4f891002ec7922d99f110c01a082b99f2010aa",
+        "0x99b1092a0149021948201a029310ab921a941011",
+        "0x12d66f87a04a9e220743712ce6d9bb1b5616b8fc",
+        "0x28c6c06298d514db089934071355e5743bf21d60",
+        "0x55bc910283fa0912cb90141a0129bc8173618aa1",
+        "TQn9Y2kh5rv9s8WqJj93X9z74619B18a"
+      ],
+      "totalVolumeObservedEth": 48.65,
+      "convergenceNodes": [
+        {
+          "walletAddress": "0x71c8282929d0092e02e82110c49281a94b810b82",
+          "incomingFlowsCount": 14,
+          "totalReceivedEth": 48.65,
+          "role": "SPLITTER_INTERMEDIARY"
+        },
+        {
+          "walletAddress": "0x3a4f891002ec7922d99f110c01a082b99f2010aa",
+          "incomingFlowsCount": 8,
+          "totalReceivedEth": 38.92,
+          "role": "TREASURY_AGGREGATOR"
+        }
+      ],
+      "divergenceNodes": [
+        {
+          "destinationAddress": "0x12d66f87a04a9e220743712ce6d9bb1b5616b8fc",
+          "outflowCount": 3,
+          "totalSentEth": 14.8,
+          "destinationType": "MIXER_RELAY"
+        },
+        {
+          "destinationAddress": "0x28c6c06298d514db089934071355e5743bf21d60",
+          "outflowCount": 4,
+          "totalSentEth": 12.4,
+          "destinationType": "CEX_DEPOSIT"
+        }
+      ],
+      "timingPatterns": "Automated sweep execution occurs within 90 to 180 seconds of victim permit2 approval transaction confirmation.",
+      "counterpartyRecurrence": [
+        "Binance 14 (0x28c6c0...) recurring deposit sub-account",
+        "Railgun Relayer pool (0x12d66f...)",
+        "CryptoDrainer-X Vendor Royalty recipient (0x99b109...)"
+      ],
+      "ownershipDisclaimer": "NOTICE: Public blockchain ledger flows establish verifiable asset transit, but do NOT prove legal ownership of recipient addresses. CEX deposit addresses should be subpoenaed via law enforcement for KYC identity records.",
+      "transactions": [
+        {
+          "id": "tx-fin-1",
+          "txHash": "0x9a8f23719b0234aef819230491823901bca91823910239102391029301923019",
+          "network": "ethereum",
+          "fromAddress": "0x43b819203a910239102930192301923019230192 (Victim 1)",
+          "toAddress": "0x71c8282929d0092e02e82110c49281a94b810b82",
+          "value": "18.45",
+          "tokenSymbol": "ETH",
+          "usdEquivalent": 64575,
+          "timestamp": "2026-09-12T03:53:40.165Z",
+          "blockNumber": 19842100,
+          "method": "permit2_sweep",
+          "hopLevel": 1,
+          "classificationTag": "VICTIM_DRAIN",
+          "verifiedCounterparty": "Uniswap Permit2 Protocol"
+        },
+        {
+          "id": "tx-fin-2",
+          "txHash": "0xbb82910394819203910293019230192301923019230192301923019230192301",
+          "network": "ethereum",
+          "fromAddress": "0x8120391029301923019230192301923019230192 (Victim 2)",
+          "toAddress": "0x71c8282929d0092e02e82110c49281a94b810b82",
+          "value": "30.20",
+          "tokenSymbol": "ETH",
+          "usdEquivalent": 105700,
+          "timestamp": "2026-09-15T03:53:40.165Z",
+          "blockNumber": 19845320,
+          "method": "permit2_sweep",
+          "hopLevel": 1,
+          "classificationTag": "VICTIM_DRAIN",
+          "verifiedCounterparty": "Uniswap Permit2 Protocol"
+        },
+        {
+          "id": "tx-fin-3",
+          "txHash": "0xcc19203910293019230192301923019230192301923019230192301923019230",
+          "network": "ethereum",
+          "fromAddress": "0x71c8282929d0092e02e82110c49281a94b810b82",
+          "toAddress": "0x3a4f891002ec7922d99f110c01a082b99f2010aa",
+          "value": "38.92",
+          "tokenSymbol": "ETH",
+          "usdEquivalent": 136220,
+          "timestamp": "2026-09-15T03:53:40.165Z",
+          "blockNumber": 19845325,
+          "method": "contract_execution",
+          "hopLevel": 2,
+          "isConvergenceHub": true,
+          "classificationTag": "TREASURY_CONSOLIDATION",
+          "verifiedCounterparty": "Consolidated Treasury Aggregator"
+        },
+        {
+          "id": "tx-fin-4",
+          "txHash": "0xdd20391029301923019230192301923019230192301923019230192301923019",
+          "network": "ethereum",
+          "fromAddress": "0x71c8282929d0092e02e82110c49281a94b810b82",
+          "toAddress": "0x99b1092a0149021948201a029310ab921a941011",
+          "value": "9.73",
+          "tokenSymbol": "ETH",
+          "usdEquivalent": 34055,
+          "timestamp": "2026-09-15T03:53:40.165Z",
+          "blockNumber": 19845325,
+          "method": "contract_execution",
+          "hopLevel": 2,
+          "classificationTag": "SPLITTER_DISTRIBUTION",
+          "verifiedCounterparty": "CryptoDrainer-X Vendor 20% Royalty"
+        },
+        {
+          "id": "tx-fin-5",
+          "txHash": "0xee30491029301923019230192301923019230192301923019230192301923019",
+          "network": "ethereum",
+          "fromAddress": "0x3a4f891002ec7922d99f110c01a082b99f2010aa",
+          "toAddress": "0x12d66f87a04a9e220743712ce6d9bb1b5616b8fc",
+          "value": "14.80",
+          "tokenSymbol": "ETH",
+          "usdEquivalent": 51800,
+          "timestamp": "2026-09-19T03:53:40.165Z",
+          "blockNumber": 19861040,
+          "method": "contract_execution",
+          "hopLevel": 3,
+          "isDivergenceExit": true,
+          "classificationTag": "MIXER_ROUTING",
+          "verifiedCounterparty": "Railgun Privacy Pool Relay"
+        },
+        {
+          "id": "tx-fin-6",
+          "txHash": "0xff40591029301923019230192301923019230192301923019230192301923019",
+          "network": "ethereum",
+          "fromAddress": "0x3a4f891002ec7922d99f110c01a082b99f2010aa",
+          "toAddress": "0x28c6c06298d514db089934071355e5743bf21d60",
+          "value": "12.40",
+          "tokenSymbol": "ETH",
+          "usdEquivalent": 43400,
+          "timestamp": "2026-09-22T03:53:40.165Z",
+          "blockNumber": 19882900,
+          "method": "native_transfer",
+          "hopLevel": 3,
+          "isDivergenceExit": true,
+          "classificationTag": "CEX_DEPOSIT",
+          "verifiedCounterparty": "Binance Deposit Sub-Account (KYC-able)"
+        },
+        {
+          "id": "tx-fin-7",
+          "txHash": "0xab50691029301923019230192301923019230192301923019230192301923019",
+          "network": "arbitrum",
+          "fromAddress": "0x3a4f891002ec7922d99f110c01a082b99f2010aa",
+          "toAddress": "0x55bc910283fa0912cb90141a0129bc8173618aa1",
+          "value": "11.72",
+          "tokenSymbol": "ETH",
+          "usdEquivalent": 41020,
+          "timestamp": "2026-09-22T03:53:40.165Z",
+          "blockNumber": 18910230,
+          "method": "bridge_transit",
+          "hopLevel": 4,
+          "classificationTag": "CROSS_CHAIN_BRIDGE",
+          "verifiedCounterparty": "Across Protocol Bridge Spoke"
+        },
+        {
+          "id": "tx-fin-8",
+          "txHash": "0xbc60791029301923019230192301923019230192301923019230192301923019",
+          "network": "tron",
+          "fromAddress": "TQn9Y2kh5rv9s8WqJj93X9z74619B18a",
+          "toAddress": "TW3A818X9sK9jWq818bA1982bX81a0293",
+          "value": "15000",
+          "tokenSymbol": "USDT",
+          "usdEquivalent": 15000,
+          "timestamp": "2026-09-24T03:53:40.165Z",
+          "blockNumber": 59120400,
+          "method": "erc20_transfer",
+          "hopLevel": 2,
+          "classificationTag": "CEX_DEPOSIT",
+          "verifiedCounterparty": "Tron TRC-20 Tether Liquidation"
+        }
+      ],
+      "timeline": [
+        {
+          "id": "fte-1",
+          "timestamp": "2026-09-12T03:53:40.165Z",
+          "network": "ethereum",
+          "eventType": "APPROVAL_EXPLOIT",
+          "title": "Initial Victim Permit2 Approval Drained (18.45 ETH)",
+          "description": "First high-value victim approved Permit2 token allowance, swept immediately to splitter contract 0x71c8...",
+          "amount": "18.45 ETH",
+          "fromAddress": "0x43b819203a910239102930192301923019230192",
+          "toAddress": "0x71c8282929d0092e02e82110c49281a94b810b82",
+          "txHash": "0x9a8f23719b0234aef819230491823901bca91823910239102391029301923019"
+        },
+        {
+          "id": "fte-2",
+          "timestamp": "2026-09-15T03:53:40.165Z",
+          "network": "ethereum",
+          "eventType": "ROYALTY_SPLIT",
+          "title": "Automated 80/20 Royalty Execution",
+          "description": "Splitter contract automatically routed 80% (38.92 ETH) to syndicate treasury and 20% (9.73 ETH) to kit vendor royalty wallet 0x99b1...",
+          "amount": "48.65 ETH Total Split",
+          "fromAddress": "0x71c8282929d0092e02e82110c49281a94b810b82",
+          "toAddress": "0x3a4f891002ec7922d99f110c01a082b99f2010aa",
+          "txHash": "0xcc19203910293019230192301923019230192301923019230192301923019230"
+        },
+        {
+          "id": "fte-3",
+          "timestamp": "2026-09-19T03:53:40.165Z",
+          "network": "ethereum",
+          "eventType": "AUTOMATED_SWEEP",
+          "title": "Railgun Privacy Pool Inflow (14.80 ETH)",
+          "description": "Consolidated treasury dispatched 14.80 ETH into Railgun zk-SNARK shielded pool relay.",
+          "amount": "14.80 ETH",
+          "fromAddress": "0x3a4f891002ec7922d99f110c01a082b99f2010aa",
+          "toAddress": "0x12d66f87a04a9e220743712ce6d9bb1b5616b8fc",
+          "txHash": "0xee30491029301923019230192301923019230192301923019230192301923019"
+        },
+        {
+          "id": "fte-4",
+          "timestamp": "2026-09-22T03:53:40.165Z",
+          "network": "ethereum",
+          "eventType": "OFFRAMP_EXIT",
+          "title": "Binance Centralized Exchange Deposit (12.40 ETH)",
+          "description": "Direct transfer to Binance deposit address 0x28c6... Subpoena/KYC candidate for law enforcement.",
+          "amount": "12.40 ETH",
+          "fromAddress": "0x3a4f891002ec7922d99f110c01a082b99f2010aa",
+          "toAddress": "0x28c6c06298d514db089934071355e5743bf21d60",
+          "txHash": "0xff40591029301923019230192301923019230192301923019230192301923019"
+        },
+        {
+          "id": "fte-5",
+          "timestamp": "2026-09-22T03:53:40.165Z",
+          "network": "arbitrum",
+          "eventType": "CROSS_CHAIN_BRIDGE",
+          "title": "Arbitrum Layer-2 Across Bridge Transit (11.72 ETH)",
+          "description": "Bridged remainder to Arbitrum L2 destination address 0x55bc... to reduce gas costs during automated wash trading.",
+          "amount": "11.72 ETH ($41,020)",
+          "fromAddress": "0x3a4f891002ec7922d99f110c01a082b99f2010aa",
+          "toAddress": "0x55bc910283fa0912cb90141a0129bc8173618aa1",
+          "txHash": "0xab50691029301923019230192301923019230192301923019230192301923019"
+        }
+      ],
+      "addressRotations": [
+        {
+          "originalAddress": "0x71c8282929d0092e02e82110c49281a94b810b82",
+          "rotatedAddress": "0x55bc910283fa0912cb90141a0129bc8173618aa1",
+          "rotationTimestamp": "2026-09-22T03:53:40.165Z",
+          "network": "arbitrum",
+          "transferTxHash": "0xab50691029301923019230192301923019230192301923019230192301923019",
+          "reason": "Migration of drainer collection payload to Arbitrum Layer-2 network"
+        },
+        {
+          "originalAddress": "0x71c8282929d0092e02e82110c49281a94b810b82",
+          "rotatedAddress": "0x3a4f891002ec7922d99f110c01a082b99f2010aa",
+          "rotationTimestamp": "2026-09-19T03:53:40.165Z",
+          "network": "ethereum",
+          "transferTxHash": "0xcc19203910293019230192301923019230192301923019230192301923019230",
+          "reason": "Splitter proxy rotated to secondary consolidated treasury following security flagging"
+        }
+      ],
+      "crossChainObservations": [
+        {
+          "network": "arbitrum",
+          "observedContracts": [
+            "0x55bc910283fa0912cb90141a0129bc8173618aa1"
+          ],
+          "bridgedVolumeUsd": 41020,
+          "bridgeProtocol": "Across Protocol"
+        },
+        {
+          "network": "tron",
+          "observedContracts": [
+            "TQn9Y2kh5rv9s8WqJj93X9z74619B18a"
+          ],
+          "bridgedVolumeUsd": 15000,
+          "bridgeProtocol": "TRC-20 Tether Direct Gateway"
+        }
+      ]
+    }
+  },
+  "crossOpSimilarities": [
+    {
+      "operationAId": "op-arctic-drainer",
+      "operationBId": "op-helios-campaign",
+      "operationBName": "Operation Helios Syndicate",
+      "sharedInfrastructure": [
+        "AS209588 (FlyHosting / Seychelles)"
+      ],
+      "sharedGenomes": [
+        "CryptoDrainer-X v2.4 (AST Hash: e79a9f24)"
+      ],
+      "sharedFinancialNodes": [],
+      "overallSimilarityScore": 68,
+      "analyticalDistinction": "SHARED_COMMERCIAL_KIT",
+      "reasoning": "Both campaigns utilize the same CryptoDrainer-X v2.4 software kit and host on FlyHosting Seychelles. However, destination treasury wallets (0x3a4f... vs 0x55bc...) and Google Analytics tags do not overlap. High probability of independent copycat operators utilizing the same commercial drainer vendor rather than unified criminal management."
+    }
+  ],
+  "temporalSnapshots": {
+    "op-arctic-drainer": [
+      {
+        "id": "snap-op-arctic-drainer-0",
+        "operationId": "op-arctic-drainer",
+        "stepIndex": 0,
+        "stepLabel": "T0: Inception & Domain Registration",
+        "timestamp": "2026-09-10T03:53:40.168Z",
+        "summary": "Syndicate registers primary phishing domain at NameSilo and provisions offshore DNS delegation.",
+        "activeDomains": [
+          "eth-recovery-claim.top"
+        ],
+        "activeIps": [
+          "185.193.127.44"
+        ],
+        "activeCertificates": [
+          "ZeroSSL Wildcard *.claim-asset-portal.com"
+        ],
+        "activeWallets": [],
+        "activeNameservers": [
+          "ns1.offshore-dns.is",
+          "ns2.offshore-dns.is"
+        ],
+        "addedSincePrevious": [
+          {
+            "entityType": "domain",
+            "value": "eth-recovery-claim.top",
+            "reason": "Initial domain registration"
+          },
+          {
+            "entityType": "nameserver",
+            "value": "ns1.offshore-dns.is",
+            "reason": "Authoritative DNS delegation"
+          },
+          {
+            "entityType": "ip",
+            "value": "185.193.127.44",
+            "reason": "Seychelles bulletproof host provisioning"
+          }
+        ],
+        "removedOrDecommissioned": [],
+        "mutations": [
+          "Initial codebase deployed: CryptoDrainer-X v2.3 base template"
+        ]
+      },
+      {
+        "id": "snap-op-arctic-drainer-1",
+        "operationId": "op-arctic-drainer",
+        "stepIndex": 1,
+        "stepLabel": "T1: Phishing Launch & Permit2 Drains",
+        "timestamp": "2026-09-14T03:53:40.168Z",
+        "summary": "Attackers begin distributing phishing links via compromised Twitter/X accounts. Victims sign Permit2 batch approvals.",
+        "activeDomains": [
+          "eth-recovery-claim.top"
+        ],
+        "activeIps": [
+          "185.193.127.44"
+        ],
+        "activeCertificates": [
+          "ZeroSSL Wildcard *.claim-asset-portal.com"
+        ],
+        "activeWallets": [
+          "0x71c8282929d0092e02e82110c49281a94b810b82",
+          "0x3a4f891002ec7922d99f110c01a082b99f2010aa"
+        ],
+        "activeNameservers": [
+          "ns1.offshore-dns.is",
+          "ns2.offshore-dns.is"
+        ],
+        "addedSincePrevious": [
+          {
+            "entityType": "wallet",
+            "value": "0x71c8282929d0092e02e82110c49281a94b810b82",
+            "reason": "Smart contract splitter activated for automated sweeps"
+          },
+          {
+            "entityType": "wallet",
+            "value": "0x3a4f891002ec7922d99f110c01a082b99f2010aa",
+            "reason": "Treasury consolidation wallet registered on-chain"
+          }
+        ],
+        "removedOrDecommissioned": [],
+        "mutations": [
+          "Template upgraded to v2.4 to add Telegram notification webhook"
+        ]
+      },
+      {
+        "id": "snap-op-arctic-drainer-2",
+        "operationId": "op-arctic-drainer",
+        "stepIndex": 2,
+        "stepLabel": "T2: Registrar Notice & Rapid Domain Rotation",
+        "timestamp": "2026-09-18T03:53:40.168Z",
+        "summary": "Initial domain eth-recovery-claim.top flagged by threat intelligence. Syndicate executes hot-swap rotation to claim-revoke-portal.link.",
+        "activeDomains": [
+          "claim-revoke-portal.link"
+        ],
+        "activeIps": [
+          "185.193.127.44"
+        ],
+        "activeCertificates": [
+          "ZeroSSL Wildcard *.claim-asset-portal.com"
+        ],
+        "activeWallets": [
+          "0x71c8282929d0092e02e82110c49281a94b810b82",
+          "0x3a4f891002ec7922d99f110c01a082b99f2010aa"
+        ],
+        "activeNameservers": [
+          "ns1.offshore-dns.is",
+          "ns2.offshore-dns.is"
+        ],
+        "addedSincePrevious": [
+          {
+            "entityType": "domain",
+            "value": "claim-revoke-portal.link",
+            "reason": "Hot-swap replacement domain activated"
+          }
+        ],
+        "removedOrDecommissioned": [
+          {
+            "entityType": "domain",
+            "value": "eth-recovery-claim.top",
+            "reason": "Flagged by security vendor takedown notice"
+          }
+        ],
+        "mutations": [
+          "Preserved DOM AST structure and embedded GA tracker G-99X4K21Z across new domain"
+        ]
+      },
+      {
+        "id": "snap-op-arctic-drainer-3",
+        "operationId": "op-arctic-drainer",
+        "stepIndex": 3,
+        "stepLabel": "T3: Multi-Chain Expansion & Off-Ramp Sweeps",
+        "timestamp": "2026-09-22T03:53:40.168Z",
+        "summary": "Treasury wallet conducts automated sweeps. Portion routed through Railgun privacy pool and Binance deposit sub-accounts.",
+        "activeDomains": [
+          "claim-revoke-portal.link",
+          "auth.claim-asset-portal.com"
+        ],
+        "activeIps": [
+          "185.193.127.44",
+          "185.193.127.45"
+        ],
+        "activeCertificates": [
+          "ZeroSSL Wildcard *.claim-asset-portal.com"
+        ],
+        "activeWallets": [
+          "0x71c8282929d0092e02e82110c49281a94b810b82",
+          "0x3a4f891002ec7922d99f110c01a082b99f2010aa",
+          "0x12d66f87a04a9e220743712ce6d9bb1b5616b8fc",
+          "0x28c6c06298d514db089934071355e5743bf21d60"
+        ],
+        "activeNameservers": [
+          "ns1.offshore-dns.is",
+          "ns2.offshore-dns.is"
+        ],
+        "addedSincePrevious": [
+          {
+            "entityType": "domain",
+            "value": "auth.claim-asset-portal.com",
+            "reason": "Subdomain provisioned under wildcard SSL"
+          },
+          {
+            "entityType": "wallet",
+            "value": "0x12d66f87a04a9e220743712ce6d9bb1b5616b8fc",
+            "reason": "Railgun privacy contract recipient"
+          },
+          {
+            "entityType": "wallet",
+            "value": "0x28c6c06298d514db089934071355e5743bf21d60",
+            "reason": "Binance deposit sub-account"
+          }
+        ],
+        "removedOrDecommissioned": [],
+        "mutations": [
+          "Activated cross-chain bridging observer for Arbitrum & BSC token liquidation"
+        ]
+      },
+      {
+        "id": "snap-op-arctic-drainer-4",
+        "operationId": "op-arctic-drainer",
+        "stepIndex": 4,
+        "stepLabel": "T4: Current Observable State & Standby Assets",
+        "timestamp": "2026-09-24T03:53:40.168Z",
+        "summary": "Standby domain eth-support-verification.top identified in dormant state. Reappearance monitor tracks identical DOM signatures.",
+        "activeDomains": [
+          "claim-revoke-portal.link",
+          "auth.claim-asset-portal.com",
+          "eth-support-verification.top"
+        ],
+        "activeIps": [
+          "185.193.127.44",
+          "185.193.127.45"
+        ],
+        "activeCertificates": [
+          "ZeroSSL Wildcard *.claim-asset-portal.com"
+        ],
+        "activeWallets": [
+          "0x71c8282929d0092e02e82110c49281a94b810b82",
+          "0x3a4f891002ec7922d99f110c01a082b99f2010aa",
+          "0x12d66f87a04a9e220743712ce6d9bb1b5616b8fc",
+          "0x28c6c06298d514db089934071355e5743bf21d60"
+        ],
+        "activeNameservers": [
+          "ns1.offshore-dns.is",
+          "ns2.offshore-dns.is"
+        ],
+        "addedSincePrevious": [
+          {
+            "entityType": "domain",
+            "value": "eth-support-verification.top",
+            "reason": "Standby domain discovered through reverse-NS pivot"
+          }
+        ],
+        "removedOrDecommissioned": [],
+        "mutations": [
+          "Reappearance detector logged 87% similarity match on candidate claim-refund-portal.click"
+        ]
+      }
+    ]
+  },
+  "operationGenomes": {
+    "op-arctic-drainer": [
+      {
+        "id": "og-op-arctic-drainer-v1.0",
+        "operationId": "op-arctic-drainer",
+        "version": "v1.0-genesis",
+        "createdAt": "2026-09-10T03:53:40.170Z",
+        "scamKitFamily": "CryptoDrainer-X",
+        "variantVersion": "v2.3-baseline",
+        "domAstSignature": "ast_4a8b11c09e",
+        "faviconMurmurHash": "339182901",
+        "trackerSignatures": [
+          "G-99X4K21Z"
+        ],
+        "infraPatternSignature": "FlyHosting-AS209588 + NameSilo + OffshoreDNS",
+        "financialBehaviorSignature": "Direct-ETH-Allowance-Drain -> Splitter Intermediary",
+        "networkFootprint": [
+          "ethereum"
+        ],
+        "confidenceCalibration": 0.94,
+        "categorizationTaxonomy": {
+          "tier": "SAME_OBSERVATION",
+          "levelDescription": "Deterministic match on identical DOM AST fingerprint and Google Analytics tag observed across requests.",
+          "criteriaMet": [
+            "Exact DOM structure hash match",
+            "Identical GA property ID"
+          ],
+          "prohibitedClaims": [
+            "Cannot claim legal operator identity without subpoena records."
+          ]
+        }
+      },
+      {
+        "id": "og-op-arctic-drainer-v1.2",
+        "operationId": "op-arctic-drainer",
+        "version": "v1.2-mutation",
+        "createdAt": "2026-09-16T03:53:40.170Z",
+        "scamKitFamily": "CryptoDrainer-X",
+        "variantVersion": "v2.4-obfuscated",
+        "domAstSignature": "ast_e79a9f24b1",
+        "faviconMurmurHash": "339182901",
+        "trackerSignatures": [
+          "G-99X4K21Z",
+          "telemetry_session_v2"
+        ],
+        "infraPatternSignature": "FlyHosting-AS209588 + ZeroSSL Wildcard (*.claim-asset-portal.com)",
+        "financialBehaviorSignature": "Batch-Permit2-Approval -> Splitter 80/20 -> Treasury Consolidation",
+        "networkFootprint": [
+          "ethereum"
+        ],
+        "confidenceCalibration": 0.96,
+        "categorizationTaxonomy": {
+          "tier": "SUPPORTED_RELATIONSHIP",
+          "levelDescription": "Corroborated by independent technical layers: SSL Wildcard SANs, shared nameservers, and direct on-chain fund dispersal.",
+          "criteriaMet": [
+            "Multi-source corroboration",
+            "Cryptographic on-chain relationship",
+            "Preserved GA tracking ID"
+          ],
+          "prohibitedClaims": [
+            "Cannot attribute shared bulletproof IP co-tenants as the same entity."
+          ]
+        },
+        "forkEvolution": {
+          "parentGenomeId": "og-op-arctic-drainer-v1.0",
+          "divergedAt": "2026-09-16T03:53:40.170Z",
+          "mutationType": "PAYLOAD_OBFUSCATION",
+          "description": "Obfuscated JavaScript loader added WebAssembly dynamic decoding and Permit2 signatures to bypass MetaMask security warnings."
+        }
+      },
+      {
+        "id": "og-op-arctic-drainer-v2.0",
+        "operationId": "op-arctic-drainer",
+        "version": "v2.0-crosschain-fork",
+        "createdAt": "2026-09-24T03:53:40.170Z",
+        "scamKitFamily": "CryptoDrainer-X",
+        "variantVersion": "v2.4-crosschain-arbitrum",
+        "domAstSignature": "ast_e79a9f24b1",
+        "faviconMurmurHash": "339182901",
+        "trackerSignatures": [
+          "G-99X4K21Z",
+          "bridge_transit_token"
+        ],
+        "infraPatternSignature": "FlyHosting-AS209588 + Standby Domains + Across Bridge Protocol",
+        "financialBehaviorSignature": "Treasury Split -> Railgun Relayer (14.8 ETH) + Binance Deposit (12.4 ETH) + Across Arbitrum Bridge (11.72 ETH)",
+        "networkFootprint": [
+          "ethereum",
+          "arbitrum",
+          "tron"
+        ],
+        "confidenceCalibration": 0.92,
+        "categorizationTaxonomy": {
+          "tier": "CORRELATION",
+          "levelDescription": "Cross-chain fund movements and shared bulletproof subnet correlation indicating operational diversification.",
+          "criteriaMet": [
+            "On-chain bridge transfers to Arbitrum L2",
+            "Common seed funding from treasury"
+          ],
+          "prohibitedClaims": [
+            "Cannot claim exchange account owner is the sole syndicate leader without KYC disclosure."
+          ]
+        },
+        "forkEvolution": {
+          "parentGenomeId": "og-op-arctic-drainer-v1.2",
+          "divergedAt": "2026-09-24T03:53:40.170Z",
+          "mutationType": "TOKEN_DRAINER_EXPANSION",
+          "description": "Expanded drainer settlement logic across Arbitrum Layer-2 and Tron TRC-20 stablecoin networks to avoid high Ethereum mainnet gas fees."
+        }
+      }
+    ]
+  },
+  "learningOutcomes": [
+    {
+      "id": "learn-test-1790222020172",
+      "operationId": "op-arctic-drainer",
+      "leadId": "lead-3",
+      "pivotType": "PASSIVE_DNS_REVERSE_NS",
+      "contextDescription": "Test pivot against authoritative nameservers",
+      "expectedResult": "Identify co-delegated phishing domains",
+      "actualResult": "Identified 1 active standby domain",
+      "evidenceGainedCount": 2,
+      "newEntitiesFoundCount": 1,
+      "costIncurred": "low",
+      "usefulnessScore": 92,
+      "timestamp": "2026-09-24T03:53:40.172Z"
+    },
+    {
+      "id": "learn-1790222020134-muqv",
+      "operationId": "op-arctic-drainer",
+      "leadId": "lead-1",
+      "pivotType": "PASSIVE_DNS_REVERSE_NS",
+      "contextDescription": "Investigated nameserver target ns1.offshore-dns.is under hypothesis context",
+      "expectedResult": "Uncover secondary infrastructure or counterparty wallets associated with ns1.offshore-dns.is",
+      "actualResult": "Discovered new affiliated standby domain: eth-support-verification.top. Added to operation graph.",
+      "evidenceGainedCount": 2,
+      "newEntitiesFoundCount": 1,
+      "costIncurred": "low",
+      "usefulnessScore": 92,
+      "timestamp": "2026-09-24T03:53:40.131Z"
+    },
+    {
+      "id": "learn-seed-01",
+      "operationId": "op-arctic-drainer",
+      "leadId": "lead-prev-01",
+      "pivotType": "PASSIVE_DNS_REVERSE_NS",
+      "contextDescription": "Investigated bulletproof nameserver ns1.offshore-dns.is to uncover standby domains.",
+      "expectedResult": "Uncover co-delegated phishing domains sharing Seychelles infrastructure.",
+      "actualResult": "Discovered standby domain eth-support-verification.top registered 2 days after primary domain.",
+      "evidenceGainedCount": 2,
+      "newEntitiesFoundCount": 1,
+      "costIncurred": "low",
+      "usefulnessScore": 94,
+      "timestamp": "2026-09-22T03:53:40.114Z"
+    },
+    {
+      "id": "learn-seed-02",
+      "operationId": "op-arctic-drainer",
+      "leadId": "lead-prev-02",
+      "pivotType": "BLOCKCHAIN_TRACE_OUTFLOW",
+      "contextDescription": "Investigated intermediary splitter contract 0x71c828... to track victim drain proceeds.",
+      "expectedResult": "Identify downstream consolidation treasury and kit developer royalty splits.",
+      "actualResult": "Identified 80/20 automated split routing 38.92 ETH to treasury 0x3a4f... and 9.73 ETH to vendor 0x99b1...",
+      "evidenceGainedCount": 3,
+      "newEntitiesFoundCount": 2,
+      "costIncurred": "medium",
+      "usefulnessScore": 96,
+      "timestamp": "2026-09-18T03:53:40.114Z"
+    }
+  ],
+  "auditLogs": [
+    {
+      "id": "audit-306d5438",
+      "operationId": "op-arctic-drainer",
+      "action": "PURSUIT_COMPLETED",
+      "details": "All high-gain pivots explored.",
+      "timestamp": "2026-09-24T03:53:47.146Z"
+    },
+    {
+      "id": "audit-fa56395b",
+      "operationId": "op-arctic-drainer",
+      "action": "PURSUIT_STEP",
+      "details": "Hop 2: Executed pivot CERT_SAN_SUBDOMAIN_SEARCH targeting *.claim-asset-portal.com.",
+      "timestamp": "2026-09-24T03:53:43.649Z"
+    },
+    {
+      "id": "audit-cccd6308",
+      "operationId": "op-arctic-drainer",
+      "action": "ADD_EVIDENCE",
+      "details": "Observed financial_convergence_divergence_graph via onchain_mempool_indexer",
+      "timestamp": "2026-09-24T03:53:40.166Z"
+    },
+    {
+      "id": "audit-2f22e3bb",
+      "operationId": "op-arctic-drainer",
+      "action": "ADD_EVIDENCE",
+      "details": "Observed scam_kit_genome_profile via genome_engine",
+      "timestamp": "2026-09-24T03:53:40.164Z"
+    },
+    {
+      "id": "audit-205b05fc",
+      "operationId": "op-arctic-drainer",
+      "action": "PURSUIT_STEP",
+      "details": "Hop 1: Traced treasury wallet outflows into Railgun privacy mixer contract and Binance exchange deposit address.",
+      "timestamp": "2026-09-24T03:53:40.153Z"
+    },
+    {
+      "id": "audit-60e33f86",
+      "operationId": "op-arctic-drainer",
+      "action": "ADD_EVIDENCE",
+      "details": "Observed blockchain_outflow_trace via onchain_indexer",
+      "timestamp": "2026-09-24T03:53:40.146Z"
+    },
+    {
+      "id": "audit-00259a51",
+      "operationId": "op-arctic-drainer",
+      "action": "PURSUIT_START",
+      "details": "Autonomous pursuit started at hop 1, budget remaining: 21",
+      "timestamp": "2026-09-24T03:53:40.144Z"
+    },
+    {
+      "id": "audit-1355a07a",
+      "operationId": "op-arctic-drainer",
+      "action": "INVALIDATE_EVIDENCE",
+      "details": "Invalidated evidence ev-7: Confirmed template developer boilerplate, not operator wallet",
+      "timestamp": "2026-09-24T03:53:40.136Z"
+    },
+    {
+      "id": "audit-d3e8e3cb",
+      "operationId": "op-arctic-drainer",
+      "action": "EXECUTE_LEAD",
+      "details": "Executed lead \"Pivot on Nameserver ns1.offshore-dns.is for Associated Domains\": Discovered new affiliated standby domain: eth-support-verification.top. Added to operation graph.",
+      "timestamp": "2026-09-24T03:53:40.134Z"
+    },
+    {
+      "id": "audit-78b9703c",
+      "operationId": "op-arctic-drainer",
+      "action": "ADD_EVIDENCE",
+      "details": "Observed reverse_ns_enumeration via passive_dns",
+      "timestamp": "2026-09-24T03:53:40.132Z"
+    },
+    {
+      "id": "audit-b31c9f99",
+      "operationId": "op-arctic-drainer",
+      "action": "ADD_EVIDENCE",
+      "details": "Observed web3_contract_target via js_deobfuscator",
+      "timestamp": "2026-09-24T03:53:40.126Z"
+    },
+    {
+      "id": "audit-48feb07f",
+      "operationId": "op-arctic-drainer",
+      "action": "ADD_EVIDENCE",
+      "details": "Observed tag_identifier via html_parser",
+      "timestamp": "2026-09-24T03:53:40.124Z"
+    },
+    {
+      "id": "audit-9d05487f",
+      "operationId": "op-arctic-drainer",
+      "action": "ADD_EVIDENCE",
+      "details": "Observed html_scam_kit via dom_fingerprint",
+      "timestamp": "2026-09-24T03:53:40.122Z"
+    },
+    {
+      "id": "audit-4aeb505f",
+      "operationId": "op-arctic-drainer",
+      "action": "ADD_EVIDENCE",
+      "details": "Observed ssl_san_discovery via cert_transparency",
+      "timestamp": "2026-09-24T03:53:40.121Z"
+    },
+    {
+      "id": "audit-7187abd9",
+      "operationId": "op-arctic-drainer",
+      "action": "ADD_EVIDENCE",
+      "details": "Observed dns_resolution via passive_dns",
+      "timestamp": "2026-09-24T03:53:40.119Z"
+    },
+    {
+      "id": "audit-298fca62",
+      "operationId": "op-arctic-drainer",
+      "action": "ADD_SEED",
+      "details": "Added seed crypto-vault-airdrop.top (domain)",
+      "timestamp": "2026-09-24T03:53:40.116Z"
+    },
+    {
+      "id": "audit-0",
+      "operationId": "op-arctic-drainer",
+      "action": "SYSTEM_BOOT",
+      "details": "Initialized Operation Hunter v0.2 demonstration dataset (OP-ARCTIC-DRAINER)",
+      "timestamp": "2026-09-10T03:53:40.114Z"
+    }
+  ]
+}

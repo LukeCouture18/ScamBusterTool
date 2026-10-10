@@ -1,0 +1,9 @@
+{
+  "ok": true,
+  "findings": [
+    "generic correlation / copied and unknown origins / counter-evidence / forged wallet flag rejected",
+    "bounded search / concurrent supply / supported selection / no analyst vote / restart and site-start dedup / timeout park",
+    "full claimed/unsupported inbox requests one fresh candidate / concurrent singleton / no votes / four-generation and daily caps retained"
+  ],
+  "scope": "Actual Main routes and source over local SQLite; candidate facts are fixtures. Graceful restart, not process-kill certification."
+}
